@@ -38,25 +38,29 @@
             this.lnkForgot = new System.Windows.Forms.LinkLabel();
             this.guna2CustomGradientPanel1 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
             this.guna2CustomGradientPanel2 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
+            this.pnlSignup = new Guna.UI2.WinForms.Guna2Panel();
+            this.lnkSignup = new System.Windows.Forms.LinkLabel();
             this.btnServices = new Guna.UI2.WinForms.Guna2GradientTileButton();
             this.btnGuidelines = new Guna.UI2.WinForms.Guna2GradientTileButton();
             this.btnAboutus = new Guna.UI2.WinForms.Guna2GradientTileButton();
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.btnLogin = new Guna.UI2.WinForms.Guna2GradientTileButton();
-            this.btnPassword = new Guna.UI2.WinForms.Guna2TextBox();
-            this.btnUsername = new Guna.UI2.WinForms.Guna2TextBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.btnHide = new Guna.UI2.WinForms.Guna2CircleButton();
             this.btnMaximize = new Guna.UI2.WinForms.Guna2CircleButton();
             this.btnExit = new Guna.UI2.WinForms.Guna2CircleButton();
+            this.btnSee = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btnLogin = new Guna.UI2.WinForms.Guna2GradientTileButton();
+            this.txtUsername = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txtPassword = new Guna.UI2.WinForms.Guna2TextBox();
             this.pnlLogin.SuspendLayout();
             this.guna2CustomGradientPanel1.SuspendLayout();
             this.guna2CustomGradientPanel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.pnlSignup.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // guna2Elipse1
@@ -67,7 +71,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Adobe Fan Heiti Std B", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(29, 171);
+            this.label1.Location = new System.Drawing.Point(29, 186);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(68, 16);
             this.label1.TabIndex = 5;
@@ -77,7 +81,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Adobe Fan Heiti Std B", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(29, 258);
+            this.label2.Location = new System.Drawing.Point(29, 257);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(65, 16);
             this.label2.TabIndex = 6;
@@ -85,15 +89,16 @@
             // 
             // pnlLogin
             // 
+            this.pnlLogin.Controls.Add(this.btnSee);
             this.pnlLogin.Controls.Add(this.chkRemember);
             this.pnlLogin.Controls.Add(this.lnkForgot);
             this.pnlLogin.Controls.Add(this.pictureBox1);
             this.pnlLogin.Controls.Add(this.btnLogin);
-            this.pnlLogin.Controls.Add(this.btnPassword);
-            this.pnlLogin.Controls.Add(this.btnUsername);
+            this.pnlLogin.Controls.Add(this.txtUsername);
+            this.pnlLogin.Controls.Add(this.txtPassword);
             this.pnlLogin.Controls.Add(this.label1);
             this.pnlLogin.Controls.Add(this.label2);
-            this.pnlLogin.Location = new System.Drawing.Point(541, 71);
+            this.pnlLogin.Location = new System.Drawing.Point(0, 0);
             this.pnlLogin.Name = "pnlLogin";
             this.pnlLogin.ShadowDecoration.Parent = this.pnlLogin;
             this.pnlLogin.Size = new System.Drawing.Size(435, 455);
@@ -163,6 +168,29 @@
             this.guna2CustomGradientPanel2.ShadowDecoration.Parent = this.guna2CustomGradientPanel2;
             this.guna2CustomGradientPanel2.Size = new System.Drawing.Size(1000, 45);
             this.guna2CustomGradientPanel2.TabIndex = 10;
+            // 
+            // pnlSignup
+            // 
+            this.pnlSignup.Controls.Add(this.pnlLogin);
+            this.pnlSignup.Location = new System.Drawing.Point(541, 71);
+            this.pnlSignup.Name = "pnlSignup";
+            this.pnlSignup.ShadowDecoration.Parent = this.pnlSignup;
+            this.pnlSignup.Size = new System.Drawing.Size(435, 455);
+            this.pnlSignup.TabIndex = 11;
+            // 
+            // lnkSignup
+            // 
+            this.lnkSignup.Font = new System.Drawing.Font("Adobe Fan Heiti Std B", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.lnkSignup.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
+            this.lnkSignup.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.lnkSignup.Location = new System.Drawing.Point(647, 531);
+            this.lnkSignup.Name = "lnkSignup";
+            this.lnkSignup.Size = new System.Drawing.Size(223, 15);
+            this.lnkSignup.TabIndex = 11;
+            this.lnkSignup.TabStop = true;
+            this.lnkSignup.Text = "Don\'t have an account? Sign up here.";
+            this.lnkSignup.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lnkSignup.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lnkSignup_LinkClicked);
             // 
             // btnServices
             // 
@@ -241,96 +269,6 @@
             this.guna2Panel2.Size = new System.Drawing.Size(788, 509);
             this.guna2Panel2.TabIndex = 10;
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::PrjOverhaulHotel.Properties.Resources.Hôtelliere__1_;
-            this.pictureBox1.Location = new System.Drawing.Point(106, 63);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(237, 62);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 8;
-            this.pictureBox1.TabStop = false;
-            // 
-            // btnLogin
-            // 
-            this.btnLogin.BorderRadius = 20;
-            this.btnLogin.CheckedState.Parent = this.btnLogin;
-            this.btnLogin.CustomImages.Parent = this.btnLogin;
-            this.btnLogin.FillColor = System.Drawing.Color.Teal;
-            this.btnLogin.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btnLogin.Font = new System.Drawing.Font("Adobe Fan Heiti Std B", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLogin.ForeColor = System.Drawing.Color.White;
-            this.btnLogin.HoverState.Parent = this.btnLogin;
-            this.btnLogin.Image = global::PrjOverhaulHotel.Properties.Resources.log_in__1_;
-            this.btnLogin.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnLogin.ImageOffset = new System.Drawing.Point(5, 12);
-            this.btnLogin.Location = new System.Drawing.Point(231, 358);
-            this.btnLogin.Name = "btnLogin";
-            this.btnLogin.ShadowDecoration.Parent = this.btnLogin;
-            this.btnLogin.Size = new System.Drawing.Size(180, 40);
-            this.btnLogin.TabIndex = 7;
-            this.btnLogin.Text = "LOG IN";
-            this.btnLogin.TextOffset = new System.Drawing.Point(7, -11);
-            // 
-            // btnPassword
-            // 
-            this.btnPassword.BorderRadius = 15;
-            this.btnPassword.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.btnPassword.DefaultText = "";
-            this.btnPassword.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.btnPassword.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.btnPassword.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.btnPassword.DisabledState.Parent = this.btnPassword;
-            this.btnPassword.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.btnPassword.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btnPassword.FocusedState.Parent = this.btnPassword;
-            this.btnPassword.Font = new System.Drawing.Font("Microsoft New Tai Lue", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPassword.ForeColor = System.Drawing.Color.Black;
-            this.btnPassword.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(154)))), ((int)(((byte)(136)))));
-            this.btnPassword.HoverState.Parent = this.btnPassword;
-            this.btnPassword.IconLeft = global::PrjOverhaulHotel.Properties.Resources.circle_user_round;
-            this.btnPassword.IconLeftOffset = new System.Drawing.Point(5, 0);
-            this.btnPassword.Location = new System.Drawing.Point(21, 186);
-            this.btnPassword.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.btnPassword.Name = "btnPassword";
-            this.btnPassword.PasswordChar = '\0';
-            this.btnPassword.PlaceholderText = "Enter your username...";
-            this.btnPassword.SelectedText = "";
-            this.btnPassword.ShadowDecoration.Parent = this.btnPassword;
-            this.btnPassword.Size = new System.Drawing.Size(390, 35);
-            this.btnPassword.TabIndex = 4;
-            this.btnPassword.TextOffset = new System.Drawing.Point(10, 0);
-            // 
-            // btnUsername
-            // 
-            this.btnUsername.BorderRadius = 15;
-            this.btnUsername.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.btnUsername.DefaultText = "";
-            this.btnUsername.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.btnUsername.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.btnUsername.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.btnUsername.DisabledState.Parent = this.btnUsername;
-            this.btnUsername.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.btnUsername.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btnUsername.FocusedState.Parent = this.btnUsername;
-            this.btnUsername.Font = new System.Drawing.Font("Microsoft New Tai Lue", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnUsername.ForeColor = System.Drawing.Color.Black;
-            this.btnUsername.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(154)))), ((int)(((byte)(136)))));
-            this.btnUsername.HoverState.Parent = this.btnUsername;
-            this.btnUsername.IconLeft = global::PrjOverhaulHotel.Properties.Resources.key_round;
-            this.btnUsername.IconLeftOffset = new System.Drawing.Point(5, 0);
-            this.btnUsername.Location = new System.Drawing.Point(21, 273);
-            this.btnUsername.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.btnUsername.Name = "btnUsername";
-            this.btnUsername.PasswordChar = '\0';
-            this.btnUsername.PlaceholderText = "Enter your password...";
-            this.btnUsername.SelectedText = "";
-            this.btnUsername.ShadowDecoration.Parent = this.btnUsername;
-            this.btnUsername.Size = new System.Drawing.Size(390, 35);
-            this.btnUsername.TabIndex = 3;
-            this.btnUsername.TextOffset = new System.Drawing.Point(10, 0);
-            this.btnUsername.UseSystemPasswordChar = true;
-            // 
             // pictureBox3
             // 
             this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
@@ -363,7 +301,7 @@
             this.btnHide.ForeColor = System.Drawing.Color.White;
             this.btnHide.HoverState.Parent = this.btnHide;
             this.btnHide.Image = global::PrjOverhaulHotel.Properties.Resources.minus;
-            this.btnHide.Location = new System.Drawing.Point(858, 4);
+            this.btnHide.Location = new System.Drawing.Point(858, 5);
             this.btnHide.Margin = new System.Windows.Forms.Padding(1);
             this.btnHide.Name = "btnHide";
             this.btnHide.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
@@ -381,7 +319,7 @@
             this.btnMaximize.ForeColor = System.Drawing.Color.White;
             this.btnMaximize.HoverState.Parent = this.btnMaximize;
             this.btnMaximize.Image = global::PrjOverhaulHotel.Properties.Resources.maximize;
-            this.btnMaximize.Location = new System.Drawing.Point(908, 4);
+            this.btnMaximize.Location = new System.Drawing.Point(908, 5);
             this.btnMaximize.Margin = new System.Windows.Forms.Padding(1);
             this.btnMaximize.Name = "btnMaximize";
             this.btnMaximize.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
@@ -399,7 +337,7 @@
             this.btnExit.ForeColor = System.Drawing.Color.White;
             this.btnExit.HoverState.Parent = this.btnExit;
             this.btnExit.Image = global::PrjOverhaulHotel.Properties.Resources.x;
-            this.btnExit.Location = new System.Drawing.Point(958, 4);
+            this.btnExit.Location = new System.Drawing.Point(958, 5);
             this.btnExit.Margin = new System.Windows.Forms.Padding(1);
             this.btnExit.Name = "btnExit";
             this.btnExit.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
@@ -408,16 +346,118 @@
             this.btnExit.TabIndex = 0;
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
+            // btnSee
+            // 
+            this.btnSee.BackColor = System.Drawing.Color.White;
+            this.btnSee.Image = global::PrjOverhaulHotel.Properties.Resources.eye_off1;
+            this.btnSee.Location = new System.Drawing.Point(369, 275);
+            this.btnSee.Name = "btnSee";
+            this.btnSee.Size = new System.Drawing.Size(30, 30);
+            this.btnSee.TabIndex = 11;
+            this.btnSee.Click += new System.EventHandler(this.btnSee_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::PrjOverhaulHotel.Properties.Resources.Hôtelliere__1_;
+            this.pictureBox1.Location = new System.Drawing.Point(106, 68);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(237, 62);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 8;
+            this.pictureBox1.TabStop = false;
+            // 
+            // btnLogin
+            // 
+            this.btnLogin.BorderRadius = 20;
+            this.btnLogin.CheckedState.Parent = this.btnLogin;
+            this.btnLogin.CustomImages.Parent = this.btnLogin;
+            this.btnLogin.FillColor = System.Drawing.Color.Teal;
+            this.btnLogin.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnLogin.Font = new System.Drawing.Font("Adobe Fan Heiti Std B", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLogin.ForeColor = System.Drawing.Color.White;
+            this.btnLogin.HoverState.Parent = this.btnLogin;
+            this.btnLogin.Image = global::PrjOverhaulHotel.Properties.Resources.log_in__1_;
+            this.btnLogin.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnLogin.ImageOffset = new System.Drawing.Point(5, 12);
+            this.btnLogin.Location = new System.Drawing.Point(231, 358);
+            this.btnLogin.Name = "btnLogin";
+            this.btnLogin.ShadowDecoration.Parent = this.btnLogin;
+            this.btnLogin.Size = new System.Drawing.Size(180, 40);
+            this.btnLogin.TabIndex = 7;
+            this.btnLogin.Text = "LOG IN";
+            this.btnLogin.TextOffset = new System.Drawing.Point(7, -11);
+            this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
+            // 
+            // txtUsername
+            // 
+            this.txtUsername.BorderRadius = 15;
+            this.txtUsername.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtUsername.DefaultText = "";
+            this.txtUsername.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtUsername.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtUsername.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtUsername.DisabledState.Parent = this.txtUsername;
+            this.txtUsername.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtUsername.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtUsername.FocusedState.Parent = this.txtUsername;
+            this.txtUsername.Font = new System.Drawing.Font("Microsoft New Tai Lue", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtUsername.ForeColor = System.Drawing.Color.Black;
+            this.txtUsername.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(154)))), ((int)(((byte)(136)))));
+            this.txtUsername.HoverState.Parent = this.txtUsername;
+            this.txtUsername.IconLeft = global::PrjOverhaulHotel.Properties.Resources.circle_user_round;
+            this.txtUsername.IconLeftOffset = new System.Drawing.Point(5, 0);
+            this.txtUsername.Location = new System.Drawing.Point(21, 201);
+            this.txtUsername.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtUsername.Name = "txtUsername";
+            this.txtUsername.PasswordChar = '\0';
+            this.txtUsername.PlaceholderText = "Enter your username...";
+            this.txtUsername.SelectedText = "";
+            this.txtUsername.ShadowDecoration.Parent = this.txtUsername;
+            this.txtUsername.Size = new System.Drawing.Size(390, 35);
+            this.txtUsername.TabIndex = 4;
+            this.txtUsername.TextOffset = new System.Drawing.Point(10, 0);
+            // 
+            // txtPassword
+            // 
+            this.txtPassword.BorderRadius = 15;
+            this.txtPassword.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtPassword.DefaultText = "";
+            this.txtPassword.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtPassword.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtPassword.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtPassword.DisabledState.Parent = this.txtPassword;
+            this.txtPassword.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtPassword.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtPassword.FocusedState.Parent = this.txtPassword;
+            this.txtPassword.Font = new System.Drawing.Font("Microsoft New Tai Lue", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPassword.ForeColor = System.Drawing.Color.Black;
+            this.txtPassword.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(154)))), ((int)(((byte)(136)))));
+            this.txtPassword.HoverState.Parent = this.txtPassword;
+            this.txtPassword.IconLeft = global::PrjOverhaulHotel.Properties.Resources.key_round;
+            this.txtPassword.IconLeftOffset = new System.Drawing.Point(5, 0);
+            this.txtPassword.Location = new System.Drawing.Point(21, 272);
+            this.txtPassword.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtPassword.Name = "txtPassword";
+            this.txtPassword.PasswordChar = '\0';
+            this.txtPassword.PlaceholderText = "Enter your password...";
+            this.txtPassword.SelectedText = "";
+            this.txtPassword.ShadowDecoration.Parent = this.txtPassword;
+            this.txtPassword.Size = new System.Drawing.Size(390, 35);
+            this.txtPassword.TabIndex = 3;
+            this.txtPassword.TextOffset = new System.Drawing.Point(10, 0);
+            this.txtPassword.UseSystemPasswordChar = true;
+            // 
             // FrmStartUp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(154)))), ((int)(((byte)(136)))));
             this.ClientSize = new System.Drawing.Size(1000, 600);
+            this.Controls.Add(this.lnkSignup);
             this.Controls.Add(this.guna2CustomGradientPanel2);
             this.Controls.Add(this.guna2Panel2);
-            this.Controls.Add(this.pnlLogin);
             this.Controls.Add(this.guna2CustomGradientPanel1);
+            this.Controls.Add(this.pnlSignup);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FrmStartUp";
@@ -428,9 +468,10 @@
             this.pnlLogin.PerformLayout();
             this.guna2CustomGradientPanel1.ResumeLayout(false);
             this.guna2CustomGradientPanel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.pnlSignup.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -441,8 +482,8 @@
         private Guna.UI2.WinForms.Guna2CircleButton btnMaximize;
         private Guna.UI2.WinForms.Guna2CircleButton btnExit;
         private Guna.UI2.WinForms.Guna2CircleButton btnHide;
-        private Guna.UI2.WinForms.Guna2TextBox btnUsername;
-        private Guna.UI2.WinForms.Guna2TextBox btnPassword;
+        private Guna.UI2.WinForms.Guna2TextBox txtPassword;
+        private Guna.UI2.WinForms.Guna2TextBox txtUsername;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private Guna.UI2.WinForms.Guna2GradientTileButton btnLogin;
@@ -458,5 +499,8 @@
         private Guna.UI2.WinForms.Guna2GradientTileButton btnAboutus;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox3;
+        private Guna.UI2.WinForms.Guna2Panel pnlSignup;
+        private System.Windows.Forms.LinkLabel lnkSignup;
+        private System.Windows.Forms.Label btnSee;
     }
 }
