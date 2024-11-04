@@ -76,6 +76,11 @@ namespace PrjOverhaulHotel
             }
         }
 
+        public static int procGetAccountID()
+        {
+            return 0;
+        }
+
         public static void procLogIn(String username, String password)
         {
             try

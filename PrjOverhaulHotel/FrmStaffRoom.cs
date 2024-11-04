@@ -1,5 +1,4 @@
-﻿using Guna.UI2.WinForms;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -11,21 +10,21 @@ using System.Windows.Forms;
 
 namespace PrjOverhaulHotel
 {
-    public partial class FrmStaffDashboard : Form
+    public partial class FrmStaffRoom : Form
     {
         int userID;
-        public FrmStaffDashboard()
+        public FrmStaffRoom()
         {
             InitializeComponent();
         }
 
-        public FrmStaffDashboard(int userID)
+        public FrmStaffRoom(int userID)
         {
             InitializeComponent();
             this.userID = userID;
         }
 
-        private void FrmStaffDashboard_Load(object sender, EventArgs e)
+        private void FrmStaffRoom_Load(object sender, EventArgs e)
         {
             GlobalProcedure.fncDatabaseConnection();
             maximizeButtons();
@@ -106,6 +105,12 @@ namespace PrjOverhaulHotel
             this.Hide();
         }
 
+        private void btnDashboard_Click(object sender, EventArgs e)
+        {
+            new FrmStaffDashboard(userID).ShowDialog();
+            this.Hide();
+        }
+
         private void btnReservation_Click(object sender, EventArgs e)
         {
             new FrmStaffReservation(userID).ShowDialog();
@@ -127,12 +132,6 @@ namespace PrjOverhaulHotel
         private void btnPersonnel_Click(object sender, EventArgs e)
         {
             new FrmStaffPersonnel(userID).ShowDialog();
-            this.Hide();
-        }
-
-        private void btnRooms_Click(object sender, EventArgs e)
-        {
-            new FrmStaffRoom(userID).ShowDialog();
             this.Hide();
         }
 

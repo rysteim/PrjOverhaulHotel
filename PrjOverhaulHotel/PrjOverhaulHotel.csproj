@@ -108,11 +108,47 @@
     <Compile Include="FrmSignup.Designer.cs">
       <DependentUpon>FrmSignup.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmStaffAP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmStaffAP.Designer.cs">
+      <DependentUpon>FrmStaffAP.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmStaffDashboard.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FrmStaffDashboard.Designer.cs">
       <DependentUpon>FrmStaffDashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmStaffGuests.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmStaffGuests.Designer.cs">
+      <DependentUpon>FrmStaffGuests.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmStaffPersonnel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmStaffPersonnel.Designer.cs">
+      <DependentUpon>FrmStaffPersonnel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmStaffProfile.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmStaffProfile.Designer.cs">
+      <DependentUpon>FrmStaffProfile.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmStaffReservation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmStaffReservation.Designer.cs">
+      <DependentUpon>FrmStaffReservation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmStaffRoom.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmStaffRoom.Designer.cs">
+      <DependentUpon>FrmStaffRoom.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmStartUp.cs">
       <SubType>Form</SubType>
@@ -126,8 +162,26 @@
     <EmbeddedResource Include="FrmSignup.resx">
       <DependentUpon>FrmSignup.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmStaffAP.resx">
+      <DependentUpon>FrmStaffAP.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmStaffDashboard.resx">
       <DependentUpon>FrmStaffDashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmStaffGuests.resx">
+      <DependentUpon>FrmStaffGuests.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmStaffPersonnel.resx">
+      <DependentUpon>FrmStaffPersonnel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmStaffProfile.resx">
+      <DependentUpon>FrmStaffProfile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmStaffReservation.resx">
+      <DependentUpon>FrmStaffReservation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmStaffRoom.resx">
+      <DependentUpon>FrmStaffRoom.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmStartUp.resx">
       <DependentUpon>FrmStartUp.cs</DependentUpon>
@@ -302,6 +356,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\eye-off1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\layout-dashboard %281%29.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

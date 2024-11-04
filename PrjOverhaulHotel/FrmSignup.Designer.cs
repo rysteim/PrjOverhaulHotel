@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.pnlLogin = new Guna.UI2.WinForms.Guna2Panel();
             this.cmbGender = new Guna.UI2.WinForms.Guna2ComboBox();
             this.label10 = new System.Windows.Forms.Label();
@@ -53,6 +54,7 @@
             this.txtPassword = new Guna.UI2.WinForms.Guna2TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.pnlLogin.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.imgProfile)).BeginInit();
             this.SuspendLayout();
@@ -86,7 +88,7 @@
             this.pnlLogin.Controls.Add(this.txtPassword);
             this.pnlLogin.Controls.Add(this.label1);
             this.pnlLogin.Controls.Add(this.label2);
-            this.pnlLogin.Location = new System.Drawing.Point(0, 0);
+            this.pnlLogin.Location = new System.Drawing.Point(14, 14);
             this.pnlLogin.Name = "pnlLogin";
             this.pnlLogin.ShadowDecoration.Parent = this.pnlLogin;
             this.pnlLogin.Size = new System.Drawing.Size(900, 520);
@@ -559,12 +561,16 @@
             this.label2.TabIndex = 6;
             this.label2.Text = "Password";
             // 
+            // guna2Elipse1
+            // 
+            this.guna2Elipse1.TargetControl = this;
+            // 
             // FrmSignup
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(154)))), ((int)(((byte)(136)))));
-            this.ClientSize = new System.Drawing.Size(900, 520);
+            this.ClientSize = new System.Drawing.Size(930, 550);
             this.Controls.Add(this.pnlLogin);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FrmSignup";
@@ -603,5 +609,6 @@
         private System.Windows.Forms.Label label10;
         private Guna.UI2.WinForms.Guna2DateTimePicker dtmBirthdate;
         private Guna.UI2.WinForms.Guna2ComboBox cmbGender;
+        private Guna.UI2.WinForms.Guna2Elipse guna2Elipse1;
     }
 }

@@ -120,4 +120,25 @@
   <metadata name="guna2Elipse1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="txtSearchPromo.IconLeft" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAPhJREFUSEvd
+        1E0KwjAQBeBuvIKXcOkVXHscD+PWa7hw7SEEzyGo80EHpJCaFOLCB4+mycybn0w7/D32wVPwFnyMtLbn
+        bDG2wUvw9YVs2DZBZjIlcA8egpvgaqS1PWds2FZXI5sUPwYJluCMTQapqiTbwrEWGYTvLJTJUOlzmU/B
+        Nts12yqTwUh/W8GHL40ijB8jl9gKPnxpFJGX29KeBB++NIroHqB7i7pfcvcxhSUf2jnI5+uHBq2/ihR/
+        BnfBKigzgyhdf10iQbS2l20h7nkNroNVaPldy5y496YgoBqTYfxUhdb2Pi+U6OIgtZgG6YIM0i3ArzEM
+        b5Zdb7UIkbKXAAAAAElFTkSuQmCC
+</value>
+  </data>
+  <data name="txtSearchAddon.IconLeft" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAPhJREFUSEvd
+        1E0KwjAQBeBuvIKXcOkVXHscD+PWa7hw7SEEzyGo80EHpJCaFOLCB4+mycybn0w7/D32wVPwFnyMtLbn
+        bDG2wUvw9YVs2DZBZjIlcA8egpvgaqS1PWds2FZXI5sUPwYJluCMTQapqiTbwrEWGYTvLJTJUOlzmU/B
+        Nts12yqTwUh/W8GHL40ijB8jl9gKPnxpFJGX29KeBB++NIroHqB7i7pfcvcxhSUf2jnI5+uHBq2/ihR/
+        BnfBKigzgyhdf10iQbS2l20h7nkNroNVaPldy5y496YgoBqTYfxUhdb2Pi+U6OIgtZgG6YIM0i3ArzEM
+        b5Zdb7UIkbKXAAAAAElFTkSuQmCC
+</value>
+  </data>
 </root>

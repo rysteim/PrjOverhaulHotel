@@ -1,5 +1,4 @@
-﻿using Guna.UI2.WinForms;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -11,24 +10,18 @@ using System.Windows.Forms;
 
 namespace PrjOverhaulHotel
 {
-    public partial class FrmStaffDashboard : Form
+    public partial class FrmStaffProfile : Form
     {
         int userID;
-        public FrmStaffDashboard()
+        public FrmStaffProfile()
         {
             InitializeComponent();
         }
 
-        public FrmStaffDashboard(int userID)
+        public FrmStaffProfile(int userID)
         {
             InitializeComponent();
             this.userID = userID;
-        }
-
-        private void FrmStaffDashboard_Load(object sender, EventArgs e)
-        {
-            GlobalProcedure.fncDatabaseConnection();
-            maximizeButtons();
         }
 
         private void btnExit_Click(object sender, EventArgs e)
@@ -80,29 +73,9 @@ namespace PrjOverhaulHotel
             this.TopMost = true;
         }
 
-        private void btnProfile_MouseEnter(object sender, EventArgs e)
+        private void btnDashboard_Click(object sender, EventArgs e)
         {
-            btnProfile.FillColor = Color.FromArgb(0, 135, 97);
-            btnProfile.FillColor2 = Color.FromArgb(0, 135, 97);
-            btnProfile.FillColor3 = Color.Black;
-            btnProfile.FillColor4 = Color.Black;
-            lblName.ForeColor = Color.White;
-            lblPosition.ForeColor = Color.White;
-        }
-
-        private void btnProfile_MouseLeave(object sender, EventArgs e)
-        {
-            btnProfile.FillColor = Color.White;
-            btnProfile.FillColor2 = Color.White;
-            btnProfile.FillColor3 = Color.White;
-            btnProfile.FillColor4 = Color.White;
-            lblName.ForeColor = Color.Black;
-            lblPosition.ForeColor = Color.Black;
-        }
-
-        private void btnProfile_Click(object sender, EventArgs e)
-        {
-            new FrmStaffProfile(userID).ShowDialog();
+            new FrmStaffDashboard(userID).ShowDialog();
             this.Hide();
         }
 

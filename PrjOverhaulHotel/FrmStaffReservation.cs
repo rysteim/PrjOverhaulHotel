@@ -1,5 +1,4 @@
-﻿using Guna.UI2.WinForms;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -11,21 +10,21 @@ using System.Windows.Forms;
 
 namespace PrjOverhaulHotel
 {
-    public partial class FrmStaffDashboard : Form
+    public partial class FrmStaffReservation : Form
     {
         int userID;
-        public FrmStaffDashboard()
+        public FrmStaffReservation()
         {
             InitializeComponent();
         }
 
-        public FrmStaffDashboard(int userID)
+        public FrmStaffReservation(int userID)
         {
             InitializeComponent();
             this.userID = userID;
         }
 
-        private void FrmStaffDashboard_Load(object sender, EventArgs e)
+        private void FrmStaffReservation_Load(object sender, EventArgs e)
         {
             GlobalProcedure.fncDatabaseConnection();
             maximizeButtons();
@@ -69,17 +68,6 @@ namespace PrjOverhaulHotel
             minimizeButtons();
         }
 
-        private void btnHide_Click(object sender, EventArgs e)
-        {
-            this.WindowState = FormWindowState.Normal;
-        }
-
-        private void btnMaximize_Click(object sender, EventArgs e)
-        {
-            this.WindowState = FormWindowState.Maximized;
-            this.TopMost = true;
-        }
-
         private void btnProfile_MouseEnter(object sender, EventArgs e)
         {
             btnProfile.FillColor = Color.FromArgb(0, 135, 97);
@@ -106,9 +94,10 @@ namespace PrjOverhaulHotel
             this.Hide();
         }
 
-        private void btnReservation_Click(object sender, EventArgs e)
+
+        private void btnDashboard_Click(object sender, EventArgs e)
         {
-            new FrmStaffReservation(userID).ShowDialog();
+            new FrmStaffDashboard(userID).ShowDialog();
             this.Hide();
         }
 

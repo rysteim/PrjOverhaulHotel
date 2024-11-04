@@ -12,7 +12,7 @@ namespace PrjOverhaulHotel
 {
     public partial class FrmStartUp : Form
     {
-        private int row;
+        private int row, userID;
         public FrmStartUp()
         {
             InitializeComponent();
@@ -39,7 +39,8 @@ namespace PrjOverhaulHotel
             if (GlobalProcedure.datHotel.Rows.Count > 0)
             {
                 clearInputs();
-                new FrmStaffDashboard().ShowDialog();
+                userID = Convert.ToInt32(GlobalProcedure.datHotel.Rows[0]["id"].ToString());
+                new FrmStaffDashboard(userID).ShowDialog();
                 this.Close();
             }
         }

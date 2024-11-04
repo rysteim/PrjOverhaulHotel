@@ -273,6 +273,16 @@ namespace PrjOverhaulHotel.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap layout_dashboard__1_ {
+            get {
+                object obj = ResourceManager.GetObject("layout-dashboard (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap lock_keyhole {
             get {
                 object obj = ResourceManager.GetObject("lock-keyhole", resourceCulture);

@@ -1,5 +1,4 @@
-﻿using Guna.UI2.WinForms;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -11,21 +10,21 @@ using System.Windows.Forms;
 
 namespace PrjOverhaulHotel
 {
-    public partial class FrmStaffDashboard : Form
+    public partial class FrmStaffGuests : Form
     {
         int userID;
-        public FrmStaffDashboard()
+        public FrmStaffGuests()
         {
             InitializeComponent();
         }
 
-        public FrmStaffDashboard(int userID)
+        public FrmStaffGuests(int userID)
         {
             InitializeComponent();
-            this.userID = userID;
+            this.userID = userID;   
         }
 
-        private void FrmStaffDashboard_Load(object sender, EventArgs e)
+        private void FrmStaffGuests_Load(object sender, EventArgs e)
         {
             GlobalProcedure.fncDatabaseConnection();
             maximizeButtons();
@@ -69,17 +68,6 @@ namespace PrjOverhaulHotel
             minimizeButtons();
         }
 
-        private void btnHide_Click(object sender, EventArgs e)
-        {
-            this.WindowState = FormWindowState.Normal;
-        }
-
-        private void btnMaximize_Click(object sender, EventArgs e)
-        {
-            this.WindowState = FormWindowState.Maximized;
-            this.TopMost = true;
-        }
-
         private void btnProfile_MouseEnter(object sender, EventArgs e)
         {
             btnProfile.FillColor = Color.FromArgb(0, 135, 97);
@@ -106,6 +94,12 @@ namespace PrjOverhaulHotel
             this.Hide();
         }
 
+        private void btnDashboard_Click(object sender, EventArgs e)
+        {
+            new FrmStaffDashboard(userID).ShowDialog();
+            this.Hide();
+        }
+
         private void btnReservation_Click(object sender, EventArgs e)
         {
             new FrmStaffReservation(userID).ShowDialog();
@@ -115,12 +109,6 @@ namespace PrjOverhaulHotel
         private void btnAP_Click(object sender, EventArgs e)
         {
             new FrmStaffAP(userID).ShowDialog();
-            this.Hide();
-        }
-
-        private void btnGuests_Click(object sender, EventArgs e)
-        {
-            new FrmStaffGuests(userID).ShowDialog();
             this.Hide();
         }
 
@@ -141,5 +129,6 @@ namespace PrjOverhaulHotel
             new FrmStartUp().ShowDialog();
             this.Hide();
         }
+
     }
 }
