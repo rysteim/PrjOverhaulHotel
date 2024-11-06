@@ -55,6 +55,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
+            this.btnSee = new System.Windows.Forms.Label();
             this.pnlLogin.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.imgProfile)).BeginInit();
             this.SuspendLayout();
@@ -64,6 +65,7 @@
             this.pnlLogin.BackgroundImage = global::PrjOverhaulHotel.Properties.Resources.Rectangle_13__2_;
             this.pnlLogin.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pnlLogin.BorderColor = System.Drawing.Color.Black;
+            this.pnlLogin.Controls.Add(this.btnSee);
             this.pnlLogin.Controls.Add(this.cmbGender);
             this.pnlLogin.Controls.Add(this.label10);
             this.pnlLogin.Controls.Add(this.dtmBirthdate);
@@ -117,6 +119,8 @@
             this.cmbGender.ShadowDecoration.Parent = this.cmbGender;
             this.cmbGender.Size = new System.Drawing.Size(190, 36);
             this.cmbGender.TabIndex = 28;
+            this.cmbGender.TextOffset = new System.Drawing.Point(5, 1);
+            this.cmbGender.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault;
             // 
             // label10
             // 
@@ -218,7 +222,7 @@
             this.txtContactno.HoverState.Parent = this.txtContactno;
             this.txtContactno.IconLeft = global::PrjOverhaulHotel.Properties.Resources.phone;
             this.txtContactno.IconLeftOffset = new System.Drawing.Point(5, 0);
-            this.txtContactno.Location = new System.Drawing.Point(450, 182);
+            this.txtContactno.Location = new System.Drawing.Point(44, 393);
             this.txtContactno.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtContactno.Name = "txtContactno";
             this.txtContactno.PasswordChar = '\0';
@@ -258,14 +262,13 @@
             this.txtEmailadd.Size = new System.Drawing.Size(390, 35);
             this.txtEmailadd.TabIndex = 18;
             this.txtEmailadd.TextOffset = new System.Drawing.Point(10, 0);
-            this.txtEmailadd.UseSystemPasswordChar = true;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.Font = new System.Drawing.Font("Adobe Fan Heiti Std B", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(458, 167);
+            this.label6.Location = new System.Drawing.Point(52, 378);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(106, 16);
             this.label6.TabIndex = 20;
@@ -300,7 +303,7 @@
             this.txtLastname.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(154)))), ((int)(((byte)(136)))));
             this.txtLastname.HoverState.Parent = this.txtLastname;
             this.txtLastname.IconLeftOffset = new System.Drawing.Point(5, 0);
-            this.txtLastname.Location = new System.Drawing.Point(45, 394);
+            this.txtLastname.Location = new System.Drawing.Point(44, 167);
             this.txtLastname.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtLastname.Name = "txtLastname";
             this.txtLastname.PasswordChar = '\0';
@@ -310,14 +313,13 @@
             this.txtLastname.Size = new System.Drawing.Size(361, 35);
             this.txtLastname.TabIndex = 16;
             this.txtLastname.TextOffset = new System.Drawing.Point(10, 0);
-            this.txtLastname.UseSystemPasswordChar = true;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Adobe Fan Heiti Std B", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(53, 379);
+            this.label5.Location = new System.Drawing.Point(52, 152);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(70, 16);
             this.label5.TabIndex = 17;
@@ -341,7 +343,7 @@
             this.txtFirstname.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(154)))), ((int)(((byte)(136)))));
             this.txtFirstname.HoverState.Parent = this.txtFirstname;
             this.txtFirstname.IconLeftOffset = new System.Drawing.Point(5, 0);
-            this.txtFirstname.Location = new System.Drawing.Point(45, 290);
+            this.txtFirstname.Location = new System.Drawing.Point(44, 63);
             this.txtFirstname.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtFirstname.Name = "txtFirstname";
             this.txtFirstname.PasswordChar = '\0';
@@ -370,7 +372,7 @@
             this.txtMiddlename.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(154)))), ((int)(((byte)(136)))));
             this.txtMiddlename.HoverState.Parent = this.txtMiddlename;
             this.txtMiddlename.IconLeftOffset = new System.Drawing.Point(5, 0);
-            this.txtMiddlename.Location = new System.Drawing.Point(45, 342);
+            this.txtMiddlename.Location = new System.Drawing.Point(44, 115);
             this.txtMiddlename.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtMiddlename.Name = "txtMiddlename";
             this.txtMiddlename.PasswordChar = '\0';
@@ -380,14 +382,13 @@
             this.txtMiddlename.Size = new System.Drawing.Size(361, 35);
             this.txtMiddlename.TabIndex = 12;
             this.txtMiddlename.TextOffset = new System.Drawing.Point(10, 0);
-            this.txtMiddlename.UseSystemPasswordChar = true;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Adobe Fan Heiti Std B", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(53, 275);
+            this.label3.Location = new System.Drawing.Point(52, 48);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(71, 16);
             this.label3.TabIndex = 14;
@@ -398,7 +399,7 @@
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Adobe Fan Heiti Std B", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(53, 327);
+            this.label4.Location = new System.Drawing.Point(52, 100);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(85, 16);
             this.label4.TabIndex = 15;
@@ -418,7 +419,7 @@
             this.btnUpload.Image = global::PrjOverhaulHotel.Properties.Resources.upload;
             this.btnUpload.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnUpload.ImageOffset = new System.Drawing.Point(5, 12);
-            this.btnUpload.Location = new System.Drawing.Point(145, 223);
+            this.btnUpload.Location = new System.Drawing.Point(660, 100);
             this.btnUpload.Name = "btnUpload";
             this.btnUpload.ShadowDecoration.Parent = this.btnUpload;
             this.btnUpload.Size = new System.Drawing.Size(180, 40);
@@ -431,7 +432,7 @@
             // 
             this.imgProfile.BackColor = System.Drawing.Color.Transparent;
             this.imgProfile.Image = global::PrjOverhaulHotel.Properties.Resources.rb_8551;
-            this.imgProfile.Location = new System.Drawing.Point(135, 17);
+            this.imgProfile.Location = new System.Drawing.Point(433, 21);
             this.imgProfile.Name = "imgProfile";
             this.imgProfile.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
             this.imgProfile.ShadowDecoration.Parent = this.imgProfile;
@@ -497,7 +498,7 @@
             this.txtUsername.HoverState.Parent = this.txtUsername;
             this.txtUsername.IconLeft = global::PrjOverhaulHotel.Properties.Resources.circle_user_round;
             this.txtUsername.IconLeftOffset = new System.Drawing.Point(5, 0);
-            this.txtUsername.Location = new System.Drawing.Point(450, 42);
+            this.txtUsername.Location = new System.Drawing.Point(44, 253);
             this.txtUsername.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtUsername.Name = "txtUsername";
             this.txtUsername.PasswordChar = '\0';
@@ -527,7 +528,7 @@
             this.txtPassword.HoverState.Parent = this.txtPassword;
             this.txtPassword.IconLeft = global::PrjOverhaulHotel.Properties.Resources.key_round;
             this.txtPassword.IconLeftOffset = new System.Drawing.Point(5, 0);
-            this.txtPassword.Location = new System.Drawing.Point(450, 113);
+            this.txtPassword.Location = new System.Drawing.Point(44, 324);
             this.txtPassword.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.PasswordChar = '\0';
@@ -544,7 +545,7 @@
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Adobe Fan Heiti Std B", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(458, 27);
+            this.label1.Location = new System.Drawing.Point(52, 238);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(68, 16);
             this.label1.TabIndex = 5;
@@ -555,7 +556,7 @@
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Adobe Fan Heiti Std B", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(458, 98);
+            this.label2.Location = new System.Drawing.Point(52, 309);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(65, 16);
             this.label2.TabIndex = 6;
@@ -565,11 +566,21 @@
             // 
             this.guna2Elipse1.TargetControl = this;
             // 
+            // btnSee
+            // 
+            this.btnSee.BackColor = System.Drawing.Color.White;
+            this.btnSee.Image = global::PrjOverhaulHotel.Properties.Resources.eye_off1;
+            this.btnSee.Location = new System.Drawing.Point(394, 327);
+            this.btnSee.Name = "btnSee";
+            this.btnSee.Size = new System.Drawing.Size(30, 30);
+            this.btnSee.TabIndex = 29;
+            this.btnSee.Click += new System.EventHandler(this.btnSee_Click);
+            // 
             // FrmSignup
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(154)))), ((int)(((byte)(136)))));
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.ClientSize = new System.Drawing.Size(930, 550);
             this.Controls.Add(this.pnlLogin);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -610,5 +621,6 @@
         private Guna.UI2.WinForms.Guna2DateTimePicker dtmBirthdate;
         private Guna.UI2.WinForms.Guna2ComboBox cmbGender;
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse1;
+        private System.Windows.Forms.Label btnSee;
     }
 }

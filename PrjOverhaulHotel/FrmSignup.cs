@@ -13,7 +13,7 @@ namespace PrjOverhaulHotel
     public partial class FrmSignup : Form
     {
         string imageLoc;
-        int customerID;
+        int profileID, accountID;
         public FrmSignup()
         {
             InitializeComponent();
@@ -27,6 +27,7 @@ namespace PrjOverhaulHotel
         private void lnkLogin_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             new FrmStartUp().Show();
+            this.Hide();
         }
 
         private void btnUpload_Click(object sender, EventArgs e)
@@ -40,13 +41,54 @@ namespace PrjOverhaulHotel
             }
         }
 
+        private void btnSee_Click(object sender, EventArgs e)
+        {
+            if (txtPassword.UseSystemPasswordChar == true)
+            {
+                btnSee.Image = Properties.Resources.eye1;
+                txtPassword.UseSystemPasswordChar = false;
+            }
+            else if (txtPassword.UseSystemPasswordChar == false)
+            {
+                btnSee.Image = Properties.Resources.eye_off1;
+                txtPassword.UseSystemPasswordChar = true;
+            }
+        }
+
         private void btnSignup_Click(object sender, EventArgs e)
         {
-            GlobalProcedure.procCustomerAdd(txtFirstname.Text, txtMiddlename.Text, txtLastname.Text,
-                txtContactno.Text, txtEmailadd.Text, txtAddress.Text, cmbGender.Text, dtmBirthdate.Value, imageLoc);
-            GlobalProcedure.procAccountGetByUsername(txtUsername.Text);
-            customerID = Convert.ToInt32(GlobalProcedure.datHotel.Rows[0]["id"].ToString());
-            GlobalProcedure.procAccountAdd(customerID, txtUsername.Text, txtPassword.Text);
+            try
+            {
+                // Add profile.
+                GlobalProcedure.procProfileAdd(txtFirstname.Text, txtMiddlename.Text, txtLastname.Text,
+                    txtContactno.Text, txtEmailadd.Text, txtAddress.Text, cmbGender.Text, dtmBirthdate.Value, imageLoc);
+
+                // Get profile ID by full name and email.
+                GlobalProcedure.procProfileGetIDByFullName(txtFirstname.Text, txtMiddlename.Text, txtLastname.Text, txtEmailadd.Text);
+                if (GlobalProcedure.datHotel.Rows.Count > 0)
+                    profileID = Convert.ToInt32(GlobalProcedure.datHotel.Rows[0]["id"].ToString());
+
+                // Add account using profile ID with username and password.
+                GlobalProcedure.procAccountAdd(profileID, txtUsername.Text, txtPassword.Text);
+
+                // Get account ID by username.
+                GlobalProcedure.procAccountGetIDByUsername(txtUsername.Text);
+                if (GlobalProcedure.datHotel.Rows.Count > 0)
+                    accountID = Convert.ToInt32(GlobalProcedure.datHotel.Rows[0]["id"].ToString());
+
+                // Assign account membership if guest.
+                GlobalProcedure.procAccountDefaultMembership(accountID);
+
+                MessageBox.Show("Account successfully created.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                new FrmStartUp(txtUsername.Text).Show();
+                this.Hide();
+            }
+            catch (Exception ex)
+            {
+                // Handle the exception (e.g., log it or display a message)
+                MessageBox.Show($"An error occurred: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
     }

@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2CustomGradientPanel1 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
@@ -49,14 +49,20 @@
             this.btnDashboard = new Guna.UI2.WinForms.Guna2GradientButton();
             this.guna2VSeparator2 = new Guna.UI2.WinForms.Guna2VSeparator();
             this.pnlRooms = new Guna.UI2.WinForms.Guna2Panel();
+            this.dtgRooms = new System.Windows.Forms.DataGridView();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.guna2GradientPanel5 = new Guna.UI2.WinForms.Guna2GradientPanel();
             this.guna2Separator9 = new Guna.UI2.WinForms.Guna2Separator();
             this.label14 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
+            this.lblResult = new System.Windows.Forms.Label();
             this.guna2GradientPanel6 = new Guna.UI2.WinForms.Guna2GradientPanel();
             this.guna2Separator10 = new Guna.UI2.WinForms.Guna2Separator();
             this.label16 = new System.Windows.Forms.Label();
-            this.label17 = new System.Windows.Forms.Label();
+            this.lblTotal = new System.Windows.Forms.Label();
             this.cmbRoomStatus = new Guna.UI2.WinForms.Guna2ComboBox();
             this.cmbRoomType = new Guna.UI2.WinForms.Guna2ComboBox();
             this.txtRoomName = new Guna.UI2.WinForms.Guna2TextBox();
@@ -66,9 +72,8 @@
             this.guna2Separator1 = new Guna.UI2.WinForms.Guna2Separator();
             this.btnManageRoom = new Guna.UI2.WinForms.Guna2GradientTileButton();
             this.btnAddRoom = new Guna.UI2.WinForms.Guna2GradientTileButton();
-            this.dtgRooms = new Guna.UI2.WinForms.Guna2DataGridView();
             this.btnProfile = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
-            this.guna2CirclePictureBox1 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
+            this.imgProfile = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.lblName = new System.Windows.Forms.Label();
             this.lblPosition = new System.Windows.Forms.Label();
             this.lblTitle = new System.Windows.Forms.Label();
@@ -77,11 +82,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.pnlButtons.SuspendLayout();
             this.pnlRooms.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgRooms)).BeginInit();
             this.guna2GradientPanel5.SuspendLayout();
             this.guna2GradientPanel6.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dtgRooms)).BeginInit();
             this.btnProfile.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imgProfile)).BeginInit();
             this.SuspendLayout();
             // 
             // guna2Elipse1
@@ -414,6 +419,7 @@
             this.pnlRooms.BackColor = System.Drawing.Color.Transparent;
             this.pnlRooms.BackgroundImage = global::PrjOverhaulHotel.Properties.Resources.Group_282;
             this.pnlRooms.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pnlRooms.Controls.Add(this.dtgRooms);
             this.pnlRooms.Controls.Add(this.guna2GradientPanel5);
             this.pnlRooms.Controls.Add(this.guna2GradientPanel6);
             this.pnlRooms.Controls.Add(this.cmbRoomStatus);
@@ -425,7 +431,6 @@
             this.pnlRooms.Controls.Add(this.guna2Separator1);
             this.pnlRooms.Controls.Add(this.btnManageRoom);
             this.pnlRooms.Controls.Add(this.btnAddRoom);
-            this.pnlRooms.Controls.Add(this.dtgRooms);
             this.pnlRooms.Location = new System.Drawing.Point(66, 119);
             this.pnlRooms.Name = "pnlRooms";
             this.pnlRooms.ShadowDecoration.Parent = this.pnlRooms;
@@ -433,12 +438,89 @@
             this.pnlRooms.TabIndex = 15;
             this.pnlRooms.MouseEnter += new System.EventHandler(this.pnlButtons_MouseLeave);
             // 
+            // dtgRooms
+            // 
+            this.dtgRooms.AllowUserToAddRows = false;
+            this.dtgRooms.AllowUserToDeleteRows = false;
+            this.dtgRooms.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dtgRooms.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
+            this.dtgRooms.BackgroundColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft New Tai Lue", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(135)))), ((int)(((byte)(97)))));
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dtgRooms.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            this.dtgRooms.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtgRooms.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column1,
+            this.Column2,
+            this.Column3,
+            this.Column4,
+            this.Column6});
+            this.dtgRooms.EnableHeadersVisualStyles = false;
+            this.dtgRooms.GridColor = System.Drawing.Color.Black;
+            this.dtgRooms.Location = new System.Drawing.Point(30, 199);
+            this.dtgRooms.Name = "dtgRooms";
+            this.dtgRooms.ReadOnly = true;
+            this.dtgRooms.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft New Tai Lue", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(135)))), ((int)(((byte)(97)))));
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dtgRooms.RowHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft New Tai Lue", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(135)))), ((int)(((byte)(97)))));
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.White;
+            this.dtgRooms.RowsDefaultCellStyle = dataGridViewCellStyle6;
+            this.dtgRooms.Size = new System.Drawing.Size(863, 218);
+            this.dtgRooms.TabIndex = 36;
+            this.dtgRooms.MouseEnter += new System.EventHandler(this.pnlButtons_MouseLeave);
+            // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "ID";
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            this.Column1.Visible = false;
+            // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "Room Name";
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
+            // 
+            // Column3
+            // 
+            this.Column3.HeaderText = "Type";
+            this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
+            // 
+            // Column4
+            // 
+            this.Column4.HeaderText = "Status";
+            this.Column4.Name = "Column4";
+            this.Column4.ReadOnly = true;
+            // 
+            // Column6
+            // 
+            this.Column6.HeaderText = "Price Per Day";
+            this.Column6.Name = "Column6";
+            this.Column6.ReadOnly = true;
+            // 
             // guna2GradientPanel5
             // 
             this.guna2GradientPanel5.BorderRadius = 15;
             this.guna2GradientPanel5.Controls.Add(this.guna2Separator9);
             this.guna2GradientPanel5.Controls.Add(this.label14);
-            this.guna2GradientPanel5.Controls.Add(this.label15);
+            this.guna2GradientPanel5.Controls.Add(this.lblResult);
             this.guna2GradientPanel5.FillColor = System.Drawing.Color.Black;
             this.guna2GradientPanel5.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(135)))), ((int)(((byte)(97)))));
             this.guna2GradientPanel5.Location = new System.Drawing.Point(556, 30);
@@ -463,26 +545,27 @@
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(131, 26);
             this.label14.TabIndex = 30;
-            this.label14.Text = "SELECTED";
+            this.label14.Text = "RESULT";
             this.label14.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label15
+            // lblResult
             // 
-            this.label15.Font = new System.Drawing.Font("Adobe Fan Heiti Std B", 60F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label15.ForeColor = System.Drawing.Color.White;
-            this.label15.Location = new System.Drawing.Point(12, 8);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(131, 93);
-            this.label15.TabIndex = 32;
-            this.label15.Text = "0";
-            this.label15.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.lblResult.Font = new System.Drawing.Font("Adobe Fan Heiti Std B", 60F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.lblResult.ForeColor = System.Drawing.Color.White;
+            this.lblResult.Location = new System.Drawing.Point(3, 8);
+            this.lblResult.Name = "lblResult";
+            this.lblResult.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
+            this.lblResult.Size = new System.Drawing.Size(149, 93);
+            this.lblResult.TabIndex = 32;
+            this.lblResult.Text = "0";
+            this.lblResult.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             // 
             // guna2GradientPanel6
             // 
             this.guna2GradientPanel6.BorderRadius = 15;
             this.guna2GradientPanel6.Controls.Add(this.guna2Separator10);
             this.guna2GradientPanel6.Controls.Add(this.label16);
-            this.guna2GradientPanel6.Controls.Add(this.label17);
+            this.guna2GradientPanel6.Controls.Add(this.lblTotal);
             this.guna2GradientPanel6.FillColor = System.Drawing.Color.Black;
             this.guna2GradientPanel6.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(135)))), ((int)(((byte)(97)))));
             this.guna2GradientPanel6.Location = new System.Drawing.Point(738, 30);
@@ -510,16 +593,17 @@
             this.label16.Text = "TOTAL";
             this.label16.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label17
+            // lblTotal
             // 
-            this.label17.Font = new System.Drawing.Font("Adobe Fan Heiti Std B", 60F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label17.ForeColor = System.Drawing.Color.White;
-            this.label17.Location = new System.Drawing.Point(12, 8);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(131, 93);
-            this.label17.TabIndex = 33;
-            this.label17.Text = "0";
-            this.label17.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.lblTotal.Font = new System.Drawing.Font("Adobe Fan Heiti Std B", 60F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.lblTotal.ForeColor = System.Drawing.Color.White;
+            this.lblTotal.Location = new System.Drawing.Point(0, 8);
+            this.lblTotal.Name = "lblTotal";
+            this.lblTotal.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
+            this.lblTotal.Size = new System.Drawing.Size(155, 93);
+            this.lblTotal.TabIndex = 33;
+            this.lblTotal.Text = "0";
+            this.lblTotal.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             // 
             // cmbRoomStatus
             // 
@@ -535,17 +619,19 @@
             this.cmbRoomStatus.HoverState.Parent = this.cmbRoomStatus;
             this.cmbRoomStatus.ItemHeight = 30;
             this.cmbRoomStatus.Items.AddRange(new object[] {
-            "Whole Day",
-            "Morning",
-            "Afternoon",
-            "Evening",
-            "Graveyard"});
+            "",
+            "Available",
+            "Occupied",
+            "For Cleaning",
+            "Cleaning",
+            "Reserved"});
             this.cmbRoomStatus.ItemsAppearance.Parent = this.cmbRoomStatus;
             this.cmbRoomStatus.Location = new System.Drawing.Point(289, 115);
             this.cmbRoomStatus.Name = "cmbRoomStatus";
             this.cmbRoomStatus.ShadowDecoration.Parent = this.cmbRoomStatus;
             this.cmbRoomStatus.Size = new System.Drawing.Size(234, 36);
             this.cmbRoomStatus.TabIndex = 30;
+            this.cmbRoomStatus.TextChanged += new System.EventHandler(this.txtRoomName_TextChanged);
             this.cmbRoomStatus.MouseEnter += new System.EventHandler(this.pnlButtons_MouseLeave);
             // 
             // cmbRoomType
@@ -561,12 +647,15 @@
             this.cmbRoomType.FormattingEnabled = true;
             this.cmbRoomType.HoverState.Parent = this.cmbRoomType;
             this.cmbRoomType.ItemHeight = 30;
+            this.cmbRoomType.Items.AddRange(new object[] {
+            ""});
             this.cmbRoomType.ItemsAppearance.Parent = this.cmbRoomType;
             this.cmbRoomType.Location = new System.Drawing.Point(31, 115);
             this.cmbRoomType.Name = "cmbRoomType";
             this.cmbRoomType.ShadowDecoration.Parent = this.cmbRoomType;
             this.cmbRoomType.Size = new System.Drawing.Size(234, 36);
             this.cmbRoomType.TabIndex = 29;
+            this.cmbRoomType.TextChanged += new System.EventHandler(this.txtRoomName_TextChanged);
             this.cmbRoomType.MouseEnter += new System.EventHandler(this.pnlButtons_MouseLeave);
             // 
             // txtRoomName
@@ -593,6 +682,7 @@
             this.txtRoomName.ShadowDecoration.Parent = this.txtRoomName;
             this.txtRoomName.Size = new System.Drawing.Size(493, 36);
             this.txtRoomName.TabIndex = 28;
+            this.txtRoomName.TextChanged += new System.EventHandler(this.txtRoomName_TextChanged);
             this.txtRoomName.MouseEnter += new System.EventHandler(this.pnlButtons_MouseLeave);
             // 
             // label18
@@ -682,70 +772,12 @@
             this.btnAddRoom.TextOffset = new System.Drawing.Point(7, -11);
             this.btnAddRoom.MouseEnter += new System.EventHandler(this.pnlButtons_MouseLeave);
             // 
-            // dtgRooms
-            // 
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
-            this.dtgRooms.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.dtgRooms.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dtgRooms.BackgroundColor = System.Drawing.Color.White;
-            this.dtgRooms.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dtgRooms.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            this.dtgRooms.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dtgRooms.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.dtgRooms.ColumnHeadersHeight = 4;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dtgRooms.DefaultCellStyle = dataGridViewCellStyle3;
-            this.dtgRooms.EnableHeadersVisualStyles = false;
-            this.dtgRooms.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.dtgRooms.Location = new System.Drawing.Point(30, 199);
-            this.dtgRooms.Name = "dtgRooms";
-            this.dtgRooms.RowHeadersVisible = false;
-            this.dtgRooms.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dtgRooms.Size = new System.Drawing.Size(863, 218);
-            this.dtgRooms.TabIndex = 0;
-            this.dtgRooms.Theme = Guna.UI2.WinForms.Enums.DataGridViewPresetThemes.Default;
-            this.dtgRooms.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
-            this.dtgRooms.ThemeStyle.AlternatingRowsStyle.Font = null;
-            this.dtgRooms.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
-            this.dtgRooms.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
-            this.dtgRooms.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
-            this.dtgRooms.ThemeStyle.BackColor = System.Drawing.Color.White;
-            this.dtgRooms.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.dtgRooms.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.dtgRooms.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.dtgRooms.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            this.dtgRooms.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
-            this.dtgRooms.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            this.dtgRooms.ThemeStyle.HeaderStyle.Height = 4;
-            this.dtgRooms.ThemeStyle.ReadOnly = false;
-            this.dtgRooms.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
-            this.dtgRooms.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            this.dtgRooms.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            this.dtgRooms.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            this.dtgRooms.ThemeStyle.RowsStyle.Height = 22;
-            this.dtgRooms.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.dtgRooms.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            this.dtgRooms.MouseEnter += new System.EventHandler(this.pnlButtons_MouseLeave);
-            // 
             // btnProfile
             // 
             this.btnProfile.BorderColor = System.Drawing.Color.Black;
             this.btnProfile.BorderRadius = 15;
             this.btnProfile.BorderThickness = 2;
-            this.btnProfile.Controls.Add(this.guna2CirclePictureBox1);
+            this.btnProfile.Controls.Add(this.imgProfile);
             this.btnProfile.Controls.Add(this.lblName);
             this.btnProfile.Controls.Add(this.lblPosition);
             this.btnProfile.Location = new System.Drawing.Point(792, 9);
@@ -757,21 +789,21 @@
             this.btnProfile.MouseEnter += new System.EventHandler(this.btnProfile_MouseEnter);
             this.btnProfile.MouseLeave += new System.EventHandler(this.btnProfile_MouseLeave);
             // 
-            // guna2CirclePictureBox1
+            // imgProfile
             // 
-            this.guna2CirclePictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2CirclePictureBox1.Image = global::PrjOverhaulHotel.Properties.Resources.rb_8551;
-            this.guna2CirclePictureBox1.Location = new System.Drawing.Point(12, 42);
-            this.guna2CirclePictureBox1.Name = "guna2CirclePictureBox1";
-            this.guna2CirclePictureBox1.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.guna2CirclePictureBox1.ShadowDecoration.Parent = this.guna2CirclePictureBox1;
-            this.guna2CirclePictureBox1.Size = new System.Drawing.Size(50, 50);
-            this.guna2CirclePictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.guna2CirclePictureBox1.TabIndex = 13;
-            this.guna2CirclePictureBox1.TabStop = false;
-            this.guna2CirclePictureBox1.Click += new System.EventHandler(this.btnProfile_Click);
-            this.guna2CirclePictureBox1.MouseEnter += new System.EventHandler(this.btnProfile_MouseEnter);
-            this.guna2CirclePictureBox1.MouseLeave += new System.EventHandler(this.btnProfile_MouseLeave);
+            this.imgProfile.BackColor = System.Drawing.Color.Transparent;
+            this.imgProfile.Image = global::PrjOverhaulHotel.Properties.Resources.rb_8551;
+            this.imgProfile.Location = new System.Drawing.Point(12, 42);
+            this.imgProfile.Name = "imgProfile";
+            this.imgProfile.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.imgProfile.ShadowDecoration.Parent = this.imgProfile;
+            this.imgProfile.Size = new System.Drawing.Size(50, 50);
+            this.imgProfile.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.imgProfile.TabIndex = 13;
+            this.imgProfile.TabStop = false;
+            this.imgProfile.Click += new System.EventHandler(this.btnProfile_Click);
+            this.imgProfile.MouseEnter += new System.EventHandler(this.btnProfile_MouseEnter);
+            this.imgProfile.MouseLeave += new System.EventHandler(this.btnProfile_MouseLeave);
             // 
             // lblName
             // 
@@ -839,11 +871,11 @@
             this.pnlButtons.ResumeLayout(false);
             this.pnlRooms.ResumeLayout(false);
             this.pnlRooms.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgRooms)).EndInit();
             this.guna2GradientPanel5.ResumeLayout(false);
             this.guna2GradientPanel6.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dtgRooms)).EndInit();
             this.btnProfile.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imgProfile)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -871,11 +903,11 @@
         private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel5;
         private Guna.UI2.WinForms.Guna2Separator guna2Separator9;
         private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Label lblResult;
         private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel6;
         private Guna.UI2.WinForms.Guna2Separator guna2Separator10;
         private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.Label lblTotal;
         private Guna.UI2.WinForms.Guna2ComboBox cmbRoomStatus;
         private Guna.UI2.WinForms.Guna2ComboBox cmbRoomType;
         private Guna.UI2.WinForms.Guna2TextBox txtRoomName;
@@ -885,11 +917,16 @@
         private Guna.UI2.WinForms.Guna2Separator guna2Separator1;
         private Guna.UI2.WinForms.Guna2GradientTileButton btnManageRoom;
         private Guna.UI2.WinForms.Guna2GradientTileButton btnAddRoom;
-        private Guna.UI2.WinForms.Guna2DataGridView dtgRooms;
         private Guna.UI2.WinForms.Guna2CustomGradientPanel btnProfile;
-        private Guna.UI2.WinForms.Guna2CirclePictureBox guna2CirclePictureBox1;
+        private Guna.UI2.WinForms.Guna2CirclePictureBox imgProfile;
         private System.Windows.Forms.Label lblName;
         private System.Windows.Forms.Label lblPosition;
         private System.Windows.Forms.Label lblTitle;
+        private System.Windows.Forms.DataGridView dtgRooms;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
     }
 }

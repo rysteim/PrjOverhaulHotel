@@ -16,9 +16,9 @@ namespace PrjOverhaulHotel
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            //Application.Run(new FrmStartUp());
+            Application.Run(new FrmStartUp());
             //Application.Run(new FrmStaffReservation());
-            Application.Run(new FrmStaffDashboard());
+            //Application.Run(new FrmStaffDashboard());
         }
     }
 }

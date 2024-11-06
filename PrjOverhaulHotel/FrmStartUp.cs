@@ -13,9 +13,16 @@ namespace PrjOverhaulHotel
     public partial class FrmStartUp : Form
     {
         private int row, userID;
+        private string username, role, imageLoc;
         public FrmStartUp()
         {
             InitializeComponent();
+        }
+
+        public FrmStartUp(string username)
+        {
+            InitializeComponent();
+            txtUsername.Text = username;
         }
 
         private void FrmStartUp_Load(object sender, EventArgs e)
@@ -30,7 +37,8 @@ namespace PrjOverhaulHotel
 
         private void lnkSignup_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            new FrmSignup().ShowDialog();
+            new FrmSignup().Show();
+            this.Hide();
         }
 
         private void btnLogin_Click(object sender, EventArgs e)
@@ -39,9 +47,18 @@ namespace PrjOverhaulHotel
             if (GlobalProcedure.datHotel.Rows.Count > 0)
             {
                 clearInputs();
-                userID = Convert.ToInt32(GlobalProcedure.datHotel.Rows[0]["id"].ToString());
-                new FrmStaffDashboard(userID).ShowDialog();
-                this.Close();
+                userID = Convert.ToInt32(GlobalProcedure.datHotel.Rows[0]["ACCOUNT ID"].ToString());
+                username = GlobalProcedure.datHotel.Rows[0]["USERNAME"].ToString();
+                role = GlobalProcedure.datHotel.Rows[0]["ROLE"].ToString();
+                imageLoc = GlobalProcedure.datHotel.Rows[0]["IMAGE"].ToString();
+                UserAccount.setUserID(userID);
+                UserAccount.setProfile(username, role, imageLoc);
+                new FrmStaffDashboard().Show();
+                this.Hide();
+            }
+            else
+            {
+                MessageBox.Show("Incorrect username or password.", "Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 

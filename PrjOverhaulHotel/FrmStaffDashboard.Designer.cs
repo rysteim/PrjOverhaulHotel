@@ -32,12 +32,12 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmStaffDashboard));
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2CustomGradientPanel1 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.btnHide = new Guna.UI2.WinForms.Guna2CircleButton();
+            this.btnMaximize = new Guna.UI2.WinForms.Guna2CircleButton();
+            this.btnExit = new Guna.UI2.WinForms.Guna2CircleButton();
             this.pnlButtons = new Guna.UI2.WinForms.Guna2Panel();
-            this.guna2VSeparator2 = new Guna.UI2.WinForms.Guna2VSeparator();
-            this.btnProfile = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
-            this.lblName = new System.Windows.Forms.Label();
-            this.lblPosition = new System.Windows.Forms.Label();
-            this.lblTitle = new System.Windows.Forms.Label();
             this.btnLogout = new Guna.UI2.WinForms.Guna2GradientButton();
             this.btnRooms = new Guna.UI2.WinForms.Guna2GradientButton();
             this.btnPersonnel = new Guna.UI2.WinForms.Guna2GradientButton();
@@ -45,19 +45,19 @@
             this.btnAP = new Guna.UI2.WinForms.Guna2GradientButton();
             this.btnReservation = new Guna.UI2.WinForms.Guna2GradientButton();
             this.btnDashboard = new Guna.UI2.WinForms.Guna2GradientButton();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.btnHide = new Guna.UI2.WinForms.Guna2CircleButton();
-            this.btnMaximize = new Guna.UI2.WinForms.Guna2CircleButton();
-            this.btnExit = new Guna.UI2.WinForms.Guna2CircleButton();
-            this.guna2CirclePictureBox1 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
+            this.guna2VSeparator2 = new Guna.UI2.WinForms.Guna2VSeparator();
+            this.btnProfile = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
+            this.imgProfile = new Guna.UI2.WinForms.Guna2CirclePictureBox();
+            this.lblName = new System.Windows.Forms.Label();
+            this.lblPosition = new System.Windows.Forms.Label();
+            this.lblTitle = new System.Windows.Forms.Label();
             this.pnlDashboard = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2CustomGradientPanel1.SuspendLayout();
-            this.pnlButtons.SuspendLayout();
-            this.btnProfile.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).BeginInit();
+            this.pnlButtons.SuspendLayout();
+            this.btnProfile.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.imgProfile)).BeginInit();
             this.SuspendLayout();
             // 
             // guna2Elipse1
@@ -83,6 +83,85 @@
             this.guna2CustomGradientPanel1.TabIndex = 10;
             this.guna2CustomGradientPanel1.MouseEnter += new System.EventHandler(this.pnlButtons_MouseLeave);
             // 
+            // pictureBox3
+            // 
+            this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox3.Image = global::PrjOverhaulHotel.Properties.Resources.HôtellerieIcon;
+            this.pictureBox3.Location = new System.Drawing.Point(10, 7);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(30, 30);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox3.TabIndex = 12;
+            this.pictureBox3.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox2.Image = global::PrjOverhaulHotel.Properties.Resources.Hôtelliere__1_;
+            this.pictureBox2.Location = new System.Drawing.Point(45, 10);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(96, 25);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 11;
+            this.pictureBox2.TabStop = false;
+            // 
+            // btnHide
+            // 
+            this.btnHide.BackColor = System.Drawing.Color.Transparent;
+            this.btnHide.CheckedState.Parent = this.btnHide;
+            this.btnHide.CustomImages.Parent = this.btnHide;
+            this.btnHide.FillColor = System.Drawing.Color.Lime;
+            this.btnHide.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnHide.ForeColor = System.Drawing.Color.White;
+            this.btnHide.HoverState.Parent = this.btnHide;
+            this.btnHide.Image = global::PrjOverhaulHotel.Properties.Resources.minus;
+            this.btnHide.Location = new System.Drawing.Point(858, 5);
+            this.btnHide.Margin = new System.Windows.Forms.Padding(1);
+            this.btnHide.Name = "btnHide";
+            this.btnHide.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.btnHide.ShadowDecoration.Parent = this.btnHide;
+            this.btnHide.Size = new System.Drawing.Size(35, 35);
+            this.btnHide.TabIndex = 2;
+            this.btnHide.Click += new System.EventHandler(this.btnHide_Click);
+            // 
+            // btnMaximize
+            // 
+            this.btnMaximize.BackColor = System.Drawing.Color.Transparent;
+            this.btnMaximize.CheckedState.Parent = this.btnMaximize;
+            this.btnMaximize.CustomImages.Parent = this.btnMaximize;
+            this.btnMaximize.FillColor = System.Drawing.Color.Yellow;
+            this.btnMaximize.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnMaximize.ForeColor = System.Drawing.Color.White;
+            this.btnMaximize.HoverState.Parent = this.btnMaximize;
+            this.btnMaximize.Image = global::PrjOverhaulHotel.Properties.Resources.maximize;
+            this.btnMaximize.Location = new System.Drawing.Point(908, 5);
+            this.btnMaximize.Margin = new System.Windows.Forms.Padding(1);
+            this.btnMaximize.Name = "btnMaximize";
+            this.btnMaximize.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.btnMaximize.ShadowDecoration.Parent = this.btnMaximize;
+            this.btnMaximize.Size = new System.Drawing.Size(35, 35);
+            this.btnMaximize.TabIndex = 1;
+            this.btnMaximize.Click += new System.EventHandler(this.btnMaximize_Click);
+            // 
+            // btnExit
+            // 
+            this.btnExit.BackColor = System.Drawing.Color.Transparent;
+            this.btnExit.CheckedState.Parent = this.btnExit;
+            this.btnExit.CustomImages.Parent = this.btnExit;
+            this.btnExit.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.btnExit.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnExit.ForeColor = System.Drawing.Color.White;
+            this.btnExit.HoverState.Parent = this.btnExit;
+            this.btnExit.Image = global::PrjOverhaulHotel.Properties.Resources.x;
+            this.btnExit.Location = new System.Drawing.Point(958, 5);
+            this.btnExit.Margin = new System.Windows.Forms.Padding(1);
+            this.btnExit.Name = "btnExit";
+            this.btnExit.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.btnExit.ShadowDecoration.Parent = this.btnExit;
+            this.btnExit.Size = new System.Drawing.Size(35, 35);
+            this.btnExit.TabIndex = 0;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
+            // 
             // pnlButtons
             // 
             this.pnlButtons.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(220)))), ((int)(((byte)(195)))));
@@ -101,74 +180,6 @@
             this.pnlButtons.TabIndex = 11;
             this.pnlButtons.MouseEnter += new System.EventHandler(this.button_Move);
             this.pnlButtons.MouseLeave += new System.EventHandler(this.button_Move);
-            // 
-            // guna2VSeparator2
-            // 
-            this.guna2VSeparator2.BackColor = System.Drawing.Color.Transparent;
-            this.guna2VSeparator2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(135)))), ((int)(((byte)(97)))));
-            this.guna2VSeparator2.Location = new System.Drawing.Point(195, 0);
-            this.guna2VSeparator2.Name = "guna2VSeparator2";
-            this.guna2VSeparator2.Size = new System.Drawing.Size(10, 555);
-            this.guna2VSeparator2.TabIndex = 8;
-            // 
-            // btnProfile
-            // 
-            this.btnProfile.BorderColor = System.Drawing.Color.Black;
-            this.btnProfile.BorderRadius = 15;
-            this.btnProfile.BorderThickness = 2;
-            this.btnProfile.Controls.Add(this.guna2CirclePictureBox1);
-            this.btnProfile.Controls.Add(this.lblName);
-            this.btnProfile.Controls.Add(this.lblPosition);
-            this.btnProfile.Location = new System.Drawing.Point(792, 9);
-            this.btnProfile.Name = "btnProfile";
-            this.btnProfile.ShadowDecoration.Parent = this.btnProfile;
-            this.btnProfile.Size = new System.Drawing.Size(200, 102);
-            this.btnProfile.TabIndex = 12;
-            this.btnProfile.Click += new System.EventHandler(this.btnProfile_Click);
-            this.btnProfile.MouseEnter += new System.EventHandler(this.btnProfile_MouseEnter);
-            this.btnProfile.MouseLeave += new System.EventHandler(this.btnProfile_MouseLeave);
-            // 
-            // lblName
-            // 
-            this.lblName.BackColor = System.Drawing.Color.Transparent;
-            this.lblName.Font = new System.Drawing.Font("Microsoft New Tai Lue", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblName.ForeColor = System.Drawing.Color.Black;
-            this.lblName.Location = new System.Drawing.Point(64, 47);
-            this.lblName.Name = "lblName";
-            this.lblName.Size = new System.Drawing.Size(134, 23);
-            this.lblName.TabIndex = 0;
-            this.lblName.Text = "Sample Name";
-            this.lblName.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.lblName.Click += new System.EventHandler(this.btnProfile_Click);
-            this.lblName.MouseEnter += new System.EventHandler(this.btnProfile_MouseEnter);
-            this.lblName.MouseLeave += new System.EventHandler(this.btnProfile_MouseLeave);
-            // 
-            // lblPosition
-            // 
-            this.lblPosition.BackColor = System.Drawing.Color.Transparent;
-            this.lblPosition.Font = new System.Drawing.Font("Microsoft New Tai Lue", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPosition.ForeColor = System.Drawing.Color.Black;
-            this.lblPosition.Location = new System.Drawing.Point(65, 65);
-            this.lblPosition.Name = "lblPosition";
-            this.lblPosition.Size = new System.Drawing.Size(134, 23);
-            this.lblPosition.TabIndex = 1;
-            this.lblPosition.Text = "Sample Position";
-            this.lblPosition.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.lblPosition.Click += new System.EventHandler(this.btnProfile_Click);
-            this.lblPosition.MouseEnter += new System.EventHandler(this.btnProfile_MouseEnter);
-            this.lblPosition.MouseLeave += new System.EventHandler(this.btnProfile_MouseLeave);
-            // 
-            // lblTitle
-            // 
-            this.lblTitle.BackColor = System.Drawing.Color.Transparent;
-            this.lblTitle.Font = new System.Drawing.Font("Microsoft New Tai Lue", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTitle.ForeColor = System.Drawing.Color.White;
-            this.lblTitle.Location = new System.Drawing.Point(331, 59);
-            this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(397, 45);
-            this.lblTitle.TabIndex = 18;
-            this.lblTitle.Text = "Hotelliere";
-            this.lblTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // btnLogout
             // 
@@ -365,100 +376,89 @@
             this.btnDashboard.MouseEnter += new System.EventHandler(this.button_Move);
             this.btnDashboard.MouseLeave += new System.EventHandler(this.button_Move);
             // 
-            // pictureBox3
+            // guna2VSeparator2
             // 
-            this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox3.Image = global::PrjOverhaulHotel.Properties.Resources.HôtellerieIcon;
-            this.pictureBox3.Location = new System.Drawing.Point(10, 7);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(30, 30);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox3.TabIndex = 12;
-            this.pictureBox3.TabStop = false;
+            this.guna2VSeparator2.BackColor = System.Drawing.Color.Transparent;
+            this.guna2VSeparator2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(135)))), ((int)(((byte)(97)))));
+            this.guna2VSeparator2.Location = new System.Drawing.Point(195, 0);
+            this.guna2VSeparator2.Name = "guna2VSeparator2";
+            this.guna2VSeparator2.Size = new System.Drawing.Size(10, 555);
+            this.guna2VSeparator2.TabIndex = 8;
             // 
-            // pictureBox2
+            // btnProfile
             // 
-            this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox2.Image = global::PrjOverhaulHotel.Properties.Resources.Hôtelliere__1_;
-            this.pictureBox2.Location = new System.Drawing.Point(45, 10);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(96, 25);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 11;
-            this.pictureBox2.TabStop = false;
+            this.btnProfile.BorderColor = System.Drawing.Color.Black;
+            this.btnProfile.BorderRadius = 15;
+            this.btnProfile.BorderThickness = 2;
+            this.btnProfile.Controls.Add(this.imgProfile);
+            this.btnProfile.Controls.Add(this.lblName);
+            this.btnProfile.Controls.Add(this.lblPosition);
+            this.btnProfile.Location = new System.Drawing.Point(792, 9);
+            this.btnProfile.Name = "btnProfile";
+            this.btnProfile.ShadowDecoration.Parent = this.btnProfile;
+            this.btnProfile.Size = new System.Drawing.Size(200, 102);
+            this.btnProfile.TabIndex = 12;
+            this.btnProfile.Click += new System.EventHandler(this.btnProfile_Click);
+            this.btnProfile.MouseEnter += new System.EventHandler(this.btnProfile_MouseEnter);
+            this.btnProfile.MouseLeave += new System.EventHandler(this.btnProfile_MouseLeave);
             // 
-            // btnHide
+            // imgProfile
             // 
-            this.btnHide.BackColor = System.Drawing.Color.Transparent;
-            this.btnHide.CheckedState.Parent = this.btnHide;
-            this.btnHide.CustomImages.Parent = this.btnHide;
-            this.btnHide.FillColor = System.Drawing.Color.Lime;
-            this.btnHide.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnHide.ForeColor = System.Drawing.Color.White;
-            this.btnHide.HoverState.Parent = this.btnHide;
-            this.btnHide.Image = global::PrjOverhaulHotel.Properties.Resources.minus;
-            this.btnHide.Location = new System.Drawing.Point(858, 5);
-            this.btnHide.Margin = new System.Windows.Forms.Padding(1);
-            this.btnHide.Name = "btnHide";
-            this.btnHide.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.btnHide.ShadowDecoration.Parent = this.btnHide;
-            this.btnHide.Size = new System.Drawing.Size(35, 35);
-            this.btnHide.TabIndex = 2;
-            this.btnHide.Click += new System.EventHandler(this.btnHide_Click);
+            this.imgProfile.BackColor = System.Drawing.Color.Transparent;
+            this.imgProfile.Image = global::PrjOverhaulHotel.Properties.Resources.rb_8551;
+            this.imgProfile.Location = new System.Drawing.Point(12, 42);
+            this.imgProfile.Name = "imgProfile";
+            this.imgProfile.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.imgProfile.ShadowDecoration.Parent = this.imgProfile;
+            this.imgProfile.Size = new System.Drawing.Size(50, 50);
+            this.imgProfile.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.imgProfile.TabIndex = 13;
+            this.imgProfile.TabStop = false;
+            this.imgProfile.Click += new System.EventHandler(this.btnProfile_Click);
+            this.imgProfile.MouseEnter += new System.EventHandler(this.btnProfile_MouseEnter);
+            this.imgProfile.MouseLeave += new System.EventHandler(this.btnProfile_MouseLeave);
             // 
-            // btnMaximize
+            // lblName
             // 
-            this.btnMaximize.BackColor = System.Drawing.Color.Transparent;
-            this.btnMaximize.CheckedState.Parent = this.btnMaximize;
-            this.btnMaximize.CustomImages.Parent = this.btnMaximize;
-            this.btnMaximize.FillColor = System.Drawing.Color.Yellow;
-            this.btnMaximize.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnMaximize.ForeColor = System.Drawing.Color.White;
-            this.btnMaximize.HoverState.Parent = this.btnMaximize;
-            this.btnMaximize.Image = global::PrjOverhaulHotel.Properties.Resources.maximize;
-            this.btnMaximize.Location = new System.Drawing.Point(908, 5);
-            this.btnMaximize.Margin = new System.Windows.Forms.Padding(1);
-            this.btnMaximize.Name = "btnMaximize";
-            this.btnMaximize.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.btnMaximize.ShadowDecoration.Parent = this.btnMaximize;
-            this.btnMaximize.Size = new System.Drawing.Size(35, 35);
-            this.btnMaximize.TabIndex = 1;
-            this.btnMaximize.Click += new System.EventHandler(this.btnMaximize_Click);
+            this.lblName.BackColor = System.Drawing.Color.Transparent;
+            this.lblName.Font = new System.Drawing.Font("Microsoft New Tai Lue", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblName.ForeColor = System.Drawing.Color.Black;
+            this.lblName.Location = new System.Drawing.Point(64, 47);
+            this.lblName.Name = "lblName";
+            this.lblName.Size = new System.Drawing.Size(134, 23);
+            this.lblName.TabIndex = 0;
+            this.lblName.Text = "Sample Name";
+            this.lblName.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblName.Click += new System.EventHandler(this.btnProfile_Click);
+            this.lblName.MouseEnter += new System.EventHandler(this.btnProfile_MouseEnter);
+            this.lblName.MouseLeave += new System.EventHandler(this.btnProfile_MouseLeave);
             // 
-            // btnExit
+            // lblPosition
             // 
-            this.btnExit.BackColor = System.Drawing.Color.Transparent;
-            this.btnExit.CheckedState.Parent = this.btnExit;
-            this.btnExit.CustomImages.Parent = this.btnExit;
-            this.btnExit.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.btnExit.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnExit.ForeColor = System.Drawing.Color.White;
-            this.btnExit.HoverState.Parent = this.btnExit;
-            this.btnExit.Image = global::PrjOverhaulHotel.Properties.Resources.x;
-            this.btnExit.Location = new System.Drawing.Point(958, 5);
-            this.btnExit.Margin = new System.Windows.Forms.Padding(1);
-            this.btnExit.Name = "btnExit";
-            this.btnExit.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.btnExit.ShadowDecoration.Parent = this.btnExit;
-            this.btnExit.Size = new System.Drawing.Size(35, 35);
-            this.btnExit.TabIndex = 0;
-            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
+            this.lblPosition.BackColor = System.Drawing.Color.Transparent;
+            this.lblPosition.Font = new System.Drawing.Font("Microsoft New Tai Lue", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPosition.ForeColor = System.Drawing.Color.Black;
+            this.lblPosition.Location = new System.Drawing.Point(65, 65);
+            this.lblPosition.Name = "lblPosition";
+            this.lblPosition.Size = new System.Drawing.Size(134, 23);
+            this.lblPosition.TabIndex = 1;
+            this.lblPosition.Text = "Sample Position";
+            this.lblPosition.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblPosition.Click += new System.EventHandler(this.btnProfile_Click);
+            this.lblPosition.MouseEnter += new System.EventHandler(this.btnProfile_MouseEnter);
+            this.lblPosition.MouseLeave += new System.EventHandler(this.btnProfile_MouseLeave);
             // 
-            // guna2CirclePictureBox1
+            // lblTitle
             // 
-            this.guna2CirclePictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2CirclePictureBox1.Image = global::PrjOverhaulHotel.Properties.Resources.rb_8551;
-            this.guna2CirclePictureBox1.Location = new System.Drawing.Point(12, 42);
-            this.guna2CirclePictureBox1.Name = "guna2CirclePictureBox1";
-            this.guna2CirclePictureBox1.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.guna2CirclePictureBox1.ShadowDecoration.Parent = this.guna2CirclePictureBox1;
-            this.guna2CirclePictureBox1.Size = new System.Drawing.Size(50, 50);
-            this.guna2CirclePictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.guna2CirclePictureBox1.TabIndex = 13;
-            this.guna2CirclePictureBox1.TabStop = false;
-            this.guna2CirclePictureBox1.Click += new System.EventHandler(this.btnProfile_Click);
-            this.guna2CirclePictureBox1.MouseEnter += new System.EventHandler(this.btnProfile_MouseEnter);
-            this.guna2CirclePictureBox1.MouseLeave += new System.EventHandler(this.btnProfile_MouseLeave);
+            this.lblTitle.BackColor = System.Drawing.Color.Transparent;
+            this.lblTitle.Font = new System.Drawing.Font("Microsoft New Tai Lue", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitle.ForeColor = System.Drawing.Color.White;
+            this.lblTitle.Location = new System.Drawing.Point(331, 59);
+            this.lblTitle.Name = "lblTitle";
+            this.lblTitle.Size = new System.Drawing.Size(397, 45);
+            this.lblTitle.TabIndex = 18;
+            this.lblTitle.Text = "Hotelliere";
+            this.lblTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // pnlDashboard
             // 
@@ -491,11 +491,11 @@
             this.Load += new System.EventHandler(this.FrmStaffDashboard_Load);
             this.MouseEnter += new System.EventHandler(this.pnlButtons_MouseLeave);
             this.guna2CustomGradientPanel1.ResumeLayout(false);
-            this.pnlButtons.ResumeLayout(false);
-            this.btnProfile.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).EndInit();
+            this.pnlButtons.ResumeLayout(false);
+            this.btnProfile.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.imgProfile)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -519,7 +519,7 @@
         private Guna.UI2.WinForms.Guna2GradientButton btnGuests;
         private Guna.UI2.WinForms.Guna2GradientButton btnAP;
         private Guna.UI2.WinForms.Guna2CustomGradientPanel btnProfile;
-        private Guna.UI2.WinForms.Guna2CirclePictureBox guna2CirclePictureBox1;
+        private Guna.UI2.WinForms.Guna2CirclePictureBox imgProfile;
         private System.Windows.Forms.Label lblName;
         private System.Windows.Forms.Label lblPosition;
         private System.Windows.Forms.Label lblTitle;

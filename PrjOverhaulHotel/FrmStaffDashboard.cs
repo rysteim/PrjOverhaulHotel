@@ -13,22 +13,18 @@ namespace PrjOverhaulHotel
 {
     public partial class FrmStaffDashboard : Form
     {
-        int userID;
+        int userID = UserAccount.getUserID();
+
         public FrmStaffDashboard()
         {
             InitializeComponent();
-        }
-
-        public FrmStaffDashboard(int userID)
-        {
-            InitializeComponent();
-            this.userID = userID;
         }
 
         private void FrmStaffDashboard_Load(object sender, EventArgs e)
         {
             GlobalProcedure.fncDatabaseConnection();
             maximizeButtons();
+            displayProfile();
         }
 
         private void btnExit_Click(object sender, EventArgs e)
@@ -102,44 +98,62 @@ namespace PrjOverhaulHotel
 
         private void btnProfile_Click(object sender, EventArgs e)
         {
-            new FrmStaffProfile(userID).ShowDialog();
+            new FrmStaffProfile().Show();
             this.Hide();
         }
 
         private void btnReservation_Click(object sender, EventArgs e)
         {
-            new FrmStaffReservation(userID).ShowDialog();
+            new FrmStaffReservation().Show();
             this.Hide();
         }
 
         private void btnAP_Click(object sender, EventArgs e)
         {
-            new FrmStaffAP(userID).ShowDialog();
+            new FrmStaffAP().Show();
             this.Hide();
         }
 
         private void btnGuests_Click(object sender, EventArgs e)
         {
-            new FrmStaffGuests(userID).ShowDialog();
+            new FrmStaffGuests().Show();
             this.Hide();
         }
 
         private void btnPersonnel_Click(object sender, EventArgs e)
         {
-            new FrmStaffPersonnel(userID).ShowDialog();
+            new FrmStaffPersonnel().Show();
             this.Hide();
         }
 
         private void btnRooms_Click(object sender, EventArgs e)
         {
-            new FrmStaffRoom(userID).ShowDialog();
+            new FrmStaffRoom().Show();
             this.Hide();
         }
 
         private void btnLogout_Click(object sender, EventArgs e)
         {
-            new FrmStartUp().ShowDialog();
-            this.Hide();
+            FrmStartUp startUp = new FrmStartUp();
+            this.Close();
+            startUp.Show();
+        }
+
+        private void displayProfile()
+        {
+            lblName.Text = UserAccount.getUsername();
+            lblPosition.Text = UserAccount.getRole(); 
+            
+            string imagePath = UserAccount.getImage();
+
+            if (!string.IsNullOrEmpty(imagePath) && System.IO.File.Exists(imagePath))
+            {
+                imgProfile.Image = Image.FromFile(imagePath);
+            }
+            else
+            {
+                imgProfile.Image = Properties.Resources.rb_8551;
+            }
         }
     }
 }

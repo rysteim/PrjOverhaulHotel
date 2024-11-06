@@ -12,22 +12,19 @@ namespace PrjOverhaulHotel
 {
     public partial class FrmStaffRoom : Form
     {
-        int userID;
+        int userID = UserAccount.getUserID();
         public FrmStaffRoom()
         {
             InitializeComponent();
-        }
-
-        public FrmStaffRoom(int userID)
-        {
-            InitializeComponent();
-            this.userID = userID;
         }
 
         private void FrmStaffRoom_Load(object sender, EventArgs e)
         {
             GlobalProcedure.fncDatabaseConnection();
             maximizeButtons();
+            displayProfile();
+            displayRooms();
+            displayTypes();
         }
 
         private void btnExit_Click(object sender, EventArgs e)
@@ -101,44 +98,134 @@ namespace PrjOverhaulHotel
 
         private void btnProfile_Click(object sender, EventArgs e)
         {
-            new FrmStaffProfile(userID).ShowDialog();
+            new FrmStaffProfile().Show();
             this.Hide();
         }
 
         private void btnDashboard_Click(object sender, EventArgs e)
         {
-            new FrmStaffDashboard(userID).ShowDialog();
+            new FrmStaffDashboard().Show();
             this.Hide();
         }
 
         private void btnReservation_Click(object sender, EventArgs e)
         {
-            new FrmStaffReservation(userID).ShowDialog();
+            new FrmStaffReservation().Show();
             this.Hide();
         }
 
         private void btnAP_Click(object sender, EventArgs e)
         {
-            new FrmStaffAP(userID).ShowDialog();
+            new FrmStaffAP().Show();
             this.Hide();
         }
 
         private void btnGuests_Click(object sender, EventArgs e)
         {
-            new FrmStaffGuests(userID).ShowDialog();
+            new FrmStaffGuests().Show();
             this.Hide();
         }
 
         private void btnPersonnel_Click(object sender, EventArgs e)
         {
-            new FrmStaffPersonnel(userID).ShowDialog();
+            new FrmStaffPersonnel().Show();
             this.Hide();
         }
 
         private void btnLogout_Click(object sender, EventArgs e)
         {
-            new FrmStartUp().ShowDialog();
+            new FrmStartUp().Show();
             this.Hide();
+        }
+
+        private void displayProfile()
+        {
+            lblName.Text = UserAccount.getUsername();
+            lblPosition.Text = UserAccount.getRole();
+
+            string imagePath = UserAccount.getImage();
+
+            if (!string.IsNullOrEmpty(imagePath) && System.IO.File.Exists(imagePath))
+            {
+                imgProfile.Image = Image.FromFile(imagePath);
+            }
+            else
+            {
+                imgProfile.Image = Properties.Resources.rb_8551;
+            }
+        }
+
+        private void displayRooms()
+        {
+            GlobalProcedure.procRoomData();
+            if (GlobalProcedure.datHotel.Rows.Count > 0)
+            {
+                dtgRooms.Rows.Clear();
+                lblTotal.Text = GlobalProcedure.datHotel.Rows.Count.ToString();
+                lblResult.Text = GlobalProcedure.datHotel.Rows.Count.ToString();
+                foreach (DataRow row1 in GlobalProcedure.datHotel.Rows)
+                    {
+                    dtgRooms.Rows.Add(
+                        row1["id"].ToString(),
+                        row1["roomName"].ToString(),
+                        row1["roomType"].ToString(),
+                        row1["status"].ToString(),
+                        $"₱{Convert.ToDouble(row1["pricePerDay"].ToString()):F2}"
+                    );
+                }
+            }
+            else
+            {
+                 dtgRooms.Rows.Clear();
+            }
+        }
+
+        private void displayTypes()
+        {
+            GlobalProcedure.procRoomTypes();
+            if (GlobalProcedure.datHotel.Rows.Count > 0)
+            {
+                cmbRoomType.Items.Clear();
+                cmbRoomType.Items.Add("");
+                foreach (DataRow row1 in GlobalProcedure.datHotel.Rows)
+                {
+                    cmbRoomType.Items.Add(row1["roomType"].ToString());
+                }
+            }
+            else
+            {
+                cmbRoomType.Items.Clear();
+            }
+        }
+        
+        private void searchRooms()
+        {
+            GlobalProcedure.procRoomSearch(txtRoomName.Text, cmbRoomType.Text, cmbRoomStatus.Text);
+                if (GlobalProcedure.datHotel.Rows.Count > 0)
+                {
+                    dtgRooms.Rows.Clear();
+                    lblResult.Text = GlobalProcedure.datHotel.Rows.Count.ToString();
+                    foreach (DataRow row1 in GlobalProcedure.datHotel.Rows)
+                    {
+                        dtgRooms.Rows.Add(
+                            row1["id"].ToString(),
+                            row1["roomName"].ToString(),
+                            row1["roomType"].ToString(),
+                            row1["status"].ToString(),
+                            $"₱{Convert.ToDouble(row1["pricePerDay"].ToString()):F2}"
+                        );
+                    }
+                }
+                else
+                {
+                lblResult.Text = GlobalProcedure.datHotel.Rows.Count.ToString();
+                dtgRooms.Rows.Clear();
+                }
+        }
+
+        private void txtRoomName_TextChanged(object sender, EventArgs e)
+        {
+            searchRooms();
         }
     }
 }

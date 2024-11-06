@@ -12,22 +12,17 @@ namespace PrjOverhaulHotel
 {
     public partial class FrmStaffAP : Form
     {
-        int userID;
+        int userID = UserAccount.getUserID();
         public FrmStaffAP()
         {
             InitializeComponent();
-        }
-
-        public FrmStaffAP(int userID)
-        {
-            InitializeComponent();
-            this.userID = userID;
         }
 
         private void FrmStaffAP_Load(object sender, EventArgs e)
         {
             GlobalProcedure.fncDatabaseConnection();
             maximizeButtons();
+            displayProfile();
         }
 
         private void btnExit_Click(object sender, EventArgs e)
@@ -90,45 +85,61 @@ namespace PrjOverhaulHotel
 
         private void btnProfile_Click(object sender, EventArgs e)
         {
-            new FrmStaffProfile(userID).ShowDialog();
+            new FrmStaffProfile().Show();
             this.Hide();
         }
 
         private void btnDashboard_Click(object sender, EventArgs e)
         {
-            new FrmStaffDashboard(userID).ShowDialog();
+            new FrmStaffDashboard().Show();
             this.Hide();
         }
 
         private void btnReservation_Click(object sender, EventArgs e)
         {
-            new FrmStaffReservation(userID).ShowDialog();
+            new FrmStaffReservation().Show();
             this.Hide();
         }
 
         private void btnGuests_Click(object sender, EventArgs e)
         {
-            new FrmStaffGuests(userID).ShowDialog();
+            new FrmStaffGuests().Show();
             this.Hide();
         }
 
         private void btnPersonnel_Click(object sender, EventArgs e)
         {
-            new FrmStaffPersonnel(userID).ShowDialog();
+            new FrmStaffPersonnel().Show();
             this.Hide();
         }
 
         private void btnRooms_Click(object sender, EventArgs e)
         {
-            new FrmStaffRoom(userID).ShowDialog();
+            new FrmStaffRoom().Show();
             this.Hide();
         }
 
         private void btnLogout_Click(object sender, EventArgs e)
         {
-            new FrmStartUp().ShowDialog();
+            new FrmStartUp().Show();
             this.Hide();
         }
 
+        private void displayProfile()
+        {
+            lblName.Text = UserAccount.getUsername();
+            lblPosition.Text = UserAccount.getRole();
+
+            string imagePath = UserAccount.getImage();
+
+            if (!string.IsNullOrEmpty(imagePath) && System.IO.File.Exists(imagePath))
+            {
+                imgProfile.Image = Image.FromFile(imagePath);
+            }
+            else
+            {
+                imgProfile.Image = Properties.Resources.rb_8551;
+            }
+        }
     }
 }

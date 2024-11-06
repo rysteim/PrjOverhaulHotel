@@ -12,16 +12,16 @@ namespace PrjOverhaulHotel
 {
     public partial class FrmStaffProfile : Form
     {
-        int userID;
+        int userID = UserAccount.getUserID();
         public FrmStaffProfile()
         {
             InitializeComponent();
         }
 
-        public FrmStaffProfile(int userID)
+        private void FrmStaffProfile_Load(object sender, EventArgs e)
         {
-            InitializeComponent();
-            this.userID = userID;
+            GlobalProcedure.fncDatabaseConnection();
+            displayProfile();
         }
 
         private void btnExit_Click(object sender, EventArgs e)
@@ -75,44 +75,75 @@ namespace PrjOverhaulHotel
 
         private void btnDashboard_Click(object sender, EventArgs e)
         {
-            new FrmStaffDashboard(userID).ShowDialog();
+            new FrmStaffDashboard().Show();
             this.Hide();
         }
 
         private void btnReservation_Click(object sender, EventArgs e)
         {
-            new FrmStaffReservation(userID).ShowDialog();
+            new FrmStaffReservation().Show();
             this.Hide();
         }
 
         private void btnAP_Click(object sender, EventArgs e)
         {
-            new FrmStaffAP(userID).ShowDialog();
+            new FrmStaffAP().Show();
             this.Hide();
         }
 
         private void btnGuests_Click(object sender, EventArgs e)
         {
-            new FrmStaffGuests(userID).ShowDialog();
+            new FrmStaffGuests().Show();
             this.Hide();
         }
 
         private void btnPersonnel_Click(object sender, EventArgs e)
         {
-            new FrmStaffPersonnel(userID).ShowDialog();
+            new FrmStaffPersonnel().Show();
             this.Hide();
         }
 
         private void btnRooms_Click(object sender, EventArgs e)
         {
-            new FrmStaffRoom(userID).ShowDialog();
+            new FrmStaffRoom().Show();
             this.Hide();
         }
 
         private void btnLogout_Click(object sender, EventArgs e)
         {
-            new FrmStartUp().ShowDialog();
+            new FrmStartUp().Show();
             this.Hide();
+        }
+
+        private void displayProfile()
+        {
+            lblName.Text = UserAccount.getUsername();
+            lblPosition.Text = UserAccount.getRole();
+
+            string imagePath = UserAccount.getImage();
+
+            if (!string.IsNullOrEmpty(imagePath) && System.IO.File.Exists(imagePath))
+            {
+                imgIcon.Image = Image.FromFile(imagePath);
+            }
+            else
+            {
+                imgIcon.Image = Properties.Resources.rb_8551;
+            }
+        }
+
+        private void btnSee_Click(object sender, EventArgs e)
+        {
+            if (txtPassword.UseSystemPasswordChar == true)
+            {
+                btnSee.Image = Properties.Resources.eye1;
+                txtPassword.UseSystemPasswordChar = false;
+            }
+            else if (txtPassword.UseSystemPasswordChar == false)
+            {
+                btnSee.Image = Properties.Resources.eye_off1;
+                txtPassword.UseSystemPasswordChar = true;
+            }
         }
     }
 }

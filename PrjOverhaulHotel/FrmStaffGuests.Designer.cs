@@ -52,13 +52,13 @@
             this.guna2GradientPanel3 = new Guna.UI2.WinForms.Guna2GradientPanel();
             this.guna2Separator6 = new Guna.UI2.WinForms.Guna2Separator();
             this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
+            this.lblResult = new System.Windows.Forms.Label();
             this.guna2GradientPanel4 = new Guna.UI2.WinForms.Guna2GradientPanel();
             this.guna2Separator7 = new Guna.UI2.WinForms.Guna2Separator();
             this.label9 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.guna2ComboBox1 = new Guna.UI2.WinForms.Guna2ComboBox();
-            this.guna2ComboBox2 = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.lblTotal = new System.Windows.Forms.Label();
+            this.cmbStatus = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.cmbMembership = new Guna.UI2.WinForms.Guna2ComboBox();
             this.txtGuestName = new Guna.UI2.WinForms.Guna2TextBox();
             this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
@@ -66,12 +66,22 @@
             this.guna2Separator2 = new Guna.UI2.WinForms.Guna2Separator();
             this.btnManageGuest = new Guna.UI2.WinForms.Guna2GradientTileButton();
             this.btnAddGuest = new Guna.UI2.WinForms.Guna2GradientTileButton();
-            this.dtgGuest = new Guna.UI2.WinForms.Guna2DataGridView();
             this.btnProfile = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
-            this.guna2CirclePictureBox1 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
+            this.imgProfile = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.lblName = new System.Windows.Forms.Label();
             this.lblPosition = new System.Windows.Forms.Label();
             this.lblTitle = new System.Windows.Forms.Label();
+            this.dtgGuests = new System.Windows.Forms.DataGridView();
+            this.imgSelect = new Guna.UI2.WinForms.Guna2CirclePictureBox();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.guna2CustomGradientPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -79,9 +89,10 @@
             this.pnlGuests.SuspendLayout();
             this.guna2GradientPanel3.SuspendLayout();
             this.guna2GradientPanel4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dtgGuest)).BeginInit();
             this.btnProfile.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imgProfile)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgGuests)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imgSelect)).BeginInit();
             this.SuspendLayout();
             // 
             // guna2Elipse1
@@ -411,10 +422,12 @@
             this.pnlGuests.BackColor = System.Drawing.Color.Transparent;
             this.pnlGuests.BackgroundImage = global::PrjOverhaulHotel.Properties.Resources.Group_282;
             this.pnlGuests.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pnlGuests.Controls.Add(this.imgSelect);
+            this.pnlGuests.Controls.Add(this.dtgGuests);
             this.pnlGuests.Controls.Add(this.guna2GradientPanel3);
             this.pnlGuests.Controls.Add(this.guna2GradientPanel4);
-            this.pnlGuests.Controls.Add(this.guna2ComboBox1);
-            this.pnlGuests.Controls.Add(this.guna2ComboBox2);
+            this.pnlGuests.Controls.Add(this.cmbStatus);
+            this.pnlGuests.Controls.Add(this.cmbMembership);
             this.pnlGuests.Controls.Add(this.txtGuestName);
             this.pnlGuests.Controls.Add(this.label11);
             this.pnlGuests.Controls.Add(this.label12);
@@ -422,7 +435,6 @@
             this.pnlGuests.Controls.Add(this.guna2Separator2);
             this.pnlGuests.Controls.Add(this.btnManageGuest);
             this.pnlGuests.Controls.Add(this.btnAddGuest);
-            this.pnlGuests.Controls.Add(this.dtgGuest);
             this.pnlGuests.Location = new System.Drawing.Point(66, 119);
             this.pnlGuests.Name = "pnlGuests";
             this.pnlGuests.ShadowDecoration.Parent = this.pnlGuests;
@@ -435,7 +447,7 @@
             this.guna2GradientPanel3.BorderRadius = 15;
             this.guna2GradientPanel3.Controls.Add(this.guna2Separator6);
             this.guna2GradientPanel3.Controls.Add(this.label7);
-            this.guna2GradientPanel3.Controls.Add(this.label8);
+            this.guna2GradientPanel3.Controls.Add(this.lblResult);
             this.guna2GradientPanel3.FillColor = System.Drawing.Color.Black;
             this.guna2GradientPanel3.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(135)))), ((int)(((byte)(97)))));
             this.guna2GradientPanel3.Location = new System.Drawing.Point(556, 30);
@@ -460,26 +472,26 @@
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(131, 26);
             this.label7.TabIndex = 30;
-            this.label7.Text = "SELECTED";
+            this.label7.Text = "RESULT";
             this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label8
+            // lblResult
             // 
-            this.label8.Font = new System.Drawing.Font("Adobe Fan Heiti Std B", 60F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label8.ForeColor = System.Drawing.Color.White;
-            this.label8.Location = new System.Drawing.Point(12, 8);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(131, 93);
-            this.label8.TabIndex = 32;
-            this.label8.Text = "0";
-            this.label8.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.lblResult.Font = new System.Drawing.Font("Adobe Fan Heiti Std B", 60F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.lblResult.ForeColor = System.Drawing.Color.White;
+            this.lblResult.Location = new System.Drawing.Point(12, 8);
+            this.lblResult.Name = "lblResult";
+            this.lblResult.Size = new System.Drawing.Size(131, 93);
+            this.lblResult.TabIndex = 32;
+            this.lblResult.Text = "0";
+            this.lblResult.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             // 
             // guna2GradientPanel4
             // 
             this.guna2GradientPanel4.BorderRadius = 15;
             this.guna2GradientPanel4.Controls.Add(this.guna2Separator7);
             this.guna2GradientPanel4.Controls.Add(this.label9);
-            this.guna2GradientPanel4.Controls.Add(this.label10);
+            this.guna2GradientPanel4.Controls.Add(this.lblTotal);
             this.guna2GradientPanel4.FillColor = System.Drawing.Color.Black;
             this.guna2GradientPanel4.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(135)))), ((int)(((byte)(97)))));
             this.guna2GradientPanel4.Location = new System.Drawing.Point(738, 30);
@@ -507,64 +519,67 @@
             this.label9.Text = "TOTAL";
             this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label10
+            // lblTotal
             // 
-            this.label10.Font = new System.Drawing.Font("Adobe Fan Heiti Std B", 60F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label10.ForeColor = System.Drawing.Color.White;
-            this.label10.Location = new System.Drawing.Point(12, 8);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(131, 93);
-            this.label10.TabIndex = 33;
-            this.label10.Text = "0";
-            this.label10.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.lblTotal.Font = new System.Drawing.Font("Adobe Fan Heiti Std B", 60F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.lblTotal.ForeColor = System.Drawing.Color.White;
+            this.lblTotal.Location = new System.Drawing.Point(12, 8);
+            this.lblTotal.Name = "lblTotal";
+            this.lblTotal.Size = new System.Drawing.Size(131, 93);
+            this.lblTotal.TabIndex = 33;
+            this.lblTotal.Text = "0";
+            this.lblTotal.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             // 
-            // guna2ComboBox1
+            // cmbStatus
             // 
-            this.guna2ComboBox1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2ComboBox1.BorderRadius = 15;
-            this.guna2ComboBox1.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.guna2ComboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.guna2ComboBox1.FocusedColor = System.Drawing.Color.Empty;
-            this.guna2ComboBox1.FocusedState.Parent = this.guna2ComboBox1;
-            this.guna2ComboBox1.Font = new System.Drawing.Font("Microsoft New Tai Lue", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2ComboBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
-            this.guna2ComboBox1.FormattingEnabled = true;
-            this.guna2ComboBox1.HoverState.Parent = this.guna2ComboBox1;
-            this.guna2ComboBox1.ItemHeight = 30;
-            this.guna2ComboBox1.Items.AddRange(new object[] {
+            this.cmbStatus.BackColor = System.Drawing.Color.Transparent;
+            this.cmbStatus.BorderRadius = 15;
+            this.cmbStatus.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cmbStatus.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbStatus.FocusedColor = System.Drawing.Color.Empty;
+            this.cmbStatus.FocusedState.Parent = this.cmbStatus;
+            this.cmbStatus.Font = new System.Drawing.Font("Microsoft New Tai Lue", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbStatus.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.cmbStatus.FormattingEnabled = true;
+            this.cmbStatus.HoverState.Parent = this.cmbStatus;
+            this.cmbStatus.ItemHeight = 30;
+            this.cmbStatus.Items.AddRange(new object[] {
+            "",
             "Check In",
             "Check Out",
             "Reserved",
             "Overdue",
             "Inactive"});
-            this.guna2ComboBox1.ItemsAppearance.Parent = this.guna2ComboBox1;
-            this.guna2ComboBox1.Location = new System.Drawing.Point(289, 115);
-            this.guna2ComboBox1.Name = "guna2ComboBox1";
-            this.guna2ComboBox1.ShadowDecoration.Parent = this.guna2ComboBox1;
-            this.guna2ComboBox1.Size = new System.Drawing.Size(234, 36);
-            this.guna2ComboBox1.TabIndex = 30;
-            this.guna2ComboBox1.MouseEnter += new System.EventHandler(this.pnlButtons_MouseLeave);
+            this.cmbStatus.ItemsAppearance.Parent = this.cmbStatus;
+            this.cmbStatus.Location = new System.Drawing.Point(289, 115);
+            this.cmbStatus.Name = "cmbStatus";
+            this.cmbStatus.ShadowDecoration.Parent = this.cmbStatus;
+            this.cmbStatus.Size = new System.Drawing.Size(234, 36);
+            this.cmbStatus.TabIndex = 30;
+            this.cmbStatus.TextChanged += new System.EventHandler(this.txtGuestName_TextChanged);
+            this.cmbStatus.MouseEnter += new System.EventHandler(this.pnlButtons_MouseLeave);
             // 
-            // guna2ComboBox2
+            // cmbMembership
             // 
-            this.guna2ComboBox2.BackColor = System.Drawing.Color.Transparent;
-            this.guna2ComboBox2.BorderRadius = 15;
-            this.guna2ComboBox2.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.guna2ComboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.guna2ComboBox2.FocusedColor = System.Drawing.Color.Empty;
-            this.guna2ComboBox2.FocusedState.Parent = this.guna2ComboBox2;
-            this.guna2ComboBox2.Font = new System.Drawing.Font("Microsoft New Tai Lue", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2ComboBox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
-            this.guna2ComboBox2.FormattingEnabled = true;
-            this.guna2ComboBox2.HoverState.Parent = this.guna2ComboBox2;
-            this.guna2ComboBox2.ItemHeight = 30;
-            this.guna2ComboBox2.ItemsAppearance.Parent = this.guna2ComboBox2;
-            this.guna2ComboBox2.Location = new System.Drawing.Point(31, 115);
-            this.guna2ComboBox2.Name = "guna2ComboBox2";
-            this.guna2ComboBox2.ShadowDecoration.Parent = this.guna2ComboBox2;
-            this.guna2ComboBox2.Size = new System.Drawing.Size(234, 36);
-            this.guna2ComboBox2.TabIndex = 29;
-            this.guna2ComboBox2.MouseEnter += new System.EventHandler(this.pnlButtons_MouseLeave);
+            this.cmbMembership.BackColor = System.Drawing.Color.Transparent;
+            this.cmbMembership.BorderRadius = 15;
+            this.cmbMembership.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cmbMembership.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbMembership.FocusedColor = System.Drawing.Color.Empty;
+            this.cmbMembership.FocusedState.Parent = this.cmbMembership;
+            this.cmbMembership.Font = new System.Drawing.Font("Microsoft New Tai Lue", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbMembership.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.cmbMembership.FormattingEnabled = true;
+            this.cmbMembership.HoverState.Parent = this.cmbMembership;
+            this.cmbMembership.ItemHeight = 30;
+            this.cmbMembership.ItemsAppearance.Parent = this.cmbMembership;
+            this.cmbMembership.Location = new System.Drawing.Point(31, 115);
+            this.cmbMembership.Name = "cmbMembership";
+            this.cmbMembership.ShadowDecoration.Parent = this.cmbMembership;
+            this.cmbMembership.Size = new System.Drawing.Size(234, 36);
+            this.cmbMembership.TabIndex = 29;
+            this.cmbMembership.TextChanged += new System.EventHandler(this.txtGuestName_TextChanged);
+            this.cmbMembership.MouseEnter += new System.EventHandler(this.pnlButtons_MouseLeave);
             // 
             // txtGuestName
             // 
@@ -590,6 +605,7 @@
             this.txtGuestName.ShadowDecoration.Parent = this.txtGuestName;
             this.txtGuestName.Size = new System.Drawing.Size(493, 36);
             this.txtGuestName.TabIndex = 28;
+            this.txtGuestName.TextChanged += new System.EventHandler(this.txtGuestName_TextChanged);
             this.txtGuestName.MouseEnter += new System.EventHandler(this.pnlButtons_MouseLeave);
             // 
             // label11
@@ -679,70 +695,12 @@
             this.btnAddGuest.TextOffset = new System.Drawing.Point(7, -11);
             this.btnAddGuest.MouseEnter += new System.EventHandler(this.pnlButtons_MouseLeave);
             // 
-            // dtgGuest
-            // 
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
-            this.dtgGuest.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.dtgGuest.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dtgGuest.BackgroundColor = System.Drawing.Color.White;
-            this.dtgGuest.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dtgGuest.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            this.dtgGuest.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dtgGuest.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.dtgGuest.ColumnHeadersHeight = 4;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dtgGuest.DefaultCellStyle = dataGridViewCellStyle3;
-            this.dtgGuest.EnableHeadersVisualStyles = false;
-            this.dtgGuest.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.dtgGuest.Location = new System.Drawing.Point(30, 199);
-            this.dtgGuest.Name = "dtgGuest";
-            this.dtgGuest.RowHeadersVisible = false;
-            this.dtgGuest.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dtgGuest.Size = new System.Drawing.Size(863, 218);
-            this.dtgGuest.TabIndex = 0;
-            this.dtgGuest.Theme = Guna.UI2.WinForms.Enums.DataGridViewPresetThemes.Default;
-            this.dtgGuest.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
-            this.dtgGuest.ThemeStyle.AlternatingRowsStyle.Font = null;
-            this.dtgGuest.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
-            this.dtgGuest.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
-            this.dtgGuest.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
-            this.dtgGuest.ThemeStyle.BackColor = System.Drawing.Color.White;
-            this.dtgGuest.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.dtgGuest.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.dtgGuest.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.dtgGuest.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            this.dtgGuest.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
-            this.dtgGuest.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            this.dtgGuest.ThemeStyle.HeaderStyle.Height = 4;
-            this.dtgGuest.ThemeStyle.ReadOnly = false;
-            this.dtgGuest.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
-            this.dtgGuest.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            this.dtgGuest.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            this.dtgGuest.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            this.dtgGuest.ThemeStyle.RowsStyle.Height = 22;
-            this.dtgGuest.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.dtgGuest.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            this.dtgGuest.MouseEnter += new System.EventHandler(this.pnlButtons_MouseLeave);
-            // 
             // btnProfile
             // 
             this.btnProfile.BorderColor = System.Drawing.Color.Black;
             this.btnProfile.BorderRadius = 15;
             this.btnProfile.BorderThickness = 2;
-            this.btnProfile.Controls.Add(this.guna2CirclePictureBox1);
+            this.btnProfile.Controls.Add(this.imgProfile);
             this.btnProfile.Controls.Add(this.lblName);
             this.btnProfile.Controls.Add(this.lblPosition);
             this.btnProfile.Location = new System.Drawing.Point(792, 9);
@@ -754,21 +712,21 @@
             this.btnProfile.MouseEnter += new System.EventHandler(this.btnProfile_MouseEnter);
             this.btnProfile.MouseLeave += new System.EventHandler(this.btnProfile_MouseLeave);
             // 
-            // guna2CirclePictureBox1
+            // imgProfile
             // 
-            this.guna2CirclePictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2CirclePictureBox1.Image = global::PrjOverhaulHotel.Properties.Resources.rb_8551;
-            this.guna2CirclePictureBox1.Location = new System.Drawing.Point(12, 42);
-            this.guna2CirclePictureBox1.Name = "guna2CirclePictureBox1";
-            this.guna2CirclePictureBox1.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.guna2CirclePictureBox1.ShadowDecoration.Parent = this.guna2CirclePictureBox1;
-            this.guna2CirclePictureBox1.Size = new System.Drawing.Size(50, 50);
-            this.guna2CirclePictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.guna2CirclePictureBox1.TabIndex = 13;
-            this.guna2CirclePictureBox1.TabStop = false;
-            this.guna2CirclePictureBox1.Click += new System.EventHandler(this.btnProfile_Click);
-            this.guna2CirclePictureBox1.MouseEnter += new System.EventHandler(this.btnProfile_MouseEnter);
-            this.guna2CirclePictureBox1.MouseLeave += new System.EventHandler(this.btnProfile_MouseLeave);
+            this.imgProfile.BackColor = System.Drawing.Color.Transparent;
+            this.imgProfile.Image = global::PrjOverhaulHotel.Properties.Resources.rb_8551;
+            this.imgProfile.Location = new System.Drawing.Point(12, 42);
+            this.imgProfile.Name = "imgProfile";
+            this.imgProfile.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.imgProfile.ShadowDecoration.Parent = this.imgProfile;
+            this.imgProfile.Size = new System.Drawing.Size(50, 50);
+            this.imgProfile.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.imgProfile.TabIndex = 13;
+            this.imgProfile.TabStop = false;
+            this.imgProfile.Click += new System.EventHandler(this.btnProfile_Click);
+            this.imgProfile.MouseEnter += new System.EventHandler(this.btnProfile_MouseEnter);
+            this.imgProfile.MouseLeave += new System.EventHandler(this.btnProfile_MouseLeave);
             // 
             // lblName
             // 
@@ -813,6 +771,128 @@
             this.lblTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.lblTitle.MouseEnter += new System.EventHandler(this.pnlButtons_MouseLeave);
             // 
+            // dtgGuests
+            // 
+            this.dtgGuests.AllowUserToAddRows = false;
+            this.dtgGuests.AllowUserToDeleteRows = false;
+            this.dtgGuests.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
+            this.dtgGuests.BackgroundColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft New Tai Lue", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(135)))), ((int)(((byte)(97)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dtgGuests.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dtgGuests.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtgGuests.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column1,
+            this.Column2,
+            this.Column7,
+            this.Column9,
+            this.Column3,
+            this.Column8,
+            this.Column4,
+            this.Column5,
+            this.Column6});
+            this.dtgGuests.EnableHeadersVisualStyles = false;
+            this.dtgGuests.GridColor = System.Drawing.Color.Black;
+            this.dtgGuests.Location = new System.Drawing.Point(233, 199);
+            this.dtgGuests.Name = "dtgGuests";
+            this.dtgGuests.ReadOnly = true;
+            this.dtgGuests.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft New Tai Lue", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(135)))), ((int)(((byte)(97)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dtgGuests.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft New Tai Lue", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(135)))), ((int)(((byte)(97)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
+            this.dtgGuests.RowsDefaultCellStyle = dataGridViewCellStyle3;
+            this.dtgGuests.Size = new System.Drawing.Size(660, 218);
+            this.dtgGuests.TabIndex = 37;
+            // 
+            // imgSelect
+            // 
+            this.imgSelect.Image = global::PrjOverhaulHotel.Properties.Resources.rb_8551;
+            this.imgSelect.Location = new System.Drawing.Point(30, 209);
+            this.imgSelect.Name = "imgSelect";
+            this.imgSelect.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.imgSelect.ShadowDecoration.Parent = this.imgSelect;
+            this.imgSelect.Size = new System.Drawing.Size(200, 200);
+            this.imgSelect.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.imgSelect.TabIndex = 38;
+            this.imgSelect.TabStop = false;
+            // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "ID";
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            this.Column1.Visible = false;
+            this.Column1.Width = 52;
+            // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "Full Name";
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
+            this.Column2.Width = 200;
+            // 
+            // Column7
+            // 
+            this.Column7.HeaderText = "Membership";
+            this.Column7.Name = "Column7";
+            this.Column7.ReadOnly = true;
+            this.Column7.Width = 131;
+            // 
+            // Column9
+            // 
+            this.Column9.HeaderText = "Status";
+            this.Column9.Name = "Column9";
+            this.Column9.ReadOnly = true;
+            // 
+            // Column3
+            // 
+            this.Column3.HeaderText = "Contact No";
+            this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
+            this.Column3.Width = 150;
+            // 
+            // Column8
+            // 
+            this.Column8.HeaderText = "Birthdate";
+            this.Column8.Name = "Column8";
+            this.Column8.ReadOnly = true;
+            this.Column8.Width = 150;
+            // 
+            // Column4
+            // 
+            this.Column4.HeaderText = "Email Address";
+            this.Column4.Name = "Column4";
+            this.Column4.ReadOnly = true;
+            this.Column4.Width = 200;
+            // 
+            // Column5
+            // 
+            this.Column5.HeaderText = "Address";
+            this.Column5.Name = "Column5";
+            this.Column5.ReadOnly = true;
+            this.Column5.Width = 250;
+            // 
+            // Column6
+            // 
+            this.Column6.HeaderText = "Gender";
+            this.Column6.Name = "Column6";
+            this.Column6.ReadOnly = true;
+            // 
             // FrmStaffGuests
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -838,9 +918,10 @@
             this.pnlGuests.PerformLayout();
             this.guna2GradientPanel3.ResumeLayout(false);
             this.guna2GradientPanel4.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dtgGuest)).EndInit();
             this.btnProfile.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imgProfile)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgGuests)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imgSelect)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -868,13 +949,13 @@
         private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel3;
         private Guna.UI2.WinForms.Guna2Separator guna2Separator6;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label lblResult;
         private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel4;
         private Guna.UI2.WinForms.Guna2Separator guna2Separator7;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label10;
-        private Guna.UI2.WinForms.Guna2ComboBox guna2ComboBox1;
-        private Guna.UI2.WinForms.Guna2ComboBox guna2ComboBox2;
+        private System.Windows.Forms.Label lblTotal;
+        private Guna.UI2.WinForms.Guna2ComboBox cmbStatus;
+        private Guna.UI2.WinForms.Guna2ComboBox cmbMembership;
         private Guna.UI2.WinForms.Guna2TextBox txtGuestName;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label12;
@@ -882,11 +963,21 @@
         private Guna.UI2.WinForms.Guna2Separator guna2Separator2;
         private Guna.UI2.WinForms.Guna2GradientTileButton btnManageGuest;
         private Guna.UI2.WinForms.Guna2GradientTileButton btnAddGuest;
-        private Guna.UI2.WinForms.Guna2DataGridView dtgGuest;
         private Guna.UI2.WinForms.Guna2CustomGradientPanel btnProfile;
-        private Guna.UI2.WinForms.Guna2CirclePictureBox guna2CirclePictureBox1;
+        private Guna.UI2.WinForms.Guna2CirclePictureBox imgProfile;
         private System.Windows.Forms.Label lblName;
         private System.Windows.Forms.Label lblPosition;
         private System.Windows.Forms.Label lblTitle;
+        private System.Windows.Forms.DataGridView dtgGuests;
+        private Guna.UI2.WinForms.Guna2CirclePictureBox imgSelect;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column9;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column8;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
     }
 }
