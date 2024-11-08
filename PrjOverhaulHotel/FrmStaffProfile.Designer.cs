@@ -51,6 +51,7 @@
             this.lblName = new System.Windows.Forms.Label();
             this.lblPosition = new System.Windows.Forms.Label();
             this.pnlProfile = new Guna.UI2.WinForms.Guna2Panel();
+            this.btnSee = new System.Windows.Forms.Label();
             this.btnSave = new Guna.UI2.WinForms.Guna2GradientTileButton();
             this.cmbGender = new Guna.UI2.WinForms.Guna2ComboBox();
             this.label10 = new System.Windows.Forms.Label();
@@ -70,12 +71,11 @@
             this.label4 = new System.Windows.Forms.Label();
             this.btnUpload = new Guna.UI2.WinForms.Guna2GradientTileButton();
             this.imgProfile = new Guna.UI2.WinForms.Guna2CirclePictureBox();
-            this.btnSignup = new Guna.UI2.WinForms.Guna2GradientTileButton();
+            this.btnEdit = new Guna.UI2.WinForms.Guna2GradientTileButton();
             this.txtUsername = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtPassword = new Guna.UI2.WinForms.Guna2TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.btnSee = new System.Windows.Forms.Label();
             this.guna2CustomGradientPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -505,7 +505,7 @@
             this.pnlProfile.Controls.Add(this.label4);
             this.pnlProfile.Controls.Add(this.btnUpload);
             this.pnlProfile.Controls.Add(this.imgProfile);
-            this.pnlProfile.Controls.Add(this.btnSignup);
+            this.pnlProfile.Controls.Add(this.btnEdit);
             this.pnlProfile.Controls.Add(this.txtUsername);
             this.pnlProfile.Controls.Add(this.txtPassword);
             this.pnlProfile.Controls.Add(this.label1);
@@ -516,6 +516,16 @@
             this.pnlProfile.Size = new System.Drawing.Size(927, 501);
             this.pnlProfile.TabIndex = 15;
             this.pnlProfile.MouseEnter += new System.EventHandler(this.pnlButtons_MouseLeave);
+            // 
+            // btnSee
+            // 
+            this.btnSee.BackColor = System.Drawing.Color.White;
+            this.btnSee.Image = global::PrjOverhaulHotel.Properties.Resources.eye_off1;
+            this.btnSee.Location = new System.Drawing.Point(415, 322);
+            this.btnSee.Name = "btnSee";
+            this.btnSee.Size = new System.Drawing.Size(30, 30);
+            this.btnSee.TabIndex = 53;
+            this.btnSee.Click += new System.EventHandler(this.btnSee_Click);
             // 
             // btnSave
             // 
@@ -531,13 +541,14 @@
             this.btnSave.Image = global::PrjOverhaulHotel.Properties.Resources.check;
             this.btnSave.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnSave.ImageOffset = new System.Drawing.Point(5, 12);
-            this.btnSave.Location = new System.Drawing.Point(681, 106);
+            this.btnSave.Location = new System.Drawing.Point(681, 134);
             this.btnSave.Name = "btnSave";
             this.btnSave.ShadowDecoration.Parent = this.btnSave;
             this.btnSave.Size = new System.Drawing.Size(180, 40);
             this.btnSave.TabIndex = 52;
             this.btnSave.Text = "SAVE";
             this.btnSave.TextOffset = new System.Drawing.Point(7, -11);
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // cmbGender
             // 
@@ -868,13 +879,14 @@
             this.btnUpload.Image = global::PrjOverhaulHotel.Properties.Resources.upload;
             this.btnUpload.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnUpload.ImageOffset = new System.Drawing.Point(5, 12);
-            this.btnUpload.Location = new System.Drawing.Point(682, 54);
+            this.btnUpload.Location = new System.Drawing.Point(682, 88);
             this.btnUpload.Name = "btnUpload";
             this.btnUpload.ShadowDecoration.Parent = this.btnUpload;
             this.btnUpload.Size = new System.Drawing.Size(180, 40);
             this.btnUpload.TabIndex = 35;
             this.btnUpload.Text = "UPLOAD";
             this.btnUpload.TextOffset = new System.Drawing.Point(7, -11);
+            this.btnUpload.Click += new System.EventHandler(this.btnUpload_Click);
             // 
             // imgProfile
             // 
@@ -889,27 +901,28 @@
             this.imgProfile.TabIndex = 34;
             this.imgProfile.TabStop = false;
             // 
-            // btnSignup
+            // btnEdit
             // 
-            this.btnSignup.BackColor = System.Drawing.Color.Transparent;
-            this.btnSignup.BorderRadius = 20;
-            this.btnSignup.CheckedState.Parent = this.btnSignup;
-            this.btnSignup.CustomImages.Parent = this.btnSignup;
-            this.btnSignup.FillColor = System.Drawing.Color.Teal;
-            this.btnSignup.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btnSignup.Font = new System.Drawing.Font("Adobe Fan Heiti Std B", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSignup.ForeColor = System.Drawing.Color.White;
-            this.btnSignup.HoverState.Parent = this.btnSignup;
-            this.btnSignup.Image = global::PrjOverhaulHotel.Properties.Resources.bolt;
-            this.btnSignup.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnSignup.ImageOffset = new System.Drawing.Point(5, 12);
-            this.btnSignup.Location = new System.Drawing.Point(681, 158);
-            this.btnSignup.Name = "btnSignup";
-            this.btnSignup.ShadowDecoration.Parent = this.btnSignup;
-            this.btnSignup.Size = new System.Drawing.Size(180, 40);
-            this.btnSignup.TabIndex = 33;
-            this.btnSignup.Text = "EDIT";
-            this.btnSignup.TextOffset = new System.Drawing.Point(7, -11);
+            this.btnEdit.BackColor = System.Drawing.Color.Transparent;
+            this.btnEdit.BorderRadius = 20;
+            this.btnEdit.CheckedState.Parent = this.btnEdit;
+            this.btnEdit.CustomImages.Parent = this.btnEdit;
+            this.btnEdit.FillColor = System.Drawing.Color.Teal;
+            this.btnEdit.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnEdit.Font = new System.Drawing.Font("Adobe Fan Heiti Std B", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEdit.ForeColor = System.Drawing.Color.White;
+            this.btnEdit.HoverState.Parent = this.btnEdit;
+            this.btnEdit.Image = global::PrjOverhaulHotel.Properties.Resources.bolt;
+            this.btnEdit.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnEdit.ImageOffset = new System.Drawing.Point(5, 12);
+            this.btnEdit.Location = new System.Drawing.Point(681, 106);
+            this.btnEdit.Name = "btnEdit";
+            this.btnEdit.ShadowDecoration.Parent = this.btnEdit;
+            this.btnEdit.Size = new System.Drawing.Size(180, 40);
+            this.btnEdit.TabIndex = 33;
+            this.btnEdit.Text = "EDIT";
+            this.btnEdit.TextOffset = new System.Drawing.Point(7, -11);
+            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
             // 
             // txtUsername
             // 
@@ -996,16 +1009,6 @@
             this.label2.TabIndex = 32;
             this.label2.Text = "Password";
             // 
-            // btnSee
-            // 
-            this.btnSee.BackColor = System.Drawing.Color.White;
-            this.btnSee.Image = global::PrjOverhaulHotel.Properties.Resources.eye_off1;
-            this.btnSee.Location = new System.Drawing.Point(415, 322);
-            this.btnSee.Name = "btnSee";
-            this.btnSee.Size = new System.Drawing.Size(30, 30);
-            this.btnSee.TabIndex = 53;
-            this.btnSee.Click += new System.EventHandler(this.btnSee_Click);
-            // 
             // FrmStaffProfile
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1079,7 +1082,7 @@
         private System.Windows.Forms.Label label4;
         private Guna.UI2.WinForms.Guna2GradientTileButton btnUpload;
         private Guna.UI2.WinForms.Guna2CirclePictureBox imgProfile;
-        private Guna.UI2.WinForms.Guna2GradientTileButton btnSignup;
+        private Guna.UI2.WinForms.Guna2GradientTileButton btnEdit;
         private Guna.UI2.WinForms.Guna2TextBox txtUsername;
         private Guna.UI2.WinForms.Guna2TextBox txtPassword;
         private System.Windows.Forms.Label label1;

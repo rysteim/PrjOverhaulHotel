@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PrjOverhaulHotel.PopUps;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -17,6 +18,7 @@ namespace PrjOverhaulHotel
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new FrmStartUp());
+            //Application.Run(new PopUpReservationAddons());
             //Application.Run(new FrmStaffReservation());
             //Application.Run(new FrmStaffDashboard());
         }

@@ -49,6 +49,18 @@
             this.btnDashboard = new Guna.UI2.WinForms.Guna2GradientButton();
             this.guna2VSeparator1 = new Guna.UI2.WinForms.Guna2VSeparator();
             this.pnlGuests = new Guna.UI2.WinForms.Guna2Panel();
+            this.imgSelect = new Guna.UI2.WinForms.Guna2CirclePictureBox();
+            this.dtgGuests = new System.Windows.Forms.DataGridView();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.guna2GradientPanel3 = new Guna.UI2.WinForms.Guna2GradientPanel();
             this.guna2Separator6 = new Guna.UI2.WinForms.Guna2Separator();
             this.label7 = new System.Windows.Forms.Label();
@@ -71,28 +83,17 @@
             this.lblName = new System.Windows.Forms.Label();
             this.lblPosition = new System.Windows.Forms.Label();
             this.lblTitle = new System.Windows.Forms.Label();
-            this.dtgGuests = new System.Windows.Forms.DataGridView();
-            this.imgSelect = new Guna.UI2.WinForms.Guna2CirclePictureBox();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.guna2CustomGradientPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.pnlButtons.SuspendLayout();
             this.pnlGuests.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.imgSelect)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgGuests)).BeginInit();
             this.guna2GradientPanel3.SuspendLayout();
             this.guna2GradientPanel4.SuspendLayout();
             this.btnProfile.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.imgProfile)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dtgGuests)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.imgSelect)).BeginInit();
             this.SuspendLayout();
             // 
             // guna2Elipse1
@@ -442,6 +443,138 @@
             this.pnlGuests.TabIndex = 20;
             this.pnlGuests.MouseEnter += new System.EventHandler(this.pnlButtons_MouseLeave);
             // 
+            // imgSelect
+            // 
+            this.imgSelect.Image = global::PrjOverhaulHotel.Properties.Resources.rb_8551;
+            this.imgSelect.Location = new System.Drawing.Point(30, 209);
+            this.imgSelect.Name = "imgSelect";
+            this.imgSelect.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.imgSelect.ShadowDecoration.Parent = this.imgSelect;
+            this.imgSelect.Size = new System.Drawing.Size(200, 200);
+            this.imgSelect.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.imgSelect.TabIndex = 38;
+            this.imgSelect.TabStop = false;
+            this.imgSelect.MouseEnter += new System.EventHandler(this.pnlButtons_MouseLeave);
+            // 
+            // dtgGuests
+            // 
+            this.dtgGuests.AllowUserToAddRows = false;
+            this.dtgGuests.AllowUserToDeleteRows = false;
+            this.dtgGuests.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
+            this.dtgGuests.BackgroundColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft New Tai Lue", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(135)))), ((int)(((byte)(97)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dtgGuests.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dtgGuests.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtgGuests.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column1,
+            this.Column2,
+            this.Column7,
+            this.Column9,
+            this.Column3,
+            this.Column8,
+            this.Column4,
+            this.Column5,
+            this.Column6,
+            this.Column10});
+            this.dtgGuests.EnableHeadersVisualStyles = false;
+            this.dtgGuests.GridColor = System.Drawing.Color.Black;
+            this.dtgGuests.Location = new System.Drawing.Point(233, 199);
+            this.dtgGuests.MultiSelect = false;
+            this.dtgGuests.Name = "dtgGuests";
+            this.dtgGuests.ReadOnly = true;
+            this.dtgGuests.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft New Tai Lue", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(135)))), ((int)(((byte)(97)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dtgGuests.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft New Tai Lue", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(135)))), ((int)(((byte)(97)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
+            this.dtgGuests.RowsDefaultCellStyle = dataGridViewCellStyle3;
+            this.dtgGuests.Size = new System.Drawing.Size(660, 218);
+            this.dtgGuests.TabIndex = 37;
+            this.dtgGuests.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgGuests_CellClick);
+            // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "ID";
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            this.Column1.Visible = false;
+            this.Column1.Width = 52;
+            // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "Full Name";
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
+            this.Column2.Width = 200;
+            // 
+            // Column7
+            // 
+            this.Column7.HeaderText = "Membership";
+            this.Column7.Name = "Column7";
+            this.Column7.ReadOnly = true;
+            this.Column7.Width = 131;
+            // 
+            // Column9
+            // 
+            this.Column9.HeaderText = "Status";
+            this.Column9.Name = "Column9";
+            this.Column9.ReadOnly = true;
+            // 
+            // Column3
+            // 
+            this.Column3.HeaderText = "Contact No";
+            this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
+            this.Column3.Width = 150;
+            // 
+            // Column8
+            // 
+            this.Column8.HeaderText = "Birthdate";
+            this.Column8.Name = "Column8";
+            this.Column8.ReadOnly = true;
+            this.Column8.Width = 150;
+            // 
+            // Column4
+            // 
+            this.Column4.HeaderText = "Email Address";
+            this.Column4.Name = "Column4";
+            this.Column4.ReadOnly = true;
+            this.Column4.Width = 200;
+            // 
+            // Column5
+            // 
+            this.Column5.HeaderText = "Address";
+            this.Column5.Name = "Column5";
+            this.Column5.ReadOnly = true;
+            this.Column5.Width = 250;
+            // 
+            // Column6
+            // 
+            this.Column6.HeaderText = "Gender";
+            this.Column6.Name = "Column6";
+            this.Column6.ReadOnly = true;
+            // 
+            // Column10
+            // 
+            this.Column10.HeaderText = "image";
+            this.Column10.Name = "Column10";
+            this.Column10.ReadOnly = true;
+            // 
             // guna2GradientPanel3
             // 
             this.guna2GradientPanel3.BorderRadius = 15;
@@ -771,128 +904,6 @@
             this.lblTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.lblTitle.MouseEnter += new System.EventHandler(this.pnlButtons_MouseLeave);
             // 
-            // dtgGuests
-            // 
-            this.dtgGuests.AllowUserToAddRows = false;
-            this.dtgGuests.AllowUserToDeleteRows = false;
-            this.dtgGuests.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
-            this.dtgGuests.BackgroundColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft New Tai Lue", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(135)))), ((int)(((byte)(97)))));
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dtgGuests.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.dtgGuests.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtgGuests.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column1,
-            this.Column2,
-            this.Column7,
-            this.Column9,
-            this.Column3,
-            this.Column8,
-            this.Column4,
-            this.Column5,
-            this.Column6});
-            this.dtgGuests.EnableHeadersVisualStyles = false;
-            this.dtgGuests.GridColor = System.Drawing.Color.Black;
-            this.dtgGuests.Location = new System.Drawing.Point(233, 199);
-            this.dtgGuests.Name = "dtgGuests";
-            this.dtgGuests.ReadOnly = true;
-            this.dtgGuests.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft New Tai Lue", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(135)))), ((int)(((byte)(97)))));
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dtgGuests.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft New Tai Lue", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(135)))), ((int)(((byte)(97)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
-            this.dtgGuests.RowsDefaultCellStyle = dataGridViewCellStyle3;
-            this.dtgGuests.Size = new System.Drawing.Size(660, 218);
-            this.dtgGuests.TabIndex = 37;
-            // 
-            // imgSelect
-            // 
-            this.imgSelect.Image = global::PrjOverhaulHotel.Properties.Resources.rb_8551;
-            this.imgSelect.Location = new System.Drawing.Point(30, 209);
-            this.imgSelect.Name = "imgSelect";
-            this.imgSelect.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.imgSelect.ShadowDecoration.Parent = this.imgSelect;
-            this.imgSelect.Size = new System.Drawing.Size(200, 200);
-            this.imgSelect.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.imgSelect.TabIndex = 38;
-            this.imgSelect.TabStop = false;
-            // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "ID";
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
-            this.Column1.Visible = false;
-            this.Column1.Width = 52;
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "Full Name";
-            this.Column2.Name = "Column2";
-            this.Column2.ReadOnly = true;
-            this.Column2.Width = 200;
-            // 
-            // Column7
-            // 
-            this.Column7.HeaderText = "Membership";
-            this.Column7.Name = "Column7";
-            this.Column7.ReadOnly = true;
-            this.Column7.Width = 131;
-            // 
-            // Column9
-            // 
-            this.Column9.HeaderText = "Status";
-            this.Column9.Name = "Column9";
-            this.Column9.ReadOnly = true;
-            // 
-            // Column3
-            // 
-            this.Column3.HeaderText = "Contact No";
-            this.Column3.Name = "Column3";
-            this.Column3.ReadOnly = true;
-            this.Column3.Width = 150;
-            // 
-            // Column8
-            // 
-            this.Column8.HeaderText = "Birthdate";
-            this.Column8.Name = "Column8";
-            this.Column8.ReadOnly = true;
-            this.Column8.Width = 150;
-            // 
-            // Column4
-            // 
-            this.Column4.HeaderText = "Email Address";
-            this.Column4.Name = "Column4";
-            this.Column4.ReadOnly = true;
-            this.Column4.Width = 200;
-            // 
-            // Column5
-            // 
-            this.Column5.HeaderText = "Address";
-            this.Column5.Name = "Column5";
-            this.Column5.ReadOnly = true;
-            this.Column5.Width = 250;
-            // 
-            // Column6
-            // 
-            this.Column6.HeaderText = "Gender";
-            this.Column6.Name = "Column6";
-            this.Column6.ReadOnly = true;
-            // 
             // FrmStaffGuests
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -916,12 +927,12 @@
             this.pnlButtons.ResumeLayout(false);
             this.pnlGuests.ResumeLayout(false);
             this.pnlGuests.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.imgSelect)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgGuests)).EndInit();
             this.guna2GradientPanel3.ResumeLayout(false);
             this.guna2GradientPanel4.ResumeLayout(false);
             this.btnProfile.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.imgProfile)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dtgGuests)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.imgSelect)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -979,5 +990,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column10;
     }
 }

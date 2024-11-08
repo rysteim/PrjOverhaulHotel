@@ -157,6 +157,18 @@
       <DependentUpon>FrmStartUp.cs</DependentUpon>
     </Compile>
     <Compile Include="GlobalProcedure.cs" />
+    <Compile Include="PopUps\PopUpReservationRooms.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PopUps\PopUpReservationRooms.Designer.cs">
+      <DependentUpon>PopUpReservationRooms.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PopUps\PopUpReservationAddons.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PopUps\PopUpReservationAddons.Designer.cs">
+      <DependentUpon>PopUpReservationAddons.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="UserAccount.cs" />
@@ -186,6 +198,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmStartUp.resx">
       <DependentUpon>FrmStartUp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PopUps\PopUpReservationRooms.resx">
+      <DependentUpon>PopUpReservationRooms.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

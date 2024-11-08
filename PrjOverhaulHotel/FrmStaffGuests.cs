@@ -163,7 +163,8 @@ namespace PrjOverhaulHotel
                         Convert.ToDateTime(row1["BIRTHDATE"].ToString()).ToString("MMM dd, yyyy"),
                         row1["EMAIL ADDRESS"].ToString(),
                         row1["ADDRESS"].ToString(),
-                        row1["GENDER"].ToString()
+                        row1["GENDER"].ToString(),
+                        row1["IMAGE"].ToString()
                     );
                 }
             }
@@ -209,7 +210,8 @@ namespace PrjOverhaulHotel
                         Convert.ToDateTime(row1["BIRTHDATE"].ToString()).ToString("MMM dd, yyyy"),
                         row1["EMAIL ADDRESS"].ToString(),
                         row1["ADDRESS"].ToString(),
-                        row1["GENDER"].ToString()
+                        row1["GENDER"].ToString(),
+                        row1["IMAGE"].ToString()
                     );
                 }
             }
@@ -223,6 +225,22 @@ namespace PrjOverhaulHotel
         private void txtGuestName_TextChanged(object sender, EventArgs e)
         {
             searchGuests();
+        }
+
+        private void dtgGuests_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                string imagePath = dtgGuests.CurrentRow.Cells[9].Value.ToString();
+                if (!string.IsNullOrEmpty(imagePath) && System.IO.File.Exists(imagePath))
+                {
+                    imgSelect.Image = Image.FromFile(imagePath);
+                }
+                else
+                {
+                    imgSelect.Image = Properties.Resources.rb_8551;
+                }
+            }
         }
     }
 }

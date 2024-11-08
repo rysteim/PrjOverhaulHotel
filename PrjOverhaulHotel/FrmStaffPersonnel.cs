@@ -1,4 +1,6 @@
-﻿using System;
+﻿using MySqlX.XDevAPI.Relational;
+using Org.BouncyCastle.Asn1.Cmp;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -24,6 +26,8 @@ namespace PrjOverhaulHotel
             GlobalProcedure.fncDatabaseConnection();
             maximizeButtons();
             displayProfile();
+            displayPersonnel();
+            displayRole();
         }
 
         private void btnExit_Click(object sender, EventArgs e)
@@ -152,6 +156,113 @@ namespace PrjOverhaulHotel
             {
                 imgProfile.Image = Properties.Resources.rb_8551;
             }
+        }
+
+        private void displayPersonnel()
+        {
+            GlobalProcedure.procEmployeeData();
+            if (GlobalProcedure.datHotel.Rows.Count > 0)
+            {
+                dtgPersonnel.Rows.Clear();
+                lblTotal.Text = GlobalProcedure.datHotel.Rows.Count.ToString();
+                lblResult.Text = GlobalProcedure.datHotel.Rows.Count.ToString();
+                foreach (DataRow row1 in GlobalProcedure.datHotel.Rows)
+                {
+                    dtgPersonnel.Rows.Add(
+                        row1["ACCOUNT ID"].ToString(),
+                        row1["FULLNAME"].ToString(),
+                        row1["ROLE"].ToString(),
+                        row1["EMPLOYEE STATUS"].ToString(),
+                        row1["EMPLOYEE LAST ONLINE"].ToString(),
+                        row1["WORKSHIFT"].ToString(),
+                        $"₱{Convert.ToDouble(row1["HOURLY RATE"].ToString()):F2}",
+                        row1["CONTACT NUMBER"].ToString(),
+                        row1["EMAIL ADDRESS"].ToString(),
+                        row1["ADDRESS"].ToString(),
+                        row1["GENDER"].ToString(),
+                        Convert.ToDateTime(row1["BIRTHDATE"].ToString()).ToString("MMM dd, yyyy"),
+                        Convert.ToDateTime(row1["EMPLOYMENT DATE"].ToString()).ToString("MMM dd, yyyy"),
+                        row1["IMAGE"].ToString()
+                    );
+                }
+            }
+            else
+            {
+                dtgPersonnel.Rows.Clear();
+            }
+        }
+
+        private void searchPersonnel()
+        {
+            GlobalProcedure.procEmployeeSearch(txtName.Text, cmbRole.Text, cmbShift.Text);
+            if (GlobalProcedure.datHotel.Rows.Count > 0)
+            {
+                dtgPersonnel.Rows.Clear();
+                lblResult.Text = GlobalProcedure.datHotel.Rows.Count.ToString();
+                foreach (DataRow row1 in GlobalProcedure.datHotel.Rows)
+                {
+                    dtgPersonnel.Rows.Add(
+                        row1["ACCOUNT ID"].ToString(),
+                        row1["FULLNAME"].ToString(),
+                        row1["ROLE"].ToString(),
+                        row1["EMPLOYEE STATUS"].ToString(),
+                        row1["EMPLOYEE LAST ONLINE"].ToString(),
+                        row1["WORKSHIFT"].ToString(),
+                        $"₱{Convert.ToDouble(row1["HOURLY RATE"].ToString()):F2}",
+                        row1["CONTACT NUMBER"].ToString(),
+                        row1["EMAIL ADDRESS"].ToString(),
+                        row1["ADDRESS"].ToString(),
+                        row1["GENDER"].ToString(),
+                        Convert.ToDateTime(row1["BIRTHDATE"].ToString()).ToString("MMM dd, yyyy"),
+                        Convert.ToDateTime(row1["EMPLOYMENT DATE"].ToString()).ToString("MMM dd, yyyy"),
+                        row1["IMAGE"].ToString()
+                    );
+                }
+            }
+            else
+            {
+                lblResult.Text = GlobalProcedure.datHotel.Rows.Count.ToString();
+                dtgPersonnel.Rows.Clear();
+            }
+        }
+
+        private void dtgPersonnel_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                string imagePath = dtgPersonnel.CurrentRow.Cells[13].Value.ToString();
+                if (!string.IsNullOrEmpty(imagePath) && System.IO.File.Exists(imagePath))
+                {
+                    imgSelect.Image = Image.FromFile(imagePath);
+                }
+                else
+                {
+                    imgSelect.Image = Properties.Resources.rb_8551;
+                }
+            }
+        }
+
+        private void displayRole()
+        {
+            GlobalProcedure.procRoleData();
+            if (GlobalProcedure.datHotel.Rows.Count > 0)
+            {
+                cmbRole.Items.Clear();
+                cmbRole.Items.Add("");
+                foreach (DataRow row1 in GlobalProcedure.datHotel.Rows)
+                {
+                    cmbRole.Items.Add(row1["roleName"].ToString());
+                }
+            }
+            else
+            {
+                cmbRole.Items.Clear();
+            }
+        }
+
+        private void txtName_TextChanged(object sender, EventArgs e)
+        {
+            searchPersonnel();
         }
     }
 }

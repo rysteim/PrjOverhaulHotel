@@ -52,18 +52,15 @@
             this.guna2GradientPanel2 = new Guna.UI2.WinForms.Guna2GradientPanel();
             this.guna2Separator5 = new Guna.UI2.WinForms.Guna2Separator();
             this.label6 = new System.Windows.Forms.Label();
-            this.lblPersonnelSelected = new System.Windows.Forms.Label();
             this.guna2GradientPanel1 = new Guna.UI2.WinForms.Guna2GradientPanel();
             this.guna2Separator4 = new Guna.UI2.WinForms.Guna2Separator();
             this.label5 = new System.Windows.Forms.Label();
-            this.lblPersonnelTotal = new System.Windows.Forms.Label();
-            this.cmbPersonnelWorkshift = new Guna.UI2.WinForms.Guna2ComboBox();
-            this.cmbPersonnelPosition = new Guna.UI2.WinForms.Guna2ComboBox();
-            this.txtPersonnelName = new Guna.UI2.WinForms.Guna2TextBox();
+            this.cmbShift = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.cmbRole = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.txtName = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2Separator3 = new Guna.UI2.WinForms.Guna2Separator();
             this.guna2GradientTileButton1 = new Guna.UI2.WinForms.Guna2GradientTileButton();
             this.guna2GradientTileButton2 = new Guna.UI2.WinForms.Guna2GradientTileButton();
-            this.dtgPersonnel = new Guna.UI2.WinForms.Guna2DataGridView();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -72,6 +69,24 @@
             this.lblName = new System.Windows.Forms.Label();
             this.lblPosition = new System.Windows.Forms.Label();
             this.lblTitle = new System.Windows.Forms.Label();
+            this.dtgPersonnel = new System.Windows.Forms.DataGridView();
+            this.imgSelect = new Guna.UI2.WinForms.Guna2CirclePictureBox();
+            this.lblTotal = new System.Windows.Forms.Label();
+            this.lblResult = new System.Windows.Forms.Label();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.guna2CustomGradientPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -79,9 +94,10 @@
             this.pnlPersonnel.SuspendLayout();
             this.guna2GradientPanel2.SuspendLayout();
             this.guna2GradientPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dtgPersonnel)).BeginInit();
             this.btnProfile.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.imgProfile)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgPersonnel)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imgSelect)).BeginInit();
             this.SuspendLayout();
             // 
             // guna2Elipse1
@@ -414,15 +430,16 @@
             this.pnlPersonnel.BackColor = System.Drawing.Color.Transparent;
             this.pnlPersonnel.BackgroundImage = global::PrjOverhaulHotel.Properties.Resources.Group_282;
             this.pnlPersonnel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pnlPersonnel.Controls.Add(this.imgSelect);
+            this.pnlPersonnel.Controls.Add(this.dtgPersonnel);
             this.pnlPersonnel.Controls.Add(this.guna2GradientPanel2);
             this.pnlPersonnel.Controls.Add(this.guna2GradientPanel1);
-            this.pnlPersonnel.Controls.Add(this.cmbPersonnelWorkshift);
-            this.pnlPersonnel.Controls.Add(this.cmbPersonnelPosition);
-            this.pnlPersonnel.Controls.Add(this.txtPersonnelName);
+            this.pnlPersonnel.Controls.Add(this.cmbShift);
+            this.pnlPersonnel.Controls.Add(this.cmbRole);
+            this.pnlPersonnel.Controls.Add(this.txtName);
             this.pnlPersonnel.Controls.Add(this.guna2Separator3);
             this.pnlPersonnel.Controls.Add(this.guna2GradientTileButton1);
             this.pnlPersonnel.Controls.Add(this.guna2GradientTileButton2);
-            this.pnlPersonnel.Controls.Add(this.dtgPersonnel);
             this.pnlPersonnel.Controls.Add(this.label2);
             this.pnlPersonnel.Controls.Add(this.label3);
             this.pnlPersonnel.Controls.Add(this.label4);
@@ -438,7 +455,7 @@
             this.guna2GradientPanel2.BorderRadius = 15;
             this.guna2GradientPanel2.Controls.Add(this.guna2Separator5);
             this.guna2GradientPanel2.Controls.Add(this.label6);
-            this.guna2GradientPanel2.Controls.Add(this.lblPersonnelSelected);
+            this.guna2GradientPanel2.Controls.Add(this.lblResult);
             this.guna2GradientPanel2.FillColor = System.Drawing.Color.Black;
             this.guna2GradientPanel2.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(135)))), ((int)(((byte)(97)))));
             this.guna2GradientPanel2.Location = new System.Drawing.Point(556, 30);
@@ -466,23 +483,12 @@
             this.label6.Text = "SELECTED";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // lblPersonnelSelected
-            // 
-            this.lblPersonnelSelected.Font = new System.Drawing.Font("Adobe Fan Heiti Std B", 60F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.lblPersonnelSelected.ForeColor = System.Drawing.Color.White;
-            this.lblPersonnelSelected.Location = new System.Drawing.Point(12, 8);
-            this.lblPersonnelSelected.Name = "lblPersonnelSelected";
-            this.lblPersonnelSelected.Size = new System.Drawing.Size(131, 93);
-            this.lblPersonnelSelected.TabIndex = 32;
-            this.lblPersonnelSelected.Text = "0";
-            this.lblPersonnelSelected.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            // 
             // guna2GradientPanel1
             // 
             this.guna2GradientPanel1.BorderRadius = 15;
             this.guna2GradientPanel1.Controls.Add(this.guna2Separator4);
             this.guna2GradientPanel1.Controls.Add(this.label5);
-            this.guna2GradientPanel1.Controls.Add(this.lblPersonnelTotal);
+            this.guna2GradientPanel1.Controls.Add(this.lblTotal);
             this.guna2GradientPanel1.FillColor = System.Drawing.Color.Black;
             this.guna2GradientPanel1.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(135)))), ((int)(((byte)(97)))));
             this.guna2GradientPanel1.Location = new System.Drawing.Point(738, 30);
@@ -510,90 +516,83 @@
             this.label5.Text = "TOTAL";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // lblPersonnelTotal
+            // cmbShift
             // 
-            this.lblPersonnelTotal.Font = new System.Drawing.Font("Adobe Fan Heiti Std B", 60F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.lblPersonnelTotal.ForeColor = System.Drawing.Color.White;
-            this.lblPersonnelTotal.Location = new System.Drawing.Point(12, 8);
-            this.lblPersonnelTotal.Name = "lblPersonnelTotal";
-            this.lblPersonnelTotal.Size = new System.Drawing.Size(131, 93);
-            this.lblPersonnelTotal.TabIndex = 33;
-            this.lblPersonnelTotal.Text = "0";
-            this.lblPersonnelTotal.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            // 
-            // cmbPersonnelWorkshift
-            // 
-            this.cmbPersonnelWorkshift.BackColor = System.Drawing.Color.Transparent;
-            this.cmbPersonnelWorkshift.BorderRadius = 15;
-            this.cmbPersonnelWorkshift.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.cmbPersonnelWorkshift.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbPersonnelWorkshift.FocusedColor = System.Drawing.Color.Empty;
-            this.cmbPersonnelWorkshift.FocusedState.Parent = this.cmbPersonnelWorkshift;
-            this.cmbPersonnelWorkshift.Font = new System.Drawing.Font("Microsoft New Tai Lue", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmbPersonnelWorkshift.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
-            this.cmbPersonnelWorkshift.FormattingEnabled = true;
-            this.cmbPersonnelWorkshift.HoverState.Parent = this.cmbPersonnelWorkshift;
-            this.cmbPersonnelWorkshift.ItemHeight = 30;
-            this.cmbPersonnelWorkshift.Items.AddRange(new object[] {
+            this.cmbShift.BackColor = System.Drawing.Color.Transparent;
+            this.cmbShift.BorderRadius = 15;
+            this.cmbShift.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cmbShift.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbShift.FocusedColor = System.Drawing.Color.Empty;
+            this.cmbShift.FocusedState.Parent = this.cmbShift;
+            this.cmbShift.Font = new System.Drawing.Font("Microsoft New Tai Lue", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbShift.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.cmbShift.FormattingEnabled = true;
+            this.cmbShift.HoverState.Parent = this.cmbShift;
+            this.cmbShift.ItemHeight = 30;
+            this.cmbShift.Items.AddRange(new object[] {
+            "",
             "Whole Day",
             "Morning",
             "Afternoon",
             "Evening",
             "Graveyard"});
-            this.cmbPersonnelWorkshift.ItemsAppearance.Parent = this.cmbPersonnelWorkshift;
-            this.cmbPersonnelWorkshift.Location = new System.Drawing.Point(289, 115);
-            this.cmbPersonnelWorkshift.Name = "cmbPersonnelWorkshift";
-            this.cmbPersonnelWorkshift.ShadowDecoration.Parent = this.cmbPersonnelWorkshift;
-            this.cmbPersonnelWorkshift.Size = new System.Drawing.Size(234, 36);
-            this.cmbPersonnelWorkshift.TabIndex = 22;
-            this.cmbPersonnelWorkshift.MouseEnter += new System.EventHandler(this.pnlButtons_MouseLeave);
+            this.cmbShift.ItemsAppearance.Parent = this.cmbShift;
+            this.cmbShift.Location = new System.Drawing.Point(289, 115);
+            this.cmbShift.Name = "cmbShift";
+            this.cmbShift.ShadowDecoration.Parent = this.cmbShift;
+            this.cmbShift.Size = new System.Drawing.Size(234, 36);
+            this.cmbShift.TabIndex = 22;
+            this.cmbShift.TextChanged += new System.EventHandler(this.txtName_TextChanged);
+            this.cmbShift.MouseEnter += new System.EventHandler(this.pnlButtons_MouseLeave);
             // 
-            // cmbPersonnelPosition
+            // cmbRole
             // 
-            this.cmbPersonnelPosition.BackColor = System.Drawing.Color.Transparent;
-            this.cmbPersonnelPosition.BorderRadius = 15;
-            this.cmbPersonnelPosition.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.cmbPersonnelPosition.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbPersonnelPosition.FocusedColor = System.Drawing.Color.Empty;
-            this.cmbPersonnelPosition.FocusedState.Parent = this.cmbPersonnelPosition;
-            this.cmbPersonnelPosition.Font = new System.Drawing.Font("Microsoft New Tai Lue", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmbPersonnelPosition.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
-            this.cmbPersonnelPosition.FormattingEnabled = true;
-            this.cmbPersonnelPosition.HoverState.Parent = this.cmbPersonnelPosition;
-            this.cmbPersonnelPosition.ItemHeight = 30;
-            this.cmbPersonnelPosition.ItemsAppearance.Parent = this.cmbPersonnelPosition;
-            this.cmbPersonnelPosition.Location = new System.Drawing.Point(31, 115);
-            this.cmbPersonnelPosition.Name = "cmbPersonnelPosition";
-            this.cmbPersonnelPosition.ShadowDecoration.Parent = this.cmbPersonnelPosition;
-            this.cmbPersonnelPosition.Size = new System.Drawing.Size(234, 36);
-            this.cmbPersonnelPosition.TabIndex = 21;
-            this.cmbPersonnelPosition.MouseEnter += new System.EventHandler(this.pnlButtons_MouseLeave);
+            this.cmbRole.BackColor = System.Drawing.Color.Transparent;
+            this.cmbRole.BorderRadius = 15;
+            this.cmbRole.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cmbRole.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbRole.FocusedColor = System.Drawing.Color.Empty;
+            this.cmbRole.FocusedState.Parent = this.cmbRole;
+            this.cmbRole.Font = new System.Drawing.Font("Microsoft New Tai Lue", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbRole.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.cmbRole.FormattingEnabled = true;
+            this.cmbRole.HoverState.Parent = this.cmbRole;
+            this.cmbRole.ItemHeight = 30;
+            this.cmbRole.ItemsAppearance.Parent = this.cmbRole;
+            this.cmbRole.Location = new System.Drawing.Point(31, 115);
+            this.cmbRole.Name = "cmbRole";
+            this.cmbRole.ShadowDecoration.Parent = this.cmbRole;
+            this.cmbRole.Size = new System.Drawing.Size(234, 36);
+            this.cmbRole.TabIndex = 21;
+            this.cmbRole.TextChanged += new System.EventHandler(this.txtName_TextChanged);
+            this.cmbRole.MouseEnter += new System.EventHandler(this.pnlButtons_MouseLeave);
             // 
-            // txtPersonnelName
+            // txtName
             // 
-            this.txtPersonnelName.BorderRadius = 15;
-            this.txtPersonnelName.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtPersonnelName.DefaultText = "";
-            this.txtPersonnelName.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtPersonnelName.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtPersonnelName.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtPersonnelName.DisabledState.Parent = this.txtPersonnelName;
-            this.txtPersonnelName.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtPersonnelName.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtPersonnelName.FocusedState.Parent = this.txtPersonnelName;
-            this.txtPersonnelName.Font = new System.Drawing.Font("Microsoft New Tai Lue", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPersonnelName.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtPersonnelName.HoverState.Parent = this.txtPersonnelName;
-            this.txtPersonnelName.Location = new System.Drawing.Point(30, 57);
-            this.txtPersonnelName.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.txtPersonnelName.Name = "txtPersonnelName";
-            this.txtPersonnelName.PasswordChar = '\0';
-            this.txtPersonnelName.PlaceholderText = "";
-            this.txtPersonnelName.SelectedText = "";
-            this.txtPersonnelName.ShadowDecoration.Parent = this.txtPersonnelName;
-            this.txtPersonnelName.Size = new System.Drawing.Size(493, 36);
-            this.txtPersonnelName.TabIndex = 20;
-            this.txtPersonnelName.MouseEnter += new System.EventHandler(this.pnlButtons_MouseLeave);
+            this.txtName.BorderRadius = 15;
+            this.txtName.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtName.DefaultText = "";
+            this.txtName.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtName.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtName.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtName.DisabledState.Parent = this.txtName;
+            this.txtName.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtName.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtName.FocusedState.Parent = this.txtName;
+            this.txtName.Font = new System.Drawing.Font("Microsoft New Tai Lue", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtName.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtName.HoverState.Parent = this.txtName;
+            this.txtName.Location = new System.Drawing.Point(30, 57);
+            this.txtName.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtName.Name = "txtName";
+            this.txtName.PasswordChar = '\0';
+            this.txtName.PlaceholderText = "";
+            this.txtName.SelectedText = "";
+            this.txtName.ShadowDecoration.Parent = this.txtName;
+            this.txtName.Size = new System.Drawing.Size(493, 36);
+            this.txtName.TabIndex = 20;
+            this.txtName.TextChanged += new System.EventHandler(this.txtName_TextChanged);
+            this.txtName.MouseEnter += new System.EventHandler(this.pnlButtons_MouseLeave);
             // 
             // guna2Separator3
             // 
@@ -649,64 +648,6 @@
             this.guna2GradientTileButton2.TextOffset = new System.Drawing.Point(7, -11);
             this.guna2GradientTileButton2.MouseEnter += new System.EventHandler(this.pnlButtons_MouseLeave);
             // 
-            // dtgPersonnel
-            // 
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
-            this.dtgPersonnel.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.dtgPersonnel.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dtgPersonnel.BackgroundColor = System.Drawing.Color.White;
-            this.dtgPersonnel.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dtgPersonnel.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            this.dtgPersonnel.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dtgPersonnel.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.dtgPersonnel.ColumnHeadersHeight = 4;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dtgPersonnel.DefaultCellStyle = dataGridViewCellStyle3;
-            this.dtgPersonnel.EnableHeadersVisualStyles = false;
-            this.dtgPersonnel.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.dtgPersonnel.Location = new System.Drawing.Point(30, 199);
-            this.dtgPersonnel.Name = "dtgPersonnel";
-            this.dtgPersonnel.RowHeadersVisible = false;
-            this.dtgPersonnel.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dtgPersonnel.Size = new System.Drawing.Size(863, 218);
-            this.dtgPersonnel.TabIndex = 0;
-            this.dtgPersonnel.Theme = Guna.UI2.WinForms.Enums.DataGridViewPresetThemes.Default;
-            this.dtgPersonnel.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
-            this.dtgPersonnel.ThemeStyle.AlternatingRowsStyle.Font = null;
-            this.dtgPersonnel.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
-            this.dtgPersonnel.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
-            this.dtgPersonnel.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
-            this.dtgPersonnel.ThemeStyle.BackColor = System.Drawing.Color.White;
-            this.dtgPersonnel.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.dtgPersonnel.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.dtgPersonnel.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.dtgPersonnel.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            this.dtgPersonnel.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
-            this.dtgPersonnel.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            this.dtgPersonnel.ThemeStyle.HeaderStyle.Height = 4;
-            this.dtgPersonnel.ThemeStyle.ReadOnly = false;
-            this.dtgPersonnel.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
-            this.dtgPersonnel.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            this.dtgPersonnel.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            this.dtgPersonnel.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            this.dtgPersonnel.ThemeStyle.RowsStyle.Height = 22;
-            this.dtgPersonnel.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.dtgPersonnel.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            this.dtgPersonnel.MouseEnter += new System.EventHandler(this.pnlButtons_MouseLeave);
-            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -724,9 +665,9 @@
             this.label3.Font = new System.Drawing.Font("Adobe Fan Heiti Std B", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(44, 101);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(59, 16);
+            this.label3.Size = new System.Drawing.Size(36, 16);
             this.label3.TabIndex = 26;
-            this.label3.Text = "Position:";
+            this.label3.Text = "Role:";
             this.label3.MouseEnter += new System.EventHandler(this.pnlButtons_MouseLeave);
             // 
             // label4
@@ -816,6 +757,194 @@
             this.lblTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.lblTitle.MouseEnter += new System.EventHandler(this.pnlButtons_MouseLeave);
             // 
+            // dtgPersonnel
+            // 
+            this.dtgPersonnel.AllowUserToAddRows = false;
+            this.dtgPersonnel.AllowUserToDeleteRows = false;
+            this.dtgPersonnel.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
+            this.dtgPersonnel.BackgroundColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft New Tai Lue", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(135)))), ((int)(((byte)(97)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dtgPersonnel.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dtgPersonnel.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtgPersonnel.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column1,
+            this.Column2,
+            this.Column7,
+            this.Column9,
+            this.Column11,
+            this.Column13,
+            this.Column14,
+            this.Column3,
+            this.Column4,
+            this.Column5,
+            this.Column6,
+            this.Column8,
+            this.Column12,
+            this.Column10});
+            this.dtgPersonnel.EnableHeadersVisualStyles = false;
+            this.dtgPersonnel.GridColor = System.Drawing.Color.Black;
+            this.dtgPersonnel.Location = new System.Drawing.Point(233, 199);
+            this.dtgPersonnel.MultiSelect = false;
+            this.dtgPersonnel.Name = "dtgPersonnel";
+            this.dtgPersonnel.ReadOnly = true;
+            this.dtgPersonnel.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft New Tai Lue", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(135)))), ((int)(((byte)(97)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dtgPersonnel.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft New Tai Lue", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(135)))), ((int)(((byte)(97)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
+            this.dtgPersonnel.RowsDefaultCellStyle = dataGridViewCellStyle3;
+            this.dtgPersonnel.Size = new System.Drawing.Size(660, 218);
+            this.dtgPersonnel.TabIndex = 38;
+            this.dtgPersonnel.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgPersonnel_CellClick);
+            // 
+            // imgSelect
+            // 
+            this.imgSelect.Image = global::PrjOverhaulHotel.Properties.Resources.rb_8551;
+            this.imgSelect.Location = new System.Drawing.Point(30, 209);
+            this.imgSelect.Name = "imgSelect";
+            this.imgSelect.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.imgSelect.ShadowDecoration.Parent = this.imgSelect;
+            this.imgSelect.Size = new System.Drawing.Size(200, 200);
+            this.imgSelect.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.imgSelect.TabIndex = 39;
+            this.imgSelect.TabStop = false;
+            this.imgSelect.MouseEnter += new System.EventHandler(this.pnlButtons_MouseLeave);
+            // 
+            // lblTotal
+            // 
+            this.lblTotal.Font = new System.Drawing.Font("Adobe Fan Heiti Std B", 60F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.lblTotal.ForeColor = System.Drawing.Color.White;
+            this.lblTotal.Location = new System.Drawing.Point(3, 8);
+            this.lblTotal.Name = "lblTotal";
+            this.lblTotal.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
+            this.lblTotal.Size = new System.Drawing.Size(149, 93);
+            this.lblTotal.TabIndex = 41;
+            this.lblTotal.Text = "0";
+            this.lblTotal.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            // 
+            // lblResult
+            // 
+            this.lblResult.Font = new System.Drawing.Font("Adobe Fan Heiti Std B", 60F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.lblResult.ForeColor = System.Drawing.Color.White;
+            this.lblResult.Location = new System.Drawing.Point(3, 8);
+            this.lblResult.Name = "lblResult";
+            this.lblResult.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
+            this.lblResult.Size = new System.Drawing.Size(149, 93);
+            this.lblResult.TabIndex = 40;
+            this.lblResult.Text = "0";
+            this.lblResult.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "ID";
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            this.Column1.Visible = false;
+            this.Column1.Width = 52;
+            // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "Full Name";
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
+            this.Column2.Width = 150;
+            // 
+            // Column7
+            // 
+            this.Column7.HeaderText = "Role";
+            this.Column7.Name = "Column7";
+            this.Column7.ReadOnly = true;
+            // 
+            // Column9
+            // 
+            this.Column9.HeaderText = "Status";
+            this.Column9.Name = "Column9";
+            this.Column9.ReadOnly = true;
+            // 
+            // Column11
+            // 
+            this.Column11.HeaderText = "Last Online";
+            this.Column11.Name = "Column11";
+            this.Column11.ReadOnly = true;
+            this.Column11.Width = 200;
+            // 
+            // Column13
+            // 
+            this.Column13.HeaderText = "Shift";
+            this.Column13.Name = "Column13";
+            this.Column13.ReadOnly = true;
+            // 
+            // Column14
+            // 
+            this.Column14.HeaderText = "Hourly Rate";
+            this.Column14.Name = "Column14";
+            this.Column14.ReadOnly = true;
+            this.Column14.Width = 150;
+            // 
+            // Column3
+            // 
+            this.Column3.HeaderText = "Contact No";
+            this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
+            this.Column3.Width = 150;
+            // 
+            // Column4
+            // 
+            this.Column4.HeaderText = "Email Address";
+            this.Column4.Name = "Column4";
+            this.Column4.ReadOnly = true;
+            this.Column4.Width = 150;
+            // 
+            // Column5
+            // 
+            this.Column5.HeaderText = "Address";
+            this.Column5.Name = "Column5";
+            this.Column5.ReadOnly = true;
+            this.Column5.Width = 250;
+            // 
+            // Column6
+            // 
+            this.Column6.HeaderText = "Gender";
+            this.Column6.Name = "Column6";
+            this.Column6.ReadOnly = true;
+            // 
+            // Column8
+            // 
+            this.Column8.HeaderText = "Birthdate";
+            this.Column8.Name = "Column8";
+            this.Column8.ReadOnly = true;
+            this.Column8.Width = 150;
+            // 
+            // Column12
+            // 
+            this.Column12.HeaderText = "Employment Date";
+            this.Column12.Name = "Column12";
+            this.Column12.ReadOnly = true;
+            this.Column12.Width = 200;
+            // 
+            // Column10
+            // 
+            this.Column10.HeaderText = "image";
+            this.Column10.Name = "Column10";
+            this.Column10.ReadOnly = true;
+            this.Column10.Visible = false;
+            this.Column10.Width = 56;
+            // 
             // FrmStaffPersonnel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -841,9 +970,10 @@
             this.pnlPersonnel.PerformLayout();
             this.guna2GradientPanel2.ResumeLayout(false);
             this.guna2GradientPanel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dtgPersonnel)).EndInit();
             this.btnProfile.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.imgProfile)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgPersonnel)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imgSelect)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -871,18 +1001,15 @@
         private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel2;
         private Guna.UI2.WinForms.Guna2Separator guna2Separator5;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label lblPersonnelSelected;
         private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel1;
         private Guna.UI2.WinForms.Guna2Separator guna2Separator4;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label lblPersonnelTotal;
-        private Guna.UI2.WinForms.Guna2ComboBox cmbPersonnelWorkshift;
-        private Guna.UI2.WinForms.Guna2ComboBox cmbPersonnelPosition;
-        private Guna.UI2.WinForms.Guna2TextBox txtPersonnelName;
+        private Guna.UI2.WinForms.Guna2ComboBox cmbShift;
+        private Guna.UI2.WinForms.Guna2ComboBox cmbRole;
+        private Guna.UI2.WinForms.Guna2TextBox txtName;
         private Guna.UI2.WinForms.Guna2Separator guna2Separator3;
         private Guna.UI2.WinForms.Guna2GradientTileButton guna2GradientTileButton1;
         private Guna.UI2.WinForms.Guna2GradientTileButton guna2GradientTileButton2;
-        private Guna.UI2.WinForms.Guna2DataGridView dtgPersonnel;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
@@ -891,5 +1018,23 @@
         private System.Windows.Forms.Label lblName;
         private System.Windows.Forms.Label lblPosition;
         private System.Windows.Forms.Label lblTitle;
+        private System.Windows.Forms.DataGridView dtgPersonnel;
+        private Guna.UI2.WinForms.Guna2CirclePictureBox imgSelect;
+        private System.Windows.Forms.Label lblResult;
+        private System.Windows.Forms.Label lblTotal;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column9;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column11;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column13;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column14;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column8;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column12;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column10;
     }
 }

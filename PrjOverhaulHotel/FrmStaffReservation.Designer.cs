@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2CustomGradientPanel1 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
@@ -53,16 +53,31 @@
             this.btnDashboard = new Guna.UI2.WinForms.Guna2GradientButton();
             this.guna2VSeparator1 = new Guna.UI2.WinForms.Guna2VSeparator();
             this.pnlReservation = new Guna.UI2.WinForms.Guna2Panel();
+            this.dtgReservations = new System.Windows.Forms.DataGridView();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.guna2Separator8 = new Guna.UI2.WinForms.Guna2Separator();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            this.btnAddons = new Guna.UI2.WinForms.Guna2GradientTileButton();
+            this.btnTotalRooms = new Guna.UI2.WinForms.Guna2GradientTileButton();
             this.picInfo = new Guna.UI2.WinForms.Guna2CirclePictureBox();
-            this.dtgReservation = new Guna.UI2.WinForms.Guna2DataGridView();
             this.btnReservationInfo = new Guna.UI2.WinForms.Guna2GradientTileButton();
             this.btnDeleteReservation = new Guna.UI2.WinForms.Guna2GradientTileButton();
             this.btnEditReservation = new Guna.UI2.WinForms.Guna2GradientTileButton();
             this.btnAddReservation = new Guna.UI2.WinForms.Guna2GradientTileButton();
             this.btnPrintReservation = new Guna.UI2.WinForms.Guna2GradientTileButton();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lblTotal = new System.Windows.Forms.Label();
             this.lblTitle = new System.Windows.Forms.Label();
             this.guna2CustomGradientPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -71,8 +86,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.imgProfile)).BeginInit();
             this.pnlButtons.SuspendLayout();
             this.pnlReservation.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgReservations)).BeginInit();
+            this.guna2Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picInfo)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dtgReservation)).BeginInit();
             this.SuspendLayout();
             // 
             // guna2Elipse1
@@ -466,22 +482,168 @@
             this.pnlReservation.BackColor = System.Drawing.Color.Transparent;
             this.pnlReservation.BackgroundImage = global::PrjOverhaulHotel.Properties.Resources.Group_282;
             this.pnlReservation.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pnlReservation.Controls.Add(this.dtgReservations);
             this.pnlReservation.Controls.Add(this.guna2Separator8);
             this.pnlReservation.Controls.Add(this.guna2Panel1);
             this.pnlReservation.Controls.Add(this.picInfo);
-            this.pnlReservation.Controls.Add(this.dtgReservation);
             this.pnlReservation.Controls.Add(this.btnReservationInfo);
             this.pnlReservation.Controls.Add(this.btnDeleteReservation);
             this.pnlReservation.Controls.Add(this.btnEditReservation);
             this.pnlReservation.Controls.Add(this.btnAddReservation);
             this.pnlReservation.Controls.Add(this.btnPrintReservation);
-            this.pnlReservation.Controls.Add(this.label1);
+            this.pnlReservation.Controls.Add(this.lblTotal);
             this.pnlReservation.Location = new System.Drawing.Point(66, 119);
             this.pnlReservation.Name = "pnlReservation";
             this.pnlReservation.ShadowDecoration.Parent = this.pnlReservation;
             this.pnlReservation.Size = new System.Drawing.Size(927, 501);
             this.pnlReservation.TabIndex = 15;
             this.pnlReservation.MouseEnter += new System.EventHandler(this.pnlButtons_MouseLeave);
+            // 
+            // dtgReservations
+            // 
+            this.dtgReservations.AllowUserToAddRows = false;
+            this.dtgReservations.AllowUserToDeleteRows = false;
+            this.dtgReservations.BackgroundColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft New Tai Lue", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(135)))), ((int)(((byte)(97)))));
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dtgReservations.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            this.dtgReservations.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtgReservations.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column1,
+            this.Column2,
+            this.Column3,
+            this.Column4,
+            this.Column5,
+            this.Column6,
+            this.Column7,
+            this.Column8,
+            this.Column9,
+            this.Column10,
+            this.Column11,
+            this.Column12,
+            this.Column13});
+            this.dtgReservations.EnableHeadersVisualStyles = false;
+            this.dtgReservations.GridColor = System.Drawing.Color.Black;
+            this.dtgReservations.Location = new System.Drawing.Point(30, 21);
+            this.dtgReservations.MultiSelect = false;
+            this.dtgReservations.Name = "dtgReservations";
+            this.dtgReservations.ReadOnly = true;
+            this.dtgReservations.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft New Tai Lue", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(135)))), ((int)(((byte)(97)))));
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dtgReservations.RowHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft New Tai Lue", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(135)))), ((int)(((byte)(97)))));
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.White;
+            this.dtgReservations.RowsDefaultCellStyle = dataGridViewCellStyle6;
+            this.dtgReservations.Size = new System.Drawing.Size(863, 257);
+            this.dtgReservations.TabIndex = 37;
+            this.dtgReservations.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgReservations_CellClick);
+            this.dtgReservations.MouseEnter += new System.EventHandler(this.pnlButtons_MouseLeave);
+            // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "ID";
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            this.Column1.Visible = false;
+            this.Column1.Width = 52;
+            // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "Reserved By";
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
+            this.Column2.Width = 200;
+            // 
+            // Column3
+            // 
+            this.Column3.HeaderText = "Total Rooms Reserved";
+            this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
+            this.Column3.Width = 250;
+            // 
+            // Column4
+            // 
+            this.Column4.HeaderText = "Promo Availed";
+            this.Column4.Name = "Column4";
+            this.Column4.ReadOnly = true;
+            this.Column4.Width = 200;
+            // 
+            // Column5
+            // 
+            this.Column5.HeaderText = "Total Addons";
+            this.Column5.Name = "Column5";
+            this.Column5.ReadOnly = true;
+            this.Column5.Width = 150;
+            // 
+            // Column6
+            // 
+            this.Column6.HeaderText = "Invoice Number";
+            this.Column6.Name = "Column6";
+            this.Column6.ReadOnly = true;
+            this.Column6.Width = 200;
+            // 
+            // Column7
+            // 
+            this.Column7.HeaderText = "Status";
+            this.Column7.Name = "Column7";
+            this.Column7.ReadOnly = true;
+            // 
+            // Column8
+            // 
+            this.Column8.HeaderText = "Booking Date";
+            this.Column8.Name = "Column8";
+            this.Column8.ReadOnly = true;
+            this.Column8.Width = 200;
+            // 
+            // Column9
+            // 
+            this.Column9.HeaderText = "Total Days";
+            this.Column9.Name = "Column9";
+            this.Column9.ReadOnly = true;
+            this.Column9.Width = 150;
+            // 
+            // Column10
+            // 
+            this.Column10.HeaderText = "Total Amount";
+            this.Column10.Name = "Column10";
+            this.Column10.ReadOnly = true;
+            this.Column10.Width = 200;
+            // 
+            // Column11
+            // 
+            this.Column11.HeaderText = "Paid Amount";
+            this.Column11.Name = "Column11";
+            this.Column11.ReadOnly = true;
+            this.Column11.Width = 200;
+            // 
+            // Column12
+            // 
+            this.Column12.HeaderText = "Remaining Balance";
+            this.Column12.Name = "Column12";
+            this.Column12.ReadOnly = true;
+            this.Column12.Width = 250;
+            // 
+            // Column13
+            // 
+            this.Column13.HeaderText = "Image";
+            this.Column13.Name = "Column13";
+            this.Column13.ReadOnly = true;
+            this.Column13.Visible = false;
+            this.Column13.Width = 68;
             // 
             // guna2Separator8
             // 
@@ -498,6 +660,8 @@
             this.guna2Panel1.BorderColor = System.Drawing.Color.Black;
             this.guna2Panel1.BorderRadius = 15;
             this.guna2Panel1.BorderThickness = 2;
+            this.guna2Panel1.Controls.Add(this.btnAddons);
+            this.guna2Panel1.Controls.Add(this.btnTotalRooms);
             this.guna2Panel1.FillColor = System.Drawing.Color.White;
             this.guna2Panel1.Location = new System.Drawing.Point(207, 315);
             this.guna2Panel1.Name = "guna2Panel1";
@@ -506,74 +670,63 @@
             this.guna2Panel1.TabIndex = 16;
             this.guna2Panel1.MouseEnter += new System.EventHandler(this.pnlButtons_MouseLeave);
             // 
+            // btnAddons
+            // 
+            this.btnAddons.BorderRadius = 15;
+            this.btnAddons.CheckedState.Parent = this.btnAddons;
+            this.btnAddons.CustomImages.Parent = this.btnAddons;
+            this.btnAddons.FillColor = System.Drawing.Color.Black;
+            this.btnAddons.FillColor2 = System.Drawing.Color.Gray;
+            this.btnAddons.Font = new System.Drawing.Font("Adobe Fan Heiti Std B", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddons.ForeColor = System.Drawing.Color.White;
+            this.btnAddons.HoverState.Parent = this.btnAddons;
+            this.btnAddons.Image = global::PrjOverhaulHotel.Properties.Resources.circle_plus__1_;
+            this.btnAddons.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnAddons.ImageOffset = new System.Drawing.Point(5, 12);
+            this.btnAddons.Location = new System.Drawing.Point(142, 77);
+            this.btnAddons.Name = "btnAddons";
+            this.btnAddons.ShadowDecoration.Parent = this.btnAddons;
+            this.btnAddons.Size = new System.Drawing.Size(180, 32);
+            this.btnAddons.TabIndex = 10;
+            this.btnAddons.Text = "ADDONS";
+            this.btnAddons.TextOffset = new System.Drawing.Point(7, -11);
+            this.btnAddons.MouseEnter += new System.EventHandler(this.pnlButtons_MouseLeave);
+            // 
+            // btnTotalRooms
+            // 
+            this.btnTotalRooms.BorderRadius = 15;
+            this.btnTotalRooms.CheckedState.Parent = this.btnTotalRooms;
+            this.btnTotalRooms.CustomImages.Parent = this.btnTotalRooms;
+            this.btnTotalRooms.FillColor = System.Drawing.Color.Black;
+            this.btnTotalRooms.FillColor2 = System.Drawing.Color.Gray;
+            this.btnTotalRooms.Font = new System.Drawing.Font("Adobe Fan Heiti Std B", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTotalRooms.ForeColor = System.Drawing.Color.White;
+            this.btnTotalRooms.HoverState.Parent = this.btnTotalRooms;
+            this.btnTotalRooms.Image = global::PrjOverhaulHotel.Properties.Resources.bed__1_;
+            this.btnTotalRooms.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnTotalRooms.ImageOffset = new System.Drawing.Point(5, 12);
+            this.btnTotalRooms.Location = new System.Drawing.Point(142, 38);
+            this.btnTotalRooms.Name = "btnTotalRooms";
+            this.btnTotalRooms.ShadowDecoration.Parent = this.btnTotalRooms;
+            this.btnTotalRooms.Size = new System.Drawing.Size(180, 32);
+            this.btnTotalRooms.TabIndex = 9;
+            this.btnTotalRooms.Text = "ROOMS";
+            this.btnTotalRooms.TextOffset = new System.Drawing.Point(7, -11);
+            this.btnTotalRooms.Click += new System.EventHandler(this.btnTotalRooms_Click);
+            this.btnTotalRooms.MouseEnter += new System.EventHandler(this.pnlButtons_MouseLeave);
+            // 
             // picInfo
             // 
+            this.picInfo.Image = global::PrjOverhaulHotel.Properties.Resources.rb_8551;
             this.picInfo.Location = new System.Drawing.Point(60, 314);
             this.picInfo.Name = "picInfo";
             this.picInfo.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
             this.picInfo.ShadowDecoration.Parent = this.picInfo;
             this.picInfo.Size = new System.Drawing.Size(110, 110);
+            this.picInfo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picInfo.TabIndex = 15;
             this.picInfo.TabStop = false;
             this.picInfo.MouseEnter += new System.EventHandler(this.pnlButtons_MouseLeave);
-            // 
-            // dtgReservation
-            // 
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
-            this.dtgReservation.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.dtgReservation.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dtgReservation.BackgroundColor = System.Drawing.Color.White;
-            this.dtgReservation.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dtgReservation.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            this.dtgReservation.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dtgReservation.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.dtgReservation.ColumnHeadersHeight = 4;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dtgReservation.DefaultCellStyle = dataGridViewCellStyle3;
-            this.dtgReservation.EnableHeadersVisualStyles = false;
-            this.dtgReservation.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.dtgReservation.Location = new System.Drawing.Point(30, 21);
-            this.dtgReservation.Name = "dtgReservation";
-            this.dtgReservation.RowHeadersVisible = false;
-            this.dtgReservation.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dtgReservation.Size = new System.Drawing.Size(863, 259);
-            this.dtgReservation.TabIndex = 14;
-            this.dtgReservation.Theme = Guna.UI2.WinForms.Enums.DataGridViewPresetThemes.Default;
-            this.dtgReservation.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
-            this.dtgReservation.ThemeStyle.AlternatingRowsStyle.Font = null;
-            this.dtgReservation.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
-            this.dtgReservation.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
-            this.dtgReservation.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
-            this.dtgReservation.ThemeStyle.BackColor = System.Drawing.Color.White;
-            this.dtgReservation.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.dtgReservation.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.dtgReservation.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.dtgReservation.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            this.dtgReservation.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
-            this.dtgReservation.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            this.dtgReservation.ThemeStyle.HeaderStyle.Height = 4;
-            this.dtgReservation.ThemeStyle.ReadOnly = false;
-            this.dtgReservation.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
-            this.dtgReservation.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            this.dtgReservation.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            this.dtgReservation.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            this.dtgReservation.ThemeStyle.RowsStyle.Height = 22;
-            this.dtgReservation.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.dtgReservation.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            this.dtgReservation.MouseEnter += new System.EventHandler(this.pnlButtons_MouseLeave);
             // 
             // btnReservationInfo
             // 
@@ -685,18 +838,18 @@
             this.btnPrintReservation.TextOffset = new System.Drawing.Point(7, -11);
             this.btnPrintReservation.MouseEnter += new System.EventHandler(this.pnlButtons_MouseLeave);
             // 
-            // label1
+            // lblTotal
             // 
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Adobe Fan Heiti Std B", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(37, 281);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(268, 23);
-            this.label1.TabIndex = 17;
-            this.label1.Text = "Total Reservations: 0";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label1.MouseEnter += new System.EventHandler(this.pnlButtons_MouseLeave);
+            this.lblTotal.BackColor = System.Drawing.Color.Transparent;
+            this.lblTotal.Font = new System.Drawing.Font("Adobe Fan Heiti Std B", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTotal.ForeColor = System.Drawing.Color.Black;
+            this.lblTotal.Location = new System.Drawing.Point(37, 281);
+            this.lblTotal.Name = "lblTotal";
+            this.lblTotal.Size = new System.Drawing.Size(268, 23);
+            this.lblTotal.TabIndex = 17;
+            this.lblTotal.Text = "Total Reservations: 0";
+            this.lblTotal.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblTotal.MouseEnter += new System.EventHandler(this.pnlButtons_MouseLeave);
             // 
             // lblTitle
             // 
@@ -735,8 +888,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.imgProfile)).EndInit();
             this.pnlButtons.ResumeLayout(false);
             this.pnlReservation.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dtgReservations)).EndInit();
+            this.guna2Panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.picInfo)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dtgReservation)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -767,14 +921,29 @@
         private Guna.UI2.WinForms.Guna2Separator guna2Separator8;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
         private Guna.UI2.WinForms.Guna2CirclePictureBox picInfo;
-        private Guna.UI2.WinForms.Guna2DataGridView dtgReservation;
         private Guna.UI2.WinForms.Guna2GradientTileButton btnReservationInfo;
         private Guna.UI2.WinForms.Guna2GradientTileButton btnDeleteReservation;
         private Guna.UI2.WinForms.Guna2GradientTileButton btnEditReservation;
         private Guna.UI2.WinForms.Guna2GradientTileButton btnAddReservation;
         private Guna.UI2.WinForms.Guna2GradientTileButton btnPrintReservation;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblTotal;
         private Guna.UI2.WinForms.Guna2VSeparator guna2VSeparator1;
         private System.Windows.Forms.Label lblTitle;
+        private System.Windows.Forms.DataGridView dtgReservations;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column8;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column9;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column10;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column11;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column12;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column13;
+        private Guna.UI2.WinForms.Guna2GradientTileButton btnAddons;
+        private Guna.UI2.WinForms.Guna2GradientTileButton btnTotalRooms;
     }
 }

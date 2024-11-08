@@ -47,7 +47,7 @@ namespace PrjOverhaulHotel
             if (GlobalProcedure.datHotel.Rows.Count > 0)
             {
                 clearInputs();
-                userID = Convert.ToInt32(GlobalProcedure.datHotel.Rows[0]["ACCOUNT ID"].ToString());
+                userID = Convert.ToInt32(GlobalProcedure.datHotel.Rows[0]["ACCOUNTID"].ToString());
                 username = GlobalProcedure.datHotel.Rows[0]["USERNAME"].ToString();
                 role = GlobalProcedure.datHotel.Rows[0]["ROLE"].ToString();
                 imageLoc = GlobalProcedure.datHotel.Rows[0]["IMAGE"].ToString();

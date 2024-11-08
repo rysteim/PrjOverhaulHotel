@@ -29,13 +29,13 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmStaffAP));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmStaffAP));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2CustomGradientPanel1 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
@@ -67,8 +67,6 @@
             this.btnAddonAdd = new Guna.UI2.WinForms.Guna2GradientTileButton();
             this.guna2VSeparator1 = new Guna.UI2.WinForms.Guna2VSeparator();
             this.guna2Separator11 = new Guna.UI2.WinForms.Guna2Separator();
-            this.guna2DataGridView2 = new Guna.UI2.WinForms.Guna2DataGridView();
-            this.guna2DataGridView1 = new Guna.UI2.WinForms.Guna2DataGridView();
             this.txtSearchPromo = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtSearchAddon = new Guna.UI2.WinForms.Guna2TextBox();
             this.lblPromoDescription = new System.Windows.Forms.Label();
@@ -88,6 +86,16 @@
             this.label31 = new System.Windows.Forms.Label();
             this.label32 = new System.Windows.Forms.Label();
             this.lblTitle = new System.Windows.Forms.Label();
+            this.dtgAddons = new System.Windows.Forms.DataGridView();
+            this.dtgPromo = new System.Windows.Forms.DataGridView();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.guna2CustomGradientPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -95,8 +103,8 @@
             this.btnProfile.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.imgProfile)).BeginInit();
             this.pnlAP.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2DataGridView2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2DataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgAddons)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgPromo)).BeginInit();
             this.SuspendLayout();
             // 
             // guna2Elipse1
@@ -490,6 +498,8 @@
             this.pnlAP.BackColor = System.Drawing.Color.Transparent;
             this.pnlAP.BackgroundImage = global::PrjOverhaulHotel.Properties.Resources.Group_282;
             this.pnlAP.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pnlAP.Controls.Add(this.dtgPromo);
+            this.pnlAP.Controls.Add(this.dtgAddons);
             this.pnlAP.Controls.Add(this.lblTotalPromo);
             this.pnlAP.Controls.Add(this.lblTotalAddon);
             this.pnlAP.Controls.Add(this.btnPromoDelete);
@@ -500,8 +510,6 @@
             this.pnlAP.Controls.Add(this.btnAddonAdd);
             this.pnlAP.Controls.Add(this.guna2VSeparator1);
             this.pnlAP.Controls.Add(this.guna2Separator11);
-            this.pnlAP.Controls.Add(this.guna2DataGridView2);
-            this.pnlAP.Controls.Add(this.guna2DataGridView1);
             this.pnlAP.Controls.Add(this.txtSearchPromo);
             this.pnlAP.Controls.Add(this.txtSearchAddon);
             this.pnlAP.Controls.Add(this.lblPromoDescription);
@@ -705,122 +713,6 @@
             this.guna2Separator11.TabIndex = 48;
             this.guna2Separator11.MouseEnter += new System.EventHandler(this.pnlButtons_MouseLeave);
             // 
-            // guna2DataGridView2
-            // 
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
-            this.guna2DataGridView2.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.guna2DataGridView2.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.guna2DataGridView2.BackgroundColor = System.Drawing.Color.White;
-            this.guna2DataGridView2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.guna2DataGridView2.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            this.guna2DataGridView2.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.guna2DataGridView2.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.guna2DataGridView2.ColumnHeadersHeight = 4;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.guna2DataGridView2.DefaultCellStyle = dataGridViewCellStyle3;
-            this.guna2DataGridView2.EnableHeadersVisualStyles = false;
-            this.guna2DataGridView2.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.guna2DataGridView2.Location = new System.Drawing.Point(479, 241);
-            this.guna2DataGridView2.Name = "guna2DataGridView2";
-            this.guna2DataGridView2.RowHeadersVisible = false;
-            this.guna2DataGridView2.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.guna2DataGridView2.Size = new System.Drawing.Size(432, 169);
-            this.guna2DataGridView2.TabIndex = 47;
-            this.guna2DataGridView2.Theme = Guna.UI2.WinForms.Enums.DataGridViewPresetThemes.Default;
-            this.guna2DataGridView2.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
-            this.guna2DataGridView2.ThemeStyle.AlternatingRowsStyle.Font = null;
-            this.guna2DataGridView2.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
-            this.guna2DataGridView2.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
-            this.guna2DataGridView2.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
-            this.guna2DataGridView2.ThemeStyle.BackColor = System.Drawing.Color.White;
-            this.guna2DataGridView2.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.guna2DataGridView2.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.guna2DataGridView2.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.guna2DataGridView2.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            this.guna2DataGridView2.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
-            this.guna2DataGridView2.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            this.guna2DataGridView2.ThemeStyle.HeaderStyle.Height = 4;
-            this.guna2DataGridView2.ThemeStyle.ReadOnly = false;
-            this.guna2DataGridView2.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
-            this.guna2DataGridView2.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            this.guna2DataGridView2.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            this.guna2DataGridView2.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            this.guna2DataGridView2.ThemeStyle.RowsStyle.Height = 22;
-            this.guna2DataGridView2.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.guna2DataGridView2.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            this.guna2DataGridView2.MouseEnter += new System.EventHandler(this.pnlButtons_MouseLeave);
-            // 
-            // guna2DataGridView1
-            // 
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
-            this.guna2DataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
-            this.guna2DataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.guna2DataGridView1.BackgroundColor = System.Drawing.Color.White;
-            this.guna2DataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.guna2DataGridView1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            this.guna2DataGridView1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.guna2DataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
-            this.guna2DataGridView1.ColumnHeadersHeight = 4;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.guna2DataGridView1.DefaultCellStyle = dataGridViewCellStyle6;
-            this.guna2DataGridView1.EnableHeadersVisualStyles = false;
-            this.guna2DataGridView1.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.guna2DataGridView1.Location = new System.Drawing.Point(18, 241);
-            this.guna2DataGridView1.Name = "guna2DataGridView1";
-            this.guna2DataGridView1.RowHeadersVisible = false;
-            this.guna2DataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.guna2DataGridView1.Size = new System.Drawing.Size(432, 169);
-            this.guna2DataGridView1.TabIndex = 46;
-            this.guna2DataGridView1.Theme = Guna.UI2.WinForms.Enums.DataGridViewPresetThemes.Default;
-            this.guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
-            this.guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.Font = null;
-            this.guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
-            this.guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
-            this.guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
-            this.guna2DataGridView1.ThemeStyle.BackColor = System.Drawing.Color.White;
-            this.guna2DataGridView1.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.guna2DataGridView1.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.guna2DataGridView1.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.guna2DataGridView1.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            this.guna2DataGridView1.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
-            this.guna2DataGridView1.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            this.guna2DataGridView1.ThemeStyle.HeaderStyle.Height = 4;
-            this.guna2DataGridView1.ThemeStyle.ReadOnly = false;
-            this.guna2DataGridView1.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
-            this.guna2DataGridView1.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            this.guna2DataGridView1.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            this.guna2DataGridView1.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            this.guna2DataGridView1.ThemeStyle.RowsStyle.Height = 22;
-            this.guna2DataGridView1.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.guna2DataGridView1.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            this.guna2DataGridView1.MouseEnter += new System.EventHandler(this.pnlButtons_MouseLeave);
-            // 
             // txtSearchPromo
             // 
             this.txtSearchPromo.BorderRadius = 15;
@@ -849,6 +741,7 @@
             this.txtSearchPromo.Size = new System.Drawing.Size(432, 36);
             this.txtSearchPromo.TabIndex = 43;
             this.txtSearchPromo.TextOffset = new System.Drawing.Point(10, 0);
+            this.txtSearchPromo.TextChanged += new System.EventHandler(this.txtSearchPromo_TextChanged);
             this.txtSearchPromo.MouseEnter += new System.EventHandler(this.pnlButtons_MouseLeave);
             // 
             // txtSearchAddon
@@ -879,18 +772,18 @@
             this.txtSearchAddon.Size = new System.Drawing.Size(432, 36);
             this.txtSearchAddon.TabIndex = 42;
             this.txtSearchAddon.TextOffset = new System.Drawing.Point(10, 0);
+            this.txtSearchAddon.TextChanged += new System.EventHandler(this.txtSearchAddon_TextChanged);
             this.txtSearchAddon.MouseEnter += new System.EventHandler(this.pnlButtons_MouseLeave);
             // 
             // lblPromoDescription
             // 
             this.lblPromoDescription.BackColor = System.Drawing.Color.White;
-            this.lblPromoDescription.Font = new System.Drawing.Font("Microsoft New Tai Lue", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPromoDescription.Location = new System.Drawing.Point(580, 104);
+            this.lblPromoDescription.Font = new System.Drawing.Font("Microsoft New Tai Lue", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPromoDescription.ForeColor = System.Drawing.Color.DimGray;
+            this.lblPromoDescription.Location = new System.Drawing.Point(580, 108);
             this.lblPromoDescription.Name = "lblPromoDescription";
-            this.lblPromoDescription.Size = new System.Drawing.Size(331, 54);
+            this.lblPromoDescription.Size = new System.Drawing.Size(331, 47);
             this.lblPromoDescription.TabIndex = 41;
-            this.lblPromoDescription.Text = "Sample Description";
-            this.lblPromoDescription.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.lblPromoDescription.MouseEnter += new System.EventHandler(this.pnlButtons_MouseLeave);
             // 
             // txtPromoDiscount
@@ -906,9 +799,10 @@
             this.txtPromoDiscount.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtPromoDiscount.FocusedState.Parent = this.txtPromoDiscount;
             this.txtPromoDiscount.Font = new System.Drawing.Font("Microsoft New Tai Lue", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPromoDiscount.ForeColor = System.Drawing.Color.DimGray;
             this.txtPromoDiscount.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtPromoDiscount.HoverState.Parent = this.txtPromoDiscount;
-            this.txtPromoDiscount.Location = new System.Drawing.Point(699, 60);
+            this.txtPromoDiscount.Location = new System.Drawing.Point(797, 60);
             this.txtPromoDiscount.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtPromoDiscount.Name = "txtPromoDiscount";
             this.txtPromoDiscount.PasswordChar = '\0';
@@ -916,7 +810,7 @@
             this.txtPromoDiscount.ReadOnly = true;
             this.txtPromoDiscount.SelectedText = "";
             this.txtPromoDiscount.ShadowDecoration.Parent = this.txtPromoDiscount;
-            this.txtPromoDiscount.Size = new System.Drawing.Size(212, 36);
+            this.txtPromoDiscount.Size = new System.Drawing.Size(114, 36);
             this.txtPromoDiscount.TabIndex = 40;
             this.txtPromoDiscount.MouseEnter += new System.EventHandler(this.pnlButtons_MouseLeave);
             // 
@@ -933,6 +827,7 @@
             this.txtPromoName.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtPromoName.FocusedState.Parent = this.txtPromoName;
             this.txtPromoName.Font = new System.Drawing.Font("Microsoft New Tai Lue", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPromoName.ForeColor = System.Drawing.Color.DimGray;
             this.txtPromoName.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtPromoName.HoverState.Parent = this.txtPromoName;
             this.txtPromoName.Location = new System.Drawing.Point(479, 60);
@@ -943,7 +838,7 @@
             this.txtPromoName.ReadOnly = true;
             this.txtPromoName.SelectedText = "";
             this.txtPromoName.ShadowDecoration.Parent = this.txtPromoName;
-            this.txtPromoName.Size = new System.Drawing.Size(212, 36);
+            this.txtPromoName.Size = new System.Drawing.Size(310, 36);
             this.txtPromoName.TabIndex = 36;
             this.txtPromoName.MouseEnter += new System.EventHandler(this.pnlButtons_MouseLeave);
             // 
@@ -962,7 +857,7 @@
             // 
             this.label29.AutoSize = true;
             this.label29.Font = new System.Drawing.Font("Adobe Fan Heiti Std B", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label29.Location = new System.Drawing.Point(493, 104);
+            this.label29.Location = new System.Drawing.Point(493, 108);
             this.label29.Name = "label29";
             this.label29.Size = new System.Drawing.Size(78, 16);
             this.label29.TabIndex = 38;
@@ -973,7 +868,7 @@
             // 
             this.label30.AutoSize = true;
             this.label30.Font = new System.Drawing.Font("Adobe Fan Heiti Std B", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label30.Location = new System.Drawing.Point(712, 46);
+            this.label30.Location = new System.Drawing.Point(802, 46);
             this.label30.Name = "label30";
             this.label30.Size = new System.Drawing.Size(107, 16);
             this.label30.TabIndex = 39;
@@ -983,13 +878,12 @@
             // lblAddonDescription
             // 
             this.lblAddonDescription.BackColor = System.Drawing.Color.White;
-            this.lblAddonDescription.Font = new System.Drawing.Font("Microsoft New Tai Lue", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAddonDescription.Location = new System.Drawing.Point(119, 104);
+            this.lblAddonDescription.Font = new System.Drawing.Font("Microsoft New Tai Lue", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAddonDescription.ForeColor = System.Drawing.Color.DimGray;
+            this.lblAddonDescription.Location = new System.Drawing.Point(119, 108);
             this.lblAddonDescription.Name = "lblAddonDescription";
-            this.lblAddonDescription.Size = new System.Drawing.Size(331, 54);
+            this.lblAddonDescription.Size = new System.Drawing.Size(331, 47);
             this.lblAddonDescription.TabIndex = 35;
-            this.lblAddonDescription.Text = "Sample Description";
-            this.lblAddonDescription.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.lblAddonDescription.MouseEnter += new System.EventHandler(this.pnlButtons_MouseLeave);
             // 
             // txtAddonPrice
@@ -1005,9 +899,10 @@
             this.txtAddonPrice.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtAddonPrice.FocusedState.Parent = this.txtAddonPrice;
             this.txtAddonPrice.Font = new System.Drawing.Font("Microsoft New Tai Lue", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtAddonPrice.ForeColor = System.Drawing.Color.DimGray;
             this.txtAddonPrice.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtAddonPrice.HoverState.Parent = this.txtAddonPrice;
-            this.txtAddonPrice.Location = new System.Drawing.Point(238, 60);
+            this.txtAddonPrice.Location = new System.Drawing.Point(336, 60);
             this.txtAddonPrice.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtAddonPrice.Name = "txtAddonPrice";
             this.txtAddonPrice.PasswordChar = '\0';
@@ -1015,7 +910,7 @@
             this.txtAddonPrice.ReadOnly = true;
             this.txtAddonPrice.SelectedText = "";
             this.txtAddonPrice.ShadowDecoration.Parent = this.txtAddonPrice;
-            this.txtAddonPrice.Size = new System.Drawing.Size(212, 36);
+            this.txtAddonPrice.Size = new System.Drawing.Size(114, 36);
             this.txtAddonPrice.TabIndex = 34;
             this.txtAddonPrice.MouseEnter += new System.EventHandler(this.pnlButtons_MouseLeave);
             // 
@@ -1032,6 +927,7 @@
             this.txtAddonName.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtAddonName.FocusedState.Parent = this.txtAddonName;
             this.txtAddonName.Font = new System.Drawing.Font("Microsoft New Tai Lue", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtAddonName.ForeColor = System.Drawing.Color.DimGray;
             this.txtAddonName.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtAddonName.HoverState.Parent = this.txtAddonName;
             this.txtAddonName.Location = new System.Drawing.Point(18, 60);
@@ -1042,7 +938,7 @@
             this.txtAddonName.ReadOnly = true;
             this.txtAddonName.SelectedText = "";
             this.txtAddonName.ShadowDecoration.Parent = this.txtAddonName;
-            this.txtAddonName.Size = new System.Drawing.Size(212, 36);
+            this.txtAddonName.Size = new System.Drawing.Size(310, 36);
             this.txtAddonName.TabIndex = 28;
             this.txtAddonName.MouseEnter += new System.EventHandler(this.pnlButtons_MouseLeave);
             // 
@@ -1061,7 +957,7 @@
             // 
             this.label24.AutoSize = true;
             this.label24.Font = new System.Drawing.Font("Adobe Fan Heiti Std B", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label24.Location = new System.Drawing.Point(32, 104);
+            this.label24.Location = new System.Drawing.Point(32, 108);
             this.label24.Name = "label24";
             this.label24.Size = new System.Drawing.Size(78, 16);
             this.label24.TabIndex = 32;
@@ -1072,7 +968,7 @@
             // 
             this.label25.AutoSize = true;
             this.label25.Font = new System.Drawing.Font("Adobe Fan Heiti Std B", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label25.Location = new System.Drawing.Point(251, 46);
+            this.label25.Location = new System.Drawing.Point(341, 46);
             this.label25.Name = "label25";
             this.label25.Size = new System.Drawing.Size(87, 16);
             this.label25.TabIndex = 33;
@@ -1137,6 +1033,150 @@
             this.lblTitle.MouseEnter += new System.EventHandler(this.btnProfile_MouseEnter);
             this.lblTitle.MouseLeave += new System.EventHandler(this.btnProfile_MouseLeave);
             // 
+            // dtgAddons
+            // 
+            this.dtgAddons.AllowUserToAddRows = false;
+            this.dtgAddons.AllowUserToDeleteRows = false;
+            this.dtgAddons.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dtgAddons.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
+            this.dtgAddons.BackgroundColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft New Tai Lue", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(135)))), ((int)(((byte)(97)))));
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dtgAddons.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            this.dtgAddons.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtgAddons.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column1,
+            this.Column2,
+            this.Column4,
+            this.Column3});
+            this.dtgAddons.EnableHeadersVisualStyles = false;
+            this.dtgAddons.GridColor = System.Drawing.Color.Black;
+            this.dtgAddons.Location = new System.Drawing.Point(18, 241);
+            this.dtgAddons.MultiSelect = false;
+            this.dtgAddons.Name = "dtgAddons";
+            this.dtgAddons.ReadOnly = true;
+            this.dtgAddons.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft New Tai Lue", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(135)))), ((int)(((byte)(97)))));
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dtgAddons.RowHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft New Tai Lue", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(135)))), ((int)(((byte)(97)))));
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.White;
+            this.dtgAddons.RowsDefaultCellStyle = dataGridViewCellStyle6;
+            this.dtgAddons.Size = new System.Drawing.Size(432, 169);
+            this.dtgAddons.TabIndex = 57;
+            this.dtgAddons.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgAddons_CellClick);
+            // 
+            // dtgPromo
+            // 
+            this.dtgPromo.AllowUserToAddRows = false;
+            this.dtgPromo.AllowUserToDeleteRows = false;
+            this.dtgPromo.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dtgPromo.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
+            this.dtgPromo.BackgroundColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft New Tai Lue", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(135)))), ((int)(((byte)(97)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dtgPromo.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dtgPromo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtgPromo.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn1,
+            this.dataGridViewTextBoxColumn2,
+            this.Column5,
+            this.dataGridViewTextBoxColumn3});
+            this.dtgPromo.EnableHeadersVisualStyles = false;
+            this.dtgPromo.GridColor = System.Drawing.Color.Black;
+            this.dtgPromo.Location = new System.Drawing.Point(479, 241);
+            this.dtgPromo.MultiSelect = false;
+            this.dtgPromo.Name = "dtgPromo";
+            this.dtgPromo.ReadOnly = true;
+            this.dtgPromo.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft New Tai Lue", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(135)))), ((int)(((byte)(97)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dtgPromo.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft New Tai Lue", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(135)))), ((int)(((byte)(97)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
+            this.dtgPromo.RowsDefaultCellStyle = dataGridViewCellStyle3;
+            this.dtgPromo.Size = new System.Drawing.Size(432, 169);
+            this.dtgPromo.TabIndex = 58;
+            this.dtgPromo.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgPromo_CellClick);
+            // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "id";
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            this.Column1.Visible = false;
+            // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "Addon Name";
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
+            // 
+            // Column4
+            // 
+            this.Column4.HeaderText = "Description";
+            this.Column4.Name = "Column4";
+            this.Column4.ReadOnly = true;
+            this.Column4.Visible = false;
+            // 
+            // Column3
+            // 
+            this.Column3.HeaderText = "Price";
+            this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.HeaderText = "id";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
+            this.dataGridViewTextBoxColumn1.Visible = false;
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.HeaderText = "Promo Name";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.ReadOnly = true;
+            // 
+            // Column5
+            // 
+            this.Column5.HeaderText = "Description";
+            this.Column5.Name = "Column5";
+            this.Column5.ReadOnly = true;
+            this.Column5.Visible = false;
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.HeaderText = "Discount";
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn3.ReadOnly = true;
+            // 
             // FrmStaffAP
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1162,8 +1202,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.imgProfile)).EndInit();
             this.pnlAP.ResumeLayout(false);
             this.pnlAP.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2DataGridView2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2DataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgAddons)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgPromo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1202,8 +1242,6 @@
         private Guna.UI2.WinForms.Guna2GradientTileButton btnAddonAdd;
         private Guna.UI2.WinForms.Guna2VSeparator guna2VSeparator1;
         private Guna.UI2.WinForms.Guna2Separator guna2Separator11;
-        private Guna.UI2.WinForms.Guna2DataGridView guna2DataGridView2;
-        private Guna.UI2.WinForms.Guna2DataGridView guna2DataGridView1;
         private Guna.UI2.WinForms.Guna2TextBox txtSearchPromo;
         private Guna.UI2.WinForms.Guna2TextBox txtSearchAddon;
         private System.Windows.Forms.Label lblPromoDescription;
@@ -1223,5 +1261,15 @@
         private System.Windows.Forms.Label label31;
         private System.Windows.Forms.Label label32;
         private System.Windows.Forms.Label lblTitle;
+        private System.Windows.Forms.DataGridView dtgPromo;
+        private System.Windows.Forms.DataGridView dtgAddons;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
     }
 }

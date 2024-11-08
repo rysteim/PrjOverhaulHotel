@@ -1,4 +1,6 @@
-﻿using System;
+﻿using MySqlX.XDevAPI.Relational;
+using PrjOverhaulHotel.PopUps;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -23,6 +25,7 @@ namespace PrjOverhaulHotel
             GlobalProcedure.fncDatabaseConnection();
             maximizeButtons(); 
             displayProfile();
+            displayReservations();
         }
 
         private void btnExit_Click(object sender, EventArgs e)
@@ -141,6 +144,59 @@ namespace PrjOverhaulHotel
             {
                 imgProfile.Image = Properties.Resources.rb_8551;
             }
+        }
+
+        private void displayReservations()
+        {
+            GlobalProcedure.procReservationData();
+            if (GlobalProcedure.datHotel.Rows.Count > 0)
+            {
+                dtgReservations.Rows.Clear();
+                lblTotal.Text = GlobalProcedure.datHotel.Rows.Count.ToString();
+                foreach (DataRow row1 in GlobalProcedure.datHotel.Rows)
+                {
+                    dtgReservations.Rows.Add(
+                        row1["RESERVATION ID"].ToString(),
+                        row1["FULL NAME"].ToString(),
+                        row1["TOTAL ROOMS"].ToString(),
+                        row1["PROMO NAME"].ToString(),
+                        row1["TOTAL ADDONS"].ToString(),
+                        row1["INVOICE"].ToString(),
+                        row1["RESERVATION STATUS"].ToString(),
+                        Convert.ToDateTime(row1["BOOKING DATE"].ToString()).ToString("yyyy-MM-dd"),
+                        row1["TOTAL DAYS"].ToString(),
+                        row1["TOTAL AMOUNT"].ToString(),
+                        row1["PAID AMOUNT"].ToString(),
+                        row1["REMAINING BALANCE"].ToString(),
+                        row1["IMAGE"].ToString()
+                    );
+                }
+            }
+            else
+            {
+                dtgReservations.Rows.Clear();
+            }
+        }
+
+        private void dtgReservations_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                string imagePath = dtgReservations.CurrentRow.Cells[12].Value.ToString();
+                if (!string.IsNullOrEmpty(imagePath) && System.IO.File.Exists(imagePath))
+                {
+                    picInfo.Image = Image.FromFile(imagePath);
+                }
+                else
+                {
+                    picInfo.Image = Properties.Resources.rb_8551;
+                }
+            }
+        }
+
+        private void btnTotalRooms_Click(object sender, EventArgs e)
+        {
+            new PopUpReservationRooms().ShowDialog();
         }
     }
 }
