@@ -157,6 +157,12 @@
       <DependentUpon>FrmStartUp.cs</DependentUpon>
     </Compile>
     <Compile Include="GlobalProcedure.cs" />
+    <Compile Include="PopUps\PopUpRooms.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PopUps\PopUpRooms.Designer.cs">
+      <DependentUpon>PopUpRooms.cs</DependentUpon>
+    </Compile>
     <Compile Include="PopUps\PopUpReservationRooms.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -198,6 +204,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmStartUp.resx">
       <DependentUpon>FrmStartUp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PopUps\PopUpRooms.resx">
+      <DependentUpon>PopUpRooms.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PopUps\PopUpReservationRooms.resx">
       <DependentUpon>PopUpReservationRooms.cs</DependentUpon>
@@ -378,6 +387,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\check.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ban.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

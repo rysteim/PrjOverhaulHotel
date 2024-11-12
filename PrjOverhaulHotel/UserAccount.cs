@@ -8,7 +8,7 @@ namespace PrjOverhaulHotel
 {
     internal class UserAccount
     {
-        public static int userID;
+        public static int userID, roomID;
         public static string username;
         public static string role;
         public static string imageLoc;
@@ -23,6 +23,15 @@ namespace PrjOverhaulHotel
             userID = newID;
         }
 
+        public static int getRoomID()
+        {
+            return roomID;
+        }
+
+        public static void setRoomID(int newID)
+        {
+            roomID = newID;
+        }
         public static void setProfile(string newUsername, string newRole, string image)
         {
             username = newUsername;

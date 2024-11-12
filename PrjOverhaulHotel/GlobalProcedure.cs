@@ -325,6 +325,50 @@ namespace PrjOverhaulHotel
             }
         }
 
+        public static void procRoomGetByID(int roomID)
+        {
+            try
+            {
+                mySqlDataAdapter = new MySqlDataAdapter();
+                datHotel = new DataTable();
+
+                sqlCommand.Parameters.Clear();
+                sqlCommand.CommandText = "proc_roomGetByID";
+                sqlCommand.Parameters.AddWithValue("@p_roomID", roomID);
+                sqlCommand.CommandType = CommandType.StoredProcedure;
+
+                mySqlDataAdapter.SelectCommand = GlobalProcedure.sqlCommand;
+                datHotel.Clear();
+                mySqlDataAdapter.Fill(GlobalProcedure.datHotel);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error: {ex}", "Error!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        public static void procRoomGetByName(string roomName)
+        {
+            try
+            {
+                mySqlDataAdapter = new MySqlDataAdapter();
+                datHotel = new DataTable();
+
+                sqlCommand.Parameters.Clear();
+                sqlCommand.CommandText = "proc_roomGetByName";
+                sqlCommand.Parameters.AddWithValue("@p_roomName", roomName);
+                sqlCommand.CommandType = CommandType.StoredProcedure;
+
+                mySqlDataAdapter.SelectCommand = GlobalProcedure.sqlCommand;
+                datHotel.Clear();
+                mySqlDataAdapter.Fill(GlobalProcedure.datHotel);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error: {ex}", "Error!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
         public static void procRoomTypes()
         {
             try
@@ -359,6 +403,27 @@ namespace PrjOverhaulHotel
                 sqlCommand.Parameters.AddWithValue("@p_roomName", roomName);
                 sqlCommand.Parameters.AddWithValue("@p_roomType", type);
                 sqlCommand.Parameters.AddWithValue("@p_status", status);
+
+                mySqlDataAdapter.SelectCommand = GlobalProcedure.sqlCommand;
+                datHotel.Clear();
+                mySqlDataAdapter.Fill(GlobalProcedure.datHotel);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error: {ex}", "Error!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        public static void procRoomAvailable()
+        {
+            try
+            {
+                mySqlDataAdapter = new MySqlDataAdapter();
+                datHotel = new DataTable();
+
+                sqlCommand.Parameters.Clear();
+                sqlCommand.CommandText = "proc_roomAvailable";
+                sqlCommand.CommandType = CommandType.StoredProcedure;
 
                 mySqlDataAdapter.SelectCommand = GlobalProcedure.sqlCommand;
                 datHotel.Clear();
@@ -534,7 +599,6 @@ namespace PrjOverhaulHotel
 
         // PROMO PROCEDURES
 
-
         public static void procPromoData()
         {
             try
@@ -603,7 +667,7 @@ namespace PrjOverhaulHotel
 
         // ROOM RESERVATION PROCEDURES
 
-        public static void procRoomReservationData()
+        public static void procRoomReservationData(int reservationID)
         {
             try
             {
@@ -612,11 +676,69 @@ namespace PrjOverhaulHotel
 
                 sqlCommand.Parameters.Clear();
                 sqlCommand.CommandText = "proc_roomReservationData";
+                sqlCommand.Parameters.AddWithValue("@p_reservationID", reservationID);
                 sqlCommand.CommandType = CommandType.StoredProcedure;
 
                 mySqlDataAdapter.SelectCommand = GlobalProcedure.sqlCommand;
                 datHotel.Clear();
                 mySqlDataAdapter.Fill(GlobalProcedure.datHotel);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error: {ex}", "Error!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        public static void procRoomReservationAdd(int reservationID, int roomID, string checkIn, string checkOut, double total)
+        {
+            try
+            {
+                sqlCommand.Parameters.Clear();
+                sqlCommand.CommandText = "proc_roomReservationAdd";
+                sqlCommand.CommandType = CommandType.StoredProcedure;
+                sqlCommand.Parameters.AddWithValue("@p_reservationID", reservationID);
+                sqlCommand.Parameters.AddWithValue("@p_roomID", roomID);
+                sqlCommand.Parameters.AddWithValue("@p_checkIn", checkIn);
+                sqlCommand.Parameters.AddWithValue("@p_checkOut", checkOut);
+                sqlCommand.Parameters.AddWithValue("@p_totalRoomPrice", total);
+                sqlCommand.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error: {ex}", "Error!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        public static void procRoomReservationUpdate(int rrid, int reservationID, int roomID, string checkIn, string checkOut, double total)
+        {
+            try
+            {
+                sqlCommand.Parameters.Clear();
+                sqlCommand.CommandText = "proc_roomReservationUpdate";
+                sqlCommand.CommandType = CommandType.StoredProcedure;
+                sqlCommand.Parameters.AddWithValue("@p_id", rrid);
+                sqlCommand.Parameters.AddWithValue("@p_reservationID", reservationID);
+                sqlCommand.Parameters.AddWithValue("@p_roomID", roomID);
+                sqlCommand.Parameters.AddWithValue("@p_checkIn", checkIn);
+                sqlCommand.Parameters.AddWithValue("@p_checkOut", checkOut);
+                sqlCommand.Parameters.AddWithValue("@p_totalRoomPrice", total);
+                sqlCommand.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error: {ex}", "Error!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        public static void procRoomReservationDelete(int rrid)
+        {
+            try
+            {
+                sqlCommand.Parameters.Clear();
+                sqlCommand.CommandText = "proc_roomReservationDelete";
+                sqlCommand.CommandType = CommandType.StoredProcedure;
+                sqlCommand.Parameters.AddWithValue("@p_rrid", rrid);
+                sqlCommand.ExecuteNonQuery();
             }
             catch (Exception ex)
             {

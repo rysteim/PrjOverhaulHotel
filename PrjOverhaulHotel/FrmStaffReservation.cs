@@ -165,9 +165,9 @@ namespace PrjOverhaulHotel
                         row1["RESERVATION STATUS"].ToString(),
                         Convert.ToDateTime(row1["BOOKING DATE"].ToString()).ToString("yyyy-MM-dd"),
                         row1["TOTAL DAYS"].ToString(),
-                        row1["TOTAL AMOUNT"].ToString(),
-                        row1["PAID AMOUNT"].ToString(),
-                        row1["REMAINING BALANCE"].ToString(),
+                        $"₱{Convert.ToDouble(row1["TOTAL AMOUNT"].ToString()):F2}",
+                        $"₱{Convert.ToDouble(row1["PAID AMOUNT"].ToString()):F2}",
+                        $"₱{Convert.ToDouble(row1["REMAINING BALANCE"].ToString()):F2}",
                         row1["IMAGE"].ToString()
                     );
                 }
@@ -196,7 +196,8 @@ namespace PrjOverhaulHotel
 
         private void btnTotalRooms_Click(object sender, EventArgs e)
         {
-            new PopUpReservationRooms().ShowDialog();
+            new PopUpReservationRooms(Convert.ToInt32(dtgReservations.CurrentRow.Cells[0].Value)).ShowDialog();
+            displayReservations();
         }
     }
 }
