@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2CustomGradientPanel1 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
@@ -52,6 +52,7 @@
             this.btnReservation = new Guna.UI2.WinForms.Guna2GradientButton();
             this.btnDashboard = new Guna.UI2.WinForms.Guna2GradientButton();
             this.guna2VSeparator1 = new Guna.UI2.WinForms.Guna2VSeparator();
+            this.lblTitle = new System.Windows.Forms.Label();
             this.pnlReservation = new Guna.UI2.WinForms.Guna2Panel();
             this.dtgReservations = new System.Windows.Forms.DataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -78,7 +79,6 @@
             this.btnAddReservation = new Guna.UI2.WinForms.Guna2GradientTileButton();
             this.btnPrintReservation = new Guna.UI2.WinForms.Guna2GradientTileButton();
             this.lblTotal = new System.Windows.Forms.Label();
-            this.lblTitle = new System.Windows.Forms.Label();
             this.guna2CustomGradientPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -477,6 +477,18 @@
             this.guna2VSeparator1.Size = new System.Drawing.Size(10, 555);
             this.guna2VSeparator1.TabIndex = 7;
             // 
+            // lblTitle
+            // 
+            this.lblTitle.BackColor = System.Drawing.Color.Transparent;
+            this.lblTitle.Font = new System.Drawing.Font("Microsoft New Tai Lue", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitle.ForeColor = System.Drawing.Color.White;
+            this.lblTitle.Location = new System.Drawing.Point(331, 59);
+            this.lblTitle.Name = "lblTitle";
+            this.lblTitle.Size = new System.Drawing.Size(397, 45);
+            this.lblTitle.TabIndex = 19;
+            this.lblTitle.Text = "Reservation";
+            this.lblTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // pnlReservation
             // 
             this.pnlReservation.BackColor = System.Drawing.Color.Transparent;
@@ -504,14 +516,14 @@
             this.dtgReservations.AllowUserToAddRows = false;
             this.dtgReservations.AllowUserToDeleteRows = false;
             this.dtgReservations.BackgroundColor = System.Drawing.Color.White;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft New Tai Lue", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(135)))), ((int)(((byte)(97)))));
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dtgReservations.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft New Tai Lue", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(135)))), ((int)(((byte)(97)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dtgReservations.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dtgReservations.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtgReservations.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
@@ -534,20 +546,20 @@
             this.dtgReservations.Name = "dtgReservations";
             this.dtgReservations.ReadOnly = true;
             this.dtgReservations.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft New Tai Lue", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(135)))), ((int)(((byte)(97)))));
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dtgReservations.RowHeadersDefaultCellStyle = dataGridViewCellStyle5;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft New Tai Lue", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(135)))), ((int)(((byte)(97)))));
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.White;
-            this.dtgReservations.RowsDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft New Tai Lue", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(135)))), ((int)(((byte)(97)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dtgReservations.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft New Tai Lue", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(135)))), ((int)(((byte)(97)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
+            this.dtgReservations.RowsDefaultCellStyle = dataGridViewCellStyle3;
             this.dtgReservations.Size = new System.Drawing.Size(863, 257);
             this.dtgReservations.TabIndex = 37;
             this.dtgReservations.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgReservations_CellClick);
@@ -690,6 +702,7 @@
             this.btnAddons.TabIndex = 10;
             this.btnAddons.Text = "ADDONS";
             this.btnAddons.TextOffset = new System.Drawing.Point(7, -11);
+            this.btnAddons.Click += new System.EventHandler(this.btnAddons_Click);
             this.btnAddons.MouseEnter += new System.EventHandler(this.pnlButtons_MouseLeave);
             // 
             // btnTotalRooms
@@ -748,6 +761,7 @@
             this.btnReservationInfo.TabIndex = 13;
             this.btnReservationInfo.Text = "INFO";
             this.btnReservationInfo.TextOffset = new System.Drawing.Point(7, -11);
+            this.btnReservationInfo.Click += new System.EventHandler(this.btnReservationInfo_Click);
             this.btnReservationInfo.MouseEnter += new System.EventHandler(this.pnlButtons_MouseLeave);
             // 
             // btnDeleteReservation
@@ -770,6 +784,7 @@
             this.btnDeleteReservation.TabIndex = 11;
             this.btnDeleteReservation.Text = "DELETE";
             this.btnDeleteReservation.TextOffset = new System.Drawing.Point(7, -11);
+            this.btnDeleteReservation.Click += new System.EventHandler(this.btnDeleteReservation_Click);
             this.btnDeleteReservation.MouseEnter += new System.EventHandler(this.pnlButtons_MouseLeave);
             // 
             // btnEditReservation
@@ -850,18 +865,6 @@
             this.lblTotal.Text = "Total Reservations: 0";
             this.lblTotal.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.lblTotal.MouseEnter += new System.EventHandler(this.pnlButtons_MouseLeave);
-            // 
-            // lblTitle
-            // 
-            this.lblTitle.BackColor = System.Drawing.Color.Transparent;
-            this.lblTitle.Font = new System.Drawing.Font("Microsoft New Tai Lue", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTitle.ForeColor = System.Drawing.Color.White;
-            this.lblTitle.Location = new System.Drawing.Point(331, 59);
-            this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(397, 45);
-            this.lblTitle.TabIndex = 19;
-            this.lblTitle.Text = "Reservation";
-            this.lblTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // FrmStaffReservation
             // 

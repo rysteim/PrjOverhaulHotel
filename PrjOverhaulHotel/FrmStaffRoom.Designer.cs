@@ -77,6 +77,7 @@
             this.lblName = new System.Windows.Forms.Label();
             this.lblPosition = new System.Windows.Forms.Label();
             this.lblTitle = new System.Windows.Forms.Label();
+            this.btnDelete = new Guna.UI2.WinForms.Guna2GradientTileButton();
             this.guna2CustomGradientPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -419,6 +420,7 @@
             this.pnlRooms.BackColor = System.Drawing.Color.Transparent;
             this.pnlRooms.BackgroundImage = global::PrjOverhaulHotel.Properties.Resources.Group_282;
             this.pnlRooms.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pnlRooms.Controls.Add(this.btnDelete);
             this.pnlRooms.Controls.Add(this.dtgRooms);
             this.pnlRooms.Controls.Add(this.guna2GradientPanel5);
             this.pnlRooms.Controls.Add(this.guna2GradientPanel6);
@@ -623,15 +625,17 @@
             "",
             "Available",
             "Occupied",
+            "Reserved",
             "For Cleaning",
             "Cleaning",
-            "Reserved"});
+            "Out of Order"});
             this.cmbRoomStatus.ItemsAppearance.Parent = this.cmbRoomStatus;
             this.cmbRoomStatus.Location = new System.Drawing.Point(289, 115);
             this.cmbRoomStatus.Name = "cmbRoomStatus";
             this.cmbRoomStatus.ShadowDecoration.Parent = this.cmbRoomStatus;
             this.cmbRoomStatus.Size = new System.Drawing.Size(234, 36);
             this.cmbRoomStatus.TabIndex = 30;
+            this.cmbRoomStatus.TextOffset = new System.Drawing.Point(10, 0);
             this.cmbRoomStatus.TextChanged += new System.EventHandler(this.txtRoomName_TextChanged);
             this.cmbRoomStatus.MouseEnter += new System.EventHandler(this.pnlButtons_MouseLeave);
             // 
@@ -656,6 +660,7 @@
             this.cmbRoomType.ShadowDecoration.Parent = this.cmbRoomType;
             this.cmbRoomType.Size = new System.Drawing.Size(234, 36);
             this.cmbRoomType.TabIndex = 29;
+            this.cmbRoomType.TextOffset = new System.Drawing.Point(10, 0);
             this.cmbRoomType.TextChanged += new System.EventHandler(this.txtRoomName_TextChanged);
             this.cmbRoomType.MouseEnter += new System.EventHandler(this.pnlButtons_MouseLeave);
             // 
@@ -669,10 +674,10 @@
             this.txtRoomName.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtRoomName.DisabledState.Parent = this.txtRoomName;
             this.txtRoomName.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtRoomName.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtRoomName.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txtRoomName.FocusedState.Parent = this.txtRoomName;
             this.txtRoomName.Font = new System.Drawing.Font("Microsoft New Tai Lue", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtRoomName.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtRoomName.HoverState.BorderColor = System.Drawing.Color.Black;
             this.txtRoomName.HoverState.Parent = this.txtRoomName;
             this.txtRoomName.Location = new System.Drawing.Point(30, 57);
             this.txtRoomName.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -683,8 +688,10 @@
             this.txtRoomName.ShadowDecoration.Parent = this.txtRoomName;
             this.txtRoomName.Size = new System.Drawing.Size(493, 36);
             this.txtRoomName.TabIndex = 28;
+            this.txtRoomName.TextOffset = new System.Drawing.Point(10, 0);
             this.txtRoomName.TextChanged += new System.EventHandler(this.txtRoomName_TextChanged);
             this.txtRoomName.MouseEnter += new System.EventHandler(this.pnlButtons_MouseLeave);
+            this.txtRoomName.MouseHover += new System.EventHandler(this.pnlButtons_MouseLeave);
             // 
             // label18
             // 
@@ -749,6 +756,7 @@
             this.btnManageRoom.TabIndex = 12;
             this.btnManageRoom.Text = "MANAGE ROOM";
             this.btnManageRoom.TextOffset = new System.Drawing.Point(7, -11);
+            this.btnManageRoom.Click += new System.EventHandler(this.btnManageRoom_Click);
             this.btnManageRoom.MouseEnter += new System.EventHandler(this.pnlButtons_MouseLeave);
             // 
             // btnAddRoom
@@ -771,6 +779,7 @@
             this.btnAddRoom.TabIndex = 11;
             this.btnAddRoom.Text = "ADD ROOM";
             this.btnAddRoom.TextOffset = new System.Drawing.Point(7, -11);
+            this.btnAddRoom.Click += new System.EventHandler(this.btnAddRoom_Click);
             this.btnAddRoom.MouseEnter += new System.EventHandler(this.pnlButtons_MouseLeave);
             // 
             // btnProfile
@@ -848,6 +857,28 @@
             this.lblTitle.Text = "Rooms";
             this.lblTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.lblTitle.MouseEnter += new System.EventHandler(this.pnlButtons_MouseLeave);
+            // 
+            // btnDelete
+            // 
+            this.btnDelete.BorderRadius = 15;
+            this.btnDelete.CheckedState.Parent = this.btnDelete;
+            this.btnDelete.CustomImages.Parent = this.btnDelete;
+            this.btnDelete.FillColor = System.Drawing.Color.Black;
+            this.btnDelete.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.btnDelete.Font = new System.Drawing.Font("Adobe Fan Heiti Std B", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDelete.ForeColor = System.Drawing.Color.White;
+            this.btnDelete.HoverState.Parent = this.btnDelete;
+            this.btnDelete.Image = global::PrjOverhaulHotel.Properties.Resources.trash_2;
+            this.btnDelete.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnDelete.ImageOffset = new System.Drawing.Point(5, 12);
+            this.btnDelete.Location = new System.Drawing.Point(248, 434);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.ShadowDecoration.Parent = this.btnDelete;
+            this.btnDelete.Size = new System.Drawing.Size(212, 32);
+            this.btnDelete.TabIndex = 37;
+            this.btnDelete.Text = "DELETE ROOM";
+            this.btnDelete.TextOffset = new System.Drawing.Point(7, -11);
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // FrmStaffRoom
             // 
@@ -929,5 +960,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
+        private Guna.UI2.WinForms.Guna2GradientTileButton btnDelete;
     }
 }

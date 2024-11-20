@@ -29,13 +29,13 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmStaffAP));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmStaffAP));
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2CustomGradientPanel1 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
@@ -57,6 +57,16 @@
             this.lblName = new System.Windows.Forms.Label();
             this.lblPosition = new System.Windows.Forms.Label();
             this.pnlAP = new Guna.UI2.WinForms.Guna2Panel();
+            this.dtgPromo = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dtgAddons = new System.Windows.Forms.DataGridView();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lblTotalPromo = new System.Windows.Forms.Label();
             this.lblTotalAddon = new System.Windows.Forms.Label();
             this.btnPromoDelete = new Guna.UI2.WinForms.Guna2GradientTileButton();
@@ -86,16 +96,6 @@
             this.label31 = new System.Windows.Forms.Label();
             this.label32 = new System.Windows.Forms.Label();
             this.lblTitle = new System.Windows.Forms.Label();
-            this.dtgAddons = new System.Windows.Forms.DataGridView();
-            this.dtgPromo = new System.Windows.Forms.DataGridView();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.guna2CustomGradientPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -103,8 +103,8 @@
             this.btnProfile.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.imgProfile)).BeginInit();
             this.pnlAP.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dtgAddons)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtgPromo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgAddons)).BeginInit();
             this.SuspendLayout();
             // 
             // guna2Elipse1
@@ -535,6 +535,150 @@
             this.pnlAP.TabIndex = 16;
             this.pnlAP.MouseEnter += new System.EventHandler(this.pnlButtons_MouseLeave);
             // 
+            // dtgPromo
+            // 
+            this.dtgPromo.AllowUserToAddRows = false;
+            this.dtgPromo.AllowUserToDeleteRows = false;
+            this.dtgPromo.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dtgPromo.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
+            this.dtgPromo.BackgroundColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft New Tai Lue", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(135)))), ((int)(((byte)(97)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dtgPromo.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dtgPromo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtgPromo.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn1,
+            this.dataGridViewTextBoxColumn2,
+            this.Column5,
+            this.dataGridViewTextBoxColumn3});
+            this.dtgPromo.EnableHeadersVisualStyles = false;
+            this.dtgPromo.GridColor = System.Drawing.Color.Black;
+            this.dtgPromo.Location = new System.Drawing.Point(479, 241);
+            this.dtgPromo.MultiSelect = false;
+            this.dtgPromo.Name = "dtgPromo";
+            this.dtgPromo.ReadOnly = true;
+            this.dtgPromo.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft New Tai Lue", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(135)))), ((int)(((byte)(97)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dtgPromo.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft New Tai Lue", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(135)))), ((int)(((byte)(97)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
+            this.dtgPromo.RowsDefaultCellStyle = dataGridViewCellStyle3;
+            this.dtgPromo.Size = new System.Drawing.Size(432, 169);
+            this.dtgPromo.TabIndex = 58;
+            this.dtgPromo.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgPromo_CellClick);
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.HeaderText = "id";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
+            this.dataGridViewTextBoxColumn1.Visible = false;
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.HeaderText = "Promo Name";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.ReadOnly = true;
+            // 
+            // Column5
+            // 
+            this.Column5.HeaderText = "Description";
+            this.Column5.Name = "Column5";
+            this.Column5.ReadOnly = true;
+            this.Column5.Visible = false;
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.HeaderText = "Discount";
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn3.ReadOnly = true;
+            // 
+            // dtgAddons
+            // 
+            this.dtgAddons.AllowUserToAddRows = false;
+            this.dtgAddons.AllowUserToDeleteRows = false;
+            this.dtgAddons.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dtgAddons.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
+            this.dtgAddons.BackgroundColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft New Tai Lue", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(135)))), ((int)(((byte)(97)))));
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dtgAddons.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            this.dtgAddons.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtgAddons.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column1,
+            this.Column2,
+            this.Column4,
+            this.Column3});
+            this.dtgAddons.EnableHeadersVisualStyles = false;
+            this.dtgAddons.GridColor = System.Drawing.Color.Black;
+            this.dtgAddons.Location = new System.Drawing.Point(18, 241);
+            this.dtgAddons.MultiSelect = false;
+            this.dtgAddons.Name = "dtgAddons";
+            this.dtgAddons.ReadOnly = true;
+            this.dtgAddons.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft New Tai Lue", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(135)))), ((int)(((byte)(97)))));
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dtgAddons.RowHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft New Tai Lue", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(135)))), ((int)(((byte)(97)))));
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.White;
+            this.dtgAddons.RowsDefaultCellStyle = dataGridViewCellStyle6;
+            this.dtgAddons.Size = new System.Drawing.Size(432, 169);
+            this.dtgAddons.TabIndex = 57;
+            this.dtgAddons.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgAddons_CellClick);
+            // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "id";
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            this.Column1.Visible = false;
+            // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "Addon Name";
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
+            // 
+            // Column4
+            // 
+            this.Column4.HeaderText = "Description";
+            this.Column4.Name = "Column4";
+            this.Column4.ReadOnly = true;
+            this.Column4.Visible = false;
+            // 
+            // Column3
+            // 
+            this.Column3.HeaderText = "Price";
+            this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
+            // 
             // lblTotalPromo
             // 
             this.lblTotalPromo.BackColor = System.Drawing.Color.Transparent;
@@ -782,7 +926,7 @@
             this.lblPromoDescription.ForeColor = System.Drawing.Color.DimGray;
             this.lblPromoDescription.Location = new System.Drawing.Point(580, 108);
             this.lblPromoDescription.Name = "lblPromoDescription";
-            this.lblPromoDescription.Size = new System.Drawing.Size(331, 47);
+            this.lblPromoDescription.Size = new System.Drawing.Size(331, 54);
             this.lblPromoDescription.TabIndex = 41;
             this.lblPromoDescription.MouseEnter += new System.EventHandler(this.pnlButtons_MouseLeave);
             // 
@@ -796,11 +940,11 @@
             this.txtPromoDiscount.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtPromoDiscount.DisabledState.Parent = this.txtPromoDiscount;
             this.txtPromoDiscount.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtPromoDiscount.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtPromoDiscount.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txtPromoDiscount.FocusedState.Parent = this.txtPromoDiscount;
             this.txtPromoDiscount.Font = new System.Drawing.Font("Microsoft New Tai Lue", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPromoDiscount.ForeColor = System.Drawing.Color.DimGray;
-            this.txtPromoDiscount.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtPromoDiscount.HoverState.BorderColor = System.Drawing.Color.Black;
             this.txtPromoDiscount.HoverState.Parent = this.txtPromoDiscount;
             this.txtPromoDiscount.Location = new System.Drawing.Point(797, 60);
             this.txtPromoDiscount.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -812,7 +956,9 @@
             this.txtPromoDiscount.ShadowDecoration.Parent = this.txtPromoDiscount;
             this.txtPromoDiscount.Size = new System.Drawing.Size(114, 36);
             this.txtPromoDiscount.TabIndex = 40;
+            this.txtPromoDiscount.TextOffset = new System.Drawing.Point(10, 0);
             this.txtPromoDiscount.MouseEnter += new System.EventHandler(this.pnlButtons_MouseLeave);
+            this.txtPromoDiscount.MouseHover += new System.EventHandler(this.pnlButtons_MouseLeave);
             // 
             // txtPromoName
             // 
@@ -824,11 +970,11 @@
             this.txtPromoName.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtPromoName.DisabledState.Parent = this.txtPromoName;
             this.txtPromoName.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtPromoName.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtPromoName.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txtPromoName.FocusedState.Parent = this.txtPromoName;
             this.txtPromoName.Font = new System.Drawing.Font("Microsoft New Tai Lue", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPromoName.ForeColor = System.Drawing.Color.DimGray;
-            this.txtPromoName.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtPromoName.HoverState.BorderColor = System.Drawing.Color.Black;
             this.txtPromoName.HoverState.Parent = this.txtPromoName;
             this.txtPromoName.Location = new System.Drawing.Point(479, 60);
             this.txtPromoName.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -840,7 +986,9 @@
             this.txtPromoName.ShadowDecoration.Parent = this.txtPromoName;
             this.txtPromoName.Size = new System.Drawing.Size(310, 36);
             this.txtPromoName.TabIndex = 36;
+            this.txtPromoName.TextOffset = new System.Drawing.Point(10, 0);
             this.txtPromoName.MouseEnter += new System.EventHandler(this.pnlButtons_MouseLeave);
+            this.txtPromoName.MouseHover += new System.EventHandler(this.pnlButtons_MouseLeave);
             // 
             // label28
             // 
@@ -882,7 +1030,7 @@
             this.lblAddonDescription.ForeColor = System.Drawing.Color.DimGray;
             this.lblAddonDescription.Location = new System.Drawing.Point(119, 108);
             this.lblAddonDescription.Name = "lblAddonDescription";
-            this.lblAddonDescription.Size = new System.Drawing.Size(331, 47);
+            this.lblAddonDescription.Size = new System.Drawing.Size(331, 54);
             this.lblAddonDescription.TabIndex = 35;
             this.lblAddonDescription.MouseEnter += new System.EventHandler(this.pnlButtons_MouseLeave);
             // 
@@ -896,11 +1044,11 @@
             this.txtAddonPrice.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtAddonPrice.DisabledState.Parent = this.txtAddonPrice;
             this.txtAddonPrice.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtAddonPrice.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtAddonPrice.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txtAddonPrice.FocusedState.Parent = this.txtAddonPrice;
             this.txtAddonPrice.Font = new System.Drawing.Font("Microsoft New Tai Lue", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtAddonPrice.ForeColor = System.Drawing.Color.DimGray;
-            this.txtAddonPrice.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtAddonPrice.HoverState.BorderColor = System.Drawing.Color.Black;
             this.txtAddonPrice.HoverState.Parent = this.txtAddonPrice;
             this.txtAddonPrice.Location = new System.Drawing.Point(336, 60);
             this.txtAddonPrice.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -912,7 +1060,9 @@
             this.txtAddonPrice.ShadowDecoration.Parent = this.txtAddonPrice;
             this.txtAddonPrice.Size = new System.Drawing.Size(114, 36);
             this.txtAddonPrice.TabIndex = 34;
+            this.txtAddonPrice.TextOffset = new System.Drawing.Point(10, 0);
             this.txtAddonPrice.MouseEnter += new System.EventHandler(this.pnlButtons_MouseLeave);
+            this.txtAddonPrice.MouseHover += new System.EventHandler(this.pnlButtons_MouseLeave);
             // 
             // txtAddonName
             // 
@@ -924,11 +1074,11 @@
             this.txtAddonName.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtAddonName.DisabledState.Parent = this.txtAddonName;
             this.txtAddonName.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtAddonName.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtAddonName.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txtAddonName.FocusedState.Parent = this.txtAddonName;
             this.txtAddonName.Font = new System.Drawing.Font("Microsoft New Tai Lue", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtAddonName.ForeColor = System.Drawing.Color.DimGray;
-            this.txtAddonName.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtAddonName.HoverState.BorderColor = System.Drawing.Color.Black;
             this.txtAddonName.HoverState.Parent = this.txtAddonName;
             this.txtAddonName.Location = new System.Drawing.Point(18, 60);
             this.txtAddonName.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -940,7 +1090,9 @@
             this.txtAddonName.ShadowDecoration.Parent = this.txtAddonName;
             this.txtAddonName.Size = new System.Drawing.Size(310, 36);
             this.txtAddonName.TabIndex = 28;
+            this.txtAddonName.TextOffset = new System.Drawing.Point(10, 0);
             this.txtAddonName.MouseEnter += new System.EventHandler(this.pnlButtons_MouseLeave);
+            this.txtAddonName.MouseHover += new System.EventHandler(this.pnlButtons_MouseLeave);
             // 
             // label23
             // 
@@ -1033,150 +1185,6 @@
             this.lblTitle.MouseEnter += new System.EventHandler(this.btnProfile_MouseEnter);
             this.lblTitle.MouseLeave += new System.EventHandler(this.btnProfile_MouseLeave);
             // 
-            // dtgAddons
-            // 
-            this.dtgAddons.AllowUserToAddRows = false;
-            this.dtgAddons.AllowUserToDeleteRows = false;
-            this.dtgAddons.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dtgAddons.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
-            this.dtgAddons.BackgroundColor = System.Drawing.Color.White;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft New Tai Lue", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(135)))), ((int)(((byte)(97)))));
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dtgAddons.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
-            this.dtgAddons.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtgAddons.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column1,
-            this.Column2,
-            this.Column4,
-            this.Column3});
-            this.dtgAddons.EnableHeadersVisualStyles = false;
-            this.dtgAddons.GridColor = System.Drawing.Color.Black;
-            this.dtgAddons.Location = new System.Drawing.Point(18, 241);
-            this.dtgAddons.MultiSelect = false;
-            this.dtgAddons.Name = "dtgAddons";
-            this.dtgAddons.ReadOnly = true;
-            this.dtgAddons.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft New Tai Lue", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(135)))), ((int)(((byte)(97)))));
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dtgAddons.RowHeadersDefaultCellStyle = dataGridViewCellStyle5;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft New Tai Lue", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(135)))), ((int)(((byte)(97)))));
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.White;
-            this.dtgAddons.RowsDefaultCellStyle = dataGridViewCellStyle6;
-            this.dtgAddons.Size = new System.Drawing.Size(432, 169);
-            this.dtgAddons.TabIndex = 57;
-            this.dtgAddons.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgAddons_CellClick);
-            // 
-            // dtgPromo
-            // 
-            this.dtgPromo.AllowUserToAddRows = false;
-            this.dtgPromo.AllowUserToDeleteRows = false;
-            this.dtgPromo.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dtgPromo.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
-            this.dtgPromo.BackgroundColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft New Tai Lue", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(135)))), ((int)(((byte)(97)))));
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dtgPromo.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.dtgPromo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtgPromo.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn1,
-            this.dataGridViewTextBoxColumn2,
-            this.Column5,
-            this.dataGridViewTextBoxColumn3});
-            this.dtgPromo.EnableHeadersVisualStyles = false;
-            this.dtgPromo.GridColor = System.Drawing.Color.Black;
-            this.dtgPromo.Location = new System.Drawing.Point(479, 241);
-            this.dtgPromo.MultiSelect = false;
-            this.dtgPromo.Name = "dtgPromo";
-            this.dtgPromo.ReadOnly = true;
-            this.dtgPromo.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft New Tai Lue", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(135)))), ((int)(((byte)(97)))));
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dtgPromo.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft New Tai Lue", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(135)))), ((int)(((byte)(97)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
-            this.dtgPromo.RowsDefaultCellStyle = dataGridViewCellStyle3;
-            this.dtgPromo.Size = new System.Drawing.Size(432, 169);
-            this.dtgPromo.TabIndex = 58;
-            this.dtgPromo.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgPromo_CellClick);
-            // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "id";
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
-            this.Column1.Visible = false;
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "Addon Name";
-            this.Column2.Name = "Column2";
-            this.Column2.ReadOnly = true;
-            // 
-            // Column4
-            // 
-            this.Column4.HeaderText = "Description";
-            this.Column4.Name = "Column4";
-            this.Column4.ReadOnly = true;
-            this.Column4.Visible = false;
-            // 
-            // Column3
-            // 
-            this.Column3.HeaderText = "Price";
-            this.Column3.Name = "Column3";
-            this.Column3.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.HeaderText = "id";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.ReadOnly = true;
-            this.dataGridViewTextBoxColumn1.Visible = false;
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.HeaderText = "Promo Name";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            this.dataGridViewTextBoxColumn2.ReadOnly = true;
-            // 
-            // Column5
-            // 
-            this.Column5.HeaderText = "Description";
-            this.Column5.Name = "Column5";
-            this.Column5.ReadOnly = true;
-            this.Column5.Visible = false;
-            // 
-            // dataGridViewTextBoxColumn3
-            // 
-            this.dataGridViewTextBoxColumn3.HeaderText = "Discount";
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            this.dataGridViewTextBoxColumn3.ReadOnly = true;
-            // 
             // FrmStaffAP
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1202,8 +1210,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.imgProfile)).EndInit();
             this.pnlAP.ResumeLayout(false);
             this.pnlAP.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dtgAddons)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtgPromo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgAddons)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

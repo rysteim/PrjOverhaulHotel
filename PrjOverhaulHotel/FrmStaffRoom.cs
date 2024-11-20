@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PrjOverhaulHotel.PopUps;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -140,7 +141,7 @@ namespace PrjOverhaulHotel
 
         private void displayProfile()
         {
-            lblName.Text = UserAccount.getUsername();
+            lblName.Text = UserAccount.getFirstName();
             lblPosition.Text = UserAccount.getRole();
 
             string imagePath = UserAccount.getImage();
@@ -226,6 +227,24 @@ namespace PrjOverhaulHotel
         private void txtRoomName_TextChanged(object sender, EventArgs e)
         {
             searchRooms();
+        }
+
+        private void btnAddRoom_Click(object sender, EventArgs e)
+        {
+            new PopUpRoomMain().ShowDialog();
+            displayRooms();
+        }
+
+        private void btnManageRoom_Click(object sender, EventArgs e)
+        {
+            new PopUpRoomMain(Convert.ToInt32(dtgRooms.CurrentRow.Cells[0].Value)).ShowDialog();
+            displayRooms();
+        }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            GlobalProcedure.procRoomDelete(Convert.ToInt32(dtgRooms.CurrentRow.Cells[0].Value));
+            displayRooms();
         }
     }
 }

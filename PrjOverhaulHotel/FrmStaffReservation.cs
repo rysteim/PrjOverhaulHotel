@@ -131,7 +131,7 @@ namespace PrjOverhaulHotel
 
         private void displayProfile()
         {
-            lblName.Text = UserAccount.getUsername();
+            lblName.Text = UserAccount.getFirstName();
             lblPosition.Text = UserAccount.getRole();
 
             string imagePath = UserAccount.getImage();
@@ -198,6 +198,23 @@ namespace PrjOverhaulHotel
         {
             new PopUpReservationRooms(Convert.ToInt32(dtgReservations.CurrentRow.Cells[0].Value)).ShowDialog();
             displayReservations();
+        }
+
+        private void btnAddons_Click(object sender, EventArgs e)
+        {
+            new PopUpReservationAddons(Convert.ToInt32(dtgReservations.CurrentRow.Cells[0].Value)).ShowDialog();
+            displayReservations();
+        }
+
+        private void btnDeleteReservation_Click(object sender, EventArgs e)
+        {
+            GlobalProcedure.procReservationDelete(Convert.ToInt32(dtgReservations.CurrentRow.Cells[0].Value));
+            displayReservations();
+        }
+
+        private void btnReservationInfo_Click(object sender, EventArgs e)
+        {
+            new PopUpInfo(Convert.ToInt32(dtgReservations.CurrentRow.Cells[0].Value)).ShowDialog();
         }
     }
 }

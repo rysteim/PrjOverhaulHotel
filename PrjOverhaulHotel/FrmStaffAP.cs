@@ -131,7 +131,7 @@ namespace PrjOverhaulHotel
 
         private void displayProfile()
         {
-            lblName.Text = UserAccount.getUsername();
+            lblName.Text = UserAccount.getFirstName();
             lblPosition.Text = UserAccount.getRole();
 
             string imagePath = UserAccount.getImage();

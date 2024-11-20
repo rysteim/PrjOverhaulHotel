@@ -51,16 +51,6 @@
             this.pnlGuests = new Guna.UI2.WinForms.Guna2Panel();
             this.imgSelect = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.dtgGuests = new System.Windows.Forms.DataGridView();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.guna2GradientPanel3 = new Guna.UI2.WinForms.Guna2GradientPanel();
             this.guna2Separator6 = new Guna.UI2.WinForms.Guna2Separator();
             this.label7 = new System.Windows.Forms.Label();
@@ -83,6 +73,20 @@
             this.lblName = new System.Windows.Forms.Label();
             this.lblPosition = new System.Windows.Forms.Label();
             this.lblTitle = new System.Windows.Forms.Label();
+            this.btnDelete = new Guna.UI2.WinForms.Guna2GradientTileButton();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.guna2CustomGradientPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -423,6 +427,7 @@
             this.pnlGuests.BackColor = System.Drawing.Color.Transparent;
             this.pnlGuests.BackgroundImage = global::PrjOverhaulHotel.Properties.Resources.Group_282;
             this.pnlGuests.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pnlGuests.Controls.Add(this.btnDelete);
             this.pnlGuests.Controls.Add(this.imgSelect);
             this.pnlGuests.Controls.Add(this.dtgGuests);
             this.pnlGuests.Controls.Add(this.guna2GradientPanel3);
@@ -450,7 +455,7 @@
             this.imgSelect.Name = "imgSelect";
             this.imgSelect.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
             this.imgSelect.ShadowDecoration.Parent = this.imgSelect;
-            this.imgSelect.Size = new System.Drawing.Size(200, 200);
+            this.imgSelect.Size = new System.Drawing.Size(189, 196);
             this.imgSelect.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.imgSelect.TabIndex = 38;
             this.imgSelect.TabStop = false;
@@ -474,6 +479,9 @@
             this.dtgGuests.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
             this.Column2,
+            this.Column12,
+            this.Column13,
+            this.Column11,
             this.Column7,
             this.Column9,
             this.Column3,
@@ -506,74 +514,6 @@
             this.dtgGuests.Size = new System.Drawing.Size(660, 218);
             this.dtgGuests.TabIndex = 37;
             this.dtgGuests.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgGuests_CellClick);
-            // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "ID";
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
-            this.Column1.Visible = false;
-            this.Column1.Width = 52;
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "Full Name";
-            this.Column2.Name = "Column2";
-            this.Column2.ReadOnly = true;
-            this.Column2.Width = 200;
-            // 
-            // Column7
-            // 
-            this.Column7.HeaderText = "Membership";
-            this.Column7.Name = "Column7";
-            this.Column7.ReadOnly = true;
-            this.Column7.Width = 131;
-            // 
-            // Column9
-            // 
-            this.Column9.HeaderText = "Status";
-            this.Column9.Name = "Column9";
-            this.Column9.ReadOnly = true;
-            // 
-            // Column3
-            // 
-            this.Column3.HeaderText = "Contact No";
-            this.Column3.Name = "Column3";
-            this.Column3.ReadOnly = true;
-            this.Column3.Width = 150;
-            // 
-            // Column8
-            // 
-            this.Column8.HeaderText = "Birthdate";
-            this.Column8.Name = "Column8";
-            this.Column8.ReadOnly = true;
-            this.Column8.Width = 150;
-            // 
-            // Column4
-            // 
-            this.Column4.HeaderText = "Email Address";
-            this.Column4.Name = "Column4";
-            this.Column4.ReadOnly = true;
-            this.Column4.Width = 200;
-            // 
-            // Column5
-            // 
-            this.Column5.HeaderText = "Address";
-            this.Column5.Name = "Column5";
-            this.Column5.ReadOnly = true;
-            this.Column5.Width = 250;
-            // 
-            // Column6
-            // 
-            this.Column6.HeaderText = "Gender";
-            this.Column6.Name = "Column6";
-            this.Column6.ReadOnly = true;
-            // 
-            // Column10
-            // 
-            this.Column10.HeaderText = "image";
-            this.Column10.Name = "Column10";
-            this.Column10.ReadOnly = true;
             // 
             // guna2GradientPanel3
             // 
@@ -689,6 +629,7 @@
             this.cmbStatus.ShadowDecoration.Parent = this.cmbStatus;
             this.cmbStatus.Size = new System.Drawing.Size(234, 36);
             this.cmbStatus.TabIndex = 30;
+            this.cmbStatus.TextOffset = new System.Drawing.Point(10, 0);
             this.cmbStatus.TextChanged += new System.EventHandler(this.txtGuestName_TextChanged);
             this.cmbStatus.MouseEnter += new System.EventHandler(this.pnlButtons_MouseLeave);
             // 
@@ -711,6 +652,7 @@
             this.cmbMembership.ShadowDecoration.Parent = this.cmbMembership;
             this.cmbMembership.Size = new System.Drawing.Size(234, 36);
             this.cmbMembership.TabIndex = 29;
+            this.cmbMembership.TextOffset = new System.Drawing.Point(10, 0);
             this.cmbMembership.TextChanged += new System.EventHandler(this.txtGuestName_TextChanged);
             this.cmbMembership.MouseEnter += new System.EventHandler(this.pnlButtons_MouseLeave);
             // 
@@ -724,10 +666,10 @@
             this.txtGuestName.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtGuestName.DisabledState.Parent = this.txtGuestName;
             this.txtGuestName.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtGuestName.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtGuestName.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txtGuestName.FocusedState.Parent = this.txtGuestName;
             this.txtGuestName.Font = new System.Drawing.Font("Microsoft New Tai Lue", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtGuestName.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtGuestName.HoverState.BorderColor = System.Drawing.Color.Black;
             this.txtGuestName.HoverState.Parent = this.txtGuestName;
             this.txtGuestName.Location = new System.Drawing.Point(30, 57);
             this.txtGuestName.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -738,8 +680,10 @@
             this.txtGuestName.ShadowDecoration.Parent = this.txtGuestName;
             this.txtGuestName.Size = new System.Drawing.Size(493, 36);
             this.txtGuestName.TabIndex = 28;
+            this.txtGuestName.TextOffset = new System.Drawing.Point(10, 0);
             this.txtGuestName.TextChanged += new System.EventHandler(this.txtGuestName_TextChanged);
             this.txtGuestName.MouseEnter += new System.EventHandler(this.pnlButtons_MouseLeave);
+            this.txtGuestName.MouseHover += new System.EventHandler(this.pnlButtons_MouseLeave);
             // 
             // label11
             // 
@@ -804,6 +748,7 @@
             this.btnManageGuest.TabIndex = 12;
             this.btnManageGuest.Text = "MANAGE GUEST";
             this.btnManageGuest.TextOffset = new System.Drawing.Point(7, -11);
+            this.btnManageGuest.Click += new System.EventHandler(this.btnManageGuest_Click);
             this.btnManageGuest.MouseEnter += new System.EventHandler(this.pnlButtons_MouseLeave);
             // 
             // btnAddGuest
@@ -826,6 +771,7 @@
             this.btnAddGuest.TabIndex = 11;
             this.btnAddGuest.Text = "ADD GUEST";
             this.btnAddGuest.TextOffset = new System.Drawing.Point(7, -11);
+            this.btnAddGuest.Click += new System.EventHandler(this.btnAddGuest_Click);
             this.btnAddGuest.MouseEnter += new System.EventHandler(this.pnlButtons_MouseLeave);
             // 
             // btnProfile
@@ -904,17 +850,128 @@
             this.lblTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.lblTitle.MouseEnter += new System.EventHandler(this.pnlButtons_MouseLeave);
             // 
+            // btnDelete
+            // 
+            this.btnDelete.BorderRadius = 15;
+            this.btnDelete.CheckedState.Parent = this.btnDelete;
+            this.btnDelete.CustomImages.Parent = this.btnDelete;
+            this.btnDelete.FillColor = System.Drawing.Color.Black;
+            this.btnDelete.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.btnDelete.Font = new System.Drawing.Font("Adobe Fan Heiti Std B", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDelete.ForeColor = System.Drawing.Color.White;
+            this.btnDelete.HoverState.Parent = this.btnDelete;
+            this.btnDelete.Image = global::PrjOverhaulHotel.Properties.Resources.trash_2;
+            this.btnDelete.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnDelete.ImageOffset = new System.Drawing.Point(5, 12);
+            this.btnDelete.Location = new System.Drawing.Point(252, 434);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.ShadowDecoration.Parent = this.btnDelete;
+            this.btnDelete.Size = new System.Drawing.Size(212, 32);
+            this.btnDelete.TabIndex = 39;
+            this.btnDelete.Text = "DELETE GUEST";
+            this.btnDelete.TextOffset = new System.Drawing.Point(7, -11);
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
+            // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "ID";
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            this.Column1.Visible = false;
+            this.Column1.Width = 52;
+            // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "First Name";
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
+            this.Column2.Width = 150;
+            // 
+            // Column12
+            // 
+            this.Column12.HeaderText = "Middle Name";
+            this.Column12.Name = "Column12";
+            this.Column12.ReadOnly = true;
+            this.Column12.Width = 150;
+            // 
+            // Column13
+            // 
+            this.Column13.HeaderText = "Last Name";
+            this.Column13.Name = "Column13";
+            this.Column13.ReadOnly = true;
+            this.Column13.Width = 150;
+            // 
+            // Column11
+            // 
+            this.Column11.HeaderText = "Username";
+            this.Column11.Name = "Column11";
+            this.Column11.ReadOnly = true;
+            this.Column11.Width = 130;
+            // 
+            // Column7
+            // 
+            this.Column7.HeaderText = "Membership";
+            this.Column7.Name = "Column7";
+            this.Column7.ReadOnly = true;
+            this.Column7.Width = 131;
+            // 
+            // Column9
+            // 
+            this.Column9.HeaderText = "Status";
+            this.Column9.Name = "Column9";
+            this.Column9.ReadOnly = true;
+            // 
+            // Column3
+            // 
+            this.Column3.HeaderText = "Contact No";
+            this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
+            this.Column3.Width = 150;
+            // 
+            // Column8
+            // 
+            this.Column8.HeaderText = "Birthdate";
+            this.Column8.Name = "Column8";
+            this.Column8.ReadOnly = true;
+            this.Column8.Width = 150;
+            // 
+            // Column4
+            // 
+            this.Column4.HeaderText = "Email Address";
+            this.Column4.Name = "Column4";
+            this.Column4.ReadOnly = true;
+            this.Column4.Width = 200;
+            // 
+            // Column5
+            // 
+            this.Column5.HeaderText = "Address";
+            this.Column5.Name = "Column5";
+            this.Column5.ReadOnly = true;
+            this.Column5.Width = 250;
+            // 
+            // Column6
+            // 
+            this.Column6.HeaderText = "Gender";
+            this.Column6.Name = "Column6";
+            this.Column6.ReadOnly = true;
+            // 
+            // Column10
+            // 
+            this.Column10.HeaderText = "image";
+            this.Column10.Name = "Column10";
+            this.Column10.ReadOnly = true;
+            // 
             // FrmStaffGuests
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(154)))), ((int)(((byte)(136)))));
             this.ClientSize = new System.Drawing.Size(1000, 600);
-            this.Controls.Add(this.lblTitle);
             this.Controls.Add(this.pnlButtons);
             this.Controls.Add(this.guna2CustomGradientPanel1);
             this.Controls.Add(this.btnProfile);
             this.Controls.Add(this.pnlGuests);
+            this.Controls.Add(this.lblTitle);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FrmStaffGuests";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -981,8 +1038,12 @@
         private System.Windows.Forms.Label lblTitle;
         private System.Windows.Forms.DataGridView dtgGuests;
         private Guna.UI2.WinForms.Guna2CirclePictureBox imgSelect;
+        private Guna.UI2.WinForms.Guna2GradientTileButton btnDelete;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column12;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column13;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column11;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column9;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;

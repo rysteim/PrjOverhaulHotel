@@ -157,6 +157,54 @@
       <DependentUpon>FrmStartUp.cs</DependentUpon>
     </Compile>
     <Compile Include="GlobalProcedure.cs" />
+    <Compile Include="PopUps\PopUpAddons.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PopUps\PopUpAddons.Designer.cs">
+      <DependentUpon>PopUpAddons.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PopUps\PopUpAddonsAP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PopUps\PopUpAddonsAP.Designer.cs">
+      <DependentUpon>PopUpAddonsAP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PopUps\PopUpGuest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PopUps\PopUpGuest.Designer.cs">
+      <DependentUpon>PopUpGuest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PopUps\PopUpInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PopUps\PopUpInfo.Designer.cs">
+      <DependentUpon>PopUpInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PopUps\PopUpPersonnel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PopUps\PopUpPersonnel.Designer.cs">
+      <DependentUpon>PopUpPersonnel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PopUps\PopUpPromosAP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PopUps\PopUpPromosAP.Designer.cs">
+      <DependentUpon>PopUpPromosAP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PopUps\PopUpReservation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PopUps\PopUpReservation.Designer.cs">
+      <DependentUpon>PopUpReservation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PopUps\PopUpRoomMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PopUps\PopUpRoomMain.Designer.cs">
+      <DependentUpon>PopUpRoomMain.cs</DependentUpon>
+    </Compile>
     <Compile Include="PopUps\PopUpRooms.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -204,6 +252,33 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmStartUp.resx">
       <DependentUpon>FrmStartUp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PopUps\PopUpAddons.resx">
+      <DependentUpon>PopUpAddons.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PopUps\PopUpAddonsAP.resx">
+      <DependentUpon>PopUpAddonsAP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PopUps\PopUpGuest.resx">
+      <DependentUpon>PopUpGuest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PopUps\PopUpInfo.resx">
+      <DependentUpon>PopUpInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PopUps\PopUpPersonnel.resx">
+      <DependentUpon>PopUpPersonnel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PopUps\PopUpPromosAP.resx">
+      <DependentUpon>PopUpPromosAP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PopUps\PopUpReservation.resx">
+      <DependentUpon>PopUpReservation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PopUps\PopUpReservationAddons.resx">
+      <DependentUpon>PopUpReservationAddons.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PopUps\PopUpRoomMain.resx">
+      <DependentUpon>PopUpRoomMain.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PopUps\PopUpRooms.resx">
       <DependentUpon>PopUpRooms.cs</DependentUpon>

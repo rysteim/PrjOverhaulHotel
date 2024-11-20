@@ -8,8 +8,8 @@ namespace PrjOverhaulHotel
 {
     internal class UserAccount
     {
-        public static int userID, roomID;
-        public static string username;
+        public static int userID, roomID, addonID;
+        public static string firstName;
         public static string role;
         public static string imageLoc;
 
@@ -32,16 +32,27 @@ namespace PrjOverhaulHotel
         {
             roomID = newID;
         }
-        public static void setProfile(string newUsername, string newRole, string image)
+
+        public static int getAddonID()
         {
-            username = newUsername;
+            return addonID;
+        }
+
+        public static void setAddonID(int newID)
+        {
+            addonID = newID;
+        }
+
+        public static void setProfile(string newFirstName, string newRole, string image)
+        {
+            firstName = newFirstName;
             role = newRole;
             imageLoc = image;
         }
 
-        public static string getUsername()
+        public static string getFirstName()
         {
-            return username;
+            return firstName;
         }
 
         public static string getRole()

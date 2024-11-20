@@ -18,6 +18,7 @@ namespace PrjOverhaulHotel
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new FrmStartUp());
+            //Application.Run(new PopUpInfo());
             //Application.Run(new PopUpRooms());
             //Application.Run(new PopUpReservationAddons());
             //Application.Run(new FrmStaffReservation());

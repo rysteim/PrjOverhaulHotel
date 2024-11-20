@@ -71,11 +71,11 @@
             this.label4 = new System.Windows.Forms.Label();
             this.btnUpload = new Guna.UI2.WinForms.Guna2GradientTileButton();
             this.imgProfile = new Guna.UI2.WinForms.Guna2CirclePictureBox();
-            this.btnEdit = new Guna.UI2.WinForms.Guna2GradientTileButton();
             this.txtUsername = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtPassword = new Guna.UI2.WinForms.Guna2TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.btnEdit = new Guna.UI2.WinForms.Guna2GradientTileButton();
             this.guna2CustomGradientPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -901,29 +901,6 @@
             this.imgProfile.TabIndex = 34;
             this.imgProfile.TabStop = false;
             // 
-            // btnEdit
-            // 
-            this.btnEdit.BackColor = System.Drawing.Color.Transparent;
-            this.btnEdit.BorderRadius = 20;
-            this.btnEdit.CheckedState.Parent = this.btnEdit;
-            this.btnEdit.CustomImages.Parent = this.btnEdit;
-            this.btnEdit.FillColor = System.Drawing.Color.Teal;
-            this.btnEdit.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btnEdit.Font = new System.Drawing.Font("Adobe Fan Heiti Std B", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEdit.ForeColor = System.Drawing.Color.White;
-            this.btnEdit.HoverState.Parent = this.btnEdit;
-            this.btnEdit.Image = global::PrjOverhaulHotel.Properties.Resources.bolt;
-            this.btnEdit.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnEdit.ImageOffset = new System.Drawing.Point(5, 12);
-            this.btnEdit.Location = new System.Drawing.Point(681, 106);
-            this.btnEdit.Name = "btnEdit";
-            this.btnEdit.ShadowDecoration.Parent = this.btnEdit;
-            this.btnEdit.Size = new System.Drawing.Size(180, 40);
-            this.btnEdit.TabIndex = 33;
-            this.btnEdit.Text = "EDIT";
-            this.btnEdit.TextOffset = new System.Drawing.Point(7, -11);
-            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
-            // 
             // txtUsername
             // 
             this.txtUsername.BackColor = System.Drawing.Color.Transparent;
@@ -1009,6 +986,29 @@
             this.label2.TabIndex = 32;
             this.label2.Text = "Password";
             // 
+            // btnEdit
+            // 
+            this.btnEdit.BackColor = System.Drawing.Color.Transparent;
+            this.btnEdit.BorderRadius = 20;
+            this.btnEdit.CheckedState.Parent = this.btnEdit;
+            this.btnEdit.CustomImages.Parent = this.btnEdit;
+            this.btnEdit.FillColor = System.Drawing.Color.Teal;
+            this.btnEdit.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnEdit.Font = new System.Drawing.Font("Adobe Fan Heiti Std B", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEdit.ForeColor = System.Drawing.Color.White;
+            this.btnEdit.HoverState.Parent = this.btnEdit;
+            this.btnEdit.Image = global::PrjOverhaulHotel.Properties.Resources.bolt;
+            this.btnEdit.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnEdit.ImageOffset = new System.Drawing.Point(5, 12);
+            this.btnEdit.Location = new System.Drawing.Point(681, 106);
+            this.btnEdit.Name = "btnEdit";
+            this.btnEdit.ShadowDecoration.Parent = this.btnEdit;
+            this.btnEdit.Size = new System.Drawing.Size(180, 40);
+            this.btnEdit.TabIndex = 33;
+            this.btnEdit.Text = "EDIT";
+            this.btnEdit.TextOffset = new System.Drawing.Point(7, -11);
+            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
+            // 
             // FrmStaffProfile
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1082,12 +1082,12 @@
         private System.Windows.Forms.Label label4;
         private Guna.UI2.WinForms.Guna2GradientTileButton btnUpload;
         private Guna.UI2.WinForms.Guna2CirclePictureBox imgProfile;
-        private Guna.UI2.WinForms.Guna2GradientTileButton btnEdit;
         private Guna.UI2.WinForms.Guna2TextBox txtUsername;
         private Guna.UI2.WinForms.Guna2TextBox txtPassword;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private Guna.UI2.WinForms.Guna2GradientTileButton btnSave;
         private System.Windows.Forms.Label btnSee;
+        private Guna.UI2.WinForms.Guna2GradientTileButton btnEdit;
     }
 }

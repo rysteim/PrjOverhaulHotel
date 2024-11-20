@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PrjOverhaulHotel.PopUps;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -25,6 +26,7 @@ namespace PrjOverhaulHotel
             displayProfile();
             displayGuests();
             displayMembership();
+            displayImage();
         }
 
         private void btnExit_Click(object sender, EventArgs e)
@@ -129,7 +131,7 @@ namespace PrjOverhaulHotel
 
         private void displayProfile()
         {
-            lblName.Text = UserAccount.getUsername();
+            lblName.Text = UserAccount.getFirstName();
             lblPosition.Text = UserAccount.getRole();
 
             string imagePath = UserAccount.getImage();
@@ -155,8 +157,11 @@ namespace PrjOverhaulHotel
                 foreach (DataRow row1 in GlobalProcedure.datHotel.Rows)
                 {
                     dtgGuests.Rows.Add(
-                        row1["ACCOUNT ID"].ToString(),
-                        row1["FULLNAME"].ToString(),
+                        row1["AID"].ToString(),
+                        row1["FIRST NAME"].ToString(),
+                        row1["MIDDLE NAME"].ToString(),
+                        row1["LAST NAME"].ToString(),
+                        row1["USERNAME"].ToString(),
                         row1["MEMBERSHIP"].ToString(),
                         row1["STATUS"].ToString(),
                         row1["CONTACT NUMBER"].ToString(),
@@ -192,6 +197,22 @@ namespace PrjOverhaulHotel
             }
         }
 
+        private void displayImage()
+        {
+            if(dtgGuests.Rows.Count > 0)
+            {
+                string imagePath = dtgGuests.CurrentRow.Cells[12].Value.ToString();
+                if (!string.IsNullOrEmpty(imagePath) && System.IO.File.Exists(imagePath))
+                {
+                    imgSelect.Image = Image.FromFile(imagePath);
+                }
+                else
+                {
+                    imgSelect.Image = Properties.Resources.rb_8551;
+                }
+            }
+        }
+
         private void searchGuests()
         {
             GlobalProcedure.procGuestSearch(txtGuestName.Text, cmbMembership.Text, cmbStatus.Text);
@@ -202,8 +223,9 @@ namespace PrjOverhaulHotel
                 foreach (DataRow row1 in GlobalProcedure.datHotel.Rows)
                 {
                     dtgGuests.Rows.Add(
-                        row1["ACCOUNT ID"].ToString(),
+                        row1["AID"].ToString(),
                         row1["FULLNAME"].ToString(),
+                        row1["USERNAME"].ToString(),
                         row1["MEMBERSHIP"].ToString(),
                         row1["STATUS"].ToString(),
                         row1["CONTACT NUMBER"].ToString(),
@@ -231,16 +253,26 @@ namespace PrjOverhaulHotel
         {
             if (e.RowIndex >= 0)
             {
-                string imagePath = dtgGuests.CurrentRow.Cells[9].Value.ToString();
-                if (!string.IsNullOrEmpty(imagePath) && System.IO.File.Exists(imagePath))
-                {
-                    imgSelect.Image = Image.FromFile(imagePath);
-                }
-                else
-                {
-                    imgSelect.Image = Properties.Resources.rb_8551;
-                }
+                displayImage();
             }
+        }
+
+        private void btnAddGuest_Click(object sender, EventArgs e)
+        {
+            new PopUpGuest().ShowDialog();
+            displayGuests();
+        }
+
+        private void btnManageGuest_Click(object sender, EventArgs e)
+        {
+            new PopUpGuest(Convert.ToInt32(dtgGuests.CurrentRow.Cells[0].Value)).ShowDialog();
+            displayGuests();
+        }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            GlobalProcedure.procGuestDelete(Convert.ToInt32(dtgGuests.CurrentRow.Cells[0].Value));
+            displayGuests();
         }
     }
 }

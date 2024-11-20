@@ -114,11 +114,11 @@
             this.btnCancel.CheckedState.Parent = this.btnCancel;
             this.btnCancel.CustomImages.Parent = this.btnCancel;
             this.btnCancel.FillColor = System.Drawing.Color.Black;
-            this.btnCancel.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.btnCancel.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.btnCancel.Font = new System.Drawing.Font("Adobe Fan Heiti Std B", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancel.ForeColor = System.Drawing.Color.White;
             this.btnCancel.HoverState.Parent = this.btnCancel;
-            this.btnCancel.Image = global::PrjOverhaulHotel.Properties.Resources.ban;
+            this.btnCancel.Image = global::PrjOverhaulHotel.Properties.Resources.check;
             this.btnCancel.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnCancel.ImageOffset = new System.Drawing.Point(5, 12);
             this.btnCancel.Location = new System.Drawing.Point(659, 349);
@@ -126,7 +126,7 @@
             this.btnCancel.ShadowDecoration.Parent = this.btnCancel;
             this.btnCancel.Size = new System.Drawing.Size(180, 32);
             this.btnCancel.TabIndex = 46;
-            this.btnCancel.Text = "CANCEL";
+            this.btnCancel.Text = "DONE";
             this.btnCancel.TextOffset = new System.Drawing.Point(7, -11);
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
@@ -955,6 +955,7 @@
             this.txtAddRoomName.Size = new System.Drawing.Size(284, 30);
             this.txtAddRoomName.TabIndex = 14;
             this.txtAddRoomName.TextOffset = new System.Drawing.Point(10, 0);
+            this.txtAddRoomName.MouseClick += new System.Windows.Forms.MouseEventHandler(this.txtAddRoomName_MouseClick);
             // 
             // PopUpReservationRooms
             // 

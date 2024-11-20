@@ -19,6 +19,8 @@ namespace PrjOverhaulHotel
         public FrmStaffProfile()
         {
             InitializeComponent();
+            btnSave.Visible = false;
+            btnUpload.Visible = false;
         }
 
         private void FrmStaffProfile_Load(object sender, EventArgs e)
@@ -123,7 +125,7 @@ namespace PrjOverhaulHotel
 
         private void displayProfile()
         {
-            lblName.Text = UserAccount.getUsername();
+            lblName.Text = UserAccount.getFirstName();
             lblPosition.Text = UserAccount.getRole();
 
             string imagePath = UserAccount.getImage();
@@ -222,7 +224,7 @@ namespace PrjOverhaulHotel
             txtEmailadd.ReadOnly = true;
             txtAddress.ReadOnly = true;
 
-            UserAccount.setProfile(txtUsername.Text, role, imagePath);
+            UserAccount.setProfile(txtFirstname.Text, role, imagePath);
 
             displayDetails();
             displayProfile();

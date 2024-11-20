@@ -13,7 +13,7 @@ namespace PrjOverhaulHotel.PopUps
 {
     public partial class PopUpReservationRooms : Form
     {
-        int reservationID;
+        int reservationID, prevRoomID;
         double totalDays, pricePerDay, roomPrice;
         public PopUpReservationRooms()
         {
@@ -30,6 +30,7 @@ namespace PrjOverhaulHotel.PopUps
             GlobalProcedure.fncDatabaseConnection();
             displayRoomReservation();
             btnEditSave.Visible = false;
+            btnAddSave.Visible = false;
             pnlAdd.Visible = false;
             pnlEdit.Visible = false;
         }
@@ -61,13 +62,16 @@ namespace PrjOverhaulHotel.PopUps
 
         private void displayRoomAdd()
         {
-            GlobalProcedure.procRoomGetByID(UserAccount.getRoomID());
-            if (GlobalProcedure.datHotel.Rows.Count > 0)
+            if (UserAccount.getRoomID() > 0)
             {
-                txtAddRoomName.Text = GlobalProcedure.datHotel.Rows[0]["roomName"].ToString();
-                txtAddRoomType.Text = GlobalProcedure.datHotel.Rows[0]["roomType"].ToString();
-                txtAddPricePerDay.Text = $"₱{Convert.ToDouble(GlobalProcedure.datHotel.Rows[0]["pricePerDay"].ToString()):F2}";
-                pricePerDay = Convert.ToDouble(GlobalProcedure.datHotel.Rows[0]["pricePerDay"].ToString());
+                GlobalProcedure.procRoomGetByID(UserAccount.getRoomID());
+                if (GlobalProcedure.datHotel.Rows.Count > 0)
+                {
+                    txtAddRoomName.Text = GlobalProcedure.datHotel.Rows[0]["roomName"].ToString();
+                    txtAddRoomType.Text = GlobalProcedure.datHotel.Rows[0]["roomType"].ToString();
+                    txtAddPricePerDay.Text = $"₱{Convert.ToDouble(GlobalProcedure.datHotel.Rows[0]["pricePerDay"].ToString()):F2}";
+                    pricePerDay = Convert.ToDouble(GlobalProcedure.datHotel.Rows[0]["pricePerDay"].ToString());
+                }
             }
         }
 
@@ -87,6 +91,8 @@ namespace PrjOverhaulHotel.PopUps
             }
         }
 
+        //private void displayRoo
+
         private void displayRoomPriceAdd()
         {
             TimeSpan dateDifference = dtmAddCheckout.Value - dtmAddCheckin.Value;
@@ -98,7 +104,7 @@ namespace PrjOverhaulHotel.PopUps
             if (roomPrice > 0) 
                 txtAddRoomPrice.Text = $"₱{roomPrice:F2}";
             else
-                txtEditRoomPrice.Text = "Invalid dates.";
+                txtAddRoomPrice.Text = "Invalid dates.";
         }
 
         private void displayRoomPriceEdit()
@@ -169,7 +175,6 @@ namespace PrjOverhaulHotel.PopUps
             btnEditSave.Visible = false;
             btnEditReservation.Visible = false;
             btnDeleteReservation.Visible = false;
-            btnCancel.Visible = false;
 
             new PopUpRooms().ShowDialog();
             displayRoomAdd();
@@ -185,9 +190,12 @@ namespace PrjOverhaulHotel.PopUps
             btnAddSave.Visible = false;
             btnAddReservation.Visible = false;
             btnDeleteReservation.Visible = false;
-            btnCancel.Visible = false;
 
-            displayRoomEdit();
+            GlobalProcedure.procRoomGetByName(dtgRooms.CurrentRow.Cells[1].Value.ToString());
+            if (GlobalProcedure.datHotel.Rows.Count > 0)
+                prevRoomID = Convert.ToInt32(GlobalProcedure.datHotel.Rows[0]["id"].ToString());
+
+                displayRoomEdit();
             displayRoomPriceEdit();
         }
 
@@ -196,26 +204,6 @@ namespace PrjOverhaulHotel.PopUps
             GlobalProcedure.procRoomReservationDelete(Convert.ToInt32(dtgRooms.CurrentRow.Cells[0].Value));
 
             displayRoomReservation();
-        }
-
-        private void btnAddSave_Click(object sender, EventArgs e)
-        {
-            btnAddReservation.Visible = true;
-            btnEditReservation.Visible = true;
-            btnDeleteReservation.Visible = true;
-            btnCancel.Visible = true;
-            pnlDetails.Visible = true;
-            btnAddSave.Visible = false;
-            btnEditSave.Visible = false;
-            pnlAdd.Visible = false;
-            pnlEdit.Visible = false;
-
-            GlobalProcedure.procRoomReservationAdd(reservationID, UserAccount.getRoomID(), 
-                dtmAddCheckin.Value.ToString("yyyy-MM-dd"), dtmAddCheckout.Value.ToString("yyyy-MM-dd"), roomPrice);
-
-            roomPrice = 0;
-            displayRoomReservation();
-            clearAddFields();
         }
 
         private void btnCancel_Click(object sender, EventArgs e)
@@ -236,7 +224,7 @@ namespace PrjOverhaulHotel.PopUps
         private void txtEditRoomName_MouseClick(object sender, MouseEventArgs e)
         {
             new PopUpRooms().ShowDialog();
-            displayRoomEdit();
+            //displayRoomEdit();
             GlobalProcedure.procRoomGetByID(UserAccount.getRoomID());
             if (GlobalProcedure.datHotel.Rows.Count > 0)
             {
@@ -247,30 +235,80 @@ namespace PrjOverhaulHotel.PopUps
                 displayRoomPriceEdit();
             }
         }
-
-        private void cmbEditRoomType_SelectedIndexChanged(object sender, EventArgs e)
+        private void txtAddRoomName_MouseClick(object sender, MouseEventArgs e)
         {
+            new PopUpRooms().ShowDialog();
+            //displayRoomAdd();
+            GlobalProcedure.procRoomGetByID(UserAccount.getRoomID());
+            if (GlobalProcedure.datHotel.Rows.Count > 0)
+            {
+                txtAddRoomName.Text = GlobalProcedure.datHotel.Rows[0]["roomName"].ToString();
+                txtAddRoomType.Text = GlobalProcedure.datHotel.Rows[0]["roomType"].ToString();
+                txtAddPricePerDay.Text = $"₱{Convert.ToDouble(GlobalProcedure.datHotel.Rows[0]["pricePerDay"].ToString()):F2}";
+                pricePerDay = Convert.ToDouble(GlobalProcedure.datHotel.Rows[0]["pricePerDay"].ToString());
+                displayRoomPriceAdd();
+            }
+        }
+
+        private void btnAddSave_Click(object sender, EventArgs e)
+        {
+            if (txtAddRoomPrice.Text != "Invalid dates.")
+            {
+                btnAddReservation.Visible = true;
+                btnEditReservation.Visible = true;
+                btnDeleteReservation.Visible = true;
+                pnlDetails.Visible = true;
+                btnAddSave.Visible = false;
+                btnEditSave.Visible = false;
+                pnlAdd.Visible = false;
+                pnlEdit.Visible = false;
+
+                GlobalProcedure.procRoomReservationAdd(reservationID, UserAccount.getRoomID(),
+                    dtmAddCheckin.Value.ToString("yyyy-MM-dd"), dtmAddCheckout.Value.ToString("yyyy-MM-dd"), roomPrice);
+                GlobalProcedure.procRoomReserveStatus(UserAccount.getRoomID());
+                GlobalProcedure.procReservationGetTotalDays(reservationID);
+                if (GlobalProcedure.datHotel.Rows.Count > 0)
+                    GlobalProcedure.procReservationSetTotalDays(reservationID, Convert.ToInt32(GlobalProcedure.datHotel.Rows[0]["TOTAL DAYS"].ToString()));
+
+                UserAccount.setRoomID(-1);
+
+                roomPrice = 0;
+                displayRoomReservation();
+                clearAddFields();
+            }
+            else
+            {
+                MessageBox.Show("Invalid dates. Please try again!");
+            }
         }
 
         private void btnEditSave_Click(object sender, EventArgs e)
         {
-            btnAddReservation.Visible = true;
-            btnEditReservation.Visible = true;
-            pnlDetails.Visible = true;
-            btnDeleteReservation.Visible = true;
-            btnCancel.Visible = true;
-            btnAddSave.Visible = false;
-            btnEditSave.Visible = false;
-            pnlAdd.Visible = false;
-            pnlEdit.Visible = false;
+            if (txtEditRoomPrice.Text != "Invalid dates.")
+            {
+                btnAddReservation.Visible = true;
+                btnEditReservation.Visible = true;
+                pnlDetails.Visible = true;
+                btnDeleteReservation.Visible = true;
+                btnAddSave.Visible = false;
+                btnEditSave.Visible = false;
+                pnlAdd.Visible = false;
+                pnlEdit.Visible = false;
 
-            MessageBox.Show($"{UserAccount.getRoomID()}");
-            GlobalProcedure.procRoomReservationUpdate(Convert.ToInt32(dtgRooms.CurrentRow.Cells[0].Value), reservationID, UserAccount.getRoomID(),
-                dtmEditCheckin.Value.ToString("yyyy-MM-dd"), dtmEditCheckout.Value.ToString("yyyy-MM-dd"), roomPrice);
+                GlobalProcedure.procRoomAvailableStatus(prevRoomID);
+                GlobalProcedure.procRoomReservationUpdate(Convert.ToInt32(dtgRooms.CurrentRow.Cells[0].Value), reservationID, UserAccount.getRoomID(),
+                    dtmEditCheckin.Value.ToString("yyyy-MM-dd"), dtmEditCheckout.Value.ToString("yyyy-MM-dd"), roomPrice);
+                GlobalProcedure.procRoomReserveStatus(UserAccount.getRoomID());
 
-            roomPrice = 0;
-            displayRoomReservation();
-            clearEditFields();
+                UserAccount.setRoomID(-1);
+                roomPrice = 0;
+                displayRoomReservation();
+                clearEditFields();
+            }
+            else
+            {
+                MessageBox.Show("Invalid dates. Please try again!");
+            }
         }
     }
 }

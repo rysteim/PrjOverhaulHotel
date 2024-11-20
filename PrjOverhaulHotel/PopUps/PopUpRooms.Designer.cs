@@ -35,14 +35,13 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PopUpRooms));
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.pnlLogin = new Guna.UI2.WinForms.Guna2Panel();
+            this.btnCancel = new Guna.UI2.WinForms.Guna2GradientTileButton();
             this.dtgRooms = new System.Windows.Forms.DataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnAddReservation = new Guna.UI2.WinForms.Guna2GradientTileButton();
-            this.btnAddSave = new Guna.UI2.WinForms.Guna2GradientTileButton();
-            this.btnCancel = new Guna.UI2.WinForms.Guna2GradientTileButton();
             this.pnlLogin.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgRooms)).BeginInit();
             this.SuspendLayout();
@@ -56,15 +55,37 @@
             this.pnlLogin.BackgroundImage = global::PrjOverhaulHotel.Properties.Resources.Rectangle_13__2_;
             this.pnlLogin.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pnlLogin.BorderColor = System.Drawing.Color.Black;
-            this.pnlLogin.Controls.Add(this.btnCancel);
             this.pnlLogin.Controls.Add(this.dtgRooms);
             this.pnlLogin.Controls.Add(this.btnAddReservation);
-            this.pnlLogin.Controls.Add(this.btnAddSave);
+            this.pnlLogin.Controls.Add(this.btnCancel);
             this.pnlLogin.Location = new System.Drawing.Point(15, 15);
             this.pnlLogin.Name = "pnlLogin";
             this.pnlLogin.ShadowDecoration.Parent = this.pnlLogin;
             this.pnlLogin.Size = new System.Drawing.Size(659, 403);
             this.pnlLogin.TabIndex = 13;
+            // 
+            // btnCancel
+            // 
+            this.btnCancel.BackColor = System.Drawing.Color.Transparent;
+            this.btnCancel.BorderRadius = 15;
+            this.btnCancel.CheckedState.Parent = this.btnCancel;
+            this.btnCancel.CustomImages.Parent = this.btnCancel;
+            this.btnCancel.FillColor = System.Drawing.Color.Black;
+            this.btnCancel.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.btnCancel.Font = new System.Drawing.Font("Adobe Fan Heiti Std B", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancel.ForeColor = System.Drawing.Color.White;
+            this.btnCancel.HoverState.Parent = this.btnCancel;
+            this.btnCancel.Image = global::PrjOverhaulHotel.Properties.Resources.ban;
+            this.btnCancel.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnCancel.ImageOffset = new System.Drawing.Point(5, 12);
+            this.btnCancel.Location = new System.Drawing.Point(453, 357);
+            this.btnCancel.Name = "btnCancel";
+            this.btnCancel.ShadowDecoration.Parent = this.btnCancel;
+            this.btnCancel.Size = new System.Drawing.Size(180, 32);
+            this.btnCancel.TabIndex = 47;
+            this.btnCancel.Text = "CANCEL";
+            this.btnCancel.TextOffset = new System.Drawing.Point(7, -11);
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // dtgRooms
             // 
@@ -155,54 +176,9 @@
             this.btnAddReservation.ShadowDecoration.Parent = this.btnAddReservation;
             this.btnAddReservation.Size = new System.Drawing.Size(180, 32);
             this.btnAddReservation.TabIndex = 38;
-            this.btnAddReservation.Text = "ADD";
+            this.btnAddReservation.Text = "CHOOSE";
             this.btnAddReservation.TextOffset = new System.Drawing.Point(7, -11);
             this.btnAddReservation.Click += new System.EventHandler(this.btnAddReservation_Click);
-            // 
-            // btnAddSave
-            // 
-            this.btnAddSave.BackColor = System.Drawing.Color.Transparent;
-            this.btnAddSave.BorderRadius = 15;
-            this.btnAddSave.CheckedState.Parent = this.btnAddSave;
-            this.btnAddSave.CustomImages.Parent = this.btnAddSave;
-            this.btnAddSave.FillColor = System.Drawing.Color.Black;
-            this.btnAddSave.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btnAddSave.Font = new System.Drawing.Font("Adobe Fan Heiti Std B", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAddSave.ForeColor = System.Drawing.Color.White;
-            this.btnAddSave.HoverState.Parent = this.btnAddSave;
-            this.btnAddSave.Image = global::PrjOverhaulHotel.Properties.Resources.check;
-            this.btnAddSave.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnAddSave.ImageOffset = new System.Drawing.Point(5, 12);
-            this.btnAddSave.Location = new System.Drawing.Point(267, 357);
-            this.btnAddSave.Name = "btnAddSave";
-            this.btnAddSave.ShadowDecoration.Parent = this.btnAddSave;
-            this.btnAddSave.Size = new System.Drawing.Size(180, 32);
-            this.btnAddSave.TabIndex = 45;
-            this.btnAddSave.Text = "SAVE";
-            this.btnAddSave.TextOffset = new System.Drawing.Point(7, -11);
-            // 
-            // btnCancel
-            // 
-            this.btnCancel.BackColor = System.Drawing.Color.Transparent;
-            this.btnCancel.BorderRadius = 15;
-            this.btnCancel.CheckedState.Parent = this.btnCancel;
-            this.btnCancel.CustomImages.Parent = this.btnCancel;
-            this.btnCancel.FillColor = System.Drawing.Color.Black;
-            this.btnCancel.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.btnCancel.Font = new System.Drawing.Font("Adobe Fan Heiti Std B", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancel.ForeColor = System.Drawing.Color.White;
-            this.btnCancel.HoverState.Parent = this.btnCancel;
-            this.btnCancel.Image = global::PrjOverhaulHotel.Properties.Resources.ban;
-            this.btnCancel.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnCancel.ImageOffset = new System.Drawing.Point(5, 12);
-            this.btnCancel.Location = new System.Drawing.Point(453, 357);
-            this.btnCancel.Name = "btnCancel";
-            this.btnCancel.ShadowDecoration.Parent = this.btnCancel;
-            this.btnCancel.Size = new System.Drawing.Size(180, 32);
-            this.btnCancel.TabIndex = 47;
-            this.btnCancel.Text = "CANCEL";
-            this.btnCancel.TextOffset = new System.Drawing.Point(7, -11);
-            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // PopUpRooms
             // 
@@ -228,7 +204,6 @@
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse1;
         private Guna.UI2.WinForms.Guna2Panel pnlLogin;
         private Guna.UI2.WinForms.Guna2GradientTileButton btnAddReservation;
-        private Guna.UI2.WinForms.Guna2GradientTileButton btnAddSave;
         private System.Windows.Forms.DataGridView dtgRooms;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
