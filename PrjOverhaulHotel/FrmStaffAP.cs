@@ -1,4 +1,5 @@
 ﻿using MySqlX.XDevAPI.Relational;
+using PrjOverhaulHotel.PopUps;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -264,6 +265,26 @@ namespace PrjOverhaulHotel
         private void txtSearchPromo_TextChanged(object sender, EventArgs e)
         {
             searchPromo();
+        }
+
+        private void btnAddonAdd_Click(object sender, EventArgs e)
+        {
+            new PopUpAddonsAP().ShowDialog();
+        }
+
+        private void btnAddonManage_Click(object sender, EventArgs e)
+        {
+            new PopUpAddonsAP().ShowDialog();
+        }
+
+        private void btnPromoAdd_Click(object sender, EventArgs e)
+        {
+            new PopUpPromosAP().ShowDialog();
+        }
+
+        private void btnPromoManage_Click(object sender, EventArgs e)
+        {
+            new PopUpPromosAP().ShowDialog();
         }
     }
 }

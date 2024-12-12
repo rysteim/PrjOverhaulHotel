@@ -102,6 +102,36 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Form for Guests\FrmGuestAP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form for Guests\FrmGuestAP.Designer.cs">
+      <DependentUpon>FrmGuestAP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form for Guests\FrmGuestDashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form for Guests\FrmGuestDashboard.Designer.cs">
+      <DependentUpon>FrmGuestDashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form for Guests\FrmGuestHistory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form for Guests\FrmGuestHistory.Designer.cs">
+      <DependentUpon>FrmGuestHistory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form for Guests\FrmGuestProfile.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form for Guests\FrmGuestProfile.Designer.cs">
+      <DependentUpon>FrmGuestProfile.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form for Guests\FrmGuestReservation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form for Guests\FrmGuestReservation.Designer.cs">
+      <DependentUpon>FrmGuestReservation.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmSignup.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -226,6 +256,21 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="UserAccount.cs" />
+    <EmbeddedResource Include="Form for Guests\FrmGuestAP.resx">
+      <DependentUpon>FrmGuestAP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form for Guests\FrmGuestDashboard.resx">
+      <DependentUpon>FrmGuestDashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form for Guests\FrmGuestHistory.resx">
+      <DependentUpon>FrmGuestHistory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form for Guests\FrmGuestProfile.resx">
+      <DependentUpon>FrmGuestProfile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form for Guests\FrmGuestReservation.resx">
+      <DependentUpon>FrmGuestReservation.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmSignup.resx">
       <DependentUpon>FrmSignup.cs</DependentUpon>
     </EmbeddedResource>
@@ -465,6 +510,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\ban.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\history.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\history %281%29.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

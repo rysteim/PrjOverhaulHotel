@@ -31,7 +31,6 @@
             this.components = new System.ComponentModel.Container();
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.pnlLogin = new Guna.UI2.WinForms.Guna2Panel();
-            this.btnUpload = new Guna.UI2.WinForms.Guna2GradientTileButton();
             this.cmbMembership = new Guna.UI2.WinForms.Guna2ComboBox();
             this.label11 = new System.Windows.Forms.Label();
             this.btnCancel = new Guna.UI2.WinForms.Guna2GradientTileButton();
@@ -59,6 +58,8 @@
             this.label2 = new System.Windows.Forms.Label();
             this.btnSaveGuest = new Guna.UI2.WinForms.Guna2GradientTileButton();
             this.btnAddGuest = new Guna.UI2.WinForms.Guna2GradientTileButton();
+            this.btnUpload = new Guna.UI2.WinForms.Guna2GradientTileButton();
+            this.lblCreated = new System.Windows.Forms.Label();
             this.pnlLogin.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.imgProfile)).BeginInit();
             this.SuspendLayout();
@@ -72,6 +73,7 @@
             this.pnlLogin.BackgroundImage = global::PrjOverhaulHotel.Properties.Resources.Rectangle_13__2_;
             this.pnlLogin.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pnlLogin.BorderColor = System.Drawing.Color.Black;
+            this.pnlLogin.Controls.Add(this.lblCreated);
             this.pnlLogin.Controls.Add(this.cmbMembership);
             this.pnlLogin.Controls.Add(this.label11);
             this.pnlLogin.Controls.Add(this.btnCancel);
@@ -105,29 +107,6 @@
             this.pnlLogin.ShadowDecoration.Parent = this.pnlLogin;
             this.pnlLogin.Size = new System.Drawing.Size(900, 520);
             this.pnlLogin.TabIndex = 26;
-            // 
-            // btnUpload
-            // 
-            this.btnUpload.BackColor = System.Drawing.Color.Transparent;
-            this.btnUpload.BorderRadius = 20;
-            this.btnUpload.CheckedState.Parent = this.btnUpload;
-            this.btnUpload.CustomImages.Parent = this.btnUpload;
-            this.btnUpload.FillColor = System.Drawing.Color.Teal;
-            this.btnUpload.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btnUpload.Font = new System.Drawing.Font("Adobe Fan Heiti Std B", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnUpload.ForeColor = System.Drawing.Color.White;
-            this.btnUpload.HoverState.Parent = this.btnUpload;
-            this.btnUpload.Image = global::PrjOverhaulHotel.Properties.Resources.upload;
-            this.btnUpload.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnUpload.ImageOffset = new System.Drawing.Point(5, 12);
-            this.btnUpload.Location = new System.Drawing.Point(661, 120);
-            this.btnUpload.Name = "btnUpload";
-            this.btnUpload.ShadowDecoration.Parent = this.btnUpload;
-            this.btnUpload.Size = new System.Drawing.Size(180, 40);
-            this.btnUpload.TabIndex = 12;
-            this.btnUpload.Text = "UPLOAD";
-            this.btnUpload.TextOffset = new System.Drawing.Point(7, -11);
-            this.btnUpload.Click += new System.EventHandler(this.btnUpload_Click);
             // 
             // cmbMembership
             // 
@@ -648,6 +627,40 @@
             this.btnAddGuest.TextOffset = new System.Drawing.Point(7, -11);
             this.btnAddGuest.Click += new System.EventHandler(this.btnAdd_Click);
             // 
+            // btnUpload
+            // 
+            this.btnUpload.BackColor = System.Drawing.Color.Transparent;
+            this.btnUpload.BorderRadius = 20;
+            this.btnUpload.CheckedState.Parent = this.btnUpload;
+            this.btnUpload.CustomImages.Parent = this.btnUpload;
+            this.btnUpload.FillColor = System.Drawing.Color.Teal;
+            this.btnUpload.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnUpload.Font = new System.Drawing.Font("Adobe Fan Heiti Std B", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUpload.ForeColor = System.Drawing.Color.White;
+            this.btnUpload.HoverState.Parent = this.btnUpload;
+            this.btnUpload.Image = global::PrjOverhaulHotel.Properties.Resources.upload;
+            this.btnUpload.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnUpload.ImageOffset = new System.Drawing.Point(5, 12);
+            this.btnUpload.Location = new System.Drawing.Point(661, 120);
+            this.btnUpload.Name = "btnUpload";
+            this.btnUpload.ShadowDecoration.Parent = this.btnUpload;
+            this.btnUpload.Size = new System.Drawing.Size(180, 40);
+            this.btnUpload.TabIndex = 12;
+            this.btnUpload.Text = "UPLOAD";
+            this.btnUpload.TextOffset = new System.Drawing.Point(7, -11);
+            this.btnUpload.Click += new System.EventHandler(this.btnUpload_Click);
+            // 
+            // lblCreated
+            // 
+            this.lblCreated.AutoSize = true;
+            this.lblCreated.BackColor = System.Drawing.Color.Transparent;
+            this.lblCreated.Font = new System.Drawing.Font("Adobe Fan Heiti Std B", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCreated.Location = new System.Drawing.Point(10, 493);
+            this.lblCreated.Name = "lblCreated";
+            this.lblCreated.Size = new System.Drawing.Size(130, 16);
+            this.lblCreated.TabIndex = 37;
+            this.lblCreated.Text = "Account Created On:";
+            // 
             // PopUpGuest
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -699,5 +712,6 @@
         private Guna.UI2.WinForms.Guna2ComboBox cmbMembership;
         private System.Windows.Forms.Label label11;
         private Guna.UI2.WinForms.Guna2GradientTileButton btnUpload;
+        private System.Windows.Forms.Label lblCreated;
     }
 }

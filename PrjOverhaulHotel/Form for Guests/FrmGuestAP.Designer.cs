@@ -1,6 +1,6 @@
-﻿namespace PrjOverhaulHotel
+﻿namespace PrjOverhaulHotel.Form_for_Guests
 {
-    partial class FrmStaffAP
+    partial class FrmGuestAP
     {
         /// <summary>
         /// Required designer variable.
@@ -35,7 +35,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle22 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle23 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle24 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmStaffAP));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmGuestAP));
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2CustomGradientPanel1 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
@@ -45,17 +45,12 @@
             this.btnExit = new Guna.UI2.WinForms.Guna2CircleButton();
             this.pnlButtons = new Guna.UI2.WinForms.Guna2Panel();
             this.btnLogout = new Guna.UI2.WinForms.Guna2GradientButton();
-            this.btnRooms = new Guna.UI2.WinForms.Guna2GradientButton();
-            this.btnPersonnel = new Guna.UI2.WinForms.Guna2GradientButton();
             this.btnGuests = new Guna.UI2.WinForms.Guna2GradientButton();
             this.btnAP = new Guna.UI2.WinForms.Guna2GradientButton();
             this.btnReservation = new Guna.UI2.WinForms.Guna2GradientButton();
             this.btnDashboard = new Guna.UI2.WinForms.Guna2GradientButton();
             this.guna2VSeparator2 = new Guna.UI2.WinForms.Guna2VSeparator();
-            this.btnProfile = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
-            this.imgProfile = new Guna.UI2.WinForms.Guna2CirclePictureBox();
-            this.lblName = new System.Windows.Forms.Label();
-            this.lblPosition = new System.Windows.Forms.Label();
+            this.lblTitle = new System.Windows.Forms.Label();
             this.pnlAP = new Guna.UI2.WinForms.Guna2Panel();
             this.dtgPromo = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -95,16 +90,19 @@
             this.label21 = new System.Windows.Forms.Label();
             this.label31 = new System.Windows.Forms.Label();
             this.label32 = new System.Windows.Forms.Label();
-            this.lblTitle = new System.Windows.Forms.Label();
+            this.btnProfile = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
+            this.imgProfile = new Guna.UI2.WinForms.Guna2CirclePictureBox();
+            this.lblName = new System.Windows.Forms.Label();
+            this.lblPosition = new System.Windows.Forms.Label();
             this.guna2CustomGradientPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.pnlButtons.SuspendLayout();
-            this.btnProfile.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.imgProfile)).BeginInit();
             this.pnlAP.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgPromo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtgAddons)).BeginInit();
+            this.btnProfile.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.imgProfile)).BeginInit();
             this.SuspendLayout();
             // 
             // guna2Elipse1
@@ -127,8 +125,7 @@
             this.guna2CustomGradientPanel1.Name = "guna2CustomGradientPanel1";
             this.guna2CustomGradientPanel1.ShadowDecoration.Parent = this.guna2CustomGradientPanel1;
             this.guna2CustomGradientPanel1.Size = new System.Drawing.Size(1000, 45);
-            this.guna2CustomGradientPanel1.TabIndex = 11;
-            this.guna2CustomGradientPanel1.MouseEnter += new System.EventHandler(this.pnlButtons_MouseLeave);
+            this.guna2CustomGradientPanel1.TabIndex = 14;
             // 
             // pictureBox3
             // 
@@ -205,14 +202,11 @@
             this.btnExit.ShadowDecoration.Parent = this.btnExit;
             this.btnExit.Size = new System.Drawing.Size(35, 35);
             this.btnExit.TabIndex = 0;
-            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
             // pnlButtons
             // 
             this.pnlButtons.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(220)))), ((int)(((byte)(195)))));
             this.pnlButtons.Controls.Add(this.btnLogout);
-            this.pnlButtons.Controls.Add(this.btnRooms);
-            this.pnlButtons.Controls.Add(this.btnPersonnel);
             this.pnlButtons.Controls.Add(this.btnGuests);
             this.pnlButtons.Controls.Add(this.btnAP);
             this.pnlButtons.Controls.Add(this.btnReservation);
@@ -222,9 +216,7 @@
             this.pnlButtons.Name = "pnlButtons";
             this.pnlButtons.ShadowDecoration.Parent = this.pnlButtons;
             this.pnlButtons.Size = new System.Drawing.Size(60, 555);
-            this.pnlButtons.TabIndex = 12;
-            this.pnlButtons.MouseEnter += new System.EventHandler(this.button_Move);
-            this.pnlButtons.MouseLeave += new System.EventHandler(this.button_Move);
+            this.pnlButtons.TabIndex = 15;
             // 
             // btnLogout
             // 
@@ -251,64 +243,6 @@
             this.btnLogout.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnLogout.TextOffset = new System.Drawing.Point(30, 0);
             this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
-            this.btnLogout.MouseEnter += new System.EventHandler(this.button_Move);
-            this.btnLogout.MouseLeave += new System.EventHandler(this.button_Move);
-            // 
-            // btnRooms
-            // 
-            this.btnRooms.CheckedState.Parent = this.btnRooms;
-            this.btnRooms.CustomImages.Parent = this.btnRooms;
-            this.btnRooms.FillColor = System.Drawing.Color.White;
-            this.btnRooms.FillColor2 = System.Drawing.Color.White;
-            this.btnRooms.Font = new System.Drawing.Font("Adobe Fan Heiti Std B", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRooms.ForeColor = System.Drawing.Color.Black;
-            this.btnRooms.HoverState.FillColor = System.Drawing.Color.Black;
-            this.btnRooms.HoverState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(154)))), ((int)(((byte)(136)))));
-            this.btnRooms.HoverState.ForeColor = System.Drawing.Color.White;
-            this.btnRooms.HoverState.Image = global::PrjOverhaulHotel.Properties.Resources.bed__1_;
-            this.btnRooms.HoverState.Parent = this.btnRooms;
-            this.btnRooms.Image = global::PrjOverhaulHotel.Properties.Resources.bed;
-            this.btnRooms.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnRooms.ImageOffset = new System.Drawing.Point(10, 0);
-            this.btnRooms.Location = new System.Drawing.Point(0, 225);
-            this.btnRooms.Name = "btnRooms";
-            this.btnRooms.ShadowDecoration.Parent = this.btnRooms;
-            this.btnRooms.Size = new System.Drawing.Size(200, 45);
-            this.btnRooms.TabIndex = 5;
-            this.btnRooms.Text = "Rooms";
-            this.btnRooms.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnRooms.TextOffset = new System.Drawing.Point(30, 1);
-            this.btnRooms.Click += new System.EventHandler(this.btnRooms_Click);
-            this.btnRooms.MouseEnter += new System.EventHandler(this.button_Move);
-            this.btnRooms.MouseLeave += new System.EventHandler(this.button_Move);
-            // 
-            // btnPersonnel
-            // 
-            this.btnPersonnel.CheckedState.Parent = this.btnPersonnel;
-            this.btnPersonnel.CustomImages.Parent = this.btnPersonnel;
-            this.btnPersonnel.FillColor = System.Drawing.Color.White;
-            this.btnPersonnel.FillColor2 = System.Drawing.Color.White;
-            this.btnPersonnel.Font = new System.Drawing.Font("Adobe Fan Heiti Std B", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPersonnel.ForeColor = System.Drawing.Color.Black;
-            this.btnPersonnel.HoverState.FillColor = System.Drawing.Color.Black;
-            this.btnPersonnel.HoverState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(154)))), ((int)(((byte)(136)))));
-            this.btnPersonnel.HoverState.ForeColor = System.Drawing.Color.White;
-            this.btnPersonnel.HoverState.Image = global::PrjOverhaulHotel.Properties.Resources.book_user__1_;
-            this.btnPersonnel.HoverState.Parent = this.btnPersonnel;
-            this.btnPersonnel.Image = global::PrjOverhaulHotel.Properties.Resources.book_user;
-            this.btnPersonnel.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnPersonnel.ImageOffset = new System.Drawing.Point(10, 0);
-            this.btnPersonnel.Location = new System.Drawing.Point(0, 180);
-            this.btnPersonnel.Name = "btnPersonnel";
-            this.btnPersonnel.ShadowDecoration.Parent = this.btnPersonnel;
-            this.btnPersonnel.Size = new System.Drawing.Size(200, 45);
-            this.btnPersonnel.TabIndex = 4;
-            this.btnPersonnel.Text = "Personnel";
-            this.btnPersonnel.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnPersonnel.TextOffset = new System.Drawing.Point(30, 1);
-            this.btnPersonnel.Click += new System.EventHandler(this.btnPersonnel_Click);
-            this.btnPersonnel.MouseEnter += new System.EventHandler(this.button_Move);
-            this.btnPersonnel.MouseLeave += new System.EventHandler(this.button_Move);
             // 
             // btnGuests
             // 
@@ -321,9 +255,9 @@
             this.btnGuests.HoverState.FillColor = System.Drawing.Color.Black;
             this.btnGuests.HoverState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(154)))), ((int)(((byte)(136)))));
             this.btnGuests.HoverState.ForeColor = System.Drawing.Color.White;
-            this.btnGuests.HoverState.Image = global::PrjOverhaulHotel.Properties.Resources.users_round__1_;
+            this.btnGuests.HoverState.Image = global::PrjOverhaulHotel.Properties.Resources.history__1_;
             this.btnGuests.HoverState.Parent = this.btnGuests;
-            this.btnGuests.Image = global::PrjOverhaulHotel.Properties.Resources.users_round;
+            this.btnGuests.Image = global::PrjOverhaulHotel.Properties.Resources.history;
             this.btnGuests.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnGuests.ImageOffset = new System.Drawing.Point(10, 0);
             this.btnGuests.Location = new System.Drawing.Point(0, 135);
@@ -331,12 +265,10 @@
             this.btnGuests.ShadowDecoration.Parent = this.btnGuests;
             this.btnGuests.Size = new System.Drawing.Size(200, 45);
             this.btnGuests.TabIndex = 3;
-            this.btnGuests.Text = "Guests";
+            this.btnGuests.Text = "History";
             this.btnGuests.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnGuests.TextOffset = new System.Drawing.Point(30, 1);
-            this.btnGuests.Click += new System.EventHandler(this.btnGuests_Click);
-            this.btnGuests.MouseEnter += new System.EventHandler(this.button_Move);
-            this.btnGuests.MouseLeave += new System.EventHandler(this.button_Move);
+            this.btnGuests.Click += new System.EventHandler(this.btnHistory_Click);
             // 
             // btnAP
             // 
@@ -362,8 +294,6 @@
             this.btnAP.Text = "Add-ons / Promos";
             this.btnAP.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnAP.TextOffset = new System.Drawing.Point(30, 1);
-            this.btnAP.MouseEnter += new System.EventHandler(this.button_Move);
-            this.btnAP.MouseLeave += new System.EventHandler(this.button_Move);
             // 
             // btnReservation
             // 
@@ -390,8 +320,6 @@
             this.btnReservation.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnReservation.TextOffset = new System.Drawing.Point(30, 1);
             this.btnReservation.Click += new System.EventHandler(this.btnReservation_Click);
-            this.btnReservation.MouseEnter += new System.EventHandler(this.button_Move);
-            this.btnReservation.MouseLeave += new System.EventHandler(this.button_Move);
             // 
             // btnDashboard
             // 
@@ -418,8 +346,6 @@
             this.btnDashboard.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnDashboard.TextOffset = new System.Drawing.Point(30, 1);
             this.btnDashboard.Click += new System.EventHandler(this.btnDashboard_Click);
-            this.btnDashboard.MouseEnter += new System.EventHandler(this.button_Move);
-            this.btnDashboard.MouseLeave += new System.EventHandler(this.button_Move);
             // 
             // guna2VSeparator2
             // 
@@ -430,68 +356,17 @@
             this.guna2VSeparator2.Size = new System.Drawing.Size(10, 555);
             this.guna2VSeparator2.TabIndex = 8;
             // 
-            // btnProfile
+            // lblTitle
             // 
-            this.btnProfile.BorderColor = System.Drawing.Color.Black;
-            this.btnProfile.BorderRadius = 15;
-            this.btnProfile.BorderThickness = 2;
-            this.btnProfile.Controls.Add(this.imgProfile);
-            this.btnProfile.Controls.Add(this.lblName);
-            this.btnProfile.Controls.Add(this.lblPosition);
-            this.btnProfile.Location = new System.Drawing.Point(792, 9);
-            this.btnProfile.Name = "btnProfile";
-            this.btnProfile.ShadowDecoration.Parent = this.btnProfile;
-            this.btnProfile.Size = new System.Drawing.Size(200, 102);
-            this.btnProfile.TabIndex = 13;
-            this.btnProfile.Click += new System.EventHandler(this.btnProfile_Click);
-            this.btnProfile.MouseEnter += new System.EventHandler(this.btnProfile_MouseEnter);
-            this.btnProfile.MouseLeave += new System.EventHandler(this.btnProfile_MouseLeave);
-            // 
-            // imgProfile
-            // 
-            this.imgProfile.BackColor = System.Drawing.Color.Transparent;
-            this.imgProfile.Image = global::PrjOverhaulHotel.Properties.Resources.rb_8551;
-            this.imgProfile.Location = new System.Drawing.Point(12, 42);
-            this.imgProfile.Name = "imgProfile";
-            this.imgProfile.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.imgProfile.ShadowDecoration.Parent = this.imgProfile;
-            this.imgProfile.Size = new System.Drawing.Size(50, 50);
-            this.imgProfile.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.imgProfile.TabIndex = 13;
-            this.imgProfile.TabStop = false;
-            this.imgProfile.Click += new System.EventHandler(this.btnProfile_Click);
-            this.imgProfile.MouseEnter += new System.EventHandler(this.btnProfile_MouseEnter);
-            this.imgProfile.MouseLeave += new System.EventHandler(this.btnProfile_MouseLeave);
-            // 
-            // lblName
-            // 
-            this.lblName.BackColor = System.Drawing.Color.Transparent;
-            this.lblName.Font = new System.Drawing.Font("Microsoft New Tai Lue", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblName.ForeColor = System.Drawing.Color.Black;
-            this.lblName.Location = new System.Drawing.Point(64, 47);
-            this.lblName.Name = "lblName";
-            this.lblName.Size = new System.Drawing.Size(134, 23);
-            this.lblName.TabIndex = 0;
-            this.lblName.Text = "Sample Name";
-            this.lblName.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.lblName.Click += new System.EventHandler(this.btnProfile_Click);
-            this.lblName.MouseEnter += new System.EventHandler(this.btnProfile_MouseEnter);
-            this.lblName.MouseLeave += new System.EventHandler(this.btnProfile_MouseLeave);
-            // 
-            // lblPosition
-            // 
-            this.lblPosition.BackColor = System.Drawing.Color.Transparent;
-            this.lblPosition.Font = new System.Drawing.Font("Microsoft New Tai Lue", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPosition.ForeColor = System.Drawing.Color.Black;
-            this.lblPosition.Location = new System.Drawing.Point(65, 65);
-            this.lblPosition.Name = "lblPosition";
-            this.lblPosition.Size = new System.Drawing.Size(134, 23);
-            this.lblPosition.TabIndex = 1;
-            this.lblPosition.Text = "Sample Position";
-            this.lblPosition.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.lblPosition.Click += new System.EventHandler(this.btnProfile_Click);
-            this.lblPosition.MouseEnter += new System.EventHandler(this.btnProfile_MouseEnter);
-            this.lblPosition.MouseLeave += new System.EventHandler(this.btnProfile_MouseLeave);
+            this.lblTitle.BackColor = System.Drawing.Color.Transparent;
+            this.lblTitle.Font = new System.Drawing.Font("Microsoft New Tai Lue", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitle.ForeColor = System.Drawing.Color.White;
+            this.lblTitle.Location = new System.Drawing.Point(331, 59);
+            this.lblTitle.Name = "lblTitle";
+            this.lblTitle.Size = new System.Drawing.Size(397, 45);
+            this.lblTitle.TabIndex = 20;
+            this.lblTitle.Text = "Add-ons / Promos";
+            this.lblTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // pnlAP
             // 
@@ -532,8 +407,7 @@
             this.pnlAP.Name = "pnlAP";
             this.pnlAP.ShadowDecoration.Parent = this.pnlAP;
             this.pnlAP.Size = new System.Drawing.Size(927, 501);
-            this.pnlAP.TabIndex = 16;
-            this.pnlAP.MouseEnter += new System.EventHandler(this.pnlButtons_MouseLeave);
+            this.pnlAP.TabIndex = 21;
             // 
             // dtgPromo
             // 
@@ -579,7 +453,6 @@
             this.dtgPromo.RowsDefaultCellStyle = dataGridViewCellStyle21;
             this.dtgPromo.Size = new System.Drawing.Size(432, 169);
             this.dtgPromo.TabIndex = 58;
-            this.dtgPromo.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgPromo_CellClick);
             // 
             // dataGridViewTextBoxColumn1
             // 
@@ -651,7 +524,6 @@
             this.dtgAddons.RowsDefaultCellStyle = dataGridViewCellStyle24;
             this.dtgAddons.Size = new System.Drawing.Size(432, 169);
             this.dtgAddons.TabIndex = 57;
-            this.dtgAddons.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgAddons_CellClick);
             // 
             // Column1
             // 
@@ -690,7 +562,6 @@
             this.lblTotalPromo.TabIndex = 56;
             this.lblTotalPromo.Text = "Total Promos: 0";
             this.lblTotalPromo.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.lblTotalPromo.MouseEnter += new System.EventHandler(this.pnlButtons_MouseLeave);
             // 
             // lblTotalAddon
             // 
@@ -703,7 +574,6 @@
             this.lblTotalAddon.TabIndex = 55;
             this.lblTotalAddon.Text = "Total Add-ons: 0";
             this.lblTotalAddon.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.lblTotalAddon.MouseEnter += new System.EventHandler(this.pnlButtons_MouseLeave);
             // 
             // btnPromoDelete
             // 
@@ -725,7 +595,6 @@
             this.btnPromoDelete.TabIndex = 54;
             this.btnPromoDelete.Text = "DELETE";
             this.btnPromoDelete.TextOffset = new System.Drawing.Point(7, -11);
-            this.btnPromoDelete.MouseEnter += new System.EventHandler(this.pnlButtons_MouseLeave);
             // 
             // btnPromoManage
             // 
@@ -747,8 +616,6 @@
             this.btnPromoManage.TabIndex = 53;
             this.btnPromoManage.Text = "MANAGE";
             this.btnPromoManage.TextOffset = new System.Drawing.Point(7, -11);
-            this.btnPromoManage.Click += new System.EventHandler(this.btnPromoManage_Click);
-            this.btnPromoManage.MouseEnter += new System.EventHandler(this.pnlButtons_MouseLeave);
             // 
             // btnPromoAdd
             // 
@@ -770,8 +637,6 @@
             this.btnPromoAdd.TabIndex = 52;
             this.btnPromoAdd.Text = "ADD";
             this.btnPromoAdd.TextOffset = new System.Drawing.Point(7, -11);
-            this.btnPromoAdd.Click += new System.EventHandler(this.btnPromoAdd_Click);
-            this.btnPromoAdd.MouseEnter += new System.EventHandler(this.pnlButtons_MouseLeave);
             // 
             // btnAddonDelete
             // 
@@ -793,7 +658,6 @@
             this.btnAddonDelete.TabIndex = 51;
             this.btnAddonDelete.Text = "DELETE";
             this.btnAddonDelete.TextOffset = new System.Drawing.Point(7, -11);
-            this.btnAddonDelete.MouseEnter += new System.EventHandler(this.pnlButtons_MouseLeave);
             // 
             // btnAddonManage
             // 
@@ -815,8 +679,6 @@
             this.btnAddonManage.TabIndex = 50;
             this.btnAddonManage.Text = "MANAGE";
             this.btnAddonManage.TextOffset = new System.Drawing.Point(7, -11);
-            this.btnAddonManage.Click += new System.EventHandler(this.btnAddonManage_Click);
-            this.btnAddonManage.MouseEnter += new System.EventHandler(this.pnlButtons_MouseLeave);
             // 
             // btnAddonAdd
             // 
@@ -838,8 +700,6 @@
             this.btnAddonAdd.TabIndex = 49;
             this.btnAddonAdd.Text = "ADD";
             this.btnAddonAdd.TextOffset = new System.Drawing.Point(7, -11);
-            this.btnAddonAdd.Click += new System.EventHandler(this.btnAddonAdd_Click);
-            this.btnAddonAdd.MouseEnter += new System.EventHandler(this.pnlButtons_MouseLeave);
             // 
             // guna2VSeparator1
             // 
@@ -849,7 +709,6 @@
             this.guna2VSeparator1.Name = "guna2VSeparator1";
             this.guna2VSeparator1.Size = new System.Drawing.Size(10, 440);
             this.guna2VSeparator1.TabIndex = 0;
-            this.guna2VSeparator1.MouseEnter += new System.EventHandler(this.pnlButtons_MouseLeave);
             // 
             // guna2Separator11
             // 
@@ -859,7 +718,6 @@
             this.guna2Separator11.Name = "guna2Separator11";
             this.guna2Separator11.Size = new System.Drawing.Size(893, 10);
             this.guna2Separator11.TabIndex = 48;
-            this.guna2Separator11.MouseEnter += new System.EventHandler(this.pnlButtons_MouseLeave);
             // 
             // txtSearchPromo
             // 
@@ -889,8 +747,6 @@
             this.txtSearchPromo.Size = new System.Drawing.Size(432, 36);
             this.txtSearchPromo.TabIndex = 43;
             this.txtSearchPromo.TextOffset = new System.Drawing.Point(10, 0);
-            this.txtSearchPromo.TextChanged += new System.EventHandler(this.txtSearchPromo_TextChanged);
-            this.txtSearchPromo.MouseEnter += new System.EventHandler(this.pnlButtons_MouseLeave);
             // 
             // txtSearchAddon
             // 
@@ -920,8 +776,6 @@
             this.txtSearchAddon.Size = new System.Drawing.Size(432, 36);
             this.txtSearchAddon.TabIndex = 42;
             this.txtSearchAddon.TextOffset = new System.Drawing.Point(10, 0);
-            this.txtSearchAddon.TextChanged += new System.EventHandler(this.txtSearchAddon_TextChanged);
-            this.txtSearchAddon.MouseEnter += new System.EventHandler(this.pnlButtons_MouseLeave);
             // 
             // lblPromoDescription
             // 
@@ -932,7 +786,6 @@
             this.lblPromoDescription.Name = "lblPromoDescription";
             this.lblPromoDescription.Size = new System.Drawing.Size(331, 54);
             this.lblPromoDescription.TabIndex = 41;
-            this.lblPromoDescription.MouseEnter += new System.EventHandler(this.pnlButtons_MouseLeave);
             // 
             // txtPromoDiscount
             // 
@@ -961,8 +814,6 @@
             this.txtPromoDiscount.Size = new System.Drawing.Size(114, 36);
             this.txtPromoDiscount.TabIndex = 40;
             this.txtPromoDiscount.TextOffset = new System.Drawing.Point(10, 0);
-            this.txtPromoDiscount.MouseEnter += new System.EventHandler(this.pnlButtons_MouseLeave);
-            this.txtPromoDiscount.MouseHover += new System.EventHandler(this.pnlButtons_MouseLeave);
             // 
             // txtPromoName
             // 
@@ -991,8 +842,6 @@
             this.txtPromoName.Size = new System.Drawing.Size(310, 36);
             this.txtPromoName.TabIndex = 36;
             this.txtPromoName.TextOffset = new System.Drawing.Point(10, 0);
-            this.txtPromoName.MouseEnter += new System.EventHandler(this.pnlButtons_MouseLeave);
-            this.txtPromoName.MouseHover += new System.EventHandler(this.pnlButtons_MouseLeave);
             // 
             // label28
             // 
@@ -1003,7 +852,6 @@
             this.label28.Size = new System.Drawing.Size(89, 16);
             this.label28.TabIndex = 37;
             this.label28.Text = "Promo Name:";
-            this.label28.MouseEnter += new System.EventHandler(this.pnlButtons_MouseLeave);
             // 
             // label29
             // 
@@ -1014,7 +862,6 @@
             this.label29.Size = new System.Drawing.Size(78, 16);
             this.label29.TabIndex = 38;
             this.label29.Text = "Description:";
-            this.label29.MouseEnter += new System.EventHandler(this.pnlButtons_MouseLeave);
             // 
             // label30
             // 
@@ -1025,7 +872,6 @@
             this.label30.Size = new System.Drawing.Size(107, 16);
             this.label30.TabIndex = 39;
             this.label30.Text = "Promo Discount:";
-            this.label30.MouseEnter += new System.EventHandler(this.pnlButtons_MouseLeave);
             // 
             // lblAddonDescription
             // 
@@ -1036,7 +882,6 @@
             this.lblAddonDescription.Name = "lblAddonDescription";
             this.lblAddonDescription.Size = new System.Drawing.Size(331, 54);
             this.lblAddonDescription.TabIndex = 35;
-            this.lblAddonDescription.MouseEnter += new System.EventHandler(this.pnlButtons_MouseLeave);
             // 
             // txtAddonPrice
             // 
@@ -1065,8 +910,6 @@
             this.txtAddonPrice.Size = new System.Drawing.Size(114, 36);
             this.txtAddonPrice.TabIndex = 34;
             this.txtAddonPrice.TextOffset = new System.Drawing.Point(10, 0);
-            this.txtAddonPrice.MouseEnter += new System.EventHandler(this.pnlButtons_MouseLeave);
-            this.txtAddonPrice.MouseHover += new System.EventHandler(this.pnlButtons_MouseLeave);
             // 
             // txtAddonName
             // 
@@ -1095,8 +938,6 @@
             this.txtAddonName.Size = new System.Drawing.Size(310, 36);
             this.txtAddonName.TabIndex = 28;
             this.txtAddonName.TextOffset = new System.Drawing.Point(10, 0);
-            this.txtAddonName.MouseEnter += new System.EventHandler(this.pnlButtons_MouseLeave);
-            this.txtAddonName.MouseHover += new System.EventHandler(this.pnlButtons_MouseLeave);
             // 
             // label23
             // 
@@ -1107,7 +948,6 @@
             this.label23.Size = new System.Drawing.Size(93, 16);
             this.label23.TabIndex = 31;
             this.label23.Text = "Add-on Name:";
-            this.label23.MouseEnter += new System.EventHandler(this.pnlButtons_MouseLeave);
             // 
             // label24
             // 
@@ -1118,7 +958,6 @@
             this.label24.Size = new System.Drawing.Size(78, 16);
             this.label24.TabIndex = 32;
             this.label24.Text = "Description:";
-            this.label24.MouseEnter += new System.EventHandler(this.pnlButtons_MouseLeave);
             // 
             // label25
             // 
@@ -1129,7 +968,6 @@
             this.label25.Size = new System.Drawing.Size(87, 16);
             this.label25.TabIndex = 33;
             this.label25.Text = "Add-on Price:";
-            this.label25.MouseEnter += new System.EventHandler(this.pnlButtons_MouseLeave);
             // 
             // label22
             // 
@@ -1140,7 +978,6 @@
             this.label22.TabIndex = 2;
             this.label22.Text = "Promos";
             this.label22.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.label22.MouseEnter += new System.EventHandler(this.pnlButtons_MouseLeave);
             // 
             // label21
             // 
@@ -1151,7 +988,6 @@
             this.label21.TabIndex = 1;
             this.label21.Text = "Add-ons";
             this.label21.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.label21.MouseEnter += new System.EventHandler(this.pnlButtons_MouseLeave);
             // 
             // label31
             // 
@@ -1162,7 +998,6 @@
             this.label31.Size = new System.Drawing.Size(93, 16);
             this.label31.TabIndex = 44;
             this.label31.Text = "Add-on Name:";
-            this.label31.MouseEnter += new System.EventHandler(this.pnlButtons_MouseLeave);
             // 
             // label32
             // 
@@ -1173,49 +1008,83 @@
             this.label32.Size = new System.Drawing.Size(89, 16);
             this.label32.TabIndex = 45;
             this.label32.Text = "Promo Name:";
-            this.label32.MouseEnter += new System.EventHandler(this.pnlButtons_MouseLeave);
             // 
-            // lblTitle
+            // btnProfile
             // 
-            this.lblTitle.BackColor = System.Drawing.Color.Transparent;
-            this.lblTitle.Font = new System.Drawing.Font("Microsoft New Tai Lue", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTitle.ForeColor = System.Drawing.Color.White;
-            this.lblTitle.Location = new System.Drawing.Point(331, 59);
-            this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(397, 45);
-            this.lblTitle.TabIndex = 19;
-            this.lblTitle.Text = "Add-ons / Promos";
-            this.lblTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.lblTitle.MouseEnter += new System.EventHandler(this.btnProfile_MouseEnter);
-            this.lblTitle.MouseLeave += new System.EventHandler(this.btnProfile_MouseLeave);
+            this.btnProfile.BorderColor = System.Drawing.Color.Black;
+            this.btnProfile.BorderRadius = 15;
+            this.btnProfile.BorderThickness = 2;
+            this.btnProfile.Controls.Add(this.imgProfile);
+            this.btnProfile.Controls.Add(this.lblName);
+            this.btnProfile.Controls.Add(this.lblPosition);
+            this.btnProfile.Location = new System.Drawing.Point(792, 9);
+            this.btnProfile.Name = "btnProfile";
+            this.btnProfile.ShadowDecoration.Parent = this.btnProfile;
+            this.btnProfile.Size = new System.Drawing.Size(200, 102);
+            this.btnProfile.TabIndex = 22;
             // 
-            // FrmStaffAP
+            // imgProfile
+            // 
+            this.imgProfile.BackColor = System.Drawing.Color.Transparent;
+            this.imgProfile.Image = global::PrjOverhaulHotel.Properties.Resources.rb_8551;
+            this.imgProfile.Location = new System.Drawing.Point(12, 42);
+            this.imgProfile.Name = "imgProfile";
+            this.imgProfile.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.imgProfile.ShadowDecoration.Parent = this.imgProfile;
+            this.imgProfile.Size = new System.Drawing.Size(50, 50);
+            this.imgProfile.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.imgProfile.TabIndex = 13;
+            this.imgProfile.TabStop = false;
+            // 
+            // lblName
+            // 
+            this.lblName.BackColor = System.Drawing.Color.Transparent;
+            this.lblName.Font = new System.Drawing.Font("Microsoft New Tai Lue", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblName.ForeColor = System.Drawing.Color.Black;
+            this.lblName.Location = new System.Drawing.Point(64, 47);
+            this.lblName.Name = "lblName";
+            this.lblName.Size = new System.Drawing.Size(134, 23);
+            this.lblName.TabIndex = 0;
+            this.lblName.Text = "Sample Name";
+            this.lblName.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // lblPosition
+            // 
+            this.lblPosition.BackColor = System.Drawing.Color.Transparent;
+            this.lblPosition.Font = new System.Drawing.Font("Microsoft New Tai Lue", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPosition.ForeColor = System.Drawing.Color.Black;
+            this.lblPosition.Location = new System.Drawing.Point(65, 65);
+            this.lblPosition.Name = "lblPosition";
+            this.lblPosition.Size = new System.Drawing.Size(134, 23);
+            this.lblPosition.TabIndex = 1;
+            this.lblPosition.Text = "Sample Position";
+            this.lblPosition.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // FrmGuestAP
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(154)))), ((int)(((byte)(136)))));
             this.ClientSize = new System.Drawing.Size(1000, 600);
+            this.Controls.Add(this.pnlAP);
             this.Controls.Add(this.lblTitle);
             this.Controls.Add(this.pnlButtons);
             this.Controls.Add(this.guna2CustomGradientPanel1);
             this.Controls.Add(this.btnProfile);
-            this.Controls.Add(this.pnlAP);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "FrmStaffAP";
+            this.Name = "FrmGuestAP";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FrmStaffAP";
-            this.Load += new System.EventHandler(this.FrmStaffAP_Load);
-            this.MouseEnter += new System.EventHandler(this.pnlButtons_MouseLeave);
+            this.Text = "FrmGuestAP";
             this.guna2CustomGradientPanel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.pnlButtons.ResumeLayout(false);
-            this.btnProfile.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.imgProfile)).EndInit();
             this.pnlAP.ResumeLayout(false);
             this.pnlAP.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgPromo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtgAddons)).EndInit();
+            this.btnProfile.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.imgProfile)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1232,18 +1101,23 @@
         private Guna.UI2.WinForms.Guna2CircleButton btnExit;
         private Guna.UI2.WinForms.Guna2Panel pnlButtons;
         private Guna.UI2.WinForms.Guna2GradientButton btnLogout;
-        private Guna.UI2.WinForms.Guna2GradientButton btnRooms;
-        private Guna.UI2.WinForms.Guna2GradientButton btnPersonnel;
         private Guna.UI2.WinForms.Guna2GradientButton btnGuests;
         private Guna.UI2.WinForms.Guna2GradientButton btnAP;
         private Guna.UI2.WinForms.Guna2GradientButton btnReservation;
         private Guna.UI2.WinForms.Guna2GradientButton btnDashboard;
         private Guna.UI2.WinForms.Guna2VSeparator guna2VSeparator2;
-        private Guna.UI2.WinForms.Guna2CustomGradientPanel btnProfile;
-        private Guna.UI2.WinForms.Guna2CirclePictureBox imgProfile;
-        private System.Windows.Forms.Label lblName;
-        private System.Windows.Forms.Label lblPosition;
+        private System.Windows.Forms.Label lblTitle;
         private Guna.UI2.WinForms.Guna2Panel pnlAP;
+        private System.Windows.Forms.DataGridView dtgPromo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
+        private System.Windows.Forms.DataGridView dtgAddons;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.Label lblTotalPromo;
         private System.Windows.Forms.Label lblTotalAddon;
         private Guna.UI2.WinForms.Guna2GradientTileButton btnPromoDelete;
@@ -1272,16 +1146,9 @@
         private System.Windows.Forms.Label label21;
         private System.Windows.Forms.Label label31;
         private System.Windows.Forms.Label label32;
-        private System.Windows.Forms.Label lblTitle;
-        private System.Windows.Forms.DataGridView dtgPromo;
-        private System.Windows.Forms.DataGridView dtgAddons;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
+        private Guna.UI2.WinForms.Guna2CustomGradientPanel btnProfile;
+        private Guna.UI2.WinForms.Guna2CirclePictureBox imgProfile;
+        private System.Windows.Forms.Label lblName;
+        private System.Windows.Forms.Label lblPosition;
     }
 }

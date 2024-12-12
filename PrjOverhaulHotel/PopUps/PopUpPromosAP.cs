@@ -12,9 +12,26 @@ namespace PrjOverhaulHotel.PopUps
 {
     public partial class PopUpPromosAP : Form
     {
+        int promoID;
         public PopUpPromosAP()
         {
             InitializeComponent();
+            this.promoID = -1;
+        }
+        public PopUpPromosAP(int promoID)
+        {
+            InitializeComponent();
+            this.promoID = promoID;
+        }
+
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void btnAddPromo_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

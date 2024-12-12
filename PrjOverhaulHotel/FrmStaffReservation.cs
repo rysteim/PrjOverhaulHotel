@@ -26,6 +26,7 @@ namespace PrjOverhaulHotel
             maximizeButtons(); 
             displayProfile();
             displayReservations();
+            displayImage();
         }
 
         private void btnExit_Click(object sender, EventArgs e)
@@ -146,23 +147,39 @@ namespace PrjOverhaulHotel
             }
         }
 
+        private void displayImage()
+        {
+            if (dtgReservations.Rows.Count > 0)
+            {
+                string imagePath = dtgReservations.CurrentRow.Cells[12].Value.ToString();
+                if (!string.IsNullOrEmpty(imagePath) && System.IO.File.Exists(imagePath))
+                {
+                    picInfo.Image = Image.FromFile(imagePath);
+                }
+                else
+                {
+                    picInfo.Image = Properties.Resources.rb_8551;
+                }
+            }
+        }
+
         private void displayReservations()
         {
             GlobalProcedure.procReservationData();
             if (GlobalProcedure.datHotel.Rows.Count > 0)
             {
                 dtgReservations.Rows.Clear();
-                lblTotal.Text = GlobalProcedure.datHotel.Rows.Count.ToString();
+                lblTotal.Text = "Total Reservations: " + GlobalProcedure.datHotel.Rows.Count.ToString();
                 foreach (DataRow row1 in GlobalProcedure.datHotel.Rows)
                 {
                     dtgReservations.Rows.Add(
                         row1["RESERVATION ID"].ToString(),
                         row1["FULL NAME"].ToString(),
+                        row1["RESERVATION STATUS"].ToString(),
                         row1["TOTAL ROOMS"].ToString(),
                         row1["PROMO NAME"].ToString(),
                         row1["TOTAL ADDONS"].ToString(),
                         row1["INVOICE"].ToString(),
-                        row1["RESERVATION STATUS"].ToString(),
                         Convert.ToDateTime(row1["BOOKING DATE"].ToString()).ToString("yyyy-MM-dd"),
                         row1["TOTAL DAYS"].ToString(),
                         $"₱{Convert.ToDouble(row1["TOTAL AMOUNT"].ToString()):F2}",

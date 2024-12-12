@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2CustomGradientPanel1 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
@@ -53,6 +53,8 @@
             this.dtgPersonnel = new System.Windows.Forms.DataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column15 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column16 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -77,8 +79,8 @@
             this.cmbRole = new Guna.UI2.WinForms.Guna2ComboBox();
             this.txtName = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2Separator3 = new Guna.UI2.WinForms.Guna2Separator();
-            this.guna2GradientTileButton1 = new Guna.UI2.WinForms.Guna2GradientTileButton();
-            this.guna2GradientTileButton2 = new Guna.UI2.WinForms.Guna2GradientTileButton();
+            this.btnManage = new Guna.UI2.WinForms.Guna2GradientTileButton();
+            this.btnAdd = new Guna.UI2.WinForms.Guna2GradientTileButton();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -87,6 +89,7 @@
             this.lblName = new System.Windows.Forms.Label();
             this.lblPosition = new System.Windows.Forms.Label();
             this.lblTitle = new System.Windows.Forms.Label();
+            this.btnDelete = new Guna.UI2.WinForms.Guna2GradientTileButton();
             this.guna2CustomGradientPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -430,6 +433,7 @@
             this.pnlPersonnel.BackColor = System.Drawing.Color.Transparent;
             this.pnlPersonnel.BackgroundImage = global::PrjOverhaulHotel.Properties.Resources.Group_282;
             this.pnlPersonnel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pnlPersonnel.Controls.Add(this.btnDelete);
             this.pnlPersonnel.Controls.Add(this.imgSelect);
             this.pnlPersonnel.Controls.Add(this.dtgPersonnel);
             this.pnlPersonnel.Controls.Add(this.guna2GradientPanel2);
@@ -438,8 +442,8 @@
             this.pnlPersonnel.Controls.Add(this.cmbRole);
             this.pnlPersonnel.Controls.Add(this.txtName);
             this.pnlPersonnel.Controls.Add(this.guna2Separator3);
-            this.pnlPersonnel.Controls.Add(this.guna2GradientTileButton1);
-            this.pnlPersonnel.Controls.Add(this.guna2GradientTileButton2);
+            this.pnlPersonnel.Controls.Add(this.btnManage);
+            this.pnlPersonnel.Controls.Add(this.btnAdd);
             this.pnlPersonnel.Controls.Add(this.label2);
             this.pnlPersonnel.Controls.Add(this.label3);
             this.pnlPersonnel.Controls.Add(this.label4);
@@ -469,18 +473,20 @@
             this.dtgPersonnel.AllowUserToDeleteRows = false;
             this.dtgPersonnel.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
             this.dtgPersonnel.BackgroundColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft New Tai Lue", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(135)))), ((int)(((byte)(97)))));
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dtgPersonnel.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle10.BackColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle10.Font = new System.Drawing.Font("Microsoft New Tai Lue", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle10.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(135)))), ((int)(((byte)(97)))));
+            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dtgPersonnel.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle10;
             this.dtgPersonnel.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtgPersonnel.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
             this.Column2,
+            this.Column15,
+            this.Column16,
             this.Column7,
             this.Column9,
             this.Column11,
@@ -500,20 +506,20 @@
             this.dtgPersonnel.Name = "dtgPersonnel";
             this.dtgPersonnel.ReadOnly = true;
             this.dtgPersonnel.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft New Tai Lue", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(135)))), ((int)(((byte)(97)))));
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dtgPersonnel.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft New Tai Lue", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(135)))), ((int)(((byte)(97)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
-            this.dtgPersonnel.RowsDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle11.BackColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle11.Font = new System.Drawing.Font("Microsoft New Tai Lue", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle11.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(135)))), ((int)(((byte)(97)))));
+            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dtgPersonnel.RowHeadersDefaultCellStyle = dataGridViewCellStyle11;
+            dataGridViewCellStyle12.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle12.Font = new System.Drawing.Font("Microsoft New Tai Lue", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle12.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(135)))), ((int)(((byte)(97)))));
+            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.Color.White;
+            this.dtgPersonnel.RowsDefaultCellStyle = dataGridViewCellStyle12;
             this.dtgPersonnel.Size = new System.Drawing.Size(660, 218);
             this.dtgPersonnel.TabIndex = 38;
             this.dtgPersonnel.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgPersonnel_CellClick);
@@ -528,10 +534,24 @@
             // 
             // Column2
             // 
-            this.Column2.HeaderText = "Full Name";
+            this.Column2.HeaderText = "First Name";
             this.Column2.Name = "Column2";
             this.Column2.ReadOnly = true;
             this.Column2.Width = 150;
+            // 
+            // Column15
+            // 
+            this.Column15.HeaderText = "Middle Name";
+            this.Column15.Name = "Column15";
+            this.Column15.ReadOnly = true;
+            this.Column15.Width = 150;
+            // 
+            // Column16
+            // 
+            this.Column16.HeaderText = "Last Name";
+            this.Column16.Name = "Column16";
+            this.Column16.ReadOnly = true;
+            this.Column16.Width = 150;
             // 
             // Column7
             // 
@@ -796,49 +816,51 @@
             this.guna2Separator3.TabIndex = 19;
             this.guna2Separator3.MouseEnter += new System.EventHandler(this.pnlButtons_MouseLeave);
             // 
-            // guna2GradientTileButton1
+            // btnManage
             // 
-            this.guna2GradientTileButton1.BorderRadius = 15;
-            this.guna2GradientTileButton1.CheckedState.Parent = this.guna2GradientTileButton1;
-            this.guna2GradientTileButton1.CustomImages.Parent = this.guna2GradientTileButton1;
-            this.guna2GradientTileButton1.FillColor = System.Drawing.Color.Black;
-            this.guna2GradientTileButton1.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.guna2GradientTileButton1.Font = new System.Drawing.Font("Adobe Fan Heiti Std B", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2GradientTileButton1.ForeColor = System.Drawing.Color.White;
-            this.guna2GradientTileButton1.HoverState.Parent = this.guna2GradientTileButton1;
-            this.guna2GradientTileButton1.Image = global::PrjOverhaulHotel.Properties.Resources.bolt;
-            this.guna2GradientTileButton1.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.guna2GradientTileButton1.ImageOffset = new System.Drawing.Point(5, 12);
-            this.guna2GradientTileButton1.Location = new System.Drawing.Point(433, 432);
-            this.guna2GradientTileButton1.Name = "guna2GradientTileButton1";
-            this.guna2GradientTileButton1.ShadowDecoration.Parent = this.guna2GradientTileButton1;
-            this.guna2GradientTileButton1.Size = new System.Drawing.Size(247, 32);
-            this.guna2GradientTileButton1.TabIndex = 12;
-            this.guna2GradientTileButton1.Text = "MANAGE PERSONNEL";
-            this.guna2GradientTileButton1.TextOffset = new System.Drawing.Point(7, -11);
-            this.guna2GradientTileButton1.MouseEnter += new System.EventHandler(this.pnlButtons_MouseLeave);
+            this.btnManage.BorderRadius = 15;
+            this.btnManage.CheckedState.Parent = this.btnManage;
+            this.btnManage.CustomImages.Parent = this.btnManage;
+            this.btnManage.FillColor = System.Drawing.Color.Black;
+            this.btnManage.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnManage.Font = new System.Drawing.Font("Adobe Fan Heiti Std B", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnManage.ForeColor = System.Drawing.Color.White;
+            this.btnManage.HoverState.Parent = this.btnManage;
+            this.btnManage.Image = global::PrjOverhaulHotel.Properties.Resources.bolt;
+            this.btnManage.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnManage.ImageOffset = new System.Drawing.Point(5, 12);
+            this.btnManage.Location = new System.Drawing.Point(433, 432);
+            this.btnManage.Name = "btnManage";
+            this.btnManage.ShadowDecoration.Parent = this.btnManage;
+            this.btnManage.Size = new System.Drawing.Size(247, 32);
+            this.btnManage.TabIndex = 12;
+            this.btnManage.Text = "MANAGE PERSONNEL";
+            this.btnManage.TextOffset = new System.Drawing.Point(7, -11);
+            this.btnManage.Click += new System.EventHandler(this.btnManage_Click);
+            this.btnManage.MouseEnter += new System.EventHandler(this.pnlButtons_MouseLeave);
             // 
-            // guna2GradientTileButton2
+            // btnAdd
             // 
-            this.guna2GradientTileButton2.BorderRadius = 15;
-            this.guna2GradientTileButton2.CheckedState.Parent = this.guna2GradientTileButton2;
-            this.guna2GradientTileButton2.CustomImages.Parent = this.guna2GradientTileButton2;
-            this.guna2GradientTileButton2.FillColor = System.Drawing.Color.Black;
-            this.guna2GradientTileButton2.FillColor2 = System.Drawing.Color.Teal;
-            this.guna2GradientTileButton2.Font = new System.Drawing.Font("Adobe Fan Heiti Std B", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2GradientTileButton2.ForeColor = System.Drawing.Color.White;
-            this.guna2GradientTileButton2.HoverState.Parent = this.guna2GradientTileButton2;
-            this.guna2GradientTileButton2.Image = global::PrjOverhaulHotel.Properties.Resources.plus;
-            this.guna2GradientTileButton2.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.guna2GradientTileButton2.ImageOffset = new System.Drawing.Point(5, 12);
-            this.guna2GradientTileButton2.Location = new System.Drawing.Point(701, 432);
-            this.guna2GradientTileButton2.Name = "guna2GradientTileButton2";
-            this.guna2GradientTileButton2.ShadowDecoration.Parent = this.guna2GradientTileButton2;
-            this.guna2GradientTileButton2.Size = new System.Drawing.Size(192, 32);
-            this.guna2GradientTileButton2.TabIndex = 11;
-            this.guna2GradientTileButton2.Text = "ADD PERSONNEL";
-            this.guna2GradientTileButton2.TextOffset = new System.Drawing.Point(7, -11);
-            this.guna2GradientTileButton2.MouseEnter += new System.EventHandler(this.pnlButtons_MouseLeave);
+            this.btnAdd.BorderRadius = 15;
+            this.btnAdd.CheckedState.Parent = this.btnAdd;
+            this.btnAdd.CustomImages.Parent = this.btnAdd;
+            this.btnAdd.FillColor = System.Drawing.Color.Black;
+            this.btnAdd.FillColor2 = System.Drawing.Color.Teal;
+            this.btnAdd.Font = new System.Drawing.Font("Adobe Fan Heiti Std B", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAdd.ForeColor = System.Drawing.Color.White;
+            this.btnAdd.HoverState.Parent = this.btnAdd;
+            this.btnAdd.Image = global::PrjOverhaulHotel.Properties.Resources.plus;
+            this.btnAdd.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnAdd.ImageOffset = new System.Drawing.Point(5, 12);
+            this.btnAdd.Location = new System.Drawing.Point(701, 432);
+            this.btnAdd.Name = "btnAdd";
+            this.btnAdd.ShadowDecoration.Parent = this.btnAdd;
+            this.btnAdd.Size = new System.Drawing.Size(192, 32);
+            this.btnAdd.TabIndex = 11;
+            this.btnAdd.Text = "ADD PERSONNEL";
+            this.btnAdd.TextOffset = new System.Drawing.Point(7, -11);
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
+            this.btnAdd.MouseEnter += new System.EventHandler(this.pnlButtons_MouseLeave);
             // 
             // label2
             // 
@@ -949,6 +971,28 @@
             this.lblTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.lblTitle.MouseEnter += new System.EventHandler(this.pnlButtons_MouseLeave);
             // 
+            // btnDelete
+            // 
+            this.btnDelete.BorderRadius = 15;
+            this.btnDelete.CheckedState.Parent = this.btnDelete;
+            this.btnDelete.CustomImages.Parent = this.btnDelete;
+            this.btnDelete.FillColor = System.Drawing.Color.Black;
+            this.btnDelete.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.btnDelete.Font = new System.Drawing.Font("Adobe Fan Heiti Std B", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDelete.ForeColor = System.Drawing.Color.White;
+            this.btnDelete.HoverState.Parent = this.btnDelete;
+            this.btnDelete.Image = global::PrjOverhaulHotel.Properties.Resources.trash_2;
+            this.btnDelete.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnDelete.ImageOffset = new System.Drawing.Point(5, 12);
+            this.btnDelete.Location = new System.Drawing.Point(170, 432);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.ShadowDecoration.Parent = this.btnDelete;
+            this.btnDelete.Size = new System.Drawing.Size(237, 32);
+            this.btnDelete.TabIndex = 40;
+            this.btnDelete.Text = "DELETE PERSONNEL";
+            this.btnDelete.TextOffset = new System.Drawing.Point(7, -11);
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
+            // 
             // FrmStaffPersonnel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1012,8 +1056,8 @@
         private Guna.UI2.WinForms.Guna2ComboBox cmbRole;
         private Guna.UI2.WinForms.Guna2TextBox txtName;
         private Guna.UI2.WinForms.Guna2Separator guna2Separator3;
-        private Guna.UI2.WinForms.Guna2GradientTileButton guna2GradientTileButton1;
-        private Guna.UI2.WinForms.Guna2GradientTileButton guna2GradientTileButton2;
+        private Guna.UI2.WinForms.Guna2GradientTileButton btnManage;
+        private Guna.UI2.WinForms.Guna2GradientTileButton btnAdd;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
@@ -1028,6 +1072,8 @@
         private System.Windows.Forms.Label lblTotal;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column15;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column16;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column9;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column11;
@@ -1040,5 +1086,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column8;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column12;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column10;
+        private Guna.UI2.WinForms.Guna2GradientTileButton btnDelete;
     }
 }

@@ -158,17 +158,18 @@ namespace PrjOverhaulHotel
                 {
                     dtgGuests.Rows.Add(
                         row1["AID"].ToString(),
+                        row1["MEMBERSHIP"].ToString(),
                         row1["FIRST NAME"].ToString(),
                         row1["MIDDLE NAME"].ToString(),
                         row1["LAST NAME"].ToString(),
                         row1["USERNAME"].ToString(),
-                        row1["MEMBERSHIP"].ToString(),
                         row1["STATUS"].ToString(),
                         row1["CONTACT NUMBER"].ToString(),
                         Convert.ToDateTime(row1["BIRTHDATE"].ToString()).ToString("MMM dd, yyyy"),
                         row1["EMAIL ADDRESS"].ToString(),
                         row1["ADDRESS"].ToString(),
                         row1["GENDER"].ToString(),
+                        Convert.ToDateTime(row1["ACCOUNT CREATED ON"].ToString()).ToString("MMM dd, yyyy"),
                         row1["IMAGE"].ToString()
                     );
                 }
@@ -201,7 +202,7 @@ namespace PrjOverhaulHotel
         {
             if(dtgGuests.Rows.Count > 0)
             {
-                string imagePath = dtgGuests.CurrentRow.Cells[12].Value.ToString();
+                string imagePath = dtgGuests.CurrentRow.Cells[13].Value.ToString();
                 if (!string.IsNullOrEmpty(imagePath) && System.IO.File.Exists(imagePath))
                 {
                     imgSelect.Image = Image.FromFile(imagePath);
@@ -224,15 +225,18 @@ namespace PrjOverhaulHotel
                 {
                     dtgGuests.Rows.Add(
                         row1["AID"].ToString(),
-                        row1["FULLNAME"].ToString(),
-                        row1["USERNAME"].ToString(),
                         row1["MEMBERSHIP"].ToString(),
+                        row1["FIRST NAME"].ToString(),
+                        row1["MIDDLE NAME"].ToString(),
+                        row1["LAST NAME"].ToString(),
+                        row1["USERNAME"].ToString(),
                         row1["STATUS"].ToString(),
                         row1["CONTACT NUMBER"].ToString(),
                         Convert.ToDateTime(row1["BIRTHDATE"].ToString()).ToString("MMM dd, yyyy"),
                         row1["EMAIL ADDRESS"].ToString(),
                         row1["ADDRESS"].ToString(),
                         row1["GENDER"].ToString(),
+                        Convert.ToDateTime(row1["ACCOUNT CREATED ON"].ToString()).ToString("MMM dd, yyyy"),
                         row1["IMAGE"].ToString()
                     );
                 }

@@ -1,4 +1,5 @@
-﻿using PrjOverhaulHotel.PopUps;
+﻿using PrjOverhaulHotel.Form_for_Guests;
+using PrjOverhaulHotel.PopUps;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -17,12 +18,8 @@ namespace PrjOverhaulHotel
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FrmStartUp());
-            //Application.Run(new PopUpInfo());
-            //Application.Run(new PopUpRooms());
-            //Application.Run(new PopUpReservationAddons());
-            //Application.Run(new FrmStaffReservation());
-            //Application.Run(new FrmStaffDashboard());
+            //Application.Run(new FrmStartUp());
+            Application.Run(new FrmGuestDashboard());
         }
     }
 }

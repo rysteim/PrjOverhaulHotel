@@ -719,6 +719,45 @@ namespace PrjOverhaulHotel
             }
         }
 
+        public static void procEmployeeGetByAccountID(int accountID)
+        {
+            try
+            {
+                mySqlDataAdapter = new MySqlDataAdapter();
+                datHotel = new DataTable();
+
+                sqlCommand.Parameters.Clear();
+                sqlCommand.CommandText = "proc_employeeGetByAccountID";
+                sqlCommand.Parameters.AddWithValue("@p_id", accountID);
+                sqlCommand.CommandType = CommandType.StoredProcedure;
+
+                mySqlDataAdapter.SelectCommand = GlobalProcedure.sqlCommand;
+                datHotel.Clear();
+                mySqlDataAdapter.Fill(GlobalProcedure.datHotel);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error: {ex}", "Error!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        public static void procEmployeeLastOnline(int accountID)
+        {
+            try
+            {
+                sqlCommand.Parameters.Clear();
+                sqlCommand.CommandText = "proc_employeeLastOnline";
+                sqlCommand.CommandType = CommandType.StoredProcedure;
+                sqlCommand.Parameters.AddWithValue("@p_id", accountID);
+                sqlCommand.Parameters.AddWithValue("@p_lastOnline", DateTime.Now);
+                sqlCommand.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error: {ex}", "Error!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
         public static void procEmployeeSearch(String fullName, String role, String workshift)
         {
             try

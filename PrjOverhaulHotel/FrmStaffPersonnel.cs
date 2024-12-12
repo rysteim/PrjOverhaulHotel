@@ -1,5 +1,6 @@
 ﻿using MySqlX.XDevAPI.Relational;
 using Org.BouncyCastle.Asn1.Cmp;
+using PrjOverhaulHotel.PopUps;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -28,6 +29,7 @@ namespace PrjOverhaulHotel
             displayProfile();
             displayPersonnel();
             displayRole();
+            displayImage();
         }
 
         private void btnExit_Click(object sender, EventArgs e)
@@ -169,8 +171,10 @@ namespace PrjOverhaulHotel
                 foreach (DataRow row1 in GlobalProcedure.datHotel.Rows)
                 {
                     dtgPersonnel.Rows.Add(
-                        row1["ACCOUNT ID"].ToString(),
-                        row1["FULLNAME"].ToString(),
+                        row1["AID"].ToString(),
+                        row1["FIRST NAME"].ToString(),
+                        row1["MIDDLE NAME"].ToString(),
+                        row1["LAST NAME"].ToString(),
                         row1["ROLE"].ToString(),
                         row1["EMPLOYEE STATUS"].ToString(),
                         row1["EMPLOYEE LAST ONLINE"].ToString(),
@@ -191,6 +195,21 @@ namespace PrjOverhaulHotel
                 dtgPersonnel.Rows.Clear();
             }
         }
+        private void displayImage()
+        {
+            if (dtgPersonnel.Rows.Count > 0)
+            {
+                string imagePath = dtgPersonnel.CurrentRow.Cells[15].Value.ToString();
+                if (!string.IsNullOrEmpty(imagePath) && System.IO.File.Exists(imagePath))
+                {
+                    imgSelect.Image = Image.FromFile(imagePath);
+                }
+                else
+                {
+                    imgSelect.Image = Properties.Resources.rb_8551;
+                }
+            }
+        }
 
         private void searchPersonnel()
         {
@@ -202,8 +221,10 @@ namespace PrjOverhaulHotel
                 foreach (DataRow row1 in GlobalProcedure.datHotel.Rows)
                 {
                     dtgPersonnel.Rows.Add(
-                        row1["ACCOUNT ID"].ToString(),
-                        row1["FULLNAME"].ToString(),
+                        row1["AID"].ToString(),
+                        row1["FIRST NAME"].ToString(),
+                        row1["MIDDLE NAME"].ToString(),
+                        row1["LAST NAME"].ToString(),
                         row1["ROLE"].ToString(),
                         row1["EMPLOYEE STATUS"].ToString(),
                         row1["EMPLOYEE LAST ONLINE"].ToString(),
@@ -230,7 +251,7 @@ namespace PrjOverhaulHotel
         {
             if (e.RowIndex >= 0)
             {
-                string imagePath = dtgPersonnel.CurrentRow.Cells[13].Value.ToString();
+                string imagePath = dtgPersonnel.CurrentRow.Cells[15].Value.ToString();
                 if (!string.IsNullOrEmpty(imagePath) && System.IO.File.Exists(imagePath))
                 {
                     imgSelect.Image = Image.FromFile(imagePath);
@@ -263,6 +284,23 @@ namespace PrjOverhaulHotel
         private void txtName_TextChanged(object sender, EventArgs e)
         {
             searchPersonnel();
+        }
+
+        private void btnAdd_Click(object sender, EventArgs e)
+        {
+            new PopUpPersonnel().ShowDialog();
+            displayPersonnel();
+        }
+
+        private void btnManage_Click(object sender, EventArgs e)
+        {
+            new PopUpPersonnel(Convert.ToInt32(dtgPersonnel.CurrentRow.Cells[0].Value)).ShowDialog();
+            displayPersonnel();
+        }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

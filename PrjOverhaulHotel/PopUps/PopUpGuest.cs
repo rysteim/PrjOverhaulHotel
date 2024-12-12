@@ -21,6 +21,7 @@ namespace PrjOverhaulHotel.PopUps
 
             this.guestID = -1;
             btnSaveGuest.Visible = false;
+            lblCreated.Visible = false;
         }
 
         public PopUpGuest(int guestID)
@@ -38,6 +39,7 @@ namespace PrjOverhaulHotel.PopUps
 
         private void PopUpGuest_Load(object sender, EventArgs e)
         {
+            GlobalProcedure.fncDatabaseConnection();
             displayDetails();
             displayMembership();
         }
@@ -61,6 +63,7 @@ namespace PrjOverhaulHotel.PopUps
                     cmbMembership.Text = GlobalProcedure.datHotel.Rows[0]["MEMBERSHIP"].ToString();
                     dtmBirthdate.Value = Convert.ToDateTime(GlobalProcedure.datHotel.Rows[0]["BIRTHDATE"].ToString());
                     imagePath = GlobalProcedure.datHotel.Rows[0]["IMAGE"].ToString();
+                    lblCreated.Text = "Account Created On: " + Convert.ToDateTime(GlobalProcedure.datHotel.Rows[0]["ACCOUNT CREATED ON"].ToString()).ToString("MMM dd, yyyy");
 
                     if (!string.IsNullOrEmpty(imagePath) && System.IO.File.Exists(imagePath))
                     {
@@ -71,8 +74,7 @@ namespace PrjOverhaulHotel.PopUps
                         imgProfile.Image = Properties.Resources.rb_8551;
                     }
                 }
-            }
-               
+            }  
         }
 
         private void btnUpload_Click(object sender, EventArgs e)
