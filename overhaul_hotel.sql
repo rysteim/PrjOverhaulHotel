@@ -23,6 +23,7 @@ CREATE TABLE `tblaccount` (
   `username` varchar(50) NOT NULL,
   `password` varchar(100) NOT NULL,
   `dateCreated` date NOT NULL,
+  `lastOnline` datetime DEFAULT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `username` (`username`,`password`),
   UNIQUE KEY `password` (`password`),
@@ -34,15 +35,15 @@ CREATE TABLE `tblaccount` (
 
 /*Data for the table `tblaccount` */
 
-insert  into `tblaccount`(`id`,`profileID`,`roleID`,`username`,`password`,`dateCreated`) values 
-(1,1,1,'admin','1234','2024-10-29'),
-(2,2,2,'kyrelle','mitty','2024-11-05'),
-(3,3,1,'yoonzino','svt','2024-11-05'),
-(4,4,1,'telepath','hehe','2024-11-05'),
-(6,6,1,'faker','f1','2024-11-05'),
-(10,10,2,'sk8er','boi','2024-11-07'),
-(15,15,1,'soggycereal','bruh','2024-11-20'),
-(16,16,1,'bnd','koz','2024-11-26');
+insert  into `tblaccount`(`id`,`profileID`,`roleID`,`username`,`password`,`dateCreated`,`lastOnline`) values 
+(1,1,1,'admin','1234','2024-10-29','2024-12-14 19:04:50'),
+(2,2,2,'kyrelle','mitty','2024-11-05',NULL),
+(3,3,1,'yoonzino','svt','2024-11-05',NULL),
+(4,4,1,'telepath','hehe','2024-11-05',NULL),
+(6,6,1,'faker','f1','2024-11-05',NULL),
+(10,10,2,'sk8er','boi','2024-11-07',NULL),
+(15,15,1,'soggycereal','bruh','2024-11-20',NULL),
+(16,16,1,'bnd','koz','2024-11-26','2024-12-14 17:32:33');
 
 /*Table structure for table `tblaccount_membership` */
 
@@ -220,7 +221,7 @@ CREATE TABLE `tblreservation` (
 /*Data for the table `tblreservation` */
 
 insert  into `tblreservation`(`id`,`accountID`,`promoID`,`invoice`,`reservationStatus`,`bookingDate`,`totalDays`,`totalAmount`,`paidAmount`,`remainingBalance`) values 
-(1,1,1,'INV213485','For Approval','2024-11-15',21,223000,20000,203000);
+(1,1,1,'INV213485','For Approval','2024-11-15',10,223000,20000,203000);
 
 /*Table structure for table `tblreservation_addons` */
 
@@ -255,17 +256,21 @@ CREATE TABLE `tblreservation_room` (
   `checkInDate` date NOT NULL,
   `checkOutDate` date NOT NULL,
   `totalRoomPrice` double NOT NULL,
+  `roomStatus` varchar(30) DEFAULT NULL,
   PRIMARY KEY (`id`),
   KEY `reservationID` (`reservationID`),
   KEY `roomID` (`roomID`),
   CONSTRAINT `tblreservation_room_ibfk_1` FOREIGN KEY (`reservationID`) REFERENCES `tblreservation` (`id`),
   CONSTRAINT `tblreservation_room_ibfk_2` FOREIGN KEY (`roomID`) REFERENCES `tblroom` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=19 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=22 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 /*Data for the table `tblreservation_room` */
 
-insert  into `tblreservation_room`(`id`,`reservationID`,`roomID`,`checkInDate`,`checkOutDate`,`totalRoomPrice`) values 
-(18,1,18,'2024-11-08','2024-11-10',70000);
+insert  into `tblreservation_room`(`id`,`reservationID`,`roomID`,`checkInDate`,`checkOutDate`,`totalRoomPrice`,`roomStatus`) values 
+(18,1,18,'2024-11-08','2024-11-10',70000,'Available'),
+(19,1,19,'2025-01-01','2025-01-03',70000,'Reserved'),
+(20,1,8,'2024-12-30','2025-01-03',26000,'Reserved'),
+(21,1,14,'2024-12-14','2024-12-16',30000,'Occupied');
 
 /*Table structure for table `tblrole` */
 
@@ -293,38 +298,37 @@ DROP TABLE IF EXISTS `tblroom`;
 
 CREATE TABLE `tblroom` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `roomName` varchar(5) NOT NULL,
+  `roomName` varchar(20) NOT NULL,
   `roomType` varchar(30) NOT NULL,
-  `status` varchar(50) NOT NULL,
   `description` varchar(150) NOT NULL,
   `pricePerDay` double NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=23 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=24 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 /*Data for the table `tblroom` */
 
-insert  into `tblroom`(`id`,`roomName`,`roomType`,`status`,`description`,`pricePerDay`) values 
-(1,'D100','Deluxe Room','Available','Standard luxury room with upscale décor, modern amenities, and often a city or garden view.',4000),
-(2,'D101','Deluxe Room','Available','Standard luxury room with upscale décor, modern amenities, and often a city or garden view.',4000),
-(3,'D102','Deluxe Room','Available','Standard luxury room with upscale décor, modern amenities, and often a city or garden view.',4000),
-(4,'D103','Deluxe Room','Out of Order','Standard luxury room with upscale décor, modern amenities, and often a city or garden view.',4000),
-(5,'P200','Premier Room','Available','A step up from the Deluxe Room, usually featuring better views and more space.',6500),
-(6,'P201','Premier Room','Reserved','A step up from the Deluxe Room, usually featuring better views and more space.',6500),
-(7,'P202','Premier Room','Reserved','A step up from the Deluxe Room, usually featuring better views and more space.',6500),
-(8,'P203','Premier Room','Available','A step up from the Deluxe Room, usually featuring better views and more space.',6500),
-(9,'J300','Junior Suite','Available','Spacious room with a separate sitting area, but not necessarily a fully divided space. Ideal for guests seeking a bit more comfort.',9000),
-(10,'J301','Junior Suite','Available','Spacious room with a separate sitting area, but not necessarily a fully divided space. Ideal for guests seeking a bit more comfort.',9000),
-(11,'J302','Junior Suite','Available','Spacious room with a separate sitting area, but not necessarily a fully divided space. Ideal for guests seeking a bit more comfort.',9000),
-(12,'J303','Junior Suite','Reserved','Spacious room with a separate sitting area, but not necessarily a fully divided space. Ideal for guests seeking a bit more comfort.',9000),
-(13,'E400','Executive Suite','Reserved','Larger than the Junior Suite with a fully separate living room and bedroom, often used by business travelers or families.',15000),
-(14,'E401','Executive Suite','Available','Larger than the Junior Suite with a fully separate living room and bedroom, often used by business travelers or families.',15000),
-(15,'E402','Executive Suite','Available','Larger than the Junior Suite with a fully separate living room and bedroom, often used by business travelers or families.',15000),
-(16,'E403','Executive Suite','Reserved','Larger than the Junior Suite with a fully separate living room and bedroom, often used by business travelers or families.',15000),
-(17,'R500','Royal Suite','Reserved','The pinnacle of luxury, often with multiple rooms, private dining areas, and sometimes private pools or terraces. This suite is usually reserved for V',35000),
-(18,'R501','Royal Suite','Reserved','The pinnacle of luxury, often with multiple rooms, private dining areas, and sometimes private pools or terraces. This suite is usually reserved for V',35000),
-(19,'R502','Royal Suite','Available','The pinnacle of luxury, often with multiple rooms, private dining areas, and sometimes private pools or terraces. This suite is usually reserved for V',35000),
-(20,'I600','Imperial Suite','Available','Located on the top two floors, offering the best views and sometimes featuring exclusive facilities like a private terrace or pool.',60000),
-(21,'I700','Imperial Suite','Available','Located on the top two floors, offering the best views and sometimes featuring exclusive facilities like a private terrace or pool.',60000);
+insert  into `tblroom`(`id`,`roomName`,`roomType`,`description`,`pricePerDay`) values 
+(1,'D100','Deluxe Room','Standard luxury room with upscale décor, modern amenities, and often a city or garden view.',4000),
+(2,'D101','Deluxe Room','Standard luxury room with upscale décor, modern amenities, and often a city or garden view.',4000),
+(3,'D102','Deluxe Room','Standard luxury room with upscale décor, modern amenities, and often a city or garden view.',4000),
+(4,'D103','Deluxe Room','Standard luxury room with upscale décor, modern amenities, and often a city or garden view.',4000),
+(5,'P200','Premier Room','A step up from the Deluxe Room, usually featuring better views and more space.',6500),
+(6,'P201','Premier Room','A step up from the Deluxe Room, usually featuring better views and more space.',6500),
+(7,'P202','Premier Room','A step up from the Deluxe Room, usually featuring better views and more space.',6500),
+(8,'P203','Premier Room','A step up from the Deluxe Room, usually featuring better views and more space.',6500),
+(9,'J300','Junior Suite','Spacious room with a separate sitting area, but not necessarily a fully divided space. Ideal for guests seeking a bit more comfort.',9000),
+(10,'J301','Junior Suite','Spacious room with a separate sitting area, but not necessarily a fully divided space. Ideal for guests seeking a bit more comfort.',9000),
+(11,'J302','Junior Suite','Spacious room with a separate sitting area, but not necessarily a fully divided space. Ideal for guests seeking a bit more comfort.',9000),
+(12,'J303','Junior Suite','Spacious room with a separate sitting area, but not necessarily a fully divided space. Ideal for guests seeking a bit more comfort.',9000),
+(13,'E400','Executive Suite','Larger than the Junior Suite with a fully separate living room and bedroom, often used by business travelers or families.',15000),
+(14,'E401','Executive Suite','Larger than the Junior Suite with a fully separate living room and bedroom, often used by business travelers or families.',15000),
+(15,'E402','Executive Suite','Larger than the Junior Suite with a fully separate living room and bedroom, often used by business travelers or families.',15000),
+(16,'E403','Executive Suite','Larger than the Junior Suite with a fully separate living room and bedroom, often used by business travelers or families.',15000),
+(17,'R500','Royal Suite','The pinnacle of luxury, often with multiple rooms, private dining areas, and sometimes private pools or terraces. This suite is usually reserved for V',35000),
+(18,'R501','Royal Suite','The pinnacle of luxury, often with multiple rooms, private dining areas, and sometimes private pools or terraces. This suite is usually reserved for V',35000),
+(19,'R502','Royal Suite','The pinnacle of luxury, often with multiple rooms, private dining areas, and sometimes private pools or terraces. This suite is usually reserved for V',35000),
+(20,'I600','Imperial Suite','Located on the top two floors, offering the best views and sometimes featuring exclusive facilities like a private terrace or pool.',60000),
+(21,'I700','Imperial Suite','Located on the top two floors, offering the best views and sometimes featuring exclusive facilities like a private terrace or pool.',60000);
 
 /*Table structure for table `tblshift` */
 
@@ -756,6 +760,70 @@ BEGIN
 		select * from view_employee where FULLNAME LIKE CONCAT("%", p_fullname, "%")
 					AND ROLE LIKE CONCAT(p_role, "%")
 					AND WORKSHIFT LIKE CONCAT(p_workshift, "%");
+	END */$$
+DELIMITER ;
+
+/* Procedure structure for procedure `proc_employeeUpdate` */
+
+/*!50003 DROP PROCEDURE IF EXISTS  `proc_employeeUpdate` */;
+
+DELIMITER $$
+
+/*!50003 CREATE DEFINER=`root`@`localhost` PROCEDURE `proc_employeeUpdate`(p_id int,
+						p_firstName varchar(30),
+						p_middleName varchar(30),
+						p_lastName varchar(30),
+						p_username varchar(30),
+						p_password varchar(30),
+						p_roleName varchar(20),
+						p_workShift varchar(20),
+						p_hourlyRate double,
+						p_contactNo varchar(15),
+						p_emailAdd varchar(100),
+						p_address varchar(200),
+						p_gender varchar(20),
+						p_birthdate date,
+						p_image text)
+BEGIN
+		declare p_profileID int;
+		declare p_roleID int;
+		
+		set p_profileID = (select profileID from tblaccount where id = p_id limit 1);
+		set p_roleID = (select id from tblrole where roleName = p_roleName limit 1);
+		
+		update tblprofile set firstName = p_firstName,
+					middleName = p_middleName,
+					lastName = p_lastName,
+					contactNo = p_contactNo,
+					emailAddress = p_emailAdd,
+					address = p_address,
+					gender = p_gender,
+					birthdate = p_birthdate,
+					image = p_image
+				where id = p_profileID;
+		
+		update tblaccount set username = p_username,
+					password = p_password,
+					roleID = p_roleID
+				where id = p_id;
+				
+		update tblemployee set workShift = p_workShift,
+					salaryPerHour = p_hourlyRate
+				where accountID = p_id;
+					
+	END */$$
+DELIMITER ;
+
+/* Procedure structure for procedure `proc_guestActive` */
+
+/*!50003 DROP PROCEDURE IF EXISTS  `proc_guestActive` */;
+
+DELIMITER $$
+
+/*!50003 CREATE DEFINER=`root`@`localhost` PROCEDURE `proc_guestActive`(p_id int, p_lastOnline datetime)
+BEGIN
+		update tblaccount set lastOnline = p_lastOnline
+				where id = p_id;
 	END */$$
 DELIMITER ;
 
@@ -1203,13 +1271,28 @@ BEGIN
 	END */$$
 DELIMITER ;
 
+/* Procedure structure for procedure `proc_roomActive` */
+
+/*!50003 DROP PROCEDURE IF EXISTS  `proc_roomActive` */;
+
+DELIMITER $$
+
+/*!50003 CREATE DEFINER=`root`@`localhost` PROCEDURE `proc_roomActive`(p_date date)
+BEGIN
+		SELECT room.roomName
+		FROM tblreservation_room rr,
+		tblroom room
+		WHERE rr.roomID = room.id and p_date BETWEEN checkInDate AND checkOutDate;
+	END */$$
+DELIMITER ;
+
 /* Procedure structure for procedure `proc_roomAdd` */
 
 /*!50003 DROP PROCEDURE IF EXISTS  `proc_roomAdd` */;
 
 DELIMITER $$
 
-/*!50003 CREATE DEFINER=`root`@`localhost` PROCEDURE `proc_roomAdd`(p_roomname varchar(5),
+/*!50003 CREATE DEFINER=`root`@`localhost` PROCEDURE `proc_roomAdd`(p_roomname varchar(20),
 						p_roomtype varchar(30),
 						p_status varchar(50),
 						p_description varchar(150),
@@ -1253,6 +1336,52 @@ BEGIN
 	END */$$
 DELIMITER ;
 
+/* Procedure structure for procedure `proc_roomCheckAvailability` */
+
+/*!50003 DROP PROCEDURE IF EXISTS  `proc_roomCheckAvailability` */;
+
+DELIMITER $$
+
+/*!50003 CREATE DEFINER=`root`@`localhost` PROCEDURE `proc_roomCheckAvailability`(p_roomID int,
+								p_date date)
+BEGIN
+		SELECT room.roomName,
+			CASE 
+				WHEN p_date BETWEEN checkInDate AND checkOutDate THEN 'Occupied'
+				ELSE 'Available'
+			END AS room_status
+		FROM tblreservation_room rr,
+		tblroom room
+		WHERE rr.roomID = room.id AND 
+		room.id = 18;
+	END */$$
+DELIMITER ;
+
+/* Procedure structure for procedure `proc_roomCheckRoomStatus` */
+
+/*!50003 DROP PROCEDURE IF EXISTS  `proc_roomCheckRoomStatus` */;
+
+DELIMITER $$
+
+/*!50003 CREATE DEFINER=`root`@`localhost` PROCEDURE `proc_roomCheckRoomStatus`(p_date DATETIME)
+BEGIN
+    -- Mark 'Reserved' for dates before checkInDate
+    UPDATE tblreservation_room 
+    SET roomStatus = 'Reserved'
+    WHERE p_date < checkInDate;
+
+    -- Mark 'Available' for dates after checkOutDate
+    UPDATE tblreservation_room 
+    SET roomStatus = 'Available'
+    WHERE p_date > checkOutDate;
+
+    -- Mark 'Occupied' for dates between checkInDate and checkOutDate
+    UPDATE tblreservation_room 
+    SET roomStatus = 'Occupied'
+    WHERE p_date BETWEEN checkInDate AND checkOutDate;
+END */$$
+DELIMITER ;
+
 /* Procedure structure for procedure `proc_roomData` */
 
 /*!50003 DROP PROCEDURE IF EXISTS  `proc_roomData` */;
@@ -1261,7 +1390,8 @@ DELIMITER $$
 
 /*!50003 CREATE DEFINER=`root`@`localhost` PROCEDURE `proc_roomData`()
 BEGIN
-		select * from tblroom order by roomName asc;
+		select *
+		 from view_room;
 	END */$$
 DELIMITER ;
 
@@ -1409,9 +1539,9 @@ DELIMITER $$
 						p_roomType varchar(50),
 						p_status varchar(20))
 BEGIN
-		select * from tblroom where roomName LIKE concat(p_roomName, "%")
-					and roomType LIKE CONCAT(p_roomType, "%")
-					and status LIKE CONCAT(p_status, "%");
+		select * from view_room where room_Name LIKE concat(p_roomName, "%")
+					and room_Type LIKE CONCAT(p_roomType, "%")
+					and room_status LIKE CONCAT(p_status, "%");
 	END */$$
 DELIMITER ;
 
@@ -1434,7 +1564,7 @@ DELIMITER ;
 DELIMITER $$
 
 /*!50003 CREATE DEFINER=`root`@`localhost` PROCEDURE `proc_roomUpdate`(p_id int,
-						p_roomname varchar(5),
+						p_roomname varchar(20),
 						p_roomtype varchar(30),
 						p_status varchar(50),
 						p_description varchar(150),
@@ -1566,6 +1696,21 @@ DROP TABLE IF EXISTS `view_reservation`;
  `IMAGE` text 
 )*/;
 
+/*Table structure for table `view_room` */
+
+DROP TABLE IF EXISTS `view_room`;
+
+/*!50001 DROP VIEW IF EXISTS `view_room` */;
+/*!50001 DROP TABLE IF EXISTS `view_room` */;
+
+/*!50001 CREATE TABLE  `view_room`(
+ `ROOM_ID` int(11) ,
+ `ROOM_NAME` varchar(20) ,
+ `ROOM_TYPE` varchar(30) ,
+ `PRICE_PER_DAY` double ,
+ `ROOM_STATUS` varchar(30) 
+)*/;
+
 /*Table structure for table `view_roomreservations` */
 
 DROP TABLE IF EXISTS `view_roomreservations`;
@@ -1576,12 +1721,14 @@ DROP TABLE IF EXISTS `view_roomreservations`;
 /*!50001 CREATE TABLE  `view_roomreservations`(
  `RRID` int(11) ,
  `RID` int(11) ,
- `ROOM NAME` varchar(5) ,
- `ROOM TYPE` varchar(30) ,
- `PRICE PER DAY` double ,
- `TOTAL PRICE` double ,
- `CHECK-IN DATE` date ,
- `CHECK-OUT DATE` date 
+ `ROOM_ID` int(11) ,
+ `ROOM_NAME` varchar(20) ,
+ `ROOM_TYPE` varchar(30) ,
+ `PRICE_PER_DAY` double ,
+ `TOTAL_PRICE` double ,
+ `ROOM_STATUS` varchar(30) ,
+ `CHECK-IN_DATE` date ,
+ `CHECK-OUT_DATE` date 
 )*/;
 
 /*View structure for view view_account */
@@ -1619,12 +1766,19 @@ DROP TABLE IF EXISTS `view_roomreservations`;
 
 /*!50001 CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `view_reservation` AS select `res`.`id` AS `RESERVATION ID`,concat(`pro`.`lastName`,', ',`pro`.`firstName`,' ',`pro`.`middleName`) AS `FULL NAME`,coalesce(`rooms`.`total_rooms`,0) AS `TOTAL ROOMS`,`promo`.`promoName` AS `PROMO NAME`,coalesce(`addons`.`total_addons`,0) AS `TOTAL ADDONS`,`res`.`invoice` AS `INVOICE`,`res`.`reservationStatus` AS `RESERVATION STATUS`,`res`.`bookingDate` AS `BOOKING DATE`,`res`.`totalDays` AS `TOTAL DAYS`,`res`.`totalAmount` AS `TOTAL AMOUNT`,`res`.`paidAmount` AS `PAID AMOUNT`,`res`.`remainingBalance` AS `REMAINING BALANCE`,`pro`.`image` AS `IMAGE` from (((((`tblreservation` `res` join `tblaccount` `acc` on(`acc`.`id` = `res`.`accountID`)) join `tblprofile` `pro` on(`pro`.`id` = `acc`.`profileID`)) join `tblpromo` `promo` on(`promo`.`id` = `res`.`promoID`)) left join (select `tblreservation_room`.`reservationID` AS `reservationID`,count(`tblreservation_room`.`roomID`) AS `total_rooms` from `tblreservation_room` group by `tblreservation_room`.`reservationID`) `rooms` on(`res`.`id` = `rooms`.`reservationID`)) left join (select `tblreservation_addons`.`reservationID` AS `reservationID`,count(`tblreservation_addons`.`addonsID`) AS `total_addons` from `tblreservation_addons` group by `tblreservation_addons`.`reservationID`) `addons` on(`res`.`id` = `addons`.`reservationID`)) group by `res`.`id` */;
 
+/*View structure for view view_room */
+
+/*!50001 DROP TABLE IF EXISTS `view_room` */;
+/*!50001 DROP VIEW IF EXISTS `view_room` */;
+
+/*!50001 CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `view_room` AS (select `room`.`id` AS `ROOM_ID`,`room`.`roomName` AS `ROOM_NAME`,`room`.`roomType` AS `ROOM_TYPE`,`room`.`pricePerDay` AS `PRICE_PER_DAY`,ifnull(`rr`.`roomStatus`,'Available') AS `ROOM_STATUS` from (`tblroom` `room` left join `tblreservation_room` `rr` on(`room`.`id` = `rr`.`roomID`)) order by `room`.`roomName`) */;
+
 /*View structure for view view_roomreservations */
 
 /*!50001 DROP TABLE IF EXISTS `view_roomreservations` */;
 /*!50001 DROP VIEW IF EXISTS `view_roomreservations` */;
 
-/*!50001 CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `view_roomreservations` AS (select `rr`.`id` AS `RRID`,`rr`.`reservationID` AS `RID`,`room`.`roomName` AS `ROOM NAME`,`room`.`roomType` AS `ROOM TYPE`,`room`.`pricePerDay` AS `PRICE PER DAY`,`rr`.`totalRoomPrice` AS `TOTAL PRICE`,`rr`.`checkInDate` AS `CHECK-IN DATE`,`rr`.`checkOutDate` AS `CHECK-OUT DATE` from ((`tblreservation` `res` join `tblroom` `room`) join `tblreservation_room` `rr`) where `res`.`id` = `rr`.`reservationID` and `room`.`id` = `rr`.`roomID`) */;
+/*!50001 CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `view_roomreservations` AS (select `rr`.`id` AS `RRID`,`rr`.`reservationID` AS `RID`,`room`.`id` AS `ROOM_ID`,`room`.`roomName` AS `ROOM_NAME`,`room`.`roomType` AS `ROOM_TYPE`,`room`.`pricePerDay` AS `PRICE_PER_DAY`,`rr`.`totalRoomPrice` AS `TOTAL_PRICE`,`rr`.`roomStatus` AS `ROOM_STATUS`,`rr`.`checkInDate` AS `CHECK-IN_DATE`,`rr`.`checkOutDate` AS `CHECK-OUT_DATE` from ((`tblreservation` `res` join `tblroom` `room`) join `tblreservation_room` `rr`) where `res`.`id` = `rr`.`reservationID` and `room`.`id` = `rr`.`roomID`) */;
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
 /*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
