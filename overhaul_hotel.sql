@@ -30,7 +30,7 @@ CREATE TABLE `tblaccount` (
   KEY `positionID` (`roleID`),
   CONSTRAINT `tblaccount_ibfk_1` FOREIGN KEY (`profileID`) REFERENCES `tblprofile` (`id`),
   CONSTRAINT `tblaccount_ibfk_2` FOREIGN KEY (`roleID`) REFERENCES `tblrole` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=16 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=17 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 /*Data for the table `tblaccount` */
 
@@ -40,8 +40,9 @@ insert  into `tblaccount`(`id`,`profileID`,`roleID`,`username`,`password`,`dateC
 (3,3,1,'yoonzino','svt','2024-11-05'),
 (4,4,1,'telepath','hehe','2024-11-05'),
 (6,6,1,'faker','f1','2024-11-05'),
-(10,10,1,'sk8er','boi','2024-11-07'),
-(15,15,1,'soggycereal','bruh','2024-11-20');
+(10,10,2,'sk8er','boi','2024-11-07'),
+(15,15,1,'soggycereal','bruh','2024-11-20'),
+(16,16,1,'bnd','koz','2024-11-26');
 
 /*Table structure for table `tblaccount_membership` */
 
@@ -57,7 +58,7 @@ CREATE TABLE `tblaccount_membership` (
   KEY `membershipID` (`membershipID`),
   CONSTRAINT `tblaccount_membership_ibfk_1` FOREIGN KEY (`accountID`) REFERENCES `tblaccount` (`id`),
   CONSTRAINT `tblaccount_membership_ibfk_2` FOREIGN KEY (`membershipID`) REFERENCES `tblmembership` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=18 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=19 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 /*Data for the table `tblaccount_membership` */
 
@@ -67,7 +68,8 @@ insert  into `tblaccount_membership`(`id`,`accountID`,`membershipID`,`accountSta
 (4,3,2,'Inactive'),
 (5,4,1,'Inactive'),
 (9,6,1,'Inactive'),
-(17,15,2,'Inactive');
+(17,15,2,'Inactive'),
+(18,16,2,'Inactive');
 
 /*Table structure for table `tbladdons` */
 
@@ -154,7 +156,7 @@ CREATE TABLE `tblprofile` (
   PRIMARY KEY (`id`),
   UNIQUE KEY `emailAddress` (`emailAddress`),
   UNIQUE KEY `contactNo` (`contactNo`)
-) ENGINE=InnoDB AUTO_INCREMENT=16 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=17 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 /*Data for the table `tblprofile` */
 
@@ -165,7 +167,8 @@ insert  into `tblprofile`(`id`,`firstName`,`middleName`,`lastName`,`contactNo`,`
 (4,'Anya','','Forger','09987654321','spyxfamily@gmail.com','Anime','Female','2009-11-26','C:\\Users\\jazzy\\Downloads\\5c8b18a1d95fce3c7740bed1a49fd7fd.jpg'),
 (6,'Sanghyeok','','Lee','0913857191','lol@gmail.com','Korea','Male','2005-11-18','C:\\Users\\jazzy\\OneDrive\\Pictures\\JUNNN.jpg'),
 (10,'Avril','','Lavigne','0999123123','lavigne.com','Canada','Female','1989-11-08','C:\\Users\\jazzy\\OneDrive\\Pictures\\CST4\\lexus-lfa.jpg'),
-(15,'Kyron','James','Sostino','09182736455','jameskyron@gmail.com','09182736455','Male','2003-04-01','C:\\Users\\jazzy\\Downloads\\5c8b18a1d95fce3c7740bed1a49fd7fd.jpg');
+(15,'Kyron','James','Sostino','09182736455','jameskyron@gmail.com','09182736455','Male','2003-04-01','C:\\Users\\jazzy\\Downloads\\5c8b18a1d95fce3c7740bed1a49fd7fd.jpg'),
+(16,'Boy','Next','Door','09182938471','bnd@email.com','kozent','Male','2023-05-30','C:\\Users\\jazzy\\Downloads\\454830415_1931132643975658_2543677937346972472_n.jpg');
 
 /*Table structure for table `tblpromo` */
 
@@ -639,6 +642,34 @@ BEGIN
 	END */$$
 DELIMITER ;
 
+/* Procedure structure for procedure `proc_employeeAdd` */
+
+/*!50003 DROP PROCEDURE IF EXISTS  `proc_employeeAdd` */;
+
+DELIMITER $$
+
+/*!50003 CREATE DEFINER=`root`@`localhost` PROCEDURE `proc_employeeAdd`(p_accountID int,
+						p_workShift varchar(30),
+						p_salaryPerHour double,
+						p_employmentDate date,
+						p_status varchar(30),
+						p_lastLogin datetime)
+BEGIN
+		insert into tblemployee (accountID,
+					workShift,
+					salaryPerHour,
+					employmentDate,
+					status,
+					lastLogin)
+				values (p_accountID,
+					p_workShift,
+					p_salaryPerHour,
+					p_employmentDate,
+					p_status,
+					p_lastLogin);
+	END */$$
+DELIMITER ;
+
 /* Procedure structure for procedure `proc_employeeData` */
 
 /*!50003 DROP PROCEDURE IF EXISTS  `proc_employeeData` */;
@@ -651,6 +682,41 @@ BEGIN
 	END */$$
 DELIMITER ;
 
+/* Procedure structure for procedure `proc_employeeDelete` */
+
+/*!50003 DROP PROCEDURE IF EXISTS  `proc_employeeDelete` */;
+
+DELIMITER $$
+
+/*!50003 CREATE DEFINER=`root`@`localhost` PROCEDURE `proc_employeeDelete`(p_id int)
+BEGIN
+		DECLARE p_accountID INT;
+		DECLARE p_profileID INT;
+		declare p_employeeID int;
+		
+		SET p_profileID = (SELECT profileID FROM tblaccount WHERE id = p_id);
+		set p_employeeID = (select id from tblemployee where accountID = p_id);
+		SET p_accountID = p_id;
+		
+		delete from tblshift where employeeID = p_employeeID;
+		delete from tblemployee where accountID = p_accountID;
+		DELETE FROM tblaccount WHERE id = p_accountID;
+		DELETE FROM tblprofile WHERE id = p_profileID;
+	END */$$
+DELIMITER ;
+
+/* Procedure structure for procedure `proc_employeeGetByAccountID` */
+
+/*!50003 DROP PROCEDURE IF EXISTS  `proc_employeeGetByAccountID` */;
+
+DELIMITER $$
+
+/*!50003 CREATE DEFINER=`root`@`localhost` PROCEDURE `proc_employeeGetByAccountID`(p_id int)
+BEGIN
+		select * from view_employee where AID = p_id;
+	END */$$
+DELIMITER ;
+
 /* Procedure structure for procedure `proc_employeeGetShiftByEmployeeID` */
 
 /*!50003 DROP PROCEDURE IF EXISTS  `proc_employeeGetShiftByEmployeeID` */;
@@ -660,6 +726,20 @@ DELIMITER $$
 /*!50003 CREATE DEFINER=`root`@`localhost` PROCEDURE `proc_employeeGetShiftByEmployeeID`(p_id int)
 BEGIN
 		select * from tblshift where employeeID = p_id;
+	END */$$
+DELIMITER ;
+
+/* Procedure structure for procedure `proc_employeeLastOnline` */
+
+/*!50003 DROP PROCEDURE IF EXISTS  `proc_employeeLastOnline` */;
+
+DELIMITER $$
+
+/*!50003 CREATE DEFINER=`root`@`localhost` PROCEDURE `proc_employeeLastOnline`(p_id int,
+							p_lastOnline datetime)
+BEGIN
+		update tblemployee set lastLogin = p_lastOnline
+				where accountID = p_id;
 	END */$$
 DELIMITER ;
 
@@ -1119,7 +1199,7 @@ DELIMITER $$
 
 /*!50003 CREATE DEFINER=`root`@`localhost` PROCEDURE `proc_roleData`()
 BEGIN
-		select * from tblrole;
+		select * from tblrole WHERE ID <> 1;
 	END */$$
 DELIMITER ;
 
@@ -1416,8 +1496,13 @@ DROP TABLE IF EXISTS `view_employee`;
 /*!50001 DROP TABLE IF EXISTS `view_employee` */;
 
 /*!50001 CREATE TABLE  `view_employee`(
- `ACCOUNT ID` int(11) ,
- `FULLNAME` varchar(153) ,
+ `AID` int(11) ,
+ `FULLNAME` varchar(152) ,
+ `FIRST NAME` varchar(50) ,
+ `MIDDLE NAME` varchar(50) ,
+ `LAST NAME` varchar(50) ,
+ `USERNAME` varchar(50) ,
+ `PASSWORD` varchar(100) ,
  `ROLE` varchar(20) ,
  `EMPLOYEE STATUS` varchar(30) ,
  `EMPLOYEE LAST ONLINE` datetime ,
@@ -1441,6 +1526,7 @@ DROP TABLE IF EXISTS `view_guest`;
 
 /*!50001 CREATE TABLE  `view_guest`(
  `AID` int(11) ,
+ `FULLNAME` varchar(152) ,
  `FIRST NAME` varchar(50) ,
  `MIDDLE NAME` varchar(50) ,
  `LAST NAME` varchar(50) ,
@@ -1517,14 +1603,14 @@ DROP TABLE IF EXISTS `view_roomreservations`;
 /*!50001 DROP TABLE IF EXISTS `view_employee` */;
 /*!50001 DROP VIEW IF EXISTS `view_employee` */;
 
-/*!50001 CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `view_employee` AS select `acc`.`id` AS `ACCOUNT ID`,concat(`pro`.`lastName`,', ',`pro`.`firstName`,' ',`pro`.`middleName`) AS `FULLNAME`,`role`.`roleName` AS `ROLE`,`emp`.`status` AS `EMPLOYEE STATUS`,`emp`.`lastLogin` AS `EMPLOYEE LAST ONLINE`,`emp`.`workShift` AS `WORKSHIFT`,`emp`.`salaryPerHour` AS `HOURLY RATE`,`pro`.`contactNo` AS `CONTACT NUMBER`,`pro`.`emailAddress` AS `EMAIL ADDRESS`,`pro`.`address` AS `ADDRESS`,`pro`.`gender` AS `GENDER`,`pro`.`birthdate` AS `BIRTHDATE`,`emp`.`employmentDate` AS `EMPLOYMENT DATE`,`pro`.`image` AS `IMAGE` from (((`tblprofile` `pro` join `tblaccount` `acc`) join `tblemployee` `emp`) join `tblrole` `role`) where `pro`.`id` = `acc`.`profileID` and `role`.`id` = `acc`.`roleID` and `acc`.`id` = `emp`.`accountID` */;
+/*!50001 CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `view_employee` AS select `acc`.`id` AS `AID`,concat(`pro`.`firstName`,' ',`pro`.`middleName`,' ',`pro`.`lastName`) AS `FULLNAME`,`pro`.`firstName` AS `FIRST NAME`,`pro`.`middleName` AS `MIDDLE NAME`,`pro`.`lastName` AS `LAST NAME`,`acc`.`username` AS `USERNAME`,`acc`.`password` AS `PASSWORD`,`role`.`roleName` AS `ROLE`,`emp`.`status` AS `EMPLOYEE STATUS`,`emp`.`lastLogin` AS `EMPLOYEE LAST ONLINE`,`emp`.`workShift` AS `WORKSHIFT`,`emp`.`salaryPerHour` AS `HOURLY RATE`,`pro`.`contactNo` AS `CONTACT NUMBER`,`pro`.`emailAddress` AS `EMAIL ADDRESS`,`pro`.`address` AS `ADDRESS`,`pro`.`gender` AS `GENDER`,`pro`.`birthdate` AS `BIRTHDATE`,`emp`.`employmentDate` AS `EMPLOYMENT DATE`,`pro`.`image` AS `IMAGE` from (((`tblprofile` `pro` join `tblaccount` `acc`) join `tblemployee` `emp`) join `tblrole` `role`) where `pro`.`id` = `acc`.`profileID` and `role`.`id` = `acc`.`roleID` and `acc`.`id` = `emp`.`accountID` */;
 
 /*View structure for view view_guest */
 
 /*!50001 DROP TABLE IF EXISTS `view_guest` */;
 /*!50001 DROP VIEW IF EXISTS `view_guest` */;
 
-/*!50001 CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `view_guest` AS select `acc`.`id` AS `AID`,`pro`.`firstName` AS `FIRST NAME`,`pro`.`middleName` AS `MIDDLE NAME`,`pro`.`lastName` AS `LAST NAME`,`mem`.`membershipStatus` AS `MEMBERSHIP`,`am`.`accountStatus` AS `STATUS`,`acc`.`username` AS `USERNAME`,`acc`.`password` AS `PASSWORD`,`pro`.`contactNo` AS `CONTACT NUMBER`,`pro`.`emailAddress` AS `EMAIL ADDRESS`,`pro`.`address` AS `ADDRESS`,`pro`.`gender` AS `GENDER`,`pro`.`birthdate` AS `BIRTHDATE`,`acc`.`dateCreated` AS `ACCOUNT CREATED ON`,`pro`.`image` AS `IMAGE` from ((((`tblaccount` `acc` join `tblprofile` `pro`) join `tblmembership` `mem`) join `tblaccount_membership` `am`) join `tblrole` `role`) where `acc`.`id` = `am`.`accountID` and `acc`.`profileID` = `pro`.`id` and `acc`.`roleID` = `role`.`id` and `mem`.`id` = `am`.`membershipID` */;
+/*!50001 CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `view_guest` AS select `acc`.`id` AS `AID`,concat(`pro`.`firstName`,' ',`pro`.`middleName`,' ',`pro`.`lastName`) AS `FULLNAME`,`pro`.`firstName` AS `FIRST NAME`,`pro`.`middleName` AS `MIDDLE NAME`,`pro`.`lastName` AS `LAST NAME`,`mem`.`membershipStatus` AS `MEMBERSHIP`,`am`.`accountStatus` AS `STATUS`,`acc`.`username` AS `USERNAME`,`acc`.`password` AS `PASSWORD`,`pro`.`contactNo` AS `CONTACT NUMBER`,`pro`.`emailAddress` AS `EMAIL ADDRESS`,`pro`.`address` AS `ADDRESS`,`pro`.`gender` AS `GENDER`,`pro`.`birthdate` AS `BIRTHDATE`,`acc`.`dateCreated` AS `ACCOUNT CREATED ON`,`pro`.`image` AS `IMAGE` from ((((`tblaccount` `acc` join `tblprofile` `pro`) join `tblmembership` `mem`) join `tblaccount_membership` `am`) join `tblrole` `role`) where `acc`.`id` = `am`.`accountID` and `acc`.`profileID` = `pro`.`id` and `acc`.`roleID` = `role`.`id` and `mem`.`id` = `am`.`membershipID` */;
 
 /*View structure for view view_reservation */
 
