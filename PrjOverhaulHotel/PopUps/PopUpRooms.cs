@@ -28,6 +28,7 @@ namespace PrjOverhaulHotel.PopUps
         {
             GlobalProcedure.fncDatabaseConnection();
             displayAvailableRooms();
+            roomStatusUpdate();
         }
 
         private void displayAvailableRooms()
@@ -39,10 +40,10 @@ namespace PrjOverhaulHotel.PopUps
                 foreach (DataRow row1 in GlobalProcedure.datHotel.Rows)
                 {
                     dtgRooms.Rows.Add(
-                        row1["id"].ToString(),
-                        row1["roomName"].ToString(),
-                        row1["roomType"].ToString(),
-                        $"₱{Convert.ToDouble(row1["pricePerDay"].ToString()):F2}"
+                        row1["ROOM_ID"].ToString(),
+                        row1["ROOM_NAME"].ToString(),
+                        row1["ROOM_TYPE"].ToString(),
+                        $"₱{Convert.ToDouble(row1["PRICE_PER_DAY"].ToString()):F2}"
                     );
                 }
             }
@@ -61,6 +62,11 @@ namespace PrjOverhaulHotel.PopUps
         private void btnCancel_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void roomStatusUpdate()
+        {
+            GlobalProcedure.procRoomCheckRoomStatus(DateTime.Now.ToString("yyyy-MM-dd"));
         }
     }
 }

@@ -239,5 +239,15 @@ namespace PrjOverhaulHotel
         {
             new PopUpInfo(Convert.ToInt32(dtgReservations.CurrentRow.Cells[0].Value)).ShowDialog();
         }
+
+        private void btnHide_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void btnAddReservation_Click(object sender, EventArgs e)
+        {
+            new PopUpReservation().ShowDialog();
+        }
     }
 }

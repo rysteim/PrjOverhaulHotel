@@ -29,19 +29,18 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle19 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle20 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle21 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle22 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle23 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle24 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmGuestAP));
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2CustomGradientPanel1 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.btnHide = new Guna.UI2.WinForms.Guna2CircleButton();
-            this.btnMaximize = new Guna.UI2.WinForms.Guna2CircleButton();
             this.btnExit = new Guna.UI2.WinForms.Guna2CircleButton();
             this.pnlButtons = new Guna.UI2.WinForms.Guna2Panel();
             this.btnLogout = new Guna.UI2.WinForms.Guna2GradientButton();
@@ -115,7 +114,6 @@
             this.guna2CustomGradientPanel1.Controls.Add(this.pictureBox3);
             this.guna2CustomGradientPanel1.Controls.Add(this.pictureBox2);
             this.guna2CustomGradientPanel1.Controls.Add(this.btnHide);
-            this.guna2CustomGradientPanel1.Controls.Add(this.btnMaximize);
             this.guna2CustomGradientPanel1.Controls.Add(this.btnExit);
             this.guna2CustomGradientPanel1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(154)))), ((int)(((byte)(136)))));
             this.guna2CustomGradientPanel1.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(220)))), ((int)(((byte)(195)))));
@@ -159,31 +157,14 @@
             this.btnHide.ForeColor = System.Drawing.Color.White;
             this.btnHide.HoverState.Parent = this.btnHide;
             this.btnHide.Image = global::PrjOverhaulHotel.Properties.Resources.minus;
-            this.btnHide.Location = new System.Drawing.Point(858, 5);
+            this.btnHide.Location = new System.Drawing.Point(920, 5);
             this.btnHide.Margin = new System.Windows.Forms.Padding(1);
             this.btnHide.Name = "btnHide";
             this.btnHide.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
             this.btnHide.ShadowDecoration.Parent = this.btnHide;
             this.btnHide.Size = new System.Drawing.Size(35, 35);
             this.btnHide.TabIndex = 2;
-            // 
-            // btnMaximize
-            // 
-            this.btnMaximize.BackColor = System.Drawing.Color.Transparent;
-            this.btnMaximize.CheckedState.Parent = this.btnMaximize;
-            this.btnMaximize.CustomImages.Parent = this.btnMaximize;
-            this.btnMaximize.FillColor = System.Drawing.Color.Yellow;
-            this.btnMaximize.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnMaximize.ForeColor = System.Drawing.Color.White;
-            this.btnMaximize.HoverState.Parent = this.btnMaximize;
-            this.btnMaximize.Image = global::PrjOverhaulHotel.Properties.Resources.maximize;
-            this.btnMaximize.Location = new System.Drawing.Point(908, 5);
-            this.btnMaximize.Margin = new System.Windows.Forms.Padding(1);
-            this.btnMaximize.Name = "btnMaximize";
-            this.btnMaximize.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.btnMaximize.ShadowDecoration.Parent = this.btnMaximize;
-            this.btnMaximize.Size = new System.Drawing.Size(35, 35);
-            this.btnMaximize.TabIndex = 1;
+            this.btnHide.Click += new System.EventHandler(this.btnHide_Click);
             // 
             // btnExit
             // 
@@ -202,6 +183,7 @@
             this.btnExit.ShadowDecoration.Parent = this.btnExit;
             this.btnExit.Size = new System.Drawing.Size(35, 35);
             this.btnExit.TabIndex = 0;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
             // pnlButtons
             // 
@@ -416,14 +398,14 @@
             this.dtgPromo.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dtgPromo.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
             this.dtgPromo.BackgroundColor = System.Drawing.Color.White;
-            dataGridViewCellStyle19.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle19.BackColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle19.Font = new System.Drawing.Font("Microsoft New Tai Lue", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle19.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle19.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(135)))), ((int)(((byte)(97)))));
-            dataGridViewCellStyle19.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle19.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dtgPromo.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle19;
+            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle13.BackColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle13.Font = new System.Drawing.Font("Microsoft New Tai Lue", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle13.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle13.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(135)))), ((int)(((byte)(97)))));
+            dataGridViewCellStyle13.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle13.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dtgPromo.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle13;
             this.dtgPromo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtgPromo.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn1,
@@ -437,20 +419,20 @@
             this.dtgPromo.Name = "dtgPromo";
             this.dtgPromo.ReadOnly = true;
             this.dtgPromo.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken;
-            dataGridViewCellStyle20.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle20.BackColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle20.Font = new System.Drawing.Font("Microsoft New Tai Lue", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle20.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle20.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(135)))), ((int)(((byte)(97)))));
-            dataGridViewCellStyle20.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle20.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dtgPromo.RowHeadersDefaultCellStyle = dataGridViewCellStyle20;
-            dataGridViewCellStyle21.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle21.Font = new System.Drawing.Font("Microsoft New Tai Lue", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle21.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle21.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(135)))), ((int)(((byte)(97)))));
-            dataGridViewCellStyle21.SelectionForeColor = System.Drawing.Color.White;
-            this.dtgPromo.RowsDefaultCellStyle = dataGridViewCellStyle21;
+            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle14.BackColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle14.Font = new System.Drawing.Font("Microsoft New Tai Lue", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle14.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(135)))), ((int)(((byte)(97)))));
+            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dtgPromo.RowHeadersDefaultCellStyle = dataGridViewCellStyle14;
+            dataGridViewCellStyle15.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle15.Font = new System.Drawing.Font("Microsoft New Tai Lue", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle15.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle15.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(135)))), ((int)(((byte)(97)))));
+            dataGridViewCellStyle15.SelectionForeColor = System.Drawing.Color.White;
+            this.dtgPromo.RowsDefaultCellStyle = dataGridViewCellStyle15;
             this.dtgPromo.Size = new System.Drawing.Size(432, 169);
             this.dtgPromo.TabIndex = 58;
             // 
@@ -487,14 +469,14 @@
             this.dtgAddons.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dtgAddons.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
             this.dtgAddons.BackgroundColor = System.Drawing.Color.White;
-            dataGridViewCellStyle22.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle22.BackColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle22.Font = new System.Drawing.Font("Microsoft New Tai Lue", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle22.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle22.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(135)))), ((int)(((byte)(97)))));
-            dataGridViewCellStyle22.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle22.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dtgAddons.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle22;
+            dataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle16.BackColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle16.Font = new System.Drawing.Font("Microsoft New Tai Lue", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle16.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle16.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(135)))), ((int)(((byte)(97)))));
+            dataGridViewCellStyle16.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle16.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dtgAddons.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle16;
             this.dtgAddons.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtgAddons.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
@@ -508,20 +490,20 @@
             this.dtgAddons.Name = "dtgAddons";
             this.dtgAddons.ReadOnly = true;
             this.dtgAddons.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken;
-            dataGridViewCellStyle23.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle23.BackColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle23.Font = new System.Drawing.Font("Microsoft New Tai Lue", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle23.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle23.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(135)))), ((int)(((byte)(97)))));
-            dataGridViewCellStyle23.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle23.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dtgAddons.RowHeadersDefaultCellStyle = dataGridViewCellStyle23;
-            dataGridViewCellStyle24.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle24.Font = new System.Drawing.Font("Microsoft New Tai Lue", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle24.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle24.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(135)))), ((int)(((byte)(97)))));
-            dataGridViewCellStyle24.SelectionForeColor = System.Drawing.Color.White;
-            this.dtgAddons.RowsDefaultCellStyle = dataGridViewCellStyle24;
+            dataGridViewCellStyle17.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle17.BackColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle17.Font = new System.Drawing.Font("Microsoft New Tai Lue", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle17.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle17.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(135)))), ((int)(((byte)(97)))));
+            dataGridViewCellStyle17.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle17.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dtgAddons.RowHeadersDefaultCellStyle = dataGridViewCellStyle17;
+            dataGridViewCellStyle18.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle18.Font = new System.Drawing.Font("Microsoft New Tai Lue", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle18.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle18.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(135)))), ((int)(((byte)(97)))));
+            dataGridViewCellStyle18.SelectionForeColor = System.Drawing.Color.White;
+            this.dtgAddons.RowsDefaultCellStyle = dataGridViewCellStyle18;
             this.dtgAddons.Size = new System.Drawing.Size(432, 169);
             this.dtgAddons.TabIndex = 57;
             // 
@@ -1097,7 +1079,6 @@
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox2;
         private Guna.UI2.WinForms.Guna2CircleButton btnHide;
-        private Guna.UI2.WinForms.Guna2CircleButton btnMaximize;
         private Guna.UI2.WinForms.Guna2CircleButton btnExit;
         private Guna.UI2.WinForms.Guna2Panel pnlButtons;
         private Guna.UI2.WinForms.Guna2GradientButton btnLogout;

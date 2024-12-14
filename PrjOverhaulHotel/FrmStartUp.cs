@@ -70,6 +70,11 @@ namespace PrjOverhaulHotel
             }
         }
 
+        private void btnHide_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
+
         private void btnLogin_Click(object sender, EventArgs e)
         {
             GlobalProcedure.procLogIn(txtUsername.Text, txtPassword.Text);

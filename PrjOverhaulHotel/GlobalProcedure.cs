@@ -1028,6 +1028,28 @@ namespace PrjOverhaulHotel
             }
         }
 
+        public static void procPromoGetByID(int promoID)
+        {
+            try
+            {
+                mySqlDataAdapter = new MySqlDataAdapter();
+                datHotel = new DataTable();
+
+                sqlCommand.Parameters.Clear();
+                sqlCommand.CommandText = "proc_promoGetByID";
+                sqlCommand.CommandType = CommandType.StoredProcedure;
+                sqlCommand.Parameters.AddWithValue("@p_id", promoID);
+
+                mySqlDataAdapter.SelectCommand = GlobalProcedure.sqlCommand;
+                datHotel.Clear();
+                mySqlDataAdapter.Fill(GlobalProcedure.datHotel);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error: {ex}", "Error!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
         // RESERVATION PROCEDURES
 
         public static void procReservationData()
@@ -1066,6 +1088,27 @@ namespace PrjOverhaulHotel
                 mySqlDataAdapter.SelectCommand = GlobalProcedure.sqlCommand;
                 datHotel.Clear();
                 mySqlDataAdapter.Fill(GlobalProcedure.datHotel);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error: {ex}", "Error!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        public static void procReservationAdd(int accountID, int promoID, string invoice, 
+            string bookingDate)
+        {
+            try
+            {
+                sqlCommand.Parameters.Clear();
+                sqlCommand.CommandText = "proc_reservationAdd";
+                sqlCommand.CommandType = CommandType.StoredProcedure;
+                sqlCommand.Parameters.AddWithValue("@p_accountID", accountID);
+                sqlCommand.Parameters.AddWithValue("@p_promoID", promoID);
+                sqlCommand.Parameters.AddWithValue("@p_invoice", invoice);
+                sqlCommand.Parameters.AddWithValue("@p_bookingDate", bookingDate);
+                sqlCommand.ExecuteNonQuery();
+                MessageBox.Show("Reservation added successfully.");
             }
             catch (Exception ex)
             {

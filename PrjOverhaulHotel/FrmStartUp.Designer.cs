@@ -45,7 +45,6 @@
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.btnHide = new Guna.UI2.WinForms.Guna2CircleButton();
-            this.btnMaximize = new Guna.UI2.WinForms.Guna2CircleButton();
             this.btnExit = new Guna.UI2.WinForms.Guna2CircleButton();
             this.guna2CustomGradientPanel2 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
             this.btnServices = new Guna.UI2.WinForms.Guna2GradientTileButton();
@@ -245,7 +244,6 @@
             this.guna2CustomGradientPanel1.Controls.Add(this.pictureBox3);
             this.guna2CustomGradientPanel1.Controls.Add(this.pictureBox2);
             this.guna2CustomGradientPanel1.Controls.Add(this.btnHide);
-            this.guna2CustomGradientPanel1.Controls.Add(this.btnMaximize);
             this.guna2CustomGradientPanel1.Controls.Add(this.btnExit);
             this.guna2CustomGradientPanel1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(154)))), ((int)(((byte)(136)))));
             this.guna2CustomGradientPanel1.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(220)))), ((int)(((byte)(195)))));
@@ -289,31 +287,14 @@
             this.btnHide.ForeColor = System.Drawing.Color.White;
             this.btnHide.HoverState.Parent = this.btnHide;
             this.btnHide.Image = global::PrjOverhaulHotel.Properties.Resources.minus;
-            this.btnHide.Location = new System.Drawing.Point(858, 5);
+            this.btnHide.Location = new System.Drawing.Point(920, 5);
             this.btnHide.Margin = new System.Windows.Forms.Padding(1);
             this.btnHide.Name = "btnHide";
             this.btnHide.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
             this.btnHide.ShadowDecoration.Parent = this.btnHide;
             this.btnHide.Size = new System.Drawing.Size(35, 35);
             this.btnHide.TabIndex = 2;
-            // 
-            // btnMaximize
-            // 
-            this.btnMaximize.BackColor = System.Drawing.Color.Transparent;
-            this.btnMaximize.CheckedState.Parent = this.btnMaximize;
-            this.btnMaximize.CustomImages.Parent = this.btnMaximize;
-            this.btnMaximize.FillColor = System.Drawing.Color.Yellow;
-            this.btnMaximize.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnMaximize.ForeColor = System.Drawing.Color.White;
-            this.btnMaximize.HoverState.Parent = this.btnMaximize;
-            this.btnMaximize.Image = global::PrjOverhaulHotel.Properties.Resources.maximize;
-            this.btnMaximize.Location = new System.Drawing.Point(908, 5);
-            this.btnMaximize.Margin = new System.Windows.Forms.Padding(1);
-            this.btnMaximize.Name = "btnMaximize";
-            this.btnMaximize.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.btnMaximize.ShadowDecoration.Parent = this.btnMaximize;
-            this.btnMaximize.Size = new System.Drawing.Size(35, 35);
-            this.btnMaximize.TabIndex = 1;
+            this.btnHide.Click += new System.EventHandler(this.btnHide_Click);
             // 
             // btnExit
             // 
@@ -481,7 +462,6 @@
         #endregion
 
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse1;
-        private Guna.UI2.WinForms.Guna2CircleButton btnMaximize;
         private Guna.UI2.WinForms.Guna2CircleButton btnExit;
         private Guna.UI2.WinForms.Guna2CircleButton btnHide;
         private Guna.UI2.WinForms.Guna2TextBox txtPassword;

@@ -50,6 +50,11 @@
             this.pnlRooms = new Guna.UI2.WinForms.Guna2Panel();
             this.btnDelete = new Guna.UI2.WinForms.Guna2GradientTileButton();
             this.dtgRooms = new System.Windows.Forms.DataGridView();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.guna2GradientPanel5 = new Guna.UI2.WinForms.Guna2GradientPanel();
             this.guna2Separator9 = new Guna.UI2.WinForms.Guna2Separator();
             this.label14 = new System.Windows.Forms.Label();
@@ -72,11 +77,6 @@
             this.lblName = new System.Windows.Forms.Label();
             this.lblPosition = new System.Windows.Forms.Label();
             this.lblTitle = new System.Windows.Forms.Label();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.guna2CustomGradientPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -143,7 +143,7 @@
             this.btnHide.ForeColor = System.Drawing.Color.White;
             this.btnHide.HoverState.Parent = this.btnHide;
             this.btnHide.Image = global::PrjOverhaulHotel.Properties.Resources.minus;
-            this.btnHide.Location = new System.Drawing.Point(913, 5);
+            this.btnHide.Location = new System.Drawing.Point(920, 5);
             this.btnHide.Margin = new System.Windows.Forms.Padding(1);
             this.btnHide.Name = "btnHide";
             this.btnHide.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
@@ -488,6 +488,37 @@
             this.dtgRooms.TabIndex = 36;
             this.dtgRooms.MouseEnter += new System.EventHandler(this.pnlButtons_MouseLeave);
             // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "ID";
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            this.Column1.Visible = false;
+            // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "Room Name";
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
+            // 
+            // Column3
+            // 
+            this.Column3.HeaderText = "Type";
+            this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
+            // 
+            // Column6
+            // 
+            this.Column6.HeaderText = "Price Per Day";
+            this.Column6.Name = "Column6";
+            this.Column6.ReadOnly = true;
+            // 
+            // Column4
+            // 
+            this.Column4.HeaderText = "Status";
+            this.Column4.Name = "Column4";
+            this.Column4.ReadOnly = true;
+            // 
             // guna2GradientPanel5
             // 
             this.guna2GradientPanel5.BorderRadius = 15;
@@ -827,37 +858,6 @@
             this.lblTitle.Text = "Rooms";
             this.lblTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.lblTitle.MouseEnter += new System.EventHandler(this.pnlButtons_MouseLeave);
-            // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "ID";
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
-            this.Column1.Visible = false;
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "Room Name";
-            this.Column2.Name = "Column2";
-            this.Column2.ReadOnly = true;
-            // 
-            // Column3
-            // 
-            this.Column3.HeaderText = "Type";
-            this.Column3.Name = "Column3";
-            this.Column3.ReadOnly = true;
-            // 
-            // Column6
-            // 
-            this.Column6.HeaderText = "Price Per Day";
-            this.Column6.Name = "Column6";
-            this.Column6.ReadOnly = true;
-            // 
-            // Column4
-            // 
-            this.Column4.HeaderText = "Status";
-            this.Column4.Name = "Column4";
-            this.Column4.ReadOnly = true;
             // 
             // FrmStaffRoom
             // 

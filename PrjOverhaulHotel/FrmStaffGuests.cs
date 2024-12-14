@@ -278,5 +278,10 @@ namespace PrjOverhaulHotel
             GlobalProcedure.procGuestDelete(Convert.ToInt32(dtgGuests.CurrentRow.Cells[0].Value));
             displayGuests();
         }
+
+        private void btnHide_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
     }
 }

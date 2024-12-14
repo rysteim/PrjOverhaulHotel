@@ -70,14 +70,9 @@ namespace PrjOverhaulHotel
 
         private void btnHide_Click(object sender, EventArgs e)
         {
-            this.WindowState = FormWindowState.Normal;
+            this.WindowState = FormWindowState.Minimized;
         }
-
-        private void btnMaximize_Click(object sender, EventArgs e)
-        {
-            this.WindowState = FormWindowState.Maximized;
-            this.TopMost = true;
-        }
+        
 
         private void btnProfile_MouseEnter(object sender, EventArgs e)
         {

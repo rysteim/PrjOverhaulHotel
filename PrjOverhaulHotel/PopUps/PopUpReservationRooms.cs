@@ -45,12 +45,12 @@ namespace PrjOverhaulHotel.PopUps
                 {
                     dtgRooms.Rows.Add(
                         row1["RRID"].ToString(),
-                        row1["ROOM NAME"].ToString(),
-                        row1["ROOM TYPE"].ToString(),
-                        $"₱{Convert.ToDouble(row1["PRICE PER DAY"].ToString()):F2}",
-                        $"₱{Convert.ToDouble(row1["TOTAL PRICE"].ToString()):F2}",
-                        Convert.ToDateTime(row1["CHECK-IN DATE"].ToString()).ToString("yyyy-MM-dd"),
-                        Convert.ToDateTime(row1["CHECK-OUT DATE"].ToString()).ToString("yyyy-MM-dd")
+                        row1["ROOM_NAME"].ToString(),
+                        row1["ROOM_TYPE"].ToString(),
+                        $"₱{Convert.ToDouble(row1["PRICE_PER_DAY"].ToString()):F2}",
+                        $"₱{Convert.ToDouble(row1["TOTAL_PRICE"].ToString()):F2}",
+                        Convert.ToDateTime(row1["CHECK-IN_DATE"].ToString()).ToString("yyyy-MM-dd"),
+                        Convert.ToDateTime(row1["CHECK-OUT_DATE"].ToString()).ToString("yyyy-MM-dd")
                     );
                 }
             }
@@ -90,8 +90,6 @@ namespace PrjOverhaulHotel.PopUps
                 displayRoomPriceEdit();
             }
         }
-
-        //private void displayRoo
 
         private void displayRoomPriceAdd()
         {
@@ -265,7 +263,7 @@ namespace PrjOverhaulHotel.PopUps
 
                 GlobalProcedure.procRoomReservationAdd(reservationID, UserAccount.getRoomID(),
                     dtmAddCheckin.Value.ToString("yyyy-MM-dd"), dtmAddCheckout.Value.ToString("yyyy-MM-dd"), roomPrice);
-                GlobalProcedure.procRoomReserveStatus(UserAccount.getRoomID());
+                GlobalProcedure.procReservationGetTotalAmount(reservationID);
                 GlobalProcedure.procReservationGetTotalDays(reservationID);
                 if (GlobalProcedure.datHotel.Rows.Count > 0)
                     GlobalProcedure.procReservationSetTotalDays(reservationID, Convert.ToInt32(GlobalProcedure.datHotel.Rows[0]["TOTAL DAYS"].ToString()));
@@ -295,10 +293,9 @@ namespace PrjOverhaulHotel.PopUps
                 pnlAdd.Visible = false;
                 pnlEdit.Visible = false;
 
-                GlobalProcedure.procRoomAvailableStatus(prevRoomID);
                 GlobalProcedure.procRoomReservationUpdate(Convert.ToInt32(dtgRooms.CurrentRow.Cells[0].Value), reservationID, UserAccount.getRoomID(),
                     dtmEditCheckin.Value.ToString("yyyy-MM-dd"), dtmEditCheckout.Value.ToString("yyyy-MM-dd"), roomPrice);
-                GlobalProcedure.procRoomReserveStatus(UserAccount.getRoomID());
+                GlobalProcedure.procReservationGetTotalAmount(reservationID);
 
                 UserAccount.setRoomID(-1);
                 roomPrice = 0;

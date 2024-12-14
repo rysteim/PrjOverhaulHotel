@@ -102,7 +102,8 @@ namespace PrjOverhaulHotel.PopUps
 
         private void btnSelect_Click(object sender, EventArgs e)
         {
-
+            UserAccount.setAccountID(Convert.ToInt32(dtgAccounts.CurrentRow.Cells[0].Value));
+            this.Close();
         }
     }
 }

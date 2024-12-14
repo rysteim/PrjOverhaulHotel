@@ -41,5 +41,15 @@ namespace PrjOverhaulHotel.Form_for_Guests
             new FrmGuestHistory().Show();
             this.Hide();
         }
+
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void btnHide_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
     }
 }

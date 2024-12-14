@@ -55,18 +55,18 @@
             this.cartesianChart1 = new LiveCharts.WinForms.CartesianChart();
             this.btnGuestView = new Guna.UI2.WinForms.Guna2GradientTileButton();
             this.guna2Panel3 = new Guna.UI2.WinForms.Guna2Panel();
-            this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2Panel4 = new Guna.UI2.WinForms.Guna2Panel();
-            this.guna2Panel5 = new Guna.UI2.WinForms.Guna2Panel();
-            this.guna2Panel6 = new Guna.UI2.WinForms.Guna2Panel();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
             this.lblActiveRooms = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.guna2Panel5 = new Guna.UI2.WinForms.Guna2Panel();
             this.lblPresentGuests = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.guna2Panel6 = new Guna.UI2.WinForms.Guna2Panel();
             this.lblOnlinePersonnels = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
             this.lblRevenue = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
             this.guna2CustomGradientPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -75,10 +75,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.imgProfile)).BeginInit();
             this.guna2Panel1.SuspendLayout();
             this.guna2Panel3.SuspendLayout();
-            this.guna2Panel2.SuspendLayout();
             this.guna2Panel4.SuspendLayout();
             this.guna2Panel5.SuspendLayout();
             this.guna2Panel6.SuspendLayout();
+            this.guna2Panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // guna2Elipse1
@@ -135,7 +135,7 @@
             this.btnHide.ForeColor = System.Drawing.Color.White;
             this.btnHide.HoverState.Parent = this.btnHide;
             this.btnHide.Image = global::PrjOverhaulHotel.Properties.Resources.minus;
-            this.btnHide.Location = new System.Drawing.Point(908, 5);
+            this.btnHide.Location = new System.Drawing.Point(920, 5);
             this.btnHide.Margin = new System.Windows.Forms.Padding(1);
             this.btnHide.Name = "btnHide";
             this.btnHide.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
@@ -552,25 +552,6 @@
             this.guna2Panel3.Size = new System.Drawing.Size(883, 154);
             this.guna2Panel3.TabIndex = 32;
             // 
-            // guna2Panel2
-            // 
-            this.guna2Panel2.BackColor = System.Drawing.Color.Transparent;
-            this.guna2Panel2.BorderColor = System.Drawing.Color.WhiteSmoke;
-            this.guna2Panel2.BorderRadius = 10;
-            this.guna2Panel2.BorderThickness = 1;
-            this.guna2Panel2.Controls.Add(this.lblRevenue);
-            this.guna2Panel2.Controls.Add(this.label5);
-            this.guna2Panel2.FillColor = System.Drawing.Color.White;
-            this.guna2Panel2.Location = new System.Drawing.Point(684, 20);
-            this.guna2Panel2.Name = "guna2Panel2";
-            this.guna2Panel2.ShadowDecoration.BorderRadius = 10;
-            this.guna2Panel2.ShadowDecoration.Color = System.Drawing.Color.WhiteSmoke;
-            this.guna2Panel2.ShadowDecoration.Depth = 60;
-            this.guna2Panel2.ShadowDecoration.Enabled = true;
-            this.guna2Panel2.ShadowDecoration.Parent = this.guna2Panel2;
-            this.guna2Panel2.Size = new System.Drawing.Size(175, 110);
-            this.guna2Panel2.TabIndex = 33;
-            // 
             // guna2Panel4
             // 
             this.guna2Panel4.BackColor = System.Drawing.Color.Transparent;
@@ -589,6 +570,25 @@
             this.guna2Panel4.ShadowDecoration.Parent = this.guna2Panel4;
             this.guna2Panel4.Size = new System.Drawing.Size(175, 110);
             this.guna2Panel4.TabIndex = 34;
+            // 
+            // lblActiveRooms
+            // 
+            this.lblActiveRooms.Font = new System.Drawing.Font("Nirmala UI", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblActiveRooms.Location = new System.Drawing.Point(0, 0);
+            this.lblActiveRooms.Name = "lblActiveRooms";
+            this.lblActiveRooms.Size = new System.Drawing.Size(175, 76);
+            this.lblActiveRooms.TabIndex = 34;
+            this.lblActiveRooms.Text = " 0";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Nirmala UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(11, 85);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(86, 13);
+            this.label2.TabIndex = 33;
+            this.label2.Text = "ACTIVE ROOMS";
             // 
             // guna2Panel5
             // 
@@ -609,6 +609,25 @@
             this.guna2Panel5.Size = new System.Drawing.Size(175, 110);
             this.guna2Panel5.TabIndex = 34;
             // 
+            // lblPresentGuests
+            // 
+            this.lblPresentGuests.Font = new System.Drawing.Font("Nirmala UI", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPresentGuests.Location = new System.Drawing.Point(0, 0);
+            this.lblPresentGuests.Name = "lblPresentGuests";
+            this.lblPresentGuests.Size = new System.Drawing.Size(175, 76);
+            this.lblPresentGuests.TabIndex = 35;
+            this.lblPresentGuests.Text = " 0";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Nirmala UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(11, 85);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(93, 13);
+            this.label3.TabIndex = 34;
+            this.label3.Text = "PRESENT GUESTS";
+            // 
             // guna2Panel6
             // 
             this.guna2Panel6.BackColor = System.Drawing.Color.Transparent;
@@ -628,81 +647,62 @@
             this.guna2Panel6.Size = new System.Drawing.Size(175, 110);
             this.guna2Panel6.TabIndex = 34;
             // 
-            // label2
+            // lblOnlinePersonnels
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Adobe Fan Heiti Std B", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label2.Location = new System.Drawing.Point(11, 85);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(84, 14);
-            this.label2.TabIndex = 33;
-            this.label2.Text = "ACTIVE ROOMS";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Adobe Fan Heiti Std B", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label3.Location = new System.Drawing.Point(11, 85);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(94, 14);
-            this.label3.TabIndex = 34;
-            this.label3.Text = "PRESENT GUESTS";
+            this.lblOnlinePersonnels.Font = new System.Drawing.Font("Nirmala UI", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblOnlinePersonnels.Location = new System.Drawing.Point(0, 0);
+            this.lblOnlinePersonnels.Name = "lblOnlinePersonnels";
+            this.lblOnlinePersonnels.Size = new System.Drawing.Size(175, 76);
+            this.lblOnlinePersonnels.TabIndex = 36;
+            this.lblOnlinePersonnels.Text = " 0";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Adobe Fan Heiti Std B", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.label4.Font = new System.Drawing.Font("Nirmala UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(11, 85);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(115, 14);
+            this.label4.Size = new System.Drawing.Size(116, 13);
             this.label4.TabIndex = 34;
             this.label4.Text = "ONLINE PERSONNELS";
+            // 
+            // guna2Panel2
+            // 
+            this.guna2Panel2.BackColor = System.Drawing.Color.Transparent;
+            this.guna2Panel2.BorderColor = System.Drawing.Color.WhiteSmoke;
+            this.guna2Panel2.BorderRadius = 10;
+            this.guna2Panel2.BorderThickness = 1;
+            this.guna2Panel2.Controls.Add(this.lblRevenue);
+            this.guna2Panel2.Controls.Add(this.label5);
+            this.guna2Panel2.FillColor = System.Drawing.Color.White;
+            this.guna2Panel2.Location = new System.Drawing.Point(684, 20);
+            this.guna2Panel2.Name = "guna2Panel2";
+            this.guna2Panel2.ShadowDecoration.BorderRadius = 10;
+            this.guna2Panel2.ShadowDecoration.Color = System.Drawing.Color.WhiteSmoke;
+            this.guna2Panel2.ShadowDecoration.Depth = 60;
+            this.guna2Panel2.ShadowDecoration.Enabled = true;
+            this.guna2Panel2.ShadowDecoration.Parent = this.guna2Panel2;
+            this.guna2Panel2.Size = new System.Drawing.Size(175, 110);
+            this.guna2Panel2.TabIndex = 33;
+            // 
+            // lblRevenue
+            // 
+            this.lblRevenue.Font = new System.Drawing.Font("Nirmala UI", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRevenue.Location = new System.Drawing.Point(0, 0);
+            this.lblRevenue.Name = "lblRevenue";
+            this.lblRevenue.Size = new System.Drawing.Size(175, 76);
+            this.lblRevenue.TabIndex = 36;
+            this.lblRevenue.Text = " 0";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Adobe Fan Heiti Std B", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.label5.Font = new System.Drawing.Font("Nirmala UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(11, 85);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(55, 14);
+            this.label5.Size = new System.Drawing.Size(55, 13);
             this.label5.TabIndex = 34;
             this.label5.Text = "REVENUE";
-            // 
-            // lblActiveRooms
-            // 
-            this.lblActiveRooms.Font = new System.Drawing.Font("Adobe Fan Heiti Std B", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.lblActiveRooms.Location = new System.Drawing.Point(0, 8);
-            this.lblActiveRooms.Name = "lblActiveRooms";
-            this.lblActiveRooms.Size = new System.Drawing.Size(175, 68);
-            this.lblActiveRooms.TabIndex = 34;
-            this.lblActiveRooms.Text = " 0";
-            // 
-            // lblPresentGuests
-            // 
-            this.lblPresentGuests.Font = new System.Drawing.Font("Adobe Fan Heiti Std B", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.lblPresentGuests.Location = new System.Drawing.Point(0, 8);
-            this.lblPresentGuests.Name = "lblPresentGuests";
-            this.lblPresentGuests.Size = new System.Drawing.Size(175, 68);
-            this.lblPresentGuests.TabIndex = 35;
-            this.lblPresentGuests.Text = " 0";
-            // 
-            // lblOnlinePersonnels
-            // 
-            this.lblOnlinePersonnels.Font = new System.Drawing.Font("Adobe Fan Heiti Std B", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.lblOnlinePersonnels.Location = new System.Drawing.Point(0, 8);
-            this.lblOnlinePersonnels.Name = "lblOnlinePersonnels";
-            this.lblOnlinePersonnels.Size = new System.Drawing.Size(175, 68);
-            this.lblOnlinePersonnels.TabIndex = 36;
-            this.lblOnlinePersonnels.Text = " 0";
-            // 
-            // lblRevenue
-            // 
-            this.lblRevenue.Font = new System.Drawing.Font("Adobe Fan Heiti Std B", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.lblRevenue.Location = new System.Drawing.Point(0, 8);
-            this.lblRevenue.Name = "lblRevenue";
-            this.lblRevenue.Size = new System.Drawing.Size(175, 68);
-            this.lblRevenue.TabIndex = 36;
-            this.lblRevenue.Text = " 0";
             // 
             // FrmStaffDashboard
             // 
@@ -733,14 +733,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.imgProfile)).EndInit();
             this.guna2Panel1.ResumeLayout(false);
             this.guna2Panel3.ResumeLayout(false);
-            this.guna2Panel2.ResumeLayout(false);
-            this.guna2Panel2.PerformLayout();
             this.guna2Panel4.ResumeLayout(false);
             this.guna2Panel4.PerformLayout();
             this.guna2Panel5.ResumeLayout(false);
             this.guna2Panel5.PerformLayout();
             this.guna2Panel6.ResumeLayout(false);
             this.guna2Panel6.PerformLayout();
+            this.guna2Panel2.ResumeLayout(false);
+            this.guna2Panel2.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -753,8 +753,6 @@
         private Guna.UI2.WinForms.Guna2CustomGradientPanel guna2CustomGradientPanel1;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox2;
-        private Guna.UI2.WinForms.Guna2CircleButton btnHide;
-        private Guna.UI2.WinForms.Guna2CircleButton btnExit;
         private Guna.UI2.WinForms.Guna2GradientButton btnReservation;
         private Guna.UI2.WinForms.Guna2GradientButton btnDashboard;
         private Guna.UI2.WinForms.Guna2GradientButton btnLogout;
@@ -785,5 +783,7 @@
         private System.Windows.Forms.Label lblPresentGuests;
         private System.Windows.Forms.Label lblOnlinePersonnels;
         private System.Windows.Forms.Label lblRevenue;
+        private Guna.UI2.WinForms.Guna2CircleButton btnHide;
+        private Guna.UI2.WinForms.Guna2CircleButton btnExit;
     }
 }

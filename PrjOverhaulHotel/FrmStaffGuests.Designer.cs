@@ -29,15 +29,14 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2CustomGradientPanel1 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.btnHide = new Guna.UI2.WinForms.Guna2CircleButton();
-            this.btnMaximize = new Guna.UI2.WinForms.Guna2CircleButton();
             this.btnExit = new Guna.UI2.WinForms.Guna2CircleButton();
             this.pnlButtons = new Guna.UI2.WinForms.Guna2Panel();
             this.btnLogout = new Guna.UI2.WinForms.Guna2GradientButton();
@@ -52,6 +51,20 @@
             this.btnDelete = new Guna.UI2.WinForms.Guna2GradientTileButton();
             this.imgSelect = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.dtgGuests = new System.Windows.Forms.DataGridView();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.guna2GradientPanel3 = new Guna.UI2.WinForms.Guna2GradientPanel();
             this.guna2Separator6 = new Guna.UI2.WinForms.Guna2Separator();
             this.label7 = new System.Windows.Forms.Label();
@@ -74,20 +87,6 @@
             this.lblName = new System.Windows.Forms.Label();
             this.lblPosition = new System.Windows.Forms.Label();
             this.lblTitle = new System.Windows.Forms.Label();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.guna2CustomGradientPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -111,7 +110,6 @@
             this.guna2CustomGradientPanel1.Controls.Add(this.pictureBox3);
             this.guna2CustomGradientPanel1.Controls.Add(this.pictureBox2);
             this.guna2CustomGradientPanel1.Controls.Add(this.btnHide);
-            this.guna2CustomGradientPanel1.Controls.Add(this.btnMaximize);
             this.guna2CustomGradientPanel1.Controls.Add(this.btnExit);
             this.guna2CustomGradientPanel1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(154)))), ((int)(((byte)(136)))));
             this.guna2CustomGradientPanel1.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(220)))), ((int)(((byte)(195)))));
@@ -155,31 +153,14 @@
             this.btnHide.ForeColor = System.Drawing.Color.White;
             this.btnHide.HoverState.Parent = this.btnHide;
             this.btnHide.Image = global::PrjOverhaulHotel.Properties.Resources.minus;
-            this.btnHide.Location = new System.Drawing.Point(858, 5);
+            this.btnHide.Location = new System.Drawing.Point(920, 5);
             this.btnHide.Margin = new System.Windows.Forms.Padding(1);
             this.btnHide.Name = "btnHide";
             this.btnHide.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
             this.btnHide.ShadowDecoration.Parent = this.btnHide;
             this.btnHide.Size = new System.Drawing.Size(35, 35);
             this.btnHide.TabIndex = 2;
-            // 
-            // btnMaximize
-            // 
-            this.btnMaximize.BackColor = System.Drawing.Color.Transparent;
-            this.btnMaximize.CheckedState.Parent = this.btnMaximize;
-            this.btnMaximize.CustomImages.Parent = this.btnMaximize;
-            this.btnMaximize.FillColor = System.Drawing.Color.Yellow;
-            this.btnMaximize.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnMaximize.ForeColor = System.Drawing.Color.White;
-            this.btnMaximize.HoverState.Parent = this.btnMaximize;
-            this.btnMaximize.Image = global::PrjOverhaulHotel.Properties.Resources.maximize;
-            this.btnMaximize.Location = new System.Drawing.Point(908, 5);
-            this.btnMaximize.Margin = new System.Windows.Forms.Padding(1);
-            this.btnMaximize.Name = "btnMaximize";
-            this.btnMaximize.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.btnMaximize.ShadowDecoration.Parent = this.btnMaximize;
-            this.btnMaximize.Size = new System.Drawing.Size(35, 35);
-            this.btnMaximize.TabIndex = 1;
+            this.btnHide.Click += new System.EventHandler(this.btnHide_Click);
             // 
             // btnExit
             // 
@@ -490,14 +471,14 @@
             this.dtgGuests.AllowUserToDeleteRows = false;
             this.dtgGuests.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
             this.dtgGuests.BackgroundColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft New Tai Lue", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(135)))), ((int)(((byte)(97)))));
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dtgGuests.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft New Tai Lue", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(135)))), ((int)(((byte)(97)))));
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dtgGuests.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.dtgGuests.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtgGuests.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
@@ -521,23 +502,119 @@
             this.dtgGuests.Name = "dtgGuests";
             this.dtgGuests.ReadOnly = true;
             this.dtgGuests.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft New Tai Lue", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(135)))), ((int)(((byte)(97)))));
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dtgGuests.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft New Tai Lue", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(135)))), ((int)(((byte)(97)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
-            this.dtgGuests.RowsDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft New Tai Lue", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(135)))), ((int)(((byte)(97)))));
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dtgGuests.RowHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft New Tai Lue", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(135)))), ((int)(((byte)(97)))));
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.White;
+            this.dtgGuests.RowsDefaultCellStyle = dataGridViewCellStyle6;
             this.dtgGuests.Size = new System.Drawing.Size(660, 218);
             this.dtgGuests.TabIndex = 37;
             this.dtgGuests.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgGuests_CellClick);
+            // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "ID";
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            this.Column1.Visible = false;
+            this.Column1.Width = 52;
+            // 
+            // Column7
+            // 
+            this.Column7.HeaderText = "Membership";
+            this.Column7.Name = "Column7";
+            this.Column7.ReadOnly = true;
+            this.Column7.Width = 131;
+            // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "First Name";
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
+            this.Column2.Width = 150;
+            // 
+            // Column12
+            // 
+            this.Column12.HeaderText = "Middle Name";
+            this.Column12.Name = "Column12";
+            this.Column12.ReadOnly = true;
+            this.Column12.Width = 150;
+            // 
+            // Column13
+            // 
+            this.Column13.HeaderText = "Last Name";
+            this.Column13.Name = "Column13";
+            this.Column13.ReadOnly = true;
+            this.Column13.Width = 150;
+            // 
+            // Column11
+            // 
+            this.Column11.HeaderText = "Username";
+            this.Column11.Name = "Column11";
+            this.Column11.ReadOnly = true;
+            this.Column11.Width = 130;
+            // 
+            // Column9
+            // 
+            this.Column9.HeaderText = "Status";
+            this.Column9.Name = "Column9";
+            this.Column9.ReadOnly = true;
+            // 
+            // Column3
+            // 
+            this.Column3.HeaderText = "Contact No";
+            this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
+            this.Column3.Width = 150;
+            // 
+            // Column8
+            // 
+            this.Column8.HeaderText = "Birthdate";
+            this.Column8.Name = "Column8";
+            this.Column8.ReadOnly = true;
+            this.Column8.Width = 150;
+            // 
+            // Column4
+            // 
+            this.Column4.HeaderText = "Email Address";
+            this.Column4.Name = "Column4";
+            this.Column4.ReadOnly = true;
+            this.Column4.Width = 200;
+            // 
+            // Column5
+            // 
+            this.Column5.HeaderText = "Address";
+            this.Column5.Name = "Column5";
+            this.Column5.ReadOnly = true;
+            this.Column5.Width = 250;
+            // 
+            // Column6
+            // 
+            this.Column6.HeaderText = "Gender";
+            this.Column6.Name = "Column6";
+            this.Column6.ReadOnly = true;
+            // 
+            // Column14
+            // 
+            this.Column14.HeaderText = "Date Created:";
+            this.Column14.Name = "Column14";
+            this.Column14.ReadOnly = true;
+            this.Column14.Width = 200;
+            // 
+            // Column10
+            // 
+            this.Column10.HeaderText = "image";
+            this.Column10.Name = "Column10";
+            this.Column10.ReadOnly = true;
             // 
             // guna2GradientPanel3
             // 
@@ -874,102 +951,6 @@
             this.lblTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.lblTitle.MouseEnter += new System.EventHandler(this.pnlButtons_MouseLeave);
             // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "ID";
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
-            this.Column1.Visible = false;
-            this.Column1.Width = 52;
-            // 
-            // Column7
-            // 
-            this.Column7.HeaderText = "Membership";
-            this.Column7.Name = "Column7";
-            this.Column7.ReadOnly = true;
-            this.Column7.Width = 131;
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "First Name";
-            this.Column2.Name = "Column2";
-            this.Column2.ReadOnly = true;
-            this.Column2.Width = 150;
-            // 
-            // Column12
-            // 
-            this.Column12.HeaderText = "Middle Name";
-            this.Column12.Name = "Column12";
-            this.Column12.ReadOnly = true;
-            this.Column12.Width = 150;
-            // 
-            // Column13
-            // 
-            this.Column13.HeaderText = "Last Name";
-            this.Column13.Name = "Column13";
-            this.Column13.ReadOnly = true;
-            this.Column13.Width = 150;
-            // 
-            // Column11
-            // 
-            this.Column11.HeaderText = "Username";
-            this.Column11.Name = "Column11";
-            this.Column11.ReadOnly = true;
-            this.Column11.Width = 130;
-            // 
-            // Column9
-            // 
-            this.Column9.HeaderText = "Status";
-            this.Column9.Name = "Column9";
-            this.Column9.ReadOnly = true;
-            // 
-            // Column3
-            // 
-            this.Column3.HeaderText = "Contact No";
-            this.Column3.Name = "Column3";
-            this.Column3.ReadOnly = true;
-            this.Column3.Width = 150;
-            // 
-            // Column8
-            // 
-            this.Column8.HeaderText = "Birthdate";
-            this.Column8.Name = "Column8";
-            this.Column8.ReadOnly = true;
-            this.Column8.Width = 150;
-            // 
-            // Column4
-            // 
-            this.Column4.HeaderText = "Email Address";
-            this.Column4.Name = "Column4";
-            this.Column4.ReadOnly = true;
-            this.Column4.Width = 200;
-            // 
-            // Column5
-            // 
-            this.Column5.HeaderText = "Address";
-            this.Column5.Name = "Column5";
-            this.Column5.ReadOnly = true;
-            this.Column5.Width = 250;
-            // 
-            // Column6
-            // 
-            this.Column6.HeaderText = "Gender";
-            this.Column6.Name = "Column6";
-            this.Column6.ReadOnly = true;
-            // 
-            // Column14
-            // 
-            this.Column14.HeaderText = "Date Created:";
-            this.Column14.Name = "Column14";
-            this.Column14.ReadOnly = true;
-            this.Column14.Width = 200;
-            // 
-            // Column10
-            // 
-            this.Column10.HeaderText = "image";
-            this.Column10.Name = "Column10";
-            this.Column10.ReadOnly = true;
-            // 
             // FrmStaffGuests
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1011,7 +992,6 @@
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox2;
         private Guna.UI2.WinForms.Guna2CircleButton btnHide;
-        private Guna.UI2.WinForms.Guna2CircleButton btnMaximize;
         private Guna.UI2.WinForms.Guna2CircleButton btnExit;
         private Guna.UI2.WinForms.Guna2Panel pnlButtons;
         private Guna.UI2.WinForms.Guna2GradientButton btnLogout;

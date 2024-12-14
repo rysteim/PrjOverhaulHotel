@@ -238,6 +238,12 @@
     <Compile Include="PopUps\PopUpPersonnel.Designer.cs">
       <DependentUpon>PopUpPersonnel.cs</DependentUpon>
     </Compile>
+    <Compile Include="PopUps\PopUpPromos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PopUps\PopUpPromos.Designer.cs">
+      <DependentUpon>PopUpPromos.cs</DependentUpon>
+    </Compile>
     <Compile Include="PopUps\PopUpPromosAP.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -336,6 +342,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="PopUps\PopUpPersonnel.resx">
       <DependentUpon>PopUpPersonnel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PopUps\PopUpPromos.resx">
+      <DependentUpon>PopUpPromos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PopUps\PopUpPromosAP.resx">
       <DependentUpon>PopUpPromosAP.cs</DependentUpon>
