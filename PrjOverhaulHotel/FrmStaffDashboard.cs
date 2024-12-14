@@ -1,4 +1,5 @@
 ﻿using Guna.UI2.WinForms;
+using PrjOverhaulHotel.Form_for_Guests;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -24,7 +25,9 @@ namespace PrjOverhaulHotel
         {
             GlobalProcedure.fncDatabaseConnection();
             maximizeButtons();
+            statusOnline();
             displayProfile();
+            displayDetails();
         }
 
         private void btnExit_Click(object sender, EventArgs e)
@@ -134,6 +137,7 @@ namespace PrjOverhaulHotel
 
         private void btnLogout_Click(object sender, EventArgs e)
         {
+            statusOnline();
             FrmStartUp startUp = new FrmStartUp();
             this.Close();
             startUp.Show();
@@ -154,6 +158,24 @@ namespace PrjOverhaulHotel
             {
                 imgProfile.Image = Properties.Resources.rb_8551;
             }
+        }
+
+        private void btnGuestView_Click(object sender, EventArgs e)
+        {
+            new FrmGuestDashboard().Show();
+            this.Hide();
+        }
+
+        private void displayDetails()
+        {
+            GlobalProcedure.procRoomActive(Convert.ToString(DateTime.Now.ToString("yyyy-MM-dd")));
+            //MessageBox.Show($"{DateTime.Now}");
+            lblActiveRooms.Text = GlobalProcedure.datHotel.Rows.Count.ToString();
+        }
+
+        private void statusOnline()
+        {
+            GlobalProcedure.procGuestActive(userID, DateTime.Now.ToString("yyyy-MM-dd HH\\:mm\\:ss"));
         }
     }
 }

@@ -139,9 +139,16 @@ namespace PrjOverhaulHotel
 
         private void btnLogout_Click(object sender, EventArgs e)
         {
+            statusOnline();
             new FrmStartUp().Show();
             this.Hide();
         }
+
+        private void statusOnline()
+        {
+            GlobalProcedure.procGuestActive(userID, DateTime.Now.ToString("yyyy-MM-dd HH\\:mm\\:ss"));
+        }
+
 
         private void displayProfile()
         {

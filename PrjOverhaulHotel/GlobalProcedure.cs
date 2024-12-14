@@ -9,6 +9,7 @@ using MySql.Data.MySqlClient;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
+using System.Net.Mail;
 
 namespace PrjOverhaulHotel
 {
@@ -364,6 +365,67 @@ namespace PrjOverhaulHotel
             }
         }
 
+        public static void procRoomActive(string date)
+        {
+            try
+            {
+                mySqlDataAdapter = new MySqlDataAdapter();
+                datHotel = new DataTable();
+
+                sqlCommand.Parameters.Clear();
+                sqlCommand.CommandText = "proc_roomActive";
+                sqlCommand.Parameters.AddWithValue("@p_date", date);
+                sqlCommand.CommandType = CommandType.StoredProcedure;
+
+                mySqlDataAdapter.SelectCommand = GlobalProcedure.sqlCommand;
+                datHotel.Clear();
+                mySqlDataAdapter.Fill(GlobalProcedure.datHotel);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error: {ex}", "Error!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        public static void procRoomCheckAvailability(int roomID, string date)
+        {
+            try
+            {
+                mySqlDataAdapter = new MySqlDataAdapter();
+                datHotel = new DataTable();
+
+                sqlCommand.Parameters.Clear();
+                sqlCommand.CommandText = "proc_roomCheckAvailability";
+                sqlCommand.Parameters.AddWithValue("@p_roomID", roomID);
+                sqlCommand.Parameters.AddWithValue("@p_date", date);
+                sqlCommand.CommandType = CommandType.StoredProcedure;
+
+                mySqlDataAdapter.SelectCommand = GlobalProcedure.sqlCommand;
+                datHotel.Clear();
+                mySqlDataAdapter.Fill(GlobalProcedure.datHotel);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error: {ex}", "Error!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        public static void procRoomCheckRoomStatus(string date)
+        {
+            try
+            {
+                sqlCommand.Parameters.Clear();
+                sqlCommand.CommandText = "proc_roomCheckRoomStatus";
+                sqlCommand.CommandType = CommandType.StoredProcedure;
+                sqlCommand.Parameters.AddWithValue("@p_date", date);
+                sqlCommand.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error: {ex}", "Error!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
         public static void procRoomGetByName(string roomName)
         {
             try
@@ -603,6 +665,23 @@ namespace PrjOverhaulHotel
             }
         }
 
+        public static void procGuestActive(int accountID, string datetime)
+        {
+            try
+            {
+                sqlCommand.Parameters.Clear();
+                sqlCommand.CommandText = "proc_guestActive";
+                sqlCommand.CommandType = CommandType.StoredProcedure;
+                sqlCommand.Parameters.AddWithValue("@p_id", accountID);
+                sqlCommand.Parameters.AddWithValue("@p_lastOnline", datetime);
+                sqlCommand.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error: {ex}", "Error!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
         public static void procGuestUpdate(int accountID, string firstName, string middleName, string lastName,
             string contactNo, string emailAddress, string address, string gender, string birthdate, string image,
             int membership, string username, string password)
@@ -734,6 +813,39 @@ namespace PrjOverhaulHotel
                 mySqlDataAdapter.SelectCommand = GlobalProcedure.sqlCommand;
                 datHotel.Clear();
                 mySqlDataAdapter.Fill(GlobalProcedure.datHotel);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error: {ex}", "Error!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+        
+        public static void procEmployeeUpdate(int accountID, string firstName, string middleName,
+            string lastName, string username, string password, string roleName, string workShift,
+            double hourlyRate, string contactNo, string emailAdd, string address, string gender,
+            string birthdate, string image)
+        {
+            try
+            {
+                sqlCommand.Parameters.Clear();
+                sqlCommand.CommandText = "proc_employeeUpdate";
+                sqlCommand.CommandType = CommandType.StoredProcedure;
+                sqlCommand.Parameters.AddWithValue("@p_id", accountID);
+                sqlCommand.Parameters.AddWithValue("@p_firstName", firstName);
+                sqlCommand.Parameters.AddWithValue("@p_middleName", middleName);
+                sqlCommand.Parameters.AddWithValue("@p_lastName", lastName);
+                sqlCommand.Parameters.AddWithValue("@p_username", username);
+                sqlCommand.Parameters.AddWithValue("@p_password", password);
+                sqlCommand.Parameters.AddWithValue("@p_roleName", roleName);
+                sqlCommand.Parameters.AddWithValue("@p_workShift", workShift);
+                sqlCommand.Parameters.AddWithValue("@p_hourlyRate", hourlyRate);
+                sqlCommand.Parameters.AddWithValue("@p_contactNo", contactNo);
+                sqlCommand.Parameters.AddWithValue("@p_emailAdd", emailAdd);
+                sqlCommand.Parameters.AddWithValue("@p_address", address);
+                sqlCommand.Parameters.AddWithValue("@p_gender", gender);
+                sqlCommand.Parameters.AddWithValue("@p_birthdate", birthdate);
+                sqlCommand.Parameters.AddWithValue("@p_image", image);
+                sqlCommand.ExecuteNonQuery();
             }
             catch (Exception ex)
             {

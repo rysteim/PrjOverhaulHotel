@@ -63,7 +63,6 @@ namespace PrjOverhaulHotel.PopUps
                 cmbRoomType.Text = GlobalProcedure.datHotel.Rows[0]["roomType"].ToString();
                 txtPricePerDay.Text = GlobalProcedure.datHotel.Rows[0]["pricePerDay"].ToString();
                 txtDescription.Text = GlobalProcedure.datHotel.Rows[0]["description"].ToString();
-                cmbStatus.Text = GlobalProcedure.datHotel.Rows[0]["status"].ToString();
             }
         }
 

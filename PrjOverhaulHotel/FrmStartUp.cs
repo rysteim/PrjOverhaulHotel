@@ -80,6 +80,8 @@ namespace PrjOverhaulHotel
                 firstName = GlobalProcedure.datHotel.Rows[0]["FIRST NAME"].ToString();
                 role = GlobalProcedure.datHotel.Rows[0]["ROLE"].ToString();
                 imageLoc = GlobalProcedure.datHotel.Rows[0]["IMAGE"].ToString();
+                GlobalProcedure.procGuestActive(userID, DateTime.Now.ToString("yyyy-MM-dd HH\\:mm\\:ss"));
+
                 UserAccount.setUserID(userID);
                 UserAccount.setProfile(firstName, role, imageLoc);
                 new FrmStaffDashboard().Show();

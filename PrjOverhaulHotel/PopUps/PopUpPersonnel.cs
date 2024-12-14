@@ -13,7 +13,7 @@ namespace PrjOverhaulHotel.PopUps
     public partial class PopUpPersonnel : Form
     {
         int employeeID, profileID, accountID;
-        string imagePath;
+        string imagePath, imageLoc;
         public PopUpPersonnel()
         {
             InitializeComponent();
@@ -33,6 +33,7 @@ namespace PrjOverhaulHotel.PopUps
             GlobalProcedure.fncDatabaseConnection();
             displayDetails();
             displayRole();
+            //displayImage();
         }
 
         private void displayDetails()
@@ -71,8 +72,34 @@ namespace PrjOverhaulHotel.PopUps
             }
         }
 
+        private void btnUpload_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog profilePic = new OpenFileDialog();
+            profilePic.Filter = "Images Files (*.jpg;*.gif;*.bmp)|*.jpg;*.gif;*.bmp";
+            if (profilePic.ShowDialog() == DialogResult.OK)
+            {
+                imgProfile.Image = new Bitmap(profilePic.FileName);
+                imageLoc = profilePic.FileName;
+            }
+        }
+
         private void btnCancel_Click(object sender, EventArgs e)
         {
+            this.Close();
+        }
+
+        private void btnChooseAcc_Click(object sender, EventArgs e)
+        {
+            new PopUpAccounts().ShowDialog();
+        }
+
+        private void btnSaveGuest_Click(object sender, EventArgs e)
+        {
+            GlobalProcedure.procEmployeeUpdate(accountID, txtFirstname.Text, txtMiddlename.Text,
+                txtLastname.Text, txtUsername.Text, txtPassword.Text, cmbRole.Text, cmbWorkshift.Text,
+                Convert.ToDouble(txtHourlyRate.Text), txtContactno.Text, txtEmailadd.Text,
+                txtAddress.Text, cmbGender.Text, dtmBirthdate.Value.ToString("yyyy-MM-dd"), imageLoc);
+
             this.Close();
         }
 

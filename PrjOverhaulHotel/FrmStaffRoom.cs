@@ -26,6 +26,7 @@ namespace PrjOverhaulHotel
             displayProfile();
             displayRooms();
             displayTypes();
+            roomStatusUpdate();
         }
 
         private void btnExit_Click(object sender, EventArgs e)
@@ -135,8 +136,14 @@ namespace PrjOverhaulHotel
 
         private void btnLogout_Click(object sender, EventArgs e)
         {
+            statusOnline();
             new FrmStartUp().Show();
             this.Hide();
+        }
+
+        private void statusOnline()
+        {
+            GlobalProcedure.procGuestActive(userID, DateTime.Now.ToString("yyyy-MM-dd HH\\:mm\\:ss"));
         }
 
         private void displayProfile()
@@ -167,11 +174,11 @@ namespace PrjOverhaulHotel
                 foreach (DataRow row1 in GlobalProcedure.datHotel.Rows)
                     {
                     dtgRooms.Rows.Add(
-                        row1["id"].ToString(),
-                        row1["roomName"].ToString(),
-                        row1["roomType"].ToString(),
-                        row1["status"].ToString(),
-                        $"₱{Convert.ToDouble(row1["pricePerDay"].ToString()):F2}"
+                        row1["ROOM_ID"].ToString(),
+                        row1["ROOM_NAME"].ToString(),
+                        row1["ROOM_TYPE"].ToString(),
+                        $"₱{Convert.ToDouble(row1["PRICE_PER_DAY"].ToString()):F2}",
+                        row1["ROOM_STATUS"].ToString()
                     );
                 }
             }
@@ -209,11 +216,11 @@ namespace PrjOverhaulHotel
                     foreach (DataRow row1 in GlobalProcedure.datHotel.Rows)
                     {
                         dtgRooms.Rows.Add(
-                            row1["id"].ToString(),
-                            row1["roomName"].ToString(),
-                            row1["roomType"].ToString(),
-                            row1["status"].ToString(),
-                            $"₱{Convert.ToDouble(row1["pricePerDay"].ToString()):F2}"
+                        row1["ROOM_ID"].ToString(),
+                        row1["ROOM_NAME"].ToString(),
+                        row1["ROOM_TYPE"].ToString(),
+                        $"₱{Convert.ToDouble(row1["PRICE_PER_DAY"].ToString()):F2}",
+                        row1["ROOM_STATUS"].ToString()
                         );
                     }
                 }
@@ -222,6 +229,11 @@ namespace PrjOverhaulHotel
                 lblResult.Text = GlobalProcedure.datHotel.Rows.Count.ToString();
                 dtgRooms.Rows.Clear();
                 }
+        }
+
+        private void roomStatusUpdate()
+        {
+            GlobalProcedure.procRoomCheckRoomStatus(DateTime.Now.ToString("yyyy-MM-dd"));
         }
 
         private void txtRoomName_TextChanged(object sender, EventArgs e)

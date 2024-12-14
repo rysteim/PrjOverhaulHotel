@@ -35,7 +35,6 @@
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.btnHide = new Guna.UI2.WinForms.Guna2CircleButton();
-            this.btnMaximize = new Guna.UI2.WinForms.Guna2CircleButton();
             this.btnExit = new Guna.UI2.WinForms.Guna2CircleButton();
             this.pnlButtons = new Guna.UI2.WinForms.Guna2Panel();
             this.btnLogout = new Guna.UI2.WinForms.Guna2GradientButton();
@@ -50,14 +49,36 @@
             this.imgProfile = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.lblName = new System.Windows.Forms.Label();
             this.lblPosition = new System.Windows.Forms.Label();
-            this.lblTitle = new System.Windows.Forms.Label();
-            this.pnlDashboard = new Guna.UI2.WinForms.Guna2Panel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.cmbDateRange = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            this.cartesianChart1 = new LiveCharts.WinForms.CartesianChart();
+            this.btnGuestView = new Guna.UI2.WinForms.Guna2GradientTileButton();
+            this.guna2Panel3 = new Guna.UI2.WinForms.Guna2Panel();
+            this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
+            this.guna2Panel4 = new Guna.UI2.WinForms.Guna2Panel();
+            this.guna2Panel5 = new Guna.UI2.WinForms.Guna2Panel();
+            this.guna2Panel6 = new Guna.UI2.WinForms.Guna2Panel();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.lblActiveRooms = new System.Windows.Forms.Label();
+            this.lblPresentGuests = new System.Windows.Forms.Label();
+            this.lblOnlinePersonnels = new System.Windows.Forms.Label();
+            this.lblRevenue = new System.Windows.Forms.Label();
             this.guna2CustomGradientPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.pnlButtons.SuspendLayout();
             this.btnProfile.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.imgProfile)).BeginInit();
+            this.guna2Panel1.SuspendLayout();
+            this.guna2Panel3.SuspendLayout();
+            this.guna2Panel2.SuspendLayout();
+            this.guna2Panel4.SuspendLayout();
+            this.guna2Panel5.SuspendLayout();
+            this.guna2Panel6.SuspendLayout();
             this.SuspendLayout();
             // 
             // guna2Elipse1
@@ -70,7 +91,6 @@
             this.guna2CustomGradientPanel1.Controls.Add(this.pictureBox3);
             this.guna2CustomGradientPanel1.Controls.Add(this.pictureBox2);
             this.guna2CustomGradientPanel1.Controls.Add(this.btnHide);
-            this.guna2CustomGradientPanel1.Controls.Add(this.btnMaximize);
             this.guna2CustomGradientPanel1.Controls.Add(this.btnExit);
             this.guna2CustomGradientPanel1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(154)))), ((int)(((byte)(136)))));
             this.guna2CustomGradientPanel1.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(220)))), ((int)(((byte)(195)))));
@@ -115,7 +135,7 @@
             this.btnHide.ForeColor = System.Drawing.Color.White;
             this.btnHide.HoverState.Parent = this.btnHide;
             this.btnHide.Image = global::PrjOverhaulHotel.Properties.Resources.minus;
-            this.btnHide.Location = new System.Drawing.Point(858, 5);
+            this.btnHide.Location = new System.Drawing.Point(908, 5);
             this.btnHide.Margin = new System.Windows.Forms.Padding(1);
             this.btnHide.Name = "btnHide";
             this.btnHide.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
@@ -123,25 +143,6 @@
             this.btnHide.Size = new System.Drawing.Size(35, 35);
             this.btnHide.TabIndex = 2;
             this.btnHide.Click += new System.EventHandler(this.btnHide_Click);
-            // 
-            // btnMaximize
-            // 
-            this.btnMaximize.BackColor = System.Drawing.Color.Transparent;
-            this.btnMaximize.CheckedState.Parent = this.btnMaximize;
-            this.btnMaximize.CustomImages.Parent = this.btnMaximize;
-            this.btnMaximize.FillColor = System.Drawing.Color.Yellow;
-            this.btnMaximize.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnMaximize.ForeColor = System.Drawing.Color.White;
-            this.btnMaximize.HoverState.Parent = this.btnMaximize;
-            this.btnMaximize.Image = global::PrjOverhaulHotel.Properties.Resources.maximize;
-            this.btnMaximize.Location = new System.Drawing.Point(908, 5);
-            this.btnMaximize.Margin = new System.Windows.Forms.Padding(1);
-            this.btnMaximize.Name = "btnMaximize";
-            this.btnMaximize.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.btnMaximize.ShadowDecoration.Parent = this.btnMaximize;
-            this.btnMaximize.Size = new System.Drawing.Size(35, 35);
-            this.btnMaximize.TabIndex = 1;
-            this.btnMaximize.Click += new System.EventHandler(this.btnMaximize_Click);
             // 
             // btnExit
             // 
@@ -448,29 +449,260 @@
             this.lblPosition.MouseEnter += new System.EventHandler(this.btnProfile_MouseEnter);
             this.lblPosition.MouseLeave += new System.EventHandler(this.btnProfile_MouseLeave);
             // 
-            // lblTitle
+            // label1
             // 
-            this.lblTitle.BackColor = System.Drawing.Color.Transparent;
-            this.lblTitle.Font = new System.Drawing.Font("Microsoft New Tai Lue", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTitle.ForeColor = System.Drawing.Color.White;
-            this.lblTitle.Location = new System.Drawing.Point(331, 59);
-            this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(397, 45);
-            this.lblTitle.TabIndex = 18;
-            this.lblTitle.Text = "Hotelliere";
-            this.lblTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Adobe Fan Heiti Std B", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(97, 63);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(69, 14);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "Date Range:";
             // 
-            // pnlDashboard
+            // cmbDateRange
             // 
-            this.pnlDashboard.BackColor = System.Drawing.Color.Transparent;
-            this.pnlDashboard.BackgroundImage = global::PrjOverhaulHotel.Properties.Resources.Group_282;
-            this.pnlDashboard.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pnlDashboard.Location = new System.Drawing.Point(66, 119);
-            this.pnlDashboard.Name = "pnlDashboard";
-            this.pnlDashboard.ShadowDecoration.Parent = this.pnlDashboard;
-            this.pnlDashboard.Size = new System.Drawing.Size(927, 501);
-            this.pnlDashboard.TabIndex = 13;
-            this.pnlDashboard.MouseEnter += new System.EventHandler(this.pnlButtons_MouseLeave);
+            this.cmbDateRange.BackColor = System.Drawing.Color.Transparent;
+            this.cmbDateRange.BorderRadius = 15;
+            this.cmbDateRange.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cmbDateRange.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbDateRange.FocusedColor = System.Drawing.Color.Empty;
+            this.cmbDateRange.FocusedState.Parent = this.cmbDateRange;
+            this.cmbDateRange.Font = new System.Drawing.Font("Microsoft New Tai Lue", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbDateRange.ForeColor = System.Drawing.Color.Black;
+            this.cmbDateRange.HoverState.Parent = this.cmbDateRange;
+            this.cmbDateRange.ItemHeight = 30;
+            this.cmbDateRange.Items.AddRange(new object[] {
+            "",
+            "Last week",
+            "Last 2 weeks",
+            "Last month"});
+            this.cmbDateRange.ItemsAppearance.Parent = this.cmbDateRange;
+            this.cmbDateRange.Location = new System.Drawing.Point(84, 79);
+            this.cmbDateRange.Name = "cmbDateRange";
+            this.cmbDateRange.ShadowDecoration.Parent = this.cmbDateRange;
+            this.cmbDateRange.Size = new System.Drawing.Size(317, 36);
+            this.cmbDateRange.TabIndex = 29;
+            this.cmbDateRange.TextOffset = new System.Drawing.Point(5, 1);
+            this.cmbDateRange.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault;
+            // 
+            // guna2Panel1
+            // 
+            this.guna2Panel1.BackColor = System.Drawing.Color.Transparent;
+            this.guna2Panel1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(154)))), ((int)(((byte)(136)))));
+            this.guna2Panel1.BorderRadius = 10;
+            this.guna2Panel1.BorderThickness = 1;
+            this.guna2Panel1.Controls.Add(this.cartesianChart1);
+            this.guna2Panel1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(220)))), ((int)(((byte)(195)))));
+            this.guna2Panel1.Location = new System.Drawing.Point(84, 135);
+            this.guna2Panel1.Name = "guna2Panel1";
+            this.guna2Panel1.ShadowDecoration.BorderRadius = 10;
+            this.guna2Panel1.ShadowDecoration.Depth = 255;
+            this.guna2Panel1.ShadowDecoration.Parent = this.guna2Panel1;
+            this.guna2Panel1.Size = new System.Drawing.Size(883, 226);
+            this.guna2Panel1.TabIndex = 31;
+            // 
+            // cartesianChart1
+            // 
+            this.cartesianChart1.BackColor = System.Drawing.Color.Transparent;
+            this.cartesianChart1.ForeColor = System.Drawing.Color.Black;
+            this.cartesianChart1.Location = new System.Drawing.Point(11, 36);
+            this.cartesianChart1.Name = "cartesianChart1";
+            this.cartesianChart1.Size = new System.Drawing.Size(860, 183);
+            this.cartesianChart1.TabIndex = 30;
+            this.cartesianChart1.Text = "cartesianChart1";
+            // 
+            // btnGuestView
+            // 
+            this.btnGuestView.BorderColor = System.Drawing.Color.Transparent;
+            this.btnGuestView.BorderRadius = 15;
+            this.btnGuestView.BorderThickness = 1;
+            this.btnGuestView.CheckedState.Parent = this.btnGuestView;
+            this.btnGuestView.CustomImages.Parent = this.btnGuestView;
+            this.btnGuestView.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnGuestView.FillColor2 = System.Drawing.Color.Black;
+            this.btnGuestView.Font = new System.Drawing.Font("Microsoft New Tai Lue", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGuestView.ForeColor = System.Drawing.Color.White;
+            this.btnGuestView.HoverState.Parent = this.btnGuestView;
+            this.btnGuestView.Location = new System.Drawing.Point(792, 547);
+            this.btnGuestView.Name = "btnGuestView";
+            this.btnGuestView.ShadowDecoration.Parent = this.btnGuestView;
+            this.btnGuestView.Size = new System.Drawing.Size(175, 31);
+            this.btnGuestView.TabIndex = 0;
+            this.btnGuestView.Text = "Go to Guest View";
+            this.btnGuestView.TextOffset = new System.Drawing.Point(0, 2);
+            this.btnGuestView.Click += new System.EventHandler(this.btnGuestView_Click);
+            // 
+            // guna2Panel3
+            // 
+            this.guna2Panel3.BackColor = System.Drawing.Color.Transparent;
+            this.guna2Panel3.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(154)))), ((int)(((byte)(136)))));
+            this.guna2Panel3.BorderRadius = 10;
+            this.guna2Panel3.BorderThickness = 1;
+            this.guna2Panel3.Controls.Add(this.guna2Panel4);
+            this.guna2Panel3.Controls.Add(this.guna2Panel5);
+            this.guna2Panel3.Controls.Add(this.guna2Panel6);
+            this.guna2Panel3.Controls.Add(this.guna2Panel2);
+            this.guna2Panel3.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(220)))), ((int)(((byte)(195)))));
+            this.guna2Panel3.Location = new System.Drawing.Point(84, 377);
+            this.guna2Panel3.Name = "guna2Panel3";
+            this.guna2Panel3.ShadowDecoration.BorderRadius = 10;
+            this.guna2Panel3.ShadowDecoration.Depth = 255;
+            this.guna2Panel3.ShadowDecoration.Parent = this.guna2Panel3;
+            this.guna2Panel3.Size = new System.Drawing.Size(883, 154);
+            this.guna2Panel3.TabIndex = 32;
+            // 
+            // guna2Panel2
+            // 
+            this.guna2Panel2.BackColor = System.Drawing.Color.Transparent;
+            this.guna2Panel2.BorderColor = System.Drawing.Color.WhiteSmoke;
+            this.guna2Panel2.BorderRadius = 10;
+            this.guna2Panel2.BorderThickness = 1;
+            this.guna2Panel2.Controls.Add(this.lblRevenue);
+            this.guna2Panel2.Controls.Add(this.label5);
+            this.guna2Panel2.FillColor = System.Drawing.Color.White;
+            this.guna2Panel2.Location = new System.Drawing.Point(684, 20);
+            this.guna2Panel2.Name = "guna2Panel2";
+            this.guna2Panel2.ShadowDecoration.BorderRadius = 10;
+            this.guna2Panel2.ShadowDecoration.Color = System.Drawing.Color.WhiteSmoke;
+            this.guna2Panel2.ShadowDecoration.Depth = 60;
+            this.guna2Panel2.ShadowDecoration.Enabled = true;
+            this.guna2Panel2.ShadowDecoration.Parent = this.guna2Panel2;
+            this.guna2Panel2.Size = new System.Drawing.Size(175, 110);
+            this.guna2Panel2.TabIndex = 33;
+            // 
+            // guna2Panel4
+            // 
+            this.guna2Panel4.BackColor = System.Drawing.Color.Transparent;
+            this.guna2Panel4.BorderColor = System.Drawing.Color.WhiteSmoke;
+            this.guna2Panel4.BorderRadius = 10;
+            this.guna2Panel4.BorderThickness = 1;
+            this.guna2Panel4.Controls.Add(this.lblActiveRooms);
+            this.guna2Panel4.Controls.Add(this.label2);
+            this.guna2Panel4.FillColor = System.Drawing.Color.White;
+            this.guna2Panel4.Location = new System.Drawing.Point(24, 20);
+            this.guna2Panel4.Name = "guna2Panel4";
+            this.guna2Panel4.ShadowDecoration.BorderRadius = 10;
+            this.guna2Panel4.ShadowDecoration.Color = System.Drawing.Color.WhiteSmoke;
+            this.guna2Panel4.ShadowDecoration.Depth = 60;
+            this.guna2Panel4.ShadowDecoration.Enabled = true;
+            this.guna2Panel4.ShadowDecoration.Parent = this.guna2Panel4;
+            this.guna2Panel4.Size = new System.Drawing.Size(175, 110);
+            this.guna2Panel4.TabIndex = 34;
+            // 
+            // guna2Panel5
+            // 
+            this.guna2Panel5.BackColor = System.Drawing.Color.Transparent;
+            this.guna2Panel5.BorderColor = System.Drawing.Color.WhiteSmoke;
+            this.guna2Panel5.BorderRadius = 10;
+            this.guna2Panel5.BorderThickness = 1;
+            this.guna2Panel5.Controls.Add(this.lblPresentGuests);
+            this.guna2Panel5.Controls.Add(this.label3);
+            this.guna2Panel5.FillColor = System.Drawing.Color.White;
+            this.guna2Panel5.Location = new System.Drawing.Point(244, 20);
+            this.guna2Panel5.Name = "guna2Panel5";
+            this.guna2Panel5.ShadowDecoration.BorderRadius = 10;
+            this.guna2Panel5.ShadowDecoration.Color = System.Drawing.Color.WhiteSmoke;
+            this.guna2Panel5.ShadowDecoration.Depth = 60;
+            this.guna2Panel5.ShadowDecoration.Enabled = true;
+            this.guna2Panel5.ShadowDecoration.Parent = this.guna2Panel5;
+            this.guna2Panel5.Size = new System.Drawing.Size(175, 110);
+            this.guna2Panel5.TabIndex = 34;
+            // 
+            // guna2Panel6
+            // 
+            this.guna2Panel6.BackColor = System.Drawing.Color.Transparent;
+            this.guna2Panel6.BorderColor = System.Drawing.Color.WhiteSmoke;
+            this.guna2Panel6.BorderRadius = 10;
+            this.guna2Panel6.BorderThickness = 1;
+            this.guna2Panel6.Controls.Add(this.lblOnlinePersonnels);
+            this.guna2Panel6.Controls.Add(this.label4);
+            this.guna2Panel6.FillColor = System.Drawing.Color.White;
+            this.guna2Panel6.Location = new System.Drawing.Point(464, 20);
+            this.guna2Panel6.Name = "guna2Panel6";
+            this.guna2Panel6.ShadowDecoration.BorderRadius = 10;
+            this.guna2Panel6.ShadowDecoration.Color = System.Drawing.Color.WhiteSmoke;
+            this.guna2Panel6.ShadowDecoration.Depth = 60;
+            this.guna2Panel6.ShadowDecoration.Enabled = true;
+            this.guna2Panel6.ShadowDecoration.Parent = this.guna2Panel6;
+            this.guna2Panel6.Size = new System.Drawing.Size(175, 110);
+            this.guna2Panel6.TabIndex = 34;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Adobe Fan Heiti Std B", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.label2.Location = new System.Drawing.Point(11, 85);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(84, 14);
+            this.label2.TabIndex = 33;
+            this.label2.Text = "ACTIVE ROOMS";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Adobe Fan Heiti Std B", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.label3.Location = new System.Drawing.Point(11, 85);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(94, 14);
+            this.label3.TabIndex = 34;
+            this.label3.Text = "PRESENT GUESTS";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Adobe Fan Heiti Std B", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.label4.Location = new System.Drawing.Point(11, 85);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(115, 14);
+            this.label4.TabIndex = 34;
+            this.label4.Text = "ONLINE PERSONNELS";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Adobe Fan Heiti Std B", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.label5.Location = new System.Drawing.Point(11, 85);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(55, 14);
+            this.label5.TabIndex = 34;
+            this.label5.Text = "REVENUE";
+            // 
+            // lblActiveRooms
+            // 
+            this.lblActiveRooms.Font = new System.Drawing.Font("Adobe Fan Heiti Std B", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.lblActiveRooms.Location = new System.Drawing.Point(0, 8);
+            this.lblActiveRooms.Name = "lblActiveRooms";
+            this.lblActiveRooms.Size = new System.Drawing.Size(175, 68);
+            this.lblActiveRooms.TabIndex = 34;
+            this.lblActiveRooms.Text = " 0";
+            // 
+            // lblPresentGuests
+            // 
+            this.lblPresentGuests.Font = new System.Drawing.Font("Adobe Fan Heiti Std B", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.lblPresentGuests.Location = new System.Drawing.Point(0, 8);
+            this.lblPresentGuests.Name = "lblPresentGuests";
+            this.lblPresentGuests.Size = new System.Drawing.Size(175, 68);
+            this.lblPresentGuests.TabIndex = 35;
+            this.lblPresentGuests.Text = " 0";
+            // 
+            // lblOnlinePersonnels
+            // 
+            this.lblOnlinePersonnels.Font = new System.Drawing.Font("Adobe Fan Heiti Std B", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.lblOnlinePersonnels.Location = new System.Drawing.Point(0, 8);
+            this.lblOnlinePersonnels.Name = "lblOnlinePersonnels";
+            this.lblOnlinePersonnels.Size = new System.Drawing.Size(175, 68);
+            this.lblOnlinePersonnels.TabIndex = 36;
+            this.lblOnlinePersonnels.Text = " 0";
+            // 
+            // lblRevenue
+            // 
+            this.lblRevenue.Font = new System.Drawing.Font("Adobe Fan Heiti Std B", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.lblRevenue.Location = new System.Drawing.Point(0, 8);
+            this.lblRevenue.Name = "lblRevenue";
+            this.lblRevenue.Size = new System.Drawing.Size(175, 68);
+            this.lblRevenue.TabIndex = 36;
+            this.lblRevenue.Text = " 0";
             // 
             // FrmStaffDashboard
             // 
@@ -478,11 +710,14 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(154)))), ((int)(((byte)(136)))));
             this.ClientSize = new System.Drawing.Size(1000, 600);
-            this.Controls.Add(this.lblTitle);
             this.Controls.Add(this.pnlButtons);
             this.Controls.Add(this.guna2CustomGradientPanel1);
             this.Controls.Add(this.btnProfile);
-            this.Controls.Add(this.pnlDashboard);
+            this.Controls.Add(this.guna2Panel3);
+            this.Controls.Add(this.guna2Panel1);
+            this.Controls.Add(this.btnGuestView);
+            this.Controls.Add(this.cmbDateRange);
+            this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FrmStaffDashboard";
@@ -496,6 +731,16 @@
             this.pnlButtons.ResumeLayout(false);
             this.btnProfile.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.imgProfile)).EndInit();
+            this.guna2Panel1.ResumeLayout(false);
+            this.guna2Panel3.ResumeLayout(false);
+            this.guna2Panel2.ResumeLayout(false);
+            this.guna2Panel2.PerformLayout();
+            this.guna2Panel4.ResumeLayout(false);
+            this.guna2Panel4.PerformLayout();
+            this.guna2Panel5.ResumeLayout(false);
+            this.guna2Panel5.PerformLayout();
+            this.guna2Panel6.ResumeLayout(false);
+            this.guna2Panel6.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -509,7 +754,6 @@
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox2;
         private Guna.UI2.WinForms.Guna2CircleButton btnHide;
-        private Guna.UI2.WinForms.Guna2CircleButton btnMaximize;
         private Guna.UI2.WinForms.Guna2CircleButton btnExit;
         private Guna.UI2.WinForms.Guna2GradientButton btnReservation;
         private Guna.UI2.WinForms.Guna2GradientButton btnDashboard;
@@ -522,8 +766,24 @@
         private Guna.UI2.WinForms.Guna2CirclePictureBox imgProfile;
         private System.Windows.Forms.Label lblName;
         private System.Windows.Forms.Label lblPosition;
-        private System.Windows.Forms.Label lblTitle;
-        private Guna.UI2.WinForms.Guna2Panel pnlDashboard;
         private Guna.UI2.WinForms.Guna2VSeparator guna2VSeparator2;
+        private System.Windows.Forms.Label label1;
+        private Guna.UI2.WinForms.Guna2ComboBox cmbDateRange;
+        private Guna.UI2.WinForms.Guna2Panel guna2Panel6;
+        private Guna.UI2.WinForms.Guna2Panel guna2Panel5;
+        private Guna.UI2.WinForms.Guna2Panel guna2Panel4;
+        private Guna.UI2.WinForms.Guna2Panel guna2Panel2;
+        private Guna.UI2.WinForms.Guna2Panel guna2Panel3;
+        private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
+        private LiveCharts.WinForms.CartesianChart cartesianChart1;
+        private Guna.UI2.WinForms.Guna2GradientTileButton btnGuestView;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label lblActiveRooms;
+        private System.Windows.Forms.Label lblPresentGuests;
+        private System.Windows.Forms.Label lblOnlinePersonnels;
+        private System.Windows.Forms.Label lblRevenue;
     }
 }

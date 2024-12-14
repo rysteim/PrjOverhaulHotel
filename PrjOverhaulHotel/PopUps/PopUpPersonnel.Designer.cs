@@ -31,6 +31,12 @@
             this.components = new System.ComponentModel.Container();
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.pnlLogin = new Guna.UI2.WinForms.Guna2Panel();
+            this.btnChooseAcc = new Guna.UI2.WinForms.Guna2GradientTileButton();
+            this.txtHourlyRate = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txtLastOnline = new Guna.UI2.WinForms.Guna2TextBox();
+            this.lblEmployment = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
             this.cmbWorkshift = new Guna.UI2.WinForms.Guna2ComboBox();
             this.label12 = new System.Windows.Forms.Label();
             this.cmbRole = new Guna.UI2.WinForms.Guna2ComboBox();
@@ -59,13 +65,8 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.btnUpload = new Guna.UI2.WinForms.Guna2GradientTileButton();
-            this.btnSaveGuest = new Guna.UI2.WinForms.Guna2GradientTileButton();
             this.btnAddGuest = new Guna.UI2.WinForms.Guna2GradientTileButton();
-            this.label13 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
-            this.txtLastOnline = new Guna.UI2.WinForms.Guna2TextBox();
-            this.txtHourlyRate = new Guna.UI2.WinForms.Guna2TextBox();
-            this.lblEmployment = new System.Windows.Forms.Label();
+            this.btnSaveGuest = new Guna.UI2.WinForms.Guna2GradientTileButton();
             this.pnlLogin.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.imgProfile)).BeginInit();
             this.SuspendLayout();
@@ -79,6 +80,7 @@
             this.pnlLogin.BackgroundImage = global::PrjOverhaulHotel.Properties.Resources.Rectangle_13__2_;
             this.pnlLogin.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pnlLogin.BorderColor = System.Drawing.Color.Black;
+            this.pnlLogin.Controls.Add(this.btnChooseAcc);
             this.pnlLogin.Controls.Add(this.txtHourlyRate);
             this.pnlLogin.Controls.Add(this.txtLastOnline);
             this.pnlLogin.Controls.Add(this.lblEmployment);
@@ -119,6 +121,121 @@
             this.pnlLogin.ShadowDecoration.Parent = this.pnlLogin;
             this.pnlLogin.Size = new System.Drawing.Size(900, 542);
             this.pnlLogin.TabIndex = 27;
+            // 
+            // btnChooseAcc
+            // 
+            this.btnChooseAcc.BackColor = System.Drawing.Color.Transparent;
+            this.btnChooseAcc.BorderRadius = 18;
+            this.btnChooseAcc.CheckedState.Parent = this.btnChooseAcc;
+            this.btnChooseAcc.CustomImages.Parent = this.btnChooseAcc;
+            this.btnChooseAcc.FillColor = System.Drawing.Color.DarkSlateGray;
+            this.btnChooseAcc.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnChooseAcc.Font = new System.Drawing.Font("Adobe Fan Heiti Std B", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.btnChooseAcc.ForeColor = System.Drawing.Color.White;
+            this.btnChooseAcc.HoverState.Parent = this.btnChooseAcc;
+            this.btnChooseAcc.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnChooseAcc.ImageOffset = new System.Drawing.Point(5, 12);
+            this.btnChooseAcc.Location = new System.Drawing.Point(423, 490);
+            this.btnChooseAcc.Name = "btnChooseAcc";
+            this.btnChooseAcc.ShadowDecoration.Parent = this.btnChooseAcc;
+            this.btnChooseAcc.Size = new System.Drawing.Size(170, 35);
+            this.btnChooseAcc.TabIndex = 39;
+            this.btnChooseAcc.Text = "CHOOSE AN ACCOUNT";
+            this.btnChooseAcc.TextOffset = new System.Drawing.Point(0, 1);
+            this.btnChooseAcc.Click += new System.EventHandler(this.btnChooseAcc_Click);
+            // 
+            // txtHourlyRate
+            // 
+            this.txtHourlyRate.BackColor = System.Drawing.Color.Transparent;
+            this.txtHourlyRate.BorderRadius = 15;
+            this.txtHourlyRate.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtHourlyRate.DefaultText = "";
+            this.txtHourlyRate.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtHourlyRate.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtHourlyRate.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtHourlyRate.DisabledState.Parent = this.txtHourlyRate;
+            this.txtHourlyRate.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtHourlyRate.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtHourlyRate.FocusedState.Parent = this.txtHourlyRate;
+            this.txtHourlyRate.Font = new System.Drawing.Font("Microsoft New Tai Lue", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtHourlyRate.ForeColor = System.Drawing.Color.Black;
+            this.txtHourlyRate.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(154)))), ((int)(((byte)(136)))));
+            this.txtHourlyRate.HoverState.Parent = this.txtHourlyRate;
+            this.txtHourlyRate.IconLeftOffset = new System.Drawing.Point(5, 0);
+            this.txtHourlyRate.Location = new System.Drawing.Point(544, 240);
+            this.txtHourlyRate.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtHourlyRate.Name = "txtHourlyRate";
+            this.txtHourlyRate.PasswordChar = '\0';
+            this.txtHourlyRate.PlaceholderText = "";
+            this.txtHourlyRate.ReadOnly = true;
+            this.txtHourlyRate.SelectedText = "";
+            this.txtHourlyRate.ShadowDecoration.Parent = this.txtHourlyRate;
+            this.txtHourlyRate.Size = new System.Drawing.Size(298, 35);
+            this.txtHourlyRate.TabIndex = 38;
+            this.txtHourlyRate.TextOffset = new System.Drawing.Point(10, 0);
+            // 
+            // txtLastOnline
+            // 
+            this.txtLastOnline.BackColor = System.Drawing.Color.Transparent;
+            this.txtLastOnline.BorderRadius = 15;
+            this.txtLastOnline.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtLastOnline.DefaultText = "";
+            this.txtLastOnline.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtLastOnline.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtLastOnline.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtLastOnline.DisabledState.Parent = this.txtLastOnline;
+            this.txtLastOnline.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtLastOnline.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtLastOnline.FocusedState.Parent = this.txtLastOnline;
+            this.txtLastOnline.Font = new System.Drawing.Font("Microsoft New Tai Lue", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtLastOnline.ForeColor = System.Drawing.Color.Black;
+            this.txtLastOnline.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(154)))), ((int)(((byte)(136)))));
+            this.txtLastOnline.HoverState.Parent = this.txtLastOnline;
+            this.txtLastOnline.IconLeftOffset = new System.Drawing.Point(5, 0);
+            this.txtLastOnline.Location = new System.Drawing.Point(136, 241);
+            this.txtLastOnline.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtLastOnline.Name = "txtLastOnline";
+            this.txtLastOnline.PasswordChar = '\0';
+            this.txtLastOnline.PlaceholderText = "";
+            this.txtLastOnline.ReadOnly = true;
+            this.txtLastOnline.SelectedText = "";
+            this.txtLastOnline.ShadowDecoration.Parent = this.txtLastOnline;
+            this.txtLastOnline.Size = new System.Drawing.Size(298, 35);
+            this.txtLastOnline.TabIndex = 37;
+            this.txtLastOnline.TextOffset = new System.Drawing.Point(10, 0);
+            // 
+            // lblEmployment
+            // 
+            this.lblEmployment.AutoSize = true;
+            this.lblEmployment.BackColor = System.Drawing.Color.Transparent;
+            this.lblEmployment.Font = new System.Drawing.Font("Adobe Fan Heiti Std B", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEmployment.Location = new System.Drawing.Point(19, 512);
+            this.lblEmployment.Name = "lblEmployment";
+            this.lblEmployment.Size = new System.Drawing.Size(118, 16);
+            this.lblEmployment.TabIndex = 36;
+            this.lblEmployment.Text = "Employment Date:";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.BackColor = System.Drawing.Color.Transparent;
+            this.label13.Font = new System.Drawing.Font("Adobe Fan Heiti Std B", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.Location = new System.Drawing.Point(458, 248);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(80, 16);
+            this.label13.TabIndex = 35;
+            this.label13.Text = "Hourly Rate:";
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.BackColor = System.Drawing.Color.Transparent;
+            this.label14.Font = new System.Drawing.Font("Adobe Fan Heiti Std B", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.Location = new System.Drawing.Point(52, 248);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(79, 16);
+            this.label14.TabIndex = 33;
+            this.label14.Text = "Last Online: ";
             // 
             // cmbWorkshift
             // 
@@ -210,7 +327,7 @@
             this.btnCancel.HoverState.Parent = this.btnCancel;
             this.btnCancel.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnCancel.ImageOffset = new System.Drawing.Point(5, 12);
-            this.btnCancel.Location = new System.Drawing.Point(308, 492);
+            this.btnCancel.Location = new System.Drawing.Point(306, 492);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.ShadowDecoration.Parent = this.btnCancel;
             this.btnCancel.Size = new System.Drawing.Size(98, 32);
@@ -655,28 +772,6 @@
             this.btnUpload.Text = "UPLOAD";
             this.btnUpload.TextOffset = new System.Drawing.Point(7, -11);
             // 
-            // btnSaveGuest
-            // 
-            this.btnSaveGuest.BackColor = System.Drawing.Color.Transparent;
-            this.btnSaveGuest.BorderRadius = 20;
-            this.btnSaveGuest.CheckedState.Parent = this.btnSaveGuest;
-            this.btnSaveGuest.CustomImages.Parent = this.btnSaveGuest;
-            this.btnSaveGuest.FillColor = System.Drawing.Color.Teal;
-            this.btnSaveGuest.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btnSaveGuest.Font = new System.Drawing.Font("Adobe Fan Heiti Std B", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSaveGuest.ForeColor = System.Drawing.Color.White;
-            this.btnSaveGuest.HoverState.Parent = this.btnSaveGuest;
-            this.btnSaveGuest.Image = global::PrjOverhaulHotel.Properties.Resources.check;
-            this.btnSaveGuest.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnSaveGuest.ImageOffset = new System.Drawing.Point(5, 12);
-            this.btnSaveGuest.Location = new System.Drawing.Point(412, 488);
-            this.btnSaveGuest.Name = "btnSaveGuest";
-            this.btnSaveGuest.ShadowDecoration.Parent = this.btnSaveGuest;
-            this.btnSaveGuest.Size = new System.Drawing.Size(228, 40);
-            this.btnSaveGuest.TabIndex = 14;
-            this.btnSaveGuest.Text = "SAVE EMPLOYEE";
-            this.btnSaveGuest.TextOffset = new System.Drawing.Point(7, -11);
-            // 
             // btnAddGuest
             // 
             this.btnAddGuest.BackColor = System.Drawing.Color.Transparent;
@@ -691,7 +786,7 @@
             this.btnAddGuest.Image = global::PrjOverhaulHotel.Properties.Resources.plus;
             this.btnAddGuest.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnAddGuest.ImageOffset = new System.Drawing.Point(5, 12);
-            this.btnAddGuest.Location = new System.Drawing.Point(412, 488);
+            this.btnAddGuest.Location = new System.Drawing.Point(612, 488);
             this.btnAddGuest.Name = "btnAddGuest";
             this.btnAddGuest.ShadowDecoration.Parent = this.btnAddGuest;
             this.btnAddGuest.Size = new System.Drawing.Size(228, 40);
@@ -700,98 +795,28 @@
             this.btnAddGuest.TextOffset = new System.Drawing.Point(7, -11);
             this.btnAddGuest.Click += new System.EventHandler(this.btnAddGuest_Click);
             // 
-            // label13
+            // btnSaveGuest
             // 
-            this.label13.AutoSize = true;
-            this.label13.BackColor = System.Drawing.Color.Transparent;
-            this.label13.Font = new System.Drawing.Font("Adobe Fan Heiti Std B", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(458, 248);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(80, 16);
-            this.label13.TabIndex = 35;
-            this.label13.Text = "Hourly Rate:";
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.BackColor = System.Drawing.Color.Transparent;
-            this.label14.Font = new System.Drawing.Font("Adobe Fan Heiti Std B", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(52, 248);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(79, 16);
-            this.label14.TabIndex = 33;
-            this.label14.Text = "Last Online: ";
-            // 
-            // txtLastOnline
-            // 
-            this.txtLastOnline.BackColor = System.Drawing.Color.Transparent;
-            this.txtLastOnline.BorderRadius = 15;
-            this.txtLastOnline.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtLastOnline.DefaultText = "";
-            this.txtLastOnline.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtLastOnline.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtLastOnline.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtLastOnline.DisabledState.Parent = this.txtLastOnline;
-            this.txtLastOnline.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtLastOnline.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtLastOnline.FocusedState.Parent = this.txtLastOnline;
-            this.txtLastOnline.Font = new System.Drawing.Font("Microsoft New Tai Lue", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtLastOnline.ForeColor = System.Drawing.Color.Black;
-            this.txtLastOnline.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(154)))), ((int)(((byte)(136)))));
-            this.txtLastOnline.HoverState.Parent = this.txtLastOnline;
-            this.txtLastOnline.IconLeftOffset = new System.Drawing.Point(5, 0);
-            this.txtLastOnline.Location = new System.Drawing.Point(136, 241);
-            this.txtLastOnline.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.txtLastOnline.Name = "txtLastOnline";
-            this.txtLastOnline.PasswordChar = '\0';
-            this.txtLastOnline.PlaceholderText = "";
-            this.txtLastOnline.ReadOnly = true;
-            this.txtLastOnline.SelectedText = "";
-            this.txtLastOnline.ShadowDecoration.Parent = this.txtLastOnline;
-            this.txtLastOnline.Size = new System.Drawing.Size(298, 35);
-            this.txtLastOnline.TabIndex = 37;
-            this.txtLastOnline.TextOffset = new System.Drawing.Point(10, 0);
-            // 
-            // txtHourlyRate
-            // 
-            this.txtHourlyRate.BackColor = System.Drawing.Color.Transparent;
-            this.txtHourlyRate.BorderRadius = 15;
-            this.txtHourlyRate.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtHourlyRate.DefaultText = "";
-            this.txtHourlyRate.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtHourlyRate.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtHourlyRate.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtHourlyRate.DisabledState.Parent = this.txtHourlyRate;
-            this.txtHourlyRate.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtHourlyRate.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtHourlyRate.FocusedState.Parent = this.txtHourlyRate;
-            this.txtHourlyRate.Font = new System.Drawing.Font("Microsoft New Tai Lue", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtHourlyRate.ForeColor = System.Drawing.Color.Black;
-            this.txtHourlyRate.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(154)))), ((int)(((byte)(136)))));
-            this.txtHourlyRate.HoverState.Parent = this.txtHourlyRate;
-            this.txtHourlyRate.IconLeftOffset = new System.Drawing.Point(5, 0);
-            this.txtHourlyRate.Location = new System.Drawing.Point(544, 240);
-            this.txtHourlyRate.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.txtHourlyRate.Name = "txtHourlyRate";
-            this.txtHourlyRate.PasswordChar = '\0';
-            this.txtHourlyRate.PlaceholderText = "";
-            this.txtHourlyRate.ReadOnly = true;
-            this.txtHourlyRate.SelectedText = "";
-            this.txtHourlyRate.ShadowDecoration.Parent = this.txtHourlyRate;
-            this.txtHourlyRate.Size = new System.Drawing.Size(298, 35);
-            this.txtHourlyRate.TabIndex = 38;
-            this.txtHourlyRate.TextOffset = new System.Drawing.Point(10, 0);
-            // 
-            // lblEmployment
-            // 
-            this.lblEmployment.AutoSize = true;
-            this.lblEmployment.BackColor = System.Drawing.Color.Transparent;
-            this.lblEmployment.Font = new System.Drawing.Font("Adobe Fan Heiti Std B", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEmployment.Location = new System.Drawing.Point(19, 512);
-            this.lblEmployment.Name = "lblEmployment";
-            this.lblEmployment.Size = new System.Drawing.Size(118, 16);
-            this.lblEmployment.TabIndex = 36;
-            this.lblEmployment.Text = "Employment Date:";
+            this.btnSaveGuest.BackColor = System.Drawing.Color.Transparent;
+            this.btnSaveGuest.BorderRadius = 20;
+            this.btnSaveGuest.CheckedState.Parent = this.btnSaveGuest;
+            this.btnSaveGuest.CustomImages.Parent = this.btnSaveGuest;
+            this.btnSaveGuest.FillColor = System.Drawing.Color.Teal;
+            this.btnSaveGuest.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnSaveGuest.Font = new System.Drawing.Font("Adobe Fan Heiti Std B", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSaveGuest.ForeColor = System.Drawing.Color.White;
+            this.btnSaveGuest.HoverState.Parent = this.btnSaveGuest;
+            this.btnSaveGuest.Image = global::PrjOverhaulHotel.Properties.Resources.check;
+            this.btnSaveGuest.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnSaveGuest.ImageOffset = new System.Drawing.Point(5, 12);
+            this.btnSaveGuest.Location = new System.Drawing.Point(612, 488);
+            this.btnSaveGuest.Name = "btnSaveGuest";
+            this.btnSaveGuest.ShadowDecoration.Parent = this.btnSaveGuest;
+            this.btnSaveGuest.Size = new System.Drawing.Size(228, 40);
+            this.btnSaveGuest.TabIndex = 14;
+            this.btnSaveGuest.Text = "SAVE EMPLOYEE";
+            this.btnSaveGuest.TextOffset = new System.Drawing.Point(7, -11);
+            this.btnSaveGuest.Click += new System.EventHandler(this.btnSaveGuest_Click);
             // 
             // PopUpPersonnel
             // 
@@ -851,5 +876,6 @@
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label lblEmployment;
+        private Guna.UI2.WinForms.Guna2GradientTileButton btnChooseAcc;
     }
 }
