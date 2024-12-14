@@ -36,23 +36,26 @@ namespace PrjOverhaulHotel.PopUps
 
         private void displayAddonsReservation()
         {
-            GlobalProcedure.procAddonReservationData(1);
-            if (GlobalProcedure.datHotel.Rows.Count > 0)
+            if (reservationID > -1)
             {
-                dtgAddons.Rows.Clear();
-                foreach (DataRow row1 in GlobalProcedure.datHotel.Rows)
+                GlobalProcedure.procAddonReservationData(reservationID);
+                if (GlobalProcedure.datHotel.Rows.Count > 0)
                 {
-                    dtgAddons.Rows.Add(
-                        row1["RAID"].ToString(),
-                        row1["ADDON NAME"].ToString(),
-                        row1["DESCRIPTION"].ToString(),
-                        $"₱{Convert.ToDouble(row1["PRICE"].ToString()):F2}"
-                    );
+                    dtgAddons.Rows.Clear();
+                    foreach (DataRow row1 in GlobalProcedure.datHotel.Rows)
+                    {
+                        dtgAddons.Rows.Add(
+                            row1["RAID"].ToString(),
+                            row1["ADDON NAME"].ToString(),
+                            row1["DESCRIPTION"].ToString(),
+                            $"₱{Convert.ToDouble(row1["PRICE"].ToString()):F2}"
+                        );
+                    }
                 }
-            }
-            else
-            {
-                dtgAddons.Rows.Clear();
+                else
+                {
+                    dtgAddons.Rows.Clear();
+                }
             }
         }
 
@@ -110,7 +113,6 @@ namespace PrjOverhaulHotel.PopUps
             btnEditAddon.Visible = false;
             btnEditSave.Visible = false;
             btnDeleteAddon.Visible = false;
-            btnCancel.Visible = false;
 
             new PopUpAddons().ShowDialog();
             displayAddonAdd();
@@ -127,7 +129,6 @@ namespace PrjOverhaulHotel.PopUps
             btnAddAddon.Visible = false;
             btnAddSave.Visible = false;
             btnDeleteAddon.Visible = false;
-            btnCancel.Visible = false;
 
             displayAddonEdit();
         }

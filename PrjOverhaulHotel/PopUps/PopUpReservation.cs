@@ -63,6 +63,12 @@ namespace PrjOverhaulHotel.PopUps
             Random random = new Random();
             string invoice = "INV" + random.Next(100000, 999999).ToString("D6");
             GlobalProcedure.procReservationAdd(accountID, promoID, invoice, DateTime.Now.ToString("yyyy-MM-dd"));
+            GlobalProcedure.procReservationGetByAccountID(accountID);
+            if (GlobalProcedure.datHotel.Rows.Count > 0)
+            {
+                reservationID = Convert.ToInt32(GlobalProcedure.datHotel.Rows[0]["id"].ToString());
+            }
+            displayReservationDetails();
         }
 
         private void displayDetails()
@@ -91,6 +97,20 @@ namespace PrjOverhaulHotel.PopUps
             }
         }
 
-
+        private void displayReservationDetails()
+        {
+            GlobalProcedure.procReservationGetAccountID(reservationID);
+            if (GlobalProcedure.datHotel.Rows.Count > 0)
+            {
+                txtRoomsReserved.Text = GlobalProcedure.datHotel.Rows[0]["TOTAL ROOMS"].ToString();
+                txtTotalAddons.Text = GlobalProcedure.datHotel.Rows[0]["TOTAL ADDONS"].ToString();
+                txtTotalDays.Text = GlobalProcedure.datHotel.Rows[0]["TOTAL DAYS"].ToString();
+                txtTotalAmount.Text = $"₱{Convert.ToDouble(GlobalProcedure.datHotel.Rows[0]["TOTAL AMOUNT"].ToString()):F2}";
+                txtTotalPaid.Text = $"₱{Convert.ToDouble(GlobalProcedure.datHotel.Rows[0]["PAID AMOUNT"].ToString()):F2}";
+                txtRemainingBalance.Text = $"₱{Convert.ToDouble(GlobalProcedure.datHotel.Rows[0]["REMAINING BALANCE"].ToString()):F2}";
+                lblBookingDate.Text = "Booking Date: " + GlobalProcedure.datHotel.Rows[0]["BOOKING DATE"].ToString();
+                lblInvoice.Text = "Invoice Number: " + GlobalProcedure.datHotel.Rows[0]["INVOICE"].ToString();
+            }
+        }
     }
 }

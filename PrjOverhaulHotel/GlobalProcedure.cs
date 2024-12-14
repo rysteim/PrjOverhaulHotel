@@ -1116,6 +1116,28 @@ namespace PrjOverhaulHotel
             }
         }
 
+        public static void procReservationGetByAccountID(int accountID)
+        {
+            try
+            {
+                mySqlDataAdapter = new MySqlDataAdapter();
+                datHotel = new DataTable();
+
+                sqlCommand.Parameters.Clear();
+                sqlCommand.CommandText = "proc_reservationGetByAccountID";
+                sqlCommand.Parameters.AddWithValue("@p_id", accountID);
+                sqlCommand.CommandType = CommandType.StoredProcedure;
+
+                mySqlDataAdapter.SelectCommand = GlobalProcedure.sqlCommand;
+                datHotel.Clear();
+                mySqlDataAdapter.Fill(GlobalProcedure.datHotel);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error: {ex}", "Error!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
         public static void procReservationGetTotalAmount(int reservationID)
         {
             try

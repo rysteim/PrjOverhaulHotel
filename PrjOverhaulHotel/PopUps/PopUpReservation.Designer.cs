@@ -40,9 +40,9 @@
             this.label14 = new System.Windows.Forms.Label();
             this.txtTotalAmount = new Guna.UI2.WinForms.Guna2TextBox();
             this.label15 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.txtBookingDate = new Guna.UI2.WinForms.Guna2TextBox();
-            this.label11 = new System.Windows.Forms.Label();
+            this.lblInvoice = new System.Windows.Forms.Label();
+            this.txtTotalDays = new Guna.UI2.WinForms.Guna2TextBox();
+            this.lblBookingDate = new System.Windows.Forms.Label();
             this.txtTotalAddons = new Guna.UI2.WinForms.Guna2TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.txtRoomsReserved = new Guna.UI2.WinForms.Guna2TextBox();
@@ -76,6 +76,7 @@
             this.txtMembership = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtFullname = new Guna.UI2.WinForms.Guna2TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
             this.pnlLogin.SuspendLayout();
             this.guna2Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.imgProfile)).BeginInit();
@@ -90,6 +91,7 @@
             this.pnlLogin.BackgroundImage = global::PrjOverhaulHotel.Properties.Resources.Rectangle_13__2_;
             this.pnlLogin.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pnlLogin.BorderColor = System.Drawing.Color.Black;
+            this.pnlLogin.Controls.Add(this.label11);
             this.pnlLogin.Controls.Add(this.btnChooseAccount);
             this.pnlLogin.Controls.Add(this.btnCancel);
             this.pnlLogin.Controls.Add(this.label16);
@@ -99,9 +101,9 @@
             this.pnlLogin.Controls.Add(this.label14);
             this.pnlLogin.Controls.Add(this.txtTotalAmount);
             this.pnlLogin.Controls.Add(this.label15);
-            this.pnlLogin.Controls.Add(this.label12);
-            this.pnlLogin.Controls.Add(this.txtBookingDate);
-            this.pnlLogin.Controls.Add(this.label11);
+            this.pnlLogin.Controls.Add(this.lblInvoice);
+            this.pnlLogin.Controls.Add(this.txtTotalDays);
+            this.pnlLogin.Controls.Add(this.lblBookingDate);
             this.pnlLogin.Controls.Add(this.txtTotalAddons);
             this.pnlLogin.Controls.Add(this.label10);
             this.pnlLogin.Controls.Add(this.txtRoomsReserved);
@@ -323,58 +325,58 @@
             this.label15.TabIndex = 95;
             this.label15.Text = "Total Amount:";
             // 
-            // label12
+            // lblInvoice
             // 
-            this.label12.BackColor = System.Drawing.Color.Transparent;
-            this.label12.Font = new System.Drawing.Font("Nirmala UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(748, 11);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(164, 13);
-            this.label12.TabIndex = 93;
-            this.label12.Text = "Invoice Number: ";
-            this.label12.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            this.lblInvoice.BackColor = System.Drawing.Color.Transparent;
+            this.lblInvoice.Font = new System.Drawing.Font("Nirmala UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblInvoice.Location = new System.Drawing.Point(648, 11);
+            this.lblInvoice.Name = "lblInvoice";
+            this.lblInvoice.Size = new System.Drawing.Size(264, 13);
+            this.lblInvoice.TabIndex = 93;
+            this.lblInvoice.Text = "Invoice Number: ";
+            this.lblInvoice.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
-            // txtBookingDate
+            // txtTotalDays
             // 
-            this.txtBookingDate.BackColor = System.Drawing.Color.Transparent;
-            this.txtBookingDate.BorderColor = System.Drawing.Color.Black;
-            this.txtBookingDate.BorderRadius = 12;
-            this.txtBookingDate.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtBookingDate.DefaultText = "";
-            this.txtBookingDate.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtBookingDate.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtBookingDate.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtBookingDate.DisabledState.Parent = this.txtBookingDate;
-            this.txtBookingDate.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtBookingDate.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtBookingDate.FocusedState.Parent = this.txtBookingDate;
-            this.txtBookingDate.Font = new System.Drawing.Font("Microsoft New Tai Lue", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBookingDate.ForeColor = System.Drawing.Color.Black;
-            this.txtBookingDate.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(154)))), ((int)(((byte)(136)))));
-            this.txtBookingDate.HoverState.Parent = this.txtBookingDate;
-            this.txtBookingDate.IconLeftOffset = new System.Drawing.Point(5, 0);
-            this.txtBookingDate.Location = new System.Drawing.Point(344, 382);
-            this.txtBookingDate.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.txtBookingDate.Name = "txtBookingDate";
-            this.txtBookingDate.PasswordChar = '\0';
-            this.txtBookingDate.PlaceholderText = "";
-            this.txtBookingDate.ReadOnly = true;
-            this.txtBookingDate.SelectedText = "";
-            this.txtBookingDate.ShadowDecoration.Parent = this.txtBookingDate;
-            this.txtBookingDate.Size = new System.Drawing.Size(243, 30);
-            this.txtBookingDate.TabIndex = 91;
-            this.txtBookingDate.TextOffset = new System.Drawing.Point(10, 0);
+            this.txtTotalDays.BackColor = System.Drawing.Color.Transparent;
+            this.txtTotalDays.BorderColor = System.Drawing.Color.Black;
+            this.txtTotalDays.BorderRadius = 12;
+            this.txtTotalDays.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtTotalDays.DefaultText = "";
+            this.txtTotalDays.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtTotalDays.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtTotalDays.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtTotalDays.DisabledState.Parent = this.txtTotalDays;
+            this.txtTotalDays.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtTotalDays.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtTotalDays.FocusedState.Parent = this.txtTotalDays;
+            this.txtTotalDays.Font = new System.Drawing.Font("Microsoft New Tai Lue", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTotalDays.ForeColor = System.Drawing.Color.Black;
+            this.txtTotalDays.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(154)))), ((int)(((byte)(136)))));
+            this.txtTotalDays.HoverState.Parent = this.txtTotalDays;
+            this.txtTotalDays.IconLeftOffset = new System.Drawing.Point(5, 0);
+            this.txtTotalDays.Location = new System.Drawing.Point(344, 382);
+            this.txtTotalDays.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtTotalDays.Name = "txtTotalDays";
+            this.txtTotalDays.PasswordChar = '\0';
+            this.txtTotalDays.PlaceholderText = "";
+            this.txtTotalDays.ReadOnly = true;
+            this.txtTotalDays.SelectedText = "";
+            this.txtTotalDays.ShadowDecoration.Parent = this.txtTotalDays;
+            this.txtTotalDays.Size = new System.Drawing.Size(243, 30);
+            this.txtTotalDays.TabIndex = 91;
+            this.txtTotalDays.TextOffset = new System.Drawing.Point(10, 0);
             // 
-            // label11
+            // lblBookingDate
             // 
-            this.label11.AutoSize = true;
-            this.label11.BackColor = System.Drawing.Color.Transparent;
-            this.label11.Font = new System.Drawing.Font("Nirmala UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(356, 367);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(81, 13);
-            this.label11.TabIndex = 92;
-            this.label11.Text = "Booking Date:";
+            this.lblBookingDate.BackColor = System.Drawing.Color.Transparent;
+            this.lblBookingDate.Font = new System.Drawing.Font("Nirmala UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblBookingDate.Location = new System.Drawing.Point(623, 206);
+            this.lblBookingDate.Name = "lblBookingDate";
+            this.lblBookingDate.Size = new System.Drawing.Size(268, 13);
+            this.lblBookingDate.TabIndex = 92;
+            this.lblBookingDate.Text = "Booking Date:";
+            this.lblBookingDate.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // txtTotalAddons
             // 
@@ -1002,6 +1004,17 @@
             this.label1.TabIndex = 64;
             this.label1.Text = "Full Name:";
             // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.BackColor = System.Drawing.Color.Transparent;
+            this.label11.Font = new System.Drawing.Font("Nirmala UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(356, 367);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(61, 13);
+            this.label11.TabIndex = 103;
+            this.label11.Text = "Total Days:";
+            // 
             // PopUpReservation
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1054,13 +1067,13 @@
         private System.Windows.Forms.Label label29;
         private System.Windows.Forms.Label label30;
         private Guna.UI2.WinForms.Guna2GradientTileButton btnConfirm;
-        private Guna.UI2.WinForms.Guna2TextBox txtBookingDate;
-        private System.Windows.Forms.Label label11;
+        private Guna.UI2.WinForms.Guna2TextBox txtTotalDays;
+        private System.Windows.Forms.Label lblBookingDate;
         private Guna.UI2.WinForms.Guna2TextBox txtTotalAddons;
         private System.Windows.Forms.Label label10;
         private Guna.UI2.WinForms.Guna2TextBox txtRoomsReserved;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label lblInvoice;
         private Guna.UI2.WinForms.Guna2TextBox txtRemainingBalance;
         private System.Windows.Forms.Label label13;
         private Guna.UI2.WinForms.Guna2TextBox txtTotalPaid;
@@ -1070,5 +1083,6 @@
         private System.Windows.Forms.Label label16;
         private Guna.UI2.WinForms.Guna2GradientTileButton btnCancel;
         private Guna.UI2.WinForms.Guna2GradientTileButton btnChooseAccount;
+        private System.Windows.Forms.Label label11;
     }
 }

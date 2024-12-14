@@ -179,7 +179,7 @@ namespace PrjOverhaulHotel
                 foreach (DataRow row1 in GlobalProcedure.datHotel.Rows)
                 {
                     dtgReservations.Rows.Add(
-                        row1["RESERVATION ID"].ToString(),
+                        row1["RESERVATION_ID"].ToString(),
                         row1["FULL NAME"].ToString(),
                         row1["RESERVATION STATUS"].ToString(),
                         row1["TOTAL ROOMS"].ToString(),
