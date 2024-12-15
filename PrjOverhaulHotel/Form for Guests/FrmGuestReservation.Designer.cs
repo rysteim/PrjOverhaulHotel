@@ -29,12 +29,12 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmGuestReservation));
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2CustomGradientPanel1 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
@@ -124,6 +124,7 @@
             this.guna2CustomGradientPanel1.ShadowDecoration.Parent = this.guna2CustomGradientPanel1;
             this.guna2CustomGradientPanel1.Size = new System.Drawing.Size(1000, 45);
             this.guna2CustomGradientPanel1.TabIndex = 14;
+            this.guna2CustomGradientPanel1.MouseEnter += new System.EventHandler(this.pnlButtons_MouseLeave);
             // 
             // pictureBox3
             // 
@@ -135,6 +136,7 @@
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox3.TabIndex = 12;
             this.pictureBox3.TabStop = false;
+            this.pictureBox3.MouseEnter += new System.EventHandler(this.pnlButtons_MouseLeave);
             // 
             // pictureBox2
             // 
@@ -146,6 +148,7 @@
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 11;
             this.pictureBox2.TabStop = false;
+            this.pictureBox2.MouseEnter += new System.EventHandler(this.pnlButtons_MouseLeave);
             // 
             // btnHide
             // 
@@ -165,6 +168,7 @@
             this.btnHide.Size = new System.Drawing.Size(35, 35);
             this.btnHide.TabIndex = 2;
             this.btnHide.Click += new System.EventHandler(this.btnHide_Click);
+            this.btnHide.MouseEnter += new System.EventHandler(this.pnlButtons_MouseLeave);
             // 
             // btnExit
             // 
@@ -184,6 +188,7 @@
             this.btnExit.Size = new System.Drawing.Size(35, 35);
             this.btnExit.TabIndex = 0;
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
+            this.btnExit.MouseEnter += new System.EventHandler(this.pnlButtons_MouseLeave);
             // 
             // pnlButtons
             // 
@@ -199,6 +204,8 @@
             this.pnlButtons.ShadowDecoration.Parent = this.pnlButtons;
             this.pnlButtons.Size = new System.Drawing.Size(60, 555);
             this.pnlButtons.TabIndex = 15;
+            this.pnlButtons.Click += new System.EventHandler(this.btnProfile_Click);
+            this.pnlButtons.MouseEnter += new System.EventHandler(this.button_Move);
             // 
             // btnLogout
             // 
@@ -225,6 +232,7 @@
             this.btnLogout.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnLogout.TextOffset = new System.Drawing.Point(30, 0);
             this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
+            this.btnLogout.MouseEnter += new System.EventHandler(this.button_Move);
             // 
             // btnGuests
             // 
@@ -251,6 +259,7 @@
             this.btnGuests.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnGuests.TextOffset = new System.Drawing.Point(30, 1);
             this.btnGuests.Click += new System.EventHandler(this.btnHistory_Click);
+            this.btnGuests.MouseEnter += new System.EventHandler(this.button_Move);
             // 
             // btnAP
             // 
@@ -277,6 +286,7 @@
             this.btnAP.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnAP.TextOffset = new System.Drawing.Point(30, 1);
             this.btnAP.Click += new System.EventHandler(this.btnAP_Click);
+            this.btnAP.MouseEnter += new System.EventHandler(this.button_Move);
             // 
             // btnReservation
             // 
@@ -302,6 +312,7 @@
             this.btnReservation.Text = "Reservations";
             this.btnReservation.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnReservation.TextOffset = new System.Drawing.Point(30, 1);
+            this.btnReservation.MouseEnter += new System.EventHandler(this.button_Move);
             // 
             // btnDashboard
             // 
@@ -328,6 +339,7 @@
             this.btnDashboard.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnDashboard.TextOffset = new System.Drawing.Point(30, 1);
             this.btnDashboard.Click += new System.EventHandler(this.btnDashboard_Click);
+            this.btnDashboard.MouseEnter += new System.EventHandler(this.button_Move);
             // 
             // guna2VSeparator2
             // 
@@ -349,6 +361,7 @@
             this.lblTitle.TabIndex = 22;
             this.lblTitle.Text = "Reservation";
             this.lblTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblTitle.MouseEnter += new System.EventHandler(this.pnlButtons_MouseLeave);
             // 
             // btnProfile
             // 
@@ -363,6 +376,9 @@
             this.btnProfile.ShadowDecoration.Parent = this.btnProfile;
             this.btnProfile.Size = new System.Drawing.Size(200, 102);
             this.btnProfile.TabIndex = 24;
+            this.btnProfile.Click += new System.EventHandler(this.btnProfile_Click);
+            this.btnProfile.MouseEnter += new System.EventHandler(this.btnProfile_MouseEnter);
+            this.btnProfile.MouseLeave += new System.EventHandler(this.btnProfile_MouseLeave);
             // 
             // imgProfile
             // 
@@ -376,6 +392,9 @@
             this.imgProfile.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.imgProfile.TabIndex = 13;
             this.imgProfile.TabStop = false;
+            this.imgProfile.Click += new System.EventHandler(this.btnProfile_Click);
+            this.imgProfile.MouseEnter += new System.EventHandler(this.btnProfile_MouseEnter);
+            this.imgProfile.MouseLeave += new System.EventHandler(this.btnProfile_MouseLeave);
             // 
             // lblName
             // 
@@ -388,6 +407,9 @@
             this.lblName.TabIndex = 0;
             this.lblName.Text = "Sample Name";
             this.lblName.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblName.Click += new System.EventHandler(this.btnProfile_Click);
+            this.lblName.MouseEnter += new System.EventHandler(this.btnProfile_MouseEnter);
+            this.lblName.MouseLeave += new System.EventHandler(this.btnProfile_MouseLeave);
             // 
             // lblPosition
             // 
@@ -400,6 +422,9 @@
             this.lblPosition.TabIndex = 1;
             this.lblPosition.Text = "Sample Position";
             this.lblPosition.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblPosition.Click += new System.EventHandler(this.btnProfile_Click);
+            this.lblPosition.MouseEnter += new System.EventHandler(this.btnProfile_MouseEnter);
+            this.lblPosition.MouseLeave += new System.EventHandler(this.btnProfile_MouseLeave);
             // 
             // pnlAP
             // 
@@ -441,6 +466,7 @@
             this.pnlAP.ShadowDecoration.Parent = this.pnlAP;
             this.pnlAP.Size = new System.Drawing.Size(927, 501);
             this.pnlAP.TabIndex = 25;
+            this.pnlAP.MouseEnter += new System.EventHandler(this.pnlButtons_MouseLeave);
             // 
             // dtgPromo
             // 
@@ -449,14 +475,14 @@
             this.dtgPromo.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dtgPromo.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
             this.dtgPromo.BackgroundColor = System.Drawing.Color.White;
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle7.BackColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft New Tai Lue", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(135)))), ((int)(((byte)(97)))));
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dtgPromo.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft New Tai Lue", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(135)))), ((int)(((byte)(97)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dtgPromo.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dtgPromo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtgPromo.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn1,
@@ -470,22 +496,23 @@
             this.dtgPromo.Name = "dtgPromo";
             this.dtgPromo.ReadOnly = true;
             this.dtgPromo.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken;
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle8.BackColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft New Tai Lue", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(135)))), ((int)(((byte)(97)))));
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dtgPromo.RowHeadersDefaultCellStyle = dataGridViewCellStyle8;
-            dataGridViewCellStyle9.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("Microsoft New Tai Lue", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(135)))), ((int)(((byte)(97)))));
-            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.White;
-            this.dtgPromo.RowsDefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft New Tai Lue", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(135)))), ((int)(((byte)(97)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dtgPromo.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft New Tai Lue", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(135)))), ((int)(((byte)(97)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
+            this.dtgPromo.RowsDefaultCellStyle = dataGridViewCellStyle3;
             this.dtgPromo.Size = new System.Drawing.Size(432, 169);
             this.dtgPromo.TabIndex = 58;
+            this.dtgPromo.MouseEnter += new System.EventHandler(this.pnlButtons_MouseLeave);
             // 
             // dataGridViewTextBoxColumn1
             // 
@@ -520,14 +547,14 @@
             this.dtgAddons.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dtgAddons.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
             this.dtgAddons.BackgroundColor = System.Drawing.Color.White;
-            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle10.BackColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle10.Font = new System.Drawing.Font("Microsoft New Tai Lue", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle10.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(135)))), ((int)(((byte)(97)))));
-            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dtgAddons.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft New Tai Lue", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(135)))), ((int)(((byte)(97)))));
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dtgAddons.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.dtgAddons.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtgAddons.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
@@ -541,22 +568,23 @@
             this.dtgAddons.Name = "dtgAddons";
             this.dtgAddons.ReadOnly = true;
             this.dtgAddons.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken;
-            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle11.BackColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle11.Font = new System.Drawing.Font("Microsoft New Tai Lue", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle11.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(135)))), ((int)(((byte)(97)))));
-            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dtgAddons.RowHeadersDefaultCellStyle = dataGridViewCellStyle11;
-            dataGridViewCellStyle12.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle12.Font = new System.Drawing.Font("Microsoft New Tai Lue", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle12.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(135)))), ((int)(((byte)(97)))));
-            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.Color.White;
-            this.dtgAddons.RowsDefaultCellStyle = dataGridViewCellStyle12;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft New Tai Lue", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(135)))), ((int)(((byte)(97)))));
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dtgAddons.RowHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft New Tai Lue", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(135)))), ((int)(((byte)(97)))));
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.White;
+            this.dtgAddons.RowsDefaultCellStyle = dataGridViewCellStyle6;
             this.dtgAddons.Size = new System.Drawing.Size(432, 169);
             this.dtgAddons.TabIndex = 57;
+            this.dtgAddons.MouseEnter += new System.EventHandler(this.pnlButtons_MouseLeave);
             // 
             // Column1
             // 
@@ -595,6 +623,7 @@
             this.lblTotalPromo.TabIndex = 56;
             this.lblTotalPromo.Text = "Total Promos: 0";
             this.lblTotalPromo.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblTotalPromo.MouseEnter += new System.EventHandler(this.pnlButtons_MouseLeave);
             // 
             // lblTotalAddon
             // 
@@ -607,6 +636,7 @@
             this.lblTotalAddon.TabIndex = 55;
             this.lblTotalAddon.Text = "Total Add-ons: 0";
             this.lblTotalAddon.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblTotalAddon.MouseEnter += new System.EventHandler(this.pnlButtons_MouseLeave);
             // 
             // btnPromoDelete
             // 
@@ -628,6 +658,7 @@
             this.btnPromoDelete.TabIndex = 54;
             this.btnPromoDelete.Text = "DELETE";
             this.btnPromoDelete.TextOffset = new System.Drawing.Point(7, -11);
+            this.btnPromoDelete.MouseEnter += new System.EventHandler(this.pnlButtons_MouseLeave);
             // 
             // btnPromoManage
             // 
@@ -649,6 +680,7 @@
             this.btnPromoManage.TabIndex = 53;
             this.btnPromoManage.Text = "MANAGE";
             this.btnPromoManage.TextOffset = new System.Drawing.Point(7, -11);
+            this.btnPromoManage.MouseEnter += new System.EventHandler(this.pnlButtons_MouseLeave);
             // 
             // btnPromoAdd
             // 
@@ -670,6 +702,7 @@
             this.btnPromoAdd.TabIndex = 52;
             this.btnPromoAdd.Text = "ADD";
             this.btnPromoAdd.TextOffset = new System.Drawing.Point(7, -11);
+            this.btnPromoAdd.MouseEnter += new System.EventHandler(this.pnlButtons_MouseLeave);
             // 
             // btnAddonDelete
             // 
@@ -691,6 +724,7 @@
             this.btnAddonDelete.TabIndex = 51;
             this.btnAddonDelete.Text = "DELETE";
             this.btnAddonDelete.TextOffset = new System.Drawing.Point(7, -11);
+            this.btnAddonDelete.MouseEnter += new System.EventHandler(this.pnlButtons_MouseLeave);
             // 
             // btnAddonManage
             // 
@@ -712,6 +746,7 @@
             this.btnAddonManage.TabIndex = 50;
             this.btnAddonManage.Text = "MANAGE";
             this.btnAddonManage.TextOffset = new System.Drawing.Point(7, -11);
+            this.btnAddonManage.MouseEnter += new System.EventHandler(this.pnlButtons_MouseLeave);
             // 
             // btnAddonAdd
             // 
@@ -733,6 +768,7 @@
             this.btnAddonAdd.TabIndex = 49;
             this.btnAddonAdd.Text = "ADD";
             this.btnAddonAdd.TextOffset = new System.Drawing.Point(7, -11);
+            this.btnAddonAdd.MouseEnter += new System.EventHandler(this.pnlButtons_MouseLeave);
             // 
             // guna2VSeparator1
             // 
@@ -742,6 +778,7 @@
             this.guna2VSeparator1.Name = "guna2VSeparator1";
             this.guna2VSeparator1.Size = new System.Drawing.Size(10, 440);
             this.guna2VSeparator1.TabIndex = 0;
+            this.guna2VSeparator1.MouseEnter += new System.EventHandler(this.pnlButtons_MouseLeave);
             // 
             // guna2Separator11
             // 
@@ -751,6 +788,7 @@
             this.guna2Separator11.Name = "guna2Separator11";
             this.guna2Separator11.Size = new System.Drawing.Size(893, 10);
             this.guna2Separator11.TabIndex = 48;
+            this.guna2Separator11.MouseEnter += new System.EventHandler(this.pnlButtons_MouseLeave);
             // 
             // txtSearchPromo
             // 
@@ -780,6 +818,7 @@
             this.txtSearchPromo.Size = new System.Drawing.Size(432, 36);
             this.txtSearchPromo.TabIndex = 43;
             this.txtSearchPromo.TextOffset = new System.Drawing.Point(10, 0);
+            this.txtSearchPromo.MouseEnter += new System.EventHandler(this.pnlButtons_MouseLeave);
             // 
             // txtSearchAddon
             // 
@@ -809,6 +848,7 @@
             this.txtSearchAddon.Size = new System.Drawing.Size(432, 36);
             this.txtSearchAddon.TabIndex = 42;
             this.txtSearchAddon.TextOffset = new System.Drawing.Point(10, 0);
+            this.txtSearchAddon.MouseEnter += new System.EventHandler(this.pnlButtons_MouseLeave);
             // 
             // lblPromoDescription
             // 
@@ -819,6 +859,7 @@
             this.lblPromoDescription.Name = "lblPromoDescription";
             this.lblPromoDescription.Size = new System.Drawing.Size(331, 54);
             this.lblPromoDescription.TabIndex = 41;
+            this.lblPromoDescription.MouseEnter += new System.EventHandler(this.pnlButtons_MouseLeave);
             // 
             // txtPromoDiscount
             // 
@@ -847,6 +888,7 @@
             this.txtPromoDiscount.Size = new System.Drawing.Size(114, 36);
             this.txtPromoDiscount.TabIndex = 40;
             this.txtPromoDiscount.TextOffset = new System.Drawing.Point(10, 0);
+            this.txtPromoDiscount.MouseEnter += new System.EventHandler(this.pnlButtons_MouseLeave);
             // 
             // txtPromoName
             // 
@@ -875,6 +917,7 @@
             this.txtPromoName.Size = new System.Drawing.Size(310, 36);
             this.txtPromoName.TabIndex = 36;
             this.txtPromoName.TextOffset = new System.Drawing.Point(10, 0);
+            this.txtPromoName.MouseEnter += new System.EventHandler(this.pnlButtons_MouseLeave);
             // 
             // label28
             // 
@@ -885,6 +928,7 @@
             this.label28.Size = new System.Drawing.Size(89, 16);
             this.label28.TabIndex = 37;
             this.label28.Text = "Promo Name:";
+            this.label28.MouseEnter += new System.EventHandler(this.pnlButtons_MouseLeave);
             // 
             // label29
             // 
@@ -895,6 +939,7 @@
             this.label29.Size = new System.Drawing.Size(78, 16);
             this.label29.TabIndex = 38;
             this.label29.Text = "Description:";
+            this.label29.MouseEnter += new System.EventHandler(this.pnlButtons_MouseLeave);
             // 
             // label30
             // 
@@ -905,6 +950,7 @@
             this.label30.Size = new System.Drawing.Size(107, 16);
             this.label30.TabIndex = 39;
             this.label30.Text = "Promo Discount:";
+            this.label30.MouseEnter += new System.EventHandler(this.pnlButtons_MouseLeave);
             // 
             // lblAddonDescription
             // 
@@ -915,6 +961,7 @@
             this.lblAddonDescription.Name = "lblAddonDescription";
             this.lblAddonDescription.Size = new System.Drawing.Size(331, 54);
             this.lblAddonDescription.TabIndex = 35;
+            this.lblAddonDescription.MouseEnter += new System.EventHandler(this.pnlButtons_MouseLeave);
             // 
             // txtAddonPrice
             // 
@@ -943,6 +990,7 @@
             this.txtAddonPrice.Size = new System.Drawing.Size(114, 36);
             this.txtAddonPrice.TabIndex = 34;
             this.txtAddonPrice.TextOffset = new System.Drawing.Point(10, 0);
+            this.txtAddonPrice.MouseEnter += new System.EventHandler(this.pnlButtons_MouseLeave);
             // 
             // txtAddonName
             // 
@@ -971,6 +1019,7 @@
             this.txtAddonName.Size = new System.Drawing.Size(310, 36);
             this.txtAddonName.TabIndex = 28;
             this.txtAddonName.TextOffset = new System.Drawing.Point(10, 0);
+            this.txtAddonName.MouseEnter += new System.EventHandler(this.pnlButtons_MouseLeave);
             // 
             // label23
             // 
@@ -981,6 +1030,7 @@
             this.label23.Size = new System.Drawing.Size(93, 16);
             this.label23.TabIndex = 31;
             this.label23.Text = "Add-on Name:";
+            this.label23.MouseEnter += new System.EventHandler(this.pnlButtons_MouseLeave);
             // 
             // label24
             // 
@@ -991,6 +1041,7 @@
             this.label24.Size = new System.Drawing.Size(78, 16);
             this.label24.TabIndex = 32;
             this.label24.Text = "Description:";
+            this.label24.MouseEnter += new System.EventHandler(this.pnlButtons_MouseLeave);
             // 
             // label25
             // 
@@ -1001,6 +1052,7 @@
             this.label25.Size = new System.Drawing.Size(87, 16);
             this.label25.TabIndex = 33;
             this.label25.Text = "Add-on Price:";
+            this.label25.MouseEnter += new System.EventHandler(this.pnlButtons_MouseLeave);
             // 
             // label22
             // 
@@ -1011,6 +1063,7 @@
             this.label22.TabIndex = 2;
             this.label22.Text = "Promos";
             this.label22.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.label22.MouseEnter += new System.EventHandler(this.pnlButtons_MouseLeave);
             // 
             // label21
             // 
@@ -1021,6 +1074,7 @@
             this.label21.TabIndex = 1;
             this.label21.Text = "Add-ons";
             this.label21.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.label21.MouseEnter += new System.EventHandler(this.pnlButtons_MouseLeave);
             // 
             // label31
             // 
@@ -1031,6 +1085,7 @@
             this.label31.Size = new System.Drawing.Size(93, 16);
             this.label31.TabIndex = 44;
             this.label31.Text = "Add-on Name:";
+            this.label31.MouseEnter += new System.EventHandler(this.pnlButtons_MouseLeave);
             // 
             // label32
             // 
@@ -1041,6 +1096,7 @@
             this.label32.Size = new System.Drawing.Size(89, 16);
             this.label32.TabIndex = 45;
             this.label32.Text = "Promo Name:";
+            this.label32.MouseEnter += new System.EventHandler(this.pnlButtons_MouseLeave);
             // 
             // FrmGuestReservation
             // 
@@ -1048,15 +1104,17 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(154)))), ((int)(((byte)(136)))));
             this.ClientSize = new System.Drawing.Size(1000, 600);
+            this.Controls.Add(this.pnlButtons);
             this.Controls.Add(this.pnlAP);
             this.Controls.Add(this.lblTitle);
-            this.Controls.Add(this.pnlButtons);
             this.Controls.Add(this.guna2CustomGradientPanel1);
             this.Controls.Add(this.btnProfile);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FrmGuestReservation";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmGuestReservation";
+            this.Load += new System.EventHandler(this.FrmGuestReservation_Load);
+            this.MouseEnter += new System.EventHandler(this.pnlButtons_MouseLeave);
             this.guna2CustomGradientPanel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();

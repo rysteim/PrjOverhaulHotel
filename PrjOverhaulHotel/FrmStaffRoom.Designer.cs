@@ -32,6 +32,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmStaffRoom));
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2CustomGradientPanel1 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
@@ -196,7 +197,7 @@
             this.btnLogout.CustomImages.Parent = this.btnLogout;
             this.btnLogout.FillColor = System.Drawing.Color.White;
             this.btnLogout.FillColor2 = System.Drawing.Color.White;
-            this.btnLogout.Font = new System.Drawing.Font("Adobe Fan Heiti Std B", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLogout.Font = new System.Drawing.Font("Nirmala UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLogout.ForeColor = System.Drawing.Color.Black;
             this.btnLogout.HoverState.FillColor = System.Drawing.Color.Black;
             this.btnLogout.HoverState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(154)))), ((int)(((byte)(136)))));
@@ -224,7 +225,7 @@
             this.btnRooms.CustomImages.Parent = this.btnRooms;
             this.btnRooms.FillColor = System.Drawing.Color.Black;
             this.btnRooms.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(154)))), ((int)(((byte)(136)))));
-            this.btnRooms.Font = new System.Drawing.Font("Adobe Fan Heiti Std B", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRooms.Font = new System.Drawing.Font("Nirmala UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRooms.ForeColor = System.Drawing.Color.White;
             this.btnRooms.HoverState.FillColor = System.Drawing.Color.Black;
             this.btnRooms.HoverState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(154)))), ((int)(((byte)(136)))));
@@ -251,7 +252,7 @@
             this.btnPersonnel.CustomImages.Parent = this.btnPersonnel;
             this.btnPersonnel.FillColor = System.Drawing.Color.White;
             this.btnPersonnel.FillColor2 = System.Drawing.Color.White;
-            this.btnPersonnel.Font = new System.Drawing.Font("Adobe Fan Heiti Std B", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPersonnel.Font = new System.Drawing.Font("Nirmala UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPersonnel.ForeColor = System.Drawing.Color.Black;
             this.btnPersonnel.HoverState.FillColor = System.Drawing.Color.Black;
             this.btnPersonnel.HoverState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(154)))), ((int)(((byte)(136)))));
@@ -279,7 +280,7 @@
             this.btnGuests.CustomImages.Parent = this.btnGuests;
             this.btnGuests.FillColor = System.Drawing.Color.White;
             this.btnGuests.FillColor2 = System.Drawing.Color.White;
-            this.btnGuests.Font = new System.Drawing.Font("Adobe Fan Heiti Std B", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGuests.Font = new System.Drawing.Font("Nirmala UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGuests.ForeColor = System.Drawing.Color.Black;
             this.btnGuests.HoverState.FillColor = System.Drawing.Color.Black;
             this.btnGuests.HoverState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(154)))), ((int)(((byte)(136)))));
@@ -307,7 +308,7 @@
             this.btnAP.CustomImages.Parent = this.btnAP;
             this.btnAP.FillColor = System.Drawing.Color.White;
             this.btnAP.FillColor2 = System.Drawing.Color.White;
-            this.btnAP.Font = new System.Drawing.Font("Adobe Fan Heiti Std B", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAP.Font = new System.Drawing.Font("Nirmala UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAP.ForeColor = System.Drawing.Color.Black;
             this.btnAP.HoverState.FillColor = System.Drawing.Color.Black;
             this.btnAP.HoverState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(154)))), ((int)(((byte)(136)))));
@@ -335,7 +336,7 @@
             this.btnReservation.CustomImages.Parent = this.btnReservation;
             this.btnReservation.FillColor = System.Drawing.Color.White;
             this.btnReservation.FillColor2 = System.Drawing.Color.White;
-            this.btnReservation.Font = new System.Drawing.Font("Adobe Fan Heiti Std B", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnReservation.Font = new System.Drawing.Font("Nirmala UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnReservation.ForeColor = System.Drawing.Color.Black;
             this.btnReservation.HoverState.FillColor = System.Drawing.Color.Black;
             this.btnReservation.HoverState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(154)))), ((int)(((byte)(136)))));
@@ -363,7 +364,7 @@
             this.btnDashboard.CustomImages.Parent = this.btnDashboard;
             this.btnDashboard.FillColor = System.Drawing.Color.White;
             this.btnDashboard.FillColor2 = System.Drawing.Color.White;
-            this.btnDashboard.Font = new System.Drawing.Font("Adobe Fan Heiti Std B", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDashboard.Font = new System.Drawing.Font("Nirmala UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDashboard.ForeColor = System.Drawing.Color.Black;
             this.btnDashboard.HoverState.FillColor = System.Drawing.Color.Black;
             this.btnDashboard.HoverState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(154)))), ((int)(((byte)(136)))));
@@ -426,19 +427,19 @@
             this.btnDelete.CustomImages.Parent = this.btnDelete;
             this.btnDelete.FillColor = System.Drawing.Color.Black;
             this.btnDelete.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.btnDelete.Font = new System.Drawing.Font("Adobe Fan Heiti Std B", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDelete.Font = new System.Drawing.Font("Nirmala UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDelete.ForeColor = System.Drawing.Color.White;
             this.btnDelete.HoverState.Parent = this.btnDelete;
             this.btnDelete.Image = global::PrjOverhaulHotel.Properties.Resources.trash_2;
             this.btnDelete.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnDelete.ImageOffset = new System.Drawing.Point(5, 12);
+            this.btnDelete.ImageOffset = new System.Drawing.Point(5, 13);
             this.btnDelete.Location = new System.Drawing.Point(248, 434);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.ShadowDecoration.Parent = this.btnDelete;
             this.btnDelete.Size = new System.Drawing.Size(212, 32);
             this.btnDelete.TabIndex = 37;
             this.btnDelete.Text = "DELETE ROOM";
-            this.btnDelete.TextOffset = new System.Drawing.Point(7, -11);
+            this.btnDelete.TextOffset = new System.Drawing.Point(7, -13);
             this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // dtgRooms
@@ -543,7 +544,7 @@
             // 
             // label14
             // 
-            this.label14.Font = new System.Drawing.Font("Adobe Fan Heiti Std B", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.label14.Font = new System.Drawing.Font("Nirmala UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label14.ForeColor = System.Drawing.Color.White;
             this.label14.Location = new System.Drawing.Point(13, 102);
             this.label14.Name = "label14";
@@ -554,7 +555,7 @@
             // 
             // lblResult
             // 
-            this.lblResult.Font = new System.Drawing.Font("Adobe Fan Heiti Std B", 60F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.lblResult.Font = new System.Drawing.Font("Nirmala UI", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblResult.ForeColor = System.Drawing.Color.White;
             this.lblResult.Location = new System.Drawing.Point(3, 8);
             this.lblResult.Name = "lblResult";
@@ -588,7 +589,7 @@
             // 
             // label16
             // 
-            this.label16.Font = new System.Drawing.Font("Adobe Fan Heiti Std B", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.label16.Font = new System.Drawing.Font("Nirmala UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label16.ForeColor = System.Drawing.Color.White;
             this.label16.Location = new System.Drawing.Point(38, 102);
             this.label16.Name = "label16";
@@ -599,7 +600,7 @@
             // 
             // lblTotal
             // 
-            this.lblTotal.Font = new System.Drawing.Font("Adobe Fan Heiti Std B", 60F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.lblTotal.Font = new System.Drawing.Font("Nirmala UI", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTotal.ForeColor = System.Drawing.Color.White;
             this.lblTotal.Location = new System.Drawing.Point(0, 8);
             this.lblTotal.Name = "lblTotal";
@@ -697,10 +698,10 @@
             // label18
             // 
             this.label18.AutoSize = true;
-            this.label18.Font = new System.Drawing.Font("Adobe Fan Heiti Std B", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label18.Font = new System.Drawing.Font("Nirmala UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label18.Location = new System.Drawing.Point(44, 43);
             this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(45, 16);
+            this.label18.Size = new System.Drawing.Size(42, 15);
             this.label18.TabIndex = 33;
             this.label18.Text = "Name:";
             this.label18.MouseEnter += new System.EventHandler(this.pnlButtons_MouseLeave);
@@ -708,10 +709,10 @@
             // label19
             // 
             this.label19.AutoSize = true;
-            this.label19.Font = new System.Drawing.Font("Adobe Fan Heiti Std B", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label19.Font = new System.Drawing.Font("Nirmala UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label19.Location = new System.Drawing.Point(44, 101);
             this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(39, 16);
+            this.label19.Size = new System.Drawing.Size(35, 15);
             this.label19.TabIndex = 34;
             this.label19.Text = "Type:";
             this.label19.MouseEnter += new System.EventHandler(this.pnlButtons_MouseLeave);
@@ -719,10 +720,10 @@
             // label20
             // 
             this.label20.AutoSize = true;
-            this.label20.Font = new System.Drawing.Font("Adobe Fan Heiti Std B", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label20.Font = new System.Drawing.Font("Nirmala UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label20.Location = new System.Drawing.Point(304, 101);
             this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(48, 16);
+            this.label20.Size = new System.Drawing.Size(42, 15);
             this.label20.TabIndex = 35;
             this.label20.Text = "Status:";
             this.label20.MouseEnter += new System.EventHandler(this.pnlButtons_MouseLeave);
@@ -744,19 +745,19 @@
             this.btnManageRoom.CustomImages.Parent = this.btnManageRoom;
             this.btnManageRoom.FillColor = System.Drawing.Color.Black;
             this.btnManageRoom.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btnManageRoom.Font = new System.Drawing.Font("Adobe Fan Heiti Std B", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnManageRoom.Font = new System.Drawing.Font("Nirmala UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnManageRoom.ForeColor = System.Drawing.Color.White;
             this.btnManageRoom.HoverState.Parent = this.btnManageRoom;
             this.btnManageRoom.Image = global::PrjOverhaulHotel.Properties.Resources.bolt;
             this.btnManageRoom.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnManageRoom.ImageOffset = new System.Drawing.Point(5, 12);
+            this.btnManageRoom.ImageOffset = new System.Drawing.Point(5, 13);
             this.btnManageRoom.Location = new System.Drawing.Point(483, 434);
             this.btnManageRoom.Name = "btnManageRoom";
             this.btnManageRoom.ShadowDecoration.Parent = this.btnManageRoom;
             this.btnManageRoom.Size = new System.Drawing.Size(212, 32);
             this.btnManageRoom.TabIndex = 12;
             this.btnManageRoom.Text = "MANAGE ROOM";
-            this.btnManageRoom.TextOffset = new System.Drawing.Point(7, -11);
+            this.btnManageRoom.TextOffset = new System.Drawing.Point(7, -13);
             this.btnManageRoom.Click += new System.EventHandler(this.btnManageRoom_Click);
             this.btnManageRoom.MouseEnter += new System.EventHandler(this.pnlButtons_MouseLeave);
             // 
@@ -767,19 +768,19 @@
             this.btnAddRoom.CustomImages.Parent = this.btnAddRoom;
             this.btnAddRoom.FillColor = System.Drawing.Color.Black;
             this.btnAddRoom.FillColor2 = System.Drawing.Color.Teal;
-            this.btnAddRoom.Font = new System.Drawing.Font("Adobe Fan Heiti Std B", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddRoom.Font = new System.Drawing.Font("Nirmala UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddRoom.ForeColor = System.Drawing.Color.White;
             this.btnAddRoom.HoverState.Parent = this.btnAddRoom;
             this.btnAddRoom.Image = global::PrjOverhaulHotel.Properties.Resources.plus;
             this.btnAddRoom.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnAddRoom.ImageOffset = new System.Drawing.Point(5, 12);
+            this.btnAddRoom.ImageOffset = new System.Drawing.Point(5, 13);
             this.btnAddRoom.Location = new System.Drawing.Point(713, 434);
             this.btnAddRoom.Name = "btnAddRoom";
             this.btnAddRoom.ShadowDecoration.Parent = this.btnAddRoom;
             this.btnAddRoom.Size = new System.Drawing.Size(180, 32);
             this.btnAddRoom.TabIndex = 11;
             this.btnAddRoom.Text = "ADD ROOM";
-            this.btnAddRoom.TextOffset = new System.Drawing.Point(7, -11);
+            this.btnAddRoom.TextOffset = new System.Drawing.Point(7, -13);
             this.btnAddRoom.Click += new System.EventHandler(this.btnAddRoom_Click);
             this.btnAddRoom.MouseEnter += new System.EventHandler(this.pnlButtons_MouseLeave);
             // 
@@ -871,9 +872,10 @@
             this.Controls.Add(this.btnProfile);
             this.Controls.Add(this.pnlRooms);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FrmStaffRoom";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FrmStaffRoom";
+            this.Text = "Hotelliere";
             this.Load += new System.EventHandler(this.FrmStaffRoom_Load);
             this.MouseEnter += new System.EventHandler(this.pnlButtons_MouseLeave);
             this.guna2CustomGradientPanel1.ResumeLayout(false);

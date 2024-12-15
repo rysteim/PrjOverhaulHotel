@@ -212,7 +212,7 @@
             this.btnLogout.CustomImages.Parent = this.btnLogout;
             this.btnLogout.FillColor = System.Drawing.Color.White;
             this.btnLogout.FillColor2 = System.Drawing.Color.White;
-            this.btnLogout.Font = new System.Drawing.Font("Adobe Fan Heiti Std B", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLogout.Font = new System.Drawing.Font("Nirmala UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLogout.ForeColor = System.Drawing.Color.Black;
             this.btnLogout.HoverState.FillColor = System.Drawing.Color.Black;
             this.btnLogout.HoverState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(154)))), ((int)(((byte)(136)))));
@@ -240,7 +240,7 @@
             this.btnRooms.CustomImages.Parent = this.btnRooms;
             this.btnRooms.FillColor = System.Drawing.Color.White;
             this.btnRooms.FillColor2 = System.Drawing.Color.White;
-            this.btnRooms.Font = new System.Drawing.Font("Adobe Fan Heiti Std B", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRooms.Font = new System.Drawing.Font("Nirmala UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRooms.ForeColor = System.Drawing.Color.Black;
             this.btnRooms.HoverState.FillColor = System.Drawing.Color.Black;
             this.btnRooms.HoverState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(154)))), ((int)(((byte)(136)))));
@@ -268,7 +268,7 @@
             this.btnPersonnel.CustomImages.Parent = this.btnPersonnel;
             this.btnPersonnel.FillColor = System.Drawing.Color.White;
             this.btnPersonnel.FillColor2 = System.Drawing.Color.White;
-            this.btnPersonnel.Font = new System.Drawing.Font("Adobe Fan Heiti Std B", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPersonnel.Font = new System.Drawing.Font("Nirmala UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPersonnel.ForeColor = System.Drawing.Color.Black;
             this.btnPersonnel.HoverState.FillColor = System.Drawing.Color.Black;
             this.btnPersonnel.HoverState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(154)))), ((int)(((byte)(136)))));
@@ -296,7 +296,7 @@
             this.btnGuests.CustomImages.Parent = this.btnGuests;
             this.btnGuests.FillColor = System.Drawing.Color.White;
             this.btnGuests.FillColor2 = System.Drawing.Color.White;
-            this.btnGuests.Font = new System.Drawing.Font("Adobe Fan Heiti Std B", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGuests.Font = new System.Drawing.Font("Nirmala UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGuests.ForeColor = System.Drawing.Color.Black;
             this.btnGuests.HoverState.FillColor = System.Drawing.Color.Black;
             this.btnGuests.HoverState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(154)))), ((int)(((byte)(136)))));
@@ -324,7 +324,7 @@
             this.btnAP.CustomImages.Parent = this.btnAP;
             this.btnAP.FillColor = System.Drawing.Color.Black;
             this.btnAP.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(154)))), ((int)(((byte)(136)))));
-            this.btnAP.Font = new System.Drawing.Font("Adobe Fan Heiti Std B", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAP.Font = new System.Drawing.Font("Nirmala UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAP.ForeColor = System.Drawing.Color.White;
             this.btnAP.HoverState.FillColor = System.Drawing.Color.Black;
             this.btnAP.HoverState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(154)))), ((int)(((byte)(136)))));
@@ -351,7 +351,7 @@
             this.btnReservation.CustomImages.Parent = this.btnReservation;
             this.btnReservation.FillColor = System.Drawing.Color.White;
             this.btnReservation.FillColor2 = System.Drawing.Color.White;
-            this.btnReservation.Font = new System.Drawing.Font("Adobe Fan Heiti Std B", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnReservation.Font = new System.Drawing.Font("Nirmala UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnReservation.ForeColor = System.Drawing.Color.Black;
             this.btnReservation.HoverState.FillColor = System.Drawing.Color.Black;
             this.btnReservation.HoverState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(154)))), ((int)(((byte)(136)))));
@@ -379,7 +379,7 @@
             this.btnDashboard.CustomImages.Parent = this.btnDashboard;
             this.btnDashboard.FillColor = System.Drawing.Color.White;
             this.btnDashboard.FillColor2 = System.Drawing.Color.White;
-            this.btnDashboard.Font = new System.Drawing.Font("Adobe Fan Heiti Std B", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDashboard.Font = new System.Drawing.Font("Nirmala UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDashboard.ForeColor = System.Drawing.Color.Black;
             this.btnDashboard.HoverState.FillColor = System.Drawing.Color.Black;
             this.btnDashboard.HoverState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(154)))), ((int)(((byte)(136)))));
@@ -662,9 +662,9 @@
             // lblTotalPromo
             // 
             this.lblTotalPromo.BackColor = System.Drawing.Color.Transparent;
-            this.lblTotalPromo.Font = new System.Drawing.Font("Adobe Fan Heiti Std B", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTotalPromo.Font = new System.Drawing.Font("Myriad Pro", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTotalPromo.ForeColor = System.Drawing.Color.Black;
-            this.lblTotalPromo.Location = new System.Drawing.Point(481, 411);
+            this.lblTotalPromo.Location = new System.Drawing.Point(488, 411);
             this.lblTotalPromo.Name = "lblTotalPromo";
             this.lblTotalPromo.Size = new System.Drawing.Size(268, 23);
             this.lblTotalPromo.TabIndex = 56;
@@ -675,9 +675,9 @@
             // lblTotalAddon
             // 
             this.lblTotalAddon.BackColor = System.Drawing.Color.Transparent;
-            this.lblTotalAddon.Font = new System.Drawing.Font("Adobe Fan Heiti Std B", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTotalAddon.Font = new System.Drawing.Font("Myriad Pro", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTotalAddon.ForeColor = System.Drawing.Color.Black;
-            this.lblTotalAddon.Location = new System.Drawing.Point(19, 411);
+            this.lblTotalAddon.Location = new System.Drawing.Point(26, 411);
             this.lblTotalAddon.Name = "lblTotalAddon";
             this.lblTotalAddon.Size = new System.Drawing.Size(268, 23);
             this.lblTotalAddon.TabIndex = 55;
@@ -692,19 +692,20 @@
             this.btnPromoDelete.CustomImages.Parent = this.btnPromoDelete;
             this.btnPromoDelete.FillColor = System.Drawing.Color.Black;
             this.btnPromoDelete.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.btnPromoDelete.Font = new System.Drawing.Font("Adobe Fan Heiti Std B", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPromoDelete.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPromoDelete.ForeColor = System.Drawing.Color.White;
             this.btnPromoDelete.HoverState.Parent = this.btnPromoDelete;
             this.btnPromoDelete.Image = global::PrjOverhaulHotel.Properties.Resources.trash_2;
             this.btnPromoDelete.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnPromoDelete.ImageOffset = new System.Drawing.Point(5, 12);
+            this.btnPromoDelete.ImageOffset = new System.Drawing.Point(5, 14);
             this.btnPromoDelete.Location = new System.Drawing.Point(767, 435);
             this.btnPromoDelete.Name = "btnPromoDelete";
             this.btnPromoDelete.ShadowDecoration.Parent = this.btnPromoDelete;
             this.btnPromoDelete.Size = new System.Drawing.Size(143, 32);
             this.btnPromoDelete.TabIndex = 54;
             this.btnPromoDelete.Text = "DELETE";
-            this.btnPromoDelete.TextOffset = new System.Drawing.Point(7, -11);
+            this.btnPromoDelete.TextOffset = new System.Drawing.Point(7, -14);
+            this.btnPromoDelete.Click += new System.EventHandler(this.btnPromoDelete_Click);
             this.btnPromoDelete.MouseEnter += new System.EventHandler(this.pnlButtons_MouseLeave);
             // 
             // btnPromoManage
@@ -714,19 +715,19 @@
             this.btnPromoManage.CustomImages.Parent = this.btnPromoManage;
             this.btnPromoManage.FillColor = System.Drawing.Color.Black;
             this.btnPromoManage.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btnPromoManage.Font = new System.Drawing.Font("Adobe Fan Heiti Std B", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPromoManage.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPromoManage.ForeColor = System.Drawing.Color.White;
             this.btnPromoManage.HoverState.Parent = this.btnPromoManage;
             this.btnPromoManage.Image = global::PrjOverhaulHotel.Properties.Resources.bolt;
             this.btnPromoManage.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnPromoManage.ImageOffset = new System.Drawing.Point(5, 12);
+            this.btnPromoManage.ImageOffset = new System.Drawing.Point(5, 14);
             this.btnPromoManage.Location = new System.Drawing.Point(610, 435);
             this.btnPromoManage.Name = "btnPromoManage";
             this.btnPromoManage.ShadowDecoration.Parent = this.btnPromoManage;
             this.btnPromoManage.Size = new System.Drawing.Size(142, 32);
             this.btnPromoManage.TabIndex = 53;
             this.btnPromoManage.Text = "MANAGE";
-            this.btnPromoManage.TextOffset = new System.Drawing.Point(7, -11);
+            this.btnPromoManage.TextOffset = new System.Drawing.Point(7, -14);
             this.btnPromoManage.Click += new System.EventHandler(this.btnPromoManage_Click);
             this.btnPromoManage.MouseEnter += new System.EventHandler(this.pnlButtons_MouseLeave);
             // 
@@ -737,19 +738,19 @@
             this.btnPromoAdd.CustomImages.Parent = this.btnPromoAdd;
             this.btnPromoAdd.FillColor = System.Drawing.Color.Black;
             this.btnPromoAdd.FillColor2 = System.Drawing.Color.Teal;
-            this.btnPromoAdd.Font = new System.Drawing.Font("Adobe Fan Heiti Std B", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPromoAdd.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPromoAdd.ForeColor = System.Drawing.Color.White;
             this.btnPromoAdd.HoverState.Parent = this.btnPromoAdd;
             this.btnPromoAdd.Image = global::PrjOverhaulHotel.Properties.Resources.plus;
             this.btnPromoAdd.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnPromoAdd.ImageOffset = new System.Drawing.Point(5, 12);
+            this.btnPromoAdd.ImageOffset = new System.Drawing.Point(5, 14);
             this.btnPromoAdd.Location = new System.Drawing.Point(478, 435);
             this.btnPromoAdd.Name = "btnPromoAdd";
             this.btnPromoAdd.ShadowDecoration.Parent = this.btnPromoAdd;
             this.btnPromoAdd.Size = new System.Drawing.Size(116, 32);
             this.btnPromoAdd.TabIndex = 52;
             this.btnPromoAdd.Text = "ADD";
-            this.btnPromoAdd.TextOffset = new System.Drawing.Point(7, -11);
+            this.btnPromoAdd.TextOffset = new System.Drawing.Point(7, -14);
             this.btnPromoAdd.Click += new System.EventHandler(this.btnPromoAdd_Click);
             this.btnPromoAdd.MouseEnter += new System.EventHandler(this.pnlButtons_MouseLeave);
             // 
@@ -760,19 +761,20 @@
             this.btnAddonDelete.CustomImages.Parent = this.btnAddonDelete;
             this.btnAddonDelete.FillColor = System.Drawing.Color.Black;
             this.btnAddonDelete.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.btnAddonDelete.Font = new System.Drawing.Font("Adobe Fan Heiti Std B", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddonDelete.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddonDelete.ForeColor = System.Drawing.Color.White;
             this.btnAddonDelete.HoverState.Parent = this.btnAddonDelete;
             this.btnAddonDelete.Image = global::PrjOverhaulHotel.Properties.Resources.trash_2;
             this.btnAddonDelete.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnAddonDelete.ImageOffset = new System.Drawing.Point(5, 12);
+            this.btnAddonDelete.ImageOffset = new System.Drawing.Point(5, 14);
             this.btnAddonDelete.Location = new System.Drawing.Point(307, 435);
             this.btnAddonDelete.Name = "btnAddonDelete";
             this.btnAddonDelete.ShadowDecoration.Parent = this.btnAddonDelete;
             this.btnAddonDelete.Size = new System.Drawing.Size(143, 32);
             this.btnAddonDelete.TabIndex = 51;
             this.btnAddonDelete.Text = "DELETE";
-            this.btnAddonDelete.TextOffset = new System.Drawing.Point(7, -11);
+            this.btnAddonDelete.TextOffset = new System.Drawing.Point(7, -14);
+            this.btnAddonDelete.Click += new System.EventHandler(this.btnAddonDelete_Click);
             this.btnAddonDelete.MouseEnter += new System.EventHandler(this.pnlButtons_MouseLeave);
             // 
             // btnAddonManage
@@ -782,19 +784,19 @@
             this.btnAddonManage.CustomImages.Parent = this.btnAddonManage;
             this.btnAddonManage.FillColor = System.Drawing.Color.Black;
             this.btnAddonManage.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btnAddonManage.Font = new System.Drawing.Font("Adobe Fan Heiti Std B", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddonManage.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddonManage.ForeColor = System.Drawing.Color.White;
             this.btnAddonManage.HoverState.Parent = this.btnAddonManage;
             this.btnAddonManage.Image = global::PrjOverhaulHotel.Properties.Resources.bolt;
             this.btnAddonManage.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnAddonManage.ImageOffset = new System.Drawing.Point(5, 12);
+            this.btnAddonManage.ImageOffset = new System.Drawing.Point(5, 14);
             this.btnAddonManage.Location = new System.Drawing.Point(150, 435);
             this.btnAddonManage.Name = "btnAddonManage";
             this.btnAddonManage.ShadowDecoration.Parent = this.btnAddonManage;
             this.btnAddonManage.Size = new System.Drawing.Size(142, 32);
             this.btnAddonManage.TabIndex = 50;
             this.btnAddonManage.Text = "MANAGE";
-            this.btnAddonManage.TextOffset = new System.Drawing.Point(7, -11);
+            this.btnAddonManage.TextOffset = new System.Drawing.Point(7, -14);
             this.btnAddonManage.Click += new System.EventHandler(this.btnAddonManage_Click);
             this.btnAddonManage.MouseEnter += new System.EventHandler(this.pnlButtons_MouseLeave);
             // 
@@ -805,19 +807,19 @@
             this.btnAddonAdd.CustomImages.Parent = this.btnAddonAdd;
             this.btnAddonAdd.FillColor = System.Drawing.Color.Black;
             this.btnAddonAdd.FillColor2 = System.Drawing.Color.Teal;
-            this.btnAddonAdd.Font = new System.Drawing.Font("Adobe Fan Heiti Std B", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddonAdd.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddonAdd.ForeColor = System.Drawing.Color.White;
             this.btnAddonAdd.HoverState.Parent = this.btnAddonAdd;
             this.btnAddonAdd.Image = global::PrjOverhaulHotel.Properties.Resources.plus;
             this.btnAddonAdd.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnAddonAdd.ImageOffset = new System.Drawing.Point(5, 12);
+            this.btnAddonAdd.ImageOffset = new System.Drawing.Point(5, 14);
             this.btnAddonAdd.Location = new System.Drawing.Point(18, 435);
             this.btnAddonAdd.Name = "btnAddonAdd";
             this.btnAddonAdd.ShadowDecoration.Parent = this.btnAddonAdd;
             this.btnAddonAdd.Size = new System.Drawing.Size(116, 32);
             this.btnAddonAdd.TabIndex = 49;
             this.btnAddonAdd.Text = "ADD";
-            this.btnAddonAdd.TextOffset = new System.Drawing.Point(7, -11);
+            this.btnAddonAdd.TextOffset = new System.Drawing.Point(7, -14);
             this.btnAddonAdd.Click += new System.EventHandler(this.btnAddonAdd_Click);
             this.btnAddonAdd.MouseEnter += new System.EventHandler(this.pnlButtons_MouseLeave);
             // 
@@ -908,9 +910,9 @@
             this.lblPromoDescription.BackColor = System.Drawing.Color.White;
             this.lblPromoDescription.Font = new System.Drawing.Font("Microsoft New Tai Lue", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPromoDescription.ForeColor = System.Drawing.Color.DimGray;
-            this.lblPromoDescription.Location = new System.Drawing.Point(580, 108);
+            this.lblPromoDescription.Location = new System.Drawing.Point(569, 108);
             this.lblPromoDescription.Name = "lblPromoDescription";
-            this.lblPromoDescription.Size = new System.Drawing.Size(331, 54);
+            this.lblPromoDescription.Size = new System.Drawing.Size(342, 54);
             this.lblPromoDescription.TabIndex = 41;
             this.lblPromoDescription.MouseEnter += new System.EventHandler(this.pnlButtons_MouseLeave);
             // 
@@ -977,10 +979,10 @@
             // label28
             // 
             this.label28.AutoSize = true;
-            this.label28.Font = new System.Drawing.Font("Adobe Fan Heiti Std B", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label28.Font = new System.Drawing.Font("Nirmala UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label28.Location = new System.Drawing.Point(493, 46);
             this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(89, 16);
+            this.label28.Size = new System.Drawing.Size(81, 15);
             this.label28.TabIndex = 37;
             this.label28.Text = "Promo Name:";
             this.label28.MouseEnter += new System.EventHandler(this.pnlButtons_MouseLeave);
@@ -988,10 +990,10 @@
             // label29
             // 
             this.label29.AutoSize = true;
-            this.label29.Font = new System.Drawing.Font("Adobe Fan Heiti Std B", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label29.Font = new System.Drawing.Font("Nirmala UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label29.Location = new System.Drawing.Point(493, 108);
             this.label29.Name = "label29";
-            this.label29.Size = new System.Drawing.Size(78, 16);
+            this.label29.Size = new System.Drawing.Size(70, 15);
             this.label29.TabIndex = 38;
             this.label29.Text = "Description:";
             this.label29.MouseEnter += new System.EventHandler(this.pnlButtons_MouseLeave);
@@ -999,10 +1001,10 @@
             // label30
             // 
             this.label30.AutoSize = true;
-            this.label30.Font = new System.Drawing.Font("Adobe Fan Heiti Std B", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label30.Font = new System.Drawing.Font("Nirmala UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label30.Location = new System.Drawing.Point(802, 46);
             this.label30.Name = "label30";
-            this.label30.Size = new System.Drawing.Size(107, 16);
+            this.label30.Size = new System.Drawing.Size(96, 15);
             this.label30.TabIndex = 39;
             this.label30.Text = "Promo Discount:";
             this.label30.MouseEnter += new System.EventHandler(this.pnlButtons_MouseLeave);
@@ -1012,9 +1014,9 @@
             this.lblAddonDescription.BackColor = System.Drawing.Color.White;
             this.lblAddonDescription.Font = new System.Drawing.Font("Microsoft New Tai Lue", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAddonDescription.ForeColor = System.Drawing.Color.DimGray;
-            this.lblAddonDescription.Location = new System.Drawing.Point(119, 108);
+            this.lblAddonDescription.Location = new System.Drawing.Point(108, 108);
             this.lblAddonDescription.Name = "lblAddonDescription";
-            this.lblAddonDescription.Size = new System.Drawing.Size(331, 54);
+            this.lblAddonDescription.Size = new System.Drawing.Size(342, 54);
             this.lblAddonDescription.TabIndex = 35;
             this.lblAddonDescription.MouseEnter += new System.EventHandler(this.pnlButtons_MouseLeave);
             // 
@@ -1081,10 +1083,10 @@
             // label23
             // 
             this.label23.AutoSize = true;
-            this.label23.Font = new System.Drawing.Font("Adobe Fan Heiti Std B", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label23.Font = new System.Drawing.Font("Nirmala UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label23.Location = new System.Drawing.Point(32, 46);
             this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(93, 16);
+            this.label23.Size = new System.Drawing.Size(86, 15);
             this.label23.TabIndex = 31;
             this.label23.Text = "Add-on Name:";
             this.label23.MouseEnter += new System.EventHandler(this.pnlButtons_MouseLeave);
@@ -1092,10 +1094,10 @@
             // label24
             // 
             this.label24.AutoSize = true;
-            this.label24.Font = new System.Drawing.Font("Adobe Fan Heiti Std B", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label24.Font = new System.Drawing.Font("Nirmala UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label24.Location = new System.Drawing.Point(32, 108);
             this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(78, 16);
+            this.label24.Size = new System.Drawing.Size(70, 15);
             this.label24.TabIndex = 32;
             this.label24.Text = "Description:";
             this.label24.MouseEnter += new System.EventHandler(this.pnlButtons_MouseLeave);
@@ -1103,10 +1105,10 @@
             // label25
             // 
             this.label25.AutoSize = true;
-            this.label25.Font = new System.Drawing.Font("Adobe Fan Heiti Std B", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label25.Font = new System.Drawing.Font("Nirmala UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label25.Location = new System.Drawing.Point(341, 46);
             this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(87, 16);
+            this.label25.Size = new System.Drawing.Size(80, 15);
             this.label25.TabIndex = 33;
             this.label25.Text = "Add-on Price:";
             this.label25.MouseEnter += new System.EventHandler(this.pnlButtons_MouseLeave);
@@ -1136,10 +1138,10 @@
             // label31
             // 
             this.label31.AutoSize = true;
-            this.label31.Font = new System.Drawing.Font("Adobe Fan Heiti Std B", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label31.Font = new System.Drawing.Font("Nirmala UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label31.Location = new System.Drawing.Point(32, 180);
             this.label31.Name = "label31";
-            this.label31.Size = new System.Drawing.Size(93, 16);
+            this.label31.Size = new System.Drawing.Size(86, 15);
             this.label31.TabIndex = 44;
             this.label31.Text = "Add-on Name:";
             this.label31.MouseEnter += new System.EventHandler(this.pnlButtons_MouseLeave);
@@ -1147,10 +1149,10 @@
             // label32
             // 
             this.label32.AutoSize = true;
-            this.label32.Font = new System.Drawing.Font("Adobe Fan Heiti Std B", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label32.Font = new System.Drawing.Font("Nirmala UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label32.Location = new System.Drawing.Point(493, 180);
             this.label32.Name = "label32";
-            this.label32.Size = new System.Drawing.Size(89, 16);
+            this.label32.Size = new System.Drawing.Size(81, 15);
             this.label32.TabIndex = 45;
             this.label32.Text = "Promo Name:";
             this.label32.MouseEnter += new System.EventHandler(this.pnlButtons_MouseLeave);
@@ -1181,9 +1183,10 @@
             this.Controls.Add(this.btnProfile);
             this.Controls.Add(this.pnlAP);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FrmStaffAP";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FrmStaffAP";
+            this.Text = "Hotelliere";
             this.Load += new System.EventHandler(this.FrmStaffAP_Load);
             this.MouseEnter += new System.EventHandler(this.pnlButtons_MouseLeave);
             this.guna2CustomGradientPanel1.ResumeLayout(false);

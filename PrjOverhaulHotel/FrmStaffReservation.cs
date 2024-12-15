@@ -27,6 +27,7 @@ namespace PrjOverhaulHotel
             displayProfile();
             displayReservations();
             displayImage();
+            roleAccess();
         }
 
         private void btnExit_Click(object sender, EventArgs e)
@@ -180,7 +181,7 @@ namespace PrjOverhaulHotel
                 {
                     dtgReservations.Rows.Add(
                         row1["RESERVATION_ID"].ToString(),
-                        row1["FULL NAME"].ToString(),
+                        row1["FULL_NAME"].ToString(),
                         row1["RESERVATION STATUS"].ToString(),
                         row1["TOTAL ROOMS"].ToString(),
                         row1["PROMO NAME"].ToString(),
@@ -248,6 +249,71 @@ namespace PrjOverhaulHotel
         private void btnAddReservation_Click(object sender, EventArgs e)
         {
             new PopUpReservation().ShowDialog();
+            displayReservations();
+        }
+
+        private void btnEditReservation_Click(object sender, EventArgs e)
+        {
+            new PopUpReservation(Convert.ToInt32(dtgReservations.CurrentRow.Cells[0].Value)).ShowDialog();
+            displayReservations();
+        }
+
+        private void txNameSearch_TextChanged(object sender, EventArgs e)
+        {
+            searchReservations();
+        }
+
+        private void searchReservations()
+        {
+            GlobalProcedure.procReservationSearchByName(txtNameSearch.Text);
+            if (GlobalProcedure.datHotel.Rows.Count > 0)
+            {
+                dtgReservations.Rows.Clear();
+                foreach (DataRow row1 in GlobalProcedure.datHotel.Rows)
+                {
+                    dtgReservations.Rows.Add(
+                        row1["RESERVATION_ID"].ToString(),
+                        row1["FULL_NAME"].ToString(),
+                        row1["RESERVATION STATUS"].ToString(),
+                        row1["TOTAL ROOMS"].ToString(),
+                        row1["PROMO NAME"].ToString(),
+                        row1["TOTAL ADDONS"].ToString(),
+                        row1["INVOICE"].ToString(),
+                        Convert.ToDateTime(row1["BOOKING DATE"].ToString()).ToString("yyyy-MM-dd"),
+                        row1["TOTAL DAYS"].ToString(),
+                        $"₱{Convert.ToDouble(row1["TOTAL AMOUNT"].ToString()):F2}",
+                        $"₱{Convert.ToDouble(row1["PAID AMOUNT"].ToString()):F2}",
+                        $"₱{Convert.ToDouble(row1["REMAINING BALANCE"].ToString()):F2}",
+                        row1["IMAGE"].ToString()
+                    );
+                }
+            }
+            else
+            {
+                dtgReservations.Rows.Clear();
+            }
+        }
+
+        private void roleAccess()
+        {
+            string role = UserAccount.getRole();
+            if (role == "Front Desk Staff")
+            {
+                btnPersonnel.Visible = false;
+                btnRooms.Visible = false;
+            }
+            else if (role == "Housekeeping Staff")
+            {
+                btnReservation.Visible = false;
+                btnPersonnel.Visible = false;
+                btnAP.Visible = false;
+                btnGuests.Location = new Point(0, 45);
+                btnRooms.Location = new Point(0, 90);
+            }
+            else if (role == "Manager")
+            {
+
+            }
         }
     }
 }

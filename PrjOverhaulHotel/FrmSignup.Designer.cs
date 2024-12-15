@@ -29,7 +29,9 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmSignup));
             this.pnlLogin = new Guna.UI2.WinForms.Guna2Panel();
+            this.btnSee = new System.Windows.Forms.Label();
             this.cmbGender = new Guna.UI2.WinForms.Guna2ComboBox();
             this.label10 = new System.Windows.Forms.Label();
             this.dtmBirthdate = new Guna.UI2.WinForms.Guna2DateTimePicker();
@@ -55,7 +57,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
-            this.btnSee = new System.Windows.Forms.Label();
             this.pnlLogin.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.imgProfile)).BeginInit();
             this.SuspendLayout();
@@ -96,6 +97,16 @@
             this.pnlLogin.Size = new System.Drawing.Size(900, 520);
             this.pnlLogin.TabIndex = 11;
             // 
+            // btnSee
+            // 
+            this.btnSee.BackColor = System.Drawing.Color.White;
+            this.btnSee.Image = global::PrjOverhaulHotel.Properties.Resources.eye_off1;
+            this.btnSee.Location = new System.Drawing.Point(394, 327);
+            this.btnSee.Name = "btnSee";
+            this.btnSee.Size = new System.Drawing.Size(30, 30);
+            this.btnSee.TabIndex = 29;
+            this.btnSee.Click += new System.EventHandler(this.btnSee_Click);
+            // 
             // cmbGender
             // 
             this.cmbGender.BackColor = System.Drawing.Color.Transparent;
@@ -126,10 +137,10 @@
             // 
             this.label10.AutoSize = true;
             this.label10.BackColor = System.Drawing.Color.Transparent;
-            this.label10.Font = new System.Drawing.Font("Adobe Fan Heiti Std B", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(658, 379);
+            this.label10.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(658, 376);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(63, 16);
+            this.label10.Size = new System.Drawing.Size(60, 17);
             this.label10.TabIndex = 27;
             this.label10.Text = "Birthdate";
             // 
@@ -185,10 +196,10 @@
             // 
             this.label8.AutoSize = true;
             this.label8.BackColor = System.Drawing.Color.Transparent;
-            this.label8.Font = new System.Drawing.Font("Adobe Fan Heiti Std B", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(458, 312);
+            this.label8.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(458, 309);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(56, 16);
+            this.label8.Size = new System.Drawing.Size(56, 17);
             this.label8.TabIndex = 24;
             this.label8.Text = "Address";
             // 
@@ -196,10 +207,10 @@
             // 
             this.label9.AutoSize = true;
             this.label9.BackColor = System.Drawing.Color.Transparent;
-            this.label9.Font = new System.Drawing.Font("Adobe Fan Heiti Std B", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(458, 379);
+            this.label9.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(458, 376);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(51, 16);
+            this.label9.Size = new System.Drawing.Size(51, 17);
             this.label9.TabIndex = 25;
             this.label9.Text = "Gender";
             // 
@@ -267,10 +278,10 @@
             // 
             this.label6.AutoSize = true;
             this.label6.BackColor = System.Drawing.Color.Transparent;
-            this.label6.Font = new System.Drawing.Font("Adobe Fan Heiti Std B", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(52, 378);
+            this.label6.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(52, 375);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(106, 16);
+            this.label6.Size = new System.Drawing.Size(104, 17);
             this.label6.TabIndex = 20;
             this.label6.Text = "Contact Number";
             // 
@@ -278,10 +289,10 @@
             // 
             this.label7.AutoSize = true;
             this.label7.BackColor = System.Drawing.Color.Transparent;
-            this.label7.Font = new System.Drawing.Font("Adobe Fan Heiti Std B", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(458, 241);
+            this.label7.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(458, 238);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(91, 16);
+            this.label7.Size = new System.Drawing.Size(91, 17);
             this.label7.TabIndex = 21;
             this.label7.Text = "Email Address";
             // 
@@ -318,10 +329,10 @@
             // 
             this.label5.AutoSize = true;
             this.label5.BackColor = System.Drawing.Color.Transparent;
-            this.label5.Font = new System.Drawing.Font("Adobe Fan Heiti Std B", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(52, 152);
+            this.label5.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(52, 149);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(70, 16);
+            this.label5.Size = new System.Drawing.Size(70, 17);
             this.label5.TabIndex = 17;
             this.label5.Text = "Last Name";
             // 
@@ -387,10 +398,10 @@
             // 
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Font = new System.Drawing.Font("Adobe Fan Heiti Std B", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(52, 48);
+            this.label3.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(52, 45);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(71, 16);
+            this.label3.Size = new System.Drawing.Size(71, 17);
             this.label3.TabIndex = 14;
             this.label3.Text = "First Name";
             // 
@@ -398,10 +409,10 @@
             // 
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.Color.Transparent;
-            this.label4.Font = new System.Drawing.Font("Adobe Fan Heiti Std B", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(52, 100);
+            this.label4.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(52, 97);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(85, 16);
+            this.label4.Size = new System.Drawing.Size(88, 17);
             this.label4.TabIndex = 15;
             this.label4.Text = "Middle Name";
             // 
@@ -413,7 +424,7 @@
             this.btnUpload.CustomImages.Parent = this.btnUpload;
             this.btnUpload.FillColor = System.Drawing.Color.Teal;
             this.btnUpload.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btnUpload.Font = new System.Drawing.Font("Adobe Fan Heiti Std B", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUpload.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnUpload.ForeColor = System.Drawing.Color.White;
             this.btnUpload.HoverState.Parent = this.btnUpload;
             this.btnUpload.Image = global::PrjOverhaulHotel.Properties.Resources.upload;
@@ -425,7 +436,7 @@
             this.btnUpload.Size = new System.Drawing.Size(180, 40);
             this.btnUpload.TabIndex = 11;
             this.btnUpload.Text = "UPLOAD";
-            this.btnUpload.TextOffset = new System.Drawing.Point(7, -11);
+            this.btnUpload.TextOffset = new System.Drawing.Point(7, -14);
             this.btnUpload.Click += new System.EventHandler(this.btnUpload_Click);
             // 
             // imgProfile
@@ -445,12 +456,12 @@
             // 
             this.lnkLogin.AutoSize = true;
             this.lnkLogin.BackColor = System.Drawing.Color.Transparent;
-            this.lnkLogin.Font = new System.Drawing.Font("Adobe Fan Heiti Std B", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.lnkLogin.Font = new System.Drawing.Font("Nirmala UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lnkLogin.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.lnkLogin.LinkColor = System.Drawing.Color.Teal;
             this.lnkLogin.Location = new System.Drawing.Point(315, 490);
             this.lnkLogin.Name = "lnkLogin";
-            this.lnkLogin.Size = new System.Drawing.Size(211, 15);
+            this.lnkLogin.Size = new System.Drawing.Size(215, 15);
             this.lnkLogin.TabIndex = 9;
             this.lnkLogin.TabStop = true;
             this.lnkLogin.Text = "Already have an account? Log in here.";
@@ -464,7 +475,7 @@
             this.btnSignup.CustomImages.Parent = this.btnSignup;
             this.btnSignup.FillColor = System.Drawing.Color.Teal;
             this.btnSignup.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btnSignup.Font = new System.Drawing.Font("Adobe Fan Heiti Std B", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSignup.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSignup.ForeColor = System.Drawing.Color.White;
             this.btnSignup.HoverState.Parent = this.btnSignup;
             this.btnSignup.Image = global::PrjOverhaulHotel.Properties.Resources.log_in__1_;
@@ -476,7 +487,7 @@
             this.btnSignup.Size = new System.Drawing.Size(180, 40);
             this.btnSignup.TabIndex = 7;
             this.btnSignup.Text = "SIGN UP";
-            this.btnSignup.TextOffset = new System.Drawing.Point(7, -11);
+            this.btnSignup.TextOffset = new System.Drawing.Point(7, -14);
             this.btnSignup.Click += new System.EventHandler(this.btnSignup_Click);
             // 
             // txtUsername
@@ -544,10 +555,10 @@
             // 
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Adobe Fan Heiti Std B", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(52, 238);
+            this.label1.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(52, 235);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(68, 16);
+            this.label1.Size = new System.Drawing.Size(67, 17);
             this.label1.TabIndex = 5;
             this.label1.Text = "Username";
             // 
@@ -555,26 +566,16 @@
             // 
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Adobe Fan Heiti Std B", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(52, 309);
+            this.label2.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(52, 306);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(65, 16);
+            this.label2.Size = new System.Drawing.Size(64, 17);
             this.label2.TabIndex = 6;
             this.label2.Text = "Password";
             // 
             // guna2Elipse1
             // 
             this.guna2Elipse1.TargetControl = this;
-            // 
-            // btnSee
-            // 
-            this.btnSee.BackColor = System.Drawing.Color.White;
-            this.btnSee.Image = global::PrjOverhaulHotel.Properties.Resources.eye_off1;
-            this.btnSee.Location = new System.Drawing.Point(394, 327);
-            this.btnSee.Name = "btnSee";
-            this.btnSee.Size = new System.Drawing.Size(30, 30);
-            this.btnSee.TabIndex = 29;
-            this.btnSee.Click += new System.EventHandler(this.btnSee_Click);
             // 
             // FrmSignup
             // 
@@ -584,9 +585,10 @@
             this.ClientSize = new System.Drawing.Size(930, 550);
             this.Controls.Add(this.pnlLogin);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FrmSignup";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FrmSignup";
+            this.Text = "Signup";
             this.pnlLogin.ResumeLayout(false);
             this.pnlLogin.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.imgProfile)).EndInit();

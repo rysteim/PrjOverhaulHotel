@@ -32,6 +32,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmStaffPersonnel));
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2CustomGradientPanel1 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
@@ -209,7 +210,7 @@
             this.btnLogout.CustomImages.Parent = this.btnLogout;
             this.btnLogout.FillColor = System.Drawing.Color.White;
             this.btnLogout.FillColor2 = System.Drawing.Color.White;
-            this.btnLogout.Font = new System.Drawing.Font("Adobe Fan Heiti Std B", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLogout.Font = new System.Drawing.Font("Nirmala UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLogout.ForeColor = System.Drawing.Color.Black;
             this.btnLogout.HoverState.FillColor = System.Drawing.Color.Black;
             this.btnLogout.HoverState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(154)))), ((int)(((byte)(136)))));
@@ -237,7 +238,7 @@
             this.btnRooms.CustomImages.Parent = this.btnRooms;
             this.btnRooms.FillColor = System.Drawing.Color.White;
             this.btnRooms.FillColor2 = System.Drawing.Color.White;
-            this.btnRooms.Font = new System.Drawing.Font("Adobe Fan Heiti Std B", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRooms.Font = new System.Drawing.Font("Nirmala UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRooms.ForeColor = System.Drawing.Color.Black;
             this.btnRooms.HoverState.FillColor = System.Drawing.Color.Black;
             this.btnRooms.HoverState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(154)))), ((int)(((byte)(136)))));
@@ -265,7 +266,7 @@
             this.btnPersonnel.CustomImages.Parent = this.btnPersonnel;
             this.btnPersonnel.FillColor = System.Drawing.Color.Black;
             this.btnPersonnel.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(154)))), ((int)(((byte)(136)))));
-            this.btnPersonnel.Font = new System.Drawing.Font("Adobe Fan Heiti Std B", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPersonnel.Font = new System.Drawing.Font("Nirmala UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPersonnel.ForeColor = System.Drawing.Color.White;
             this.btnPersonnel.HoverState.FillColor = System.Drawing.Color.Black;
             this.btnPersonnel.HoverState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(154)))), ((int)(((byte)(136)))));
@@ -292,7 +293,7 @@
             this.btnGuests.CustomImages.Parent = this.btnGuests;
             this.btnGuests.FillColor = System.Drawing.Color.White;
             this.btnGuests.FillColor2 = System.Drawing.Color.White;
-            this.btnGuests.Font = new System.Drawing.Font("Adobe Fan Heiti Std B", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGuests.Font = new System.Drawing.Font("Nirmala UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGuests.ForeColor = System.Drawing.Color.Black;
             this.btnGuests.HoverState.FillColor = System.Drawing.Color.Black;
             this.btnGuests.HoverState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(154)))), ((int)(((byte)(136)))));
@@ -320,7 +321,7 @@
             this.btnAP.CustomImages.Parent = this.btnAP;
             this.btnAP.FillColor = System.Drawing.Color.White;
             this.btnAP.FillColor2 = System.Drawing.Color.White;
-            this.btnAP.Font = new System.Drawing.Font("Adobe Fan Heiti Std B", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAP.Font = new System.Drawing.Font("Nirmala UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAP.ForeColor = System.Drawing.Color.Black;
             this.btnAP.HoverState.FillColor = System.Drawing.Color.Black;
             this.btnAP.HoverState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(154)))), ((int)(((byte)(136)))));
@@ -348,7 +349,7 @@
             this.btnReservation.CustomImages.Parent = this.btnReservation;
             this.btnReservation.FillColor = System.Drawing.Color.White;
             this.btnReservation.FillColor2 = System.Drawing.Color.White;
-            this.btnReservation.Font = new System.Drawing.Font("Adobe Fan Heiti Std B", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnReservation.Font = new System.Drawing.Font("Nirmala UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnReservation.ForeColor = System.Drawing.Color.Black;
             this.btnReservation.HoverState.FillColor = System.Drawing.Color.Black;
             this.btnReservation.HoverState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(154)))), ((int)(((byte)(136)))));
@@ -376,7 +377,7 @@
             this.btnDashboard.CustomImages.Parent = this.btnDashboard;
             this.btnDashboard.FillColor = System.Drawing.Color.White;
             this.btnDashboard.FillColor2 = System.Drawing.Color.White;
-            this.btnDashboard.Font = new System.Drawing.Font("Adobe Fan Heiti Std B", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDashboard.Font = new System.Drawing.Font("Nirmala UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDashboard.ForeColor = System.Drawing.Color.Black;
             this.btnDashboard.HoverState.FillColor = System.Drawing.Color.Black;
             this.btnDashboard.HoverState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(154)))), ((int)(((byte)(136)))));
@@ -440,19 +441,19 @@
             this.btnDelete.CustomImages.Parent = this.btnDelete;
             this.btnDelete.FillColor = System.Drawing.Color.Black;
             this.btnDelete.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.btnDelete.Font = new System.Drawing.Font("Adobe Fan Heiti Std B", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDelete.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDelete.ForeColor = System.Drawing.Color.White;
             this.btnDelete.HoverState.Parent = this.btnDelete;
             this.btnDelete.Image = global::PrjOverhaulHotel.Properties.Resources.trash_2;
             this.btnDelete.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnDelete.ImageOffset = new System.Drawing.Point(5, 12);
+            this.btnDelete.ImageOffset = new System.Drawing.Point(5, 13);
             this.btnDelete.Location = new System.Drawing.Point(170, 432);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.ShadowDecoration.Parent = this.btnDelete;
             this.btnDelete.Size = new System.Drawing.Size(237, 32);
             this.btnDelete.TabIndex = 40;
             this.btnDelete.Text = "DELETE PERSONNEL";
-            this.btnDelete.TextOffset = new System.Drawing.Point(7, -11);
+            this.btnDelete.TextOffset = new System.Drawing.Point(7, -14);
             this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // imgSelect
@@ -659,7 +660,7 @@
             // 
             // label6
             // 
-            this.label6.Font = new System.Drawing.Font("Adobe Fan Heiti Std B", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.label6.Font = new System.Drawing.Font("Nirmala UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.White;
             this.label6.Location = new System.Drawing.Point(13, 102);
             this.label6.Name = "label6";
@@ -670,7 +671,7 @@
             // 
             // lblResult
             // 
-            this.lblResult.Font = new System.Drawing.Font("Adobe Fan Heiti Std B", 60F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.lblResult.Font = new System.Drawing.Font("Nirmala UI", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblResult.ForeColor = System.Drawing.Color.White;
             this.lblResult.Location = new System.Drawing.Point(3, 8);
             this.lblResult.Name = "lblResult";
@@ -704,7 +705,7 @@
             // 
             // label5
             // 
-            this.label5.Font = new System.Drawing.Font("Adobe Fan Heiti Std B", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.label5.Font = new System.Drawing.Font("Nirmala UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.White;
             this.label5.Location = new System.Drawing.Point(38, 102);
             this.label5.Name = "label5";
@@ -715,7 +716,7 @@
             // 
             // lblTotal
             // 
-            this.lblTotal.Font = new System.Drawing.Font("Adobe Fan Heiti Std B", 60F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.lblTotal.Font = new System.Drawing.Font("Nirmala UI", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTotal.ForeColor = System.Drawing.Color.White;
             this.lblTotal.Location = new System.Drawing.Point(3, 8);
             this.lblTotal.Name = "lblTotal";
@@ -824,19 +825,19 @@
             this.btnManage.CustomImages.Parent = this.btnManage;
             this.btnManage.FillColor = System.Drawing.Color.Black;
             this.btnManage.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btnManage.Font = new System.Drawing.Font("Adobe Fan Heiti Std B", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnManage.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnManage.ForeColor = System.Drawing.Color.White;
             this.btnManage.HoverState.Parent = this.btnManage;
             this.btnManage.Image = global::PrjOverhaulHotel.Properties.Resources.bolt;
             this.btnManage.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnManage.ImageOffset = new System.Drawing.Point(5, 12);
+            this.btnManage.ImageOffset = new System.Drawing.Point(5, 13);
             this.btnManage.Location = new System.Drawing.Point(433, 432);
             this.btnManage.Name = "btnManage";
             this.btnManage.ShadowDecoration.Parent = this.btnManage;
             this.btnManage.Size = new System.Drawing.Size(247, 32);
             this.btnManage.TabIndex = 12;
             this.btnManage.Text = "MANAGE PERSONNEL";
-            this.btnManage.TextOffset = new System.Drawing.Point(7, -11);
+            this.btnManage.TextOffset = new System.Drawing.Point(7, -14);
             this.btnManage.Click += new System.EventHandler(this.btnManage_Click);
             this.btnManage.MouseEnter += new System.EventHandler(this.pnlButtons_MouseLeave);
             // 
@@ -847,29 +848,29 @@
             this.btnAdd.CustomImages.Parent = this.btnAdd;
             this.btnAdd.FillColor = System.Drawing.Color.Black;
             this.btnAdd.FillColor2 = System.Drawing.Color.Teal;
-            this.btnAdd.Font = new System.Drawing.Font("Adobe Fan Heiti Std B", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAdd.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAdd.ForeColor = System.Drawing.Color.White;
             this.btnAdd.HoverState.Parent = this.btnAdd;
             this.btnAdd.Image = global::PrjOverhaulHotel.Properties.Resources.plus;
             this.btnAdd.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnAdd.ImageOffset = new System.Drawing.Point(5, 12);
+            this.btnAdd.ImageOffset = new System.Drawing.Point(5, 13);
             this.btnAdd.Location = new System.Drawing.Point(701, 432);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.ShadowDecoration.Parent = this.btnAdd;
             this.btnAdd.Size = new System.Drawing.Size(192, 32);
             this.btnAdd.TabIndex = 11;
             this.btnAdd.Text = "ADD PERSONNEL";
-            this.btnAdd.TextOffset = new System.Drawing.Point(7, -11);
+            this.btnAdd.TextOffset = new System.Drawing.Point(7, -14);
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             this.btnAdd.MouseEnter += new System.EventHandler(this.pnlButtons_MouseLeave);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Adobe Fan Heiti Std B", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Nirmala UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(44, 43);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(45, 16);
+            this.label2.Size = new System.Drawing.Size(42, 15);
             this.label2.TabIndex = 25;
             this.label2.Text = "Name:";
             this.label2.MouseEnter += new System.EventHandler(this.pnlButtons_MouseLeave);
@@ -877,10 +878,10 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Adobe Fan Heiti Std B", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Nirmala UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(44, 101);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(36, 16);
+            this.label3.Size = new System.Drawing.Size(33, 15);
             this.label3.TabIndex = 26;
             this.label3.Text = "Role:";
             this.label3.MouseEnter += new System.EventHandler(this.pnlButtons_MouseLeave);
@@ -888,10 +889,10 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Adobe Fan Heiti Std B", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Font = new System.Drawing.Font("Nirmala UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(304, 101);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(68, 16);
+            this.label4.Size = new System.Drawing.Size(61, 15);
             this.label4.TabIndex = 27;
             this.label4.Text = "Workshift:";
             this.label4.MouseEnter += new System.EventHandler(this.pnlButtons_MouseLeave);
@@ -984,9 +985,10 @@
             this.Controls.Add(this.btnProfile);
             this.Controls.Add(this.pnlPersonnel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FrmStaffPersonnel";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FrmStaffPersonnel";
+            this.Text = "Hotelliere";
             this.Load += new System.EventHandler(this.FrmStaffPersonnel_Load);
             this.MouseEnter += new System.EventHandler(this.pnlButtons_MouseLeave);
             this.guna2CustomGradientPanel1.ResumeLayout(false);

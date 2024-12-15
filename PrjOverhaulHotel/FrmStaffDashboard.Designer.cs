@@ -188,7 +188,7 @@
             this.btnLogout.CustomImages.Parent = this.btnLogout;
             this.btnLogout.FillColor = System.Drawing.Color.White;
             this.btnLogout.FillColor2 = System.Drawing.Color.White;
-            this.btnLogout.Font = new System.Drawing.Font("Adobe Fan Heiti Std B", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLogout.Font = new System.Drawing.Font("Nirmala UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLogout.ForeColor = System.Drawing.Color.Black;
             this.btnLogout.HoverState.FillColor = System.Drawing.Color.Black;
             this.btnLogout.HoverState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(154)))), ((int)(((byte)(136)))));
@@ -216,7 +216,7 @@
             this.btnRooms.CustomImages.Parent = this.btnRooms;
             this.btnRooms.FillColor = System.Drawing.Color.White;
             this.btnRooms.FillColor2 = System.Drawing.Color.White;
-            this.btnRooms.Font = new System.Drawing.Font("Adobe Fan Heiti Std B", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRooms.Font = new System.Drawing.Font("Nirmala UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRooms.ForeColor = System.Drawing.Color.Black;
             this.btnRooms.HoverState.FillColor = System.Drawing.Color.Black;
             this.btnRooms.HoverState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(154)))), ((int)(((byte)(136)))));
@@ -244,7 +244,7 @@
             this.btnPersonnel.CustomImages.Parent = this.btnPersonnel;
             this.btnPersonnel.FillColor = System.Drawing.Color.White;
             this.btnPersonnel.FillColor2 = System.Drawing.Color.White;
-            this.btnPersonnel.Font = new System.Drawing.Font("Adobe Fan Heiti Std B", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPersonnel.Font = new System.Drawing.Font("Nirmala UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPersonnel.ForeColor = System.Drawing.Color.Black;
             this.btnPersonnel.HoverState.FillColor = System.Drawing.Color.Black;
             this.btnPersonnel.HoverState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(154)))), ((int)(((byte)(136)))));
@@ -272,7 +272,7 @@
             this.btnGuests.CustomImages.Parent = this.btnGuests;
             this.btnGuests.FillColor = System.Drawing.Color.White;
             this.btnGuests.FillColor2 = System.Drawing.Color.White;
-            this.btnGuests.Font = new System.Drawing.Font("Adobe Fan Heiti Std B", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGuests.Font = new System.Drawing.Font("Nirmala UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGuests.ForeColor = System.Drawing.Color.Black;
             this.btnGuests.HoverState.FillColor = System.Drawing.Color.Black;
             this.btnGuests.HoverState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(154)))), ((int)(((byte)(136)))));
@@ -300,7 +300,7 @@
             this.btnAP.CustomImages.Parent = this.btnAP;
             this.btnAP.FillColor = System.Drawing.Color.White;
             this.btnAP.FillColor2 = System.Drawing.Color.White;
-            this.btnAP.Font = new System.Drawing.Font("Adobe Fan Heiti Std B", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAP.Font = new System.Drawing.Font("Nirmala UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAP.ForeColor = System.Drawing.Color.Black;
             this.btnAP.HoverState.FillColor = System.Drawing.Color.Black;
             this.btnAP.HoverState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(154)))), ((int)(((byte)(136)))));
@@ -328,7 +328,7 @@
             this.btnReservation.CustomImages.Parent = this.btnReservation;
             this.btnReservation.FillColor = System.Drawing.Color.White;
             this.btnReservation.FillColor2 = System.Drawing.Color.White;
-            this.btnReservation.Font = new System.Drawing.Font("Adobe Fan Heiti Std B", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnReservation.Font = new System.Drawing.Font("Nirmala UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnReservation.ForeColor = System.Drawing.Color.Black;
             this.btnReservation.HoverState.FillColor = System.Drawing.Color.Black;
             this.btnReservation.HoverState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(154)))), ((int)(((byte)(136)))));
@@ -356,7 +356,7 @@
             this.btnDashboard.CustomImages.Parent = this.btnDashboard;
             this.btnDashboard.FillColor = System.Drawing.Color.Black;
             this.btnDashboard.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(154)))), ((int)(((byte)(136)))));
-            this.btnDashboard.Font = new System.Drawing.Font("Adobe Fan Heiti Std B", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDashboard.Font = new System.Drawing.Font("Nirmala UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDashboard.ForeColor = System.Drawing.Color.White;
             this.btnDashboard.HoverState.FillColor = System.Drawing.Color.Black;
             this.btnDashboard.HoverState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(154)))), ((int)(((byte)(136)))));
@@ -452,13 +452,14 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Adobe Fan Heiti Std B", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.label1.Font = new System.Drawing.Font("Nirmala UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(97, 63);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(69, 14);
+            this.label1.Size = new System.Drawing.Size(70, 13);
             this.label1.TabIndex = 1;
             this.label1.Text = "Date Range:";
+            this.label1.MouseEnter += new System.EventHandler(this.pnlButtons_MouseLeave);
             // 
             // cmbDateRange
             // 
@@ -485,6 +486,7 @@
             this.cmbDateRange.TabIndex = 29;
             this.cmbDateRange.TextOffset = new System.Drawing.Point(5, 1);
             this.cmbDateRange.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault;
+            this.cmbDateRange.MouseEnter += new System.EventHandler(this.pnlButtons_MouseLeave);
             // 
             // guna2Panel1
             // 
@@ -501,6 +503,7 @@
             this.guna2Panel1.ShadowDecoration.Parent = this.guna2Panel1;
             this.guna2Panel1.Size = new System.Drawing.Size(883, 226);
             this.guna2Panel1.TabIndex = 31;
+            this.guna2Panel1.MouseEnter += new System.EventHandler(this.pnlButtons_MouseLeave);
             // 
             // cartesianChart1
             // 
@@ -532,6 +535,7 @@
             this.btnGuestView.Text = "Go to Guest View";
             this.btnGuestView.TextOffset = new System.Drawing.Point(0, 2);
             this.btnGuestView.Click += new System.EventHandler(this.btnGuestView_Click);
+            this.btnGuestView.MouseEnter += new System.EventHandler(this.pnlButtons_MouseLeave);
             // 
             // guna2Panel3
             // 
@@ -551,6 +555,7 @@
             this.guna2Panel3.ShadowDecoration.Parent = this.guna2Panel3;
             this.guna2Panel3.Size = new System.Drawing.Size(883, 154);
             this.guna2Panel3.TabIndex = 32;
+            this.guna2Panel3.MouseEnter += new System.EventHandler(this.pnlButtons_MouseLeave);
             // 
             // guna2Panel4
             // 
@@ -570,6 +575,7 @@
             this.guna2Panel4.ShadowDecoration.Parent = this.guna2Panel4;
             this.guna2Panel4.Size = new System.Drawing.Size(175, 110);
             this.guna2Panel4.TabIndex = 34;
+            this.guna2Panel4.MouseEnter += new System.EventHandler(this.pnlButtons_MouseLeave);
             // 
             // lblActiveRooms
             // 
@@ -579,6 +585,7 @@
             this.lblActiveRooms.Size = new System.Drawing.Size(175, 76);
             this.lblActiveRooms.TabIndex = 34;
             this.lblActiveRooms.Text = " 0";
+            this.lblActiveRooms.MouseEnter += new System.EventHandler(this.pnlButtons_MouseLeave);
             // 
             // label2
             // 
@@ -589,6 +596,7 @@
             this.label2.Size = new System.Drawing.Size(86, 13);
             this.label2.TabIndex = 33;
             this.label2.Text = "ACTIVE ROOMS";
+            this.label2.MouseEnter += new System.EventHandler(this.pnlButtons_MouseLeave);
             // 
             // guna2Panel5
             // 
@@ -608,6 +616,7 @@
             this.guna2Panel5.ShadowDecoration.Parent = this.guna2Panel5;
             this.guna2Panel5.Size = new System.Drawing.Size(175, 110);
             this.guna2Panel5.TabIndex = 34;
+            this.guna2Panel5.MouseEnter += new System.EventHandler(this.pnlButtons_MouseLeave);
             // 
             // lblPresentGuests
             // 
@@ -617,6 +626,7 @@
             this.lblPresentGuests.Size = new System.Drawing.Size(175, 76);
             this.lblPresentGuests.TabIndex = 35;
             this.lblPresentGuests.Text = " 0";
+            this.lblPresentGuests.MouseEnter += new System.EventHandler(this.pnlButtons_MouseLeave);
             // 
             // label3
             // 
@@ -627,6 +637,7 @@
             this.label3.Size = new System.Drawing.Size(93, 13);
             this.label3.TabIndex = 34;
             this.label3.Text = "PRESENT GUESTS";
+            this.label3.MouseEnter += new System.EventHandler(this.pnlButtons_MouseLeave);
             // 
             // guna2Panel6
             // 
@@ -646,6 +657,7 @@
             this.guna2Panel6.ShadowDecoration.Parent = this.guna2Panel6;
             this.guna2Panel6.Size = new System.Drawing.Size(175, 110);
             this.guna2Panel6.TabIndex = 34;
+            this.guna2Panel6.MouseEnter += new System.EventHandler(this.pnlButtons_MouseLeave);
             // 
             // lblOnlinePersonnels
             // 
@@ -655,6 +667,7 @@
             this.lblOnlinePersonnels.Size = new System.Drawing.Size(175, 76);
             this.lblOnlinePersonnels.TabIndex = 36;
             this.lblOnlinePersonnels.Text = " 0";
+            this.lblOnlinePersonnels.MouseEnter += new System.EventHandler(this.pnlButtons_MouseLeave);
             // 
             // label4
             // 
@@ -665,6 +678,7 @@
             this.label4.Size = new System.Drawing.Size(116, 13);
             this.label4.TabIndex = 34;
             this.label4.Text = "ONLINE PERSONNELS";
+            this.label4.MouseEnter += new System.EventHandler(this.pnlButtons_MouseLeave);
             // 
             // guna2Panel2
             // 
@@ -684,6 +698,7 @@
             this.guna2Panel2.ShadowDecoration.Parent = this.guna2Panel2;
             this.guna2Panel2.Size = new System.Drawing.Size(175, 110);
             this.guna2Panel2.TabIndex = 33;
+            this.guna2Panel2.MouseEnter += new System.EventHandler(this.pnlButtons_MouseLeave);
             // 
             // lblRevenue
             // 
@@ -693,6 +708,7 @@
             this.lblRevenue.Size = new System.Drawing.Size(175, 76);
             this.lblRevenue.TabIndex = 36;
             this.lblRevenue.Text = " 0";
+            this.lblRevenue.MouseEnter += new System.EventHandler(this.pnlButtons_MouseLeave);
             // 
             // label5
             // 
@@ -703,6 +719,7 @@
             this.label5.Size = new System.Drawing.Size(55, 13);
             this.label5.TabIndex = 34;
             this.label5.Text = "REVENUE";
+            this.label5.MouseEnter += new System.EventHandler(this.pnlButtons_MouseLeave);
             // 
             // FrmStaffDashboard
             // 
@@ -722,7 +739,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FrmStaffDashboard";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FrmStaffDashboard";
+            this.Text = "Hotelliere";
             this.Load += new System.EventHandler(this.FrmStaffDashboard_Load);
             this.MouseEnter += new System.EventHandler(this.pnlButtons_MouseLeave);
             this.guna2CustomGradientPanel1.ResumeLayout(false);

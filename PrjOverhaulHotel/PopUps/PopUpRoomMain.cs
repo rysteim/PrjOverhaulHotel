@@ -69,7 +69,7 @@ namespace PrjOverhaulHotel.PopUps
         private void btnAdd_Click(object sender, EventArgs e)
         {
             GlobalProcedure.procRoomAdd(txtRoomName.Text, cmbRoomType.Text, 
-                txtDescription.Text, Convert.ToDouble(txtPricePerDay.Text), cmbStatus.Text);
+                txtDescription.Text, Convert.ToDouble(txtPricePerDay.Text));
             this.Close();
         }
 
@@ -81,7 +81,7 @@ namespace PrjOverhaulHotel.PopUps
         private void btnSave_Click(object sender, EventArgs e)
         {
             GlobalProcedure.procRoomUpdate(roomID, txtRoomName.Text, cmbRoomType.Text,
-                txtDescription.Text, Convert.ToDouble(txtPricePerDay.Text), cmbStatus.Text);
+                txtDescription.Text, Convert.ToDouble(txtPricePerDay.Text));
             this.Close();
         }
     }

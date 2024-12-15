@@ -13,6 +13,7 @@ namespace PrjOverhaulHotel.PopUps
     public partial class PopUpReservation : Form
     {
         int accountID, reservationID, promoID;
+        string imagePath;
         public PopUpReservation()
         {
             InitializeComponent();
@@ -22,6 +23,26 @@ namespace PrjOverhaulHotel.PopUps
         {
             InitializeComponent();
             this.reservationID = reservationID;
+        }
+
+        private void PopUpReservation_Load(object sender, EventArgs e)
+        {
+            if (reservationID > 0)
+            {
+                getIDs();
+                displayDetails();
+                displayPromo();
+                displayReservationDetails();
+                displayImage();
+                btnConfirm.Visible = false;
+                btnChooseAccount.Visible = false;
+            }
+            else
+            {
+                btnApprove.Visible = false;
+                btnTotalRooms.Visible = false;
+                btnAddons.Visible = false;
+            }
         }
 
         private void btnCancel_Click(object sender, EventArgs e)
@@ -39,16 +60,12 @@ namespace PrjOverhaulHotel.PopUps
             this.Close();
         }
 
-        private void btnCancel_Click_1(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
         private void btnChooseAccount_Click(object sender, EventArgs e)
         {
             new PopUpAccounts().ShowDialog();
             accountID = UserAccount.getAccountID();
             displayDetails();
+            displayImage();
         }
 
         private void txtPromoName_MouseClick(object sender, MouseEventArgs e)
@@ -58,10 +75,28 @@ namespace PrjOverhaulHotel.PopUps
             displayPromo();
         }
 
+        private void getIDs()
+        {
+            GlobalProcedure.procReservationGetByID(reservationID);
+            if (GlobalProcedure.datHotel.Rows.Count > 0)
+            {
+                UserAccount.setAccountID(Convert.ToInt32(GlobalProcedure.datHotel.Rows[0]["accountID"]));
+                accountID = UserAccount.getAccountID();
+                UserAccount.setPromoID(Convert.ToInt32(GlobalProcedure.datHotel.Rows[0]["promoID"]));
+                promoID = UserAccount.getPromoID();
+            }
+        }
+
         private void btnConfirm_Click(object sender, EventArgs e)
         {
+            btnTotalRooms.Visible = true;
+            btnChooseAccount.Visible = true;
+            btnConfirm.Visible = false;
+            btnChooseAccount.Visible = false;
+
             Random random = new Random();
             string invoice = "INV" + random.Next(100000, 999999).ToString("D6");
+
             GlobalProcedure.procReservationAdd(accountID, promoID, invoice, DateTime.Now.ToString("yyyy-MM-dd"));
             GlobalProcedure.procReservationGetByAccountID(accountID);
             if (GlobalProcedure.datHotel.Rows.Count > 0)
@@ -83,7 +118,42 @@ namespace PrjOverhaulHotel.PopUps
                 txtAddress.Text = GlobalProcedure.datHotel.Rows[0]["ADDRESS"].ToString();
                 txtGender.Text = GlobalProcedure.datHotel.Rows[0]["GENDER"].ToString();
                 txtBirthdate.Text = Convert.ToDateTime(GlobalProcedure.datHotel.Rows[0]["BIRTHDATE"].ToString()).ToString("MMMM dd, yyyy");
+                imagePath = GlobalProcedure.datHotel.Rows[0]["IMAGE"].ToString();
             }
+        }
+        private void displayImage()
+        {
+            if (!string.IsNullOrEmpty(imagePath) && System.IO.File.Exists(imagePath))
+            {
+                imgProfile.Image = Image.FromFile(imagePath);
+            }
+            else
+            {
+                imgProfile.Image = Properties.Resources.rb_8551;
+            }
+        }
+
+        private void btnTotalRooms_Click(object sender, EventArgs e)
+        {
+            new PopUpReservationRooms(reservationID).ShowDialog();
+            getIDs();
+            displayDetails();
+            displayPromo();
+            displayReservationDetails();
+        }
+
+        private void btnAddons_Click(object sender, EventArgs e)
+        {
+            new PopUpReservationAddons(reservationID).ShowDialog();
+            getIDs();
+            displayDetails();
+            displayPromo();
+            displayReservationDetails();
+        }
+
+        private void btnApprove_Click(object sender, EventArgs e)
+        {
+            GlobalProcedure.procReservationApprove(reservationID, DateTime.Now.ToString("yyyy-MM-dd"));
         }
 
         private void displayPromo()
@@ -108,7 +178,7 @@ namespace PrjOverhaulHotel.PopUps
                 txtTotalAmount.Text = $"₱{Convert.ToDouble(GlobalProcedure.datHotel.Rows[0]["TOTAL AMOUNT"].ToString()):F2}";
                 txtTotalPaid.Text = $"₱{Convert.ToDouble(GlobalProcedure.datHotel.Rows[0]["PAID AMOUNT"].ToString()):F2}";
                 txtRemainingBalance.Text = $"₱{Convert.ToDouble(GlobalProcedure.datHotel.Rows[0]["REMAINING BALANCE"].ToString()):F2}";
-                lblBookingDate.Text = "Booking Date: " + GlobalProcedure.datHotel.Rows[0]["BOOKING DATE"].ToString();
+                lblBookingDate.Text = "Booking Date: " + Convert.ToDateTime(GlobalProcedure.datHotel.Rows[0]["BOOKING DATE"]).ToString("MMMM dd, yyyy");
                 lblInvoice.Text = "Invoice Number: " + GlobalProcedure.datHotel.Rows[0]["INVOICE"].ToString();
             }
         }

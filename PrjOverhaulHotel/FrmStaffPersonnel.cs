@@ -30,6 +30,7 @@ namespace PrjOverhaulHotel
             displayPersonnel();
             displayRole();
             displayImage();
+            roleAccess();
         }
 
         private void btnExit_Click(object sender, EventArgs e)
@@ -297,17 +298,43 @@ namespace PrjOverhaulHotel
         {
             new PopUpPersonnel().ShowDialog();
             displayPersonnel();
+            displayImage();
         }
 
         private void btnManage_Click(object sender, EventArgs e)
         {
             new PopUpPersonnel(Convert.ToInt32(dtgPersonnel.CurrentRow.Cells[0].Value)).ShowDialog();
             displayPersonnel();
+            displayImage();
         }
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
+            GlobalProcedure.procEmployeeDelete(Convert.ToInt32(dtgPersonnel.CurrentRow.Cells[0].Value));
+            displayPersonnel();
+            displayImage();
+        }
 
+        private void roleAccess()
+        {
+            string role = UserAccount.getRole();
+            if (role == "Front Desk Staff")
+            {
+                btnPersonnel.Visible = false;
+                btnRooms.Visible = false;
+            }
+            else if (role == "Housekeeping Staff")
+            {
+                btnReservation.Visible = false;
+                btnPersonnel.Visible = false;
+                btnAP.Visible = false;
+                btnGuests.Location = new Point(0, 45);
+                btnRooms.Location = new Point(0, 90);
+            }
+            else if (role == "Manager")
+            {
+
+            }
         }
     }
 }

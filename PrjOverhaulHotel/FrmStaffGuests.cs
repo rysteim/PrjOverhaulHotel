@@ -27,6 +27,7 @@ namespace PrjOverhaulHotel
             displayGuests();
             displayMembership();
             displayImage();
+            roleAccess();
         }
 
         private void btnExit_Click(object sender, EventArgs e)
@@ -282,6 +283,28 @@ namespace PrjOverhaulHotel
         private void btnHide_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void roleAccess()
+        {
+            string role = UserAccount.getRole();
+            if (role == "Front Desk Staff")
+            {
+                btnPersonnel.Visible = false;
+                btnRooms.Visible = false;
+            }
+            else if (role == "Housekeeping Staff")
+            {
+                btnReservation.Visible = false;
+                btnPersonnel.Visible = false;
+                btnAP.Visible = false;
+                btnGuests.Location = new Point(0, 45);
+                btnRooms.Location = new Point(0, 90);
+            }
+            else if (role == "Manager")
+            {
+
+            }
         }
     }
 }

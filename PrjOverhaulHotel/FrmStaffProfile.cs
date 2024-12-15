@@ -30,6 +30,7 @@ namespace PrjOverhaulHotel
             btnUpload.Visible = false;
             displayProfile();
             displayDetails();
+            roleAccess();
         }
 
         private void btnExit_Click(object sender, EventArgs e)
@@ -186,10 +187,21 @@ namespace PrjOverhaulHotel
                     imgProfile.Image = Properties.Resources.rb_8551;
                 }
 
-                if (GlobalProcedure.datHotel.Rows[0]["ROLE"].ToString() == "Guest")
+                String accRole = GlobalProcedure.datHotel.Rows[0]["ROLE"].ToString();
+                GlobalProcedure.procRoleData();
+                if (GlobalProcedure.datHotel.Rows.Count > 0)
                 {
-                    roleID = 1;
-                    role = GlobalProcedure.datHotel.Rows[0]["ROLE"].ToString();
+                    foreach (DataRow row in GlobalProcedure.datHotel.Rows)
+                    {
+                        string roleName = row["roleName"].ToString();
+                        int newRoleID = Convert.ToInt32(row["id"]);
+
+                        if (accRole == roleName)
+                        {
+                            role = roleName;
+                            roleID = newRoleID;
+                        }
+                    }
                 }
             }
         }
@@ -219,7 +231,7 @@ namespace PrjOverhaulHotel
 
             GlobalProcedure.procProfileUpdate(userID, txtFirstname.Text, txtMiddlename.Text, txtLastname.Text, txtContactno.Text,
                 txtEmailadd.Text, txtAddress.Text, cmbGender.Text, dtmBirthdate.Value, imagePath);
-            GlobalProcedure.procAccountUpdate(userID, txtUsername.Text, txtPassword.Text, roleID);
+            GlobalProcedure.procAccountUpdate(userID, txtUsername.Text, txtPassword.Text);
 
             txtFirstname.ReadOnly = true;
             txtMiddlename.ReadOnly = true;
@@ -244,6 +256,28 @@ namespace PrjOverhaulHotel
             {
                 imgProfile.Image = new Bitmap(profilePic.FileName);
                 imagePath = profilePic.FileName;
+            }
+        }
+
+        private void roleAccess()
+        {
+            string role = UserAccount.getRole();
+            if (role == "Front Desk Staff")
+            {
+                btnPersonnel.Visible = false;
+                btnRooms.Visible = false;
+            }
+            else if (role == "Housekeeping Staff")
+            {
+                btnReservation.Visible = false;
+                btnPersonnel.Visible = false;
+                btnAP.Visible = false;
+                btnGuests.Location = new Point(0, 45);
+                btnRooms.Location = new Point(0, 90);
+            }
+            else if (role == "Manager")
+            {
+
             }
         }
     }

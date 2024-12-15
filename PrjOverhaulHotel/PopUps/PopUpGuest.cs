@@ -79,8 +79,6 @@ namespace PrjOverhaulHotel.PopUps
 
         private void btnUpload_Click(object sender, EventArgs e)
         {
-            btnUpload.Visible = false;
-
             OpenFileDialog profilePic = new OpenFileDialog();
             profilePic.Filter = "Images Files (*.jpg;*.gif;*.bmp)|*.jpg;*.gif;*.bmp";
             if (profilePic.ShowDialog() == DialogResult.OK)
@@ -108,6 +106,21 @@ namespace PrjOverhaulHotel.PopUps
             }
             displayDetails();
         }
+
+        private void btnSee_Click(object sender, EventArgs e)
+        {
+            if (txtPassword.UseSystemPasswordChar == true)
+            {
+                btnSee.Image = Properties.Resources.eye1;
+                txtPassword.UseSystemPasswordChar = false;
+            }
+            else if (txtPassword.UseSystemPasswordChar == false)
+            {
+                btnSee.Image = Properties.Resources.eye_off1;
+                txtPassword.UseSystemPasswordChar = true;
+            }
+        }
+
 
         private void btnSaveGuest_Click(object sender, EventArgs e)
         {

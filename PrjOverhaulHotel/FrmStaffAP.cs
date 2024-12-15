@@ -28,6 +28,7 @@ namespace PrjOverhaulHotel
             displayProfile();
             displayAddons();
             displayPromos();
+            roleAccess();
         }
 
         private void btnExit_Click(object sender, EventArgs e)
@@ -245,22 +246,12 @@ namespace PrjOverhaulHotel
 
         private void dtgAddons_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (e.RowIndex >= 0)
-            {
-                txtAddonName.Text = dtgAddons.CurrentRow.Cells[1].Value.ToString();
-                lblAddonDescription.Text = dtgAddons.CurrentRow.Cells[2].Value.ToString();
-                txtAddonPrice.Text = dtgAddons.CurrentRow.Cells[3].Value.ToString();
-            }
+            cellClickAddons();
         }
 
         private void dtgPromo_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (e.RowIndex >= 0)
-            {
-                txtPromoName.Text = dtgPromo.CurrentRow.Cells[1].Value.ToString();
-                lblPromoDescription.Text = dtgPromo.CurrentRow.Cells[2].Value.ToString();
-                txtPromoDiscount.Text = dtgPromo.CurrentRow.Cells[3].Value.ToString();
-            }
+            cellClickPromo();
         }
 
         private void txtSearchAddon_TextChanged(object sender, EventArgs e)
@@ -276,21 +267,79 @@ namespace PrjOverhaulHotel
         private void btnAddonAdd_Click(object sender, EventArgs e)
         {
             new PopUpAddonsAP().ShowDialog();
+            displayAddons();
         }
 
         private void btnAddonManage_Click(object sender, EventArgs e)
         {
-            new PopUpAddonsAP().ShowDialog();
+            new PopUpAddonsAP(Convert.ToInt32(dtgAddons.CurrentRow.Cells[0].Value)).ShowDialog();
+            displayAddons();
+            cellClickAddons();
         }
 
         private void btnPromoAdd_Click(object sender, EventArgs e)
         {
             new PopUpPromosAP().ShowDialog();
+            displayPromos();
+            cellClickPromo();
         }
 
         private void btnPromoManage_Click(object sender, EventArgs e)
         {
-            new PopUpPromosAP().ShowDialog();
+            new PopUpPromosAP(Convert.ToInt32(dtgPromo.CurrentRow.Cells[0].Value)).ShowDialog();
+            displayPromos();
+            cellClickPromo();
+        }
+
+        private void btnAddonDelete_Click(object sender, EventArgs e)
+        {
+            GlobalProcedure.procAddonDelete(Convert.ToInt32(dtgAddons.CurrentRow.Cells[0].Value));
+            displayAddons();
+            cellClickAddons();
+        }
+
+        private void btnPromoDelete_Click(object sender, EventArgs e)
+        {
+            GlobalProcedure.procPromoDelete(Convert.ToInt32(dtgPromo.CurrentRow.Cells[0].Value));
+            displayPromos();
+            cellClickPromo();
+        }
+
+        private void cellClickAddons()
+        {
+                txtAddonName.Text = dtgAddons.CurrentRow.Cells[1].Value.ToString();
+                lblAddonDescription.Text = dtgAddons.CurrentRow.Cells[2].Value.ToString();
+                txtAddonPrice.Text = dtgAddons.CurrentRow.Cells[3].Value.ToString();
+            
+        }
+
+        private void cellClickPromo()
+        {
+                txtPromoName.Text = dtgPromo.CurrentRow.Cells[1].Value.ToString();
+                lblPromoDescription.Text = dtgPromo.CurrentRow.Cells[2].Value.ToString();
+                txtPromoDiscount.Text = dtgPromo.CurrentRow.Cells[3].Value.ToString();
+        }
+
+        private void roleAccess()
+        {
+            string role = UserAccount.getRole();
+            if (role == "Front Desk Staff")
+            {
+                btnPersonnel.Visible = false;
+                btnRooms.Visible = false;
+            }
+            else if (role == "Housekeeping Staff")
+            {
+                btnReservation.Visible = false;
+                btnPersonnel.Visible = false;
+                btnAP.Visible = false;
+                btnGuests.Location = new Point(0, 45);
+                btnRooms.Location = new Point(0, 90);
+            }
+            else if (role == "Manager")
+            {
+
+            }
         }
     }
 }

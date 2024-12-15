@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using System.Runtime.InteropServices;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 using System.Net.Mail;
+using System.Collections.Specialized;
 
 namespace PrjOverhaulHotel
 {
@@ -201,7 +202,7 @@ namespace PrjOverhaulHotel
             }
         }
 
-        public static void procAccountUpdate(int id, string username, string password, int role)
+        public static void procAccountUpdate(int id, string username, string password)
         {
             try
             {
@@ -209,7 +210,6 @@ namespace PrjOverhaulHotel
                 sqlCommand.CommandText = "proc_accountUpdate";
                 sqlCommand.CommandType = CommandType.StoredProcedure;
                 sqlCommand.Parameters.AddWithValue("@p_id", id);
-                sqlCommand.Parameters.AddWithValue("@p_roleID", id);
                 sqlCommand.Parameters.AddWithValue("@p_username", username);
                 sqlCommand.Parameters.AddWithValue("@p_password", password);
                 sqlCommand.ExecuteNonQuery();
@@ -448,7 +448,7 @@ namespace PrjOverhaulHotel
             }
         }
 
-        public static void procRoomAdd(string roomName, string roomType, string description, double price, string status)
+        public static void procRoomAdd(string roomName, string roomType, string description, double price)
         {
             try
             {
@@ -457,7 +457,6 @@ namespace PrjOverhaulHotel
                 sqlCommand.CommandType = CommandType.StoredProcedure;
                 sqlCommand.Parameters.AddWithValue("@p_roomName", roomName);
                 sqlCommand.Parameters.AddWithValue("@p_roomType", roomType);
-                sqlCommand.Parameters.AddWithValue("@p_status", status);
                 sqlCommand.Parameters.AddWithValue("@p_description", description);
                 sqlCommand.Parameters.AddWithValue("@p_priceperday", price);
                 sqlCommand.ExecuteNonQuery();
@@ -469,7 +468,7 @@ namespace PrjOverhaulHotel
         }
 
         public static void procRoomUpdate(int roomID, string roomName, string roomType, 
-            string description, double price, string status)
+            string description, double price)
         {
             try
             {
@@ -479,7 +478,6 @@ namespace PrjOverhaulHotel
                 sqlCommand.Parameters.AddWithValue("@p_id", roomID);
                 sqlCommand.Parameters.AddWithValue("@p_roomName", roomName);
                 sqlCommand.Parameters.AddWithValue("@p_roomType", roomType);
-                sqlCommand.Parameters.AddWithValue("@p_status", status);
                 sqlCommand.Parameters.AddWithValue("@p_description", description);
                 sqlCommand.Parameters.AddWithValue("@p_priceperday", price);
                 sqlCommand.ExecuteNonQuery();
@@ -819,7 +817,75 @@ namespace PrjOverhaulHotel
                 MessageBox.Show($"Error: {ex}", "Error!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-        
+
+        public static void procEmployeeAdd(string firstName, string middleName,
+            string lastName, string username, string password, string roleName, string workShift,
+            string contactNo, string emailAdd, string address, string gender,
+            string birthdate, string image, string date)
+        {
+            try
+            {
+                sqlCommand.Parameters.Clear();
+                sqlCommand.CommandText = "proc_employeeAdd";
+                sqlCommand.CommandType = CommandType.StoredProcedure;
+                sqlCommand.Parameters.AddWithValue("@p_firstName", firstName);
+                sqlCommand.Parameters.AddWithValue("@p_middleName", middleName);
+                sqlCommand.Parameters.AddWithValue("@p_lastName", lastName);
+                sqlCommand.Parameters.AddWithValue("@p_username", username);
+                sqlCommand.Parameters.AddWithValue("@p_password", password);
+                sqlCommand.Parameters.AddWithValue("@p_roleName", roleName);
+                sqlCommand.Parameters.AddWithValue("@p_workShift", workShift);
+                sqlCommand.Parameters.AddWithValue("@p_contactNo", contactNo);
+                sqlCommand.Parameters.AddWithValue("@p_emailAdd", emailAdd);
+                sqlCommand.Parameters.AddWithValue("@p_address", address);
+                sqlCommand.Parameters.AddWithValue("@p_gender", gender);
+                sqlCommand.Parameters.AddWithValue("@p_birthdate", birthdate);
+                sqlCommand.Parameters.AddWithValue("@p_image", image);
+                sqlCommand.Parameters.AddWithValue("@p_dateCreated", date);
+                sqlCommand.ExecuteNonQuery();
+
+                MessageBox.Show("Employee added successfully.");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error: {ex}", "Error!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        public static void procEmployeeCheckAvailability(string firstName, string middleName,
+            string lastName, string username, string password, string roleName, string workShift,
+            string contactNo, string emailAdd, string address, string gender,
+            string birthdate, string image, string date)
+        {
+            try
+            {
+                sqlCommand.Parameters.Clear();
+                sqlCommand.CommandText = "proc_employeeCheckAvailability";
+                sqlCommand.CommandType = CommandType.StoredProcedure;
+                sqlCommand.Parameters.AddWithValue("@p_firstName", firstName);
+                sqlCommand.Parameters.AddWithValue("@p_middleName", middleName);
+                sqlCommand.Parameters.AddWithValue("@p_lastName", lastName);
+                sqlCommand.Parameters.AddWithValue("@p_username", username);
+                sqlCommand.Parameters.AddWithValue("@p_password", password);
+                sqlCommand.Parameters.AddWithValue("@p_roleName", roleName);
+                sqlCommand.Parameters.AddWithValue("@p_workShift", workShift);
+                sqlCommand.Parameters.AddWithValue("@p_contactNo", contactNo);
+                sqlCommand.Parameters.AddWithValue("@p_emailAdd", emailAdd);
+                sqlCommand.Parameters.AddWithValue("@p_address", address);
+                sqlCommand.Parameters.AddWithValue("@p_gender", gender);
+                sqlCommand.Parameters.AddWithValue("@p_birthdate", birthdate);
+                sqlCommand.Parameters.AddWithValue("@p_image", image);
+                sqlCommand.Parameters.AddWithValue("@p_dateCreated", date);
+                sqlCommand.ExecuteNonQuery();
+
+                MessageBox.Show("Employee added successfully.");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error: {ex}", "Error!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
         public static void procEmployeeUpdate(int accountID, string firstName, string middleName,
             string lastName, string username, string password, string roleName, string workShift,
             double hourlyRate, string contactNo, string emailAdd, string address, string gender,
@@ -845,6 +911,22 @@ namespace PrjOverhaulHotel
                 sqlCommand.Parameters.AddWithValue("@p_gender", gender);
                 sqlCommand.Parameters.AddWithValue("@p_birthdate", birthdate);
                 sqlCommand.Parameters.AddWithValue("@p_image", image);
+                sqlCommand.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error: {ex}", "Error!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        public static void procEmployeeDelete(int accountID)
+        {
+            try
+            {
+                sqlCommand.Parameters.Clear();
+                sqlCommand.CommandText = "proc_employeeDelete";
+                sqlCommand.CommandType = CommandType.StoredProcedure;
+                sqlCommand.Parameters.AddWithValue("@p_id", accountID);
                 sqlCommand.ExecuteNonQuery();
             }
             catch (Exception ex)
@@ -910,6 +992,24 @@ namespace PrjOverhaulHotel
                 mySqlDataAdapter.SelectCommand = GlobalProcedure.sqlCommand;
                 datHotel.Clear();
                 mySqlDataAdapter.Fill(GlobalProcedure.datHotel);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error: {ex}", "Error!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        public static void procAddonAdd(string addonName, double price, string description)
+        {
+            try
+            {
+                sqlCommand.Parameters.Clear();
+                sqlCommand.CommandText = "proc_addonAdd";
+                sqlCommand.CommandType = CommandType.StoredProcedure;
+                sqlCommand.Parameters.AddWithValue("@p_addonName", addonName);
+                sqlCommand.Parameters.AddWithValue("@p_price", price);
+                sqlCommand.Parameters.AddWithValue("@p_description", description);
+                sqlCommand.ExecuteNonQuery();
             }
             catch (Exception ex)
             {
@@ -983,6 +1083,41 @@ namespace PrjOverhaulHotel
             }
         }
 
+        public static void procAddonUpdate(int addonID, string addonName, double price, string description)
+        {
+            try
+            {
+                sqlCommand.Parameters.Clear();
+                sqlCommand.CommandText = "proc_addonUpdate";
+                sqlCommand.CommandType = CommandType.StoredProcedure;
+                sqlCommand.Parameters.AddWithValue("@p_id", addonID);
+                sqlCommand.Parameters.AddWithValue("@p_addonName", addonName);
+                sqlCommand.Parameters.AddWithValue("@p_price", price);
+                sqlCommand.Parameters.AddWithValue("@p_description", description);
+                sqlCommand.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error: {ex}", "Error!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        public static void procAddonDelete(int addonID)
+        {
+            try
+            {
+                sqlCommand.Parameters.Clear();
+                sqlCommand.CommandText = "proc_addonDelete";
+                sqlCommand.CommandType = CommandType.StoredProcedure;
+                sqlCommand.Parameters.AddWithValue("@p_id", addonID);
+                sqlCommand.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error: {ex}", "Error!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
         // PROMO PROCEDURES
 
         public static void procPromoData()
@@ -999,6 +1134,24 @@ namespace PrjOverhaulHotel
                 mySqlDataAdapter.SelectCommand = GlobalProcedure.sqlCommand;
                 datHotel.Clear();
                 mySqlDataAdapter.Fill(GlobalProcedure.datHotel);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error: {ex}", "Error!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        public static void procPromoAdd(string promoName, double discount, string description)
+        {
+            try
+            {
+                sqlCommand.Parameters.Clear();
+                sqlCommand.CommandText = "proc_promoAdd";
+                sqlCommand.CommandType = CommandType.StoredProcedure;
+                sqlCommand.Parameters.AddWithValue("@p_promoName", promoName);
+                sqlCommand.Parameters.AddWithValue("@p_discount", discount);
+                sqlCommand.Parameters.AddWithValue("@p_description", description);
+                sqlCommand.ExecuteNonQuery();
             }
             catch (Exception ex)
             {
@@ -1043,6 +1196,41 @@ namespace PrjOverhaulHotel
                 mySqlDataAdapter.SelectCommand = GlobalProcedure.sqlCommand;
                 datHotel.Clear();
                 mySqlDataAdapter.Fill(GlobalProcedure.datHotel);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error: {ex}", "Error!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        public static void procPromoUpdate(int promoID, string promoName, double discount, string description)
+        {
+            try
+            {
+                sqlCommand.Parameters.Clear();
+                sqlCommand.CommandText = "proc_promoUpdate";
+                sqlCommand.CommandType = CommandType.StoredProcedure;
+                sqlCommand.Parameters.AddWithValue("@p_id", promoID);
+                sqlCommand.Parameters.AddWithValue("@p_promoName", promoName);
+                sqlCommand.Parameters.AddWithValue("@p_discount", discount);
+                sqlCommand.Parameters.AddWithValue("@p_description", description);
+                sqlCommand.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error: {ex}", "Error!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        public static void procPromoDelete(int promoID)
+        {
+            try
+            {
+                sqlCommand.Parameters.Clear();
+                sqlCommand.CommandText = "proc_promoDelete";
+                sqlCommand.CommandType = CommandType.StoredProcedure;
+                sqlCommand.Parameters.AddWithValue("@p_id", promoID);
+                sqlCommand.ExecuteNonQuery();
             }
             catch (Exception ex)
             {
@@ -1126,6 +1314,46 @@ namespace PrjOverhaulHotel
                 sqlCommand.Parameters.Clear();
                 sqlCommand.CommandText = "proc_reservationGetByAccountID";
                 sqlCommand.Parameters.AddWithValue("@p_id", accountID);
+                sqlCommand.CommandType = CommandType.StoredProcedure;
+
+                mySqlDataAdapter.SelectCommand = GlobalProcedure.sqlCommand;
+                datHotel.Clear();
+                mySqlDataAdapter.Fill(GlobalProcedure.datHotel);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error: {ex}", "Error!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        public static void procReservationApprove(int reservationID, string date)
+        {
+            try
+            {
+                sqlCommand.Parameters.Clear();
+                sqlCommand.CommandText = "proc_reservationApprove";
+                sqlCommand.CommandType = CommandType.StoredProcedure;
+                sqlCommand.Parameters.AddWithValue("@p_id", reservationID);
+                sqlCommand.Parameters.AddWithValue("@p_date", date);
+                sqlCommand.ExecuteNonQuery();
+                MessageBox.Show("Reservation added successfully.");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error: {ex}", "Error!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        public static void procReservationSearchByName(string name)
+        {
+            try
+            {
+                mySqlDataAdapter = new MySqlDataAdapter();
+                datHotel = new DataTable();
+
+                sqlCommand.Parameters.Clear();
+                sqlCommand.CommandText = "proc_reservationSearchByName";
+                sqlCommand.Parameters.AddWithValue("@p_name", name);
                 sqlCommand.CommandType = CommandType.StoredProcedure;
 
                 mySqlDataAdapter.SelectCommand = GlobalProcedure.sqlCommand;

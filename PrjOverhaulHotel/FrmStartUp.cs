@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PrjOverhaulHotel.Form_for_Guests;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -58,10 +59,12 @@ namespace PrjOverhaulHotel
                     firstName = GlobalProcedure.datHotel.Rows[0]["FIRST NAME"].ToString();
                     role = GlobalProcedure.datHotel.Rows[0]["ROLE"].ToString();
                     imageLoc = GlobalProcedure.datHotel.Rows[0]["IMAGE"].ToString();
+                    GlobalProcedure.procGuestActive(userID, DateTime.Now.ToString("yyyy-MM-dd HH\\:mm\\:ss"));
+
                     UserAccount.setUserID(userID);
                     UserAccount.setProfile(firstName, role, imageLoc);
-                    new FrmStaffDashboard().Show();
-                    this.Hide();
+
+                    checkRole();
                 }
                 else
                 {
@@ -85,16 +88,35 @@ namespace PrjOverhaulHotel
                 firstName = GlobalProcedure.datHotel.Rows[0]["FIRST NAME"].ToString();
                 role = GlobalProcedure.datHotel.Rows[0]["ROLE"].ToString();
                 imageLoc = GlobalProcedure.datHotel.Rows[0]["IMAGE"].ToString();
-                GlobalProcedure.procGuestActive(userID, DateTime.Now.ToString("yyyy-MM-dd HH\\:mm\\:ss"));
 
                 UserAccount.setUserID(userID);
                 UserAccount.setProfile(firstName, role, imageLoc);
-                new FrmStaffDashboard().Show();
-                this.Hide();
+                checkRole();
             }
             else
             {
                 MessageBox.Show("Incorrect username or password.", "Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void checkRole()
+        {
+            GlobalProcedure.procAccountGetByID(userID);
+            if (GlobalProcedure.datHotel.Rows.Count > 0)
+            {
+                string role = GlobalProcedure.datHotel.Rows[0]["ROLE"].ToString();
+                if (role == "Guest")
+                {
+                    GlobalProcedure.procGuestActive(userID, DateTime.Now.ToString("yyyy-MM-dd HH\\:mm\\:ss"));
+                    new FrmGuestDashboard().Show();
+                    this.Hide();
+                }
+                else 
+                {
+                    GlobalProcedure.procEmployeeLastOnline(userID);
+                    new FrmStaffDashboard().Show();
+                    this.Hide();
+                }
             }
         }
 

@@ -103,6 +103,7 @@
             this.guna2CustomGradientPanel1.ShadowDecoration.Parent = this.guna2CustomGradientPanel1;
             this.guna2CustomGradientPanel1.Size = new System.Drawing.Size(1000, 45);
             this.guna2CustomGradientPanel1.TabIndex = 13;
+            this.guna2CustomGradientPanel1.MouseEnter += new System.EventHandler(this.pnlButtons_MouseLeave);
             // 
             // pictureBox3
             // 
@@ -114,6 +115,7 @@
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox3.TabIndex = 12;
             this.pictureBox3.TabStop = false;
+            this.pictureBox3.MouseEnter += new System.EventHandler(this.pnlButtons_MouseLeave);
             // 
             // pictureBox2
             // 
@@ -125,6 +127,7 @@
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 11;
             this.pictureBox2.TabStop = false;
+            this.pictureBox2.MouseEnter += new System.EventHandler(this.pnlButtons_MouseLeave);
             // 
             // btnHide
             // 
@@ -144,6 +147,7 @@
             this.btnHide.Size = new System.Drawing.Size(35, 35);
             this.btnHide.TabIndex = 2;
             this.btnHide.Click += new System.EventHandler(this.btnHide_Click);
+            this.btnHide.MouseEnter += new System.EventHandler(this.pnlButtons_MouseLeave);
             // 
             // btnExit
             // 
@@ -163,6 +167,7 @@
             this.btnExit.Size = new System.Drawing.Size(35, 35);
             this.btnExit.TabIndex = 0;
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
+            this.btnExit.MouseEnter += new System.EventHandler(this.pnlButtons_MouseLeave);
             // 
             // pnlButtons
             // 
@@ -178,6 +183,7 @@
             this.pnlButtons.ShadowDecoration.Parent = this.pnlButtons;
             this.pnlButtons.Size = new System.Drawing.Size(60, 555);
             this.pnlButtons.TabIndex = 14;
+            this.pnlButtons.MouseEnter += new System.EventHandler(this.button_Move);
             // 
             // btnLogout
             // 
@@ -204,6 +210,7 @@
             this.btnLogout.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnLogout.TextOffset = new System.Drawing.Point(30, 0);
             this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
+            this.btnLogout.MouseEnter += new System.EventHandler(this.button_Move);
             // 
             // btnGuests
             // 
@@ -230,6 +237,7 @@
             this.btnGuests.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnGuests.TextOffset = new System.Drawing.Point(30, 1);
             this.btnGuests.Click += new System.EventHandler(this.btnHistory_Click);
+            this.btnGuests.MouseEnter += new System.EventHandler(this.button_Move);
             // 
             // btnAP
             // 
@@ -256,6 +264,7 @@
             this.btnAP.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnAP.TextOffset = new System.Drawing.Point(30, 1);
             this.btnAP.Click += new System.EventHandler(this.btnAP_Click);
+            this.btnAP.MouseEnter += new System.EventHandler(this.button_Move);
             // 
             // btnReservation
             // 
@@ -282,6 +291,7 @@
             this.btnReservation.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnReservation.TextOffset = new System.Drawing.Point(30, 1);
             this.btnReservation.Click += new System.EventHandler(this.btnReservation_Click);
+            this.btnReservation.MouseEnter += new System.EventHandler(this.button_Move);
             // 
             // btnDashboard
             // 
@@ -308,6 +318,7 @@
             this.btnDashboard.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnDashboard.TextOffset = new System.Drawing.Point(30, 1);
             this.btnDashboard.Click += new System.EventHandler(this.btnDashboard_Click);
+            this.btnDashboard.MouseEnter += new System.EventHandler(this.button_Move);
             // 
             // guna2VSeparator2
             // 
@@ -335,6 +346,8 @@
             this.btnProfile.ShadowDecoration.Parent = this.btnProfile;
             this.btnProfile.Size = new System.Drawing.Size(200, 102);
             this.btnProfile.TabIndex = 21;
+            this.btnProfile.MouseEnter += new System.EventHandler(this.btnProfile_MouseEnter);
+            this.btnProfile.MouseLeave += new System.EventHandler(this.btnProfile_MouseLeave);
             // 
             // imgIcon
             // 
@@ -348,6 +361,8 @@
             this.imgIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.imgIcon.TabIndex = 13;
             this.imgIcon.TabStop = false;
+            this.imgIcon.MouseEnter += new System.EventHandler(this.btnProfile_MouseEnter);
+            this.imgIcon.MouseLeave += new System.EventHandler(this.btnProfile_MouseLeave);
             // 
             // lblName
             // 
@@ -360,6 +375,8 @@
             this.lblName.TabIndex = 0;
             this.lblName.Text = "Sample Name";
             this.lblName.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblName.MouseEnter += new System.EventHandler(this.btnProfile_MouseEnter);
+            this.lblName.MouseLeave += new System.EventHandler(this.btnProfile_MouseLeave);
             // 
             // lblPosition
             // 
@@ -372,6 +389,8 @@
             this.lblPosition.TabIndex = 1;
             this.lblPosition.Text = "Sample Position";
             this.lblPosition.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblPosition.MouseEnter += new System.EventHandler(this.btnProfile_MouseEnter);
+            this.lblPosition.MouseLeave += new System.EventHandler(this.btnProfile_MouseLeave);
             // 
             // lblTitle
             // 
@@ -384,14 +403,15 @@
             this.lblTitle.TabIndex = 23;
             this.lblTitle.Text = "Profile";
             this.lblTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblTitle.MouseEnter += new System.EventHandler(this.pnlButtons_MouseLeave);
             // 
             // pnlProfile
             // 
             this.pnlProfile.BackColor = System.Drawing.Color.Transparent;
             this.pnlProfile.BackgroundImage = global::PrjOverhaulHotel.Properties.Resources.Group_282;
             this.pnlProfile.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pnlProfile.Controls.Add(this.btnSee);
             this.pnlProfile.Controls.Add(this.btnSave);
+            this.pnlProfile.Controls.Add(this.btnSee);
             this.pnlProfile.Controls.Add(this.cmbGender);
             this.pnlProfile.Controls.Add(this.label10);
             this.pnlProfile.Controls.Add(this.dtmBirthdate);
@@ -420,6 +440,7 @@
             this.pnlProfile.ShadowDecoration.Parent = this.pnlProfile;
             this.pnlProfile.Size = new System.Drawing.Size(927, 501);
             this.pnlProfile.TabIndex = 22;
+            this.pnlProfile.MouseEnter += new System.EventHandler(this.pnlButtons_MouseLeave);
             // 
             // btnSee
             // 
@@ -429,6 +450,8 @@
             this.btnSee.Name = "btnSee";
             this.btnSee.Size = new System.Drawing.Size(30, 30);
             this.btnSee.TabIndex = 53;
+            this.btnSee.Click += new System.EventHandler(this.btnSee_Click);
+            this.btnSee.MouseEnter += new System.EventHandler(this.pnlButtons_MouseLeave);
             // 
             // btnSave
             // 
@@ -451,6 +474,8 @@
             this.btnSave.TabIndex = 52;
             this.btnSave.Text = "SAVE";
             this.btnSave.TextOffset = new System.Drawing.Point(7, -11);
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
+            this.btnSave.MouseEnter += new System.EventHandler(this.pnlButtons_MouseLeave);
             // 
             // cmbGender
             // 
@@ -477,6 +502,7 @@
             this.cmbGender.TabIndex = 51;
             this.cmbGender.TextOffset = new System.Drawing.Point(5, 1);
             this.cmbGender.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault;
+            this.cmbGender.MouseEnter += new System.EventHandler(this.pnlButtons_MouseLeave);
             // 
             // label10
             // 
@@ -488,6 +514,7 @@
             this.label10.Size = new System.Drawing.Size(63, 16);
             this.label10.TabIndex = 50;
             this.label10.Text = "Birthdate";
+            this.label10.MouseEnter += new System.EventHandler(this.pnlButtons_MouseLeave);
             // 
             // dtmBirthdate
             // 
@@ -506,6 +533,7 @@
             this.dtmBirthdate.Size = new System.Drawing.Size(194, 36);
             this.dtmBirthdate.TabIndex = 49;
             this.dtmBirthdate.Value = new System.DateTime(2024, 10, 31, 18, 33, 6, 824);
+            this.dtmBirthdate.MouseEnter += new System.EventHandler(this.pnlButtons_MouseLeave);
             // 
             // txtAddress
             // 
@@ -537,6 +565,7 @@
             this.txtAddress.Size = new System.Drawing.Size(390, 35);
             this.txtAddress.TabIndex = 46;
             this.txtAddress.TextOffset = new System.Drawing.Point(10, 0);
+            this.txtAddress.MouseEnter += new System.EventHandler(this.pnlButtons_MouseLeave);
             // 
             // label8
             // 
@@ -548,6 +577,7 @@
             this.label8.Size = new System.Drawing.Size(56, 16);
             this.label8.TabIndex = 47;
             this.label8.Text = "Address";
+            this.label8.MouseEnter += new System.EventHandler(this.pnlButtons_MouseLeave);
             // 
             // label9
             // 
@@ -559,6 +589,7 @@
             this.label9.Size = new System.Drawing.Size(51, 16);
             this.label9.TabIndex = 48;
             this.label9.Text = "Gender";
+            this.label9.MouseEnter += new System.EventHandler(this.pnlButtons_MouseLeave);
             // 
             // txtContactno
             // 
@@ -590,6 +621,7 @@
             this.txtContactno.Size = new System.Drawing.Size(390, 35);
             this.txtContactno.TabIndex = 43;
             this.txtContactno.TextOffset = new System.Drawing.Point(10, 0);
+            this.txtContactno.MouseEnter += new System.EventHandler(this.pnlButtons_MouseLeave);
             // 
             // txtEmailadd
             // 
@@ -621,6 +653,7 @@
             this.txtEmailadd.Size = new System.Drawing.Size(390, 35);
             this.txtEmailadd.TabIndex = 42;
             this.txtEmailadd.TextOffset = new System.Drawing.Point(10, 0);
+            this.txtEmailadd.MouseEnter += new System.EventHandler(this.pnlButtons_MouseLeave);
             // 
             // label6
             // 
@@ -632,6 +665,7 @@
             this.label6.Size = new System.Drawing.Size(106, 16);
             this.label6.TabIndex = 44;
             this.label6.Text = "Contact Number";
+            this.label6.MouseEnter += new System.EventHandler(this.pnlButtons_MouseLeave);
             // 
             // label7
             // 
@@ -643,6 +677,7 @@
             this.label7.Size = new System.Drawing.Size(91, 16);
             this.label7.TabIndex = 45;
             this.label7.Text = "Email Address";
+            this.label7.MouseEnter += new System.EventHandler(this.pnlButtons_MouseLeave);
             // 
             // txtLastname
             // 
@@ -673,6 +708,7 @@
             this.txtLastname.Size = new System.Drawing.Size(361, 35);
             this.txtLastname.TabIndex = 40;
             this.txtLastname.TextOffset = new System.Drawing.Point(10, 0);
+            this.txtLastname.MouseEnter += new System.EventHandler(this.pnlButtons_MouseLeave);
             // 
             // label5
             // 
@@ -684,6 +720,7 @@
             this.label5.Size = new System.Drawing.Size(70, 16);
             this.label5.TabIndex = 41;
             this.label5.Text = "Last Name";
+            this.label5.MouseEnter += new System.EventHandler(this.pnlButtons_MouseLeave);
             // 
             // txtFirstname
             // 
@@ -714,6 +751,7 @@
             this.txtFirstname.Size = new System.Drawing.Size(361, 35);
             this.txtFirstname.TabIndex = 37;
             this.txtFirstname.TextOffset = new System.Drawing.Point(10, 0);
+            this.txtFirstname.MouseEnter += new System.EventHandler(this.pnlButtons_MouseLeave);
             // 
             // txtMiddlename
             // 
@@ -744,6 +782,7 @@
             this.txtMiddlename.Size = new System.Drawing.Size(361, 35);
             this.txtMiddlename.TabIndex = 36;
             this.txtMiddlename.TextOffset = new System.Drawing.Point(10, 0);
+            this.txtMiddlename.MouseEnter += new System.EventHandler(this.pnlButtons_MouseLeave);
             // 
             // label3
             // 
@@ -755,6 +794,7 @@
             this.label3.Size = new System.Drawing.Size(71, 16);
             this.label3.TabIndex = 38;
             this.label3.Text = "First Name";
+            this.label3.MouseEnter += new System.EventHandler(this.pnlButtons_MouseLeave);
             // 
             // label4
             // 
@@ -766,6 +806,7 @@
             this.label4.Size = new System.Drawing.Size(85, 16);
             this.label4.TabIndex = 39;
             this.label4.Text = "Middle Name";
+            this.label4.MouseEnter += new System.EventHandler(this.pnlButtons_MouseLeave);
             // 
             // btnUpload
             // 
@@ -788,6 +829,8 @@
             this.btnUpload.TabIndex = 35;
             this.btnUpload.Text = "UPLOAD";
             this.btnUpload.TextOffset = new System.Drawing.Point(7, -11);
+            this.btnUpload.Click += new System.EventHandler(this.btnUpload_Click);
+            this.btnUpload.MouseEnter += new System.EventHandler(this.pnlButtons_MouseLeave);
             // 
             // imgProfile
             // 
@@ -801,6 +844,7 @@
             this.imgProfile.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.imgProfile.TabIndex = 34;
             this.imgProfile.TabStop = false;
+            this.imgProfile.MouseEnter += new System.EventHandler(this.pnlButtons_MouseLeave);
             // 
             // btnEdit
             // 
@@ -823,6 +867,8 @@
             this.btnEdit.TabIndex = 33;
             this.btnEdit.Text = "EDIT";
             this.btnEdit.TextOffset = new System.Drawing.Point(7, -11);
+            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
+            this.btnEdit.MouseEnter += new System.EventHandler(this.pnlButtons_MouseLeave);
             // 
             // txtUsername
             // 
@@ -854,6 +900,7 @@
             this.txtUsername.Size = new System.Drawing.Size(390, 35);
             this.txtUsername.TabIndex = 30;
             this.txtUsername.TextOffset = new System.Drawing.Point(10, 0);
+            this.txtUsername.MouseEnter += new System.EventHandler(this.pnlButtons_MouseLeave);
             // 
             // txtPassword
             // 
@@ -886,6 +933,7 @@
             this.txtPassword.TabIndex = 29;
             this.txtPassword.TextOffset = new System.Drawing.Point(10, 0);
             this.txtPassword.UseSystemPasswordChar = true;
+            this.txtPassword.MouseEnter += new System.EventHandler(this.pnlButtons_MouseLeave);
             // 
             // label1
             // 
@@ -897,6 +945,7 @@
             this.label1.Size = new System.Drawing.Size(68, 16);
             this.label1.TabIndex = 31;
             this.label1.Text = "Username";
+            this.label1.MouseEnter += new System.EventHandler(this.pnlButtons_MouseLeave);
             // 
             // label2
             // 
@@ -908,6 +957,7 @@
             this.label2.Size = new System.Drawing.Size(65, 16);
             this.label2.TabIndex = 32;
             this.label2.Text = "Password";
+            this.label2.MouseEnter += new System.EventHandler(this.pnlButtons_MouseLeave);
             // 
             // FrmGuestProfile
             // 
@@ -915,15 +965,17 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(154)))), ((int)(((byte)(136)))));
             this.ClientSize = new System.Drawing.Size(1000, 600);
-            this.Controls.Add(this.lblTitle);
-            this.Controls.Add(this.pnlProfile);
             this.Controls.Add(this.pnlButtons);
+            this.Controls.Add(this.lblTitle);
             this.Controls.Add(this.guna2CustomGradientPanel1);
             this.Controls.Add(this.btnProfile);
+            this.Controls.Add(this.pnlProfile);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FrmGuestProfile";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmGuestProfile";
+            this.Load += new System.EventHandler(this.FrmGuestProfile_Load);
+            this.MouseEnter += new System.EventHandler(this.pnlButtons_MouseLeave);
             this.guna2CustomGradientPanel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();

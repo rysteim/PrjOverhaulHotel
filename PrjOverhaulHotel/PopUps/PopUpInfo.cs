@@ -61,7 +61,7 @@ namespace PrjOverhaulHotel.PopUps
 
         private void getAccountID()
         {
-            GlobalProcedure.procReservationGetAccountID(reservationID);
+            GlobalProcedure.procReservationGetByID(reservationID);
             if (GlobalProcedure.datHotel.Rows.Count > 0)
             {
                 accountID = Convert.ToInt32(GlobalProcedure.datHotel.Rows[0]["accountID"].ToString());

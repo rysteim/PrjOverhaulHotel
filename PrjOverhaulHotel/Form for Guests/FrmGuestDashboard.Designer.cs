@@ -76,6 +76,7 @@
             this.guna2CustomGradientPanel1.ShadowDecoration.Parent = this.guna2CustomGradientPanel1;
             this.guna2CustomGradientPanel1.Size = new System.Drawing.Size(1000, 45);
             this.guna2CustomGradientPanel1.TabIndex = 14;
+            this.guna2CustomGradientPanel1.MouseEnter += new System.EventHandler(this.pnlButtons_MouseLeave);
             // 
             // pictureBox3
             // 
@@ -87,6 +88,7 @@
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox3.TabIndex = 12;
             this.pictureBox3.TabStop = false;
+            this.pictureBox3.MouseEnter += new System.EventHandler(this.pnlButtons_MouseLeave);
             // 
             // pictureBox2
             // 
@@ -98,6 +100,7 @@
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 11;
             this.pictureBox2.TabStop = false;
+            this.pictureBox2.MouseEnter += new System.EventHandler(this.pnlButtons_MouseLeave);
             // 
             // btnHide
             // 
@@ -117,6 +120,7 @@
             this.btnHide.Size = new System.Drawing.Size(35, 35);
             this.btnHide.TabIndex = 2;
             this.btnHide.Click += new System.EventHandler(this.btnHide_Click);
+            this.btnHide.MouseEnter += new System.EventHandler(this.pnlButtons_MouseLeave);
             // 
             // btnExit
             // 
@@ -136,6 +140,7 @@
             this.btnExit.Size = new System.Drawing.Size(35, 35);
             this.btnExit.TabIndex = 0;
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
+            this.btnExit.MouseEnter += new System.EventHandler(this.pnlButtons_MouseLeave);
             // 
             // pnlButtons
             // 
@@ -303,6 +308,9 @@
             this.btnProfile.ShadowDecoration.Parent = this.btnProfile;
             this.btnProfile.Size = new System.Drawing.Size(200, 102);
             this.btnProfile.TabIndex = 24;
+            this.btnProfile.Click += new System.EventHandler(this.btnProfile_Click);
+            this.btnProfile.MouseEnter += new System.EventHandler(this.btnProfile_MouseEnter);
+            this.btnProfile.MouseLeave += new System.EventHandler(this.btnProfile_MouseLeave);
             // 
             // imgProfile
             // 
@@ -316,6 +324,9 @@
             this.imgProfile.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.imgProfile.TabIndex = 13;
             this.imgProfile.TabStop = false;
+            this.imgProfile.Click += new System.EventHandler(this.btnProfile_Click);
+            this.imgProfile.MouseEnter += new System.EventHandler(this.btnProfile_MouseEnter);
+            this.imgProfile.MouseLeave += new System.EventHandler(this.btnProfile_MouseLeave);
             // 
             // lblName
             // 
@@ -328,6 +339,9 @@
             this.lblName.TabIndex = 0;
             this.lblName.Text = "Sample Name";
             this.lblName.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblName.Click += new System.EventHandler(this.btnProfile_Click);
+            this.lblName.MouseEnter += new System.EventHandler(this.btnProfile_MouseEnter);
+            this.lblName.MouseLeave += new System.EventHandler(this.btnProfile_MouseLeave);
             // 
             // lblPosition
             // 
@@ -340,6 +354,9 @@
             this.lblPosition.TabIndex = 1;
             this.lblPosition.Text = "Sample Position";
             this.lblPosition.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblPosition.Click += new System.EventHandler(this.btnProfile_Click);
+            this.lblPosition.MouseEnter += new System.EventHandler(this.btnProfile_MouseEnter);
+            this.lblPosition.MouseLeave += new System.EventHandler(this.btnProfile_MouseLeave);
             // 
             // lblTitle
             // 
@@ -352,6 +369,7 @@
             this.lblTitle.TabIndex = 25;
             this.lblTitle.Text = "Dashboard";
             this.lblTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblTitle.MouseEnter += new System.EventHandler(this.pnlButtons_MouseLeave);
             // 
             // pnlDashboard
             // 
@@ -363,6 +381,7 @@
             this.pnlDashboard.ShadowDecoration.Parent = this.pnlDashboard;
             this.pnlDashboard.Size = new System.Drawing.Size(927, 501);
             this.pnlDashboard.TabIndex = 26;
+            this.pnlDashboard.MouseEnter += new System.EventHandler(this.pnlButtons_MouseLeave);
             // 
             // FrmGuestDashboard
             // 
@@ -370,15 +389,17 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(154)))), ((int)(((byte)(136)))));
             this.ClientSize = new System.Drawing.Size(1000, 600);
-            this.Controls.Add(this.pnlDashboard);
-            this.Controls.Add(this.lblTitle);
             this.Controls.Add(this.pnlButtons);
+            this.Controls.Add(this.lblTitle);
             this.Controls.Add(this.guna2CustomGradientPanel1);
             this.Controls.Add(this.btnProfile);
+            this.Controls.Add(this.pnlDashboard);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FrmGuestDashboard";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmGuestDashboard";
+            this.Load += new System.EventHandler(this.FrmGuestDashboard_Load);
+            this.MouseEnter += new System.EventHandler(this.pnlButtons_MouseLeave);
             this.guna2CustomGradientPanel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();

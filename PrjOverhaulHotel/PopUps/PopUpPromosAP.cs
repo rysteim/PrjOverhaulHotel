@@ -31,7 +31,40 @@ namespace PrjOverhaulHotel.PopUps
 
         private void btnAddPromo_Click(object sender, EventArgs e)
         {
+            GlobalProcedure.procPromoAdd(txtPromoName.Text, Convert.ToDouble(txtPromoDiscount.Text),
+                txtDescription.Text);
+            this.Close();
+        }
 
+        private void btnSaveAddon_Click(object sender, EventArgs e)
+        {
+            GlobalProcedure.procPromoUpdate(promoID, txtPromoName.Text,
+                Convert.ToDouble(txtPromoDiscount.Text), txtDescription.Text);
+            this.Close();
+        }
+
+        private void PopUpPromosAP_Load(object sender, EventArgs e)
+        {
+            if (promoID > 0)
+            {
+                btnAddPromo.Visible = false;
+                displayPromo();
+            }
+            else
+            {
+                btnSavePromo.Visible = false;
+            }
+        }
+
+        private void displayPromo()
+        {
+            GlobalProcedure.procPromoGetByID(promoID);
+            if (GlobalProcedure.datHotel.Rows.Count > 0)
+            {
+                txtPromoName.Text = GlobalProcedure.datHotel.Rows[0]["promoName"].ToString();
+                txtPromoDiscount.Text = GlobalProcedure.datHotel.Rows[0]["discount"].ToString();
+                txtDescription.Text = GlobalProcedure.datHotel.Rows[0]["description"].ToString();
+            }
         }
     }
 }

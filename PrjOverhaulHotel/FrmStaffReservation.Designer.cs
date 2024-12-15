@@ -29,9 +29,10 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmStaffReservation));
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2CustomGradientPanel1 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
@@ -79,6 +80,8 @@
             this.btnPrintReservation = new Guna.UI2.WinForms.Guna2GradientTileButton();
             this.lblTotal = new System.Windows.Forms.Label();
             this.mySqlCommand1 = new MySql.Data.MySqlClient.MySqlCommand();
+            this.txtNameSearch = new Guna.UI2.WinForms.Guna2TextBox();
+            this.label11 = new System.Windows.Forms.Label();
             this.guna2CustomGradientPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -261,7 +264,7 @@
             this.btnLogout.CustomImages.Parent = this.btnLogout;
             this.btnLogout.FillColor = System.Drawing.Color.White;
             this.btnLogout.FillColor2 = System.Drawing.Color.White;
-            this.btnLogout.Font = new System.Drawing.Font("Adobe Fan Heiti Std B", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLogout.Font = new System.Drawing.Font("Nirmala UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLogout.ForeColor = System.Drawing.Color.Black;
             this.btnLogout.HoverState.FillColor = System.Drawing.Color.Black;
             this.btnLogout.HoverState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(154)))), ((int)(((byte)(136)))));
@@ -289,7 +292,7 @@
             this.btnRooms.CustomImages.Parent = this.btnRooms;
             this.btnRooms.FillColor = System.Drawing.Color.White;
             this.btnRooms.FillColor2 = System.Drawing.Color.White;
-            this.btnRooms.Font = new System.Drawing.Font("Adobe Fan Heiti Std B", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRooms.Font = new System.Drawing.Font("Nirmala UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRooms.ForeColor = System.Drawing.Color.Black;
             this.btnRooms.HoverState.FillColor = System.Drawing.Color.Black;
             this.btnRooms.HoverState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(154)))), ((int)(((byte)(136)))));
@@ -317,7 +320,7 @@
             this.btnPersonnel.CustomImages.Parent = this.btnPersonnel;
             this.btnPersonnel.FillColor = System.Drawing.Color.White;
             this.btnPersonnel.FillColor2 = System.Drawing.Color.White;
-            this.btnPersonnel.Font = new System.Drawing.Font("Adobe Fan Heiti Std B", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPersonnel.Font = new System.Drawing.Font("Nirmala UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPersonnel.ForeColor = System.Drawing.Color.Black;
             this.btnPersonnel.HoverState.FillColor = System.Drawing.Color.Black;
             this.btnPersonnel.HoverState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(154)))), ((int)(((byte)(136)))));
@@ -345,7 +348,7 @@
             this.btnGuests.CustomImages.Parent = this.btnGuests;
             this.btnGuests.FillColor = System.Drawing.Color.White;
             this.btnGuests.FillColor2 = System.Drawing.Color.White;
-            this.btnGuests.Font = new System.Drawing.Font("Adobe Fan Heiti Std B", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGuests.Font = new System.Drawing.Font("Nirmala UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGuests.ForeColor = System.Drawing.Color.Black;
             this.btnGuests.HoverState.FillColor = System.Drawing.Color.Black;
             this.btnGuests.HoverState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(154)))), ((int)(((byte)(136)))));
@@ -373,7 +376,7 @@
             this.btnAP.CustomImages.Parent = this.btnAP;
             this.btnAP.FillColor = System.Drawing.Color.White;
             this.btnAP.FillColor2 = System.Drawing.Color.White;
-            this.btnAP.Font = new System.Drawing.Font("Adobe Fan Heiti Std B", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAP.Font = new System.Drawing.Font("Nirmala UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAP.ForeColor = System.Drawing.Color.Black;
             this.btnAP.HoverState.FillColor = System.Drawing.Color.Black;
             this.btnAP.HoverState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(154)))), ((int)(((byte)(136)))));
@@ -401,7 +404,7 @@
             this.btnReservation.CustomImages.Parent = this.btnReservation;
             this.btnReservation.FillColor = System.Drawing.Color.Black;
             this.btnReservation.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(154)))), ((int)(((byte)(136)))));
-            this.btnReservation.Font = new System.Drawing.Font("Adobe Fan Heiti Std B", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnReservation.Font = new System.Drawing.Font("Nirmala UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnReservation.ForeColor = System.Drawing.Color.White;
             this.btnReservation.HoverState.FillColor = System.Drawing.Color.Black;
             this.btnReservation.HoverState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(154)))), ((int)(((byte)(136)))));
@@ -428,7 +431,7 @@
             this.btnDashboard.CustomImages.Parent = this.btnDashboard;
             this.btnDashboard.FillColor = System.Drawing.Color.White;
             this.btnDashboard.FillColor2 = System.Drawing.Color.White;
-            this.btnDashboard.Font = new System.Drawing.Font("Adobe Fan Heiti Std B", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDashboard.Font = new System.Drawing.Font("Nirmala UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDashboard.ForeColor = System.Drawing.Color.Black;
             this.btnDashboard.HoverState.FillColor = System.Drawing.Color.Black;
             this.btnDashboard.HoverState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(154)))), ((int)(((byte)(136)))));
@@ -476,6 +479,8 @@
             this.pnlReservation.BackColor = System.Drawing.Color.Transparent;
             this.pnlReservation.BackgroundImage = global::PrjOverhaulHotel.Properties.Resources.Group_282;
             this.pnlReservation.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pnlReservation.Controls.Add(this.txtNameSearch);
+            this.pnlReservation.Controls.Add(this.label11);
             this.pnlReservation.Controls.Add(this.dtgReservations);
             this.pnlReservation.Controls.Add(this.guna2Separator8);
             this.pnlReservation.Controls.Add(this.guna2Panel1);
@@ -498,14 +503,14 @@
             this.dtgReservations.AllowUserToAddRows = false;
             this.dtgReservations.AllowUserToDeleteRows = false;
             this.dtgReservations.BackgroundColor = System.Drawing.Color.White;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft New Tai Lue", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(135)))), ((int)(((byte)(97)))));
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dtgReservations.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft New Tai Lue", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(135)))), ((int)(((byte)(97)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dtgReservations.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dtgReservations.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtgReservations.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
@@ -523,26 +528,26 @@
             this.Column13});
             this.dtgReservations.EnableHeadersVisualStyles = false;
             this.dtgReservations.GridColor = System.Drawing.Color.Black;
-            this.dtgReservations.Location = new System.Drawing.Point(30, 21);
+            this.dtgReservations.Location = new System.Drawing.Point(30, 58);
             this.dtgReservations.MultiSelect = false;
             this.dtgReservations.Name = "dtgReservations";
             this.dtgReservations.ReadOnly = true;
             this.dtgReservations.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft New Tai Lue", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(135)))), ((int)(((byte)(97)))));
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dtgReservations.RowHeadersDefaultCellStyle = dataGridViewCellStyle5;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft New Tai Lue", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(135)))), ((int)(((byte)(97)))));
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.White;
-            this.dtgReservations.RowsDefaultCellStyle = dataGridViewCellStyle6;
-            this.dtgReservations.Size = new System.Drawing.Size(863, 257);
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft New Tai Lue", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(135)))), ((int)(((byte)(97)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dtgReservations.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft New Tai Lue", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(135)))), ((int)(((byte)(97)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
+            this.dtgReservations.RowsDefaultCellStyle = dataGridViewCellStyle3;
+            this.dtgReservations.Size = new System.Drawing.Size(863, 220);
             this.dtgReservations.TabIndex = 37;
             this.dtgReservations.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgReservations_CellClick);
             this.dtgReservations.MouseEnter += new System.EventHandler(this.pnlButtons_MouseLeave);
@@ -672,19 +677,19 @@
             this.btnAddons.CustomImages.Parent = this.btnAddons;
             this.btnAddons.FillColor = System.Drawing.Color.Black;
             this.btnAddons.FillColor2 = System.Drawing.Color.Gray;
-            this.btnAddons.Font = new System.Drawing.Font("Adobe Fan Heiti Std B", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddons.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddons.ForeColor = System.Drawing.Color.White;
             this.btnAddons.HoverState.Parent = this.btnAddons;
             this.btnAddons.Image = global::PrjOverhaulHotel.Properties.Resources.circle_plus__1_;
             this.btnAddons.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnAddons.ImageOffset = new System.Drawing.Point(5, 12);
+            this.btnAddons.ImageOffset = new System.Drawing.Point(5, 13);
             this.btnAddons.Location = new System.Drawing.Point(142, 77);
             this.btnAddons.Name = "btnAddons";
             this.btnAddons.ShadowDecoration.Parent = this.btnAddons;
             this.btnAddons.Size = new System.Drawing.Size(180, 32);
             this.btnAddons.TabIndex = 10;
             this.btnAddons.Text = "ADDONS";
-            this.btnAddons.TextOffset = new System.Drawing.Point(7, -11);
+            this.btnAddons.TextOffset = new System.Drawing.Point(7, -14);
             this.btnAddons.Click += new System.EventHandler(this.btnAddons_Click);
             this.btnAddons.MouseEnter += new System.EventHandler(this.pnlButtons_MouseLeave);
             // 
@@ -695,19 +700,19 @@
             this.btnTotalRooms.CustomImages.Parent = this.btnTotalRooms;
             this.btnTotalRooms.FillColor = System.Drawing.Color.Black;
             this.btnTotalRooms.FillColor2 = System.Drawing.Color.Gray;
-            this.btnTotalRooms.Font = new System.Drawing.Font("Adobe Fan Heiti Std B", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTotalRooms.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnTotalRooms.ForeColor = System.Drawing.Color.White;
             this.btnTotalRooms.HoverState.Parent = this.btnTotalRooms;
             this.btnTotalRooms.Image = global::PrjOverhaulHotel.Properties.Resources.bed__1_;
             this.btnTotalRooms.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnTotalRooms.ImageOffset = new System.Drawing.Point(5, 12);
+            this.btnTotalRooms.ImageOffset = new System.Drawing.Point(5, 13);
             this.btnTotalRooms.Location = new System.Drawing.Point(142, 38);
             this.btnTotalRooms.Name = "btnTotalRooms";
             this.btnTotalRooms.ShadowDecoration.Parent = this.btnTotalRooms;
             this.btnTotalRooms.Size = new System.Drawing.Size(180, 32);
             this.btnTotalRooms.TabIndex = 9;
             this.btnTotalRooms.Text = "ROOMS";
-            this.btnTotalRooms.TextOffset = new System.Drawing.Point(7, -11);
+            this.btnTotalRooms.TextOffset = new System.Drawing.Point(7, -14);
             this.btnTotalRooms.Click += new System.EventHandler(this.btnTotalRooms_Click);
             this.btnTotalRooms.MouseEnter += new System.EventHandler(this.pnlButtons_MouseLeave);
             // 
@@ -731,19 +736,19 @@
             this.btnReservationInfo.CustomImages.Parent = this.btnReservationInfo;
             this.btnReservationInfo.FillColor = System.Drawing.Color.Black;
             this.btnReservationInfo.FillColor2 = System.Drawing.Color.Gray;
-            this.btnReservationInfo.Font = new System.Drawing.Font("Adobe Fan Heiti Std B", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnReservationInfo.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnReservationInfo.ForeColor = System.Drawing.Color.White;
             this.btnReservationInfo.HoverState.Parent = this.btnReservationInfo;
             this.btnReservationInfo.Image = global::PrjOverhaulHotel.Properties.Resources.info__1_;
             this.btnReservationInfo.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnReservationInfo.ImageOffset = new System.Drawing.Point(5, 12);
+            this.btnReservationInfo.ImageOffset = new System.Drawing.Point(5, 13);
             this.btnReservationInfo.Location = new System.Drawing.Point(54, 432);
             this.btnReservationInfo.Name = "btnReservationInfo";
             this.btnReservationInfo.ShadowDecoration.Parent = this.btnReservationInfo;
             this.btnReservationInfo.Size = new System.Drawing.Size(120, 32);
             this.btnReservationInfo.TabIndex = 13;
             this.btnReservationInfo.Text = "INFO";
-            this.btnReservationInfo.TextOffset = new System.Drawing.Point(7, -11);
+            this.btnReservationInfo.TextOffset = new System.Drawing.Point(7, -14);
             this.btnReservationInfo.Click += new System.EventHandler(this.btnReservationInfo_Click);
             this.btnReservationInfo.MouseEnter += new System.EventHandler(this.pnlButtons_MouseLeave);
             // 
@@ -754,19 +759,19 @@
             this.btnDeleteReservation.CustomImages.Parent = this.btnDeleteReservation;
             this.btnDeleteReservation.FillColor = System.Drawing.Color.Black;
             this.btnDeleteReservation.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.btnDeleteReservation.Font = new System.Drawing.Font("Adobe Fan Heiti Std B", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDeleteReservation.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDeleteReservation.ForeColor = System.Drawing.Color.White;
             this.btnDeleteReservation.HoverState.Parent = this.btnDeleteReservation;
             this.btnDeleteReservation.Image = global::PrjOverhaulHotel.Properties.Resources.trash_2;
             this.btnDeleteReservation.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnDeleteReservation.ImageOffset = new System.Drawing.Point(5, 12);
+            this.btnDeleteReservation.ImageOffset = new System.Drawing.Point(5, 13);
             this.btnDeleteReservation.Location = new System.Drawing.Point(701, 429);
             this.btnDeleteReservation.Name = "btnDeleteReservation";
             this.btnDeleteReservation.ShadowDecoration.Parent = this.btnDeleteReservation;
             this.btnDeleteReservation.Size = new System.Drawing.Size(180, 32);
             this.btnDeleteReservation.TabIndex = 11;
             this.btnDeleteReservation.Text = "DELETE";
-            this.btnDeleteReservation.TextOffset = new System.Drawing.Point(7, -11);
+            this.btnDeleteReservation.TextOffset = new System.Drawing.Point(7, -14);
             this.btnDeleteReservation.Click += new System.EventHandler(this.btnDeleteReservation_Click);
             this.btnDeleteReservation.MouseEnter += new System.EventHandler(this.pnlButtons_MouseLeave);
             // 
@@ -777,19 +782,20 @@
             this.btnEditReservation.CustomImages.Parent = this.btnEditReservation;
             this.btnEditReservation.FillColor = System.Drawing.Color.Black;
             this.btnEditReservation.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btnEditReservation.Font = new System.Drawing.Font("Adobe Fan Heiti Std B", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEditReservation.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEditReservation.ForeColor = System.Drawing.Color.White;
             this.btnEditReservation.HoverState.Parent = this.btnEditReservation;
             this.btnEditReservation.Image = global::PrjOverhaulHotel.Properties.Resources.bolt;
             this.btnEditReservation.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnEditReservation.ImageOffset = new System.Drawing.Point(5, 12);
+            this.btnEditReservation.ImageOffset = new System.Drawing.Point(5, 13);
             this.btnEditReservation.Location = new System.Drawing.Point(701, 391);
             this.btnEditReservation.Name = "btnEditReservation";
             this.btnEditReservation.ShadowDecoration.Parent = this.btnEditReservation;
             this.btnEditReservation.Size = new System.Drawing.Size(180, 32);
             this.btnEditReservation.TabIndex = 10;
             this.btnEditReservation.Text = "EDIT";
-            this.btnEditReservation.TextOffset = new System.Drawing.Point(7, -11);
+            this.btnEditReservation.TextOffset = new System.Drawing.Point(7, -14);
+            this.btnEditReservation.Click += new System.EventHandler(this.btnEditReservation_Click);
             this.btnEditReservation.MouseEnter += new System.EventHandler(this.pnlButtons_MouseLeave);
             // 
             // btnAddReservation
@@ -799,19 +805,19 @@
             this.btnAddReservation.CustomImages.Parent = this.btnAddReservation;
             this.btnAddReservation.FillColor = System.Drawing.Color.Black;
             this.btnAddReservation.FillColor2 = System.Drawing.Color.Teal;
-            this.btnAddReservation.Font = new System.Drawing.Font("Adobe Fan Heiti Std B", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddReservation.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddReservation.ForeColor = System.Drawing.Color.White;
             this.btnAddReservation.HoverState.Parent = this.btnAddReservation;
             this.btnAddReservation.Image = global::PrjOverhaulHotel.Properties.Resources.plus;
             this.btnAddReservation.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnAddReservation.ImageOffset = new System.Drawing.Point(5, 12);
+            this.btnAddReservation.ImageOffset = new System.Drawing.Point(5, 13);
             this.btnAddReservation.Location = new System.Drawing.Point(701, 353);
             this.btnAddReservation.Name = "btnAddReservation";
             this.btnAddReservation.ShadowDecoration.Parent = this.btnAddReservation;
             this.btnAddReservation.Size = new System.Drawing.Size(180, 32);
             this.btnAddReservation.TabIndex = 9;
             this.btnAddReservation.Text = "ADD";
-            this.btnAddReservation.TextOffset = new System.Drawing.Point(7, -11);
+            this.btnAddReservation.TextOffset = new System.Drawing.Point(7, -14);
             this.btnAddReservation.Click += new System.EventHandler(this.btnAddReservation_Click);
             this.btnAddReservation.MouseEnter += new System.EventHandler(this.pnlButtons_MouseLeave);
             // 
@@ -822,25 +828,25 @@
             this.btnPrintReservation.CustomImages.Parent = this.btnPrintReservation;
             this.btnPrintReservation.FillColor = System.Drawing.Color.Black;
             this.btnPrintReservation.FillColor2 = System.Drawing.Color.Gray;
-            this.btnPrintReservation.Font = new System.Drawing.Font("Adobe Fan Heiti Std B", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPrintReservation.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPrintReservation.ForeColor = System.Drawing.Color.White;
             this.btnPrintReservation.HoverState.Parent = this.btnPrintReservation;
             this.btnPrintReservation.Image = global::PrjOverhaulHotel.Properties.Resources.printer;
             this.btnPrintReservation.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnPrintReservation.ImageOffset = new System.Drawing.Point(5, 12);
+            this.btnPrintReservation.ImageOffset = new System.Drawing.Point(5, 13);
             this.btnPrintReservation.Location = new System.Drawing.Point(701, 315);
             this.btnPrintReservation.Name = "btnPrintReservation";
             this.btnPrintReservation.ShadowDecoration.Parent = this.btnPrintReservation;
             this.btnPrintReservation.Size = new System.Drawing.Size(180, 32);
             this.btnPrintReservation.TabIndex = 8;
             this.btnPrintReservation.Text = "PRINT";
-            this.btnPrintReservation.TextOffset = new System.Drawing.Point(7, -11);
+            this.btnPrintReservation.TextOffset = new System.Drawing.Point(7, -14);
             this.btnPrintReservation.MouseEnter += new System.EventHandler(this.pnlButtons_MouseLeave);
             // 
             // lblTotal
             // 
             this.lblTotal.BackColor = System.Drawing.Color.Transparent;
-            this.lblTotal.Font = new System.Drawing.Font("Adobe Fan Heiti Std B", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTotal.Font = new System.Drawing.Font("Myriad Pro", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTotal.ForeColor = System.Drawing.Color.Black;
             this.lblTotal.Location = new System.Drawing.Point(37, 281);
             this.lblTotal.Name = "lblTotal";
@@ -857,6 +863,46 @@
             this.mySqlCommand1.EnableCaching = false;
             this.mySqlCommand1.Transaction = null;
             // 
+            // txtNameSearch
+            // 
+            this.txtNameSearch.BorderRadius = 15;
+            this.txtNameSearch.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtNameSearch.DefaultText = "";
+            this.txtNameSearch.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtNameSearch.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtNameSearch.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtNameSearch.DisabledState.Parent = this.txtNameSearch;
+            this.txtNameSearch.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtNameSearch.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtNameSearch.FocusedState.Parent = this.txtNameSearch;
+            this.txtNameSearch.Font = new System.Drawing.Font("Microsoft New Tai Lue", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNameSearch.HoverState.BorderColor = System.Drawing.Color.Black;
+            this.txtNameSearch.HoverState.Parent = this.txtNameSearch;
+            this.txtNameSearch.IconLeftOffset = new System.Drawing.Point(2, 0);
+            this.txtNameSearch.IconRight = global::PrjOverhaulHotel.Properties.Resources.search;
+            this.txtNameSearch.IconRightOffset = new System.Drawing.Point(5, 0);
+            this.txtNameSearch.Location = new System.Drawing.Point(94, 14);
+            this.txtNameSearch.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtNameSearch.Name = "txtNameSearch";
+            this.txtNameSearch.PasswordChar = '\0';
+            this.txtNameSearch.PlaceholderText = "";
+            this.txtNameSearch.SelectedText = "";
+            this.txtNameSearch.ShadowDecoration.Parent = this.txtNameSearch;
+            this.txtNameSearch.Size = new System.Drawing.Size(799, 36);
+            this.txtNameSearch.TabIndex = 38;
+            this.txtNameSearch.TextOffset = new System.Drawing.Point(10, 0);
+            this.txtNameSearch.TextChanged += new System.EventHandler(this.txNameSearch_TextChanged);
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Nirmala UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(45, 24);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(42, 15);
+            this.label11.TabIndex = 39;
+            this.label11.Text = "Name:";
+            // 
             // FrmStaffReservation
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -869,10 +915,11 @@
             this.Controls.Add(this.btnProfile);
             this.Controls.Add(this.pnlReservation);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FrmStaffReservation";
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Show;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FrmStaffReservation";
+            this.Text = "Hotelliere";
             this.Load += new System.EventHandler(this.FrmStaffReservation_Load);
             this.MouseEnter += new System.EventHandler(this.pnlButtons_MouseLeave);
             this.guna2CustomGradientPanel1.ResumeLayout(false);
@@ -882,6 +929,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.imgProfile)).EndInit();
             this.pnlButtons.ResumeLayout(false);
             this.pnlReservation.ResumeLayout(false);
+            this.pnlReservation.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgReservations)).EndInit();
             this.guna2Panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.picInfo)).EndInit();
@@ -939,5 +987,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column12;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column13;
         private MySql.Data.MySqlClient.MySqlCommand mySqlCommand1;
+        private Guna.UI2.WinForms.Guna2TextBox txtNameSearch;
+        private System.Windows.Forms.Label label11;
     }
 }
