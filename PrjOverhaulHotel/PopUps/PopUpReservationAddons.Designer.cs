@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle19 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle20 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle21 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.pnlLogin = new Guna.UI2.WinForms.Guna2Panel();
             this.btnCancel = new Guna.UI2.WinForms.Guna2GradientTileButton();
@@ -41,10 +41,14 @@
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btnEditAddon = new Guna.UI2.WinForms.Guna2GradientTileButton();
-            this.btnEditSave = new Guna.UI2.WinForms.Guna2GradientTileButton();
+            this.pnlEdit = new Guna.UI2.WinForms.Guna2Panel();
+            this.txtEditDescription = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txtEditPrice = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txtEditAddonname = new Guna.UI2.WinForms.Guna2TextBox();
             this.btnAddAddon = new Guna.UI2.WinForms.Guna2GradientTileButton();
             this.btnAddSave = new Guna.UI2.WinForms.Guna2GradientTileButton();
+            this.btnEditAddon = new Guna.UI2.WinForms.Guna2GradientTileButton();
+            this.btnEditSave = new Guna.UI2.WinForms.Guna2GradientTileButton();
             this.pnlAdd = new Guna.UI2.WinForms.Guna2Panel();
             this.txtAddDescription = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtAddPrice = new Guna.UI2.WinForms.Guna2TextBox();
@@ -53,15 +57,11 @@
             this.lblDescription = new System.Windows.Forms.Label();
             this.txtPrice = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtAddonName = new Guna.UI2.WinForms.Guna2TextBox();
-            this.pnlEdit = new Guna.UI2.WinForms.Guna2Panel();
-            this.txtEditDescription = new Guna.UI2.WinForms.Guna2TextBox();
-            this.txtEditPrice = new Guna.UI2.WinForms.Guna2TextBox();
-            this.txtEditAddonname = new Guna.UI2.WinForms.Guna2TextBox();
             this.pnlLogin.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgAddons)).BeginInit();
+            this.pnlEdit.SuspendLayout();
             this.pnlAdd.SuspendLayout();
             this.pnlDetails.SuspendLayout();
-            this.pnlEdit.SuspendLayout();
             this.SuspendLayout();
             // 
             // guna2Elipse1
@@ -97,19 +97,19 @@
             this.btnCancel.CustomImages.Parent = this.btnCancel;
             this.btnCancel.FillColor = System.Drawing.Color.Black;
             this.btnCancel.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.btnCancel.Font = new System.Drawing.Font("Adobe Fan Heiti Std B", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancel.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancel.ForeColor = System.Drawing.Color.White;
             this.btnCancel.HoverState.Parent = this.btnCancel;
             this.btnCancel.Image = global::PrjOverhaulHotel.Properties.Resources.check;
             this.btnCancel.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnCancel.ImageOffset = new System.Drawing.Point(5, 12);
+            this.btnCancel.ImageOffset = new System.Drawing.Point(5, 13);
             this.btnCancel.Location = new System.Drawing.Point(587, 331);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.ShadowDecoration.Parent = this.btnCancel;
             this.btnCancel.Size = new System.Drawing.Size(180, 32);
             this.btnCancel.TabIndex = 46;
             this.btnCancel.Text = "DONE";
-            this.btnCancel.TextOffset = new System.Drawing.Point(7, -11);
+            this.btnCancel.TextOffset = new System.Drawing.Point(7, -13);
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // btnDeleteAddon
@@ -120,19 +120,19 @@
             this.btnDeleteAddon.CustomImages.Parent = this.btnDeleteAddon;
             this.btnDeleteAddon.FillColor = System.Drawing.Color.Black;
             this.btnDeleteAddon.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.btnDeleteAddon.Font = new System.Drawing.Font("Adobe Fan Heiti Std B", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDeleteAddon.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDeleteAddon.ForeColor = System.Drawing.Color.White;
             this.btnDeleteAddon.HoverState.Parent = this.btnDeleteAddon;
             this.btnDeleteAddon.Image = global::PrjOverhaulHotel.Properties.Resources.trash_2;
             this.btnDeleteAddon.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnDeleteAddon.ImageOffset = new System.Drawing.Point(5, 12);
+            this.btnDeleteAddon.ImageOffset = new System.Drawing.Point(5, 13);
             this.btnDeleteAddon.Location = new System.Drawing.Point(587, 289);
             this.btnDeleteAddon.Name = "btnDeleteAddon";
             this.btnDeleteAddon.ShadowDecoration.Parent = this.btnDeleteAddon;
             this.btnDeleteAddon.Size = new System.Drawing.Size(180, 32);
             this.btnDeleteAddon.TabIndex = 40;
             this.btnDeleteAddon.Text = "DELETE";
-            this.btnDeleteAddon.TextOffset = new System.Drawing.Point(7, -11);
+            this.btnDeleteAddon.TextOffset = new System.Drawing.Point(7, -13);
             this.btnDeleteAddon.Click += new System.EventHandler(this.btnDeleteAddon_Click);
             // 
             // dtgAddons
@@ -140,14 +140,14 @@
             this.dtgAddons.AllowUserToAddRows = false;
             this.dtgAddons.AllowUserToDeleteRows = false;
             this.dtgAddons.BackgroundColor = System.Drawing.Color.White;
-            dataGridViewCellStyle19.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle19.BackColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle19.Font = new System.Drawing.Font("Microsoft New Tai Lue", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle19.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle19.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(135)))), ((int)(((byte)(97)))));
-            dataGridViewCellStyle19.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle19.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dtgAddons.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle19;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft New Tai Lue", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(135)))), ((int)(((byte)(97)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dtgAddons.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dtgAddons.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtgAddons.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
@@ -161,20 +161,20 @@
             this.dtgAddons.Name = "dtgAddons";
             this.dtgAddons.ReadOnly = true;
             this.dtgAddons.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken;
-            dataGridViewCellStyle20.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle20.BackColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle20.Font = new System.Drawing.Font("Microsoft New Tai Lue", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle20.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle20.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(135)))), ((int)(((byte)(97)))));
-            dataGridViewCellStyle20.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle20.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dtgAddons.RowHeadersDefaultCellStyle = dataGridViewCellStyle20;
-            dataGridViewCellStyle21.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle21.Font = new System.Drawing.Font("Microsoft New Tai Lue", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle21.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle21.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(135)))), ((int)(((byte)(97)))));
-            dataGridViewCellStyle21.SelectionForeColor = System.Drawing.Color.White;
-            this.dtgAddons.RowsDefaultCellStyle = dataGridViewCellStyle21;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft New Tai Lue", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(135)))), ((int)(((byte)(97)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dtgAddons.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft New Tai Lue", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(135)))), ((int)(((byte)(97)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
+            this.dtgAddons.RowsDefaultCellStyle = dataGridViewCellStyle3;
             this.dtgAddons.Size = new System.Drawing.Size(476, 359);
             this.dtgAddons.TabIndex = 37;
             this.dtgAddons.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgAddons_CellClick);
@@ -208,51 +208,112 @@
             this.Column4.ReadOnly = true;
             this.Column4.Width = 180;
             // 
-            // btnEditAddon
+            // pnlEdit
             // 
-            this.btnEditAddon.BackColor = System.Drawing.Color.Transparent;
-            this.btnEditAddon.BorderRadius = 15;
-            this.btnEditAddon.CheckedState.Parent = this.btnEditAddon;
-            this.btnEditAddon.CustomImages.Parent = this.btnEditAddon;
-            this.btnEditAddon.FillColor = System.Drawing.Color.Black;
-            this.btnEditAddon.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btnEditAddon.Font = new System.Drawing.Font("Adobe Fan Heiti Std B", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEditAddon.ForeColor = System.Drawing.Color.White;
-            this.btnEditAddon.HoverState.Parent = this.btnEditAddon;
-            this.btnEditAddon.Image = global::PrjOverhaulHotel.Properties.Resources.bolt;
-            this.btnEditAddon.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnEditAddon.ImageOffset = new System.Drawing.Point(5, 12);
-            this.btnEditAddon.Location = new System.Drawing.Point(587, 247);
-            this.btnEditAddon.Name = "btnEditAddon";
-            this.btnEditAddon.ShadowDecoration.Parent = this.btnEditAddon;
-            this.btnEditAddon.Size = new System.Drawing.Size(180, 32);
-            this.btnEditAddon.TabIndex = 39;
-            this.btnEditAddon.Text = "EDIT";
-            this.btnEditAddon.TextOffset = new System.Drawing.Point(7, -11);
-            this.btnEditAddon.Click += new System.EventHandler(this.btnEditReservation_Click);
+            this.pnlEdit.BackColor = System.Drawing.Color.Transparent;
+            this.pnlEdit.BorderColor = System.Drawing.Color.Black;
+            this.pnlEdit.BorderRadius = 15;
+            this.pnlEdit.BorderThickness = 2;
+            this.pnlEdit.Controls.Add(this.txtEditDescription);
+            this.pnlEdit.Controls.Add(this.txtEditPrice);
+            this.pnlEdit.Controls.Add(this.txtEditAddonname);
+            this.pnlEdit.FillColor = System.Drawing.Color.White;
+            this.pnlEdit.Location = new System.Drawing.Point(515, 36);
+            this.pnlEdit.Name = "pnlEdit";
+            this.pnlEdit.ShadowDecoration.Parent = this.pnlEdit;
+            this.pnlEdit.Size = new System.Drawing.Size(315, 156);
+            this.pnlEdit.TabIndex = 49;
             // 
-            // btnEditSave
+            // txtEditDescription
             // 
-            this.btnEditSave.BackColor = System.Drawing.Color.Transparent;
-            this.btnEditSave.BorderRadius = 15;
-            this.btnEditSave.CheckedState.Parent = this.btnEditSave;
-            this.btnEditSave.CustomImages.Parent = this.btnEditSave;
-            this.btnEditSave.FillColor = System.Drawing.Color.Black;
-            this.btnEditSave.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btnEditSave.Font = new System.Drawing.Font("Adobe Fan Heiti Std B", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEditSave.ForeColor = System.Drawing.Color.White;
-            this.btnEditSave.HoverState.Parent = this.btnEditSave;
-            this.btnEditSave.Image = global::PrjOverhaulHotel.Properties.Resources.check;
-            this.btnEditSave.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnEditSave.ImageOffset = new System.Drawing.Point(5, 12);
-            this.btnEditSave.Location = new System.Drawing.Point(587, 247);
-            this.btnEditSave.Name = "btnEditSave";
-            this.btnEditSave.ShadowDecoration.Parent = this.btnEditSave;
-            this.btnEditSave.Size = new System.Drawing.Size(180, 32);
-            this.btnEditSave.TabIndex = 44;
-            this.btnEditSave.Text = "SAVE";
-            this.btnEditSave.TextOffset = new System.Drawing.Point(7, -11);
-            this.btnEditSave.Click += new System.EventHandler(this.btnEditSave_Click);
+            this.txtEditDescription.BackColor = System.Drawing.Color.Transparent;
+            this.txtEditDescription.BorderColor = System.Drawing.Color.Black;
+            this.txtEditDescription.BorderRadius = 12;
+            this.txtEditDescription.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtEditDescription.DefaultText = "";
+            this.txtEditDescription.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtEditDescription.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtEditDescription.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtEditDescription.DisabledState.Parent = this.txtEditDescription;
+            this.txtEditDescription.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtEditDescription.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtEditDescription.FocusedState.Parent = this.txtEditDescription;
+            this.txtEditDescription.Font = new System.Drawing.Font("Microsoft New Tai Lue", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEditDescription.ForeColor = System.Drawing.Color.Black;
+            this.txtEditDescription.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(154)))), ((int)(((byte)(136)))));
+            this.txtEditDescription.HoverState.Parent = this.txtEditDescription;
+            this.txtEditDescription.IconLeftOffset = new System.Drawing.Point(5, 0);
+            this.txtEditDescription.Location = new System.Drawing.Point(15, 92);
+            this.txtEditDescription.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtEditDescription.Name = "txtEditDescription";
+            this.txtEditDescription.PasswordChar = '\0';
+            this.txtEditDescription.PlaceholderText = "Description";
+            this.txtEditDescription.SelectedText = "";
+            this.txtEditDescription.ShadowDecoration.Parent = this.txtEditDescription;
+            this.txtEditDescription.Size = new System.Drawing.Size(284, 48);
+            this.txtEditDescription.TabIndex = 17;
+            this.txtEditDescription.TextOffset = new System.Drawing.Point(10, 0);
+            // 
+            // txtEditPrice
+            // 
+            this.txtEditPrice.BackColor = System.Drawing.Color.Transparent;
+            this.txtEditPrice.BorderColor = System.Drawing.Color.Black;
+            this.txtEditPrice.BorderRadius = 12;
+            this.txtEditPrice.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtEditPrice.DefaultText = "";
+            this.txtEditPrice.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtEditPrice.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtEditPrice.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtEditPrice.DisabledState.Parent = this.txtEditPrice;
+            this.txtEditPrice.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtEditPrice.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtEditPrice.FocusedState.Parent = this.txtEditPrice;
+            this.txtEditPrice.Font = new System.Drawing.Font("Microsoft New Tai Lue", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEditPrice.ForeColor = System.Drawing.Color.Black;
+            this.txtEditPrice.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(154)))), ((int)(((byte)(136)))));
+            this.txtEditPrice.HoverState.Parent = this.txtEditPrice;
+            this.txtEditPrice.IconLeftOffset = new System.Drawing.Point(5, 0);
+            this.txtEditPrice.Location = new System.Drawing.Point(15, 52);
+            this.txtEditPrice.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtEditPrice.Name = "txtEditPrice";
+            this.txtEditPrice.PasswordChar = '\0';
+            this.txtEditPrice.PlaceholderText = "Price";
+            this.txtEditPrice.SelectedText = "";
+            this.txtEditPrice.ShadowDecoration.Parent = this.txtEditPrice;
+            this.txtEditPrice.Size = new System.Drawing.Size(284, 30);
+            this.txtEditPrice.TabIndex = 16;
+            this.txtEditPrice.TextOffset = new System.Drawing.Point(10, 0);
+            // 
+            // txtEditAddonname
+            // 
+            this.txtEditAddonname.BackColor = System.Drawing.Color.Transparent;
+            this.txtEditAddonname.BorderColor = System.Drawing.Color.Black;
+            this.txtEditAddonname.BorderRadius = 12;
+            this.txtEditAddonname.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtEditAddonname.DefaultText = "";
+            this.txtEditAddonname.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtEditAddonname.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtEditAddonname.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtEditAddonname.DisabledState.Parent = this.txtEditAddonname;
+            this.txtEditAddonname.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtEditAddonname.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtEditAddonname.FocusedState.Parent = this.txtEditAddonname;
+            this.txtEditAddonname.Font = new System.Drawing.Font("Microsoft New Tai Lue", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEditAddonname.ForeColor = System.Drawing.Color.Black;
+            this.txtEditAddonname.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(154)))), ((int)(((byte)(136)))));
+            this.txtEditAddonname.HoverState.Parent = this.txtEditAddonname;
+            this.txtEditAddonname.IconLeftOffset = new System.Drawing.Point(5, 0);
+            this.txtEditAddonname.Location = new System.Drawing.Point(15, 18);
+            this.txtEditAddonname.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtEditAddonname.Name = "txtEditAddonname";
+            this.txtEditAddonname.PasswordChar = '\0';
+            this.txtEditAddonname.PlaceholderText = "Addon Name";
+            this.txtEditAddonname.SelectedText = "";
+            this.txtEditAddonname.ShadowDecoration.Parent = this.txtEditAddonname;
+            this.txtEditAddonname.Size = new System.Drawing.Size(284, 30);
+            this.txtEditAddonname.TabIndex = 14;
+            this.txtEditAddonname.TextOffset = new System.Drawing.Point(10, 0);
+            this.txtEditAddonname.MouseClick += new System.Windows.Forms.MouseEventHandler(this.txtEditAddonname_MouseClick);
             // 
             // btnAddAddon
             // 
@@ -262,19 +323,19 @@
             this.btnAddAddon.CustomImages.Parent = this.btnAddAddon;
             this.btnAddAddon.FillColor = System.Drawing.Color.Black;
             this.btnAddAddon.FillColor2 = System.Drawing.Color.Teal;
-            this.btnAddAddon.Font = new System.Drawing.Font("Adobe Fan Heiti Std B", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddAddon.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddAddon.ForeColor = System.Drawing.Color.White;
             this.btnAddAddon.HoverState.Parent = this.btnAddAddon;
             this.btnAddAddon.Image = global::PrjOverhaulHotel.Properties.Resources.plus;
             this.btnAddAddon.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnAddAddon.ImageOffset = new System.Drawing.Point(5, 12);
+            this.btnAddAddon.ImageOffset = new System.Drawing.Point(5, 13);
             this.btnAddAddon.Location = new System.Drawing.Point(587, 207);
             this.btnAddAddon.Name = "btnAddAddon";
             this.btnAddAddon.ShadowDecoration.Parent = this.btnAddAddon;
             this.btnAddAddon.Size = new System.Drawing.Size(180, 32);
             this.btnAddAddon.TabIndex = 38;
             this.btnAddAddon.Text = "ADD";
-            this.btnAddAddon.TextOffset = new System.Drawing.Point(7, -11);
+            this.btnAddAddon.TextOffset = new System.Drawing.Point(7, -13);
             this.btnAddAddon.Click += new System.EventHandler(this.btnAddReservation_Click);
             // 
             // btnAddSave
@@ -299,6 +360,52 @@
             this.btnAddSave.Text = "SAVE";
             this.btnAddSave.TextOffset = new System.Drawing.Point(7, -11);
             this.btnAddSave.Click += new System.EventHandler(this.btnAddSave_Click);
+            // 
+            // btnEditAddon
+            // 
+            this.btnEditAddon.BackColor = System.Drawing.Color.Transparent;
+            this.btnEditAddon.BorderRadius = 15;
+            this.btnEditAddon.CheckedState.Parent = this.btnEditAddon;
+            this.btnEditAddon.CustomImages.Parent = this.btnEditAddon;
+            this.btnEditAddon.FillColor = System.Drawing.Color.Black;
+            this.btnEditAddon.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnEditAddon.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEditAddon.ForeColor = System.Drawing.Color.White;
+            this.btnEditAddon.HoverState.Parent = this.btnEditAddon;
+            this.btnEditAddon.Image = global::PrjOverhaulHotel.Properties.Resources.bolt;
+            this.btnEditAddon.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnEditAddon.ImageOffset = new System.Drawing.Point(5, 13);
+            this.btnEditAddon.Location = new System.Drawing.Point(587, 247);
+            this.btnEditAddon.Name = "btnEditAddon";
+            this.btnEditAddon.ShadowDecoration.Parent = this.btnEditAddon;
+            this.btnEditAddon.Size = new System.Drawing.Size(180, 32);
+            this.btnEditAddon.TabIndex = 39;
+            this.btnEditAddon.Text = "EDIT";
+            this.btnEditAddon.TextOffset = new System.Drawing.Point(7, -13);
+            this.btnEditAddon.Click += new System.EventHandler(this.btnEditReservation_Click);
+            // 
+            // btnEditSave
+            // 
+            this.btnEditSave.BackColor = System.Drawing.Color.Transparent;
+            this.btnEditSave.BorderRadius = 15;
+            this.btnEditSave.CheckedState.Parent = this.btnEditSave;
+            this.btnEditSave.CustomImages.Parent = this.btnEditSave;
+            this.btnEditSave.FillColor = System.Drawing.Color.Black;
+            this.btnEditSave.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnEditSave.Font = new System.Drawing.Font("Adobe Fan Heiti Std B", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEditSave.ForeColor = System.Drawing.Color.White;
+            this.btnEditSave.HoverState.Parent = this.btnEditSave;
+            this.btnEditSave.Image = global::PrjOverhaulHotel.Properties.Resources.check;
+            this.btnEditSave.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnEditSave.ImageOffset = new System.Drawing.Point(5, 12);
+            this.btnEditSave.Location = new System.Drawing.Point(587, 247);
+            this.btnEditSave.Name = "btnEditSave";
+            this.btnEditSave.ShadowDecoration.Parent = this.btnEditSave;
+            this.btnEditSave.Size = new System.Drawing.Size(180, 32);
+            this.btnEditSave.TabIndex = 44;
+            this.btnEditSave.Text = "SAVE";
+            this.btnEditSave.TextOffset = new System.Drawing.Point(7, -11);
+            this.btnEditSave.Click += new System.EventHandler(this.btnEditSave_Click);
             // 
             // pnlAdd
             // 
@@ -496,113 +603,6 @@
             this.txtAddonName.TabIndex = 14;
             this.txtAddonName.TextOffset = new System.Drawing.Point(10, 0);
             // 
-            // pnlEdit
-            // 
-            this.pnlEdit.BackColor = System.Drawing.Color.Transparent;
-            this.pnlEdit.BorderColor = System.Drawing.Color.Black;
-            this.pnlEdit.BorderRadius = 15;
-            this.pnlEdit.BorderThickness = 2;
-            this.pnlEdit.Controls.Add(this.txtEditDescription);
-            this.pnlEdit.Controls.Add(this.txtEditPrice);
-            this.pnlEdit.Controls.Add(this.txtEditAddonname);
-            this.pnlEdit.FillColor = System.Drawing.Color.White;
-            this.pnlEdit.Location = new System.Drawing.Point(515, 36);
-            this.pnlEdit.Name = "pnlEdit";
-            this.pnlEdit.ShadowDecoration.Parent = this.pnlEdit;
-            this.pnlEdit.Size = new System.Drawing.Size(315, 156);
-            this.pnlEdit.TabIndex = 49;
-            // 
-            // txtEditDescription
-            // 
-            this.txtEditDescription.BackColor = System.Drawing.Color.Transparent;
-            this.txtEditDescription.BorderColor = System.Drawing.Color.Black;
-            this.txtEditDescription.BorderRadius = 12;
-            this.txtEditDescription.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtEditDescription.DefaultText = "";
-            this.txtEditDescription.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtEditDescription.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtEditDescription.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtEditDescription.DisabledState.Parent = this.txtEditDescription;
-            this.txtEditDescription.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtEditDescription.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtEditDescription.FocusedState.Parent = this.txtEditDescription;
-            this.txtEditDescription.Font = new System.Drawing.Font("Microsoft New Tai Lue", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtEditDescription.ForeColor = System.Drawing.Color.Black;
-            this.txtEditDescription.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(154)))), ((int)(((byte)(136)))));
-            this.txtEditDescription.HoverState.Parent = this.txtEditDescription;
-            this.txtEditDescription.IconLeftOffset = new System.Drawing.Point(5, 0);
-            this.txtEditDescription.Location = new System.Drawing.Point(15, 92);
-            this.txtEditDescription.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.txtEditDescription.Name = "txtEditDescription";
-            this.txtEditDescription.PasswordChar = '\0';
-            this.txtEditDescription.PlaceholderText = "Description";
-            this.txtEditDescription.SelectedText = "";
-            this.txtEditDescription.ShadowDecoration.Parent = this.txtEditDescription;
-            this.txtEditDescription.Size = new System.Drawing.Size(284, 48);
-            this.txtEditDescription.TabIndex = 17;
-            this.txtEditDescription.TextOffset = new System.Drawing.Point(10, 0);
-            // 
-            // txtEditPrice
-            // 
-            this.txtEditPrice.BackColor = System.Drawing.Color.Transparent;
-            this.txtEditPrice.BorderColor = System.Drawing.Color.Black;
-            this.txtEditPrice.BorderRadius = 12;
-            this.txtEditPrice.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtEditPrice.DefaultText = "";
-            this.txtEditPrice.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtEditPrice.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtEditPrice.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtEditPrice.DisabledState.Parent = this.txtEditPrice;
-            this.txtEditPrice.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtEditPrice.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtEditPrice.FocusedState.Parent = this.txtEditPrice;
-            this.txtEditPrice.Font = new System.Drawing.Font("Microsoft New Tai Lue", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtEditPrice.ForeColor = System.Drawing.Color.Black;
-            this.txtEditPrice.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(154)))), ((int)(((byte)(136)))));
-            this.txtEditPrice.HoverState.Parent = this.txtEditPrice;
-            this.txtEditPrice.IconLeftOffset = new System.Drawing.Point(5, 0);
-            this.txtEditPrice.Location = new System.Drawing.Point(15, 52);
-            this.txtEditPrice.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.txtEditPrice.Name = "txtEditPrice";
-            this.txtEditPrice.PasswordChar = '\0';
-            this.txtEditPrice.PlaceholderText = "Price";
-            this.txtEditPrice.SelectedText = "";
-            this.txtEditPrice.ShadowDecoration.Parent = this.txtEditPrice;
-            this.txtEditPrice.Size = new System.Drawing.Size(284, 30);
-            this.txtEditPrice.TabIndex = 16;
-            this.txtEditPrice.TextOffset = new System.Drawing.Point(10, 0);
-            // 
-            // txtEditAddonname
-            // 
-            this.txtEditAddonname.BackColor = System.Drawing.Color.Transparent;
-            this.txtEditAddonname.BorderColor = System.Drawing.Color.Black;
-            this.txtEditAddonname.BorderRadius = 12;
-            this.txtEditAddonname.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtEditAddonname.DefaultText = "";
-            this.txtEditAddonname.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtEditAddonname.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtEditAddonname.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtEditAddonname.DisabledState.Parent = this.txtEditAddonname;
-            this.txtEditAddonname.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtEditAddonname.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtEditAddonname.FocusedState.Parent = this.txtEditAddonname;
-            this.txtEditAddonname.Font = new System.Drawing.Font("Microsoft New Tai Lue", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtEditAddonname.ForeColor = System.Drawing.Color.Black;
-            this.txtEditAddonname.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(154)))), ((int)(((byte)(136)))));
-            this.txtEditAddonname.HoverState.Parent = this.txtEditAddonname;
-            this.txtEditAddonname.IconLeftOffset = new System.Drawing.Point(5, 0);
-            this.txtEditAddonname.Location = new System.Drawing.Point(15, 18);
-            this.txtEditAddonname.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.txtEditAddonname.Name = "txtEditAddonname";
-            this.txtEditAddonname.PasswordChar = '\0';
-            this.txtEditAddonname.PlaceholderText = "Addon Name";
-            this.txtEditAddonname.SelectedText = "";
-            this.txtEditAddonname.ShadowDecoration.Parent = this.txtEditAddonname;
-            this.txtEditAddonname.Size = new System.Drawing.Size(284, 30);
-            this.txtEditAddonname.TabIndex = 14;
-            this.txtEditAddonname.TextOffset = new System.Drawing.Point(10, 0);
-            this.txtEditAddonname.MouseClick += new System.Windows.Forms.MouseEventHandler(this.txtEditAddonname_MouseClick);
-            // 
             // PopUpReservationAddons
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -617,9 +617,9 @@
             this.Load += new System.EventHandler(this.PopUpReservationAddons_Load);
             this.pnlLogin.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dtgAddons)).EndInit();
+            this.pnlEdit.ResumeLayout(false);
             this.pnlAdd.ResumeLayout(false);
             this.pnlDetails.ResumeLayout(false);
-            this.pnlEdit.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }

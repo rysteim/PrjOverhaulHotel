@@ -1141,7 +1141,30 @@ namespace PrjOverhaulHotel
             }
         }
 
-        public static void procPromoAdd(string promoName, double discount, string description)
+        public static void procPromoActiveData()
+        {
+            try
+            {
+                mySqlDataAdapter = new MySqlDataAdapter();
+                datHotel = new DataTable();
+
+                sqlCommand.Parameters.Clear();
+                sqlCommand.CommandText = "proc_promoActiveData";
+                sqlCommand.Parameters.AddWithValue("@p_date", DateTime.Now);
+                sqlCommand.CommandType = CommandType.StoredProcedure;
+
+                mySqlDataAdapter.SelectCommand = GlobalProcedure.sqlCommand;
+                datHotel.Clear();
+                mySqlDataAdapter.Fill(GlobalProcedure.datHotel);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error: {ex}", "Error!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        public static void procPromoAdd(string promoName, double discount, string description,
+            DateTime start, DateTime end)
         {
             try
             {
@@ -1151,6 +1174,8 @@ namespace PrjOverhaulHotel
                 sqlCommand.Parameters.AddWithValue("@p_promoName", promoName);
                 sqlCommand.Parameters.AddWithValue("@p_discount", discount);
                 sqlCommand.Parameters.AddWithValue("@p_description", description);
+                sqlCommand.Parameters.AddWithValue("@p_dateStart", start);
+                sqlCommand.Parameters.AddWithValue("@p_dateEnd", end);
                 sqlCommand.ExecuteNonQuery();
             }
             catch (Exception ex)
@@ -1203,7 +1228,8 @@ namespace PrjOverhaulHotel
             }
         }
 
-        public static void procPromoUpdate(int promoID, string promoName, double discount, string description)
+        public static void procPromoUpdate(int promoID, string promoName, double discount, string description,
+            DateTime start, DateTime end)
         {
             try
             {
@@ -1214,6 +1240,8 @@ namespace PrjOverhaulHotel
                 sqlCommand.Parameters.AddWithValue("@p_promoName", promoName);
                 sqlCommand.Parameters.AddWithValue("@p_discount", discount);
                 sqlCommand.Parameters.AddWithValue("@p_description", description);
+                sqlCommand.Parameters.AddWithValue("@p_dateStart", start);
+                sqlCommand.Parameters.AddWithValue("@p_dateEnd", end);
                 sqlCommand.ExecuteNonQuery();
             }
             catch (Exception ex)

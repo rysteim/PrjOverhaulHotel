@@ -62,7 +62,8 @@ namespace PrjOverhaulHotel
                     GlobalProcedure.procGuestActive(userID, DateTime.Now.ToString("yyyy-MM-dd HH\\:mm\\:ss"));
 
                     UserAccount.setUserID(userID);
-                    UserAccount.setProfile(firstName, role, imageLoc);
+                    UserAccount.setRole(role);
+                    UserAccount.setProfile(firstName, imageLoc);
 
                     checkRole();
                 }
@@ -90,7 +91,9 @@ namespace PrjOverhaulHotel
                 imageLoc = GlobalProcedure.datHotel.Rows[0]["IMAGE"].ToString();
 
                 UserAccount.setUserID(userID);
-                UserAccount.setProfile(firstName, role, imageLoc);
+                UserAccount.setRole(role);
+                UserAccount.setProfile(firstName, imageLoc);
+
                 checkRole();
             }
             else

@@ -29,13 +29,9 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmGuestAP));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2CustomGradientPanel1 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
@@ -51,57 +47,47 @@
             this.guna2VSeparator2 = new Guna.UI2.WinForms.Guna2VSeparator();
             this.lblTitle = new System.Windows.Forms.Label();
             this.pnlAP = new Guna.UI2.WinForms.Guna2Panel();
-            this.dtgPromo = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dtgAddons = new System.Windows.Forms.DataGridView();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.lblTotalPromo = new System.Windows.Forms.Label();
-            this.lblTotalAddon = new System.Windows.Forms.Label();
-            this.btnPromoDelete = new Guna.UI2.WinForms.Guna2GradientTileButton();
-            this.btnPromoManage = new Guna.UI2.WinForms.Guna2GradientTileButton();
-            this.btnPromoAdd = new Guna.UI2.WinForms.Guna2GradientTileButton();
-            this.btnAddonDelete = new Guna.UI2.WinForms.Guna2GradientTileButton();
-            this.btnAddonManage = new Guna.UI2.WinForms.Guna2GradientTileButton();
-            this.btnAddonAdd = new Guna.UI2.WinForms.Guna2GradientTileButton();
-            this.guna2VSeparator1 = new Guna.UI2.WinForms.Guna2VSeparator();
-            this.guna2Separator11 = new Guna.UI2.WinForms.Guna2Separator();
-            this.txtSearchPromo = new Guna.UI2.WinForms.Guna2TextBox();
-            this.txtSearchAddon = new Guna.UI2.WinForms.Guna2TextBox();
-            this.lblPromoDescription = new System.Windows.Forms.Label();
-            this.txtPromoDiscount = new Guna.UI2.WinForms.Guna2TextBox();
-            this.txtPromoName = new Guna.UI2.WinForms.Guna2TextBox();
-            this.label28 = new System.Windows.Forms.Label();
-            this.label29 = new System.Windows.Forms.Label();
-            this.label30 = new System.Windows.Forms.Label();
-            this.lblAddonDescription = new System.Windows.Forms.Label();
-            this.txtAddonPrice = new Guna.UI2.WinForms.Guna2TextBox();
-            this.txtAddonName = new Guna.UI2.WinForms.Guna2TextBox();
-            this.label23 = new System.Windows.Forms.Label();
-            this.label24 = new System.Windows.Forms.Label();
-            this.label25 = new System.Windows.Forms.Label();
-            this.label22 = new System.Windows.Forms.Label();
-            this.label21 = new System.Windows.Forms.Label();
-            this.label31 = new System.Windows.Forms.Label();
-            this.label32 = new System.Windows.Forms.Label();
             this.btnProfile = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
             this.imgProfile = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.lblName = new System.Windows.Forms.Label();
             this.lblPosition = new System.Windows.Forms.Label();
+            this.btnCancel = new Guna.UI2.WinForms.Guna2GradientTileButton();
+            this.btnDeleteAddon = new Guna.UI2.WinForms.Guna2GradientTileButton();
+            this.dtgAddons = new System.Windows.Forms.DataGridView();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pnlEdit = new Guna.UI2.WinForms.Guna2Panel();
+            this.txtEditDescription = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txtEditPrice = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txtEditAddonname = new Guna.UI2.WinForms.Guna2TextBox();
+            this.btnAddAddon = new Guna.UI2.WinForms.Guna2GradientTileButton();
+            this.btnAddSave = new Guna.UI2.WinForms.Guna2GradientTileButton();
+            this.btnEditAddon = new Guna.UI2.WinForms.Guna2GradientTileButton();
+            this.btnEditSave = new Guna.UI2.WinForms.Guna2GradientTileButton();
+            this.pnlAdd = new Guna.UI2.WinForms.Guna2Panel();
+            this.txtAddDescription = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txtAddPrice = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txtAddAddonname = new Guna.UI2.WinForms.Guna2TextBox();
+            this.pnlDetails = new Guna.UI2.WinForms.Guna2Panel();
+            this.lblDescription = new System.Windows.Forms.Label();
+            this.txtPrice = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txtAddonName = new Guna.UI2.WinForms.Guna2TextBox();
+            this.pnlPreview = new Guna.UI2.WinForms.Guna2Panel();
+            this.label1 = new System.Windows.Forms.Label();
             this.guna2CustomGradientPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.pnlButtons.SuspendLayout();
             this.pnlAP.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dtgPromo)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dtgAddons)).BeginInit();
             this.btnProfile.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.imgProfile)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgAddons)).BeginInit();
+            this.pnlEdit.SuspendLayout();
+            this.pnlAdd.SuspendLayout();
+            this.pnlDetails.SuspendLayout();
+            this.pnlPreview.SuspendLayout();
             this.SuspendLayout();
             // 
             // guna2Elipse1
@@ -213,7 +199,7 @@
             this.btnLogout.CustomImages.Parent = this.btnLogout;
             this.btnLogout.FillColor = System.Drawing.Color.White;
             this.btnLogout.FillColor2 = System.Drawing.Color.White;
-            this.btnLogout.Font = new System.Drawing.Font("Adobe Fan Heiti Std B", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLogout.Font = new System.Drawing.Font("Nirmala UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLogout.ForeColor = System.Drawing.Color.Black;
             this.btnLogout.HoverState.FillColor = System.Drawing.Color.Black;
             this.btnLogout.HoverState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(154)))), ((int)(((byte)(136)))));
@@ -241,7 +227,7 @@
             this.btnGuests.CustomImages.Parent = this.btnGuests;
             this.btnGuests.FillColor = System.Drawing.Color.White;
             this.btnGuests.FillColor2 = System.Drawing.Color.White;
-            this.btnGuests.Font = new System.Drawing.Font("Adobe Fan Heiti Std B", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGuests.Font = new System.Drawing.Font("Nirmala UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGuests.ForeColor = System.Drawing.Color.Black;
             this.btnGuests.HoverState.FillColor = System.Drawing.Color.Black;
             this.btnGuests.HoverState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(154)))), ((int)(((byte)(136)))));
@@ -269,7 +255,7 @@
             this.btnAP.CustomImages.Parent = this.btnAP;
             this.btnAP.FillColor = System.Drawing.Color.Black;
             this.btnAP.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(154)))), ((int)(((byte)(136)))));
-            this.btnAP.Font = new System.Drawing.Font("Adobe Fan Heiti Std B", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAP.Font = new System.Drawing.Font("Nirmala UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAP.ForeColor = System.Drawing.Color.White;
             this.btnAP.HoverState.FillColor = System.Drawing.Color.Black;
             this.btnAP.HoverState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(154)))), ((int)(((byte)(136)))));
@@ -284,7 +270,7 @@
             this.btnAP.ShadowDecoration.Parent = this.btnAP;
             this.btnAP.Size = new System.Drawing.Size(200, 45);
             this.btnAP.TabIndex = 2;
-            this.btnAP.Text = "Add-ons / Promos";
+            this.btnAP.Text = "Add-ons";
             this.btnAP.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnAP.TextOffset = new System.Drawing.Point(30, 1);
             this.btnAP.MouseEnter += new System.EventHandler(this.button_Move);
@@ -296,7 +282,7 @@
             this.btnReservation.CustomImages.Parent = this.btnReservation;
             this.btnReservation.FillColor = System.Drawing.Color.White;
             this.btnReservation.FillColor2 = System.Drawing.Color.White;
-            this.btnReservation.Font = new System.Drawing.Font("Adobe Fan Heiti Std B", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnReservation.Font = new System.Drawing.Font("Nirmala UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnReservation.ForeColor = System.Drawing.Color.Black;
             this.btnReservation.HoverState.FillColor = System.Drawing.Color.Black;
             this.btnReservation.HoverState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(154)))), ((int)(((byte)(136)))));
@@ -324,7 +310,7 @@
             this.btnDashboard.CustomImages.Parent = this.btnDashboard;
             this.btnDashboard.FillColor = System.Drawing.Color.White;
             this.btnDashboard.FillColor2 = System.Drawing.Color.White;
-            this.btnDashboard.Font = new System.Drawing.Font("Adobe Fan Heiti Std B", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDashboard.Font = new System.Drawing.Font("Nirmala UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDashboard.ForeColor = System.Drawing.Color.Black;
             this.btnDashboard.HoverState.FillColor = System.Drawing.Color.Black;
             this.btnDashboard.HoverState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(154)))), ((int)(((byte)(136)))));
@@ -364,7 +350,7 @@
             this.lblTitle.Name = "lblTitle";
             this.lblTitle.Size = new System.Drawing.Size(397, 45);
             this.lblTitle.TabIndex = 20;
-            this.lblTitle.Text = "Add-ons / Promos";
+            this.lblTitle.Text = "Add-ons";
             this.lblTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.lblTitle.MouseEnter += new System.EventHandler(this.pnlButtons_MouseLeave);
             // 
@@ -373,642 +359,22 @@
             this.pnlAP.BackColor = System.Drawing.Color.Transparent;
             this.pnlAP.BackgroundImage = global::PrjOverhaulHotel.Properties.Resources.Group_282;
             this.pnlAP.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pnlAP.Controls.Add(this.dtgPromo);
+            this.pnlAP.Controls.Add(this.btnCancel);
+            this.pnlAP.Controls.Add(this.btnDeleteAddon);
             this.pnlAP.Controls.Add(this.dtgAddons);
-            this.pnlAP.Controls.Add(this.lblTotalPromo);
-            this.pnlAP.Controls.Add(this.lblTotalAddon);
-            this.pnlAP.Controls.Add(this.btnPromoDelete);
-            this.pnlAP.Controls.Add(this.btnPromoManage);
-            this.pnlAP.Controls.Add(this.btnPromoAdd);
-            this.pnlAP.Controls.Add(this.btnAddonDelete);
-            this.pnlAP.Controls.Add(this.btnAddonManage);
-            this.pnlAP.Controls.Add(this.btnAddonAdd);
-            this.pnlAP.Controls.Add(this.guna2VSeparator1);
-            this.pnlAP.Controls.Add(this.guna2Separator11);
-            this.pnlAP.Controls.Add(this.txtSearchPromo);
-            this.pnlAP.Controls.Add(this.txtSearchAddon);
-            this.pnlAP.Controls.Add(this.lblPromoDescription);
-            this.pnlAP.Controls.Add(this.txtPromoDiscount);
-            this.pnlAP.Controls.Add(this.txtPromoName);
-            this.pnlAP.Controls.Add(this.label28);
-            this.pnlAP.Controls.Add(this.label29);
-            this.pnlAP.Controls.Add(this.label30);
-            this.pnlAP.Controls.Add(this.lblAddonDescription);
-            this.pnlAP.Controls.Add(this.txtAddonPrice);
-            this.pnlAP.Controls.Add(this.txtAddonName);
-            this.pnlAP.Controls.Add(this.label23);
-            this.pnlAP.Controls.Add(this.label24);
-            this.pnlAP.Controls.Add(this.label25);
-            this.pnlAP.Controls.Add(this.label22);
-            this.pnlAP.Controls.Add(this.label21);
-            this.pnlAP.Controls.Add(this.label31);
-            this.pnlAP.Controls.Add(this.label32);
+            this.pnlAP.Controls.Add(this.pnlEdit);
+            this.pnlAP.Controls.Add(this.btnAddAddon);
+            this.pnlAP.Controls.Add(this.btnAddSave);
+            this.pnlAP.Controls.Add(this.btnEditAddon);
+            this.pnlAP.Controls.Add(this.btnEditSave);
+            this.pnlAP.Controls.Add(this.pnlAdd);
+            this.pnlAP.Controls.Add(this.pnlDetails);
             this.pnlAP.Location = new System.Drawing.Point(66, 119);
             this.pnlAP.Name = "pnlAP";
             this.pnlAP.ShadowDecoration.Parent = this.pnlAP;
             this.pnlAP.Size = new System.Drawing.Size(927, 501);
             this.pnlAP.TabIndex = 21;
             this.pnlAP.MouseEnter += new System.EventHandler(this.pnlButtons_MouseLeave);
-            // 
-            // dtgPromo
-            // 
-            this.dtgPromo.AllowUserToAddRows = false;
-            this.dtgPromo.AllowUserToDeleteRows = false;
-            this.dtgPromo.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dtgPromo.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
-            this.dtgPromo.BackgroundColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft New Tai Lue", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(135)))), ((int)(((byte)(97)))));
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dtgPromo.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.dtgPromo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtgPromo.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn1,
-            this.dataGridViewTextBoxColumn2,
-            this.Column5,
-            this.dataGridViewTextBoxColumn3});
-            this.dtgPromo.EnableHeadersVisualStyles = false;
-            this.dtgPromo.GridColor = System.Drawing.Color.Black;
-            this.dtgPromo.Location = new System.Drawing.Point(479, 241);
-            this.dtgPromo.MultiSelect = false;
-            this.dtgPromo.Name = "dtgPromo";
-            this.dtgPromo.ReadOnly = true;
-            this.dtgPromo.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft New Tai Lue", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(135)))), ((int)(((byte)(97)))));
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dtgPromo.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft New Tai Lue", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(135)))), ((int)(((byte)(97)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
-            this.dtgPromo.RowsDefaultCellStyle = dataGridViewCellStyle3;
-            this.dtgPromo.Size = new System.Drawing.Size(432, 169);
-            this.dtgPromo.TabIndex = 58;
-            // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.HeaderText = "id";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.ReadOnly = true;
-            this.dataGridViewTextBoxColumn1.Visible = false;
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.HeaderText = "Promo Name";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            this.dataGridViewTextBoxColumn2.ReadOnly = true;
-            // 
-            // Column5
-            // 
-            this.Column5.HeaderText = "Description";
-            this.Column5.Name = "Column5";
-            this.Column5.ReadOnly = true;
-            this.Column5.Visible = false;
-            // 
-            // dataGridViewTextBoxColumn3
-            // 
-            this.dataGridViewTextBoxColumn3.HeaderText = "Discount";
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            this.dataGridViewTextBoxColumn3.ReadOnly = true;
-            // 
-            // dtgAddons
-            // 
-            this.dtgAddons.AllowUserToAddRows = false;
-            this.dtgAddons.AllowUserToDeleteRows = false;
-            this.dtgAddons.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dtgAddons.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
-            this.dtgAddons.BackgroundColor = System.Drawing.Color.White;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft New Tai Lue", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(135)))), ((int)(((byte)(97)))));
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dtgAddons.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
-            this.dtgAddons.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtgAddons.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column1,
-            this.Column2,
-            this.Column4,
-            this.Column3});
-            this.dtgAddons.EnableHeadersVisualStyles = false;
-            this.dtgAddons.GridColor = System.Drawing.Color.Black;
-            this.dtgAddons.Location = new System.Drawing.Point(18, 241);
-            this.dtgAddons.MultiSelect = false;
-            this.dtgAddons.Name = "dtgAddons";
-            this.dtgAddons.ReadOnly = true;
-            this.dtgAddons.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft New Tai Lue", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(135)))), ((int)(((byte)(97)))));
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dtgAddons.RowHeadersDefaultCellStyle = dataGridViewCellStyle5;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft New Tai Lue", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(135)))), ((int)(((byte)(97)))));
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.White;
-            this.dtgAddons.RowsDefaultCellStyle = dataGridViewCellStyle6;
-            this.dtgAddons.Size = new System.Drawing.Size(432, 169);
-            this.dtgAddons.TabIndex = 57;
-            // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "id";
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
-            this.Column1.Visible = false;
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "Addon Name";
-            this.Column2.Name = "Column2";
-            this.Column2.ReadOnly = true;
-            // 
-            // Column4
-            // 
-            this.Column4.HeaderText = "Description";
-            this.Column4.Name = "Column4";
-            this.Column4.ReadOnly = true;
-            this.Column4.Visible = false;
-            // 
-            // Column3
-            // 
-            this.Column3.HeaderText = "Price";
-            this.Column3.Name = "Column3";
-            this.Column3.ReadOnly = true;
-            // 
-            // lblTotalPromo
-            // 
-            this.lblTotalPromo.BackColor = System.Drawing.Color.Transparent;
-            this.lblTotalPromo.Font = new System.Drawing.Font("Adobe Fan Heiti Std B", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTotalPromo.ForeColor = System.Drawing.Color.Black;
-            this.lblTotalPromo.Location = new System.Drawing.Point(481, 411);
-            this.lblTotalPromo.Name = "lblTotalPromo";
-            this.lblTotalPromo.Size = new System.Drawing.Size(268, 23);
-            this.lblTotalPromo.TabIndex = 56;
-            this.lblTotalPromo.Text = "Total Promos: 0";
-            this.lblTotalPromo.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // lblTotalAddon
-            // 
-            this.lblTotalAddon.BackColor = System.Drawing.Color.Transparent;
-            this.lblTotalAddon.Font = new System.Drawing.Font("Adobe Fan Heiti Std B", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTotalAddon.ForeColor = System.Drawing.Color.Black;
-            this.lblTotalAddon.Location = new System.Drawing.Point(19, 411);
-            this.lblTotalAddon.Name = "lblTotalAddon";
-            this.lblTotalAddon.Size = new System.Drawing.Size(268, 23);
-            this.lblTotalAddon.TabIndex = 55;
-            this.lblTotalAddon.Text = "Total Add-ons: 0";
-            this.lblTotalAddon.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // btnPromoDelete
-            // 
-            this.btnPromoDelete.BorderRadius = 15;
-            this.btnPromoDelete.CheckedState.Parent = this.btnPromoDelete;
-            this.btnPromoDelete.CustomImages.Parent = this.btnPromoDelete;
-            this.btnPromoDelete.FillColor = System.Drawing.Color.Black;
-            this.btnPromoDelete.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.btnPromoDelete.Font = new System.Drawing.Font("Adobe Fan Heiti Std B", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPromoDelete.ForeColor = System.Drawing.Color.White;
-            this.btnPromoDelete.HoverState.Parent = this.btnPromoDelete;
-            this.btnPromoDelete.Image = global::PrjOverhaulHotel.Properties.Resources.trash_2;
-            this.btnPromoDelete.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnPromoDelete.ImageOffset = new System.Drawing.Point(5, 12);
-            this.btnPromoDelete.Location = new System.Drawing.Point(767, 435);
-            this.btnPromoDelete.Name = "btnPromoDelete";
-            this.btnPromoDelete.ShadowDecoration.Parent = this.btnPromoDelete;
-            this.btnPromoDelete.Size = new System.Drawing.Size(143, 32);
-            this.btnPromoDelete.TabIndex = 54;
-            this.btnPromoDelete.Text = "DELETE";
-            this.btnPromoDelete.TextOffset = new System.Drawing.Point(7, -11);
-            // 
-            // btnPromoManage
-            // 
-            this.btnPromoManage.BorderRadius = 15;
-            this.btnPromoManage.CheckedState.Parent = this.btnPromoManage;
-            this.btnPromoManage.CustomImages.Parent = this.btnPromoManage;
-            this.btnPromoManage.FillColor = System.Drawing.Color.Black;
-            this.btnPromoManage.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btnPromoManage.Font = new System.Drawing.Font("Adobe Fan Heiti Std B", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPromoManage.ForeColor = System.Drawing.Color.White;
-            this.btnPromoManage.HoverState.Parent = this.btnPromoManage;
-            this.btnPromoManage.Image = global::PrjOverhaulHotel.Properties.Resources.bolt;
-            this.btnPromoManage.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnPromoManage.ImageOffset = new System.Drawing.Point(5, 12);
-            this.btnPromoManage.Location = new System.Drawing.Point(610, 435);
-            this.btnPromoManage.Name = "btnPromoManage";
-            this.btnPromoManage.ShadowDecoration.Parent = this.btnPromoManage;
-            this.btnPromoManage.Size = new System.Drawing.Size(142, 32);
-            this.btnPromoManage.TabIndex = 53;
-            this.btnPromoManage.Text = "MANAGE";
-            this.btnPromoManage.TextOffset = new System.Drawing.Point(7, -11);
-            // 
-            // btnPromoAdd
-            // 
-            this.btnPromoAdd.BorderRadius = 15;
-            this.btnPromoAdd.CheckedState.Parent = this.btnPromoAdd;
-            this.btnPromoAdd.CustomImages.Parent = this.btnPromoAdd;
-            this.btnPromoAdd.FillColor = System.Drawing.Color.Black;
-            this.btnPromoAdd.FillColor2 = System.Drawing.Color.Teal;
-            this.btnPromoAdd.Font = new System.Drawing.Font("Adobe Fan Heiti Std B", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPromoAdd.ForeColor = System.Drawing.Color.White;
-            this.btnPromoAdd.HoverState.Parent = this.btnPromoAdd;
-            this.btnPromoAdd.Image = global::PrjOverhaulHotel.Properties.Resources.plus;
-            this.btnPromoAdd.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnPromoAdd.ImageOffset = new System.Drawing.Point(5, 12);
-            this.btnPromoAdd.Location = new System.Drawing.Point(478, 435);
-            this.btnPromoAdd.Name = "btnPromoAdd";
-            this.btnPromoAdd.ShadowDecoration.Parent = this.btnPromoAdd;
-            this.btnPromoAdd.Size = new System.Drawing.Size(116, 32);
-            this.btnPromoAdd.TabIndex = 52;
-            this.btnPromoAdd.Text = "ADD";
-            this.btnPromoAdd.TextOffset = new System.Drawing.Point(7, -11);
-            // 
-            // btnAddonDelete
-            // 
-            this.btnAddonDelete.BorderRadius = 15;
-            this.btnAddonDelete.CheckedState.Parent = this.btnAddonDelete;
-            this.btnAddonDelete.CustomImages.Parent = this.btnAddonDelete;
-            this.btnAddonDelete.FillColor = System.Drawing.Color.Black;
-            this.btnAddonDelete.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.btnAddonDelete.Font = new System.Drawing.Font("Adobe Fan Heiti Std B", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAddonDelete.ForeColor = System.Drawing.Color.White;
-            this.btnAddonDelete.HoverState.Parent = this.btnAddonDelete;
-            this.btnAddonDelete.Image = global::PrjOverhaulHotel.Properties.Resources.trash_2;
-            this.btnAddonDelete.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnAddonDelete.ImageOffset = new System.Drawing.Point(5, 12);
-            this.btnAddonDelete.Location = new System.Drawing.Point(307, 435);
-            this.btnAddonDelete.Name = "btnAddonDelete";
-            this.btnAddonDelete.ShadowDecoration.Parent = this.btnAddonDelete;
-            this.btnAddonDelete.Size = new System.Drawing.Size(143, 32);
-            this.btnAddonDelete.TabIndex = 51;
-            this.btnAddonDelete.Text = "DELETE";
-            this.btnAddonDelete.TextOffset = new System.Drawing.Point(7, -11);
-            // 
-            // btnAddonManage
-            // 
-            this.btnAddonManage.BorderRadius = 15;
-            this.btnAddonManage.CheckedState.Parent = this.btnAddonManage;
-            this.btnAddonManage.CustomImages.Parent = this.btnAddonManage;
-            this.btnAddonManage.FillColor = System.Drawing.Color.Black;
-            this.btnAddonManage.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btnAddonManage.Font = new System.Drawing.Font("Adobe Fan Heiti Std B", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAddonManage.ForeColor = System.Drawing.Color.White;
-            this.btnAddonManage.HoverState.Parent = this.btnAddonManage;
-            this.btnAddonManage.Image = global::PrjOverhaulHotel.Properties.Resources.bolt;
-            this.btnAddonManage.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnAddonManage.ImageOffset = new System.Drawing.Point(5, 12);
-            this.btnAddonManage.Location = new System.Drawing.Point(150, 435);
-            this.btnAddonManage.Name = "btnAddonManage";
-            this.btnAddonManage.ShadowDecoration.Parent = this.btnAddonManage;
-            this.btnAddonManage.Size = new System.Drawing.Size(142, 32);
-            this.btnAddonManage.TabIndex = 50;
-            this.btnAddonManage.Text = "MANAGE";
-            this.btnAddonManage.TextOffset = new System.Drawing.Point(7, -11);
-            // 
-            // btnAddonAdd
-            // 
-            this.btnAddonAdd.BorderRadius = 15;
-            this.btnAddonAdd.CheckedState.Parent = this.btnAddonAdd;
-            this.btnAddonAdd.CustomImages.Parent = this.btnAddonAdd;
-            this.btnAddonAdd.FillColor = System.Drawing.Color.Black;
-            this.btnAddonAdd.FillColor2 = System.Drawing.Color.Teal;
-            this.btnAddonAdd.Font = new System.Drawing.Font("Adobe Fan Heiti Std B", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAddonAdd.ForeColor = System.Drawing.Color.White;
-            this.btnAddonAdd.HoverState.Parent = this.btnAddonAdd;
-            this.btnAddonAdd.Image = global::PrjOverhaulHotel.Properties.Resources.plus;
-            this.btnAddonAdd.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnAddonAdd.ImageOffset = new System.Drawing.Point(5, 12);
-            this.btnAddonAdd.Location = new System.Drawing.Point(18, 435);
-            this.btnAddonAdd.Name = "btnAddonAdd";
-            this.btnAddonAdd.ShadowDecoration.Parent = this.btnAddonAdd;
-            this.btnAddonAdd.Size = new System.Drawing.Size(116, 32);
-            this.btnAddonAdd.TabIndex = 49;
-            this.btnAddonAdd.Text = "ADD";
-            this.btnAddonAdd.TextOffset = new System.Drawing.Point(7, -11);
-            // 
-            // guna2VSeparator1
-            // 
-            this.guna2VSeparator1.FillColor = System.Drawing.Color.Black;
-            this.guna2VSeparator1.FillThickness = 2;
-            this.guna2VSeparator1.Location = new System.Drawing.Point(459, 22);
-            this.guna2VSeparator1.Name = "guna2VSeparator1";
-            this.guna2VSeparator1.Size = new System.Drawing.Size(10, 440);
-            this.guna2VSeparator1.TabIndex = 0;
-            // 
-            // guna2Separator11
-            // 
-            this.guna2Separator11.FillColor = System.Drawing.Color.Black;
-            this.guna2Separator11.FillThickness = 2;
-            this.guna2Separator11.Location = new System.Drawing.Point(18, 165);
-            this.guna2Separator11.Name = "guna2Separator11";
-            this.guna2Separator11.Size = new System.Drawing.Size(893, 10);
-            this.guna2Separator11.TabIndex = 48;
-            // 
-            // txtSearchPromo
-            // 
-            this.txtSearchPromo.BorderRadius = 15;
-            this.txtSearchPromo.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtSearchPromo.DefaultText = "";
-            this.txtSearchPromo.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtSearchPromo.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtSearchPromo.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtSearchPromo.DisabledState.Parent = this.txtSearchPromo;
-            this.txtSearchPromo.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtSearchPromo.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtSearchPromo.FocusedState.Parent = this.txtSearchPromo;
-            this.txtSearchPromo.Font = new System.Drawing.Font("Microsoft New Tai Lue", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSearchPromo.ForeColor = System.Drawing.Color.Black;
-            this.txtSearchPromo.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtSearchPromo.HoverState.Parent = this.txtSearchPromo;
-            this.txtSearchPromo.IconLeft = ((System.Drawing.Image)(resources.GetObject("txtSearchPromo.IconLeft")));
-            this.txtSearchPromo.IconLeftOffset = new System.Drawing.Point(10, 0);
-            this.txtSearchPromo.Location = new System.Drawing.Point(479, 194);
-            this.txtSearchPromo.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.txtSearchPromo.Name = "txtSearchPromo";
-            this.txtSearchPromo.PasswordChar = '\0';
-            this.txtSearchPromo.PlaceholderText = "Search Promo...";
-            this.txtSearchPromo.SelectedText = "";
-            this.txtSearchPromo.ShadowDecoration.Parent = this.txtSearchPromo;
-            this.txtSearchPromo.Size = new System.Drawing.Size(432, 36);
-            this.txtSearchPromo.TabIndex = 43;
-            this.txtSearchPromo.TextOffset = new System.Drawing.Point(10, 0);
-            // 
-            // txtSearchAddon
-            // 
-            this.txtSearchAddon.BorderRadius = 15;
-            this.txtSearchAddon.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtSearchAddon.DefaultText = "";
-            this.txtSearchAddon.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtSearchAddon.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtSearchAddon.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtSearchAddon.DisabledState.Parent = this.txtSearchAddon;
-            this.txtSearchAddon.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtSearchAddon.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtSearchAddon.FocusedState.Parent = this.txtSearchAddon;
-            this.txtSearchAddon.Font = new System.Drawing.Font("Microsoft New Tai Lue", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSearchAddon.ForeColor = System.Drawing.Color.Black;
-            this.txtSearchAddon.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtSearchAddon.HoverState.Parent = this.txtSearchAddon;
-            this.txtSearchAddon.IconLeft = ((System.Drawing.Image)(resources.GetObject("txtSearchAddon.IconLeft")));
-            this.txtSearchAddon.IconLeftOffset = new System.Drawing.Point(10, 0);
-            this.txtSearchAddon.Location = new System.Drawing.Point(18, 194);
-            this.txtSearchAddon.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.txtSearchAddon.Name = "txtSearchAddon";
-            this.txtSearchAddon.PasswordChar = '\0';
-            this.txtSearchAddon.PlaceholderText = "Search Add-on...";
-            this.txtSearchAddon.SelectedText = "";
-            this.txtSearchAddon.ShadowDecoration.Parent = this.txtSearchAddon;
-            this.txtSearchAddon.Size = new System.Drawing.Size(432, 36);
-            this.txtSearchAddon.TabIndex = 42;
-            this.txtSearchAddon.TextOffset = new System.Drawing.Point(10, 0);
-            // 
-            // lblPromoDescription
-            // 
-            this.lblPromoDescription.BackColor = System.Drawing.Color.White;
-            this.lblPromoDescription.Font = new System.Drawing.Font("Microsoft New Tai Lue", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPromoDescription.ForeColor = System.Drawing.Color.DimGray;
-            this.lblPromoDescription.Location = new System.Drawing.Point(580, 108);
-            this.lblPromoDescription.Name = "lblPromoDescription";
-            this.lblPromoDescription.Size = new System.Drawing.Size(331, 54);
-            this.lblPromoDescription.TabIndex = 41;
-            // 
-            // txtPromoDiscount
-            // 
-            this.txtPromoDiscount.BorderRadius = 15;
-            this.txtPromoDiscount.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtPromoDiscount.DefaultText = "";
-            this.txtPromoDiscount.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtPromoDiscount.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtPromoDiscount.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtPromoDiscount.DisabledState.Parent = this.txtPromoDiscount;
-            this.txtPromoDiscount.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtPromoDiscount.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtPromoDiscount.FocusedState.Parent = this.txtPromoDiscount;
-            this.txtPromoDiscount.Font = new System.Drawing.Font("Microsoft New Tai Lue", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPromoDiscount.ForeColor = System.Drawing.Color.DimGray;
-            this.txtPromoDiscount.HoverState.BorderColor = System.Drawing.Color.Black;
-            this.txtPromoDiscount.HoverState.Parent = this.txtPromoDiscount;
-            this.txtPromoDiscount.Location = new System.Drawing.Point(797, 60);
-            this.txtPromoDiscount.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.txtPromoDiscount.Name = "txtPromoDiscount";
-            this.txtPromoDiscount.PasswordChar = '\0';
-            this.txtPromoDiscount.PlaceholderText = "";
-            this.txtPromoDiscount.ReadOnly = true;
-            this.txtPromoDiscount.SelectedText = "";
-            this.txtPromoDiscount.ShadowDecoration.Parent = this.txtPromoDiscount;
-            this.txtPromoDiscount.Size = new System.Drawing.Size(114, 36);
-            this.txtPromoDiscount.TabIndex = 40;
-            this.txtPromoDiscount.TextOffset = new System.Drawing.Point(10, 0);
-            // 
-            // txtPromoName
-            // 
-            this.txtPromoName.BorderRadius = 15;
-            this.txtPromoName.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtPromoName.DefaultText = "";
-            this.txtPromoName.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtPromoName.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtPromoName.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtPromoName.DisabledState.Parent = this.txtPromoName;
-            this.txtPromoName.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtPromoName.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtPromoName.FocusedState.Parent = this.txtPromoName;
-            this.txtPromoName.Font = new System.Drawing.Font("Microsoft New Tai Lue", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPromoName.ForeColor = System.Drawing.Color.DimGray;
-            this.txtPromoName.HoverState.BorderColor = System.Drawing.Color.Black;
-            this.txtPromoName.HoverState.Parent = this.txtPromoName;
-            this.txtPromoName.Location = new System.Drawing.Point(479, 60);
-            this.txtPromoName.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.txtPromoName.Name = "txtPromoName";
-            this.txtPromoName.PasswordChar = '\0';
-            this.txtPromoName.PlaceholderText = "";
-            this.txtPromoName.ReadOnly = true;
-            this.txtPromoName.SelectedText = "";
-            this.txtPromoName.ShadowDecoration.Parent = this.txtPromoName;
-            this.txtPromoName.Size = new System.Drawing.Size(310, 36);
-            this.txtPromoName.TabIndex = 36;
-            this.txtPromoName.TextOffset = new System.Drawing.Point(10, 0);
-            // 
-            // label28
-            // 
-            this.label28.AutoSize = true;
-            this.label28.Font = new System.Drawing.Font("Adobe Fan Heiti Std B", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label28.Location = new System.Drawing.Point(493, 46);
-            this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(89, 16);
-            this.label28.TabIndex = 37;
-            this.label28.Text = "Promo Name:";
-            // 
-            // label29
-            // 
-            this.label29.AutoSize = true;
-            this.label29.Font = new System.Drawing.Font("Adobe Fan Heiti Std B", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label29.Location = new System.Drawing.Point(493, 108);
-            this.label29.Name = "label29";
-            this.label29.Size = new System.Drawing.Size(78, 16);
-            this.label29.TabIndex = 38;
-            this.label29.Text = "Description:";
-            // 
-            // label30
-            // 
-            this.label30.AutoSize = true;
-            this.label30.Font = new System.Drawing.Font("Adobe Fan Heiti Std B", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label30.Location = new System.Drawing.Point(802, 46);
-            this.label30.Name = "label30";
-            this.label30.Size = new System.Drawing.Size(107, 16);
-            this.label30.TabIndex = 39;
-            this.label30.Text = "Promo Discount:";
-            // 
-            // lblAddonDescription
-            // 
-            this.lblAddonDescription.BackColor = System.Drawing.Color.White;
-            this.lblAddonDescription.Font = new System.Drawing.Font("Microsoft New Tai Lue", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAddonDescription.ForeColor = System.Drawing.Color.DimGray;
-            this.lblAddonDescription.Location = new System.Drawing.Point(119, 108);
-            this.lblAddonDescription.Name = "lblAddonDescription";
-            this.lblAddonDescription.Size = new System.Drawing.Size(331, 54);
-            this.lblAddonDescription.TabIndex = 35;
-            // 
-            // txtAddonPrice
-            // 
-            this.txtAddonPrice.BorderRadius = 15;
-            this.txtAddonPrice.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtAddonPrice.DefaultText = "";
-            this.txtAddonPrice.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtAddonPrice.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtAddonPrice.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtAddonPrice.DisabledState.Parent = this.txtAddonPrice;
-            this.txtAddonPrice.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtAddonPrice.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtAddonPrice.FocusedState.Parent = this.txtAddonPrice;
-            this.txtAddonPrice.Font = new System.Drawing.Font("Microsoft New Tai Lue", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtAddonPrice.ForeColor = System.Drawing.Color.DimGray;
-            this.txtAddonPrice.HoverState.BorderColor = System.Drawing.Color.Black;
-            this.txtAddonPrice.HoverState.Parent = this.txtAddonPrice;
-            this.txtAddonPrice.Location = new System.Drawing.Point(336, 60);
-            this.txtAddonPrice.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.txtAddonPrice.Name = "txtAddonPrice";
-            this.txtAddonPrice.PasswordChar = '\0';
-            this.txtAddonPrice.PlaceholderText = "";
-            this.txtAddonPrice.ReadOnly = true;
-            this.txtAddonPrice.SelectedText = "";
-            this.txtAddonPrice.ShadowDecoration.Parent = this.txtAddonPrice;
-            this.txtAddonPrice.Size = new System.Drawing.Size(114, 36);
-            this.txtAddonPrice.TabIndex = 34;
-            this.txtAddonPrice.TextOffset = new System.Drawing.Point(10, 0);
-            // 
-            // txtAddonName
-            // 
-            this.txtAddonName.BorderRadius = 15;
-            this.txtAddonName.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtAddonName.DefaultText = "";
-            this.txtAddonName.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtAddonName.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtAddonName.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtAddonName.DisabledState.Parent = this.txtAddonName;
-            this.txtAddonName.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtAddonName.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtAddonName.FocusedState.Parent = this.txtAddonName;
-            this.txtAddonName.Font = new System.Drawing.Font("Microsoft New Tai Lue", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtAddonName.ForeColor = System.Drawing.Color.DimGray;
-            this.txtAddonName.HoverState.BorderColor = System.Drawing.Color.Black;
-            this.txtAddonName.HoverState.Parent = this.txtAddonName;
-            this.txtAddonName.Location = new System.Drawing.Point(18, 60);
-            this.txtAddonName.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.txtAddonName.Name = "txtAddonName";
-            this.txtAddonName.PasswordChar = '\0';
-            this.txtAddonName.PlaceholderText = "";
-            this.txtAddonName.ReadOnly = true;
-            this.txtAddonName.SelectedText = "";
-            this.txtAddonName.ShadowDecoration.Parent = this.txtAddonName;
-            this.txtAddonName.Size = new System.Drawing.Size(310, 36);
-            this.txtAddonName.TabIndex = 28;
-            this.txtAddonName.TextOffset = new System.Drawing.Point(10, 0);
-            // 
-            // label23
-            // 
-            this.label23.AutoSize = true;
-            this.label23.Font = new System.Drawing.Font("Adobe Fan Heiti Std B", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label23.Location = new System.Drawing.Point(32, 46);
-            this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(93, 16);
-            this.label23.TabIndex = 31;
-            this.label23.Text = "Add-on Name:";
-            // 
-            // label24
-            // 
-            this.label24.AutoSize = true;
-            this.label24.Font = new System.Drawing.Font("Adobe Fan Heiti Std B", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label24.Location = new System.Drawing.Point(32, 108);
-            this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(78, 16);
-            this.label24.TabIndex = 32;
-            this.label24.Text = "Description:";
-            // 
-            // label25
-            // 
-            this.label25.AutoSize = true;
-            this.label25.Font = new System.Drawing.Font("Adobe Fan Heiti Std B", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label25.Location = new System.Drawing.Point(341, 46);
-            this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(87, 16);
-            this.label25.TabIndex = 33;
-            this.label25.Text = "Add-on Price:";
-            // 
-            // label22
-            // 
-            this.label22.Font = new System.Drawing.Font("Microsoft New Tai Lue", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label22.Location = new System.Drawing.Point(644, 21);
-            this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(100, 23);
-            this.label22.TabIndex = 2;
-            this.label22.Text = "Promos";
-            this.label22.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
-            // label21
-            // 
-            this.label21.Font = new System.Drawing.Font("Microsoft New Tai Lue", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label21.Location = new System.Drawing.Point(184, 16);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(100, 23);
-            this.label21.TabIndex = 1;
-            this.label21.Text = "Add-ons";
-            this.label21.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
-            // label31
-            // 
-            this.label31.AutoSize = true;
-            this.label31.Font = new System.Drawing.Font("Adobe Fan Heiti Std B", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label31.Location = new System.Drawing.Point(32, 180);
-            this.label31.Name = "label31";
-            this.label31.Size = new System.Drawing.Size(93, 16);
-            this.label31.TabIndex = 44;
-            this.label31.Text = "Add-on Name:";
-            // 
-            // label32
-            // 
-            this.label32.AutoSize = true;
-            this.label32.Font = new System.Drawing.Font("Adobe Fan Heiti Std B", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label32.Location = new System.Drawing.Point(493, 180);
-            this.label32.Name = "label32";
-            this.label32.Size = new System.Drawing.Size(89, 16);
-            this.label32.TabIndex = 45;
-            this.label32.Text = "Promo Name:";
             // 
             // btnProfile
             // 
@@ -1073,6 +439,536 @@
             this.lblPosition.MouseEnter += new System.EventHandler(this.btnProfile_MouseEnter);
             this.lblPosition.MouseLeave += new System.EventHandler(this.btnProfile_MouseLeave);
             // 
+            // btnCancel
+            // 
+            this.btnCancel.BackColor = System.Drawing.Color.Transparent;
+            this.btnCancel.BorderRadius = 15;
+            this.btnCancel.CheckedState.Parent = this.btnCancel;
+            this.btnCancel.CustomImages.Parent = this.btnCancel;
+            this.btnCancel.FillColor = System.Drawing.Color.Black;
+            this.btnCancel.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.btnCancel.Font = new System.Drawing.Font("Adobe Fan Heiti Std B", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancel.ForeColor = System.Drawing.Color.White;
+            this.btnCancel.HoverState.Parent = this.btnCancel;
+            this.btnCancel.Image = global::PrjOverhaulHotel.Properties.Resources.check;
+            this.btnCancel.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnCancel.ImageOffset = new System.Drawing.Point(5, 12);
+            this.btnCancel.Location = new System.Drawing.Point(624, 366);
+            this.btnCancel.Name = "btnCancel";
+            this.btnCancel.ShadowDecoration.Parent = this.btnCancel;
+            this.btnCancel.Size = new System.Drawing.Size(180, 32);
+            this.btnCancel.TabIndex = 56;
+            this.btnCancel.Text = "DONE";
+            this.btnCancel.TextOffset = new System.Drawing.Point(7, -11);
+            // 
+            // btnDeleteAddon
+            // 
+            this.btnDeleteAddon.BackColor = System.Drawing.Color.Transparent;
+            this.btnDeleteAddon.BorderRadius = 15;
+            this.btnDeleteAddon.CheckedState.Parent = this.btnDeleteAddon;
+            this.btnDeleteAddon.CustomImages.Parent = this.btnDeleteAddon;
+            this.btnDeleteAddon.FillColor = System.Drawing.Color.Black;
+            this.btnDeleteAddon.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.btnDeleteAddon.Font = new System.Drawing.Font("Adobe Fan Heiti Std B", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDeleteAddon.ForeColor = System.Drawing.Color.White;
+            this.btnDeleteAddon.HoverState.Parent = this.btnDeleteAddon;
+            this.btnDeleteAddon.Image = global::PrjOverhaulHotel.Properties.Resources.trash_2;
+            this.btnDeleteAddon.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnDeleteAddon.ImageOffset = new System.Drawing.Point(5, 12);
+            this.btnDeleteAddon.Location = new System.Drawing.Point(624, 324);
+            this.btnDeleteAddon.Name = "btnDeleteAddon";
+            this.btnDeleteAddon.ShadowDecoration.Parent = this.btnDeleteAddon;
+            this.btnDeleteAddon.Size = new System.Drawing.Size(180, 32);
+            this.btnDeleteAddon.TabIndex = 53;
+            this.btnDeleteAddon.Text = "DELETE";
+            this.btnDeleteAddon.TextOffset = new System.Drawing.Point(7, -11);
+            // 
+            // dtgAddons
+            // 
+            this.dtgAddons.AllowUserToAddRows = false;
+            this.dtgAddons.AllowUserToDeleteRows = false;
+            this.dtgAddons.BackgroundColor = System.Drawing.Color.White;
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle10.BackColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle10.Font = new System.Drawing.Font("Microsoft New Tai Lue", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle10.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(135)))), ((int)(((byte)(97)))));
+            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dtgAddons.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle10;
+            this.dtgAddons.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtgAddons.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column1,
+            this.Column2,
+            this.Column3,
+            this.Column4});
+            this.dtgAddons.EnableHeadersVisualStyles = false;
+            this.dtgAddons.GridColor = System.Drawing.Color.Black;
+            this.dtgAddons.Location = new System.Drawing.Point(62, 57);
+            this.dtgAddons.MultiSelect = false;
+            this.dtgAddons.Name = "dtgAddons";
+            this.dtgAddons.ReadOnly = true;
+            this.dtgAddons.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken;
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle11.BackColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle11.Font = new System.Drawing.Font("Microsoft New Tai Lue", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle11.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(135)))), ((int)(((byte)(97)))));
+            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dtgAddons.RowHeadersDefaultCellStyle = dataGridViewCellStyle11;
+            dataGridViewCellStyle12.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle12.Font = new System.Drawing.Font("Microsoft New Tai Lue", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle12.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(135)))), ((int)(((byte)(97)))));
+            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.Color.White;
+            this.dtgAddons.RowsDefaultCellStyle = dataGridViewCellStyle12;
+            this.dtgAddons.Size = new System.Drawing.Size(476, 359);
+            this.dtgAddons.TabIndex = 50;
+            // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "ID";
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            this.Column1.Visible = false;
+            this.Column1.Width = 52;
+            // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "Addon Name";
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
+            this.Column2.Width = 253;
+            // 
+            // Column3
+            // 
+            this.Column3.HeaderText = "Description";
+            this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
+            this.Column3.Visible = false;
+            // 
+            // Column4
+            // 
+            this.Column4.HeaderText = "Price";
+            this.Column4.Name = "Column4";
+            this.Column4.ReadOnly = true;
+            this.Column4.Width = 180;
+            // 
+            // pnlEdit
+            // 
+            this.pnlEdit.BackColor = System.Drawing.Color.Transparent;
+            this.pnlEdit.BorderColor = System.Drawing.Color.Black;
+            this.pnlEdit.BorderRadius = 15;
+            this.pnlEdit.BorderThickness = 2;
+            this.pnlEdit.Controls.Add(this.txtEditDescription);
+            this.pnlEdit.Controls.Add(this.txtEditPrice);
+            this.pnlEdit.Controls.Add(this.txtEditAddonname);
+            this.pnlEdit.FillColor = System.Drawing.Color.White;
+            this.pnlEdit.Location = new System.Drawing.Point(552, 71);
+            this.pnlEdit.Name = "pnlEdit";
+            this.pnlEdit.ShadowDecoration.Parent = this.pnlEdit;
+            this.pnlEdit.Size = new System.Drawing.Size(315, 156);
+            this.pnlEdit.TabIndex = 59;
+            // 
+            // txtEditDescription
+            // 
+            this.txtEditDescription.BackColor = System.Drawing.Color.Transparent;
+            this.txtEditDescription.BorderColor = System.Drawing.Color.Black;
+            this.txtEditDescription.BorderRadius = 12;
+            this.txtEditDescription.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtEditDescription.DefaultText = "";
+            this.txtEditDescription.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtEditDescription.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtEditDescription.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtEditDescription.DisabledState.Parent = this.txtEditDescription;
+            this.txtEditDescription.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtEditDescription.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtEditDescription.FocusedState.Parent = this.txtEditDescription;
+            this.txtEditDescription.Font = new System.Drawing.Font("Microsoft New Tai Lue", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEditDescription.ForeColor = System.Drawing.Color.Black;
+            this.txtEditDescription.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(154)))), ((int)(((byte)(136)))));
+            this.txtEditDescription.HoverState.Parent = this.txtEditDescription;
+            this.txtEditDescription.IconLeftOffset = new System.Drawing.Point(5, 0);
+            this.txtEditDescription.Location = new System.Drawing.Point(15, 92);
+            this.txtEditDescription.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtEditDescription.Name = "txtEditDescription";
+            this.txtEditDescription.PasswordChar = '\0';
+            this.txtEditDescription.PlaceholderText = "Description";
+            this.txtEditDescription.SelectedText = "";
+            this.txtEditDescription.ShadowDecoration.Parent = this.txtEditDescription;
+            this.txtEditDescription.Size = new System.Drawing.Size(284, 48);
+            this.txtEditDescription.TabIndex = 17;
+            this.txtEditDescription.TextOffset = new System.Drawing.Point(10, 0);
+            // 
+            // txtEditPrice
+            // 
+            this.txtEditPrice.BackColor = System.Drawing.Color.Transparent;
+            this.txtEditPrice.BorderColor = System.Drawing.Color.Black;
+            this.txtEditPrice.BorderRadius = 12;
+            this.txtEditPrice.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtEditPrice.DefaultText = "";
+            this.txtEditPrice.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtEditPrice.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtEditPrice.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtEditPrice.DisabledState.Parent = this.txtEditPrice;
+            this.txtEditPrice.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtEditPrice.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtEditPrice.FocusedState.Parent = this.txtEditPrice;
+            this.txtEditPrice.Font = new System.Drawing.Font("Microsoft New Tai Lue", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEditPrice.ForeColor = System.Drawing.Color.Black;
+            this.txtEditPrice.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(154)))), ((int)(((byte)(136)))));
+            this.txtEditPrice.HoverState.Parent = this.txtEditPrice;
+            this.txtEditPrice.IconLeftOffset = new System.Drawing.Point(5, 0);
+            this.txtEditPrice.Location = new System.Drawing.Point(15, 52);
+            this.txtEditPrice.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtEditPrice.Name = "txtEditPrice";
+            this.txtEditPrice.PasswordChar = '\0';
+            this.txtEditPrice.PlaceholderText = "Price";
+            this.txtEditPrice.SelectedText = "";
+            this.txtEditPrice.ShadowDecoration.Parent = this.txtEditPrice;
+            this.txtEditPrice.Size = new System.Drawing.Size(284, 30);
+            this.txtEditPrice.TabIndex = 16;
+            this.txtEditPrice.TextOffset = new System.Drawing.Point(10, 0);
+            // 
+            // txtEditAddonname
+            // 
+            this.txtEditAddonname.BackColor = System.Drawing.Color.Transparent;
+            this.txtEditAddonname.BorderColor = System.Drawing.Color.Black;
+            this.txtEditAddonname.BorderRadius = 12;
+            this.txtEditAddonname.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtEditAddonname.DefaultText = "";
+            this.txtEditAddonname.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtEditAddonname.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtEditAddonname.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtEditAddonname.DisabledState.Parent = this.txtEditAddonname;
+            this.txtEditAddonname.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtEditAddonname.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtEditAddonname.FocusedState.Parent = this.txtEditAddonname;
+            this.txtEditAddonname.Font = new System.Drawing.Font("Microsoft New Tai Lue", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEditAddonname.ForeColor = System.Drawing.Color.Black;
+            this.txtEditAddonname.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(154)))), ((int)(((byte)(136)))));
+            this.txtEditAddonname.HoverState.Parent = this.txtEditAddonname;
+            this.txtEditAddonname.IconLeftOffset = new System.Drawing.Point(5, 0);
+            this.txtEditAddonname.Location = new System.Drawing.Point(15, 18);
+            this.txtEditAddonname.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtEditAddonname.Name = "txtEditAddonname";
+            this.txtEditAddonname.PasswordChar = '\0';
+            this.txtEditAddonname.PlaceholderText = "Addon Name";
+            this.txtEditAddonname.SelectedText = "";
+            this.txtEditAddonname.ShadowDecoration.Parent = this.txtEditAddonname;
+            this.txtEditAddonname.Size = new System.Drawing.Size(284, 30);
+            this.txtEditAddonname.TabIndex = 14;
+            this.txtEditAddonname.TextOffset = new System.Drawing.Point(10, 0);
+            // 
+            // btnAddAddon
+            // 
+            this.btnAddAddon.BackColor = System.Drawing.Color.Transparent;
+            this.btnAddAddon.BorderRadius = 15;
+            this.btnAddAddon.CheckedState.Parent = this.btnAddAddon;
+            this.btnAddAddon.CustomImages.Parent = this.btnAddAddon;
+            this.btnAddAddon.FillColor = System.Drawing.Color.Black;
+            this.btnAddAddon.FillColor2 = System.Drawing.Color.Teal;
+            this.btnAddAddon.Font = new System.Drawing.Font("Adobe Fan Heiti Std B", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddAddon.ForeColor = System.Drawing.Color.White;
+            this.btnAddAddon.HoverState.Parent = this.btnAddAddon;
+            this.btnAddAddon.Image = global::PrjOverhaulHotel.Properties.Resources.plus;
+            this.btnAddAddon.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnAddAddon.ImageOffset = new System.Drawing.Point(5, 12);
+            this.btnAddAddon.Location = new System.Drawing.Point(624, 242);
+            this.btnAddAddon.Name = "btnAddAddon";
+            this.btnAddAddon.ShadowDecoration.Parent = this.btnAddAddon;
+            this.btnAddAddon.Size = new System.Drawing.Size(180, 32);
+            this.btnAddAddon.TabIndex = 51;
+            this.btnAddAddon.Text = "ADD";
+            this.btnAddAddon.TextOffset = new System.Drawing.Point(7, -11);
+            // 
+            // btnAddSave
+            // 
+            this.btnAddSave.BackColor = System.Drawing.Color.Transparent;
+            this.btnAddSave.BorderRadius = 15;
+            this.btnAddSave.CheckedState.Parent = this.btnAddSave;
+            this.btnAddSave.CustomImages.Parent = this.btnAddSave;
+            this.btnAddSave.FillColor = System.Drawing.Color.Black;
+            this.btnAddSave.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnAddSave.Font = new System.Drawing.Font("Adobe Fan Heiti Std B", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddSave.ForeColor = System.Drawing.Color.White;
+            this.btnAddSave.HoverState.Parent = this.btnAddSave;
+            this.btnAddSave.Image = global::PrjOverhaulHotel.Properties.Resources.check;
+            this.btnAddSave.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnAddSave.ImageOffset = new System.Drawing.Point(5, 12);
+            this.btnAddSave.Location = new System.Drawing.Point(624, 242);
+            this.btnAddSave.Name = "btnAddSave";
+            this.btnAddSave.ShadowDecoration.Parent = this.btnAddSave;
+            this.btnAddSave.Size = new System.Drawing.Size(180, 32);
+            this.btnAddSave.TabIndex = 55;
+            this.btnAddSave.Text = "SAVE";
+            this.btnAddSave.TextOffset = new System.Drawing.Point(7, -11);
+            // 
+            // btnEditAddon
+            // 
+            this.btnEditAddon.BackColor = System.Drawing.Color.Transparent;
+            this.btnEditAddon.BorderRadius = 15;
+            this.btnEditAddon.CheckedState.Parent = this.btnEditAddon;
+            this.btnEditAddon.CustomImages.Parent = this.btnEditAddon;
+            this.btnEditAddon.FillColor = System.Drawing.Color.Black;
+            this.btnEditAddon.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnEditAddon.Font = new System.Drawing.Font("Adobe Fan Heiti Std B", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEditAddon.ForeColor = System.Drawing.Color.White;
+            this.btnEditAddon.HoverState.Parent = this.btnEditAddon;
+            this.btnEditAddon.Image = global::PrjOverhaulHotel.Properties.Resources.bolt;
+            this.btnEditAddon.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnEditAddon.ImageOffset = new System.Drawing.Point(5, 12);
+            this.btnEditAddon.Location = new System.Drawing.Point(624, 282);
+            this.btnEditAddon.Name = "btnEditAddon";
+            this.btnEditAddon.ShadowDecoration.Parent = this.btnEditAddon;
+            this.btnEditAddon.Size = new System.Drawing.Size(180, 32);
+            this.btnEditAddon.TabIndex = 52;
+            this.btnEditAddon.Text = "EDIT";
+            this.btnEditAddon.TextOffset = new System.Drawing.Point(7, -11);
+            // 
+            // btnEditSave
+            // 
+            this.btnEditSave.BackColor = System.Drawing.Color.Transparent;
+            this.btnEditSave.BorderRadius = 15;
+            this.btnEditSave.CheckedState.Parent = this.btnEditSave;
+            this.btnEditSave.CustomImages.Parent = this.btnEditSave;
+            this.btnEditSave.FillColor = System.Drawing.Color.Black;
+            this.btnEditSave.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnEditSave.Font = new System.Drawing.Font("Adobe Fan Heiti Std B", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEditSave.ForeColor = System.Drawing.Color.White;
+            this.btnEditSave.HoverState.Parent = this.btnEditSave;
+            this.btnEditSave.Image = global::PrjOverhaulHotel.Properties.Resources.check;
+            this.btnEditSave.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnEditSave.ImageOffset = new System.Drawing.Point(5, 12);
+            this.btnEditSave.Location = new System.Drawing.Point(624, 282);
+            this.btnEditSave.Name = "btnEditSave";
+            this.btnEditSave.ShadowDecoration.Parent = this.btnEditSave;
+            this.btnEditSave.Size = new System.Drawing.Size(180, 32);
+            this.btnEditSave.TabIndex = 54;
+            this.btnEditSave.Text = "SAVE";
+            this.btnEditSave.TextOffset = new System.Drawing.Point(7, -11);
+            // 
+            // pnlAdd
+            // 
+            this.pnlAdd.BackColor = System.Drawing.Color.Transparent;
+            this.pnlAdd.BorderColor = System.Drawing.Color.Black;
+            this.pnlAdd.BorderRadius = 15;
+            this.pnlAdd.BorderThickness = 2;
+            this.pnlAdd.Controls.Add(this.txtAddDescription);
+            this.pnlAdd.Controls.Add(this.txtAddPrice);
+            this.pnlAdd.Controls.Add(this.txtAddAddonname);
+            this.pnlAdd.FillColor = System.Drawing.Color.White;
+            this.pnlAdd.Location = new System.Drawing.Point(552, 71);
+            this.pnlAdd.Name = "pnlAdd";
+            this.pnlAdd.ShadowDecoration.Parent = this.pnlAdd;
+            this.pnlAdd.Size = new System.Drawing.Size(315, 156);
+            this.pnlAdd.TabIndex = 58;
+            // 
+            // txtAddDescription
+            // 
+            this.txtAddDescription.BackColor = System.Drawing.Color.Transparent;
+            this.txtAddDescription.BorderColor = System.Drawing.Color.Black;
+            this.txtAddDescription.BorderRadius = 12;
+            this.txtAddDescription.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtAddDescription.DefaultText = "";
+            this.txtAddDescription.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtAddDescription.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtAddDescription.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtAddDescription.DisabledState.Parent = this.txtAddDescription;
+            this.txtAddDescription.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtAddDescription.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtAddDescription.FocusedState.Parent = this.txtAddDescription;
+            this.txtAddDescription.Font = new System.Drawing.Font("Microsoft New Tai Lue", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtAddDescription.ForeColor = System.Drawing.Color.Black;
+            this.txtAddDescription.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(154)))), ((int)(((byte)(136)))));
+            this.txtAddDescription.HoverState.Parent = this.txtAddDescription;
+            this.txtAddDescription.IconLeftOffset = new System.Drawing.Point(5, 0);
+            this.txtAddDescription.Location = new System.Drawing.Point(15, 92);
+            this.txtAddDescription.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtAddDescription.Name = "txtAddDescription";
+            this.txtAddDescription.PasswordChar = '\0';
+            this.txtAddDescription.PlaceholderText = "Description";
+            this.txtAddDescription.SelectedText = "";
+            this.txtAddDescription.ShadowDecoration.Parent = this.txtAddDescription;
+            this.txtAddDescription.Size = new System.Drawing.Size(284, 48);
+            this.txtAddDescription.TabIndex = 18;
+            this.txtAddDescription.TextOffset = new System.Drawing.Point(10, 0);
+            // 
+            // txtAddPrice
+            // 
+            this.txtAddPrice.BackColor = System.Drawing.Color.Transparent;
+            this.txtAddPrice.BorderColor = System.Drawing.Color.Black;
+            this.txtAddPrice.BorderRadius = 12;
+            this.txtAddPrice.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtAddPrice.DefaultText = "";
+            this.txtAddPrice.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtAddPrice.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtAddPrice.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtAddPrice.DisabledState.Parent = this.txtAddPrice;
+            this.txtAddPrice.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtAddPrice.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtAddPrice.FocusedState.Parent = this.txtAddPrice;
+            this.txtAddPrice.Font = new System.Drawing.Font("Microsoft New Tai Lue", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtAddPrice.ForeColor = System.Drawing.Color.Black;
+            this.txtAddPrice.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(154)))), ((int)(((byte)(136)))));
+            this.txtAddPrice.HoverState.Parent = this.txtAddPrice;
+            this.txtAddPrice.IconLeftOffset = new System.Drawing.Point(5, 0);
+            this.txtAddPrice.Location = new System.Drawing.Point(15, 52);
+            this.txtAddPrice.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtAddPrice.Name = "txtAddPrice";
+            this.txtAddPrice.PasswordChar = '\0';
+            this.txtAddPrice.PlaceholderText = "Price";
+            this.txtAddPrice.ReadOnly = true;
+            this.txtAddPrice.SelectedText = "";
+            this.txtAddPrice.ShadowDecoration.Parent = this.txtAddPrice;
+            this.txtAddPrice.Size = new System.Drawing.Size(284, 30);
+            this.txtAddPrice.TabIndex = 16;
+            this.txtAddPrice.TextOffset = new System.Drawing.Point(10, 0);
+            // 
+            // txtAddAddonname
+            // 
+            this.txtAddAddonname.BackColor = System.Drawing.Color.Transparent;
+            this.txtAddAddonname.BorderColor = System.Drawing.Color.Black;
+            this.txtAddAddonname.BorderRadius = 12;
+            this.txtAddAddonname.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtAddAddonname.DefaultText = "";
+            this.txtAddAddonname.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtAddAddonname.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtAddAddonname.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtAddAddonname.DisabledState.Parent = this.txtAddAddonname;
+            this.txtAddAddonname.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtAddAddonname.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtAddAddonname.FocusedState.Parent = this.txtAddAddonname;
+            this.txtAddAddonname.Font = new System.Drawing.Font("Microsoft New Tai Lue", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtAddAddonname.ForeColor = System.Drawing.Color.Black;
+            this.txtAddAddonname.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(154)))), ((int)(((byte)(136)))));
+            this.txtAddAddonname.HoverState.Parent = this.txtAddAddonname;
+            this.txtAddAddonname.IconLeftOffset = new System.Drawing.Point(5, 0);
+            this.txtAddAddonname.Location = new System.Drawing.Point(15, 18);
+            this.txtAddAddonname.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtAddAddonname.Name = "txtAddAddonname";
+            this.txtAddAddonname.PasswordChar = '\0';
+            this.txtAddAddonname.PlaceholderText = "Addon Name";
+            this.txtAddAddonname.ReadOnly = true;
+            this.txtAddAddonname.SelectedText = "";
+            this.txtAddAddonname.ShadowDecoration.Parent = this.txtAddAddonname;
+            this.txtAddAddonname.Size = new System.Drawing.Size(284, 30);
+            this.txtAddAddonname.TabIndex = 14;
+            this.txtAddAddonname.TextOffset = new System.Drawing.Point(10, 0);
+            // 
+            // pnlDetails
+            // 
+            this.pnlDetails.BackColor = System.Drawing.Color.Transparent;
+            this.pnlDetails.BorderColor = System.Drawing.Color.Black;
+            this.pnlDetails.BorderRadius = 15;
+            this.pnlDetails.BorderThickness = 2;
+            this.pnlDetails.Controls.Add(this.lblDescription);
+            this.pnlDetails.Controls.Add(this.txtPrice);
+            this.pnlDetails.Controls.Add(this.txtAddonName);
+            this.pnlDetails.FillColor = System.Drawing.Color.White;
+            this.pnlDetails.Location = new System.Drawing.Point(552, 71);
+            this.pnlDetails.Name = "pnlDetails";
+            this.pnlDetails.ShadowDecoration.Parent = this.pnlDetails;
+            this.pnlDetails.Size = new System.Drawing.Size(315, 156);
+            this.pnlDetails.TabIndex = 57;
+            // 
+            // lblDescription
+            // 
+            this.lblDescription.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lblDescription.Font = new System.Drawing.Font("Microsoft New Tai Lue", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDescription.Location = new System.Drawing.Point(15, 91);
+            this.lblDescription.Name = "lblDescription";
+            this.lblDescription.Size = new System.Drawing.Size(284, 47);
+            this.lblDescription.TabIndex = 17;
+            this.lblDescription.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // txtPrice
+            // 
+            this.txtPrice.BackColor = System.Drawing.Color.Transparent;
+            this.txtPrice.BorderColor = System.Drawing.Color.Black;
+            this.txtPrice.BorderRadius = 12;
+            this.txtPrice.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtPrice.DefaultText = "";
+            this.txtPrice.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtPrice.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtPrice.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtPrice.DisabledState.Parent = this.txtPrice;
+            this.txtPrice.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtPrice.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtPrice.FocusedState.Parent = this.txtPrice;
+            this.txtPrice.Font = new System.Drawing.Font("Microsoft New Tai Lue", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPrice.ForeColor = System.Drawing.Color.Black;
+            this.txtPrice.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(154)))), ((int)(((byte)(136)))));
+            this.txtPrice.HoverState.Parent = this.txtPrice;
+            this.txtPrice.IconLeftOffset = new System.Drawing.Point(5, 0);
+            this.txtPrice.Location = new System.Drawing.Point(15, 52);
+            this.txtPrice.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtPrice.Name = "txtPrice";
+            this.txtPrice.PasswordChar = '\0';
+            this.txtPrice.PlaceholderText = "Price";
+            this.txtPrice.ReadOnly = true;
+            this.txtPrice.SelectedText = "";
+            this.txtPrice.ShadowDecoration.Parent = this.txtPrice;
+            this.txtPrice.Size = new System.Drawing.Size(284, 30);
+            this.txtPrice.TabIndex = 16;
+            this.txtPrice.TextOffset = new System.Drawing.Point(10, 0);
+            // 
+            // txtAddonName
+            // 
+            this.txtAddonName.BackColor = System.Drawing.Color.Transparent;
+            this.txtAddonName.BorderColor = System.Drawing.Color.Black;
+            this.txtAddonName.BorderRadius = 12;
+            this.txtAddonName.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtAddonName.DefaultText = "";
+            this.txtAddonName.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtAddonName.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtAddonName.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtAddonName.DisabledState.Parent = this.txtAddonName;
+            this.txtAddonName.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtAddonName.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtAddonName.FocusedState.Parent = this.txtAddonName;
+            this.txtAddonName.Font = new System.Drawing.Font("Microsoft New Tai Lue", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtAddonName.ForeColor = System.Drawing.Color.Black;
+            this.txtAddonName.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(154)))), ((int)(((byte)(136)))));
+            this.txtAddonName.HoverState.Parent = this.txtAddonName;
+            this.txtAddonName.IconLeftOffset = new System.Drawing.Point(5, 0);
+            this.txtAddonName.Location = new System.Drawing.Point(15, 18);
+            this.txtAddonName.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtAddonName.Name = "txtAddonName";
+            this.txtAddonName.PasswordChar = '\0';
+            this.txtAddonName.PlaceholderText = "Addon Name";
+            this.txtAddonName.ReadOnly = true;
+            this.txtAddonName.SelectedText = "";
+            this.txtAddonName.ShadowDecoration.Parent = this.txtAddonName;
+            this.txtAddonName.Size = new System.Drawing.Size(284, 30);
+            this.txtAddonName.TabIndex = 14;
+            this.txtAddonName.TextOffset = new System.Drawing.Point(10, 0);
+            // 
+            // pnlPreview
+            // 
+            this.pnlPreview.BackColor = System.Drawing.Color.Transparent;
+            this.pnlPreview.BackgroundImage = global::PrjOverhaulHotel.Properties.Resources.Group_282;
+            this.pnlPreview.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pnlPreview.Controls.Add(this.label1);
+            this.pnlPreview.Location = new System.Drawing.Point(66, 119);
+            this.pnlPreview.Name = "pnlPreview";
+            this.pnlPreview.ShadowDecoration.Parent = this.pnlPreview;
+            this.pnlPreview.Size = new System.Drawing.Size(927, 501);
+            this.pnlPreview.TabIndex = 60;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Myriad Pro Cond", 26.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(253, 175);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(431, 126);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Please make a reservation through \r\nthe dashboard to access our hotel \r\nadd-ons. " +
+    "Thank you!";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // FrmGuestAP
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1084,6 +980,7 @@
             this.Controls.Add(this.guna2CustomGradientPanel1);
             this.Controls.Add(this.btnProfile);
             this.Controls.Add(this.pnlAP);
+            this.Controls.Add(this.pnlPreview);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FrmGuestAP";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -1095,11 +992,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.pnlButtons.ResumeLayout(false);
             this.pnlAP.ResumeLayout(false);
-            this.pnlAP.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dtgPromo)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dtgAddons)).EndInit();
             this.btnProfile.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.imgProfile)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgAddons)).EndInit();
+            this.pnlEdit.ResumeLayout(false);
+            this.pnlAdd.ResumeLayout(false);
+            this.pnlDetails.ResumeLayout(false);
+            this.pnlPreview.ResumeLayout(false);
+            this.pnlPreview.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1122,47 +1022,34 @@
         private Guna.UI2.WinForms.Guna2VSeparator guna2VSeparator2;
         private System.Windows.Forms.Label lblTitle;
         private Guna.UI2.WinForms.Guna2Panel pnlAP;
-        private System.Windows.Forms.DataGridView dtgPromo;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
-        private System.Windows.Forms.DataGridView dtgAddons;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
-        private System.Windows.Forms.Label lblTotalPromo;
-        private System.Windows.Forms.Label lblTotalAddon;
-        private Guna.UI2.WinForms.Guna2GradientTileButton btnPromoDelete;
-        private Guna.UI2.WinForms.Guna2GradientTileButton btnPromoManage;
-        private Guna.UI2.WinForms.Guna2GradientTileButton btnPromoAdd;
-        private Guna.UI2.WinForms.Guna2GradientTileButton btnAddonDelete;
-        private Guna.UI2.WinForms.Guna2GradientTileButton btnAddonManage;
-        private Guna.UI2.WinForms.Guna2GradientTileButton btnAddonAdd;
-        private Guna.UI2.WinForms.Guna2VSeparator guna2VSeparator1;
-        private Guna.UI2.WinForms.Guna2Separator guna2Separator11;
-        private Guna.UI2.WinForms.Guna2TextBox txtSearchPromo;
-        private Guna.UI2.WinForms.Guna2TextBox txtSearchAddon;
-        private System.Windows.Forms.Label lblPromoDescription;
-        private Guna.UI2.WinForms.Guna2TextBox txtPromoDiscount;
-        private Guna.UI2.WinForms.Guna2TextBox txtPromoName;
-        private System.Windows.Forms.Label label28;
-        private System.Windows.Forms.Label label29;
-        private System.Windows.Forms.Label label30;
-        private System.Windows.Forms.Label lblAddonDescription;
-        private Guna.UI2.WinForms.Guna2TextBox txtAddonPrice;
-        private Guna.UI2.WinForms.Guna2TextBox txtAddonName;
-        private System.Windows.Forms.Label label23;
-        private System.Windows.Forms.Label label24;
-        private System.Windows.Forms.Label label25;
-        private System.Windows.Forms.Label label22;
-        private System.Windows.Forms.Label label21;
-        private System.Windows.Forms.Label label31;
-        private System.Windows.Forms.Label label32;
         private Guna.UI2.WinForms.Guna2CustomGradientPanel btnProfile;
         private Guna.UI2.WinForms.Guna2CirclePictureBox imgProfile;
         private System.Windows.Forms.Label lblName;
         private System.Windows.Forms.Label lblPosition;
+        private Guna.UI2.WinForms.Guna2Panel pnlPreview;
+        private System.Windows.Forms.Label label1;
+        private Guna.UI2.WinForms.Guna2GradientTileButton btnCancel;
+        private Guna.UI2.WinForms.Guna2GradientTileButton btnDeleteAddon;
+        private System.Windows.Forms.DataGridView dtgAddons;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
+        private Guna.UI2.WinForms.Guna2Panel pnlEdit;
+        private Guna.UI2.WinForms.Guna2TextBox txtEditDescription;
+        private Guna.UI2.WinForms.Guna2TextBox txtEditPrice;
+        private Guna.UI2.WinForms.Guna2TextBox txtEditAddonname;
+        private Guna.UI2.WinForms.Guna2GradientTileButton btnAddAddon;
+        private Guna.UI2.WinForms.Guna2GradientTileButton btnAddSave;
+        private Guna.UI2.WinForms.Guna2GradientTileButton btnEditAddon;
+        private Guna.UI2.WinForms.Guna2GradientTileButton btnEditSave;
+        private Guna.UI2.WinForms.Guna2Panel pnlAdd;
+        private Guna.UI2.WinForms.Guna2TextBox txtAddDescription;
+        private Guna.UI2.WinForms.Guna2TextBox txtAddPrice;
+        private Guna.UI2.WinForms.Guna2TextBox txtAddAddonname;
+        private Guna.UI2.WinForms.Guna2Panel pnlDetails;
+        private System.Windows.Forms.Label lblDescription;
+        private Guna.UI2.WinForms.Guna2TextBox txtPrice;
+        private Guna.UI2.WinForms.Guna2TextBox txtAddonName;
     }
 }

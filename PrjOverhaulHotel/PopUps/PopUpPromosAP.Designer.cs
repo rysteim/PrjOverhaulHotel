@@ -35,11 +35,15 @@
             this.txtDescription = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtPromoDiscount = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtPromoName = new Guna.UI2.WinForms.Guna2TextBox();
-            this.btnAddPromo = new Guna.UI2.WinForms.Guna2GradientTileButton();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.btnSavePromo = new Guna.UI2.WinForms.Guna2GradientTileButton();
+            this.btnAddPromo = new Guna.UI2.WinForms.Guna2GradientTileButton();
+            this.label4 = new System.Windows.Forms.Label();
+            this.dtmStart = new Guna.UI2.WinForms.Guna2DateTimePicker();
+            this.dtmEnd = new Guna.UI2.WinForms.Guna2DateTimePicker();
+            this.label5 = new System.Windows.Forms.Label();
             this.pnlLogin.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -52,6 +56,10 @@
             this.pnlLogin.BackgroundImage = global::PrjOverhaulHotel.Properties.Resources.Rectangle_13__2_;
             this.pnlLogin.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pnlLogin.BorderColor = System.Drawing.Color.Black;
+            this.pnlLogin.Controls.Add(this.dtmEnd);
+            this.pnlLogin.Controls.Add(this.label5);
+            this.pnlLogin.Controls.Add(this.dtmStart);
+            this.pnlLogin.Controls.Add(this.label4);
             this.pnlLogin.Controls.Add(this.btnCancel);
             this.pnlLogin.Controls.Add(this.txtDescription);
             this.pnlLogin.Controls.Add(this.txtPromoDiscount);
@@ -64,7 +72,7 @@
             this.pnlLogin.Location = new System.Drawing.Point(12, 12);
             this.pnlLogin.Name = "pnlLogin";
             this.pnlLogin.ShadowDecoration.Parent = this.pnlLogin;
-            this.pnlLogin.Size = new System.Drawing.Size(397, 426);
+            this.pnlLogin.Size = new System.Drawing.Size(397, 572);
             this.pnlLogin.TabIndex = 15;
             // 
             // btnCancel
@@ -80,7 +88,7 @@
             this.btnCancel.HoverState.Parent = this.btnCancel;
             this.btnCancel.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnCancel.ImageOffset = new System.Drawing.Point(5, 13);
-            this.btnCancel.Location = new System.Drawing.Point(101, 379);
+            this.btnCancel.Location = new System.Drawing.Point(101, 522);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.ShadowDecoration.Parent = this.btnCancel;
             this.btnCancel.Size = new System.Drawing.Size(98, 32);
@@ -170,29 +178,6 @@
             this.txtPromoName.TabIndex = 49;
             this.txtPromoName.TextOffset = new System.Drawing.Point(10, 0);
             // 
-            // btnAddPromo
-            // 
-            this.btnAddPromo.BackColor = System.Drawing.Color.Transparent;
-            this.btnAddPromo.BorderRadius = 15;
-            this.btnAddPromo.CheckedState.Parent = this.btnAddPromo;
-            this.btnAddPromo.CustomImages.Parent = this.btnAddPromo;
-            this.btnAddPromo.FillColor = System.Drawing.Color.Black;
-            this.btnAddPromo.FillColor2 = System.Drawing.Color.Teal;
-            this.btnAddPromo.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAddPromo.ForeColor = System.Drawing.Color.White;
-            this.btnAddPromo.HoverState.Parent = this.btnAddPromo;
-            this.btnAddPromo.Image = global::PrjOverhaulHotel.Properties.Resources.plus;
-            this.btnAddPromo.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnAddPromo.ImageOffset = new System.Drawing.Point(5, 13);
-            this.btnAddPromo.Location = new System.Drawing.Point(205, 379);
-            this.btnAddPromo.Name = "btnAddPromo";
-            this.btnAddPromo.ShadowDecoration.Parent = this.btnAddPromo;
-            this.btnAddPromo.Size = new System.Drawing.Size(180, 32);
-            this.btnAddPromo.TabIndex = 38;
-            this.btnAddPromo.Text = "ADD";
-            this.btnAddPromo.TextOffset = new System.Drawing.Point(7, -13);
-            this.btnAddPromo.Click += new System.EventHandler(this.btnAddPromo_Click);
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -240,7 +225,7 @@
             this.btnSavePromo.Image = global::PrjOverhaulHotel.Properties.Resources.check;
             this.btnSavePromo.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnSavePromo.ImageOffset = new System.Drawing.Point(5, 13);
-            this.btnSavePromo.Location = new System.Drawing.Point(205, 379);
+            this.btnSavePromo.Location = new System.Drawing.Point(205, 522);
             this.btnSavePromo.Name = "btnSavePromo";
             this.btnSavePromo.ShadowDecoration.Parent = this.btnSavePromo;
             this.btnSavePromo.Size = new System.Drawing.Size(180, 32);
@@ -249,12 +234,93 @@
             this.btnSavePromo.TextOffset = new System.Drawing.Point(7, -13);
             this.btnSavePromo.Click += new System.EventHandler(this.btnSaveAddon_Click);
             // 
+            // btnAddPromo
+            // 
+            this.btnAddPromo.BackColor = System.Drawing.Color.Transparent;
+            this.btnAddPromo.BorderRadius = 15;
+            this.btnAddPromo.CheckedState.Parent = this.btnAddPromo;
+            this.btnAddPromo.CustomImages.Parent = this.btnAddPromo;
+            this.btnAddPromo.FillColor = System.Drawing.Color.Black;
+            this.btnAddPromo.FillColor2 = System.Drawing.Color.Teal;
+            this.btnAddPromo.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddPromo.ForeColor = System.Drawing.Color.White;
+            this.btnAddPromo.HoverState.Parent = this.btnAddPromo;
+            this.btnAddPromo.Image = global::PrjOverhaulHotel.Properties.Resources.plus;
+            this.btnAddPromo.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnAddPromo.ImageOffset = new System.Drawing.Point(5, 13);
+            this.btnAddPromo.Location = new System.Drawing.Point(205, 522);
+            this.btnAddPromo.Name = "btnAddPromo";
+            this.btnAddPromo.ShadowDecoration.Parent = this.btnAddPromo;
+            this.btnAddPromo.Size = new System.Drawing.Size(180, 32);
+            this.btnAddPromo.TabIndex = 38;
+            this.btnAddPromo.Text = "ADD";
+            this.btnAddPromo.TextOffset = new System.Drawing.Point(7, -13);
+            this.btnAddPromo.Click += new System.EventHandler(this.btnAddPromo_Click);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.Transparent;
+            this.label4.Font = new System.Drawing.Font("Microsoft New Tai Lue", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(28, 378);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(79, 20);
+            this.label4.TabIndex = 57;
+            this.label4.Text = "Date Start:";
+            // 
+            // dtmStart
+            // 
+            this.dtmStart.BackColor = System.Drawing.Color.Transparent;
+            this.dtmStart.BorderRadius = 15;
+            this.dtmStart.CheckedState.Parent = this.dtmStart;
+            this.dtmStart.FillColor = System.Drawing.Color.White;
+            this.dtmStart.Font = new System.Drawing.Font("Microsoft New Tai Lue", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtmStart.Format = System.Windows.Forms.DateTimePickerFormat.Long;
+            this.dtmStart.HoverState.Parent = this.dtmStart;
+            this.dtmStart.Location = new System.Drawing.Point(19, 397);
+            this.dtmStart.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
+            this.dtmStart.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
+            this.dtmStart.Name = "dtmStart";
+            this.dtmStart.ShadowDecoration.Parent = this.dtmStart;
+            this.dtmStart.Size = new System.Drawing.Size(366, 36);
+            this.dtmStart.TabIndex = 58;
+            this.dtmStart.Value = new System.DateTime(2024, 10, 31, 18, 33, 6, 824);
+            // 
+            // dtmEnd
+            // 
+            this.dtmEnd.BackColor = System.Drawing.Color.Transparent;
+            this.dtmEnd.BorderRadius = 15;
+            this.dtmEnd.CheckedState.Parent = this.dtmEnd;
+            this.dtmEnd.FillColor = System.Drawing.Color.White;
+            this.dtmEnd.Font = new System.Drawing.Font("Microsoft New Tai Lue", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtmEnd.Format = System.Windows.Forms.DateTimePickerFormat.Long;
+            this.dtmEnd.HoverState.Parent = this.dtmEnd;
+            this.dtmEnd.Location = new System.Drawing.Point(19, 463);
+            this.dtmEnd.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
+            this.dtmEnd.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
+            this.dtmEnd.Name = "dtmEnd";
+            this.dtmEnd.ShadowDecoration.Parent = this.dtmEnd;
+            this.dtmEnd.Size = new System.Drawing.Size(366, 36);
+            this.dtmEnd.TabIndex = 60;
+            this.dtmEnd.Value = new System.DateTime(2024, 10, 31, 18, 33, 6, 824);
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.Color.Transparent;
+            this.label5.Font = new System.Drawing.Font("Microsoft New Tai Lue", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(28, 444);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(73, 20);
+            this.label5.TabIndex = 59;
+            this.label5.Text = "Date End:";
+            // 
             // PopUpPromosAP
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.ClientSize = new System.Drawing.Size(421, 450);
+            this.ClientSize = new System.Drawing.Size(421, 596);
             this.Controls.Add(this.pnlLogin);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "PopUpPromosAP";
@@ -280,5 +346,9 @@
         private System.Windows.Forms.Label label2;
         private Guna.UI2.WinForms.Guna2GradientTileButton btnCancel;
         private Guna.UI2.WinForms.Guna2GradientTileButton btnSavePromo;
+        private System.Windows.Forms.Label label4;
+        private Guna.UI2.WinForms.Guna2DateTimePicker dtmStart;
+        private Guna.UI2.WinForms.Guna2DateTimePicker dtmEnd;
+        private System.Windows.Forms.Label label5;
     }
 }

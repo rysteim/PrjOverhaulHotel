@@ -242,7 +242,7 @@ namespace PrjOverhaulHotel
             txtEmailadd.ReadOnly = true;
             txtAddress.ReadOnly = true;
 
-            UserAccount.setProfile(txtFirstname.Text, role, imagePath);
+            UserAccount.setProfile(txtFirstname.Text, imagePath);
 
             displayDetails();
             displayProfile();

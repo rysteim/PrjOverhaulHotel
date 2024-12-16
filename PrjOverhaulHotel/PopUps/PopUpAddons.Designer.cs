@@ -29,18 +29,18 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.pnlLogin = new Guna.UI2.WinForms.Guna2Panel();
             this.btnCancel = new Guna.UI2.WinForms.Guna2GradientTileButton();
             this.dtgAddons = new System.Windows.Forms.DataGridView();
-            this.btnAddAddon = new Guna.UI2.WinForms.Guna2GradientTileButton();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnAddAddon = new Guna.UI2.WinForms.Guna2GradientTileButton();
             this.pnlLogin.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgAddons)).BeginInit();
             this.SuspendLayout();
@@ -71,19 +71,19 @@
             this.btnCancel.CustomImages.Parent = this.btnCancel;
             this.btnCancel.FillColor = System.Drawing.Color.Black;
             this.btnCancel.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.btnCancel.Font = new System.Drawing.Font("Adobe Fan Heiti Std B", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancel.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancel.ForeColor = System.Drawing.Color.White;
             this.btnCancel.HoverState.Parent = this.btnCancel;
             this.btnCancel.Image = global::PrjOverhaulHotel.Properties.Resources.ban;
             this.btnCancel.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnCancel.ImageOffset = new System.Drawing.Point(5, 12);
+            this.btnCancel.ImageOffset = new System.Drawing.Point(5, 13);
             this.btnCancel.Location = new System.Drawing.Point(453, 357);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.ShadowDecoration.Parent = this.btnCancel;
             this.btnCancel.Size = new System.Drawing.Size(180, 32);
             this.btnCancel.TabIndex = 47;
             this.btnCancel.Text = "CANCEL";
-            this.btnCancel.TextOffset = new System.Drawing.Point(7, -11);
+            this.btnCancel.TextOffset = new System.Drawing.Point(7, -13);
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // dtgAddons
@@ -92,14 +92,14 @@
             this.dtgAddons.AllowUserToDeleteRows = false;
             this.dtgAddons.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
             this.dtgAddons.BackgroundColor = System.Drawing.Color.White;
-            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle10.BackColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle10.Font = new System.Drawing.Font("Microsoft New Tai Lue", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle10.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(135)))), ((int)(((byte)(97)))));
-            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dtgAddons.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft New Tai Lue", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(135)))), ((int)(((byte)(97)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dtgAddons.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dtgAddons.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtgAddons.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
@@ -113,45 +113,22 @@
             this.dtgAddons.Name = "dtgAddons";
             this.dtgAddons.ReadOnly = true;
             this.dtgAddons.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken;
-            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle11.BackColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle11.Font = new System.Drawing.Font("Microsoft New Tai Lue", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle11.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(135)))), ((int)(((byte)(97)))));
-            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dtgAddons.RowHeadersDefaultCellStyle = dataGridViewCellStyle11;
-            dataGridViewCellStyle12.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle12.Font = new System.Drawing.Font("Microsoft New Tai Lue", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle12.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(135)))), ((int)(((byte)(97)))));
-            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.Color.White;
-            this.dtgAddons.RowsDefaultCellStyle = dataGridViewCellStyle12;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft New Tai Lue", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(135)))), ((int)(((byte)(97)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dtgAddons.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft New Tai Lue", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(135)))), ((int)(((byte)(97)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
+            this.dtgAddons.RowsDefaultCellStyle = dataGridViewCellStyle3;
             this.dtgAddons.Size = new System.Drawing.Size(608, 328);
             this.dtgAddons.TabIndex = 46;
-            // 
-            // btnAddAddon
-            // 
-            this.btnAddAddon.BackColor = System.Drawing.Color.Transparent;
-            this.btnAddAddon.BorderRadius = 15;
-            this.btnAddAddon.CheckedState.Parent = this.btnAddAddon;
-            this.btnAddAddon.CustomImages.Parent = this.btnAddAddon;
-            this.btnAddAddon.FillColor = System.Drawing.Color.Black;
-            this.btnAddAddon.FillColor2 = System.Drawing.Color.Teal;
-            this.btnAddAddon.Font = new System.Drawing.Font("Adobe Fan Heiti Std B", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAddAddon.ForeColor = System.Drawing.Color.White;
-            this.btnAddAddon.HoverState.Parent = this.btnAddAddon;
-            this.btnAddAddon.Image = global::PrjOverhaulHotel.Properties.Resources.plus;
-            this.btnAddAddon.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnAddAddon.ImageOffset = new System.Drawing.Point(5, 12);
-            this.btnAddAddon.Location = new System.Drawing.Point(267, 357);
-            this.btnAddAddon.Name = "btnAddAddon";
-            this.btnAddAddon.ShadowDecoration.Parent = this.btnAddAddon;
-            this.btnAddAddon.Size = new System.Drawing.Size(180, 32);
-            this.btnAddAddon.TabIndex = 38;
-            this.btnAddAddon.Text = "ADD";
-            this.btnAddAddon.TextOffset = new System.Drawing.Point(7, -11);
-            this.btnAddAddon.Click += new System.EventHandler(this.btnAddAddon_Click);
             // 
             // Column1
             // 
@@ -183,6 +160,29 @@
             this.Column6.HeaderText = "Price";
             this.Column6.Name = "Column6";
             this.Column6.ReadOnly = true;
+            // 
+            // btnAddAddon
+            // 
+            this.btnAddAddon.BackColor = System.Drawing.Color.Transparent;
+            this.btnAddAddon.BorderRadius = 15;
+            this.btnAddAddon.CheckedState.Parent = this.btnAddAddon;
+            this.btnAddAddon.CustomImages.Parent = this.btnAddAddon;
+            this.btnAddAddon.FillColor = System.Drawing.Color.Black;
+            this.btnAddAddon.FillColor2 = System.Drawing.Color.Teal;
+            this.btnAddAddon.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddAddon.ForeColor = System.Drawing.Color.White;
+            this.btnAddAddon.HoverState.Parent = this.btnAddAddon;
+            this.btnAddAddon.Image = global::PrjOverhaulHotel.Properties.Resources.plus;
+            this.btnAddAddon.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnAddAddon.ImageOffset = new System.Drawing.Point(5, 13);
+            this.btnAddAddon.Location = new System.Drawing.Point(267, 357);
+            this.btnAddAddon.Name = "btnAddAddon";
+            this.btnAddAddon.ShadowDecoration.Parent = this.btnAddAddon;
+            this.btnAddAddon.Size = new System.Drawing.Size(180, 32);
+            this.btnAddAddon.TabIndex = 38;
+            this.btnAddAddon.Text = "ADD";
+            this.btnAddAddon.TextOffset = new System.Drawing.Point(7, -13);
+            this.btnAddAddon.Click += new System.EventHandler(this.btnAddAddon_Click);
             // 
             // PopUpAddons
             // 

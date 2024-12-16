@@ -228,7 +228,7 @@ namespace PrjOverhaulHotel.Form_for_Guests
             txtEmailadd.ReadOnly = true;
             txtAddress.ReadOnly = true;
 
-            UserAccount.setProfile(txtFirstname.Text, role, imagePath);
+            UserAccount.setProfile(txtFirstname.Text, imagePath);
 
             displayDetails();
             displayProfile();

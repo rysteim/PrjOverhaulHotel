@@ -37,7 +37,7 @@ namespace PrjOverhaulHotel.PopUps
 
         private void displayPromos()
         {
-            GlobalProcedure.procPromoData();
+            GlobalProcedure.procPromoActiveData();
             if (GlobalProcedure.datHotel.Rows.Count > 0)
             {
                 dtgPromos.Rows.Clear();

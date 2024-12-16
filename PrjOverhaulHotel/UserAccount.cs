@@ -64,10 +64,9 @@ namespace PrjOverhaulHotel
             accountID = newID;
         }
 
-        public static void setProfile(string newFirstName, string newRole, string image)
+        public static void setProfile(string newFirstName, string image)
         {
             firstName = newFirstName;
-            role = newRole;
             imageLoc = image;
         }
 
@@ -79,6 +78,11 @@ namespace PrjOverhaulHotel
         public static string getRole()
         {
             return role;
+        }
+
+        public static void setRole(string newRole)
+        {
+            role = newRole;
         }
 
         public static string getImage()

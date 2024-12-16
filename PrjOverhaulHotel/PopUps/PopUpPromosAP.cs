@@ -32,14 +32,15 @@ namespace PrjOverhaulHotel.PopUps
         private void btnAddPromo_Click(object sender, EventArgs e)
         {
             GlobalProcedure.procPromoAdd(txtPromoName.Text, Convert.ToDouble(txtPromoDiscount.Text),
-                txtDescription.Text);
+                txtDescription.Text, dtmStart.Value, dtmEnd.Value);
             this.Close();
         }
 
         private void btnSaveAddon_Click(object sender, EventArgs e)
         {
             GlobalProcedure.procPromoUpdate(promoID, txtPromoName.Text,
-                Convert.ToDouble(txtPromoDiscount.Text), txtDescription.Text);
+                Convert.ToDouble(txtPromoDiscount.Text), txtDescription.Text, 
+                dtmStart.Value, dtmEnd.Value);
             this.Close();
         }
 
@@ -64,6 +65,8 @@ namespace PrjOverhaulHotel.PopUps
                 txtPromoName.Text = GlobalProcedure.datHotel.Rows[0]["promoName"].ToString();
                 txtPromoDiscount.Text = GlobalProcedure.datHotel.Rows[0]["discount"].ToString();
                 txtDescription.Text = GlobalProcedure.datHotel.Rows[0]["description"].ToString();
+                dtmStart.Value = Convert.ToDateTime(GlobalProcedure.datHotel.Rows[0]["dateStart"]);
+                dtmEnd.Value = Convert.ToDateTime(GlobalProcedure.datHotel.Rows[0]["dateEnd"]);
             }
         }
     }

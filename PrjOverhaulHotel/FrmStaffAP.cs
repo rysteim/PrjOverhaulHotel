@@ -190,7 +190,9 @@ namespace PrjOverhaulHotel
                         row1["id"].ToString(),
                         row1["promoName"].ToString(),
                         row1["description"].ToString(),
-                        $"{Convert.ToDouble(row1["discount"].ToString()):F2}%"
+                        $"{Convert.ToDouble(row1["discount"].ToString()):F2}%",
+                        Convert.ToDateTime(row1["dateStart"]).ToString("MMMM dd, yyyy"),
+                        Convert.ToDateTime(row1["dateEnd"]).ToString("MMMM dd, yyyy")
                     );
                 }
             }
@@ -234,7 +236,9 @@ namespace PrjOverhaulHotel
                         row1["id"].ToString(),
                         row1["promoName"].ToString(),
                         row1["description"].ToString(),
-                        $"{Convert.ToDouble(row1["discount"].ToString()):F2}%"
+                        $"{Convert.ToDouble(row1["discount"].ToString()):F2}%",
+                        Convert.ToDateTime(row1["dateStart"]).ToString("MMMM dd, yyyy"),
+                        Convert.ToDateTime(row1["dateEnd"]).ToString("MMMM dd, yyyy")
                     );
                 }
             }
