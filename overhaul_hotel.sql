@@ -36,14 +36,14 @@ CREATE TABLE `tblaccount` (
 /*Data for the table `tblaccount` */
 
 insert  into `tblaccount`(`id`,`profileID`,`roleID`,`username`,`password`,`dateCreated`,`lastOnline`) values 
-(1,1,1,'admin','1234','2024-10-29','2024-12-16 01:14:24'),
-(2,2,2,'kyrelle','mitty','2024-11-05',NULL),
+(1,1,1,'admin','1234','2024-10-29','2024-12-16 20:47:37'),
+(2,2,2,'kyrelle','mitty','2024-11-05','2024-12-16 19:43:36'),
 (3,3,1,'yoonzino','svt','2024-11-05',NULL),
 (15,15,1,'soggycereal','bruh','2024-11-20','2024-12-15 19:28:57'),
 (18,19,2,'kash','torino','2024-12-15','2024-12-15 20:27:24'),
-(26,32,2,'kash','admin','2024-12-15','2024-12-16 01:09:00'),
+(26,32,2,'kash','admin','2024-12-15','2024-12-16 20:47:40'),
 (27,33,3,'bnd','koz','2024-12-15',NULL),
-(28,34,4,'telepath','hehe','2024-12-16','2024-12-16 01:15:27'),
+(28,34,4,'telepath','hehe','2024-12-16','2024-12-16 19:54:24'),
 (29,35,5,'faker','f1','2024-12-16','2024-12-16 01:08:41');
 
 /*Table structure for table `tblaccount_membership` */
@@ -115,9 +115,9 @@ CREATE TABLE `tblemployee` (
 /*Data for the table `tblemployee` */
 
 insert  into `tblemployee`(`id`,`accountID`,`workShift`,`salaryPerHour`,`employmentDate`,`status`,`lastLogin`) values 
-(12,26,'Whole Day',0,'2024-12-15','','2024-12-16 01:08:47'),
+(12,26,'Whole Day',0,'2024-12-15','','2024-12-16 20:47:40'),
 (13,27,'Morning',0,'2024-12-15','','0000-00-00 00:00:00'),
-(14,28,'Afternoon',0,'2024-12-16','','2024-12-16 01:15:27'),
+(14,28,'Afternoon',0,'2024-12-16','','2024-12-16 19:53:42'),
 (15,29,'Whole Day',0,'2024-12-16','','2024-12-16 01:08:20');
 
 /*Table structure for table `tblmembership` */
@@ -163,14 +163,14 @@ CREATE TABLE `tblprofile` (
 /*Data for the table `tblprofile` */
 
 insert  into `tblprofile`(`id`,`firstName`,`middleName`,`lastName`,`contactNo`,`emailAddress`,`address`,`gender`,`birthdate`,`image`) values 
-(1,'Kashmir','Nimaria','Torino','09156855768','kashtorino@gmail.com','Mankilam, Tagum City','Male','2004-05-14','C:\\Users\\jazzy\\Downloads\\396532cad95b3bcffcf3159ef34ff3e1.jpg'),
+(1,'Kashmir','Nimaria','Torino','09156855768','kashtorino@gmail.com','Mankilam, Tagum City','Male','2004-05-14','C:\\Users\\jazzy\\Downloads\\d67bd1548e781b4a81a26ab2621c85b0.jpg'),
 (2,'Kyrelle','Talledo','Aquino','09913617230','k.aquino@gmail.com','Tagum City','Male','2002-11-15','C:\\Users\\jazzy\\Downloads\\4d84bb59074bf2df411c9cb7f2f0ff2c.jpg'),
 (3,'Jeonghan','','Yoon','09123456789','svt@gmail.com','Seoul','Male','1996-09-07','C:\\Users\\jazzy\\Downloads\\461330633_496289853331233_6372511773470926964_n.jpg'),
 (15,'Kyron','James','Sostino','09182736455','jameskyron@gmail.com','09182736455','Male','2003-04-01','C:\\Users\\jazzy\\Downloads\\5c8b18a1d95fce3c7740bed1a49fd7fd.jpg'),
 (19,'Kashmir','Nimaria','Torino','09156855769','ktorino@gmail.com','Tagum City','Male','2004-05-14','C:\\Users\\jazzy\\Downloads\\UM.jpg'),
 (26,'zach','','herron','0981612311','caroline','caroline','Male','1989-05-15','C:\\Users\\jazzy\\Downloads\\smartlogo.jpg'),
 (27,'Kashmir','Nimaria','Torino','09978035772','kashtorino@yahoo.com','Tagum City','Male','2004-05-14','C:\\Users\\jazzy\\Downloads\\UM.jpg'),
-(32,'Kashmir','Nimaria','Torino','09156855791','kashtorino@umindanao.edu.ph','Tagum City','Male','2004-05-14','C:\\Users\\jazzy\\Downloads\\UM.jpg'),
+(32,'Kashmir','Nimaria','Torino','09156855791','kashtorino@umindanao.edu.ph','Tagum City','Male','2004-05-14','C:\\Users\\jazzy\\Downloads\\396532cad95b3bcffcf3159ef34ff3e1.jpg'),
 (33,'Boy','Next','Door','09182938471','bnd@email.com','kozent','Male','2023-05-30','C:\\Users\\jazzy\\Downloads\\d67bd1548e781b4a81a26ab2621c85b0.jpg'),
 (34,'Anya','','Forger','09987654321','spyxfamily@gmail.com','Anime','Female','2009-11-26','C:\\Users\\jazzy\\Downloads\\5c8b18a1d95fce3c7740bed1a49fd7fd.jpg'),
 (35,'Sanghyeok','','Lee','0913857191','lol@gmail.com','0913857191','Male','2005-11-18','C:\\Users\\jazzy\\OneDrive\\Pictures\\Camera Roll\\assignment-1711173766 (1).jpg');
@@ -184,21 +184,23 @@ CREATE TABLE `tblpromo` (
   `promoName` varchar(50) NOT NULL,
   `description` varchar(200) NOT NULL,
   `discount` double NOT NULL,
+  `dateStart` date DEFAULT NULL,
+  `dateEnd` date DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 /*Data for the table `tblpromo` */
 
-insert  into `tblpromo`(`id`,`promoName`,`description`,`discount`) values 
-(1,'None','No promo.',0),
-(2,'Merry Stays & Cozy Nights - Christmas Eve Deal','Book 3 nights during the Christmas season and get a discount and a free breakfast for the whole duration of your stay.',20),
-(3,'Spooktacular Staycation - Halloween Spooky Deal','Stay 2 nights during the Halloween season and get a hefty discount.',15),
-(4,'Work Hard, Relax Harder - Labor Day Deal','Celebrate Labor Day by rewarding hard-working guests with a special discounted stay package.',20),
-(5,'Enchanted Evenings - Valentines Day Deal','Enjoy a cozy-night in with a romantic partner and feel the love with this discount.',20),
-(6,'Birthday Bliss Staycation - Birthday Deal','Celebrate in style with a luxurious stay and enjoy the discount.',15),
-(7,'New Year, New Staycation - New Year\'s Eve Deal','Celebrate the start of the year with a relaxing retreat. Enjoy festive decorations, special New Year\'s Eve dining, and a complimentary champagne toast at midnight.',20),
-(8,'Thankful Family Staycation - Thanksgiving Deal','Give thanks and enjoy a warm and welcoming holiday experience with a special Thanksgiving dinner included with your stay.',15),
-(9,'Leap into Spring - Spring Season Promo','Whether you\'re traveling for a weekend getaway, a long vacation, or a business trip, enjoy special rates and seasonal perks during this limited-time offer.',15);
+insert  into `tblpromo`(`id`,`promoName`,`description`,`discount`,`dateStart`,`dateEnd`) values 
+(1,'None','No promo.',0,'2024-01-01','2024-12-31'),
+(2,'Merry Stays & Cozy Nights - Christmas Eve Deal','Book 3 nights during the Christmas season and get a discount and a free breakfast for the whole duration of your stay.',20,'2024-12-20','2024-12-26'),
+(3,'Spooktacular Staycation - Halloween Spooky Deal','Stay 2 nights during the Halloween season and get a hefty discount.',15,'2024-10-25','2024-11-01'),
+(4,'Work Hard, Relax Harder - Labor Day Deal','Celebrate Labor Day by rewarding hard-working guests with a special discounted stay package.',20,'2024-04-26','2024-05-01'),
+(5,'Enchanted Evenings - Valentines Day Deal','Enjoy a cozy-night in with a romantic partner and feel the love with this discount.',20,'2024-02-10','2024-02-15'),
+(6,'Birthday Bliss Staycation - Birthday Deal','Celebrate in style with a luxurious stay and enjoy the discount.',15,'2024-01-01','2024-12-31'),
+(7,'New Year, New Staycation - New Year\'s Eve Deal','Celebrate the start of the year with a relaxing retreat. Enjoy festive decorations, special New Year\'s Eve dining, and a complimentary champagne toast at midnight.',20,'2024-12-28','2025-01-02'),
+(8,'Thankful Family Staycation - Thanksgiving Deal','Give thanks and enjoy a warm and welcoming holiday experience with a special Thanksgiving dinner included with your stay.',15,'2024-11-25','2024-12-01'),
+(9,'Leap into Spring - Spring Season Promo','Whether you\'re traveling for a weekend getaway, a long vacation, or a business trip, enjoy special rates and seasonal perks during this limited-time offer.',15,'2024-03-01','2024-05-31');
 
 /*Table structure for table `tblreservation` */
 
@@ -280,18 +282,18 @@ DROP TABLE IF EXISTS `tblrole`;
 CREATE TABLE `tblrole` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `roleName` varchar(20) NOT NULL,
-  `salaryPerHour` varchar(20) NOT NULL,
+  `salaryPerHour` double DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 /*Data for the table `tblrole` */
 
 insert  into `tblrole`(`id`,`roleName`,`salaryPerHour`) values 
-(1,'Guest','0'),
-(2,'Administrator','N/A'),
-(3,'Manager','1680.00 - 3360.00'),
-(4,'Front Desk Staff','728.00 - 1008.00'),
-(5,'Housekeeping Staff',' 672.00 - 896.00');
+(1,'Guest',0),
+(2,'Administrator',0),
+(3,'Manager',0),
+(4,'Front Desk Staff',0),
+(5,'Housekeeping Staff',0);
 
 /*Table structure for table `tblroom` */
 
@@ -1134,6 +1136,9 @@ DELIMITER $$
 						p_birthdate date,
 						p_image text)
 BEGIN
+		declare p_profileID int;
+		set p_profileID = (select profileID from tblaccount where id = p_id); 
+		
 		update tblprofile set firstname = p_firstname,
 					middlename = p_middlename,
 					lastname = p_lastname,
@@ -1143,7 +1148,19 @@ BEGIN
 					gender = p_gender,
 					birthdate = p_birthdate,
 					image = p_image
-				where id = p_id;
+				where id = p_profileID;
+	END */$$
+DELIMITER ;
+
+/* Procedure structure for procedure `proc_promoActiveData` */
+
+/*!50003 DROP PROCEDURE IF EXISTS  `proc_promoActiveData` */;
+
+DELIMITER $$
+
+/*!50003 CREATE DEFINER=`root`@`localhost` PROCEDURE `proc_promoActiveData`(p_date DATE)
+BEGIN
+		SELECT * FROM tblpromo WHERE p_date BETWEEN dateStart AND dateEnd;
 	END */$$
 DELIMITER ;
 
@@ -1155,14 +1172,20 @@ DELIMITER $$
 
 /*!50003 CREATE DEFINER=`root`@`localhost` PROCEDURE `proc_promoAdd`(p_promoname varchar(50),
 						p_description varchar(200),
-						p_discount double)
+						p_discount double,
+						p_dateStart date,
+						p_dateEnd date)
 BEGIN
 		insert into tblpromo (promoname,
 					description,
-					discount)
+					discount,
+					dateStart,
+					dateEnd)
 				values (p_promoname,
 					p_description,
-					p_discount);
+					p_discount,
+					p_dateStart,
+					p_dateEnd);
 	END */$$
 DELIMITER ;
 
@@ -1223,11 +1246,15 @@ DELIMITER $$
 /*!50003 CREATE DEFINER=`root`@`localhost` PROCEDURE `proc_promoUpdate`(p_id int,
 						p_promoname varchar(50),
 						p_description varchar(200),
-						p_discount double)
+						p_discount double,
+						p_dateStart date,
+						p_dateEnd date)
 BEGIN
 		update tblpromo set promoname = p_promoname,
 					description = p_description,
-					discount = p_discount
+					discount = p_discount,
+					dateStart = p_dateStart,
+					dateEnd = p_dateEnd
 				where id = p_id;
 	END */$$
 DELIMITER ;
