@@ -33,7 +33,7 @@
             this.pnlRoom = new Guna.UI2.WinForms.Guna2Panel();
             this.btnCancel = new Guna.UI2.WinForms.Guna2GradientTileButton();
             this.cmbStatus = new Guna.UI2.WinForms.Guna2ComboBox();
-            this.label5 = new System.Windows.Forms.Label();
+            this.lblStatus = new System.Windows.Forms.Label();
             this.txtPricePerDay = new Guna.UI2.WinForms.Guna2TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.txtDescription = new Guna.UI2.WinForms.Guna2TextBox();
@@ -42,8 +42,8 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.btnSave = new Guna.UI2.WinForms.Guna2GradientTileButton();
             this.btnAdd = new Guna.UI2.WinForms.Guna2GradientTileButton();
+            this.btnSave = new Guna.UI2.WinForms.Guna2GradientTileButton();
             this.pnlRoom.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -58,7 +58,7 @@
             this.pnlRoom.BorderColor = System.Drawing.Color.Black;
             this.pnlRoom.Controls.Add(this.btnCancel);
             this.pnlRoom.Controls.Add(this.cmbStatus);
-            this.pnlRoom.Controls.Add(this.label5);
+            this.pnlRoom.Controls.Add(this.lblStatus);
             this.pnlRoom.Controls.Add(this.txtPricePerDay);
             this.pnlRoom.Controls.Add(this.label4);
             this.pnlRoom.Controls.Add(this.txtDescription);
@@ -83,7 +83,7 @@
             this.btnCancel.CustomImages.Parent = this.btnCancel;
             this.btnCancel.FillColor = System.Drawing.Color.Black;
             this.btnCancel.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.btnCancel.Font = new System.Drawing.Font("Adobe Fan Heiti Std B", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancel.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancel.ForeColor = System.Drawing.Color.White;
             this.btnCancel.HoverState.Parent = this.btnCancel;
             this.btnCancel.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -127,16 +127,16 @@
             this.cmbStatus.TabIndex = 47;
             this.cmbStatus.TextOffset = new System.Drawing.Point(10, 0);
             // 
-            // label5
+            // lblStatus
             // 
-            this.label5.AutoSize = true;
-            this.label5.BackColor = System.Drawing.Color.Transparent;
-            this.label5.Font = new System.Drawing.Font("Microsoft New Tai Lue", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(37, 411);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(46, 17);
-            this.label5.TabIndex = 48;
-            this.label5.Text = "Status:";
+            this.lblStatus.AutoSize = true;
+            this.lblStatus.BackColor = System.Drawing.Color.Transparent;
+            this.lblStatus.Font = new System.Drawing.Font("Microsoft New Tai Lue", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblStatus.Location = new System.Drawing.Point(37, 411);
+            this.lblStatus.Name = "lblStatus";
+            this.lblStatus.Size = new System.Drawing.Size(46, 17);
+            this.lblStatus.TabIndex = 48;
+            this.lblStatus.Text = "Status:";
             // 
             // txtPricePerDay
             // 
@@ -295,6 +295,29 @@
             this.label3.TabIndex = 44;
             this.label3.Text = "Description:";
             // 
+            // btnAdd
+            // 
+            this.btnAdd.BackColor = System.Drawing.Color.Transparent;
+            this.btnAdd.BorderRadius = 15;
+            this.btnAdd.CheckedState.Parent = this.btnAdd;
+            this.btnAdd.CustomImages.Parent = this.btnAdd;
+            this.btnAdd.FillColor = System.Drawing.Color.Black;
+            this.btnAdd.FillColor2 = System.Drawing.Color.Teal;
+            this.btnAdd.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAdd.ForeColor = System.Drawing.Color.White;
+            this.btnAdd.HoverState.Parent = this.btnAdd;
+            this.btnAdd.Image = global::PrjOverhaulHotel.Properties.Resources.plus;
+            this.btnAdd.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnAdd.ImageOffset = new System.Drawing.Point(5, 13);
+            this.btnAdd.Location = new System.Drawing.Point(131, 477);
+            this.btnAdd.Name = "btnAdd";
+            this.btnAdd.ShadowDecoration.Parent = this.btnAdd;
+            this.btnAdd.Size = new System.Drawing.Size(180, 32);
+            this.btnAdd.TabIndex = 39;
+            this.btnAdd.Text = "ADD";
+            this.btnAdd.TextOffset = new System.Drawing.Point(7, -13);
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
+            // 
             // btnSave
             // 
             this.btnSave.BackColor = System.Drawing.Color.Transparent;
@@ -303,7 +326,7 @@
             this.btnSave.CustomImages.Parent = this.btnSave;
             this.btnSave.FillColor = System.Drawing.Color.Black;
             this.btnSave.FillColor2 = System.Drawing.Color.Teal;
-            this.btnSave.Font = new System.Drawing.Font("Adobe Fan Heiti Std B", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSave.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSave.ForeColor = System.Drawing.Color.White;
             this.btnSave.HoverState.Parent = this.btnSave;
             this.btnSave.Image = global::PrjOverhaulHotel.Properties.Resources.check;
@@ -317,29 +340,6 @@
             this.btnSave.Text = "SAVE";
             this.btnSave.TextOffset = new System.Drawing.Point(7, -11);
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
-            // 
-            // btnAdd
-            // 
-            this.btnAdd.BackColor = System.Drawing.Color.Transparent;
-            this.btnAdd.BorderRadius = 15;
-            this.btnAdd.CheckedState.Parent = this.btnAdd;
-            this.btnAdd.CustomImages.Parent = this.btnAdd;
-            this.btnAdd.FillColor = System.Drawing.Color.Black;
-            this.btnAdd.FillColor2 = System.Drawing.Color.Teal;
-            this.btnAdd.Font = new System.Drawing.Font("Adobe Fan Heiti Std B", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAdd.ForeColor = System.Drawing.Color.White;
-            this.btnAdd.HoverState.Parent = this.btnAdd;
-            this.btnAdd.Image = global::PrjOverhaulHotel.Properties.Resources.plus;
-            this.btnAdd.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnAdd.ImageOffset = new System.Drawing.Point(5, 12);
-            this.btnAdd.Location = new System.Drawing.Point(131, 477);
-            this.btnAdd.Name = "btnAdd";
-            this.btnAdd.ShadowDecoration.Parent = this.btnAdd;
-            this.btnAdd.Size = new System.Drawing.Size(180, 32);
-            this.btnAdd.TabIndex = 39;
-            this.btnAdd.Text = "ADD";
-            this.btnAdd.TextOffset = new System.Drawing.Point(7, -11);
-            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // PopUpRoomMain
             // 
@@ -373,7 +373,7 @@
         private Guna.UI2.WinForms.Guna2TextBox txtPricePerDay;
         private System.Windows.Forms.Label label4;
         private Guna.UI2.WinForms.Guna2ComboBox cmbStatus;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label lblStatus;
         private Guna.UI2.WinForms.Guna2GradientTileButton btnSave;
         private Guna.UI2.WinForms.Guna2GradientTileButton btnCancel;
     }

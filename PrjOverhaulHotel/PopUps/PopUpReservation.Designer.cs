@@ -31,8 +31,8 @@
             this.components = new System.ComponentModel.Container();
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.pnlLogin = new Guna.UI2.WinForms.Guna2Panel();
+            this.cmbStatus = new Guna.UI2.WinForms.Guna2ComboBox();
             this.label11 = new System.Windows.Forms.Label();
-            this.btnApprove = new Guna.UI2.WinForms.Guna2GradientTileButton();
             this.label16 = new System.Windows.Forms.Label();
             this.txtRemainingBalance = new Guna.UI2.WinForms.Guna2TextBox();
             this.label13 = new System.Windows.Forms.Label();
@@ -58,8 +58,6 @@
             this.label8 = new System.Windows.Forms.Label();
             this.imgProfile = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.guna2VSeparator1 = new Guna.UI2.WinForms.Guna2VSeparator();
-            this.btnAddons = new Guna.UI2.WinForms.Guna2GradientTileButton();
-            this.btnTotalRooms = new Guna.UI2.WinForms.Guna2GradientTileButton();
             this.label7 = new System.Windows.Forms.Label();
             this.txtBirthdate = new Guna.UI2.WinForms.Guna2TextBox();
             this.label6 = new System.Windows.Forms.Label();
@@ -77,6 +75,8 @@
             this.label1 = new System.Windows.Forms.Label();
             this.btnChooseAccount = new Guna.UI2.WinForms.Guna2GradientTileButton();
             this.btnConfirm = new Guna.UI2.WinForms.Guna2GradientTileButton();
+            this.btnAddons = new Guna.UI2.WinForms.Guna2GradientTileButton();
+            this.btnTotalRooms = new Guna.UI2.WinForms.Guna2GradientTileButton();
             this.pnlLogin.SuspendLayout();
             this.guna2Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.imgProfile)).BeginInit();
@@ -91,8 +91,8 @@
             this.pnlLogin.BackgroundImage = global::PrjOverhaulHotel.Properties.Resources.Rectangle_13__2_;
             this.pnlLogin.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pnlLogin.BorderColor = System.Drawing.Color.Black;
+            this.pnlLogin.Controls.Add(this.cmbStatus);
             this.pnlLogin.Controls.Add(this.label11);
-            this.pnlLogin.Controls.Add(this.btnApprove);
             this.pnlLogin.Controls.Add(this.label16);
             this.pnlLogin.Controls.Add(this.txtRemainingBalance);
             this.pnlLogin.Controls.Add(this.label13);
@@ -143,6 +143,35 @@
             this.pnlLogin.TabIndex = 27;
             this.pnlLogin.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlLogin_Paint);
             // 
+            // cmbStatus
+            // 
+            this.cmbStatus.BackColor = System.Drawing.Color.Transparent;
+            this.cmbStatus.BorderRadius = 15;
+            this.cmbStatus.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cmbStatus.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbStatus.FocusedColor = System.Drawing.Color.Empty;
+            this.cmbStatus.FocusedState.Parent = this.cmbStatus;
+            this.cmbStatus.Font = new System.Drawing.Font("Microsoft New Tai Lue", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbStatus.ForeColor = System.Drawing.Color.Black;
+            this.cmbStatus.FormattingEnabled = true;
+            this.cmbStatus.HoverState.Parent = this.cmbStatus;
+            this.cmbStatus.ItemHeight = 30;
+            this.cmbStatus.Items.AddRange(new object[] {
+            "",
+            "For Approval",
+            "Approved",
+            "Has Additionals",
+            "For Check Out",
+            "Checked Out"});
+            this.cmbStatus.ItemsAppearance.Parent = this.cmbStatus;
+            this.cmbStatus.Location = new System.Drawing.Point(711, 424);
+            this.cmbStatus.Name = "cmbStatus";
+            this.cmbStatus.ShadowDecoration.Parent = this.cmbStatus;
+            this.cmbStatus.Size = new System.Drawing.Size(180, 36);
+            this.cmbStatus.TabIndex = 104;
+            this.cmbStatus.TextOffset = new System.Drawing.Point(5, 1);
+            this.cmbStatus.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault;
+            // 
             // label11
             // 
             this.label11.AutoSize = true;
@@ -153,28 +182,6 @@
             this.label11.Size = new System.Drawing.Size(61, 13);
             this.label11.TabIndex = 103;
             this.label11.Text = "Total Days:";
-            // 
-            // btnApprove
-            // 
-            this.btnApprove.BackColor = System.Drawing.Color.Transparent;
-            this.btnApprove.BorderRadius = 15;
-            this.btnApprove.CheckedState.Parent = this.btnApprove;
-            this.btnApprove.CustomImages.Parent = this.btnApprove;
-            this.btnApprove.FillColor = System.Drawing.Color.Black;
-            this.btnApprove.FillColor2 = System.Drawing.Color.DarkSlateGray;
-            this.btnApprove.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnApprove.ForeColor = System.Drawing.Color.White;
-            this.btnApprove.HoverState.Parent = this.btnApprove;
-            this.btnApprove.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnApprove.ImageOffset = new System.Drawing.Point(5, 12);
-            this.btnApprove.Location = new System.Drawing.Point(711, 427);
-            this.btnApprove.Name = "btnApprove";
-            this.btnApprove.ShadowDecoration.Parent = this.btnApprove;
-            this.btnApprove.Size = new System.Drawing.Size(180, 33);
-            this.btnApprove.TabIndex = 101;
-            this.btnApprove.Text = "APPROVE";
-            this.btnApprove.TextOffset = new System.Drawing.Point(0, 1);
-            this.btnApprove.Click += new System.EventHandler(this.btnApprove_Click);
             // 
             // label16
             // 
@@ -545,10 +552,10 @@
             // 
             this.label28.AutoSize = true;
             this.label28.BackColor = System.Drawing.Color.Transparent;
-            this.label28.Font = new System.Drawing.Font("Adobe Fan Heiti Std B", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label28.Font = new System.Drawing.Font("Nirmala UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label28.Location = new System.Drawing.Point(342, 58);
             this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(89, 16);
+            this.label28.Size = new System.Drawing.Size(81, 15);
             this.label28.TabIndex = 79;
             this.label28.Text = "Promo Name:";
             // 
@@ -556,10 +563,10 @@
             // 
             this.label29.AutoSize = true;
             this.label29.BackColor = System.Drawing.Color.Transparent;
-            this.label29.Font = new System.Drawing.Font("Adobe Fan Heiti Std B", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label29.Font = new System.Drawing.Font("Nirmala UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label29.Location = new System.Drawing.Point(342, 120);
             this.label29.Name = "label29";
-            this.label29.Size = new System.Drawing.Size(78, 16);
+            this.label29.Size = new System.Drawing.Size(70, 15);
             this.label29.TabIndex = 80;
             this.label29.Text = "Description:";
             // 
@@ -567,10 +574,10 @@
             // 
             this.label30.AutoSize = true;
             this.label30.BackColor = System.Drawing.Color.Transparent;
-            this.label30.Font = new System.Drawing.Font("Adobe Fan Heiti Std B", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label30.Font = new System.Drawing.Font("Nirmala UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label30.Location = new System.Drawing.Point(768, 58);
             this.label30.Name = "label30";
-            this.label30.Size = new System.Drawing.Size(107, 16);
+            this.label30.Size = new System.Drawing.Size(96, 15);
             this.label30.TabIndex = 81;
             this.label30.Text = "Promo Discount:";
             // 
@@ -607,52 +614,6 @@
             this.guna2VSeparator1.Name = "guna2VSeparator1";
             this.guna2VSeparator1.Size = new System.Drawing.Size(10, 461);
             this.guna2VSeparator1.TabIndex = 75;
-            // 
-            // btnAddons
-            // 
-            this.btnAddons.BackColor = System.Drawing.Color.Transparent;
-            this.btnAddons.BorderRadius = 15;
-            this.btnAddons.CheckedState.Parent = this.btnAddons;
-            this.btnAddons.CustomImages.Parent = this.btnAddons;
-            this.btnAddons.FillColor = System.Drawing.Color.Black;
-            this.btnAddons.FillColor2 = System.Drawing.Color.Gray;
-            this.btnAddons.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAddons.ForeColor = System.Drawing.Color.White;
-            this.btnAddons.HoverState.Parent = this.btnAddons;
-            this.btnAddons.Image = global::PrjOverhaulHotel.Properties.Resources.circle_plus__1_;
-            this.btnAddons.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnAddons.ImageOffset = new System.Drawing.Point(5, 14);
-            this.btnAddons.Location = new System.Drawing.Point(525, 466);
-            this.btnAddons.Name = "btnAddons";
-            this.btnAddons.ShadowDecoration.Parent = this.btnAddons;
-            this.btnAddons.Size = new System.Drawing.Size(180, 32);
-            this.btnAddons.TabIndex = 74;
-            this.btnAddons.Text = "ADDONS";
-            this.btnAddons.TextOffset = new System.Drawing.Point(7, -13);
-            this.btnAddons.Click += new System.EventHandler(this.btnAddons_Click);
-            // 
-            // btnTotalRooms
-            // 
-            this.btnTotalRooms.BackColor = System.Drawing.Color.Transparent;
-            this.btnTotalRooms.BorderRadius = 15;
-            this.btnTotalRooms.CheckedState.Parent = this.btnTotalRooms;
-            this.btnTotalRooms.CustomImages.Parent = this.btnTotalRooms;
-            this.btnTotalRooms.FillColor = System.Drawing.Color.Black;
-            this.btnTotalRooms.FillColor2 = System.Drawing.Color.Gray;
-            this.btnTotalRooms.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTotalRooms.ForeColor = System.Drawing.Color.White;
-            this.btnTotalRooms.HoverState.Parent = this.btnTotalRooms;
-            this.btnTotalRooms.Image = global::PrjOverhaulHotel.Properties.Resources.bed__1_;
-            this.btnTotalRooms.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnTotalRooms.ImageOffset = new System.Drawing.Point(5, 14);
-            this.btnTotalRooms.Location = new System.Drawing.Point(339, 466);
-            this.btnTotalRooms.Name = "btnTotalRooms";
-            this.btnTotalRooms.ShadowDecoration.Parent = this.btnTotalRooms;
-            this.btnTotalRooms.Size = new System.Drawing.Size(180, 32);
-            this.btnTotalRooms.TabIndex = 73;
-            this.btnTotalRooms.Text = "ROOMS";
-            this.btnTotalRooms.TextOffset = new System.Drawing.Point(7, -13);
-            this.btnTotalRooms.Click += new System.EventHandler(this.btnTotalRooms_Click);
             // 
             // label7
             // 
@@ -1017,6 +978,52 @@
             this.btnConfirm.TextOffset = new System.Drawing.Point(7, -13);
             this.btnConfirm.Click += new System.EventHandler(this.btnConfirm_Click);
             // 
+            // btnAddons
+            // 
+            this.btnAddons.BackColor = System.Drawing.Color.Transparent;
+            this.btnAddons.BorderRadius = 15;
+            this.btnAddons.CheckedState.Parent = this.btnAddons;
+            this.btnAddons.CustomImages.Parent = this.btnAddons;
+            this.btnAddons.FillColor = System.Drawing.Color.Black;
+            this.btnAddons.FillColor2 = System.Drawing.Color.Gray;
+            this.btnAddons.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddons.ForeColor = System.Drawing.Color.White;
+            this.btnAddons.HoverState.Parent = this.btnAddons;
+            this.btnAddons.Image = global::PrjOverhaulHotel.Properties.Resources.circle_plus__1_;
+            this.btnAddons.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnAddons.ImageOffset = new System.Drawing.Point(5, 14);
+            this.btnAddons.Location = new System.Drawing.Point(525, 466);
+            this.btnAddons.Name = "btnAddons";
+            this.btnAddons.ShadowDecoration.Parent = this.btnAddons;
+            this.btnAddons.Size = new System.Drawing.Size(180, 32);
+            this.btnAddons.TabIndex = 74;
+            this.btnAddons.Text = "ADDONS";
+            this.btnAddons.TextOffset = new System.Drawing.Point(7, -13);
+            this.btnAddons.Click += new System.EventHandler(this.btnAddons_Click);
+            // 
+            // btnTotalRooms
+            // 
+            this.btnTotalRooms.BackColor = System.Drawing.Color.Transparent;
+            this.btnTotalRooms.BorderRadius = 15;
+            this.btnTotalRooms.CheckedState.Parent = this.btnTotalRooms;
+            this.btnTotalRooms.CustomImages.Parent = this.btnTotalRooms;
+            this.btnTotalRooms.FillColor = System.Drawing.Color.Black;
+            this.btnTotalRooms.FillColor2 = System.Drawing.Color.Gray;
+            this.btnTotalRooms.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTotalRooms.ForeColor = System.Drawing.Color.White;
+            this.btnTotalRooms.HoverState.Parent = this.btnTotalRooms;
+            this.btnTotalRooms.Image = global::PrjOverhaulHotel.Properties.Resources.bed__1_;
+            this.btnTotalRooms.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnTotalRooms.ImageOffset = new System.Drawing.Point(5, 14);
+            this.btnTotalRooms.Location = new System.Drawing.Point(339, 466);
+            this.btnTotalRooms.Name = "btnTotalRooms";
+            this.btnTotalRooms.ShadowDecoration.Parent = this.btnTotalRooms;
+            this.btnTotalRooms.Size = new System.Drawing.Size(180, 32);
+            this.btnTotalRooms.TabIndex = 73;
+            this.btnTotalRooms.Text = "ROOMS";
+            this.btnTotalRooms.TextOffset = new System.Drawing.Point(7, -13);
+            this.btnTotalRooms.Click += new System.EventHandler(this.btnTotalRooms_Click);
+            // 
             // PopUpReservation
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1084,8 +1091,8 @@
         private Guna.UI2.WinForms.Guna2TextBox txtTotalAmount;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label16;
-        private Guna.UI2.WinForms.Guna2GradientTileButton btnApprove;
         private Guna.UI2.WinForms.Guna2GradientTileButton btnChooseAccount;
         private System.Windows.Forms.Label label11;
+        private Guna.UI2.WinForms.Guna2ComboBox cmbStatus;
     }
 }

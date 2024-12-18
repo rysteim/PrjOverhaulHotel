@@ -300,7 +300,7 @@ namespace PrjOverhaulHotel
             if (role == "Front Desk Staff")
             {
                 btnPersonnel.Visible = false;
-                btnRooms.Visible = false;
+                btnRooms.Location = new Point(0, 180);
             }
             else if (role == "Housekeeping Staff")
             {

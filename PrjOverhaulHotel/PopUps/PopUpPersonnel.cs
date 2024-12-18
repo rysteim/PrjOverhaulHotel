@@ -31,6 +31,7 @@ namespace PrjOverhaulHotel.PopUps
         private void PopUpPersonnel_Load(object sender, EventArgs e)
         {
             GlobalProcedure.fncDatabaseConnection();
+            dtmBirthdate.Value = DateTime.Now;
             displayDetails();
             displayRole();
         }

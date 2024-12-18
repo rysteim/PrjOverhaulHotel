@@ -14,14 +14,19 @@ namespace PrjOverhaulHotel.PopUps
     public partial class PopUpRooms : Form
     {
         int reservationID;
-        public PopUpRooms()
+        DateTime inDate, outDate;
+        public PopUpRooms(DateTime inDate, DateTime outDate)
         {
             InitializeComponent();
+            this.inDate = inDate;
+            this.outDate = outDate;
         }
 
-        public PopUpRooms(int reservationID)
+        public PopUpRooms(int reservationID, DateTime inDate, DateTime outDate)
         {
             this.reservationID = reservationID;
+            this.inDate = inDate;
+            this.outDate = outDate;
         }
 
         private void PopUpAddRooms_Load(object sender, EventArgs e)
@@ -33,7 +38,7 @@ namespace PrjOverhaulHotel.PopUps
 
         private void displayAvailableRooms()
         {
-            GlobalProcedure.procRoomAvailable();
+            GlobalProcedure.procRoomAvailable(inDate, outDate);
             if (GlobalProcedure.datHotel.Rows.Count > 0)
             {
                 dtgRooms.Rows.Clear();
@@ -66,7 +71,7 @@ namespace PrjOverhaulHotel.PopUps
 
         private void roomStatusUpdate()
         {
-            GlobalProcedure.procRoomCheckRoomStatus(DateTime.Now.ToString("yyyy-MM-dd"));
+            GlobalProcedure.procRoomCheckRoomStatus(reservationID, DateTime.Now.ToString("yyyy-MM-dd"));
         }
     }
 }

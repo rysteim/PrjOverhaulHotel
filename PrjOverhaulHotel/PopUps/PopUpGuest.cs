@@ -40,6 +40,7 @@ namespace PrjOverhaulHotel.PopUps
         private void PopUpGuest_Load(object sender, EventArgs e)
         {
             GlobalProcedure.fncDatabaseConnection();
+            dtmBirthdate.Value = DateTime.Now;
             displayDetails();
             displayMembership();
         }

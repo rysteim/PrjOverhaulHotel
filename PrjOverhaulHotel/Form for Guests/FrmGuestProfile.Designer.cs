@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmGuestProfile));
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2CustomGradientPanel1 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
@@ -260,7 +261,7 @@
             this.btnAP.ShadowDecoration.Parent = this.btnAP;
             this.btnAP.Size = new System.Drawing.Size(200, 45);
             this.btnAP.TabIndex = 2;
-            this.btnAP.Text = "Add-ons / Promos";
+            this.btnAP.Text = "Additionals";
             this.btnAP.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnAP.TextOffset = new System.Drawing.Point(30, 1);
             this.btnAP.Click += new System.EventHandler(this.btnAP_Click);
@@ -971,9 +972,10 @@
             this.Controls.Add(this.btnProfile);
             this.Controls.Add(this.pnlProfile);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FrmGuestProfile";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FrmGuestProfile";
+            this.Text = "Hotelliere";
             this.Load += new System.EventHandler(this.FrmGuestProfile_Load);
             this.MouseEnter += new System.EventHandler(this.pnlButtons_MouseLeave);
             this.guna2CustomGradientPanel1.ResumeLayout(false);

@@ -79,10 +79,10 @@
             this.pnlLogin.Controls.Add(this.pnlEdit);
             this.pnlLogin.Controls.Add(this.btnAddAddon);
             this.pnlLogin.Controls.Add(this.btnAddSave);
-            this.pnlLogin.Controls.Add(this.btnEditAddon);
-            this.pnlLogin.Controls.Add(this.btnEditSave);
             this.pnlLogin.Controls.Add(this.pnlAdd);
             this.pnlLogin.Controls.Add(this.pnlDetails);
+            this.pnlLogin.Controls.Add(this.btnEditAddon);
+            this.pnlLogin.Controls.Add(this.btnEditSave);
             this.pnlLogin.Location = new System.Drawing.Point(14, 14);
             this.pnlLogin.Name = "pnlLogin";
             this.pnlLogin.ShadowDecoration.Parent = this.pnlLogin;
@@ -97,7 +97,7 @@
             this.btnCancel.CustomImages.Parent = this.btnCancel;
             this.btnCancel.FillColor = System.Drawing.Color.Black;
             this.btnCancel.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.btnCancel.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancel.Font = new System.Drawing.Font("Nirmala UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancel.ForeColor = System.Drawing.Color.White;
             this.btnCancel.HoverState.Parent = this.btnCancel;
             this.btnCancel.Image = global::PrjOverhaulHotel.Properties.Resources.check;
@@ -120,7 +120,7 @@
             this.btnDeleteAddon.CustomImages.Parent = this.btnDeleteAddon;
             this.btnDeleteAddon.FillColor = System.Drawing.Color.Black;
             this.btnDeleteAddon.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.btnDeleteAddon.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDeleteAddon.Font = new System.Drawing.Font("Nirmala UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDeleteAddon.ForeColor = System.Drawing.Color.White;
             this.btnDeleteAddon.HoverState.Parent = this.btnDeleteAddon;
             this.btnDeleteAddon.Image = global::PrjOverhaulHotel.Properties.Resources.trash_2;
@@ -323,7 +323,7 @@
             this.btnAddAddon.CustomImages.Parent = this.btnAddAddon;
             this.btnAddAddon.FillColor = System.Drawing.Color.Black;
             this.btnAddAddon.FillColor2 = System.Drawing.Color.Teal;
-            this.btnAddAddon.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddAddon.Font = new System.Drawing.Font("Nirmala UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddAddon.ForeColor = System.Drawing.Color.White;
             this.btnAddAddon.HoverState.Parent = this.btnAddAddon;
             this.btnAddAddon.Image = global::PrjOverhaulHotel.Properties.Resources.plus;
@@ -346,7 +346,7 @@
             this.btnAddSave.CustomImages.Parent = this.btnAddSave;
             this.btnAddSave.FillColor = System.Drawing.Color.Black;
             this.btnAddSave.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btnAddSave.Font = new System.Drawing.Font("Adobe Fan Heiti Std B", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddSave.Font = new System.Drawing.Font("Nirmala UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddSave.ForeColor = System.Drawing.Color.White;
             this.btnAddSave.HoverState.Parent = this.btnAddSave;
             this.btnAddSave.Image = global::PrjOverhaulHotel.Properties.Resources.check;
@@ -369,7 +369,7 @@
             this.btnEditAddon.CustomImages.Parent = this.btnEditAddon;
             this.btnEditAddon.FillColor = System.Drawing.Color.Black;
             this.btnEditAddon.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btnEditAddon.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEditAddon.Font = new System.Drawing.Font("Nirmala UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEditAddon.ForeColor = System.Drawing.Color.White;
             this.btnEditAddon.HoverState.Parent = this.btnEditAddon;
             this.btnEditAddon.Image = global::PrjOverhaulHotel.Properties.Resources.bolt;
@@ -392,7 +392,7 @@
             this.btnEditSave.CustomImages.Parent = this.btnEditSave;
             this.btnEditSave.FillColor = System.Drawing.Color.Black;
             this.btnEditSave.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btnEditSave.Font = new System.Drawing.Font("Adobe Fan Heiti Std B", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEditSave.Font = new System.Drawing.Font("Nirmala UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEditSave.ForeColor = System.Drawing.Color.White;
             this.btnEditSave.HoverState.Parent = this.btnEditSave;
             this.btnEditSave.Image = global::PrjOverhaulHotel.Properties.Resources.check;

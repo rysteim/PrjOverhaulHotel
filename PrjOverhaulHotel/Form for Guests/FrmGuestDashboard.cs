@@ -13,9 +13,19 @@ namespace PrjOverhaulHotel.Form_for_Guests
     public partial class FrmGuestDashboard : Form
     {
         int userID = UserAccount.getUserID();
+        int reservationID;
         public FrmGuestDashboard()
         {
             InitializeComponent();
+        }
+
+        private void FrmGuestDashboard_Load(object sender, EventArgs e)
+        {
+            GlobalProcedure.fncDatabaseConnection();
+            getReservationID();
+            displayProfile();
+            maximizeButtons();
+            roleAccess();
         }
 
         private void btnExit_Click(object sender, EventArgs e)
@@ -81,6 +91,20 @@ namespace PrjOverhaulHotel.Form_for_Guests
             lblPosition.ForeColor = Color.Black;
         }
 
+        private void roleAccess()
+        {
+            string role = UserAccount.getRole();
+            if (role == "Guest")
+            {
+                pnlReservation.Visible = true;
+                btnEmployeeView.Visible = false;
+            }
+            else
+            {
+                btnEmployeeView.Visible = true;
+                pnlReservation.Visible = false;
+            }
+        }
         private void btnReservation_Click(object sender, EventArgs e)
         {
             new FrmGuestReservation().Show();
@@ -134,11 +158,36 @@ namespace PrjOverhaulHotel.Form_for_Guests
             this.Hide();
         }
 
-        private void FrmGuestDashboard_Load(object sender, EventArgs e)
+        private void btnEmployeeView_Click(object sender, EventArgs e)
         {
-            GlobalProcedure.fncDatabaseConnection();
-            displayProfile();
-            maximizeButtons();
+            new FrmStaffDashboard().Show();
+            this.Close();
+        }
+
+        private void getReservationID()
+        {
+            GlobalProcedure.procReservationCurrent(userID);
+            if (GlobalProcedure.datHotel.Rows.Count > 0)
+            {
+                reservationID = Convert.ToInt32(GlobalProcedure.datHotel.Rows[0]["RESERVATION_ID"]);
+                string status = GlobalProcedure.datHotel.Rows[0]["RESERVATION STATUS"].ToString();
+                if (status == "Approved")
+                {
+                    btnCheckOut.Visible = true;
+                    lblMessage.Visible = false;
+                }
+                else 
+                {
+                    lblMessage.Visible = true;
+                    lblMessage.Text = $"Status: {status}";
+                    btnCheckOut.Visible = false;
+                }
+            }
+        }
+
+        private void btnCheckOut_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

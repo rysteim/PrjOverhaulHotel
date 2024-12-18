@@ -54,6 +54,8 @@
             this.guna2VSeparator1 = new Guna.UI2.WinForms.Guna2VSeparator();
             this.lblTitle = new System.Windows.Forms.Label();
             this.pnlReservation = new Guna.UI2.WinForms.Guna2Panel();
+            this.txtNameSearch = new Guna.UI2.WinForms.Guna2TextBox();
+            this.label11 = new System.Windows.Forms.Label();
             this.dtgReservations = new System.Windows.Forms.DataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -70,6 +72,7 @@
             this.Column13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.guna2Separator8 = new Guna.UI2.WinForms.Guna2Separator();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            this.btnPayment = new Guna.UI2.WinForms.Guna2GradientTileButton();
             this.btnAddons = new Guna.UI2.WinForms.Guna2GradientTileButton();
             this.btnTotalRooms = new Guna.UI2.WinForms.Guna2GradientTileButton();
             this.picInfo = new Guna.UI2.WinForms.Guna2CirclePictureBox();
@@ -79,9 +82,6 @@
             this.btnAddReservation = new Guna.UI2.WinForms.Guna2GradientTileButton();
             this.btnPrintReservation = new Guna.UI2.WinForms.Guna2GradientTileButton();
             this.lblTotal = new System.Windows.Forms.Label();
-            this.mySqlCommand1 = new MySql.Data.MySqlClient.MySqlCommand();
-            this.txtNameSearch = new Guna.UI2.WinForms.Guna2TextBox();
-            this.label11 = new System.Windows.Forms.Label();
             this.guna2CustomGradientPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -498,6 +498,46 @@
             this.pnlReservation.TabIndex = 15;
             this.pnlReservation.MouseEnter += new System.EventHandler(this.pnlButtons_MouseLeave);
             // 
+            // txtNameSearch
+            // 
+            this.txtNameSearch.BorderRadius = 15;
+            this.txtNameSearch.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtNameSearch.DefaultText = "";
+            this.txtNameSearch.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtNameSearch.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtNameSearch.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtNameSearch.DisabledState.Parent = this.txtNameSearch;
+            this.txtNameSearch.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtNameSearch.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtNameSearch.FocusedState.Parent = this.txtNameSearch;
+            this.txtNameSearch.Font = new System.Drawing.Font("Microsoft New Tai Lue", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNameSearch.HoverState.BorderColor = System.Drawing.Color.Black;
+            this.txtNameSearch.HoverState.Parent = this.txtNameSearch;
+            this.txtNameSearch.IconLeftOffset = new System.Drawing.Point(2, 0);
+            this.txtNameSearch.IconRight = global::PrjOverhaulHotel.Properties.Resources.search;
+            this.txtNameSearch.IconRightOffset = new System.Drawing.Point(5, 0);
+            this.txtNameSearch.Location = new System.Drawing.Point(94, 14);
+            this.txtNameSearch.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtNameSearch.Name = "txtNameSearch";
+            this.txtNameSearch.PasswordChar = '\0';
+            this.txtNameSearch.PlaceholderText = "";
+            this.txtNameSearch.SelectedText = "";
+            this.txtNameSearch.ShadowDecoration.Parent = this.txtNameSearch;
+            this.txtNameSearch.Size = new System.Drawing.Size(799, 36);
+            this.txtNameSearch.TabIndex = 38;
+            this.txtNameSearch.TextOffset = new System.Drawing.Point(10, 0);
+            this.txtNameSearch.TextChanged += new System.EventHandler(this.txNameSearch_TextChanged);
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Nirmala UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(45, 24);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(42, 15);
+            this.label11.TabIndex = 39;
+            this.label11.Text = "Name:";
+            // 
             // dtgReservations
             // 
             this.dtgReservations.AllowUserToAddRows = false;
@@ -660,6 +700,7 @@
             this.guna2Panel1.BorderColor = System.Drawing.Color.Black;
             this.guna2Panel1.BorderRadius = 15;
             this.guna2Panel1.BorderThickness = 2;
+            this.guna2Panel1.Controls.Add(this.btnPayment);
             this.guna2Panel1.Controls.Add(this.btnAddons);
             this.guna2Panel1.Controls.Add(this.btnTotalRooms);
             this.guna2Panel1.FillColor = System.Drawing.Color.White;
@@ -669,6 +710,27 @@
             this.guna2Panel1.Size = new System.Drawing.Size(455, 146);
             this.guna2Panel1.TabIndex = 16;
             this.guna2Panel1.MouseEnter += new System.EventHandler(this.pnlButtons_MouseLeave);
+            // 
+            // btnPayment
+            // 
+            this.btnPayment.BorderRadius = 15;
+            this.btnPayment.CheckedState.Parent = this.btnPayment;
+            this.btnPayment.CustomImages.Parent = this.btnPayment;
+            this.btnPayment.FillColor = System.Drawing.Color.Black;
+            this.btnPayment.FillColor2 = System.Drawing.Color.Gray;
+            this.btnPayment.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPayment.ForeColor = System.Drawing.Color.White;
+            this.btnPayment.HoverState.Parent = this.btnPayment;
+            this.btnPayment.Image = global::PrjOverhaulHotel.Properties.Resources.circle_dollar_sign;
+            this.btnPayment.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnPayment.ImageOffset = new System.Drawing.Point(5, 13);
+            this.btnPayment.Location = new System.Drawing.Point(106, 95);
+            this.btnPayment.Name = "btnPayment";
+            this.btnPayment.ShadowDecoration.Parent = this.btnPayment;
+            this.btnPayment.Size = new System.Drawing.Size(256, 32);
+            this.btnPayment.TabIndex = 11;
+            this.btnPayment.Text = "PAYMENT";
+            this.btnPayment.TextOffset = new System.Drawing.Point(7, -14);
             // 
             // btnAddons
             // 
@@ -683,12 +745,12 @@
             this.btnAddons.Image = global::PrjOverhaulHotel.Properties.Resources.circle_plus__1_;
             this.btnAddons.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnAddons.ImageOffset = new System.Drawing.Point(5, 13);
-            this.btnAddons.Location = new System.Drawing.Point(142, 77);
+            this.btnAddons.Location = new System.Drawing.Point(106, 57);
             this.btnAddons.Name = "btnAddons";
             this.btnAddons.ShadowDecoration.Parent = this.btnAddons;
-            this.btnAddons.Size = new System.Drawing.Size(180, 32);
+            this.btnAddons.Size = new System.Drawing.Size(256, 32);
             this.btnAddons.TabIndex = 10;
-            this.btnAddons.Text = "ADDONS";
+            this.btnAddons.Text = "SELECT ADDONS";
             this.btnAddons.TextOffset = new System.Drawing.Point(7, -14);
             this.btnAddons.Click += new System.EventHandler(this.btnAddons_Click);
             this.btnAddons.MouseEnter += new System.EventHandler(this.pnlButtons_MouseLeave);
@@ -706,12 +768,12 @@
             this.btnTotalRooms.Image = global::PrjOverhaulHotel.Properties.Resources.bed__1_;
             this.btnTotalRooms.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnTotalRooms.ImageOffset = new System.Drawing.Point(5, 13);
-            this.btnTotalRooms.Location = new System.Drawing.Point(142, 38);
+            this.btnTotalRooms.Location = new System.Drawing.Point(106, 18);
             this.btnTotalRooms.Name = "btnTotalRooms";
             this.btnTotalRooms.ShadowDecoration.Parent = this.btnTotalRooms;
-            this.btnTotalRooms.Size = new System.Drawing.Size(180, 32);
+            this.btnTotalRooms.Size = new System.Drawing.Size(256, 32);
             this.btnTotalRooms.TabIndex = 9;
-            this.btnTotalRooms.Text = "ROOMS";
+            this.btnTotalRooms.Text = "SELECT ROOMS";
             this.btnTotalRooms.TextOffset = new System.Drawing.Point(7, -14);
             this.btnTotalRooms.Click += new System.EventHandler(this.btnTotalRooms_Click);
             this.btnTotalRooms.MouseEnter += new System.EventHandler(this.pnlButtons_MouseLeave);
@@ -856,53 +918,6 @@
             this.lblTotal.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.lblTotal.MouseEnter += new System.EventHandler(this.pnlButtons_MouseLeave);
             // 
-            // mySqlCommand1
-            // 
-            this.mySqlCommand1.CacheAge = 0;
-            this.mySqlCommand1.Connection = null;
-            this.mySqlCommand1.EnableCaching = false;
-            this.mySqlCommand1.Transaction = null;
-            // 
-            // txtNameSearch
-            // 
-            this.txtNameSearch.BorderRadius = 15;
-            this.txtNameSearch.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtNameSearch.DefaultText = "";
-            this.txtNameSearch.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtNameSearch.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtNameSearch.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtNameSearch.DisabledState.Parent = this.txtNameSearch;
-            this.txtNameSearch.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtNameSearch.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtNameSearch.FocusedState.Parent = this.txtNameSearch;
-            this.txtNameSearch.Font = new System.Drawing.Font("Microsoft New Tai Lue", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNameSearch.HoverState.BorderColor = System.Drawing.Color.Black;
-            this.txtNameSearch.HoverState.Parent = this.txtNameSearch;
-            this.txtNameSearch.IconLeftOffset = new System.Drawing.Point(2, 0);
-            this.txtNameSearch.IconRight = global::PrjOverhaulHotel.Properties.Resources.search;
-            this.txtNameSearch.IconRightOffset = new System.Drawing.Point(5, 0);
-            this.txtNameSearch.Location = new System.Drawing.Point(94, 14);
-            this.txtNameSearch.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.txtNameSearch.Name = "txtNameSearch";
-            this.txtNameSearch.PasswordChar = '\0';
-            this.txtNameSearch.PlaceholderText = "";
-            this.txtNameSearch.SelectedText = "";
-            this.txtNameSearch.ShadowDecoration.Parent = this.txtNameSearch;
-            this.txtNameSearch.Size = new System.Drawing.Size(799, 36);
-            this.txtNameSearch.TabIndex = 38;
-            this.txtNameSearch.TextOffset = new System.Drawing.Point(10, 0);
-            this.txtNameSearch.TextChanged += new System.EventHandler(this.txNameSearch_TextChanged);
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Nirmala UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(45, 24);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(42, 15);
-            this.label11.TabIndex = 39;
-            this.label11.Text = "Name:";
-            // 
             // FrmStaffReservation
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -986,8 +1001,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column11;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column12;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column13;
-        private MySql.Data.MySqlClient.MySqlCommand mySqlCommand1;
         private Guna.UI2.WinForms.Guna2TextBox txtNameSearch;
         private System.Windows.Forms.Label label11;
+        private Guna.UI2.WinForms.Guna2GradientTileButton btnPayment;
     }
 }

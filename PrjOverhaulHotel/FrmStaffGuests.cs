@@ -160,9 +160,9 @@ namespace PrjOverhaulHotel
                     dtgGuests.Rows.Add(
                         row1["AID"].ToString(),
                         row1["MEMBERSHIP"].ToString(),
+                        row1["LAST NAME"].ToString(),
                         row1["FIRST NAME"].ToString(),
                         row1["MIDDLE NAME"].ToString(),
-                        row1["LAST NAME"].ToString(),
                         row1["USERNAME"].ToString(),
                         row1["STATUS"].ToString(),
                         row1["CONTACT NUMBER"].ToString(),
@@ -227,9 +227,9 @@ namespace PrjOverhaulHotel
                     dtgGuests.Rows.Add(
                         row1["AID"].ToString(),
                         row1["MEMBERSHIP"].ToString(),
+                        row1["LAST NAME"].ToString(),
                         row1["FIRST NAME"].ToString(),
                         row1["MIDDLE NAME"].ToString(),
-                        row1["LAST NAME"].ToString(),
                         row1["USERNAME"].ToString(),
                         row1["STATUS"].ToString(),
                         row1["CONTACT NUMBER"].ToString(),
@@ -291,7 +291,7 @@ namespace PrjOverhaulHotel
             if (role == "Front Desk Staff")
             {
                 btnPersonnel.Visible = false;
-                btnRooms.Visible = false;
+                btnRooms.Location = new Point(0, 180);
             }
             else if (role == "Housekeeping Staff")
             {

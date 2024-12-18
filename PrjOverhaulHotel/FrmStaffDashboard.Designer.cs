@@ -53,20 +53,30 @@
             this.cmbDateRange = new Guna.UI2.WinForms.Guna2ComboBox();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.cartesianChart1 = new LiveCharts.WinForms.CartesianChart();
-            this.btnGuestView = new Guna.UI2.WinForms.Guna2GradientTileButton();
-            this.guna2Panel3 = new Guna.UI2.WinForms.Guna2Panel();
+            this.pnlFrontDesk = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2Panel4 = new Guna.UI2.WinForms.Guna2Panel();
             this.lblActiveRooms = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.guna2Panel5 = new Guna.UI2.WinForms.Guna2Panel();
             this.lblPresentGuests = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.btnShift = new Guna.UI2.WinForms.Guna2GradientTileButton();
+            this.pnlHousekeeping = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2Panel6 = new Guna.UI2.WinForms.Guna2Panel();
-            this.lblOnlinePersonnels = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
-            this.lblRevenue = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.guna2Panel3 = new Guna.UI2.WinForms.Guna2Panel();
+            this.lblActiveRooms2 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
+            this.pnlSupervisor = new Guna.UI2.WinForms.Guna2Panel();
+            this.guna2Panel7 = new Guna.UI2.WinForms.Guna2Panel();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.guna2Panel8 = new Guna.UI2.WinForms.Guna2Panel();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.guna2GradientTileButton1 = new Guna.UI2.WinForms.Guna2GradientTileButton();
+            this.btnGuestView = new Guna.UI2.WinForms.Guna2GradientTileButton();
             this.guna2CustomGradientPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -74,11 +84,15 @@
             this.btnProfile.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.imgProfile)).BeginInit();
             this.guna2Panel1.SuspendLayout();
-            this.guna2Panel3.SuspendLayout();
+            this.pnlFrontDesk.SuspendLayout();
             this.guna2Panel4.SuspendLayout();
             this.guna2Panel5.SuspendLayout();
+            this.pnlHousekeeping.SuspendLayout();
             this.guna2Panel6.SuspendLayout();
-            this.guna2Panel2.SuspendLayout();
+            this.guna2Panel3.SuspendLayout();
+            this.pnlSupervisor.SuspendLayout();
+            this.guna2Panel7.SuspendLayout();
+            this.guna2Panel8.SuspendLayout();
             this.SuspendLayout();
             // 
             // guna2Elipse1
@@ -400,7 +414,7 @@
             this.btnProfile.Size = new System.Drawing.Size(200, 102);
             this.btnProfile.TabIndex = 12;
             this.btnProfile.Click += new System.EventHandler(this.btnProfile_Click);
-            this.btnProfile.MouseEnter += new System.EventHandler(this.btnProfile_MouseEnter);
+            this.btnProfile.MouseEnter += new System.EventHandler(this.pnlButtons_MouseLeave);
             this.btnProfile.MouseLeave += new System.EventHandler(this.btnProfile_MouseLeave);
             // 
             // imgProfile
@@ -515,47 +529,23 @@
             this.cartesianChart1.TabIndex = 30;
             this.cartesianChart1.Text = "cartesianChart1";
             // 
-            // btnGuestView
+            // pnlFrontDesk
             // 
-            this.btnGuestView.BorderColor = System.Drawing.Color.Transparent;
-            this.btnGuestView.BorderRadius = 15;
-            this.btnGuestView.BorderThickness = 1;
-            this.btnGuestView.CheckedState.Parent = this.btnGuestView;
-            this.btnGuestView.CustomImages.Parent = this.btnGuestView;
-            this.btnGuestView.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btnGuestView.FillColor2 = System.Drawing.Color.Black;
-            this.btnGuestView.Font = new System.Drawing.Font("Microsoft New Tai Lue", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGuestView.ForeColor = System.Drawing.Color.White;
-            this.btnGuestView.HoverState.Parent = this.btnGuestView;
-            this.btnGuestView.Location = new System.Drawing.Point(792, 547);
-            this.btnGuestView.Name = "btnGuestView";
-            this.btnGuestView.ShadowDecoration.Parent = this.btnGuestView;
-            this.btnGuestView.Size = new System.Drawing.Size(175, 31);
-            this.btnGuestView.TabIndex = 0;
-            this.btnGuestView.Text = "Go to Guest View";
-            this.btnGuestView.TextOffset = new System.Drawing.Point(0, 2);
-            this.btnGuestView.Click += new System.EventHandler(this.btnGuestView_Click);
-            this.btnGuestView.MouseEnter += new System.EventHandler(this.pnlButtons_MouseLeave);
-            // 
-            // guna2Panel3
-            // 
-            this.guna2Panel3.BackColor = System.Drawing.Color.Transparent;
-            this.guna2Panel3.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(154)))), ((int)(((byte)(136)))));
-            this.guna2Panel3.BorderRadius = 10;
-            this.guna2Panel3.BorderThickness = 1;
-            this.guna2Panel3.Controls.Add(this.guna2Panel4);
-            this.guna2Panel3.Controls.Add(this.guna2Panel5);
-            this.guna2Panel3.Controls.Add(this.guna2Panel6);
-            this.guna2Panel3.Controls.Add(this.guna2Panel2);
-            this.guna2Panel3.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(220)))), ((int)(((byte)(195)))));
-            this.guna2Panel3.Location = new System.Drawing.Point(84, 377);
-            this.guna2Panel3.Name = "guna2Panel3";
-            this.guna2Panel3.ShadowDecoration.BorderRadius = 10;
-            this.guna2Panel3.ShadowDecoration.Depth = 255;
-            this.guna2Panel3.ShadowDecoration.Parent = this.guna2Panel3;
-            this.guna2Panel3.Size = new System.Drawing.Size(883, 154);
-            this.guna2Panel3.TabIndex = 32;
-            this.guna2Panel3.MouseEnter += new System.EventHandler(this.pnlButtons_MouseLeave);
+            this.pnlFrontDesk.BackColor = System.Drawing.Color.Transparent;
+            this.pnlFrontDesk.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(154)))), ((int)(((byte)(136)))));
+            this.pnlFrontDesk.BorderRadius = 10;
+            this.pnlFrontDesk.BorderThickness = 1;
+            this.pnlFrontDesk.Controls.Add(this.guna2Panel4);
+            this.pnlFrontDesk.Controls.Add(this.guna2Panel5);
+            this.pnlFrontDesk.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(220)))), ((int)(((byte)(195)))));
+            this.pnlFrontDesk.Location = new System.Drawing.Point(84, 377);
+            this.pnlFrontDesk.Name = "pnlFrontDesk";
+            this.pnlFrontDesk.ShadowDecoration.BorderRadius = 10;
+            this.pnlFrontDesk.ShadowDecoration.Depth = 255;
+            this.pnlFrontDesk.ShadowDecoration.Parent = this.pnlFrontDesk;
+            this.pnlFrontDesk.Size = new System.Drawing.Size(446, 154);
+            this.pnlFrontDesk.TabIndex = 32;
+            this.pnlFrontDesk.MouseEnter += new System.EventHandler(this.pnlButtons_MouseLeave);
             // 
             // guna2Panel4
             // 
@@ -634,10 +624,49 @@
             this.label3.Font = new System.Drawing.Font("Nirmala UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(11, 85);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(93, 13);
+            this.label3.Size = new System.Drawing.Size(84, 13);
             this.label3.TabIndex = 34;
-            this.label3.Text = "PRESENT GUESTS";
+            this.label3.Text = "ACTIVE GUESTS";
             this.label3.MouseEnter += new System.EventHandler(this.pnlButtons_MouseLeave);
+            // 
+            // btnShift
+            // 
+            this.btnShift.BorderColor = System.Drawing.Color.Transparent;
+            this.btnShift.BorderRadius = 15;
+            this.btnShift.BorderThickness = 1;
+            this.btnShift.CheckedState.Parent = this.btnShift;
+            this.btnShift.CustomImages.Parent = this.btnShift;
+            this.btnShift.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnShift.FillColor2 = System.Drawing.Color.Black;
+            this.btnShift.Font = new System.Drawing.Font("Microsoft New Tai Lue", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnShift.ForeColor = System.Drawing.Color.White;
+            this.btnShift.HoverState.Parent = this.btnShift;
+            this.btnShift.Location = new System.Drawing.Point(554, 377);
+            this.btnShift.Name = "btnShift";
+            this.btnShift.ShadowDecoration.Parent = this.btnShift;
+            this.btnShift.Size = new System.Drawing.Size(199, 154);
+            this.btnShift.TabIndex = 33;
+            this.btnShift.Text = "Start Shift";
+            this.btnShift.TextOffset = new System.Drawing.Point(0, 2);
+            this.btnShift.MouseEnter += new System.EventHandler(this.pnlButtons_MouseLeave);
+            // 
+            // pnlHousekeeping
+            // 
+            this.pnlHousekeeping.BackColor = System.Drawing.Color.Transparent;
+            this.pnlHousekeeping.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(154)))), ((int)(((byte)(136)))));
+            this.pnlHousekeeping.BorderRadius = 10;
+            this.pnlHousekeeping.BorderThickness = 1;
+            this.pnlHousekeeping.Controls.Add(this.guna2Panel6);
+            this.pnlHousekeeping.Controls.Add(this.guna2Panel3);
+            this.pnlHousekeeping.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(220)))), ((int)(((byte)(195)))));
+            this.pnlHousekeeping.Location = new System.Drawing.Point(84, 377);
+            this.pnlHousekeeping.Name = "pnlHousekeeping";
+            this.pnlHousekeeping.ShadowDecoration.BorderRadius = 10;
+            this.pnlHousekeeping.ShadowDecoration.Depth = 255;
+            this.pnlHousekeeping.ShadowDecoration.Parent = this.pnlHousekeeping;
+            this.pnlHousekeeping.Size = new System.Drawing.Size(446, 154);
+            this.pnlHousekeeping.TabIndex = 35;
+            this.pnlHousekeeping.MouseEnter += new System.EventHandler(this.pnlButtons_MouseLeave);
             // 
             // guna2Panel6
             // 
@@ -645,10 +674,10 @@
             this.guna2Panel6.BorderColor = System.Drawing.Color.WhiteSmoke;
             this.guna2Panel6.BorderRadius = 10;
             this.guna2Panel6.BorderThickness = 1;
-            this.guna2Panel6.Controls.Add(this.lblOnlinePersonnels);
-            this.guna2Panel6.Controls.Add(this.label4);
+            this.guna2Panel6.Controls.Add(this.label6);
+            this.guna2Panel6.Controls.Add(this.label7);
             this.guna2Panel6.FillColor = System.Drawing.Color.White;
-            this.guna2Panel6.Location = new System.Drawing.Point(464, 20);
+            this.guna2Panel6.Location = new System.Drawing.Point(244, 20);
             this.guna2Panel6.Name = "guna2Panel6";
             this.guna2Panel6.ShadowDecoration.BorderRadius = 10;
             this.guna2Panel6.ShadowDecoration.Color = System.Drawing.Color.WhiteSmoke;
@@ -659,56 +688,56 @@
             this.guna2Panel6.TabIndex = 34;
             this.guna2Panel6.MouseEnter += new System.EventHandler(this.pnlButtons_MouseLeave);
             // 
-            // lblOnlinePersonnels
+            // label6
             // 
-            this.lblOnlinePersonnels.Font = new System.Drawing.Font("Nirmala UI", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblOnlinePersonnels.Location = new System.Drawing.Point(0, 0);
-            this.lblOnlinePersonnels.Name = "lblOnlinePersonnels";
-            this.lblOnlinePersonnels.Size = new System.Drawing.Size(175, 76);
-            this.lblOnlinePersonnels.TabIndex = 36;
-            this.lblOnlinePersonnels.Text = " 0";
-            this.lblOnlinePersonnels.MouseEnter += new System.EventHandler(this.pnlButtons_MouseLeave);
+            this.label6.Font = new System.Drawing.Font("Nirmala UI", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(0, 0);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(175, 76);
+            this.label6.TabIndex = 35;
+            this.label6.Text = " 0";
+            this.label6.MouseEnter += new System.EventHandler(this.pnlButtons_MouseLeave);
             // 
-            // label4
+            // label7
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Nirmala UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(11, 85);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(116, 13);
-            this.label4.TabIndex = 34;
-            this.label4.Text = "ONLINE PERSONNELS";
-            this.label4.MouseEnter += new System.EventHandler(this.pnlButtons_MouseLeave);
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Nirmala UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(11, 85);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(84, 13);
+            this.label7.TabIndex = 34;
+            this.label7.Text = "FOR CLEANING";
+            this.label7.MouseEnter += new System.EventHandler(this.pnlButtons_MouseLeave);
             // 
-            // guna2Panel2
+            // guna2Panel3
             // 
-            this.guna2Panel2.BackColor = System.Drawing.Color.Transparent;
-            this.guna2Panel2.BorderColor = System.Drawing.Color.WhiteSmoke;
-            this.guna2Panel2.BorderRadius = 10;
-            this.guna2Panel2.BorderThickness = 1;
-            this.guna2Panel2.Controls.Add(this.lblRevenue);
-            this.guna2Panel2.Controls.Add(this.label5);
-            this.guna2Panel2.FillColor = System.Drawing.Color.White;
-            this.guna2Panel2.Location = new System.Drawing.Point(684, 20);
-            this.guna2Panel2.Name = "guna2Panel2";
-            this.guna2Panel2.ShadowDecoration.BorderRadius = 10;
-            this.guna2Panel2.ShadowDecoration.Color = System.Drawing.Color.WhiteSmoke;
-            this.guna2Panel2.ShadowDecoration.Depth = 60;
-            this.guna2Panel2.ShadowDecoration.Enabled = true;
-            this.guna2Panel2.ShadowDecoration.Parent = this.guna2Panel2;
-            this.guna2Panel2.Size = new System.Drawing.Size(175, 110);
-            this.guna2Panel2.TabIndex = 33;
-            this.guna2Panel2.MouseEnter += new System.EventHandler(this.pnlButtons_MouseLeave);
+            this.guna2Panel3.BackColor = System.Drawing.Color.Transparent;
+            this.guna2Panel3.BorderColor = System.Drawing.Color.WhiteSmoke;
+            this.guna2Panel3.BorderRadius = 10;
+            this.guna2Panel3.BorderThickness = 1;
+            this.guna2Panel3.Controls.Add(this.lblActiveRooms2);
+            this.guna2Panel3.Controls.Add(this.label5);
+            this.guna2Panel3.FillColor = System.Drawing.Color.White;
+            this.guna2Panel3.Location = new System.Drawing.Point(24, 20);
+            this.guna2Panel3.Name = "guna2Panel3";
+            this.guna2Panel3.ShadowDecoration.BorderRadius = 10;
+            this.guna2Panel3.ShadowDecoration.Color = System.Drawing.Color.WhiteSmoke;
+            this.guna2Panel3.ShadowDecoration.Depth = 60;
+            this.guna2Panel3.ShadowDecoration.Enabled = true;
+            this.guna2Panel3.ShadowDecoration.Parent = this.guna2Panel3;
+            this.guna2Panel3.Size = new System.Drawing.Size(175, 110);
+            this.guna2Panel3.TabIndex = 34;
+            this.guna2Panel3.MouseEnter += new System.EventHandler(this.pnlButtons_MouseLeave);
             // 
-            // lblRevenue
+            // lblActiveRooms2
             // 
-            this.lblRevenue.Font = new System.Drawing.Font("Nirmala UI", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblRevenue.Location = new System.Drawing.Point(0, 0);
-            this.lblRevenue.Name = "lblRevenue";
-            this.lblRevenue.Size = new System.Drawing.Size(175, 76);
-            this.lblRevenue.TabIndex = 36;
-            this.lblRevenue.Text = " 0";
-            this.lblRevenue.MouseEnter += new System.EventHandler(this.pnlButtons_MouseLeave);
+            this.lblActiveRooms2.Font = new System.Drawing.Font("Nirmala UI", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblActiveRooms2.Location = new System.Drawing.Point(0, 0);
+            this.lblActiveRooms2.Name = "lblActiveRooms2";
+            this.lblActiveRooms2.Size = new System.Drawing.Size(175, 76);
+            this.lblActiveRooms2.TabIndex = 34;
+            this.lblActiveRooms2.Text = " 0";
+            this.lblActiveRooms2.MouseEnter += new System.EventHandler(this.pnlButtons_MouseLeave);
             // 
             // label5
             // 
@@ -716,10 +745,153 @@
             this.label5.Font = new System.Drawing.Font("Nirmala UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(11, 85);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(55, 13);
-            this.label5.TabIndex = 34;
-            this.label5.Text = "REVENUE";
+            this.label5.Size = new System.Drawing.Size(86, 13);
+            this.label5.TabIndex = 33;
+            this.label5.Text = "ACTIVE ROOMS";
             this.label5.MouseEnter += new System.EventHandler(this.pnlButtons_MouseLeave);
+            // 
+            // pnlSupervisor
+            // 
+            this.pnlSupervisor.BackColor = System.Drawing.Color.Transparent;
+            this.pnlSupervisor.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(154)))), ((int)(((byte)(136)))));
+            this.pnlSupervisor.BorderRadius = 10;
+            this.pnlSupervisor.BorderThickness = 1;
+            this.pnlSupervisor.Controls.Add(this.guna2Panel7);
+            this.pnlSupervisor.Controls.Add(this.guna2Panel8);
+            this.pnlSupervisor.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(220)))), ((int)(((byte)(195)))));
+            this.pnlSupervisor.Location = new System.Drawing.Point(84, 377);
+            this.pnlSupervisor.Name = "pnlSupervisor";
+            this.pnlSupervisor.ShadowDecoration.BorderRadius = 10;
+            this.pnlSupervisor.ShadowDecoration.Depth = 255;
+            this.pnlSupervisor.ShadowDecoration.Parent = this.pnlSupervisor;
+            this.pnlSupervisor.Size = new System.Drawing.Size(446, 154);
+            this.pnlSupervisor.TabIndex = 36;
+            this.pnlSupervisor.MouseEnter += new System.EventHandler(this.pnlButtons_MouseLeave);
+            // 
+            // guna2Panel7
+            // 
+            this.guna2Panel7.BackColor = System.Drawing.Color.Transparent;
+            this.guna2Panel7.BorderColor = System.Drawing.Color.WhiteSmoke;
+            this.guna2Panel7.BorderRadius = 10;
+            this.guna2Panel7.BorderThickness = 1;
+            this.guna2Panel7.Controls.Add(this.label8);
+            this.guna2Panel7.Controls.Add(this.label9);
+            this.guna2Panel7.FillColor = System.Drawing.Color.White;
+            this.guna2Panel7.Location = new System.Drawing.Point(24, 20);
+            this.guna2Panel7.Name = "guna2Panel7";
+            this.guna2Panel7.ShadowDecoration.BorderRadius = 10;
+            this.guna2Panel7.ShadowDecoration.Color = System.Drawing.Color.WhiteSmoke;
+            this.guna2Panel7.ShadowDecoration.Depth = 60;
+            this.guna2Panel7.ShadowDecoration.Enabled = true;
+            this.guna2Panel7.ShadowDecoration.Parent = this.guna2Panel7;
+            this.guna2Panel7.Size = new System.Drawing.Size(175, 110);
+            this.guna2Panel7.TabIndex = 34;
+            this.guna2Panel7.MouseEnter += new System.EventHandler(this.pnlButtons_MouseLeave);
+            // 
+            // label8
+            // 
+            this.label8.Font = new System.Drawing.Font("Nirmala UI", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(0, 0);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(175, 76);
+            this.label8.TabIndex = 34;
+            this.label8.Text = " 0";
+            this.label8.MouseEnter += new System.EventHandler(this.pnlButtons_MouseLeave);
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Nirmala UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(11, 85);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(112, 13);
+            this.label9.TabIndex = 33;
+            this.label9.Text = "ACTIVE PERSONNELS";
+            this.label9.MouseEnter += new System.EventHandler(this.pnlButtons_MouseLeave);
+            // 
+            // guna2Panel8
+            // 
+            this.guna2Panel8.BackColor = System.Drawing.Color.Transparent;
+            this.guna2Panel8.BorderColor = System.Drawing.Color.WhiteSmoke;
+            this.guna2Panel8.BorderRadius = 10;
+            this.guna2Panel8.BorderThickness = 1;
+            this.guna2Panel8.Controls.Add(this.label10);
+            this.guna2Panel8.Controls.Add(this.label11);
+            this.guna2Panel8.FillColor = System.Drawing.Color.White;
+            this.guna2Panel8.Location = new System.Drawing.Point(244, 20);
+            this.guna2Panel8.Name = "guna2Panel8";
+            this.guna2Panel8.ShadowDecoration.BorderRadius = 10;
+            this.guna2Panel8.ShadowDecoration.Color = System.Drawing.Color.WhiteSmoke;
+            this.guna2Panel8.ShadowDecoration.Depth = 60;
+            this.guna2Panel8.ShadowDecoration.Enabled = true;
+            this.guna2Panel8.ShadowDecoration.Parent = this.guna2Panel8;
+            this.guna2Panel8.Size = new System.Drawing.Size(175, 110);
+            this.guna2Panel8.TabIndex = 34;
+            this.guna2Panel8.MouseEnter += new System.EventHandler(this.pnlButtons_MouseLeave);
+            // 
+            // label10
+            // 
+            this.label10.Font = new System.Drawing.Font("Nirmala UI", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(0, 0);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(175, 76);
+            this.label10.TabIndex = 35;
+            this.label10.Text = " 0";
+            this.label10.MouseEnter += new System.EventHandler(this.pnlButtons_MouseLeave);
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Nirmala UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(11, 85);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(55, 13);
+            this.label11.TabIndex = 34;
+            this.label11.Text = "REVENUE";
+            this.label11.MouseEnter += new System.EventHandler(this.pnlButtons_MouseLeave);
+            // 
+            // guna2GradientTileButton1
+            // 
+            this.guna2GradientTileButton1.BorderColor = System.Drawing.Color.Transparent;
+            this.guna2GradientTileButton1.BorderRadius = 15;
+            this.guna2GradientTileButton1.BorderThickness = 1;
+            this.guna2GradientTileButton1.CheckedState.Parent = this.guna2GradientTileButton1;
+            this.guna2GradientTileButton1.CustomImages.Parent = this.guna2GradientTileButton1;
+            this.guna2GradientTileButton1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.guna2GradientTileButton1.FillColor2 = System.Drawing.Color.Black;
+            this.guna2GradientTileButton1.Font = new System.Drawing.Font("Microsoft New Tai Lue", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2GradientTileButton1.ForeColor = System.Drawing.Color.White;
+            this.guna2GradientTileButton1.HoverState.Parent = this.guna2GradientTileButton1;
+            this.guna2GradientTileButton1.Location = new System.Drawing.Point(554, 377);
+            this.guna2GradientTileButton1.Name = "guna2GradientTileButton1";
+            this.guna2GradientTileButton1.ShadowDecoration.Parent = this.guna2GradientTileButton1;
+            this.guna2GradientTileButton1.Size = new System.Drawing.Size(199, 154);
+            this.guna2GradientTileButton1.TabIndex = 37;
+            this.guna2GradientTileButton1.Text = "End Shift";
+            this.guna2GradientTileButton1.TextOffset = new System.Drawing.Point(0, 2);
+            this.guna2GradientTileButton1.MouseEnter += new System.EventHandler(this.pnlButtons_MouseLeave);
+            // 
+            // btnGuestView
+            // 
+            this.btnGuestView.BorderColor = System.Drawing.Color.Transparent;
+            this.btnGuestView.BorderRadius = 15;
+            this.btnGuestView.BorderThickness = 1;
+            this.btnGuestView.CheckedState.Parent = this.btnGuestView;
+            this.btnGuestView.CustomImages.Parent = this.btnGuestView;
+            this.btnGuestView.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnGuestView.FillColor2 = System.Drawing.Color.Black;
+            this.btnGuestView.Font = new System.Drawing.Font("Microsoft New Tai Lue", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGuestView.ForeColor = System.Drawing.Color.White;
+            this.btnGuestView.HoverState.Parent = this.btnGuestView;
+            this.btnGuestView.Location = new System.Drawing.Point(768, 377);
+            this.btnGuestView.Name = "btnGuestView";
+            this.btnGuestView.ShadowDecoration.Parent = this.btnGuestView;
+            this.btnGuestView.Size = new System.Drawing.Size(199, 154);
+            this.btnGuestView.TabIndex = 38;
+            this.btnGuestView.Text = "Go to Guest View";
+            this.btnGuestView.TextOffset = new System.Drawing.Point(0, 2);
+            this.btnGuestView.Click += new System.EventHandler(this.btnGuestView_Click_1);
+            this.btnGuestView.MouseEnter += new System.EventHandler(this.pnlButtons_MouseLeave);
             // 
             // FrmStaffDashboard
             // 
@@ -727,14 +899,18 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(154)))), ((int)(((byte)(136)))));
             this.ClientSize = new System.Drawing.Size(1000, 600);
+            this.Controls.Add(this.btnGuestView);
+            this.Controls.Add(this.btnShift);
             this.Controls.Add(this.pnlButtons);
             this.Controls.Add(this.guna2CustomGradientPanel1);
             this.Controls.Add(this.btnProfile);
-            this.Controls.Add(this.guna2Panel3);
             this.Controls.Add(this.guna2Panel1);
-            this.Controls.Add(this.btnGuestView);
             this.Controls.Add(this.cmbDateRange);
             this.Controls.Add(this.label1);
+            this.Controls.Add(this.guna2GradientTileButton1);
+            this.Controls.Add(this.pnlHousekeeping);
+            this.Controls.Add(this.pnlFrontDesk);
+            this.Controls.Add(this.pnlSupervisor);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FrmStaffDashboard";
@@ -749,15 +925,21 @@
             this.btnProfile.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.imgProfile)).EndInit();
             this.guna2Panel1.ResumeLayout(false);
-            this.guna2Panel3.ResumeLayout(false);
+            this.pnlFrontDesk.ResumeLayout(false);
             this.guna2Panel4.ResumeLayout(false);
             this.guna2Panel4.PerformLayout();
             this.guna2Panel5.ResumeLayout(false);
             this.guna2Panel5.PerformLayout();
+            this.pnlHousekeeping.ResumeLayout(false);
             this.guna2Panel6.ResumeLayout(false);
             this.guna2Panel6.PerformLayout();
-            this.guna2Panel2.ResumeLayout(false);
-            this.guna2Panel2.PerformLayout();
+            this.guna2Panel3.ResumeLayout(false);
+            this.guna2Panel3.PerformLayout();
+            this.pnlSupervisor.ResumeLayout(false);
+            this.guna2Panel7.ResumeLayout(false);
+            this.guna2Panel7.PerformLayout();
+            this.guna2Panel8.ResumeLayout(false);
+            this.guna2Panel8.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -784,23 +966,33 @@
         private Guna.UI2.WinForms.Guna2VSeparator guna2VSeparator2;
         private System.Windows.Forms.Label label1;
         private Guna.UI2.WinForms.Guna2ComboBox cmbDateRange;
-        private Guna.UI2.WinForms.Guna2Panel guna2Panel6;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel5;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel4;
-        private Guna.UI2.WinForms.Guna2Panel guna2Panel2;
-        private Guna.UI2.WinForms.Guna2Panel guna2Panel3;
+        private Guna.UI2.WinForms.Guna2Panel pnlFrontDesk;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
         private LiveCharts.WinForms.CartesianChart cartesianChart1;
-        private Guna.UI2.WinForms.Guna2GradientTileButton btnGuestView;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label lblActiveRooms;
         private System.Windows.Forms.Label lblPresentGuests;
-        private System.Windows.Forms.Label lblOnlinePersonnels;
-        private System.Windows.Forms.Label lblRevenue;
         private Guna.UI2.WinForms.Guna2CircleButton btnHide;
         private Guna.UI2.WinForms.Guna2CircleButton btnExit;
+        private Guna.UI2.WinForms.Guna2GradientTileButton btnShift;
+        private Guna.UI2.WinForms.Guna2Panel pnlSupervisor;
+        private Guna.UI2.WinForms.Guna2Panel guna2Panel7;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label9;
+        private Guna.UI2.WinForms.Guna2Panel guna2Panel8;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label11;
+        private Guna.UI2.WinForms.Guna2Panel pnlHousekeeping;
+        private Guna.UI2.WinForms.Guna2Panel guna2Panel3;
+        private System.Windows.Forms.Label lblActiveRooms2;
+        private System.Windows.Forms.Label label5;
+        private Guna.UI2.WinForms.Guna2Panel guna2Panel6;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label7;
+        private Guna.UI2.WinForms.Guna2GradientTileButton btnGuestView;
+        private Guna.UI2.WinForms.Guna2GradientTileButton guna2GradientTileButton1;
     }
 }

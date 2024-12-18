@@ -26,8 +26,9 @@ namespace PrjOverhaulHotel
             displayProfile();
             displayRooms();
             displayTypes();
-            roomStatusUpdate();
             roleAccess();
+
+            dtmSelectedDate.Value = DateTime.Now;
         }
 
         private void btnExit_Click(object sender, EventArgs e)
@@ -160,7 +161,7 @@ namespace PrjOverhaulHotel
 
         private void displayRooms()
         {
-            GlobalProcedure.procRoomData();
+            GlobalProcedure.procRoomData(dtmSelectedDate.Value);
             if (GlobalProcedure.datHotel.Rows.Count > 0)
             {
                 dtgRooms.Rows.Clear();
@@ -170,6 +171,7 @@ namespace PrjOverhaulHotel
                     {
                     dtgRooms.Rows.Add(
                         row1["ROOM_ID"].ToString(),
+                        row1["RRID"].ToString(),
                         row1["ROOM_NAME"].ToString(),
                         row1["ROOM_TYPE"].ToString(),
                         $"₱{Convert.ToDouble(row1["PRICE_PER_DAY"].ToString()):F2}",
@@ -203,7 +205,7 @@ namespace PrjOverhaulHotel
         
         private void searchRooms()
         {
-            GlobalProcedure.procRoomSearch(txtRoomName.Text, cmbRoomType.Text, cmbRoomStatus.Text);
+            GlobalProcedure.procRoomSearch(dtmSelectedDate.Value, txtRoomName.Text, cmbRoomType.Text, cmbRoomStatus.Text);
                 if (GlobalProcedure.datHotel.Rows.Count > 0)
                 {
                     dtgRooms.Rows.Clear();
@@ -212,6 +214,7 @@ namespace PrjOverhaulHotel
                     {
                         dtgRooms.Rows.Add(
                         row1["ROOM_ID"].ToString(),
+                        row1["RRID"].ToString(),
                         row1["ROOM_NAME"].ToString(),
                         row1["ROOM_TYPE"].ToString(),
                         $"₱{Convert.ToDouble(row1["PRICE_PER_DAY"].ToString()):F2}",
@@ -224,11 +227,6 @@ namespace PrjOverhaulHotel
                 lblResult.Text = GlobalProcedure.datHotel.Rows.Count.ToString();
                 dtgRooms.Rows.Clear();
                 }
-        }
-
-        private void roomStatusUpdate()
-        {
-            GlobalProcedure.procRoomCheckRoomStatus(DateTime.Now.ToString("yyyy-MM-dd"));
         }
 
         private void txtRoomName_TextChanged(object sender, EventArgs e)
@@ -244,7 +242,13 @@ namespace PrjOverhaulHotel
 
         private void btnManageRoom_Click(object sender, EventArgs e)
         {
-            new PopUpRoomMain(Convert.ToInt32(dtgRooms.CurrentRow.Cells[0].Value)).ShowDialog();
+            int cellValue;
+            if (!int.TryParse(dtgRooms.CurrentRow.Cells[1].Value?.ToString(), out cellValue))
+            {
+                cellValue = 0; // Set a fallback value
+            }
+            new PopUpRoomMain(Convert.ToInt32(dtgRooms.CurrentRow.Cells[0].Value),
+                cellValue).ShowDialog();
             displayRooms();
         }
 
@@ -260,7 +264,7 @@ namespace PrjOverhaulHotel
             if (role == "Front Desk Staff")
             {
                 btnPersonnel.Visible = false;
-                btnRooms.Visible = false;
+                btnRooms.Location = new Point(0, 180);
             }
             else if (role == "Housekeeping Staff")
             {
@@ -274,6 +278,11 @@ namespace PrjOverhaulHotel
             {
 
             }
+        }
+
+        private void dtmSelectedDate_ValueChanged(object sender, EventArgs e)
+        {
+            displayRooms();
         }
     }
 }

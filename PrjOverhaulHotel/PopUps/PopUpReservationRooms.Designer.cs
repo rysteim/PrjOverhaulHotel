@@ -35,8 +35,14 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PopUpReservationRooms));
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.pnlLogin = new Guna.UI2.WinForms.Guna2Panel();
+            this.label5 = new System.Windows.Forms.Label();
+            this.dtmIn = new Guna.UI2.WinForms.Guna2DateTimePicker();
             this.btnCancel = new Guna.UI2.WinForms.Guna2GradientTileButton();
             this.btnDeleteReservation = new Guna.UI2.WinForms.Guna2GradientTileButton();
+            this.btnAddReservation = new Guna.UI2.WinForms.Guna2GradientTileButton();
+            this.btnAddSave = new Guna.UI2.WinForms.Guna2GradientTileButton();
+            this.btnEditReservation = new Guna.UI2.WinForms.Guna2GradientTileButton();
+            this.btnEditSave = new Guna.UI2.WinForms.Guna2GradientTileButton();
             this.dtgRooms = new System.Windows.Forms.DataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -45,19 +51,6 @@
             this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btnEditReservation = new Guna.UI2.WinForms.Guna2GradientTileButton();
-            this.btnEditSave = new Guna.UI2.WinForms.Guna2GradientTileButton();
-            this.btnAddReservation = new Guna.UI2.WinForms.Guna2GradientTileButton();
-            this.btnAddSave = new Guna.UI2.WinForms.Guna2GradientTileButton();
-            this.pnlEdit = new Guna.UI2.WinForms.Guna2Panel();
-            this.txtEditRoomType = new Guna.UI2.WinForms.Guna2TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.dtmEditCheckout = new Guna.UI2.WinForms.Guna2DateTimePicker();
-            this.dtmEditCheckin = new Guna.UI2.WinForms.Guna2DateTimePicker();
-            this.txtEditRoomPrice = new Guna.UI2.WinForms.Guna2TextBox();
-            this.txtEditPricePerDay = new Guna.UI2.WinForms.Guna2TextBox();
-            this.txtEditRoomName = new Guna.UI2.WinForms.Guna2TextBox();
             this.pnlDetails = new Guna.UI2.WinForms.Guna2Panel();
             this.txtCheckoutDate = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtCheckinDate = new Guna.UI2.WinForms.Guna2TextBox();
@@ -66,19 +59,26 @@
             this.txtRoomType = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtRoomname = new Guna.UI2.WinForms.Guna2TextBox();
             this.pnlAdd = new Guna.UI2.WinForms.Guna2Panel();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
             this.txtAddRoomType = new Guna.UI2.WinForms.Guna2TextBox();
-            this.dtmAddCheckout = new Guna.UI2.WinForms.Guna2DateTimePicker();
-            this.dtmAddCheckin = new Guna.UI2.WinForms.Guna2DateTimePicker();
             this.txtAddRoomPrice = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtAddPricePerDay = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtAddRoomName = new Guna.UI2.WinForms.Guna2TextBox();
+            this.pnlEdit = new Guna.UI2.WinForms.Guna2Panel();
+            this.txtEditRoomType = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txtEditRoomPrice = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txtEditPricePerDay = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txtEditRoomName = new Guna.UI2.WinForms.Guna2TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.dtmOut = new Guna.UI2.WinForms.Guna2DateTimePicker();
+            this.txtEditCheckOut = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txtEditCheckIn = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txtAddCheckOut = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txtAddCheckIn = new Guna.UI2.WinForms.Guna2TextBox();
             this.pnlLogin.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgRooms)).BeginInit();
-            this.pnlEdit.SuspendLayout();
             this.pnlDetails.SuspendLayout();
             this.pnlAdd.SuspendLayout();
+            this.pnlEdit.SuspendLayout();
             this.SuspendLayout();
             // 
             // guna2Elipse1
@@ -90,13 +90,17 @@
             this.pnlLogin.BackgroundImage = global::PrjOverhaulHotel.Properties.Resources.Rectangle_13__2_;
             this.pnlLogin.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pnlLogin.BorderColor = System.Drawing.Color.Black;
+            this.pnlLogin.Controls.Add(this.label6);
+            this.pnlLogin.Controls.Add(this.dtmOut);
+            this.pnlLogin.Controls.Add(this.label5);
+            this.pnlLogin.Controls.Add(this.dtmIn);
             this.pnlLogin.Controls.Add(this.btnCancel);
             this.pnlLogin.Controls.Add(this.btnDeleteReservation);
-            this.pnlLogin.Controls.Add(this.dtgRooms);
-            this.pnlLogin.Controls.Add(this.btnEditReservation);
-            this.pnlLogin.Controls.Add(this.btnEditSave);
             this.pnlLogin.Controls.Add(this.btnAddReservation);
             this.pnlLogin.Controls.Add(this.btnAddSave);
+            this.pnlLogin.Controls.Add(this.btnEditReservation);
+            this.pnlLogin.Controls.Add(this.btnEditSave);
+            this.pnlLogin.Controls.Add(this.dtgRooms);
             this.pnlLogin.Controls.Add(this.pnlAdd);
             this.pnlLogin.Controls.Add(this.pnlEdit);
             this.pnlLogin.Controls.Add(this.pnlDetails);
@@ -107,6 +111,37 @@
             this.pnlLogin.TabIndex = 12;
             this.pnlLogin.Click += new System.EventHandler(this.pnlLogin_Click);
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.Color.Transparent;
+            this.label5.Font = new System.Drawing.Font("Microsoft New Tai Lue", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(31, 24);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(82, 15);
+            this.label5.TabIndex = 26;
+            this.label5.Text = "Check-in Date:";
+            // 
+            // dtmIn
+            // 
+            this.dtmIn.BackColor = System.Drawing.Color.Transparent;
+            this.dtmIn.BorderRadius = 15;
+            this.dtmIn.BorderThickness = 1;
+            this.dtmIn.CheckedState.Parent = this.dtmIn;
+            this.dtmIn.FillColor = System.Drawing.Color.White;
+            this.dtmIn.Font = new System.Drawing.Font("Microsoft New Tai Lue", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtmIn.Format = System.Windows.Forms.DateTimePickerFormat.Long;
+            this.dtmIn.HoverState.Parent = this.dtmIn;
+            this.dtmIn.Location = new System.Drawing.Point(119, 14);
+            this.dtmIn.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
+            this.dtmIn.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
+            this.dtmIn.Name = "dtmIn";
+            this.dtmIn.ShadowDecoration.Parent = this.dtmIn;
+            this.dtmIn.Size = new System.Drawing.Size(284, 36);
+            this.dtmIn.TabIndex = 26;
+            this.dtmIn.TextOffset = new System.Drawing.Point(0, 1);
+            this.dtmIn.Value = new System.DateTime(2024, 11, 8, 23, 42, 22, 823);
+            // 
             // btnCancel
             // 
             this.btnCancel.BackColor = System.Drawing.Color.Transparent;
@@ -115,19 +150,19 @@
             this.btnCancel.CustomImages.Parent = this.btnCancel;
             this.btnCancel.FillColor = System.Drawing.Color.Black;
             this.btnCancel.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.btnCancel.Font = new System.Drawing.Font("Adobe Fan Heiti Std B", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancel.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancel.ForeColor = System.Drawing.Color.White;
             this.btnCancel.HoverState.Parent = this.btnCancel;
             this.btnCancel.Image = global::PrjOverhaulHotel.Properties.Resources.check;
             this.btnCancel.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnCancel.ImageOffset = new System.Drawing.Point(5, 12);
+            this.btnCancel.ImageOffset = new System.Drawing.Point(5, 13);
             this.btnCancel.Location = new System.Drawing.Point(659, 349);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.ShadowDecoration.Parent = this.btnCancel;
             this.btnCancel.Size = new System.Drawing.Size(180, 32);
             this.btnCancel.TabIndex = 46;
             this.btnCancel.Text = "DONE";
-            this.btnCancel.TextOffset = new System.Drawing.Point(7, -11);
+            this.btnCancel.TextOffset = new System.Drawing.Point(7, -13);
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // btnDeleteReservation
@@ -138,20 +173,112 @@
             this.btnDeleteReservation.CustomImages.Parent = this.btnDeleteReservation;
             this.btnDeleteReservation.FillColor = System.Drawing.Color.Black;
             this.btnDeleteReservation.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.btnDeleteReservation.Font = new System.Drawing.Font("Adobe Fan Heiti Std B", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDeleteReservation.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDeleteReservation.ForeColor = System.Drawing.Color.White;
             this.btnDeleteReservation.HoverState.Parent = this.btnDeleteReservation;
             this.btnDeleteReservation.Image = global::PrjOverhaulHotel.Properties.Resources.trash_2;
             this.btnDeleteReservation.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnDeleteReservation.ImageOffset = new System.Drawing.Point(5, 12);
+            this.btnDeleteReservation.ImageOffset = new System.Drawing.Point(5, 13);
             this.btnDeleteReservation.Location = new System.Drawing.Point(659, 307);
             this.btnDeleteReservation.Name = "btnDeleteReservation";
             this.btnDeleteReservation.ShadowDecoration.Parent = this.btnDeleteReservation;
             this.btnDeleteReservation.Size = new System.Drawing.Size(180, 32);
             this.btnDeleteReservation.TabIndex = 40;
             this.btnDeleteReservation.Text = "DELETE";
-            this.btnDeleteReservation.TextOffset = new System.Drawing.Point(7, -11);
+            this.btnDeleteReservation.TextOffset = new System.Drawing.Point(7, -13);
             this.btnDeleteReservation.Click += new System.EventHandler(this.btnDeleteReservation_Click);
+            // 
+            // btnAddReservation
+            // 
+            this.btnAddReservation.BackColor = System.Drawing.Color.Transparent;
+            this.btnAddReservation.BorderRadius = 15;
+            this.btnAddReservation.CheckedState.Parent = this.btnAddReservation;
+            this.btnAddReservation.CustomImages.Parent = this.btnAddReservation;
+            this.btnAddReservation.FillColor = System.Drawing.Color.Black;
+            this.btnAddReservation.FillColor2 = System.Drawing.Color.Teal;
+            this.btnAddReservation.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddReservation.ForeColor = System.Drawing.Color.White;
+            this.btnAddReservation.HoverState.Parent = this.btnAddReservation;
+            this.btnAddReservation.Image = global::PrjOverhaulHotel.Properties.Resources.plus;
+            this.btnAddReservation.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnAddReservation.ImageOffset = new System.Drawing.Point(5, 13);
+            this.btnAddReservation.Location = new System.Drawing.Point(659, 225);
+            this.btnAddReservation.Name = "btnAddReservation";
+            this.btnAddReservation.ShadowDecoration.Parent = this.btnAddReservation;
+            this.btnAddReservation.Size = new System.Drawing.Size(180, 32);
+            this.btnAddReservation.TabIndex = 38;
+            this.btnAddReservation.Text = "ADD";
+            this.btnAddReservation.TextOffset = new System.Drawing.Point(7, -13);
+            this.btnAddReservation.Click += new System.EventHandler(this.btnAddReservation_Click);
+            // 
+            // btnAddSave
+            // 
+            this.btnAddSave.BackColor = System.Drawing.Color.Transparent;
+            this.btnAddSave.BorderRadius = 15;
+            this.btnAddSave.CheckedState.Parent = this.btnAddSave;
+            this.btnAddSave.CustomImages.Parent = this.btnAddSave;
+            this.btnAddSave.FillColor = System.Drawing.Color.Black;
+            this.btnAddSave.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnAddSave.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddSave.ForeColor = System.Drawing.Color.White;
+            this.btnAddSave.HoverState.Parent = this.btnAddSave;
+            this.btnAddSave.Image = global::PrjOverhaulHotel.Properties.Resources.check;
+            this.btnAddSave.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnAddSave.ImageOffset = new System.Drawing.Point(5, 13);
+            this.btnAddSave.Location = new System.Drawing.Point(659, 225);
+            this.btnAddSave.Name = "btnAddSave";
+            this.btnAddSave.ShadowDecoration.Parent = this.btnAddSave;
+            this.btnAddSave.Size = new System.Drawing.Size(180, 32);
+            this.btnAddSave.TabIndex = 45;
+            this.btnAddSave.Text = "SAVE";
+            this.btnAddSave.TextOffset = new System.Drawing.Point(7, -13);
+            this.btnAddSave.Click += new System.EventHandler(this.btnAddSave_Click);
+            // 
+            // btnEditReservation
+            // 
+            this.btnEditReservation.BackColor = System.Drawing.Color.Transparent;
+            this.btnEditReservation.BorderRadius = 15;
+            this.btnEditReservation.CheckedState.Parent = this.btnEditReservation;
+            this.btnEditReservation.CustomImages.Parent = this.btnEditReservation;
+            this.btnEditReservation.FillColor = System.Drawing.Color.Black;
+            this.btnEditReservation.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnEditReservation.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEditReservation.ForeColor = System.Drawing.Color.White;
+            this.btnEditReservation.HoverState.Parent = this.btnEditReservation;
+            this.btnEditReservation.Image = global::PrjOverhaulHotel.Properties.Resources.bolt;
+            this.btnEditReservation.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnEditReservation.ImageOffset = new System.Drawing.Point(5, 13);
+            this.btnEditReservation.Location = new System.Drawing.Point(659, 265);
+            this.btnEditReservation.Name = "btnEditReservation";
+            this.btnEditReservation.ShadowDecoration.Parent = this.btnEditReservation;
+            this.btnEditReservation.Size = new System.Drawing.Size(180, 32);
+            this.btnEditReservation.TabIndex = 39;
+            this.btnEditReservation.Text = "EDIT";
+            this.btnEditReservation.TextOffset = new System.Drawing.Point(7, -13);
+            this.btnEditReservation.Click += new System.EventHandler(this.btnEditReservation_Click);
+            // 
+            // btnEditSave
+            // 
+            this.btnEditSave.BackColor = System.Drawing.Color.Transparent;
+            this.btnEditSave.BorderRadius = 15;
+            this.btnEditSave.CheckedState.Parent = this.btnEditSave;
+            this.btnEditSave.CustomImages.Parent = this.btnEditSave;
+            this.btnEditSave.FillColor = System.Drawing.Color.Black;
+            this.btnEditSave.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnEditSave.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEditSave.ForeColor = System.Drawing.Color.White;
+            this.btnEditSave.HoverState.Parent = this.btnEditSave;
+            this.btnEditSave.Image = global::PrjOverhaulHotel.Properties.Resources.check;
+            this.btnEditSave.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnEditSave.ImageOffset = new System.Drawing.Point(5, 13);
+            this.btnEditSave.Location = new System.Drawing.Point(659, 265);
+            this.btnEditSave.Name = "btnEditSave";
+            this.btnEditSave.ShadowDecoration.Parent = this.btnEditSave;
+            this.btnEditSave.Size = new System.Drawing.Size(180, 32);
+            this.btnEditSave.TabIndex = 44;
+            this.btnEditSave.Text = "SAVE";
+            this.btnEditSave.TextOffset = new System.Drawing.Point(7, -13);
+            this.btnEditSave.Click += new System.EventHandler(this.btnEditSave_Click);
             // 
             // dtgRooms
             // 
@@ -177,7 +304,7 @@
             this.Column5});
             this.dtgRooms.EnableHeadersVisualStyles = false;
             this.dtgRooms.GridColor = System.Drawing.Color.Black;
-            this.dtgRooms.Location = new System.Drawing.Point(25, 22);
+            this.dtgRooms.Location = new System.Drawing.Point(25, 56);
             this.dtgRooms.MultiSelect = false;
             this.dtgRooms.Name = "dtgRooms";
             this.dtgRooms.ReadOnly = true;
@@ -196,7 +323,7 @@
             dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(135)))), ((int)(((byte)(97)))));
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
             this.dtgRooms.RowsDefaultCellStyle = dataGridViewCellStyle3;
-            this.dtgRooms.Size = new System.Drawing.Size(814, 177);
+            this.dtgRooms.Size = new System.Drawing.Size(814, 152);
             this.dtgRooms.TabIndex = 37;
             this.dtgRooms.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgRooms_CellClick);
             // 
@@ -255,302 +382,6 @@
             this.Column5.Name = "Column5";
             this.Column5.ReadOnly = true;
             this.Column5.Width = 155;
-            // 
-            // btnEditReservation
-            // 
-            this.btnEditReservation.BackColor = System.Drawing.Color.Transparent;
-            this.btnEditReservation.BorderRadius = 15;
-            this.btnEditReservation.CheckedState.Parent = this.btnEditReservation;
-            this.btnEditReservation.CustomImages.Parent = this.btnEditReservation;
-            this.btnEditReservation.FillColor = System.Drawing.Color.Black;
-            this.btnEditReservation.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btnEditReservation.Font = new System.Drawing.Font("Adobe Fan Heiti Std B", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEditReservation.ForeColor = System.Drawing.Color.White;
-            this.btnEditReservation.HoverState.Parent = this.btnEditReservation;
-            this.btnEditReservation.Image = global::PrjOverhaulHotel.Properties.Resources.bolt;
-            this.btnEditReservation.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnEditReservation.ImageOffset = new System.Drawing.Point(5, 12);
-            this.btnEditReservation.Location = new System.Drawing.Point(659, 265);
-            this.btnEditReservation.Name = "btnEditReservation";
-            this.btnEditReservation.ShadowDecoration.Parent = this.btnEditReservation;
-            this.btnEditReservation.Size = new System.Drawing.Size(180, 32);
-            this.btnEditReservation.TabIndex = 39;
-            this.btnEditReservation.Text = "EDIT";
-            this.btnEditReservation.TextOffset = new System.Drawing.Point(7, -11);
-            this.btnEditReservation.Click += new System.EventHandler(this.btnEditReservation_Click);
-            // 
-            // btnEditSave
-            // 
-            this.btnEditSave.BackColor = System.Drawing.Color.Transparent;
-            this.btnEditSave.BorderRadius = 15;
-            this.btnEditSave.CheckedState.Parent = this.btnEditSave;
-            this.btnEditSave.CustomImages.Parent = this.btnEditSave;
-            this.btnEditSave.FillColor = System.Drawing.Color.Black;
-            this.btnEditSave.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btnEditSave.Font = new System.Drawing.Font("Adobe Fan Heiti Std B", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEditSave.ForeColor = System.Drawing.Color.White;
-            this.btnEditSave.HoverState.Parent = this.btnEditSave;
-            this.btnEditSave.Image = global::PrjOverhaulHotel.Properties.Resources.check;
-            this.btnEditSave.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnEditSave.ImageOffset = new System.Drawing.Point(5, 12);
-            this.btnEditSave.Location = new System.Drawing.Point(659, 265);
-            this.btnEditSave.Name = "btnEditSave";
-            this.btnEditSave.ShadowDecoration.Parent = this.btnEditSave;
-            this.btnEditSave.Size = new System.Drawing.Size(180, 32);
-            this.btnEditSave.TabIndex = 44;
-            this.btnEditSave.Text = "SAVE";
-            this.btnEditSave.TextOffset = new System.Drawing.Point(7, -11);
-            this.btnEditSave.Click += new System.EventHandler(this.btnEditSave_Click);
-            // 
-            // btnAddReservation
-            // 
-            this.btnAddReservation.BackColor = System.Drawing.Color.Transparent;
-            this.btnAddReservation.BorderRadius = 15;
-            this.btnAddReservation.CheckedState.Parent = this.btnAddReservation;
-            this.btnAddReservation.CustomImages.Parent = this.btnAddReservation;
-            this.btnAddReservation.FillColor = System.Drawing.Color.Black;
-            this.btnAddReservation.FillColor2 = System.Drawing.Color.Teal;
-            this.btnAddReservation.Font = new System.Drawing.Font("Adobe Fan Heiti Std B", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAddReservation.ForeColor = System.Drawing.Color.White;
-            this.btnAddReservation.HoverState.Parent = this.btnAddReservation;
-            this.btnAddReservation.Image = global::PrjOverhaulHotel.Properties.Resources.plus;
-            this.btnAddReservation.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnAddReservation.ImageOffset = new System.Drawing.Point(5, 12);
-            this.btnAddReservation.Location = new System.Drawing.Point(659, 225);
-            this.btnAddReservation.Name = "btnAddReservation";
-            this.btnAddReservation.ShadowDecoration.Parent = this.btnAddReservation;
-            this.btnAddReservation.Size = new System.Drawing.Size(180, 32);
-            this.btnAddReservation.TabIndex = 38;
-            this.btnAddReservation.Text = "ADD";
-            this.btnAddReservation.TextOffset = new System.Drawing.Point(7, -11);
-            this.btnAddReservation.Click += new System.EventHandler(this.btnAddReservation_Click);
-            // 
-            // btnAddSave
-            // 
-            this.btnAddSave.BackColor = System.Drawing.Color.Transparent;
-            this.btnAddSave.BorderRadius = 15;
-            this.btnAddSave.CheckedState.Parent = this.btnAddSave;
-            this.btnAddSave.CustomImages.Parent = this.btnAddSave;
-            this.btnAddSave.FillColor = System.Drawing.Color.Black;
-            this.btnAddSave.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btnAddSave.Font = new System.Drawing.Font("Adobe Fan Heiti Std B", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAddSave.ForeColor = System.Drawing.Color.White;
-            this.btnAddSave.HoverState.Parent = this.btnAddSave;
-            this.btnAddSave.Image = global::PrjOverhaulHotel.Properties.Resources.check;
-            this.btnAddSave.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnAddSave.ImageOffset = new System.Drawing.Point(5, 12);
-            this.btnAddSave.Location = new System.Drawing.Point(659, 225);
-            this.btnAddSave.Name = "btnAddSave";
-            this.btnAddSave.ShadowDecoration.Parent = this.btnAddSave;
-            this.btnAddSave.Size = new System.Drawing.Size(180, 32);
-            this.btnAddSave.TabIndex = 45;
-            this.btnAddSave.Text = "SAVE";
-            this.btnAddSave.TextOffset = new System.Drawing.Point(7, -11);
-            this.btnAddSave.Click += new System.EventHandler(this.btnAddSave_Click);
-            // 
-            // pnlEdit
-            // 
-            this.pnlEdit.BackColor = System.Drawing.Color.Transparent;
-            this.pnlEdit.BorderColor = System.Drawing.Color.Black;
-            this.pnlEdit.BorderRadius = 15;
-            this.pnlEdit.BorderThickness = 2;
-            this.pnlEdit.Controls.Add(this.txtEditRoomType);
-            this.pnlEdit.Controls.Add(this.label3);
-            this.pnlEdit.Controls.Add(this.label4);
-            this.pnlEdit.Controls.Add(this.dtmEditCheckout);
-            this.pnlEdit.Controls.Add(this.dtmEditCheckin);
-            this.pnlEdit.Controls.Add(this.txtEditRoomPrice);
-            this.pnlEdit.Controls.Add(this.txtEditPricePerDay);
-            this.pnlEdit.Controls.Add(this.txtEditRoomName);
-            this.pnlEdit.FillColor = System.Drawing.Color.White;
-            this.pnlEdit.Location = new System.Drawing.Point(25, 225);
-            this.pnlEdit.Name = "pnlEdit";
-            this.pnlEdit.ShadowDecoration.Parent = this.pnlEdit;
-            this.pnlEdit.Size = new System.Drawing.Size(608, 156);
-            this.pnlEdit.TabIndex = 43;
-            // 
-            // txtEditRoomType
-            // 
-            this.txtEditRoomType.BackColor = System.Drawing.Color.Transparent;
-            this.txtEditRoomType.BorderColor = System.Drawing.Color.Black;
-            this.txtEditRoomType.BorderRadius = 12;
-            this.txtEditRoomType.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtEditRoomType.DefaultText = "";
-            this.txtEditRoomType.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtEditRoomType.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtEditRoomType.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtEditRoomType.DisabledState.Parent = this.txtEditRoomType;
-            this.txtEditRoomType.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtEditRoomType.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtEditRoomType.FocusedState.Parent = this.txtEditRoomType;
-            this.txtEditRoomType.Font = new System.Drawing.Font("Microsoft New Tai Lue", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtEditRoomType.ForeColor = System.Drawing.Color.Black;
-            this.txtEditRoomType.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(154)))), ((int)(((byte)(136)))));
-            this.txtEditRoomType.HoverState.Parent = this.txtEditRoomType;
-            this.txtEditRoomType.IconLeftOffset = new System.Drawing.Point(5, 0);
-            this.txtEditRoomType.Location = new System.Drawing.Point(307, 20);
-            this.txtEditRoomType.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.txtEditRoomType.Name = "txtEditRoomType";
-            this.txtEditRoomType.PasswordChar = '\0';
-            this.txtEditRoomType.PlaceholderText = "Room Type";
-            this.txtEditRoomType.ReadOnly = true;
-            this.txtEditRoomType.SelectedText = "";
-            this.txtEditRoomType.ShadowDecoration.Parent = this.txtEditRoomType;
-            this.txtEditRoomType.Size = new System.Drawing.Size(284, 30);
-            this.txtEditRoomType.TabIndex = 28;
-            this.txtEditRoomType.TextOffset = new System.Drawing.Point(10, 0);
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft New Tai Lue", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(316, 89);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(90, 15);
-            this.label3.TabIndex = 27;
-            this.label3.Text = "Check-out Date:";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft New Tai Lue", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(25, 89);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(82, 15);
-            this.label4.TabIndex = 26;
-            this.label4.Text = "Check-in Date:";
-            // 
-            // dtmEditCheckout
-            // 
-            this.dtmEditCheckout.BorderRadius = 15;
-            this.dtmEditCheckout.BorderThickness = 1;
-            this.dtmEditCheckout.CheckedState.Parent = this.dtmEditCheckout;
-            this.dtmEditCheckout.FillColor = System.Drawing.Color.White;
-            this.dtmEditCheckout.Font = new System.Drawing.Font("Microsoft New Tai Lue", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtmEditCheckout.Format = System.Windows.Forms.DateTimePickerFormat.Long;
-            this.dtmEditCheckout.HoverState.Parent = this.dtmEditCheckout;
-            this.dtmEditCheckout.Location = new System.Drawing.Point(307, 104);
-            this.dtmEditCheckout.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
-            this.dtmEditCheckout.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
-            this.dtmEditCheckout.Name = "dtmEditCheckout";
-            this.dtmEditCheckout.ShadowDecoration.Parent = this.dtmEditCheckout;
-            this.dtmEditCheckout.Size = new System.Drawing.Size(284, 36);
-            this.dtmEditCheckout.TabIndex = 22;
-            this.dtmEditCheckout.TextOffset = new System.Drawing.Point(0, 1);
-            this.dtmEditCheckout.Value = new System.DateTime(2024, 11, 8, 23, 42, 22, 823);
-            this.dtmEditCheckout.ValueChanged += new System.EventHandler(this.dtmEditCheck_ValueChanged);
-            // 
-            // dtmEditCheckin
-            // 
-            this.dtmEditCheckin.BorderRadius = 15;
-            this.dtmEditCheckin.BorderThickness = 1;
-            this.dtmEditCheckin.CheckedState.Parent = this.dtmEditCheckin;
-            this.dtmEditCheckin.FillColor = System.Drawing.Color.White;
-            this.dtmEditCheckin.Font = new System.Drawing.Font("Microsoft New Tai Lue", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtmEditCheckin.Format = System.Windows.Forms.DateTimePickerFormat.Long;
-            this.dtmEditCheckin.HoverState.Parent = this.dtmEditCheckin;
-            this.dtmEditCheckin.Location = new System.Drawing.Point(15, 104);
-            this.dtmEditCheckin.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
-            this.dtmEditCheckin.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
-            this.dtmEditCheckin.Name = "dtmEditCheckin";
-            this.dtmEditCheckin.ShadowDecoration.Parent = this.dtmEditCheckin;
-            this.dtmEditCheckin.Size = new System.Drawing.Size(284, 36);
-            this.dtmEditCheckin.TabIndex = 21;
-            this.dtmEditCheckin.TextOffset = new System.Drawing.Point(0, 1);
-            this.dtmEditCheckin.Value = new System.DateTime(2024, 11, 8, 23, 42, 22, 823);
-            this.dtmEditCheckin.ValueChanged += new System.EventHandler(this.dtmEditCheck_ValueChanged);
-            // 
-            // txtEditRoomPrice
-            // 
-            this.txtEditRoomPrice.BackColor = System.Drawing.Color.Transparent;
-            this.txtEditRoomPrice.BorderColor = System.Drawing.Color.Black;
-            this.txtEditRoomPrice.BorderRadius = 12;
-            this.txtEditRoomPrice.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtEditRoomPrice.DefaultText = "";
-            this.txtEditRoomPrice.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtEditRoomPrice.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtEditRoomPrice.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtEditRoomPrice.DisabledState.Parent = this.txtEditRoomPrice;
-            this.txtEditRoomPrice.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtEditRoomPrice.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtEditRoomPrice.FocusedState.Parent = this.txtEditRoomPrice;
-            this.txtEditRoomPrice.Font = new System.Drawing.Font("Microsoft New Tai Lue", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtEditRoomPrice.ForeColor = System.Drawing.Color.Black;
-            this.txtEditRoomPrice.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(154)))), ((int)(((byte)(136)))));
-            this.txtEditRoomPrice.HoverState.Parent = this.txtEditRoomPrice;
-            this.txtEditRoomPrice.IconLeftOffset = new System.Drawing.Point(5, 0);
-            this.txtEditRoomPrice.Location = new System.Drawing.Point(307, 54);
-            this.txtEditRoomPrice.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.txtEditRoomPrice.Name = "txtEditRoomPrice";
-            this.txtEditRoomPrice.PasswordChar = '\0';
-            this.txtEditRoomPrice.PlaceholderText = "Room Price";
-            this.txtEditRoomPrice.ReadOnly = true;
-            this.txtEditRoomPrice.SelectedText = "";
-            this.txtEditRoomPrice.ShadowDecoration.Parent = this.txtEditRoomPrice;
-            this.txtEditRoomPrice.Size = new System.Drawing.Size(284, 30);
-            this.txtEditRoomPrice.TabIndex = 17;
-            this.txtEditRoomPrice.TextOffset = new System.Drawing.Point(10, 0);
-            // 
-            // txtEditPricePerDay
-            // 
-            this.txtEditPricePerDay.BackColor = System.Drawing.Color.Transparent;
-            this.txtEditPricePerDay.BorderColor = System.Drawing.Color.Black;
-            this.txtEditPricePerDay.BorderRadius = 12;
-            this.txtEditPricePerDay.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtEditPricePerDay.DefaultText = "";
-            this.txtEditPricePerDay.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtEditPricePerDay.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtEditPricePerDay.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtEditPricePerDay.DisabledState.Parent = this.txtEditPricePerDay;
-            this.txtEditPricePerDay.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtEditPricePerDay.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtEditPricePerDay.FocusedState.Parent = this.txtEditPricePerDay;
-            this.txtEditPricePerDay.Font = new System.Drawing.Font("Microsoft New Tai Lue", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtEditPricePerDay.ForeColor = System.Drawing.Color.Black;
-            this.txtEditPricePerDay.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(154)))), ((int)(((byte)(136)))));
-            this.txtEditPricePerDay.HoverState.Parent = this.txtEditPricePerDay;
-            this.txtEditPricePerDay.IconLeftOffset = new System.Drawing.Point(5, 0);
-            this.txtEditPricePerDay.Location = new System.Drawing.Point(15, 54);
-            this.txtEditPricePerDay.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.txtEditPricePerDay.Name = "txtEditPricePerDay";
-            this.txtEditPricePerDay.PasswordChar = '\0';
-            this.txtEditPricePerDay.PlaceholderText = "Price Per Day";
-            this.txtEditPricePerDay.SelectedText = "";
-            this.txtEditPricePerDay.ShadowDecoration.Parent = this.txtEditPricePerDay;
-            this.txtEditPricePerDay.Size = new System.Drawing.Size(284, 30);
-            this.txtEditPricePerDay.TabIndex = 16;
-            this.txtEditPricePerDay.TextOffset = new System.Drawing.Point(10, 0);
-            // 
-            // txtEditRoomName
-            // 
-            this.txtEditRoomName.BackColor = System.Drawing.Color.Transparent;
-            this.txtEditRoomName.BorderColor = System.Drawing.Color.Black;
-            this.txtEditRoomName.BorderRadius = 12;
-            this.txtEditRoomName.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtEditRoomName.DefaultText = "";
-            this.txtEditRoomName.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtEditRoomName.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtEditRoomName.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtEditRoomName.DisabledState.Parent = this.txtEditRoomName;
-            this.txtEditRoomName.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtEditRoomName.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtEditRoomName.FocusedState.Parent = this.txtEditRoomName;
-            this.txtEditRoomName.Font = new System.Drawing.Font("Microsoft New Tai Lue", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtEditRoomName.ForeColor = System.Drawing.Color.Black;
-            this.txtEditRoomName.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(154)))), ((int)(((byte)(136)))));
-            this.txtEditRoomName.HoverState.Parent = this.txtEditRoomName;
-            this.txtEditRoomName.IconLeftOffset = new System.Drawing.Point(5, 0);
-            this.txtEditRoomName.Location = new System.Drawing.Point(15, 20);
-            this.txtEditRoomName.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.txtEditRoomName.Name = "txtEditRoomName";
-            this.txtEditRoomName.PasswordChar = '\0';
-            this.txtEditRoomName.PlaceholderText = "Room Name";
-            this.txtEditRoomName.SelectedText = "";
-            this.txtEditRoomName.ShadowDecoration.Parent = this.txtEditRoomName;
-            this.txtEditRoomName.Size = new System.Drawing.Size(284, 30);
-            this.txtEditRoomName.TabIndex = 14;
-            this.txtEditRoomName.TextOffset = new System.Drawing.Point(10, 0);
-            this.txtEditRoomName.MouseClick += new System.Windows.Forms.MouseEventHandler(this.txtEditRoomName_MouseClick);
             // 
             // pnlDetails
             // 
@@ -757,11 +588,9 @@
             this.pnlAdd.BorderColor = System.Drawing.Color.Black;
             this.pnlAdd.BorderRadius = 15;
             this.pnlAdd.BorderThickness = 2;
-            this.pnlAdd.Controls.Add(this.label2);
-            this.pnlAdd.Controls.Add(this.label1);
+            this.pnlAdd.Controls.Add(this.txtAddCheckOut);
+            this.pnlAdd.Controls.Add(this.txtAddCheckIn);
             this.pnlAdd.Controls.Add(this.txtAddRoomType);
-            this.pnlAdd.Controls.Add(this.dtmAddCheckout);
-            this.pnlAdd.Controls.Add(this.dtmAddCheckin);
             this.pnlAdd.Controls.Add(this.txtAddRoomPrice);
             this.pnlAdd.Controls.Add(this.txtAddPricePerDay);
             this.pnlAdd.Controls.Add(this.txtAddRoomName);
@@ -771,26 +600,6 @@
             this.pnlAdd.ShadowDecoration.Parent = this.pnlAdd;
             this.pnlAdd.Size = new System.Drawing.Size(608, 156);
             this.pnlAdd.TabIndex = 42;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft New Tai Lue", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(316, 89);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(90, 15);
-            this.label2.TabIndex = 25;
-            this.label2.Text = "Check-out Date:";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft New Tai Lue", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(25, 89);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(82, 15);
-            this.label1.TabIndex = 24;
-            this.label1.Text = "Check-in Date:";
             // 
             // txtAddRoomType
             // 
@@ -823,46 +632,6 @@
             this.txtAddRoomType.TabIndex = 23;
             this.txtAddRoomType.TextOffset = new System.Drawing.Point(10, 0);
             // 
-            // dtmAddCheckout
-            // 
-            this.dtmAddCheckout.BorderRadius = 15;
-            this.dtmAddCheckout.BorderThickness = 1;
-            this.dtmAddCheckout.CheckedState.Parent = this.dtmAddCheckout;
-            this.dtmAddCheckout.FillColor = System.Drawing.Color.White;
-            this.dtmAddCheckout.Font = new System.Drawing.Font("Microsoft New Tai Lue", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtmAddCheckout.Format = System.Windows.Forms.DateTimePickerFormat.Long;
-            this.dtmAddCheckout.HoverState.Parent = this.dtmAddCheckout;
-            this.dtmAddCheckout.Location = new System.Drawing.Point(307, 104);
-            this.dtmAddCheckout.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
-            this.dtmAddCheckout.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
-            this.dtmAddCheckout.Name = "dtmAddCheckout";
-            this.dtmAddCheckout.ShadowDecoration.Parent = this.dtmAddCheckout;
-            this.dtmAddCheckout.Size = new System.Drawing.Size(284, 36);
-            this.dtmAddCheckout.TabIndex = 22;
-            this.dtmAddCheckout.TextOffset = new System.Drawing.Point(0, 1);
-            this.dtmAddCheckout.Value = new System.DateTime(2024, 11, 8, 23, 42, 22, 823);
-            this.dtmAddCheckout.ValueChanged += new System.EventHandler(this.dtmAddCheck_ValueChanged);
-            // 
-            // dtmAddCheckin
-            // 
-            this.dtmAddCheckin.BorderRadius = 15;
-            this.dtmAddCheckin.BorderThickness = 1;
-            this.dtmAddCheckin.CheckedState.Parent = this.dtmAddCheckin;
-            this.dtmAddCheckin.FillColor = System.Drawing.Color.White;
-            this.dtmAddCheckin.Font = new System.Drawing.Font("Microsoft New Tai Lue", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtmAddCheckin.Format = System.Windows.Forms.DateTimePickerFormat.Long;
-            this.dtmAddCheckin.HoverState.Parent = this.dtmAddCheckin;
-            this.dtmAddCheckin.Location = new System.Drawing.Point(15, 104);
-            this.dtmAddCheckin.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
-            this.dtmAddCheckin.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
-            this.dtmAddCheckin.Name = "dtmAddCheckin";
-            this.dtmAddCheckin.ShadowDecoration.Parent = this.dtmAddCheckin;
-            this.dtmAddCheckin.Size = new System.Drawing.Size(284, 36);
-            this.dtmAddCheckin.TabIndex = 21;
-            this.dtmAddCheckin.TextOffset = new System.Drawing.Point(0, 1);
-            this.dtmAddCheckin.Value = new System.DateTime(2024, 11, 8, 23, 42, 22, 823);
-            this.dtmAddCheckin.ValueChanged += new System.EventHandler(this.dtmAddCheck_ValueChanged);
-            // 
             // txtAddRoomPrice
             // 
             this.txtAddRoomPrice.BackColor = System.Drawing.Color.Transparent;
@@ -882,7 +651,7 @@
             this.txtAddRoomPrice.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(154)))), ((int)(((byte)(136)))));
             this.txtAddRoomPrice.HoverState.Parent = this.txtAddRoomPrice;
             this.txtAddRoomPrice.IconLeftOffset = new System.Drawing.Point(5, 0);
-            this.txtAddRoomPrice.Location = new System.Drawing.Point(307, 54);
+            this.txtAddRoomPrice.Location = new System.Drawing.Point(307, 63);
             this.txtAddRoomPrice.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtAddRoomPrice.Name = "txtAddRoomPrice";
             this.txtAddRoomPrice.PasswordChar = '\0';
@@ -913,7 +682,7 @@
             this.txtAddPricePerDay.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(154)))), ((int)(((byte)(136)))));
             this.txtAddPricePerDay.HoverState.Parent = this.txtAddPricePerDay;
             this.txtAddPricePerDay.IconLeftOffset = new System.Drawing.Point(5, 0);
-            this.txtAddPricePerDay.Location = new System.Drawing.Point(15, 54);
+            this.txtAddPricePerDay.Location = new System.Drawing.Point(15, 63);
             this.txtAddPricePerDay.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtAddPricePerDay.Name = "txtAddPricePerDay";
             this.txtAddPricePerDay.PasswordChar = '\0';
@@ -957,6 +726,303 @@
             this.txtAddRoomName.TextOffset = new System.Drawing.Point(10, 0);
             this.txtAddRoomName.MouseClick += new System.Windows.Forms.MouseEventHandler(this.txtAddRoomName_MouseClick);
             // 
+            // pnlEdit
+            // 
+            this.pnlEdit.BackColor = System.Drawing.Color.Transparent;
+            this.pnlEdit.BorderColor = System.Drawing.Color.Black;
+            this.pnlEdit.BorderRadius = 15;
+            this.pnlEdit.BorderThickness = 2;
+            this.pnlEdit.Controls.Add(this.txtEditCheckOut);
+            this.pnlEdit.Controls.Add(this.txtEditCheckIn);
+            this.pnlEdit.Controls.Add(this.txtEditRoomType);
+            this.pnlEdit.Controls.Add(this.txtEditRoomPrice);
+            this.pnlEdit.Controls.Add(this.txtEditPricePerDay);
+            this.pnlEdit.Controls.Add(this.txtEditRoomName);
+            this.pnlEdit.FillColor = System.Drawing.Color.White;
+            this.pnlEdit.Location = new System.Drawing.Point(25, 225);
+            this.pnlEdit.Name = "pnlEdit";
+            this.pnlEdit.ShadowDecoration.Parent = this.pnlEdit;
+            this.pnlEdit.Size = new System.Drawing.Size(608, 156);
+            this.pnlEdit.TabIndex = 43;
+            // 
+            // txtEditRoomType
+            // 
+            this.txtEditRoomType.BackColor = System.Drawing.Color.Transparent;
+            this.txtEditRoomType.BorderColor = System.Drawing.Color.Black;
+            this.txtEditRoomType.BorderRadius = 12;
+            this.txtEditRoomType.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtEditRoomType.DefaultText = "";
+            this.txtEditRoomType.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtEditRoomType.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtEditRoomType.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtEditRoomType.DisabledState.Parent = this.txtEditRoomType;
+            this.txtEditRoomType.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtEditRoomType.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtEditRoomType.FocusedState.Parent = this.txtEditRoomType;
+            this.txtEditRoomType.Font = new System.Drawing.Font("Microsoft New Tai Lue", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEditRoomType.ForeColor = System.Drawing.Color.Black;
+            this.txtEditRoomType.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(154)))), ((int)(((byte)(136)))));
+            this.txtEditRoomType.HoverState.Parent = this.txtEditRoomType;
+            this.txtEditRoomType.IconLeftOffset = new System.Drawing.Point(5, 0);
+            this.txtEditRoomType.Location = new System.Drawing.Point(307, 20);
+            this.txtEditRoomType.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtEditRoomType.Name = "txtEditRoomType";
+            this.txtEditRoomType.PasswordChar = '\0';
+            this.txtEditRoomType.PlaceholderText = "Room Type";
+            this.txtEditRoomType.ReadOnly = true;
+            this.txtEditRoomType.SelectedText = "";
+            this.txtEditRoomType.ShadowDecoration.Parent = this.txtEditRoomType;
+            this.txtEditRoomType.Size = new System.Drawing.Size(284, 30);
+            this.txtEditRoomType.TabIndex = 28;
+            this.txtEditRoomType.TextOffset = new System.Drawing.Point(10, 0);
+            // 
+            // txtEditRoomPrice
+            // 
+            this.txtEditRoomPrice.BackColor = System.Drawing.Color.Transparent;
+            this.txtEditRoomPrice.BorderColor = System.Drawing.Color.Black;
+            this.txtEditRoomPrice.BorderRadius = 12;
+            this.txtEditRoomPrice.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtEditRoomPrice.DefaultText = "";
+            this.txtEditRoomPrice.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtEditRoomPrice.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtEditRoomPrice.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtEditRoomPrice.DisabledState.Parent = this.txtEditRoomPrice;
+            this.txtEditRoomPrice.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtEditRoomPrice.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtEditRoomPrice.FocusedState.Parent = this.txtEditRoomPrice;
+            this.txtEditRoomPrice.Font = new System.Drawing.Font("Microsoft New Tai Lue", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEditRoomPrice.ForeColor = System.Drawing.Color.Black;
+            this.txtEditRoomPrice.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(154)))), ((int)(((byte)(136)))));
+            this.txtEditRoomPrice.HoverState.Parent = this.txtEditRoomPrice;
+            this.txtEditRoomPrice.IconLeftOffset = new System.Drawing.Point(5, 0);
+            this.txtEditRoomPrice.Location = new System.Drawing.Point(307, 63);
+            this.txtEditRoomPrice.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtEditRoomPrice.Name = "txtEditRoomPrice";
+            this.txtEditRoomPrice.PasswordChar = '\0';
+            this.txtEditRoomPrice.PlaceholderText = "Room Price";
+            this.txtEditRoomPrice.ReadOnly = true;
+            this.txtEditRoomPrice.SelectedText = "";
+            this.txtEditRoomPrice.ShadowDecoration.Parent = this.txtEditRoomPrice;
+            this.txtEditRoomPrice.Size = new System.Drawing.Size(284, 30);
+            this.txtEditRoomPrice.TabIndex = 17;
+            this.txtEditRoomPrice.TextOffset = new System.Drawing.Point(10, 0);
+            // 
+            // txtEditPricePerDay
+            // 
+            this.txtEditPricePerDay.BackColor = System.Drawing.Color.Transparent;
+            this.txtEditPricePerDay.BorderColor = System.Drawing.Color.Black;
+            this.txtEditPricePerDay.BorderRadius = 12;
+            this.txtEditPricePerDay.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtEditPricePerDay.DefaultText = "";
+            this.txtEditPricePerDay.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtEditPricePerDay.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtEditPricePerDay.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtEditPricePerDay.DisabledState.Parent = this.txtEditPricePerDay;
+            this.txtEditPricePerDay.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtEditPricePerDay.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtEditPricePerDay.FocusedState.Parent = this.txtEditPricePerDay;
+            this.txtEditPricePerDay.Font = new System.Drawing.Font("Microsoft New Tai Lue", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEditPricePerDay.ForeColor = System.Drawing.Color.Black;
+            this.txtEditPricePerDay.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(154)))), ((int)(((byte)(136)))));
+            this.txtEditPricePerDay.HoverState.Parent = this.txtEditPricePerDay;
+            this.txtEditPricePerDay.IconLeftOffset = new System.Drawing.Point(5, 0);
+            this.txtEditPricePerDay.Location = new System.Drawing.Point(15, 63);
+            this.txtEditPricePerDay.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtEditPricePerDay.Name = "txtEditPricePerDay";
+            this.txtEditPricePerDay.PasswordChar = '\0';
+            this.txtEditPricePerDay.PlaceholderText = "Price Per Day";
+            this.txtEditPricePerDay.SelectedText = "";
+            this.txtEditPricePerDay.ShadowDecoration.Parent = this.txtEditPricePerDay;
+            this.txtEditPricePerDay.Size = new System.Drawing.Size(284, 30);
+            this.txtEditPricePerDay.TabIndex = 16;
+            this.txtEditPricePerDay.TextOffset = new System.Drawing.Point(10, 0);
+            // 
+            // txtEditRoomName
+            // 
+            this.txtEditRoomName.BackColor = System.Drawing.Color.Transparent;
+            this.txtEditRoomName.BorderColor = System.Drawing.Color.Black;
+            this.txtEditRoomName.BorderRadius = 12;
+            this.txtEditRoomName.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtEditRoomName.DefaultText = "";
+            this.txtEditRoomName.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtEditRoomName.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtEditRoomName.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtEditRoomName.DisabledState.Parent = this.txtEditRoomName;
+            this.txtEditRoomName.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtEditRoomName.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtEditRoomName.FocusedState.Parent = this.txtEditRoomName;
+            this.txtEditRoomName.Font = new System.Drawing.Font("Microsoft New Tai Lue", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEditRoomName.ForeColor = System.Drawing.Color.Black;
+            this.txtEditRoomName.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(154)))), ((int)(((byte)(136)))));
+            this.txtEditRoomName.HoverState.Parent = this.txtEditRoomName;
+            this.txtEditRoomName.IconLeftOffset = new System.Drawing.Point(5, 0);
+            this.txtEditRoomName.Location = new System.Drawing.Point(15, 20);
+            this.txtEditRoomName.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtEditRoomName.Name = "txtEditRoomName";
+            this.txtEditRoomName.PasswordChar = '\0';
+            this.txtEditRoomName.PlaceholderText = "Room Name";
+            this.txtEditRoomName.SelectedText = "";
+            this.txtEditRoomName.ShadowDecoration.Parent = this.txtEditRoomName;
+            this.txtEditRoomName.Size = new System.Drawing.Size(284, 30);
+            this.txtEditRoomName.TabIndex = 14;
+            this.txtEditRoomName.TextOffset = new System.Drawing.Point(10, 0);
+            this.txtEditRoomName.MouseClick += new System.Windows.Forms.MouseEventHandler(this.txtEditRoomName_MouseClick);
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.BackColor = System.Drawing.Color.Transparent;
+            this.label6.Font = new System.Drawing.Font("Microsoft New Tai Lue", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(459, 24);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(90, 15);
+            this.label6.TabIndex = 47;
+            this.label6.Text = "Check-out Date:";
+            // 
+            // dtmOut
+            // 
+            this.dtmOut.BackColor = System.Drawing.Color.Transparent;
+            this.dtmOut.BorderRadius = 15;
+            this.dtmOut.BorderThickness = 1;
+            this.dtmOut.CheckedState.Parent = this.dtmOut;
+            this.dtmOut.FillColor = System.Drawing.Color.White;
+            this.dtmOut.Font = new System.Drawing.Font("Microsoft New Tai Lue", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtmOut.Format = System.Windows.Forms.DateTimePickerFormat.Long;
+            this.dtmOut.HoverState.Parent = this.dtmOut;
+            this.dtmOut.Location = new System.Drawing.Point(555, 14);
+            this.dtmOut.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
+            this.dtmOut.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
+            this.dtmOut.Name = "dtmOut";
+            this.dtmOut.ShadowDecoration.Parent = this.dtmOut;
+            this.dtmOut.Size = new System.Drawing.Size(284, 36);
+            this.dtmOut.TabIndex = 48;
+            this.dtmOut.TextOffset = new System.Drawing.Point(0, 1);
+            this.dtmOut.Value = new System.DateTime(2024, 11, 8, 23, 42, 22, 823);
+            // 
+            // txtEditCheckOut
+            // 
+            this.txtEditCheckOut.BackColor = System.Drawing.Color.Transparent;
+            this.txtEditCheckOut.BorderColor = System.Drawing.Color.Black;
+            this.txtEditCheckOut.BorderRadius = 12;
+            this.txtEditCheckOut.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtEditCheckOut.DefaultText = "";
+            this.txtEditCheckOut.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtEditCheckOut.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtEditCheckOut.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtEditCheckOut.DisabledState.Parent = this.txtEditCheckOut;
+            this.txtEditCheckOut.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtEditCheckOut.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtEditCheckOut.FocusedState.Parent = this.txtEditCheckOut;
+            this.txtEditCheckOut.Font = new System.Drawing.Font("Microsoft New Tai Lue", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEditCheckOut.ForeColor = System.Drawing.Color.Black;
+            this.txtEditCheckOut.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(154)))), ((int)(((byte)(136)))));
+            this.txtEditCheckOut.HoverState.Parent = this.txtEditCheckOut;
+            this.txtEditCheckOut.IconLeftOffset = new System.Drawing.Point(5, 0);
+            this.txtEditCheckOut.Location = new System.Drawing.Point(307, 108);
+            this.txtEditCheckOut.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtEditCheckOut.Name = "txtEditCheckOut";
+            this.txtEditCheckOut.PasswordChar = '\0';
+            this.txtEditCheckOut.PlaceholderText = "Check-out Date";
+            this.txtEditCheckOut.ReadOnly = true;
+            this.txtEditCheckOut.SelectedText = "";
+            this.txtEditCheckOut.ShadowDecoration.Parent = this.txtEditCheckOut;
+            this.txtEditCheckOut.Size = new System.Drawing.Size(284, 30);
+            this.txtEditCheckOut.TabIndex = 30;
+            this.txtEditCheckOut.TextOffset = new System.Drawing.Point(10, 0);
+            // 
+            // txtEditCheckIn
+            // 
+            this.txtEditCheckIn.BackColor = System.Drawing.Color.Transparent;
+            this.txtEditCheckIn.BorderColor = System.Drawing.Color.Black;
+            this.txtEditCheckIn.BorderRadius = 12;
+            this.txtEditCheckIn.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtEditCheckIn.DefaultText = "";
+            this.txtEditCheckIn.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtEditCheckIn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtEditCheckIn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtEditCheckIn.DisabledState.Parent = this.txtEditCheckIn;
+            this.txtEditCheckIn.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtEditCheckIn.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtEditCheckIn.FocusedState.Parent = this.txtEditCheckIn;
+            this.txtEditCheckIn.Font = new System.Drawing.Font("Microsoft New Tai Lue", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEditCheckIn.ForeColor = System.Drawing.Color.Black;
+            this.txtEditCheckIn.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(154)))), ((int)(((byte)(136)))));
+            this.txtEditCheckIn.HoverState.Parent = this.txtEditCheckIn;
+            this.txtEditCheckIn.IconLeftOffset = new System.Drawing.Point(5, 0);
+            this.txtEditCheckIn.Location = new System.Drawing.Point(15, 108);
+            this.txtEditCheckIn.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtEditCheckIn.Name = "txtEditCheckIn";
+            this.txtEditCheckIn.PasswordChar = '\0';
+            this.txtEditCheckIn.PlaceholderText = "Check-in Date";
+            this.txtEditCheckIn.ReadOnly = true;
+            this.txtEditCheckIn.SelectedText = "";
+            this.txtEditCheckIn.ShadowDecoration.Parent = this.txtEditCheckIn;
+            this.txtEditCheckIn.Size = new System.Drawing.Size(284, 30);
+            this.txtEditCheckIn.TabIndex = 29;
+            this.txtEditCheckIn.TextOffset = new System.Drawing.Point(10, 0);
+            // 
+            // txtAddCheckOut
+            // 
+            this.txtAddCheckOut.BackColor = System.Drawing.Color.Transparent;
+            this.txtAddCheckOut.BorderColor = System.Drawing.Color.Black;
+            this.txtAddCheckOut.BorderRadius = 12;
+            this.txtAddCheckOut.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtAddCheckOut.DefaultText = "";
+            this.txtAddCheckOut.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtAddCheckOut.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtAddCheckOut.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtAddCheckOut.DisabledState.Parent = this.txtAddCheckOut;
+            this.txtAddCheckOut.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtAddCheckOut.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtAddCheckOut.FocusedState.Parent = this.txtAddCheckOut;
+            this.txtAddCheckOut.Font = new System.Drawing.Font("Microsoft New Tai Lue", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtAddCheckOut.ForeColor = System.Drawing.Color.Black;
+            this.txtAddCheckOut.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(154)))), ((int)(((byte)(136)))));
+            this.txtAddCheckOut.HoverState.Parent = this.txtAddCheckOut;
+            this.txtAddCheckOut.IconLeftOffset = new System.Drawing.Point(5, 0);
+            this.txtAddCheckOut.Location = new System.Drawing.Point(307, 108);
+            this.txtAddCheckOut.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtAddCheckOut.Name = "txtAddCheckOut";
+            this.txtAddCheckOut.PasswordChar = '\0';
+            this.txtAddCheckOut.PlaceholderText = "Check-out Date";
+            this.txtAddCheckOut.ReadOnly = true;
+            this.txtAddCheckOut.SelectedText = "";
+            this.txtAddCheckOut.ShadowDecoration.Parent = this.txtAddCheckOut;
+            this.txtAddCheckOut.Size = new System.Drawing.Size(284, 30);
+            this.txtAddCheckOut.TabIndex = 25;
+            this.txtAddCheckOut.TextOffset = new System.Drawing.Point(10, 0);
+            // 
+            // txtAddCheckIn
+            // 
+            this.txtAddCheckIn.BackColor = System.Drawing.Color.Transparent;
+            this.txtAddCheckIn.BorderColor = System.Drawing.Color.Black;
+            this.txtAddCheckIn.BorderRadius = 12;
+            this.txtAddCheckIn.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtAddCheckIn.DefaultText = "";
+            this.txtAddCheckIn.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtAddCheckIn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtAddCheckIn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtAddCheckIn.DisabledState.Parent = this.txtAddCheckIn;
+            this.txtAddCheckIn.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtAddCheckIn.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtAddCheckIn.FocusedState.Parent = this.txtAddCheckIn;
+            this.txtAddCheckIn.Font = new System.Drawing.Font("Microsoft New Tai Lue", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtAddCheckIn.ForeColor = System.Drawing.Color.Black;
+            this.txtAddCheckIn.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(154)))), ((int)(((byte)(136)))));
+            this.txtAddCheckIn.HoverState.Parent = this.txtAddCheckIn;
+            this.txtAddCheckIn.IconLeftOffset = new System.Drawing.Point(5, 0);
+            this.txtAddCheckIn.Location = new System.Drawing.Point(15, 108);
+            this.txtAddCheckIn.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtAddCheckIn.Name = "txtAddCheckIn";
+            this.txtAddCheckIn.PasswordChar = '\0';
+            this.txtAddCheckIn.PlaceholderText = "Check-in Date";
+            this.txtAddCheckIn.ReadOnly = true;
+            this.txtAddCheckIn.SelectedText = "";
+            this.txtAddCheckIn.ShadowDecoration.Parent = this.txtAddCheckIn;
+            this.txtAddCheckIn.Size = new System.Drawing.Size(284, 30);
+            this.txtAddCheckIn.TabIndex = 24;
+            this.txtAddCheckIn.TextOffset = new System.Drawing.Point(10, 0);
+            // 
             // PopUpReservationRooms
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -971,12 +1037,11 @@
             this.Text = "PopUpReservationAddons";
             this.Load += new System.EventHandler(this.PopUpReservationAddons_Load);
             this.pnlLogin.ResumeLayout(false);
+            this.pnlLogin.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgRooms)).EndInit();
-            this.pnlEdit.ResumeLayout(false);
-            this.pnlEdit.PerformLayout();
             this.pnlDetails.ResumeLayout(false);
             this.pnlAdd.ResumeLayout(false);
-            this.pnlAdd.PerformLayout();
+            this.pnlEdit.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -1000,11 +1065,7 @@
         private Guna.UI2.WinForms.Guna2TextBox txtAddRoomPrice;
         private Guna.UI2.WinForms.Guna2TextBox txtAddPricePerDay;
         private Guna.UI2.WinForms.Guna2TextBox txtAddRoomName;
-        private Guna.UI2.WinForms.Guna2DateTimePicker dtmAddCheckout;
-        private Guna.UI2.WinForms.Guna2DateTimePicker dtmAddCheckin;
         private Guna.UI2.WinForms.Guna2Panel pnlEdit;
-        private Guna.UI2.WinForms.Guna2DateTimePicker dtmEditCheckout;
-        private Guna.UI2.WinForms.Guna2DateTimePicker dtmEditCheckin;
         private Guna.UI2.WinForms.Guna2TextBox txtEditRoomPrice;
         private Guna.UI2.WinForms.Guna2TextBox txtEditPricePerDay;
         private Guna.UI2.WinForms.Guna2TextBox txtEditRoomName;
@@ -1018,11 +1079,15 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
         private Guna.UI2.WinForms.Guna2GradientTileButton btnAddSave;
         private Guna.UI2.WinForms.Guna2TextBox txtAddRoomType;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
         private Guna.UI2.WinForms.Guna2GradientTileButton btnCancel;
         private Guna.UI2.WinForms.Guna2TextBox txtEditRoomType;
+        private System.Windows.Forms.Label label5;
+        private Guna.UI2.WinForms.Guna2DateTimePicker dtmIn;
+        private System.Windows.Forms.Label label6;
+        private Guna.UI2.WinForms.Guna2DateTimePicker dtmOut;
+        private Guna.UI2.WinForms.Guna2TextBox txtAddCheckOut;
+        private Guna.UI2.WinForms.Guna2TextBox txtAddCheckIn;
+        private Guna.UI2.WinForms.Guna2TextBox txtEditCheckOut;
+        private Guna.UI2.WinForms.Guna2TextBox txtEditCheckIn;
     }
 }

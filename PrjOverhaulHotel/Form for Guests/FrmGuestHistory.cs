@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Org.BouncyCastle.Asn1.Cmp;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -13,9 +14,19 @@ namespace PrjOverhaulHotel.Form_for_Guests
     public partial class FrmGuestHistory : Form
     {
         int userID = UserAccount.getUserID();
+        int reservationID;
         public FrmGuestHistory()
         {
             InitializeComponent();
+        }
+
+        private void FrmGuestHistory_Load(object sender, EventArgs e)
+        {
+            GlobalProcedure.fncDatabaseConnection();
+            displayReservations();
+            displayReservationDetails();
+            displayProfile();
+            maximizeButtons();
         }
 
         private void btnExit_Click(object sender, EventArgs e)
@@ -127,17 +138,60 @@ namespace PrjOverhaulHotel.Form_for_Guests
             }
         }
 
+        private void displayReservations()
+        {
+
+            GlobalProcedure.procReservationSeeHistory(userID);
+            if (GlobalProcedure.datHotel.Rows.Count > 0)
+            {
+                pnlHistory.Visible = true;
+                pnlPreview.Visible = false;
+                dtgHistory.Rows.Clear();
+                foreach (DataRow row1 in GlobalProcedure.datHotel.Rows)
+                {
+                    dtgHistory.Rows.Add(
+                        row1["RESERVATION_ID"].ToString(),
+                        Convert.ToDateTime(row1["BOOKING DATE"].ToString()).ToString("yyyy-MM-dd"),
+                        row1["PROMO NAME"].ToString(),
+                        row1["INVOICE"].ToString(),
+                        row1["TOTAL DAYS"].ToString(),
+                        row1["IMAGE"].ToString()
+                    );
+                }
+            }
+            else
+            {
+                dtgHistory.Rows.Clear();
+                pnlPreview.Visible = true;
+                pnlHistory.Visible = false;
+            }
+        }
+
+        private void displayReservationDetails()
+        {
+            if (dtgHistory.Rows.Count > 0)
+            {
+                GlobalProcedure.procReservationGetAccountID(Convert.ToInt32(dtgHistory.CurrentRow.Cells[0].Value));
+                if (GlobalProcedure.datHotel.Rows.Count > 0)
+                {
+                    txtRoomsReserved.Text = GlobalProcedure.datHotel.Rows[0]["TOTAL ROOMS"].ToString();
+                    txtTotalAddons.Text = GlobalProcedure.datHotel.Rows[0]["TOTAL ADDONS"].ToString();
+                    txtTotalAmount.Text = $"₱{Convert.ToDouble(GlobalProcedure.datHotel.Rows[0]["TOTAL AMOUNT"].ToString()):F2}";
+                    txtTotalPaid.Text = $"₱{Convert.ToDouble(GlobalProcedure.datHotel.Rows[0]["PAID AMOUNT"].ToString()):F2}";
+                    txtRemainingBalance.Text = $"₱{Convert.ToDouble(GlobalProcedure.datHotel.Rows[0]["REMAINING BALANCE"].ToString()):F2}";
+                }
+            }
+        }
+
         private void btnProfile_Click(object sender, EventArgs e)
         {
             new FrmGuestProfile().Show();
             this.Hide();
         }
 
-        private void FrmGuestHistory_Load(object sender, EventArgs e)
+        private void dtgHistory_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            GlobalProcedure.fncDatabaseConnection();
-            displayProfile();
-            maximizeButtons();
+            displayReservationDetails();
         }
     }
 }

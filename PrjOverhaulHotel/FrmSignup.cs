@@ -55,6 +55,12 @@ namespace PrjOverhaulHotel
             }
         }
 
+        private void FrmSignup_Load(object sender, EventArgs e)
+        {
+            GlobalProcedure.fncDatabaseConnection();
+            dtmBirthdate.Value = DateTime.Now;
+        }
+
         private void btnSignup_Click(object sender, EventArgs e)
         {
             try

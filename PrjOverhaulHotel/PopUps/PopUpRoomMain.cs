@@ -12,17 +12,18 @@ namespace PrjOverhaulHotel.PopUps
 {
     public partial class PopUpRoomMain : Form
     {
-        int roomID;
+        int roomID, rrID;
         public PopUpRoomMain()
         {
             InitializeComponent();
             btnSave.Visible = false;
         }
 
-        public PopUpRoomMain(int roomID)
+        public PopUpRoomMain(int roomID, int rrID)
         {
             InitializeComponent();
             this.roomID = roomID;
+            this.rrID = rrID;
             fillFields();
             btnAdd.Visible = false;
         }
@@ -64,6 +65,16 @@ namespace PrjOverhaulHotel.PopUps
                 txtPricePerDay.Text = GlobalProcedure.datHotel.Rows[0]["pricePerDay"].ToString();
                 txtDescription.Text = GlobalProcedure.datHotel.Rows[0]["description"].ToString();
             }
+            GlobalProcedure.procRoomReservationGetByID(rrID);
+            if (GlobalProcedure.datHotel.Rows.Count > 0)
+            {
+                cmbStatus.Text = GlobalProcedure.datHotel.Rows[0]["roomStatus"].ToString();
+            }
+            else
+            {
+                lblStatus.Visible = false;
+                cmbStatus.Visible = false;
+            }
         }
 
         private void btnAdd_Click(object sender, EventArgs e)
@@ -80,8 +91,8 @@ namespace PrjOverhaulHotel.PopUps
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-            GlobalProcedure.procRoomUpdate(roomID, txtRoomName.Text, cmbRoomType.Text,
-                txtDescription.Text, Convert.ToDouble(txtPricePerDay.Text));
+            GlobalProcedure.procRoomUpdate(roomID, rrID, txtRoomName.Text, cmbRoomType.Text,
+                txtDescription.Text, Convert.ToDouble(txtPricePerDay.Text), cmbStatus.Text);
             this.Close();
         }
     }

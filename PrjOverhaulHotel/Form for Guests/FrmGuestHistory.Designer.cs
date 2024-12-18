@@ -29,6 +29,10 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmGuestHistory));
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2CustomGradientPanel1 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
@@ -48,6 +52,24 @@
             this.lblName = new System.Windows.Forms.Label();
             this.lblPosition = new System.Windows.Forms.Label();
             this.pnlHistory = new Guna.UI2.WinForms.Guna2Panel();
+            this.guna2CirclePictureBox1 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
+            this.txtTotalAddons = new Guna.UI2.WinForms.Guna2TextBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.txtRoomsReserved = new Guna.UI2.WinForms.Guna2TextBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.txtRemainingBalance = new Guna.UI2.WinForms.Guna2TextBox();
+            this.label13 = new System.Windows.Forms.Label();
+            this.txtTotalPaid = new Guna.UI2.WinForms.Guna2TextBox();
+            this.label14 = new System.Windows.Forms.Label();
+            this.txtTotalAmount = new Guna.UI2.WinForms.Guna2TextBox();
+            this.label15 = new System.Windows.Forms.Label();
+            this.dtgHistory = new System.Windows.Forms.DataGridView();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pnlPreview = new Guna.UI2.WinForms.Guna2Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.guna2CustomGradientPanel1.SuspendLayout();
@@ -56,6 +78,9 @@
             this.pnlButtons.SuspendLayout();
             this.btnProfile.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.imgProfile)).BeginInit();
+            this.pnlHistory.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgHistory)).BeginInit();
             this.pnlPreview.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -238,7 +263,7 @@
             this.btnAP.ShadowDecoration.Parent = this.btnAP;
             this.btnAP.Size = new System.Drawing.Size(200, 45);
             this.btnAP.TabIndex = 2;
-            this.btnAP.Text = "Add-ons / Promos";
+            this.btnAP.Text = "Additionals";
             this.btnAP.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnAP.TextOffset = new System.Drawing.Point(30, 1);
             this.btnAP.Click += new System.EventHandler(this.btnAP_Click);
@@ -391,11 +416,336 @@
             this.pnlHistory.BackColor = System.Drawing.Color.Transparent;
             this.pnlHistory.BackgroundImage = global::PrjOverhaulHotel.Properties.Resources.Group_282;
             this.pnlHistory.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pnlHistory.Controls.Add(this.guna2CirclePictureBox1);
+            this.pnlHistory.Controls.Add(this.txtTotalAddons);
+            this.pnlHistory.Controls.Add(this.label10);
+            this.pnlHistory.Controls.Add(this.txtRoomsReserved);
+            this.pnlHistory.Controls.Add(this.label9);
+            this.pnlHistory.Controls.Add(this.txtRemainingBalance);
+            this.pnlHistory.Controls.Add(this.label13);
+            this.pnlHistory.Controls.Add(this.txtTotalPaid);
+            this.pnlHistory.Controls.Add(this.label14);
+            this.pnlHistory.Controls.Add(this.txtTotalAmount);
+            this.pnlHistory.Controls.Add(this.label15);
+            this.pnlHistory.Controls.Add(this.dtgHistory);
             this.pnlHistory.Location = new System.Drawing.Point(66, 119);
             this.pnlHistory.Name = "pnlHistory";
             this.pnlHistory.ShadowDecoration.Parent = this.pnlHistory;
             this.pnlHistory.Size = new System.Drawing.Size(927, 501);
             this.pnlHistory.TabIndex = 24;
+            // 
+            // guna2CirclePictureBox1
+            // 
+            this.guna2CirclePictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.guna2CirclePictureBox1.Image = global::PrjOverhaulHotel.Properties.Resources.rb_8551;
+            this.guna2CirclePictureBox1.Location = new System.Drawing.Point(81, 52);
+            this.guna2CirclePictureBox1.Name = "guna2CirclePictureBox1";
+            this.guna2CirclePictureBox1.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.guna2CirclePictureBox1.ShadowDecoration.Parent = this.guna2CirclePictureBox1;
+            this.guna2CirclePictureBox1.Size = new System.Drawing.Size(120, 110);
+            this.guna2CirclePictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.guna2CirclePictureBox1.TabIndex = 135;
+            this.guna2CirclePictureBox1.TabStop = false;
+            // 
+            // txtTotalAddons
+            // 
+            this.txtTotalAddons.BackColor = System.Drawing.Color.Transparent;
+            this.txtTotalAddons.BorderColor = System.Drawing.Color.Black;
+            this.txtTotalAddons.BorderRadius = 12;
+            this.txtTotalAddons.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtTotalAddons.DefaultText = "";
+            this.txtTotalAddons.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtTotalAddons.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtTotalAddons.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtTotalAddons.DisabledState.Parent = this.txtTotalAddons;
+            this.txtTotalAddons.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtTotalAddons.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtTotalAddons.FocusedState.Parent = this.txtTotalAddons;
+            this.txtTotalAddons.Font = new System.Drawing.Font("Microsoft New Tai Lue", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTotalAddons.ForeColor = System.Drawing.Color.Black;
+            this.txtTotalAddons.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(154)))), ((int)(((byte)(136)))));
+            this.txtTotalAddons.HoverState.Parent = this.txtTotalAddons;
+            this.txtTotalAddons.IconLeftOffset = new System.Drawing.Point(5, 0);
+            this.txtTotalAddons.Location = new System.Drawing.Point(24, 253);
+            this.txtTotalAddons.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtTotalAddons.Name = "txtTotalAddons";
+            this.txtTotalAddons.PasswordChar = '\0';
+            this.txtTotalAddons.PlaceholderText = "";
+            this.txtTotalAddons.ReadOnly = true;
+            this.txtTotalAddons.SelectedText = "";
+            this.txtTotalAddons.ShadowDecoration.Parent = this.txtTotalAddons;
+            this.txtTotalAddons.Size = new System.Drawing.Size(243, 30);
+            this.txtTotalAddons.TabIndex = 133;
+            this.txtTotalAddons.TextOffset = new System.Drawing.Point(10, 0);
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.BackColor = System.Drawing.Color.Transparent;
+            this.label10.Font = new System.Drawing.Font("Nirmala UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(36, 238);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(77, 13);
+            this.label10.TabIndex = 134;
+            this.label10.Text = "Total Addons:";
+            // 
+            // txtRoomsReserved
+            // 
+            this.txtRoomsReserved.BackColor = System.Drawing.Color.Transparent;
+            this.txtRoomsReserved.BorderColor = System.Drawing.Color.Black;
+            this.txtRoomsReserved.BorderRadius = 12;
+            this.txtRoomsReserved.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtRoomsReserved.DefaultText = "";
+            this.txtRoomsReserved.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtRoomsReserved.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtRoomsReserved.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtRoomsReserved.DisabledState.Parent = this.txtRoomsReserved;
+            this.txtRoomsReserved.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtRoomsReserved.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtRoomsReserved.FocusedState.Parent = this.txtRoomsReserved;
+            this.txtRoomsReserved.Font = new System.Drawing.Font("Microsoft New Tai Lue", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtRoomsReserved.ForeColor = System.Drawing.Color.Black;
+            this.txtRoomsReserved.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(154)))), ((int)(((byte)(136)))));
+            this.txtRoomsReserved.HoverState.Parent = this.txtRoomsReserved;
+            this.txtRoomsReserved.IconLeftOffset = new System.Drawing.Point(5, 0);
+            this.txtRoomsReserved.Location = new System.Drawing.Point(24, 203);
+            this.txtRoomsReserved.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtRoomsReserved.Name = "txtRoomsReserved";
+            this.txtRoomsReserved.PasswordChar = '\0';
+            this.txtRoomsReserved.PlaceholderText = "";
+            this.txtRoomsReserved.ReadOnly = true;
+            this.txtRoomsReserved.SelectedText = "";
+            this.txtRoomsReserved.ShadowDecoration.Parent = this.txtRoomsReserved;
+            this.txtRoomsReserved.Size = new System.Drawing.Size(243, 30);
+            this.txtRoomsReserved.TabIndex = 131;
+            this.txtRoomsReserved.TextOffset = new System.Drawing.Point(10, 0);
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.BackColor = System.Drawing.Color.Transparent;
+            this.label9.Font = new System.Drawing.Font("Nirmala UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(36, 188);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(121, 13);
+            this.label9.TabIndex = 132;
+            this.label9.Text = "Total Rooms Reserved:";
+            // 
+            // txtRemainingBalance
+            // 
+            this.txtRemainingBalance.BackColor = System.Drawing.Color.Transparent;
+            this.txtRemainingBalance.BorderColor = System.Drawing.Color.Black;
+            this.txtRemainingBalance.BorderRadius = 12;
+            this.txtRemainingBalance.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtRemainingBalance.DefaultText = "";
+            this.txtRemainingBalance.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtRemainingBalance.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtRemainingBalance.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtRemainingBalance.DisabledState.Parent = this.txtRemainingBalance;
+            this.txtRemainingBalance.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtRemainingBalance.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtRemainingBalance.FocusedState.Parent = this.txtRemainingBalance;
+            this.txtRemainingBalance.Font = new System.Drawing.Font("Microsoft New Tai Lue", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtRemainingBalance.ForeColor = System.Drawing.Color.Black;
+            this.txtRemainingBalance.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(154)))), ((int)(((byte)(136)))));
+            this.txtRemainingBalance.HoverState.Parent = this.txtRemainingBalance;
+            this.txtRemainingBalance.IconLeftOffset = new System.Drawing.Point(5, 0);
+            this.txtRemainingBalance.Location = new System.Drawing.Point(24, 404);
+            this.txtRemainingBalance.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtRemainingBalance.Name = "txtRemainingBalance";
+            this.txtRemainingBalance.PasswordChar = '\0';
+            this.txtRemainingBalance.PlaceholderText = "";
+            this.txtRemainingBalance.ReadOnly = true;
+            this.txtRemainingBalance.SelectedText = "";
+            this.txtRemainingBalance.ShadowDecoration.Parent = this.txtRemainingBalance;
+            this.txtRemainingBalance.Size = new System.Drawing.Size(243, 30);
+            this.txtRemainingBalance.TabIndex = 129;
+            this.txtRemainingBalance.TextOffset = new System.Drawing.Point(10, 0);
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.BackColor = System.Drawing.Color.Transparent;
+            this.label13.Font = new System.Drawing.Font("Nirmala UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.Location = new System.Drawing.Point(36, 389);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(108, 13);
+            this.label13.TabIndex = 130;
+            this.label13.Text = "Remaining Balance:";
+            // 
+            // txtTotalPaid
+            // 
+            this.txtTotalPaid.BackColor = System.Drawing.Color.Transparent;
+            this.txtTotalPaid.BorderColor = System.Drawing.Color.Black;
+            this.txtTotalPaid.BorderRadius = 12;
+            this.txtTotalPaid.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtTotalPaid.DefaultText = "";
+            this.txtTotalPaid.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtTotalPaid.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtTotalPaid.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtTotalPaid.DisabledState.Parent = this.txtTotalPaid;
+            this.txtTotalPaid.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtTotalPaid.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtTotalPaid.FocusedState.Parent = this.txtTotalPaid;
+            this.txtTotalPaid.Font = new System.Drawing.Font("Microsoft New Tai Lue", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTotalPaid.ForeColor = System.Drawing.Color.Black;
+            this.txtTotalPaid.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(154)))), ((int)(((byte)(136)))));
+            this.txtTotalPaid.HoverState.Parent = this.txtTotalPaid;
+            this.txtTotalPaid.IconLeftOffset = new System.Drawing.Point(5, 0);
+            this.txtTotalPaid.Location = new System.Drawing.Point(24, 353);
+            this.txtTotalPaid.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtTotalPaid.Name = "txtTotalPaid";
+            this.txtTotalPaid.PasswordChar = '\0';
+            this.txtTotalPaid.PlaceholderText = "";
+            this.txtTotalPaid.ReadOnly = true;
+            this.txtTotalPaid.SelectedText = "";
+            this.txtTotalPaid.ShadowDecoration.Parent = this.txtTotalPaid;
+            this.txtTotalPaid.Size = new System.Drawing.Size(243, 30);
+            this.txtTotalPaid.TabIndex = 127;
+            this.txtTotalPaid.TextOffset = new System.Drawing.Point(10, 0);
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.BackColor = System.Drawing.Color.Transparent;
+            this.label14.Font = new System.Drawing.Font("Nirmala UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.Location = new System.Drawing.Point(36, 338);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(59, 13);
+            this.label14.TabIndex = 128;
+            this.label14.Text = "Total Paid:";
+            // 
+            // txtTotalAmount
+            // 
+            this.txtTotalAmount.BackColor = System.Drawing.Color.Transparent;
+            this.txtTotalAmount.BorderColor = System.Drawing.Color.Black;
+            this.txtTotalAmount.BorderRadius = 12;
+            this.txtTotalAmount.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtTotalAmount.DefaultText = "";
+            this.txtTotalAmount.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtTotalAmount.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtTotalAmount.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtTotalAmount.DisabledState.Parent = this.txtTotalAmount;
+            this.txtTotalAmount.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtTotalAmount.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtTotalAmount.FocusedState.Parent = this.txtTotalAmount;
+            this.txtTotalAmount.Font = new System.Drawing.Font("Microsoft New Tai Lue", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTotalAmount.ForeColor = System.Drawing.Color.Black;
+            this.txtTotalAmount.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(154)))), ((int)(((byte)(136)))));
+            this.txtTotalAmount.HoverState.Parent = this.txtTotalAmount;
+            this.txtTotalAmount.IconLeftOffset = new System.Drawing.Point(5, 0);
+            this.txtTotalAmount.Location = new System.Drawing.Point(24, 303);
+            this.txtTotalAmount.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtTotalAmount.Name = "txtTotalAmount";
+            this.txtTotalAmount.PasswordChar = '\0';
+            this.txtTotalAmount.PlaceholderText = "";
+            this.txtTotalAmount.ReadOnly = true;
+            this.txtTotalAmount.SelectedText = "";
+            this.txtTotalAmount.ShadowDecoration.Parent = this.txtTotalAmount;
+            this.txtTotalAmount.Size = new System.Drawing.Size(243, 30);
+            this.txtTotalAmount.TabIndex = 125;
+            this.txtTotalAmount.TextOffset = new System.Drawing.Point(10, 0);
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.BackColor = System.Drawing.Color.Transparent;
+            this.label15.Font = new System.Drawing.Font("Nirmala UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.Location = new System.Drawing.Point(36, 288);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(78, 13);
+            this.label15.TabIndex = 126;
+            this.label15.Text = "Total Amount:";
+            // 
+            // dtgHistory
+            // 
+            this.dtgHistory.AllowUserToAddRows = false;
+            this.dtgHistory.AllowUserToDeleteRows = false;
+            this.dtgHistory.BackgroundColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft New Tai Lue", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(135)))), ((int)(((byte)(97)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dtgHistory.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dtgHistory.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtgHistory.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column1,
+            this.Column8,
+            this.Column4,
+            this.Column6,
+            this.Column9,
+            this.Column13});
+            this.dtgHistory.EnableHeadersVisualStyles = false;
+            this.dtgHistory.GridColor = System.Drawing.Color.Black;
+            this.dtgHistory.Location = new System.Drawing.Point(286, 39);
+            this.dtgHistory.MultiSelect = false;
+            this.dtgHistory.Name = "dtgHistory";
+            this.dtgHistory.ReadOnly = true;
+            this.dtgHistory.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft New Tai Lue", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(135)))), ((int)(((byte)(97)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dtgHistory.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft New Tai Lue", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(135)))), ((int)(((byte)(97)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
+            this.dtgHistory.RowsDefaultCellStyle = dataGridViewCellStyle3;
+            this.dtgHistory.Size = new System.Drawing.Size(610, 408);
+            this.dtgHistory.TabIndex = 38;
+            this.dtgHistory.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgHistory_CellClick);
+            // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "ID";
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            this.Column1.Visible = false;
+            this.Column1.Width = 52;
+            // 
+            // Column8
+            // 
+            this.Column8.HeaderText = "Booking Date";
+            this.Column8.Name = "Column8";
+            this.Column8.ReadOnly = true;
+            this.Column8.Width = 200;
+            // 
+            // Column4
+            // 
+            this.Column4.HeaderText = "Promo Availed";
+            this.Column4.Name = "Column4";
+            this.Column4.ReadOnly = true;
+            this.Column4.Width = 200;
+            // 
+            // Column6
+            // 
+            this.Column6.HeaderText = "Invoice Number";
+            this.Column6.Name = "Column6";
+            this.Column6.ReadOnly = true;
+            this.Column6.Width = 200;
+            // 
+            // Column9
+            // 
+            this.Column9.HeaderText = "Total Days";
+            this.Column9.Name = "Column9";
+            this.Column9.ReadOnly = true;
+            this.Column9.Width = 150;
+            // 
+            // Column13
+            // 
+            this.Column13.HeaderText = "Image";
+            this.Column13.Name = "Column13";
+            this.Column13.ReadOnly = true;
+            this.Column13.Visible = false;
+            this.Column13.Width = 68;
             // 
             // pnlPreview
             // 
@@ -408,18 +758,18 @@
             this.pnlPreview.ShadowDecoration.Parent = this.pnlPreview;
             this.pnlPreview.Size = new System.Drawing.Size(927, 501);
             this.pnlPreview.TabIndex = 61;
+            this.pnlPreview.MouseEnter += new System.EventHandler(this.pnlButtons_MouseLeave);
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Myriad Pro Cond", 26.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(253, 175);
+            this.label1.Font = new System.Drawing.Font("Myriad Pro Cond", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(119, 153);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(431, 126);
+            this.label1.Size = new System.Drawing.Size(697, 148);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Please make a reservation through \r\nthe dashboard to access our hotel \r\nadd-ons. " +
-    "Thank you!";
+            this.label1.Text = "You have not yet checked out any reservations.\r\n";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label1.MouseEnter += new System.EventHandler(this.pnlButtons_MouseLeave);
             // 
             // FrmGuestHistory
             // 
@@ -431,12 +781,13 @@
             this.Controls.Add(this.lblTitle);
             this.Controls.Add(this.guna2CustomGradientPanel1);
             this.Controls.Add(this.btnProfile);
-            this.Controls.Add(this.pnlHistory);
             this.Controls.Add(this.pnlPreview);
+            this.Controls.Add(this.pnlHistory);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FrmGuestHistory";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FrmGuestHistory";
+            this.Text = "Hotelliere";
             this.Load += new System.EventHandler(this.FrmGuestHistory_Load);
             this.MouseEnter += new System.EventHandler(this.pnlButtons_MouseLeave);
             this.guna2CustomGradientPanel1.ResumeLayout(false);
@@ -445,8 +796,11 @@
             this.pnlButtons.ResumeLayout(false);
             this.btnProfile.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.imgProfile)).EndInit();
+            this.pnlHistory.ResumeLayout(false);
+            this.pnlHistory.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgHistory)).EndInit();
             this.pnlPreview.ResumeLayout(false);
-            this.pnlPreview.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -475,5 +829,23 @@
         private Guna.UI2.WinForms.Guna2Panel pnlHistory;
         private Guna.UI2.WinForms.Guna2Panel pnlPreview;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.DataGridView dtgHistory;
+        private Guna.UI2.WinForms.Guna2TextBox txtRemainingBalance;
+        private System.Windows.Forms.Label label13;
+        private Guna.UI2.WinForms.Guna2TextBox txtTotalPaid;
+        private System.Windows.Forms.Label label14;
+        private Guna.UI2.WinForms.Guna2TextBox txtTotalAmount;
+        private System.Windows.Forms.Label label15;
+        private Guna.UI2.WinForms.Guna2TextBox txtTotalAddons;
+        private System.Windows.Forms.Label label10;
+        private Guna.UI2.WinForms.Guna2TextBox txtRoomsReserved;
+        private System.Windows.Forms.Label label9;
+        private Guna.UI2.WinForms.Guna2CirclePictureBox guna2CirclePictureBox1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column8;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column9;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column13;
     }
 }

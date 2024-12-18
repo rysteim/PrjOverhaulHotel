@@ -52,6 +52,7 @@
             this.btnDelete = new Guna.UI2.WinForms.Guna2GradientTileButton();
             this.dtgRooms = new System.Windows.Forms.DataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -78,6 +79,8 @@
             this.lblName = new System.Windows.Forms.Label();
             this.lblPosition = new System.Windows.Forms.Label();
             this.lblTitle = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.dtmSelectedDate = new Guna.UI2.WinForms.Guna2DateTimePicker();
             this.guna2CustomGradientPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -460,6 +463,7 @@
             this.dtgRooms.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtgRooms.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
+            this.Column5,
             this.Column2,
             this.Column3,
             this.Column6,
@@ -495,6 +499,13 @@
             this.Column1.Name = "Column1";
             this.Column1.ReadOnly = true;
             this.Column1.Visible = false;
+            // 
+            // Column5
+            // 
+            this.Column5.HeaderText = "RRID";
+            this.Column5.Name = "Column5";
+            this.Column5.ReadOnly = true;
+            this.Column5.Visible = false;
             // 
             // Column2
             // 
@@ -860,17 +871,51 @@
             this.lblTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.lblTitle.MouseEnter += new System.EventHandler(this.pnlButtons_MouseLeave);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Nirmala UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(110, 56);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(34, 13);
+            this.label1.TabIndex = 30;
+            this.label1.Text = "Date:";
+            this.label1.MouseEnter += new System.EventHandler(this.pnlButtons_MouseLeave);
+            // 
+            // dtmSelectedDate
+            // 
+            this.dtmSelectedDate.BackColor = System.Drawing.Color.Transparent;
+            this.dtmSelectedDate.BorderRadius = 15;
+            this.dtmSelectedDate.CheckedState.Parent = this.dtmSelectedDate;
+            this.dtmSelectedDate.FillColor = System.Drawing.Color.White;
+            this.dtmSelectedDate.Font = new System.Drawing.Font("Microsoft New Tai Lue", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtmSelectedDate.Format = System.Windows.Forms.DateTimePickerFormat.Long;
+            this.dtmSelectedDate.HoverState.Parent = this.dtmSelectedDate;
+            this.dtmSelectedDate.Location = new System.Drawing.Point(96, 72);
+            this.dtmSelectedDate.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
+            this.dtmSelectedDate.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
+            this.dtmSelectedDate.Name = "dtmSelectedDate";
+            this.dtmSelectedDate.ShadowDecoration.Parent = this.dtmSelectedDate;
+            this.dtmSelectedDate.Size = new System.Drawing.Size(304, 36);
+            this.dtmSelectedDate.TabIndex = 50;
+            this.dtmSelectedDate.Value = new System.DateTime(2024, 10, 31, 18, 33, 6, 824);
+            this.dtmSelectedDate.ValueChanged += new System.EventHandler(this.dtmSelectedDate_ValueChanged);
+            this.dtmSelectedDate.MouseEnter += new System.EventHandler(this.pnlButtons_MouseLeave);
+            // 
             // FrmStaffRoom
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(154)))), ((int)(((byte)(136)))));
             this.ClientSize = new System.Drawing.Size(1000, 600);
-            this.Controls.Add(this.lblTitle);
             this.Controls.Add(this.pnlButtons);
             this.Controls.Add(this.guna2CustomGradientPanel1);
             this.Controls.Add(this.btnProfile);
             this.Controls.Add(this.pnlRooms);
+            this.Controls.Add(this.dtmSelectedDate);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.lblTitle);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FrmStaffRoom";
@@ -936,7 +981,10 @@
         private System.Windows.Forms.Label lblTitle;
         private System.Windows.Forms.DataGridView dtgRooms;
         private Guna.UI2.WinForms.Guna2GradientTileButton btnDelete;
+        private System.Windows.Forms.Label label1;
+        private Guna.UI2.WinForms.Guna2DateTimePicker dtmSelectedDate;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column6;

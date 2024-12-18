@@ -29,6 +29,10 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmGuestDashboard));
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2CustomGradientPanel1 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
@@ -46,14 +50,28 @@
             this.imgProfile = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.lblName = new System.Windows.Forms.Label();
             this.lblPosition = new System.Windows.Forms.Label();
-            this.lblTitle = new System.Windows.Forms.Label();
             this.pnlDashboard = new Guna.UI2.WinForms.Guna2Panel();
+            this.dtgPromos = new System.Windows.Forms.DataGridView();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label8 = new System.Windows.Forms.Label();
+            this.btnTotalRooms = new Guna.UI2.WinForms.Guna2GradientTileButton();
+            this.guna2GradientTileButton1 = new Guna.UI2.WinForms.Guna2GradientTileButton();
+            this.guna2GradientTileButton2 = new Guna.UI2.WinForms.Guna2GradientTileButton();
+            this.label1 = new System.Windows.Forms.Label();
+            this.btnEmployeeView = new Guna.UI2.WinForms.Guna2GradientTileButton();
+            this.pnlReservation = new Guna.UI2.WinForms.Guna2Panel();
+            this.lblMessage = new System.Windows.Forms.Label();
+            this.btnCheckOut = new Guna.UI2.WinForms.Guna2GradientTileButton();
             this.guna2CustomGradientPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.pnlButtons.SuspendLayout();
             this.btnProfile.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.imgProfile)).BeginInit();
+            this.pnlDashboard.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgPromos)).BeginInit();
+            this.pnlReservation.SuspendLayout();
             this.SuspendLayout();
             // 
             // guna2Elipse1
@@ -156,6 +174,8 @@
             this.pnlButtons.ShadowDecoration.Parent = this.pnlButtons;
             this.pnlButtons.Size = new System.Drawing.Size(60, 555);
             this.pnlButtons.TabIndex = 15;
+            this.pnlButtons.MouseEnter += new System.EventHandler(this.button_Move);
+            this.pnlButtons.MouseLeave += new System.EventHandler(this.button_Move);
             // 
             // btnLogout
             // 
@@ -182,6 +202,8 @@
             this.btnLogout.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnLogout.TextOffset = new System.Drawing.Point(30, 0);
             this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
+            this.btnLogout.MouseEnter += new System.EventHandler(this.button_Move);
+            this.btnLogout.MouseLeave += new System.EventHandler(this.button_Move);
             // 
             // btnHistory
             // 
@@ -208,6 +230,8 @@
             this.btnHistory.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnHistory.TextOffset = new System.Drawing.Point(30, 1);
             this.btnHistory.Click += new System.EventHandler(this.btnHistory_Click);
+            this.btnHistory.MouseEnter += new System.EventHandler(this.button_Move);
+            this.btnHistory.MouseLeave += new System.EventHandler(this.button_Move);
             // 
             // btnAP
             // 
@@ -230,10 +254,12 @@
             this.btnAP.ShadowDecoration.Parent = this.btnAP;
             this.btnAP.Size = new System.Drawing.Size(200, 45);
             this.btnAP.TabIndex = 2;
-            this.btnAP.Text = "Add-ons / Promos";
+            this.btnAP.Text = "Additionals";
             this.btnAP.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnAP.TextOffset = new System.Drawing.Point(30, 1);
             this.btnAP.Click += new System.EventHandler(this.btnAP_Click);
+            this.btnAP.MouseEnter += new System.EventHandler(this.button_Move);
+            this.btnAP.MouseLeave += new System.EventHandler(this.button_Move);
             // 
             // btnReservation
             // 
@@ -260,6 +286,8 @@
             this.btnReservation.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnReservation.TextOffset = new System.Drawing.Point(30, 1);
             this.btnReservation.Click += new System.EventHandler(this.btnReservation_Click);
+            this.btnReservation.MouseEnter += new System.EventHandler(this.button_Move);
+            this.btnReservation.MouseLeave += new System.EventHandler(this.button_Move);
             // 
             // btnDashboard
             // 
@@ -285,6 +313,8 @@
             this.btnDashboard.Text = "Dashboard";
             this.btnDashboard.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnDashboard.TextOffset = new System.Drawing.Point(30, 1);
+            this.btnDashboard.MouseEnter += new System.EventHandler(this.button_Move);
+            this.btnDashboard.MouseLeave += new System.EventHandler(this.button_Move);
             // 
             // guna2VSeparator2
             // 
@@ -358,30 +388,264 @@
             this.lblPosition.MouseEnter += new System.EventHandler(this.btnProfile_MouseEnter);
             this.lblPosition.MouseLeave += new System.EventHandler(this.btnProfile_MouseLeave);
             // 
-            // lblTitle
-            // 
-            this.lblTitle.BackColor = System.Drawing.Color.Transparent;
-            this.lblTitle.Font = new System.Drawing.Font("Microsoft New Tai Lue", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTitle.ForeColor = System.Drawing.Color.White;
-            this.lblTitle.Location = new System.Drawing.Point(331, 59);
-            this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(397, 45);
-            this.lblTitle.TabIndex = 25;
-            this.lblTitle.Text = "Dashboard";
-            this.lblTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.lblTitle.MouseEnter += new System.EventHandler(this.pnlButtons_MouseLeave);
-            // 
             // pnlDashboard
             // 
             this.pnlDashboard.BackColor = System.Drawing.Color.Transparent;
             this.pnlDashboard.BackgroundImage = global::PrjOverhaulHotel.Properties.Resources.Group_282;
             this.pnlDashboard.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pnlDashboard.Location = new System.Drawing.Point(66, 119);
+            this.pnlDashboard.BorderRadius = 15;
+            this.pnlDashboard.Controls.Add(this.dtgPromos);
+            this.pnlDashboard.Controls.Add(this.label8);
+            this.pnlDashboard.FillColor = System.Drawing.Color.Gainsboro;
+            this.pnlDashboard.Location = new System.Drawing.Point(600, 122);
             this.pnlDashboard.Name = "pnlDashboard";
+            this.pnlDashboard.ShadowDecoration.Color = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(220)))), ((int)(((byte)(195)))));
+            this.pnlDashboard.ShadowDecoration.Enabled = true;
             this.pnlDashboard.ShadowDecoration.Parent = this.pnlDashboard;
-            this.pnlDashboard.Size = new System.Drawing.Size(927, 501);
+            this.pnlDashboard.Size = new System.Drawing.Size(375, 301);
             this.pnlDashboard.TabIndex = 26;
             this.pnlDashboard.MouseEnter += new System.EventHandler(this.pnlButtons_MouseLeave);
+            // 
+            // dtgPromos
+            // 
+            this.dtgPromos.AllowUserToAddRows = false;
+            this.dtgPromos.AllowUserToDeleteRows = false;
+            this.dtgPromos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dtgPromos.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedHeaders;
+            this.dtgPromos.BackgroundColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft New Tai Lue", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(135)))), ((int)(((byte)(97)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dtgPromos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dtgPromos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtgPromos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column1,
+            this.Column2});
+            this.dtgPromos.EnableHeadersVisualStyles = false;
+            this.dtgPromos.GridColor = System.Drawing.Color.Black;
+            this.dtgPromos.Location = new System.Drawing.Point(24, 43);
+            this.dtgPromos.MultiSelect = false;
+            this.dtgPromos.Name = "dtgPromos";
+            this.dtgPromos.ReadOnly = true;
+            this.dtgPromos.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft New Tai Lue", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(135)))), ((int)(((byte)(97)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dtgPromos.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft New Tai Lue", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(135)))), ((int)(((byte)(97)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
+            this.dtgPromos.RowsDefaultCellStyle = dataGridViewCellStyle3;
+            this.dtgPromos.Size = new System.Drawing.Size(329, 230);
+            this.dtgPromos.TabIndex = 106;
+            this.dtgPromos.MouseEnter += new System.EventHandler(this.pnlButtons_MouseLeave);
+            // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "ID";
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            this.Column1.Visible = false;
+            // 
+            // Column2
+            // 
+            this.Column2.FillWeight = 152.2843F;
+            this.Column2.HeaderText = "Promo Name";
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.BackColor = System.Drawing.Color.Transparent;
+            this.label8.Font = new System.Drawing.Font("Nirmala UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(28, 13);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(197, 25);
+            this.label8.TabIndex = 105;
+            this.label8.Text = "AVAILABLE PROMOS";
+            this.label8.MouseEnter += new System.EventHandler(this.pnlButtons_MouseLeave);
+            // 
+            // btnTotalRooms
+            // 
+            this.btnTotalRooms.BackColor = System.Drawing.Color.Transparent;
+            this.btnTotalRooms.BorderRadius = 15;
+            this.btnTotalRooms.CheckedState.Parent = this.btnTotalRooms;
+            this.btnTotalRooms.CustomImages.Parent = this.btnTotalRooms;
+            this.btnTotalRooms.FillColor = System.Drawing.Color.Black;
+            this.btnTotalRooms.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.btnTotalRooms.Font = new System.Drawing.Font("Nirmala UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTotalRooms.ForeColor = System.Drawing.Color.White;
+            this.btnTotalRooms.HoverState.Parent = this.btnTotalRooms;
+            this.btnTotalRooms.Image = global::PrjOverhaulHotel.Properties.Resources.signpost__2_;
+            this.btnTotalRooms.ImageOffset = new System.Drawing.Point(5, 0);
+            this.btnTotalRooms.ImageSize = new System.Drawing.Size(30, 30);
+            this.btnTotalRooms.Location = new System.Drawing.Point(81, 122);
+            this.btnTotalRooms.Name = "btnTotalRooms";
+            this.btnTotalRooms.ShadowDecoration.Color = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(220)))), ((int)(((byte)(195)))));
+            this.btnTotalRooms.ShadowDecoration.Depth = 20;
+            this.btnTotalRooms.ShadowDecoration.Enabled = true;
+            this.btnTotalRooms.ShadowDecoration.Parent = this.btnTotalRooms;
+            this.btnTotalRooms.Size = new System.Drawing.Size(504, 140);
+            this.btnTotalRooms.TabIndex = 132;
+            this.btnTotalRooms.Text = "GO TO RESERVATION";
+            this.btnTotalRooms.TextOffset = new System.Drawing.Point(7, 0);
+            this.btnTotalRooms.Click += new System.EventHandler(this.btnReservation_Click);
+            this.btnTotalRooms.MouseEnter += new System.EventHandler(this.pnlButtons_MouseLeave);
+            // 
+            // guna2GradientTileButton1
+            // 
+            this.guna2GradientTileButton1.BackColor = System.Drawing.Color.Transparent;
+            this.guna2GradientTileButton1.BorderRadius = 15;
+            this.guna2GradientTileButton1.CheckedState.Parent = this.guna2GradientTileButton1;
+            this.guna2GradientTileButton1.CustomImages.Parent = this.guna2GradientTileButton1;
+            this.guna2GradientTileButton1.FillColor = System.Drawing.Color.Black;
+            this.guna2GradientTileButton1.FillColor2 = System.Drawing.Color.Teal;
+            this.guna2GradientTileButton1.Font = new System.Drawing.Font("Nirmala UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2GradientTileButton1.ForeColor = System.Drawing.Color.White;
+            this.guna2GradientTileButton1.HoverState.Parent = this.guna2GradientTileButton1;
+            this.guna2GradientTileButton1.Image = global::PrjOverhaulHotel.Properties.Resources.plus;
+            this.guna2GradientTileButton1.ImageOffset = new System.Drawing.Point(5, 0);
+            this.guna2GradientTileButton1.ImageSize = new System.Drawing.Size(30, 30);
+            this.guna2GradientTileButton1.Location = new System.Drawing.Point(81, 273);
+            this.guna2GradientTileButton1.Name = "guna2GradientTileButton1";
+            this.guna2GradientTileButton1.ShadowDecoration.Color = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(220)))), ((int)(((byte)(195)))));
+            this.guna2GradientTileButton1.ShadowDecoration.Depth = 20;
+            this.guna2GradientTileButton1.ShadowDecoration.Enabled = true;
+            this.guna2GradientTileButton1.ShadowDecoration.Parent = this.guna2GradientTileButton1;
+            this.guna2GradientTileButton1.Size = new System.Drawing.Size(504, 140);
+            this.guna2GradientTileButton1.TabIndex = 133;
+            this.guna2GradientTileButton1.Text = "AVAIL ADDITIONALS";
+            this.guna2GradientTileButton1.TextOffset = new System.Drawing.Point(7, 0);
+            this.guna2GradientTileButton1.Click += new System.EventHandler(this.btnAP_Click);
+            this.guna2GradientTileButton1.MouseEnter += new System.EventHandler(this.pnlButtons_MouseLeave);
+            // 
+            // guna2GradientTileButton2
+            // 
+            this.guna2GradientTileButton2.BackColor = System.Drawing.Color.Transparent;
+            this.guna2GradientTileButton2.BorderRadius = 15;
+            this.guna2GradientTileButton2.CheckedState.Parent = this.guna2GradientTileButton2;
+            this.guna2GradientTileButton2.CustomImages.Parent = this.guna2GradientTileButton2;
+            this.guna2GradientTileButton2.FillColor = System.Drawing.Color.Black;
+            this.guna2GradientTileButton2.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.guna2GradientTileButton2.Font = new System.Drawing.Font("Nirmala UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2GradientTileButton2.ForeColor = System.Drawing.Color.White;
+            this.guna2GradientTileButton2.HoverState.Parent = this.guna2GradientTileButton2;
+            this.guna2GradientTileButton2.Image = global::PrjOverhaulHotel.Properties.Resources.history__1_;
+            this.guna2GradientTileButton2.ImageOffset = new System.Drawing.Point(5, 0);
+            this.guna2GradientTileButton2.ImageSize = new System.Drawing.Size(30, 30);
+            this.guna2GradientTileButton2.Location = new System.Drawing.Point(81, 425);
+            this.guna2GradientTileButton2.Name = "guna2GradientTileButton2";
+            this.guna2GradientTileButton2.ShadowDecoration.Color = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(220)))), ((int)(((byte)(195)))));
+            this.guna2GradientTileButton2.ShadowDecoration.Depth = 20;
+            this.guna2GradientTileButton2.ShadowDecoration.Enabled = true;
+            this.guna2GradientTileButton2.ShadowDecoration.Parent = this.guna2GradientTileButton2;
+            this.guna2GradientTileButton2.Size = new System.Drawing.Size(504, 140);
+            this.guna2GradientTileButton2.TabIndex = 134;
+            this.guna2GradientTileButton2.Text = "VIEW RESERVATION HISTORY";
+            this.guna2GradientTileButton2.TextOffset = new System.Drawing.Point(7, 0);
+            this.guna2GradientTileButton2.Click += new System.EventHandler(this.btnHistory_Click);
+            this.guna2GradientTileButton2.MouseEnter += new System.EventHandler(this.pnlButtons_MouseLeave);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Myriad Pro Cond", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(104, 66);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(343, 39);
+            this.label1.TabIndex = 107;
+            this.label1.Text = "WELCOME TO THE DASHBOARD";
+            this.label1.MouseEnter += new System.EventHandler(this.pnlButtons_MouseLeave);
+            // 
+            // btnEmployeeView
+            // 
+            this.btnEmployeeView.BorderColor = System.Drawing.Color.Transparent;
+            this.btnEmployeeView.BorderRadius = 15;
+            this.btnEmployeeView.BorderThickness = 1;
+            this.btnEmployeeView.CheckedState.Parent = this.btnEmployeeView;
+            this.btnEmployeeView.CustomImages.Parent = this.btnEmployeeView;
+            this.btnEmployeeView.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnEmployeeView.FillColor2 = System.Drawing.Color.Black;
+            this.btnEmployeeView.Font = new System.Drawing.Font("Microsoft New Tai Lue", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEmployeeView.ForeColor = System.Drawing.Color.White;
+            this.btnEmployeeView.HoverState.Parent = this.btnEmployeeView;
+            this.btnEmployeeView.Location = new System.Drawing.Point(600, 440);
+            this.btnEmployeeView.Name = "btnEmployeeView";
+            this.btnEmployeeView.ShadowDecoration.Parent = this.btnEmployeeView;
+            this.btnEmployeeView.Size = new System.Drawing.Size(375, 126);
+            this.btnEmployeeView.TabIndex = 136;
+            this.btnEmployeeView.Text = "Back to Employee View";
+            this.btnEmployeeView.TextOffset = new System.Drawing.Point(0, 2);
+            this.btnEmployeeView.Click += new System.EventHandler(this.btnEmployeeView_Click);
+            this.btnEmployeeView.MouseEnter += new System.EventHandler(this.pnlButtons_MouseLeave);
+            // 
+            // pnlReservation
+            // 
+            this.pnlReservation.BackColor = System.Drawing.Color.Transparent;
+            this.pnlReservation.BackgroundImage = global::PrjOverhaulHotel.Properties.Resources.Group_282;
+            this.pnlReservation.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pnlReservation.BorderRadius = 15;
+            this.pnlReservation.Controls.Add(this.btnCheckOut);
+            this.pnlReservation.Controls.Add(this.lblMessage);
+            this.pnlReservation.FillColor = System.Drawing.Color.Gainsboro;
+            this.pnlReservation.Location = new System.Drawing.Point(600, 440);
+            this.pnlReservation.Name = "pnlReservation";
+            this.pnlReservation.ShadowDecoration.Color = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(220)))), ((int)(((byte)(195)))));
+            this.pnlReservation.ShadowDecoration.Enabled = true;
+            this.pnlReservation.ShadowDecoration.Parent = this.pnlReservation;
+            this.pnlReservation.Size = new System.Drawing.Size(375, 126);
+            this.pnlReservation.TabIndex = 107;
+            this.pnlReservation.MouseEnter += new System.EventHandler(this.pnlButtons_MouseLeave);
+            // 
+            // lblMessage
+            // 
+            this.lblMessage.BackColor = System.Drawing.Color.Transparent;
+            this.lblMessage.Font = new System.Drawing.Font("Myriad Pro Cond", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMessage.Location = new System.Drawing.Point(49, 12);
+            this.lblMessage.Name = "lblMessage";
+            this.lblMessage.Size = new System.Drawing.Size(287, 102);
+            this.lblMessage.TabIndex = 105;
+            this.lblMessage.Text = "NO CURRENT RESERVATION";
+            this.lblMessage.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblMessage.MouseEnter += new System.EventHandler(this.pnlButtons_MouseLeave);
+            // 
+            // btnCheckOut
+            // 
+            this.btnCheckOut.BackColor = System.Drawing.Color.Transparent;
+            this.btnCheckOut.BorderRadius = 15;
+            this.btnCheckOut.CheckedState.Parent = this.btnCheckOut;
+            this.btnCheckOut.CustomImages.Parent = this.btnCheckOut;
+            this.btnCheckOut.FillColor = System.Drawing.Color.White;
+            this.btnCheckOut.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.btnCheckOut.Font = new System.Drawing.Font("Nirmala UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCheckOut.ForeColor = System.Drawing.Color.Black;
+            this.btnCheckOut.HoverState.Parent = this.btnCheckOut;
+            this.btnCheckOut.Image = global::PrjOverhaulHotel.Properties.Resources.log_out__1_;
+            this.btnCheckOut.ImageOffset = new System.Drawing.Point(5, 0);
+            this.btnCheckOut.ImageSize = new System.Drawing.Size(30, 30);
+            this.btnCheckOut.Location = new System.Drawing.Point(17, 12);
+            this.btnCheckOut.Name = "btnCheckOut";
+            this.btnCheckOut.ShadowDecoration.Color = System.Drawing.Color.WhiteSmoke;
+            this.btnCheckOut.ShadowDecoration.Enabled = true;
+            this.btnCheckOut.ShadowDecoration.Parent = this.btnCheckOut;
+            this.btnCheckOut.Size = new System.Drawing.Size(343, 102);
+            this.btnCheckOut.TabIndex = 137;
+            this.btnCheckOut.Text = "CHECK OUT ";
+            this.btnCheckOut.TextOffset = new System.Drawing.Point(7, 0);
+            this.btnCheckOut.Click += new System.EventHandler(this.btnCheckOut_Click);
             // 
             // FrmGuestDashboard
             // 
@@ -390,14 +654,20 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(154)))), ((int)(((byte)(136)))));
             this.ClientSize = new System.Drawing.Size(1000, 600);
             this.Controls.Add(this.pnlButtons);
-            this.Controls.Add(this.lblTitle);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.guna2GradientTileButton2);
+            this.Controls.Add(this.guna2GradientTileButton1);
+            this.Controls.Add(this.btnTotalRooms);
             this.Controls.Add(this.guna2CustomGradientPanel1);
             this.Controls.Add(this.btnProfile);
             this.Controls.Add(this.pnlDashboard);
+            this.Controls.Add(this.pnlReservation);
+            this.Controls.Add(this.btnEmployeeView);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FrmGuestDashboard";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FrmGuestDashboard";
+            this.Text = "Hotelliere";
             this.Load += new System.EventHandler(this.FrmGuestDashboard_Load);
             this.MouseEnter += new System.EventHandler(this.pnlButtons_MouseLeave);
             this.guna2CustomGradientPanel1.ResumeLayout(false);
@@ -406,6 +676,10 @@
             this.pnlButtons.ResumeLayout(false);
             this.btnProfile.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.imgProfile)).EndInit();
+            this.pnlDashboard.ResumeLayout(false);
+            this.pnlDashboard.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgPromos)).EndInit();
+            this.pnlReservation.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -430,7 +704,18 @@
         private Guna.UI2.WinForms.Guna2CirclePictureBox imgProfile;
         private System.Windows.Forms.Label lblName;
         private System.Windows.Forms.Label lblPosition;
-        private System.Windows.Forms.Label lblTitle;
         private Guna.UI2.WinForms.Guna2Panel pnlDashboard;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.DataGridView dtgPromos;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+        private Guna.UI2.WinForms.Guna2GradientTileButton guna2GradientTileButton2;
+        private Guna.UI2.WinForms.Guna2GradientTileButton guna2GradientTileButton1;
+        private Guna.UI2.WinForms.Guna2GradientTileButton btnTotalRooms;
+        private System.Windows.Forms.Label label1;
+        private Guna.UI2.WinForms.Guna2GradientTileButton btnEmployeeView;
+        private Guna.UI2.WinForms.Guna2Panel pnlReservation;
+        private System.Windows.Forms.Label lblMessage;
+        private Guna.UI2.WinForms.Guna2GradientTileButton btnCheckOut;
     }
 }

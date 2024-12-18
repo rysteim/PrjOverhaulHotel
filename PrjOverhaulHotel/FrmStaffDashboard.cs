@@ -167,6 +167,7 @@ namespace PrjOverhaulHotel
             GlobalProcedure.procRoomActive(Convert.ToString(DateTime.Now.ToString("yyyy-MM-dd")));
             //MessageBox.Show($"{DateTime.Now}");
             lblActiveRooms.Text = GlobalProcedure.datHotel.Rows.Count.ToString();
+            lblActiveRooms2.Text = GlobalProcedure.datHotel.Rows.Count.ToString();
         }
 
         private void statusOnline()
@@ -179,11 +180,17 @@ namespace PrjOverhaulHotel
             string role = UserAccount.getRole();
             if (role == "Front Desk Staff")
             {
+                pnlSupervisor.Visible = false;
+                pnlFrontDesk.Visible = true;
+                pnlHousekeeping.Visible = false;
                 btnPersonnel.Visible = false;
-                btnRooms.Visible = false;
+                btnRooms.Location = new Point(0, 180);
             }
             else if (role == "Housekeeping Staff")
             {
+                pnlHousekeeping.Visible = true;
+                pnlSupervisor.Visible = false;
+                pnlFrontDesk.Visible = false;
                 btnReservation.Visible = false;
                 btnPersonnel.Visible = false;
                 btnAP.Visible = false;
@@ -192,8 +199,16 @@ namespace PrjOverhaulHotel
             }
             else if (role == "Manager")
             {
-
+                pnlSupervisor.Visible = true;
+                pnlFrontDesk.Visible = false;
+                pnlHousekeeping.Visible = false;
             }
+        }
+
+        private void btnGuestView_Click_1(object sender, EventArgs e)
+        {
+            new FrmGuestDashboard().Show();
+            this.Close();
         }
     }
 }

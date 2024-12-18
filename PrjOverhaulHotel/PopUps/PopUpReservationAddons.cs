@@ -145,7 +145,8 @@ namespace PrjOverhaulHotel.PopUps
             btnAddSave.Visible = false;
             btnEditSave.Visible = false;
 
-            GlobalProcedure.procAddonReservationAdd(reservationID, UserAccount.getAddonID());
+            string status = "For Approval";
+            GlobalProcedure.procAddonReservationAdd(reservationID, UserAccount.getAddonID(), status);
             UserAccount.setAddonID(-1);
 
             displayAddonsReservation();
@@ -163,7 +164,9 @@ namespace PrjOverhaulHotel.PopUps
             btnAddSave.Visible = false;
             btnEditSave.Visible = false;
 
-            GlobalProcedure.procAddonReservationUpdate(Convert.ToInt32(dtgAddons.CurrentRow.Cells[0].Value), reservationID, UserAccount.getAddonID());
+            string status = "For Approval";
+            GlobalProcedure.procAddonReservationUpdate(Convert.ToInt32(dtgAddons.CurrentRow.Cells[0].Value), reservationID, 
+                UserAccount.getAddonID(), status);
             UserAccount.setAddonID(-1);
 
             displayAddonsReservation();
@@ -177,6 +180,7 @@ namespace PrjOverhaulHotel.PopUps
 
         private void btnCancel_Click(object sender, EventArgs e)
         {
+            GlobalProcedure.procReservationGetTotalAmount(reservationID);
             this.Close();
         }
 

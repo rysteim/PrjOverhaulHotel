@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PrjOverhaulHotel.PopUps;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -13,9 +14,21 @@ namespace PrjOverhaulHotel.Form_for_Guests
     public partial class FrmGuestReservation : Form
     {
         int userID = UserAccount.getUserID();
+        int accountID, reservationID, promoID;
         public FrmGuestReservation()
         {
             InitializeComponent();
+        }
+
+        private void FrmGuestReservation_Load(object sender, EventArgs e)
+        {
+            GlobalProcedure.fncDatabaseConnection();
+            getReservationID();
+            getIDs();
+            displayPromo();
+            displayProfile(); 
+            displayReservationDetails();
+            maximizeButtons();
         }
 
         private void btnExit_Click(object sender, EventArgs e)
@@ -118,6 +131,22 @@ namespace PrjOverhaulHotel.Form_for_Guests
             GlobalProcedure.procGuestActive(userID, DateTime.Now.ToString("yyyy-MM-dd HH\\:mm\\:ss"));
         }
 
+        private void btnTotalRooms_Click(object sender, EventArgs e)
+        {
+            new PopUpReservationRooms(reservationID).ShowDialog();
+            getIDs();
+            displayPromo();
+            displayReservationDetails();
+        }
+
+        private void btnAddons_Click(object sender, EventArgs e)
+        {
+            new PopUpReservationAddons(reservationID).ShowDialog();
+            getIDs();
+            displayPromo();
+            displayReservationDetails();
+        }
+
         private void displayProfile()
         {
             lblName.Text = UserAccount.getFirstName();
@@ -135,11 +164,104 @@ namespace PrjOverhaulHotel.Form_for_Guests
             }
         }
 
-        private void FrmGuestReservation_Load(object sender, EventArgs e)
+        private void displayReservationDetails()
         {
-            GlobalProcedure.fncDatabaseConnection();
-            displayProfile();
-            maximizeButtons();
+            GlobalProcedure.procReservationGetAccountID(reservationID);
+            if (GlobalProcedure.datHotel.Rows.Count > 0)
+            {
+                txtRoomsReserved.Text = GlobalProcedure.datHotel.Rows[0]["TOTAL ROOMS"].ToString();
+                txtTotalAddons.Text = GlobalProcedure.datHotel.Rows[0]["TOTAL ADDONS"].ToString();
+                txtTotalDays.Text = GlobalProcedure.datHotel.Rows[0]["TOTAL DAYS"].ToString();
+                txtTotalAmount.Text = $"₱{Convert.ToDouble(GlobalProcedure.datHotel.Rows[0]["TOTAL AMOUNT"].ToString()):F2}";
+                txtTotalPaid.Text = $"₱{Convert.ToDouble(GlobalProcedure.datHotel.Rows[0]["PAID AMOUNT"].ToString()):F2}";
+                txtRemainingBalance.Text = $"₱{Convert.ToDouble(GlobalProcedure.datHotel.Rows[0]["REMAINING BALANCE"].ToString()):F2}";
+                lblBookingDate.Text = "Booking Date: " + Convert.ToDateTime(GlobalProcedure.datHotel.Rows[0]["BOOKING DATE"]).ToString("MMMM dd, yyyy");
+                lblInvoice.Text = "Invoice Number: " + GlobalProcedure.datHotel.Rows[0]["INVOICE"].ToString();
+            }
+        }
+
+        private void getIDs()
+        {
+            GlobalProcedure.procReservationGetByID(reservationID);
+            if (GlobalProcedure.datHotel.Rows.Count > 0)
+            {
+                UserAccount.setPromoID(Convert.ToInt32(GlobalProcedure.datHotel.Rows[0]["promoID"]));
+                promoID = UserAccount.getPromoID();
+            }
+        }
+
+        private void btnSelectPromo_Click(object sender, EventArgs e)
+        {
+            new PopUpPromos().ShowDialog();
+            promoID = UserAccount.getPromoID();
+            displayPromo();
+        }
+
+        private void btnConfirm_Click(object sender, EventArgs e)
+        {
+            btnSelectPromo.Visible = false;
+            btnConfirm.Visible = false;
+
+            Random random = new Random();
+            string invoice = "INV" + random.Next(100000, 999999).ToString("D6");
+
+            while (true)
+            {
+                GlobalProcedure.procReservationCheckInvoice(invoice);
+                if (GlobalProcedure.datHotel.Rows.Count > 0)
+                {
+                    invoice = "INV" + random.Next(100000, 999999).ToString("D6");
+                }
+                else
+                {
+                    break;
+                }
+            }
+
+            string date = DateTime.Now.ToString("yyyy-MM-dd");
+            GlobalProcedure.procReservationAdd(userID, promoID, invoice, date);
+            GlobalProcedure.procReservationGetByAccountID(userID, invoice);
+            if (GlobalProcedure.datHotel.Rows.Count > 0)
+            {
+                reservationID = Convert.ToInt32(GlobalProcedure.datHotel.Rows[0]["id"].ToString());
+                btnAddons.Visible = true;
+                btnTotalRooms.Visible = true;
+                displayReservationDetails();
+            }
+        }
+
+        private void displayPromo()
+        {
+            GlobalProcedure.procPromoGetByID(promoID);
+            if (GlobalProcedure.datHotel.Rows.Count > 0)
+            {
+                txtPromoName.Text = GlobalProcedure.datHotel.Rows[0]["promoName"].ToString();
+                lblPromoDescription.Text = GlobalProcedure.datHotel.Rows[0]["description"].ToString();
+                txtPromoDiscount.Text = $"{Convert.ToDouble(GlobalProcedure.datHotel.Rows[0]["discount"].ToString()):F2}%";
+            }
+        }
+
+        private void getReservationID()
+        {
+            GlobalProcedure.procReservationCurrent(userID);
+            if (GlobalProcedure.datHotel.Rows.Count > 0)
+            {
+                reservationID = Convert.ToInt32(GlobalProcedure.datHotel.Rows[0]["RESERVATION_ID"]);
+                string status = GlobalProcedure.datHotel.Rows[0]["RESERVATION STATUS"].ToString();
+                if (status == "For Approval")
+                {
+                    btnSelectPromo.Visible = false;
+                    btnConfirm.Visible = false;
+                    pnlNoReservation.Visible = true;
+                    pnlReserved.Visible = false;
+                }
+                else
+                {
+                    pnlReserved.Visible = true;
+                    pnlNoReservation.Visible = false;
+                    lblMessage.Text += $"\n\nStatus: {status}";
+                }
+            }
         }
     }
 }
