@@ -31,20 +31,21 @@ CREATE TABLE `tblaccount` (
   KEY `positionID` (`roleID`),
   CONSTRAINT `tblaccount_ibfk_1` FOREIGN KEY (`profileID`) REFERENCES `tblprofile` (`id`),
   CONSTRAINT `tblaccount_ibfk_2` FOREIGN KEY (`roleID`) REFERENCES `tblrole` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=30 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=32 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 /*Data for the table `tblaccount` */
 
 insert  into `tblaccount`(`id`,`profileID`,`roleID`,`username`,`password`,`dateCreated`,`lastOnline`) values 
-(1,1,1,'admin','1234','2024-10-29','2024-12-16 20:47:37'),
-(2,2,2,'kyrelle','mitty','2024-11-05','2024-12-16 19:43:36'),
+(1,1,1,'admin','1234','2024-10-29','2024-12-18 02:46:41'),
 (3,3,1,'yoonzino','svt','2024-11-05',NULL),
-(15,15,1,'soggycereal','bruh','2024-11-20','2024-12-15 19:28:57'),
+(15,15,1,'soggycereal','bruh','2024-11-20','2024-12-18 01:42:03'),
 (18,19,2,'kash','torino','2024-12-15','2024-12-15 20:27:24'),
-(26,32,2,'kash','admin','2024-12-15','2024-12-16 20:47:40'),
-(27,33,3,'bnd','koz','2024-12-15',NULL),
-(28,34,4,'telepath','hehe','2024-12-16','2024-12-16 19:54:24'),
-(29,35,5,'faker','f1','2024-12-16','2024-12-16 01:08:41');
+(26,32,2,'kash','admin','2024-12-15','2024-12-18 21:51:02'),
+(27,33,3,'bnd','koz','2024-12-15','2024-12-17 21:36:48'),
+(28,34,4,'telepath','hehe','2024-12-16','2024-12-17 00:23:06'),
+(29,35,5,'faker','f1','2024-12-16','2024-12-17 00:15:27'),
+(30,36,1,'chainsmoker','bebe','2024-12-17','2024-12-17 21:37:36'),
+(31,37,2,'kyrelle','mitty','2024-12-17','2024-12-17 20:19:08');
 
 /*Table structure for table `tblaccount_membership` */
 
@@ -60,15 +61,15 @@ CREATE TABLE `tblaccount_membership` (
   KEY `membershipID` (`membershipID`),
   CONSTRAINT `tblaccount_membership_ibfk_1` FOREIGN KEY (`accountID`) REFERENCES `tblaccount` (`id`),
   CONSTRAINT `tblaccount_membership_ibfk_2` FOREIGN KEY (`membershipID`) REFERENCES `tblmembership` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=21 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=22 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 /*Data for the table `tblaccount_membership` */
 
 insert  into `tblaccount_membership`(`id`,`accountID`,`membershipID`,`accountStatus`) values 
 (1,1,1,'Inactive'),
-(3,2,3,'Inactive'),
 (4,3,2,'Inactive'),
-(17,15,2,'Inactive');
+(17,15,2,'Inactive'),
+(21,30,1,'Inactive');
 
 /*Table structure for table `tbladdons` */
 
@@ -110,15 +111,16 @@ CREATE TABLE `tblemployee` (
   PRIMARY KEY (`id`),
   KEY `accountID` (`accountID`),
   CONSTRAINT `tblemployee_ibfk_1` FOREIGN KEY (`accountID`) REFERENCES `tblaccount` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=16 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=17 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 /*Data for the table `tblemployee` */
 
 insert  into `tblemployee`(`id`,`accountID`,`workShift`,`salaryPerHour`,`employmentDate`,`status`,`lastLogin`) values 
-(12,26,'Whole Day',0,'2024-12-15','','2024-12-16 20:47:40'),
-(13,27,'Morning',0,'2024-12-15','','0000-00-00 00:00:00'),
-(14,28,'Afternoon',0,'2024-12-16','','2024-12-16 19:53:42'),
-(15,29,'Whole Day',0,'2024-12-16','','2024-12-16 01:08:20');
+(12,26,'Whole Day',0,'2024-12-15','','2024-12-18 21:51:02'),
+(13,27,'Morning',0,'2024-12-15','','2024-12-17 21:36:40'),
+(14,28,'Afternoon',0,'2024-12-16','','2024-12-17 00:22:59'),
+(15,29,'Whole Day',0,'2024-12-16','','2024-12-17 00:15:14'),
+(16,31,'Afternoon',0,'2024-12-17','','2024-12-17 20:18:54');
 
 /*Table structure for table `tblmembership` */
 
@@ -158,13 +160,12 @@ CREATE TABLE `tblprofile` (
   PRIMARY KEY (`id`),
   UNIQUE KEY `emailAddress` (`emailAddress`),
   UNIQUE KEY `contactNo` (`contactNo`)
-) ENGINE=InnoDB AUTO_INCREMENT=36 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=38 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 /*Data for the table `tblprofile` */
 
 insert  into `tblprofile`(`id`,`firstName`,`middleName`,`lastName`,`contactNo`,`emailAddress`,`address`,`gender`,`birthdate`,`image`) values 
 (1,'Kashmir','Nimaria','Torino','09156855768','kashtorino@gmail.com','Mankilam, Tagum City','Male','2004-05-14','C:\\Users\\jazzy\\Downloads\\d67bd1548e781b4a81a26ab2621c85b0.jpg'),
-(2,'Kyrelle','Talledo','Aquino','09913617230','k.aquino@gmail.com','Tagum City','Male','2002-11-15','C:\\Users\\jazzy\\Downloads\\4d84bb59074bf2df411c9cb7f2f0ff2c.jpg'),
 (3,'Jeonghan','','Yoon','09123456789','svt@gmail.com','Seoul','Male','1996-09-07','C:\\Users\\jazzy\\Downloads\\461330633_496289853331233_6372511773470926964_n.jpg'),
 (15,'Kyron','James','Sostino','09182736455','jameskyron@gmail.com','09182736455','Male','2003-04-01','C:\\Users\\jazzy\\Downloads\\5c8b18a1d95fce3c7740bed1a49fd7fd.jpg'),
 (19,'Kashmir','Nimaria','Torino','09156855769','ktorino@gmail.com','Tagum City','Male','2004-05-14','C:\\Users\\jazzy\\Downloads\\UM.jpg'),
@@ -173,7 +174,9 @@ insert  into `tblprofile`(`id`,`firstName`,`middleName`,`lastName`,`contactNo`,`
 (32,'Kashmir','Nimaria','Torino','09156855791','kashtorino@umindanao.edu.ph','Tagum City','Male','2004-05-14','C:\\Users\\jazzy\\Downloads\\396532cad95b3bcffcf3159ef34ff3e1.jpg'),
 (33,'Boy','Next','Door','09182938471','bnd@email.com','kozent','Male','2023-05-30','C:\\Users\\jazzy\\Downloads\\d67bd1548e781b4a81a26ab2621c85b0.jpg'),
 (34,'Anya','','Forger','09987654321','spyxfamily@gmail.com','Anime','Female','2009-11-26','C:\\Users\\jazzy\\Downloads\\5c8b18a1d95fce3c7740bed1a49fd7fd.jpg'),
-(35,'Sanghyeok','','Lee','0913857191','lol@gmail.com','0913857191','Male','2005-11-18','C:\\Users\\jazzy\\OneDrive\\Pictures\\Camera Roll\\assignment-1711173766 (1).jpg');
+(35,'Sanghyeok','','Lee','0913857191','lol@gmail.com','0913857191','Male','2005-11-18','C:\\Users\\jazzy\\OneDrive\\Pictures\\Camera Roll\\assignment-1711173766 (1).jpg'),
+(36,'Chain','','Smoker','2:00/3:38','2019','Takeaway','Male','2024-12-17','C:\\Users\\jazzy\\Downloads\\UM.jpg'),
+(37,'Kyrelle','Talledo','Aquino','09913617230','k.aquino@gmail.com','Tagum City','Male','2002-11-15','C:\\Users\\jazzy\\Downloads\\4d84bb59074bf2df411c9cb7f2f0ff2c.jpg');
 
 /*Table structure for table `tblpromo` */
 
@@ -222,12 +225,13 @@ CREATE TABLE `tblreservation` (
   KEY `promoID` (`promoID`),
   CONSTRAINT `tblreservation_ibfk_1` FOREIGN KEY (`accountID`) REFERENCES `tblaccount` (`id`),
   CONSTRAINT `tblreservation_ibfk_2` FOREIGN KEY (`promoID`) REFERENCES `tblpromo` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=20 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 /*Data for the table `tblreservation` */
 
 insert  into `tblreservation`(`id`,`accountID`,`promoID`,`invoice`,`reservationStatus`,`bookingDate`,`totalDays`,`totalAmount`,`paidAmount`,`remainingBalance`) values 
-(1,1,1,'INV213485','For Approval','2024-11-15',18,299000,20000,279000);
+(1,1,1,'INV213485','Approved','2024-11-15',18,300790,20000,280790),
+(19,30,1,'INV830817','For Approval','2024-12-18',2,69999.98059533564,0,69999.98059533564);
 
 /*Table structure for table `tblreservation_addons` */
 
@@ -237,14 +241,21 @@ CREATE TABLE `tblreservation_addons` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `reservationID` int(11) NOT NULL,
   `addonsID` int(11) NOT NULL,
+  `status` varchar(20) DEFAULT NULL,
   PRIMARY KEY (`id`),
   KEY `reservationID` (`reservationID`),
   KEY `addonsID` (`addonsID`),
   CONSTRAINT `tblreservation_addons_ibfk_1` FOREIGN KEY (`reservationID`) REFERENCES `tblreservation` (`id`),
   CONSTRAINT `tblreservation_addons_ibfk_2` FOREIGN KEY (`addonsID`) REFERENCES `tbladdons` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=14 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 /*Data for the table `tblreservation_addons` */
+
+insert  into `tblreservation_addons`(`id`,`reservationID`,`addonsID`,`status`) values 
+(7,1,2,'Approved'),
+(8,1,5,'Approved'),
+(11,1,7,'Approved'),
+(12,1,9,'Approved');
 
 /*Table structure for table `tblreservation_room` */
 
@@ -263,7 +274,7 @@ CREATE TABLE `tblreservation_room` (
   KEY `roomID` (`roomID`),
   CONSTRAINT `tblreservation_room_ibfk_1` FOREIGN KEY (`reservationID`) REFERENCES `tblreservation` (`id`),
   CONSTRAINT `tblreservation_room_ibfk_2` FOREIGN KEY (`roomID`) REFERENCES `tblroom` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=26 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=36 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 /*Data for the table `tblreservation_room` */
 
@@ -271,9 +282,10 @@ insert  into `tblreservation_room`(`id`,`reservationID`,`roomID`,`checkInDate`,`
 (18,1,18,'2024-11-08','2024-11-10',70000,'Available'),
 (19,1,19,'2025-01-01','2025-01-03',70000,'Reserved'),
 (20,1,8,'2024-12-30','2025-01-03',26000,'Reserved'),
-(21,1,14,'2024-12-14','2024-12-16',30000,'Occupied'),
+(21,1,14,'2024-12-14','2024-12-16',30000,'Available'),
 (22,1,5,'2024-12-13','2024-12-15',13000,'Available'),
-(23,1,16,'2024-12-14','2024-12-20',90000,'Occupied');
+(23,1,16,'2024-12-14','2024-12-20',90000,'Reserved'),
+(35,19,17,'2024-12-18','2024-12-20',69999.98059533564,NULL);
 
 /*Table structure for table `tblrole` */
 
@@ -345,9 +357,13 @@ CREATE TABLE `tblshift` (
   PRIMARY KEY (`id`),
   KEY `employeeID` (`employeeID`),
   CONSTRAINT `tblshift_ibfk_1` FOREIGN KEY (`employeeID`) REFERENCES `tblemployee` (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 /*Data for the table `tblshift` */
+
+insert  into `tblshift`(`id`,`employeeID`,`shiftStart`,`shiftStop`) values 
+(1,12,'2024-12-16 08:19:14','2024-12-16 17:19:34'),
+(2,12,'2024-12-17 08:19:56','2024-12-17 17:20:01');
 
 /* Procedure structure for procedure `proc_accountAdd` */
 
@@ -556,12 +572,15 @@ DELIMITER ;
 DELIMITER $$
 
 /*!50003 CREATE DEFINER=`root`@`localhost` PROCEDURE `proc_addonReservationAdd`(p_reservationID int,
-									p_addonsID int)
+									p_addonsID int,
+									p_status varchar(20))
 begin
 		insert into tblreservation_addons (reservationID,
-							addonsID)
+							addonsID,
+							status)
 						values (p_reservationID,
-							p_addonsID);
+							p_addonsID,
+							p_status);
 	END */$$
 DELIMITER ;
 
@@ -597,11 +616,27 @@ DELIMITER $$
 
 /*!50003 CREATE DEFINER=`root`@`localhost` PROCEDURE `proc_addonReservationUpdate`(p_id int,
 									p_reservationID int,
-									p_addonsID int)
+									p_addonsID int,
+									p_status varchar(20))
 begin
 		update tblreservation_addons set reservationID = p_reservationID,
-						addonsID = p_addonsID
+						addonsID = p_addonsID,
+						status = p_status
 					where id = p_id;
+	END */$$
+DELIMITER ;
+
+/* Procedure structure for procedure `proc_addonReservationUpdateStatus` */
+
+/*!50003 DROP PROCEDURE IF EXISTS  `proc_addonReservationUpdateStatus` */;
+
+DELIMITER $$
+
+/*!50003 CREATE DEFINER=`root`@`localhost` PROCEDURE `proc_addonReservationUpdateStatus`(p_reservationID int,
+									p_status varchar(20))
+begin
+		update tblreservation_addons set status = p_status
+					where reservationID = p_reservationID;
 	END */$$
 DELIMITER ;
 
@@ -893,6 +928,41 @@ BEGIN
 				where accountID = p_id;
 					
 	END */$$
+DELIMITER ;
+
+/* Procedure structure for procedure `proc_getRoomStatusFilter` */
+
+/*!50003 DROP PROCEDURE IF EXISTS  `proc_getRoomStatusFilter` */;
+
+DELIMITER $$
+
+/*!50003 CREATE DEFINER=`root`@`localhost` PROCEDURE `proc_getRoomStatusFilter`(
+    IN p_status VARCHAR(255),
+    IN p_date DATE
+)
+BEGIN
+    SELECT 
+        `room`.`id`          AS `ROOM_ID`,
+        rr.id AS `RRID`,
+        `room`.`roomName`    AS `ROOM_NAME`,
+        `room`.`roomType`    AS `ROOM_TYPE`,
+        `room`.`pricePerDay` AS `PRICE_PER_DAY`,
+        CASE
+            WHEN `rr`.`roomID` IS NOT NULL AND p_date BETWEEN `rr`.`checkInDate` AND `rr`.`checkOutDate`
+                THEN `rr`.`roomStatus`
+            ELSE 'Available'
+        END AS `ROOM_STATUS`
+    FROM `tblroom` `room`
+    LEFT JOIN `tblreservation_room` `rr`
+        ON `room`.`id` = `rr`.`roomID`
+    WHERE 
+        CASE
+            WHEN `rr`.`roomID` IS NOT NULL AND p_date BETWEEN `rr`.`checkInDate` AND `rr`.`checkOutDate`
+                THEN `rr`.`roomStatus`
+            ELSE 'Available'
+        END = 'Available'
+    ORDER BY `room`.`roomName`;
+END */$$
 DELIMITER ;
 
 /* Procedure structure for procedure `proc_guestActive` */
@@ -1292,17 +1362,37 @@ BEGIN
 	END */$$
 DELIMITER ;
 
-/* Procedure structure for procedure `proc_reservationApprove` */
+/* Procedure structure for procedure `proc_reservationCheckInvoice` */
 
-/*!50003 DROP PROCEDURE IF EXISTS  `proc_reservationApprove` */;
+/*!50003 DROP PROCEDURE IF EXISTS  `proc_reservationCheckInvoice` */;
 
 DELIMITER $$
 
-/*!50003 CREATE DEFINER=`root`@`localhost` PROCEDURE `proc_reservationApprove`(p_id int, p_date datetime)
+/*!50003 CREATE DEFINER=`root`@`localhost` PROCEDURE `proc_reservationCheckInvoice`(p_invoice varchar(10))
 BEGIN
-		update tblreservation set reservationStatus = 'Approved'
-					where id = p_id;
-		call proc_roomCheckRoomStatus(p_date);
+		select * from tblreservation where invoice = p_invoice;
+	END */$$
+DELIMITER ;
+
+/* Procedure structure for procedure `proc_reservationCurrent` */
+
+/*!50003 DROP PROCEDURE IF EXISTS  `proc_reservationCurrent` */;
+
+DELIMITER $$
+
+/*!50003 CREATE DEFINER=`root`@`localhost` PROCEDURE `proc_reservationCurrent`(p_id int, p_date date)
+BEGIN
+		DECLARE reservationID INT;
+		SET reservationID = (
+			SELECT id FROM tblreservation 
+			WHERE accountID = p_id
+			AND (reservationStatus = "Approved" 
+			or reservationStatus = "For Approval"
+			or reservationStatus = "Has Additionals"
+			or reservationStatus = "For Check Out")
+			limit 1
+		);
+		SELECT * FROM view_reservation WHERE RESERVATION_ID = reservationID;
 	END */$$
 DELIMITER ;
 
@@ -1324,9 +1414,17 @@ DELIMITER ;
 
 DELIMITER $$
 
-/*!50003 CREATE DEFINER=`root`@`localhost` PROCEDURE `proc_reservationDelete`(p_id int)
+/*!50003 CREATE DEFINER=`root`@`localhost` PROCEDURE `proc_reservationDelete`(p_id int, p_date date)
 BEGIN
 		delete from tblreservation_addons where reservationID = p_id;
+		
+		UPDATE tblreservation_room
+		SET roomStatus = CASE 
+			WHEN p_date BETWEEN checkInDate AND checkOutDate THEN "Cleaning"
+		ELSE "Available"
+		END
+		WHERE reservationID = p_id;
+		
 		delete from tblreservation_room where reservationID = p_id;
 		DELETE FROM tblreservation WHERE id = p_id;
 	END */$$
@@ -1350,9 +1448,9 @@ DELIMITER ;
 
 DELIMITER $$
 
-/*!50003 CREATE DEFINER=`root`@`localhost` PROCEDURE `proc_reservationGetByAccountID`(p_id int)
+/*!50003 CREATE DEFINER=`root`@`localhost` PROCEDURE `proc_reservationGetByAccountID`(p_id int, p_invoice varchar(10))
 BEGIN
-		select * from tblreservation where accountID = p_id;
+		select * from tblreservation where accountID = p_id and invoice = p_invoice;
 	END */$$
 DELIMITER ;
 
@@ -1376,12 +1474,32 @@ DELIMITER $$
 
 /*!50003 CREATE DEFINER=`root`@`localhost` PROCEDURE `proc_reservationGetTotalAmount`(p_id int)
 BEGIN
-		declare totalPrice double;
-		set totalPrice = (SELECT SUM(totalRoomPrice) AS "TOTAL ROOM PRICE" FROM tblreservation_room WHERE reservationID = p_id);
-		
-		Update tblreservation set totalAmount = totalPrice,
-					remainingBalance = (totalAmount - paidAmount)
-			where id = p_id;
+    -- Declare variables
+    DECLARE roomPrice DOUBLE DEFAULT 0;
+    DECLARE addonPrice DOUBLE DEFAULT 0;
+    DECLARE totalPrice DOUBLE DEFAULT 0;
+
+    -- Calculate room price
+    SELECT COALESCE(SUM(totalRoomPrice), 0) 
+    INTO roomPrice 
+    FROM tblreservation_room 
+    WHERE reservationID = p_id;
+
+    -- Calculate addon price
+    SELECT COALESCE(SUM(addons.price), 0) 
+    INTO addonPrice
+    FROM tblreservation_addons ra
+    JOIN tbladdons addons ON ra.addonsID = addons.id 
+    WHERE ra.reservationID = p_id;
+
+    -- Calculate total price
+    SET totalPrice = roomPrice + addonPrice;
+
+    -- Update the reservation
+    UPDATE tblreservation 
+    SET totalAmount = totalPrice,
+        remainingBalance = (totalPrice - paidAmount)
+    WHERE id = p_id;
 	END */$$
 DELIMITER ;
 
@@ -1409,6 +1527,19 @@ BEGIN
 	END */$$
 DELIMITER ;
 
+/* Procedure structure for procedure `proc_reservationSeeHistory` */
+
+/*!50003 DROP PROCEDURE IF EXISTS  `proc_reservationSeeHistory` */;
+
+DELIMITER $$
+
+/*!50003 CREATE DEFINER=`root`@`localhost` PROCEDURE `proc_reservationSeeHistory`(p_id int)
+BEGIN
+		
+		select * from view_reservation where `ACCOUNT ID` = p_id and `RESERVATION STATUS` = "Checked Out";
+	END */$$
+DELIMITER ;
+
 /* Procedure structure for procedure `proc_reservationSetPaidAmount` */
 
 /*!50003 DROP PROCEDURE IF EXISTS  `proc_reservationSetPaidAmount` */;
@@ -1421,6 +1552,27 @@ BEGIN
 		UPDATE tblreservation SET paidAmount = p_paidAmount,
 						remainingBalance = totalAmount - p_paidAmount
 					WHERE id = p_id;
+	END */$$
+DELIMITER ;
+
+/* Procedure structure for procedure `proc_reservationSetStatus` */
+
+/*!50003 DROP PROCEDURE IF EXISTS  `proc_reservationSetStatus` */;
+
+DELIMITER $$
+
+/*!50003 CREATE DEFINER=`root`@`localhost` PROCEDURE `proc_reservationSetStatus`(p_id int, p_status varchar(20), p_date datetime)
+BEGIN
+		update tblreservation set reservationStatus = p_status
+					where id = p_id;
+		if p_status = "Approved" or p_status = "Checked Out" then
+			call proc_roomCheckRoomStatus(p_id, p_date);
+			call proc_addonReservationUpdateStatus(p_id, "Approved");
+		end if;
+		
+		if p_status = "For Check Out" then
+			call proc_roomReservationUpdateStatus(p_id, "For Cleaning");
+		end if;
 	END */$$
 DELIMITER ;
 
@@ -1508,9 +1660,23 @@ DELIMITER ;
 
 DELIMITER $$
 
-/*!50003 CREATE DEFINER=`root`@`localhost` PROCEDURE `proc_roomAvailable`()
+/*!50003 CREATE DEFINER=`root`@`localhost` PROCEDURE `proc_roomAvailable`(p_checkIn datetime, p_checkOut datetime)
 BEGIN
-		select * from view_room where ROOM_STATUS = "Available";
+    SELECT 
+        `room`.`id`          AS `ROOM_ID`,
+        rr.id AS `RRID`,
+        `room`.`roomName`    AS `ROOM_NAME`,
+        `room`.`roomType`    AS `ROOM_TYPE`,
+        `room`.`pricePerDay` AS `PRICE_PER_DAY`,
+        'Available' AS `ROOM_STATUS`
+    FROM `tblroom` `room`
+    LEFT JOIN `tblreservation_room` `rr`
+        ON `room`.`id` = `rr`.`roomID`
+        AND p_checkIn BETWEEN `rr`.`checkInDate` AND `rr`.`checkOutDate`
+        OR p_checkOut BETWEEN `rr`.`checkInDate` AND `rr`.`checkOutDate`
+        OR `rr`.`checkInDate` BETWEEN p_checkIn AND p_checkOut
+    WHERE rr.id IS NULL
+    ORDER BY `room`.`roomName`;
 	END */$$
 DELIMITER ;
 
@@ -1554,22 +1720,22 @@ DELIMITER ;
 
 DELIMITER $$
 
-/*!50003 CREATE DEFINER=`root`@`localhost` PROCEDURE `proc_roomCheckRoomStatus`(p_date DATETIME)
+/*!50003 CREATE DEFINER=`root`@`localhost` PROCEDURE `proc_roomCheckRoomStatus`(p_id int, p_date DATETIME)
 BEGIN
     -- Mark 'Reserved' for dates before checkInDate
     UPDATE tblreservation_room 
     SET roomStatus = 'Reserved'
-    WHERE p_date < checkInDate;
+    WHERE id = p_id and p_date < checkInDate;
 
     -- Mark 'Available' for dates after checkOutDate
     UPDATE tblreservation_room 
     SET roomStatus = 'Available'
-    WHERE p_date > checkOutDate;
+    WHERE id = p_id AND p_date > checkOutDate;
 
     -- Mark 'Occupied' for dates between checkInDate and checkOutDate
     UPDATE tblreservation_room 
     SET roomStatus = 'Occupied'
-    WHERE p_date BETWEEN checkInDate AND checkOutDate;
+    WHERE id = p_id AND p_date BETWEEN checkInDate AND checkOutDate;
 END */$$
 DELIMITER ;
 
@@ -1579,10 +1745,23 @@ DELIMITER ;
 
 DELIMITER $$
 
-/*!50003 CREATE DEFINER=`root`@`localhost` PROCEDURE `proc_roomData`()
+/*!50003 CREATE DEFINER=`root`@`localhost` PROCEDURE `proc_roomData`(p_date date)
 BEGIN
-		select *
-		 from view_room;
+    SELECT 
+        `room`.`id`          AS `ROOM_ID`,
+        rr.id AS `RRID`,
+        `room`.`roomName`    AS `ROOM_NAME`,
+        `room`.`roomType`    AS `ROOM_TYPE`,
+        `room`.`pricePerDay` AS `PRICE_PER_DAY`,
+        CASE
+            WHEN `rr`.`roomID` IS NOT NULL AND p_date BETWEEN `rr`.`checkInDate` AND `rr`.`checkOutDate`
+                THEN `rr`.`roomStatus`
+            ELSE 'Available'
+        END AS `ROOM_STATUS`
+    FROM `tblroom` `room`
+    LEFT JOIN `tblreservation_room` `rr`
+        ON `room`.`id` = `rr`.`roomID`
+    ORDER BY `room`.`roomName`;
 	END */$$
 DELIMITER ;
 
@@ -1684,6 +1863,18 @@ BEGIN
 	END */$$
 DELIMITER ;
 
+/* Procedure structure for procedure `proc_roomReservationGetByID` */
+
+/*!50003 DROP PROCEDURE IF EXISTS  `proc_roomReservationGetByID` */;
+
+DELIMITER $$
+
+/*!50003 CREATE DEFINER=`root`@`localhost` PROCEDURE `proc_roomReservationGetByID`(p_id int)
+BEGIN
+		select * from tblreservation_room where id = p_id;
+	END */$$
+DELIMITER ;
+
 /* Procedure structure for procedure `proc_roomReservationUpdate` */
 
 /*!50003 DROP PROCEDURE IF EXISTS  `proc_roomReservationUpdate` */;
@@ -1707,6 +1898,19 @@ BEGIN
 	END */$$
 DELIMITER ;
 
+/* Procedure structure for procedure `proc_roomReservationUpdateStatus` */
+
+/*!50003 DROP PROCEDURE IF EXISTS  `proc_roomReservationUpdateStatus` */;
+
+DELIMITER $$
+
+/*!50003 CREATE DEFINER=`root`@`localhost` PROCEDURE `proc_roomReservationUpdateStatus`(p_id int, p_status varchar(20))
+BEGIN
+		update tblreservation_room set roomStatus = p_status
+					where reservationID = p_id;
+	END */$$
+DELIMITER ;
+
 /* Procedure structure for procedure `proc_roomReserveStatus` */
 
 /*!50003 DROP PROCEDURE IF EXISTS  `proc_roomReserveStatus` */;
@@ -1726,13 +1930,36 @@ DELIMITER ;
 
 DELIMITER $$
 
-/*!50003 CREATE DEFINER=`root`@`localhost` PROCEDURE `proc_roomSearch`(p_roomName varchar(100),
+/*!50003 CREATE DEFINER=`root`@`localhost` PROCEDURE `proc_roomSearch`(p_date date,
+						p_roomName varchar(100),
 						p_roomType varchar(50),
 						p_status varchar(20))
 BEGIN
-		select * from view_room where room_Name LIKE concat(p_roomName, "%")
-					and room_Type LIKE CONCAT(p_roomType, "%")
-					and room_status LIKE CONCAT(p_status, "%");
+    SELECT 
+        `room`.`id`          AS `ROOM_ID`,
+        rr.id as `RRID`,
+        `room`.`roomName`    AS `ROOM_NAME`,
+        `room`.`roomType`    AS `ROOM_TYPE`,
+        `room`.`pricePerDay` AS `PRICE_PER_DAY`,
+        CASE
+            WHEN `rr`.`roomID` IS NOT NULL AND p_date BETWEEN `rr`.`checkInDate` AND `rr`.`checkOutDate`
+                THEN `rr`.`roomStatus`
+            ELSE 'Available'
+        END AS `ROOM_STATUS`
+    FROM `tblroom` `room`
+    LEFT JOIN `tblreservation_room` `rr`
+        ON `room`.`id` = `rr`.`roomID`
+    WHERE 
+        `room`.`roomName` LIKE CONCAT(p_roomName, '%')
+        AND `room`.`roomType` LIKE CONCAT(p_roomType, '%')
+        AND (
+            CASE
+                WHEN `rr`.`roomID` IS NOT NULL AND p_date BETWEEN `rr`.`checkInDate` AND `rr`.`checkOutDate`
+                    THEN `rr`.`roomStatus`
+                ELSE 'Available'
+            END
+        ) LIKE CONCAT(p_status, '%')
+    ORDER BY `room`.`roomName`;
 	END */$$
 DELIMITER ;
 
@@ -1755,16 +1982,24 @@ DELIMITER ;
 DELIMITER $$
 
 /*!50003 CREATE DEFINER=`root`@`localhost` PROCEDURE `proc_roomUpdate`(p_id int,
+						p_rrid int,
 						p_roomname varchar(20),
 						p_roomtype varchar(30),
 						p_description varchar(150),
-						p_priceperday double)
+						p_priceperday double,
+						p_status varchar(20))
 BEGIN
 		update tblroom set roomname = p_roomname,
 					roomtype = p_roomtype,
 					description = p_description,
 					priceperday = p_priceperday
 				where id = p_id;
+				
+    IF p_rrid IS NOT NULL THEN
+        UPDATE tblreservation_room 
+        SET roomStatus = p_status
+        WHERE id = p_rrid;
+    END IF;
 	END */$$
 DELIMITER ;
 
@@ -1871,6 +2106,7 @@ DROP TABLE IF EXISTS `view_reservation`;
 
 /*!50001 CREATE TABLE  `view_reservation`(
  `RESERVATION_ID` int(11) ,
+ `ACCOUNT ID` int(11) ,
  `FULL_NAME` varchar(152) ,
  `FIRST_NAME` varchar(50) ,
  `MIDDLE_NAME` varchar(50) ,
@@ -1942,7 +2178,7 @@ DROP TABLE IF EXISTS `view_roomreservations`;
 /*!50001 DROP TABLE IF EXISTS `view_employee` */;
 /*!50001 DROP VIEW IF EXISTS `view_employee` */;
 
-/*!50001 CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `view_employee` AS select `acc`.`id` AS `AID`,concat(`pro`.`firstName`,' ',`pro`.`middleName`,' ',`pro`.`lastName`) AS `FULLNAME`,`pro`.`firstName` AS `FIRST NAME`,`pro`.`middleName` AS `MIDDLE NAME`,`pro`.`lastName` AS `LAST NAME`,`acc`.`username` AS `USERNAME`,`acc`.`password` AS `PASSWORD`,`role`.`roleName` AS `ROLE`,`emp`.`status` AS `EMPLOYEE STATUS`,`emp`.`lastLogin` AS `EMPLOYEE LAST ONLINE`,`emp`.`workShift` AS `WORKSHIFT`,`emp`.`salaryPerHour` AS `HOURLY RATE`,`pro`.`contactNo` AS `CONTACT NUMBER`,`pro`.`emailAddress` AS `EMAIL ADDRESS`,`pro`.`address` AS `ADDRESS`,`pro`.`gender` AS `GENDER`,`pro`.`birthdate` AS `BIRTHDATE`,`emp`.`employmentDate` AS `EMPLOYMENT DATE`,`pro`.`image` AS `IMAGE` from (((`tblprofile` `pro` join `tblaccount` `acc`) join `tblemployee` `emp`) join `tblrole` `role`) where `pro`.`id` = `acc`.`profileID` and `role`.`id` = `acc`.`roleID` and `acc`.`id` = `emp`.`accountID` */;
+/*!50001 CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `view_employee` AS select `acc`.`id` AS `AID`,concat(`pro`.`firstName`,' ',`pro`.`middleName`,' ',`pro`.`lastName`) AS `FULLNAME`,`pro`.`firstName` AS `FIRST NAME`,`pro`.`middleName` AS `MIDDLE NAME`,`pro`.`lastName` AS `LAST NAME`,`acc`.`username` AS `USERNAME`,`acc`.`password` AS `PASSWORD`,`role`.`roleName` AS `ROLE`,`emp`.`status` AS `EMPLOYEE STATUS`,`emp`.`lastLogin` AS `EMPLOYEE LAST ONLINE`,`emp`.`workShift` AS `WORKSHIFT`,`emp`.`salaryPerHour` AS `HOURLY RATE`,`pro`.`contactNo` AS `CONTACT NUMBER`,`pro`.`emailAddress` AS `EMAIL ADDRESS`,`pro`.`address` AS `ADDRESS`,`pro`.`gender` AS `GENDER`,`pro`.`birthdate` AS `BIRTHDATE`,`emp`.`employmentDate` AS `EMPLOYMENT DATE`,`pro`.`image` AS `IMAGE` from (((`tblprofile` `pro` join `tblaccount` `acc`) join `tblemployee` `emp`) join `tblrole` `role`) where `pro`.`id` = `acc`.`profileID` and `role`.`id` = `acc`.`roleID` and `acc`.`id` = `emp`.`accountID` order by `pro`.`lastName` */;
 
 /*View structure for view view_guest */
 
@@ -1956,7 +2192,7 @@ DROP TABLE IF EXISTS `view_roomreservations`;
 /*!50001 DROP TABLE IF EXISTS `view_reservation` */;
 /*!50001 DROP VIEW IF EXISTS `view_reservation` */;
 
-/*!50001 CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `view_reservation` AS select `res`.`id` AS `RESERVATION_ID`,concat(`pro`.`firstName`,' ',`pro`.`middleName`,' ',`pro`.`lastName`) AS `FULL_NAME`,`pro`.`firstName` AS `FIRST_NAME`,`pro`.`middleName` AS `MIDDLE_NAME`,`pro`.`lastName` AS `LAST_NAME`,coalesce(`rooms`.`total_rooms`,0) AS `TOTAL ROOMS`,`promo`.`promoName` AS `PROMO NAME`,coalesce(`addons`.`total_addons`,0) AS `TOTAL ADDONS`,`res`.`invoice` AS `INVOICE`,`res`.`reservationStatus` AS `RESERVATION STATUS`,`res`.`bookingDate` AS `BOOKING DATE`,`res`.`totalDays` AS `TOTAL DAYS`,`res`.`totalAmount` AS `TOTAL AMOUNT`,`res`.`paidAmount` AS `PAID AMOUNT`,`res`.`remainingBalance` AS `REMAINING BALANCE`,`pro`.`image` AS `IMAGE` from (((((`tblreservation` `res` join `tblaccount` `acc` on(`acc`.`id` = `res`.`accountID`)) join `tblprofile` `pro` on(`pro`.`id` = `acc`.`profileID`)) join `tblpromo` `promo` on(`promo`.`id` = `res`.`promoID`)) left join (select `tblreservation_room`.`reservationID` AS `reservationID`,count(`tblreservation_room`.`roomID`) AS `total_rooms` from `tblreservation_room` group by `tblreservation_room`.`reservationID`) `rooms` on(`res`.`id` = `rooms`.`reservationID`)) left join (select `tblreservation_addons`.`reservationID` AS `reservationID`,count(`tblreservation_addons`.`addonsID`) AS `total_addons` from `tblreservation_addons` group by `tblreservation_addons`.`reservationID`) `addons` on(`res`.`id` = `addons`.`reservationID`)) group by `res`.`id` */;
+/*!50001 CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `view_reservation` AS select `res`.`id` AS `RESERVATION_ID`,`acc`.`id` AS `ACCOUNT ID`,concat(`pro`.`firstName`,' ',`pro`.`middleName`,' ',`pro`.`lastName`) AS `FULL_NAME`,`pro`.`firstName` AS `FIRST_NAME`,`pro`.`middleName` AS `MIDDLE_NAME`,`pro`.`lastName` AS `LAST_NAME`,coalesce(`rooms`.`total_rooms`,0) AS `TOTAL ROOMS`,`promo`.`promoName` AS `PROMO NAME`,coalesce(`addons`.`total_addons`,0) AS `TOTAL ADDONS`,`res`.`invoice` AS `INVOICE`,`res`.`reservationStatus` AS `RESERVATION STATUS`,`res`.`bookingDate` AS `BOOKING DATE`,`res`.`totalDays` AS `TOTAL DAYS`,`res`.`totalAmount` AS `TOTAL AMOUNT`,`res`.`paidAmount` AS `PAID AMOUNT`,`res`.`remainingBalance` AS `REMAINING BALANCE`,`pro`.`image` AS `IMAGE` from (((((`tblreservation` `res` join `tblaccount` `acc` on(`acc`.`id` = `res`.`accountID`)) join `tblprofile` `pro` on(`pro`.`id` = `acc`.`profileID`)) join `tblpromo` `promo` on(`promo`.`id` = `res`.`promoID`)) left join (select `tblreservation_room`.`reservationID` AS `reservationID`,count(`tblreservation_room`.`roomID`) AS `total_rooms` from `tblreservation_room` group by `tblreservation_room`.`reservationID`) `rooms` on(`res`.`id` = `rooms`.`reservationID`)) left join (select `tblreservation_addons`.`reservationID` AS `reservationID`,count(`tblreservation_addons`.`addonsID`) AS `total_addons` from `tblreservation_addons` group by `tblreservation_addons`.`reservationID`) `addons` on(`res`.`id` = `addons`.`reservationID`)) group by `res`.`id` */;
 
 /*View structure for view view_room */
 
